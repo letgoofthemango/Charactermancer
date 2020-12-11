@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@900&display=swap" rel="stylesheet"> --->
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+
+<head>
+    <title> My first project: The 5e Charactermancer.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+</head>
+
+<body>
+    <div id="characterOverview">
+        <div class="container mt-2">
+            <div>Name:</div>
+            <div>Class:
+                <span id="summaryClass"></span>
+            </div>
+            <div>Level: <span id="summaryLevel"></span></div>
+            <div>Background: <span id="summaryBackground"></span></div>
+            <hr>
+            <div>AC: <span id="summaryAC"></span></div>
+            <div>Initiative: <span id="summaryInitiative"></span></div>
+            <div>Speed: <span id="summarySpeed"></span></div>
+            <hr>
+            <div>
+                <div class="row">
+                    <div class="col-2 offset-5"> Stats:</div>
+                    <div class="col-1 ml-auto"><button class="butt" type="button" data-toggle="collapse" data-target="#collapseStats" aria-expanded="true" aria-controls="collapseStats">
+                        [-]
+                        </button>
+                    </div>
+                    <div class="collapse col-12 show" id="collapseStats">
+                        <div class="d-flex justify-content-around">
+                            <div class="statBox">
+                                <p class="statName text-center">STR</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                            <div class="statBox">
+                                <p class="statName text-center">DEX</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                            <div class="statBox">
+                                <p class="statName text-center">CON</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                            <div class="statBox">
+                                <p class="statName text-center">INT</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                            <div class="statBox">
+                                <p class="statName text-center">WIS</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                            <div class="statBox">
+                                <p class="statName text-center">CHA</p>
+                                <p class="statTotal text-center" id="strTotal">8</p>
+                                <p class="statMod text-center" id="strMod">+0</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Passive perception: <span id="summaryPassivePerception"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <p class="text-center">Skills:</p>
+                <ul>
+                    <li>Acrobatics:</li>
+                    <li>Animal Handling:</li>
+                    <li>Arcana:</li>
+                    <li>Athletics:</li>
+                    <li>Deception:</li>
+                    <li>History:</li>
+                    <li>Insight:</li>
+                    <li>Intimidation:</li>
+                    <li>Investigation:</li>
+                    <li>Medicine:</li>
+                    <li>Nature:</li>
+                    <li>Perception:</li>
+                    <li>Performance:</li>
+                    <li>Persuasion:</li>
+                    <li>Religion:</li>
+                    <li>Sleight of Hand:</li>
+                    <li>Stealth:</li>
+                    <li>Survival:</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="text-center">Proficiencies:</div>
+            <hr>
+            <div class="text-center">Features:</div>
+            <hr>
+            <div class="text-center">Equipment:</div>
+            <hr>
+            <div class="text-center">Attacks:</div>
+            <hr>
+            <div class="text-center">Spells:</div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <nav>
+                <ul class="navbar">
+                    <a href="#name" id="mh">
+                        <li>Name</li>
+                    </a>
+                    <a href="#gender" id="mh">
+                        <li>Gender</li>
+                    </a>
+                    <a href="#class" id="mh">
+                        <li>Class</li>
+                    </a>
+                    <a href="#background" id="mh">
+                        <li>Background</li>
+                    </a>
+                    <li class="search">
+                        <input type="text" class="search-input" placeholder="Search">
+                    </li>
+                    <a href="http://www.ple.org:30000/join" target="_blank" id="mh">
+                        <li>The Game</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <div id="displayContent">
+            <h1 class="text-center">5e Charactermancer</h1>
+            <hr>
+            <h1 class="text-center">Introduction</h1 class="text-center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. <br><br>foundry import!!! The green checkmark tells the Charactermancer that you have decided that your choice can be added to your character. <br><br>Not all Variants of all Subclasses/Races have been added to this
+                Charactermancer.
+                <br><br>The character summary on the right is scrollable and automatically updated. <br><br>It will give you a summery of the choices you made at the end. <br><br>Each class dependant skills and features are marked by that class' icon.
+                <br><br>First class will be considered your starting class. This is relevant when choosing skills and starting equipment. <br><br>There is more than one version of most things, this app does not intend to have each and every version. reference
+                is given where needed.</p>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-info" id="toClassChoice">Start</button>
+            </div>
+
+            <script type="text/javascript" src="./Scripts/general.js"></script>
+            <script type="text/javascript" src="./Scripts/classFeatures.js"></script>
+            <script type="text/javascript" src="./Scripts/siteStructure.js"></script>
+        </div>
+        <h2 class="text-center"><u>Level 4</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
+        <div class="collapse show" id="level4">
+
+            <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
+            <hr>
+
+            <div class="collapse show" id="feature19">
+                <p>Because you reached 4th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
+                <p>If your DM allows the use of feats, you may instead take a feat.</p>
+                <div class="d-flex justify-content-center">
+                    <div class="dropdown d-inline">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle rel" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ability Score</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <option class="dropdown-item">Strength</option>
+                            <option class="dropdown-item">Dexterity</option>
+                            <option class="dropdown-item">Constitution</option>
+                            <option class="dropdown-item">Intelligence</option>
+                            <option class="dropdown-item">Wisdom</option>
+                            <option class="dropdown-item">Charisma</option>
+                        </div>
+                    </div>
+                    <div class="dropdown d-inline">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle rel" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ability Score</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <option class="dropdown-item">Strength</option>
+                            <option class="dropdown-item">Dexterity</option>
+                            <option class="dropdown-item">Constitution</option>
+                            <option class="dropdown-item">Intelligence</option>
+                            <option class="dropdown-item">Wisdom</option>
+                            <option class="dropdown-item">Charisma</option>
+                        </div>
+                    </div>
+                    or
+                    <div class="dropdown d-inline">
+                        <select class="btn btn-sm btn-secondary dropdown-toggle rel" type="select" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" data-style="btn-primary">Feat</select>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <option value="">---</option>
+                            <optgroup label="Tasha´s Cauldron of Everything">
+                                <option value="artificer-initiate">Artificer Initiate</option>
+                                <option value="chef">Chef</option>
+                                <option value="crusher">Crusher</option>
+                                <option value="eldritch-adept">Eldritch Adept</option>
+                                <option value="fey-touched">Fey Touched</option>
+                                <option value="fighting-initiate">Fighting Initiate</option>
+                                <option value="gunner">Gunner</option>
+                                <option value="metamagic-adept">Metamagic Adept</option>
+                                <option value="piercer">Piercer</option>
+                                <option value="poisoner">Poisoner</option>
+                                <option value="shadow-touched">Shadow Touched</option>
+                                <option value="skill-expert">Skill Expert</option>
+                                <option value="slasher">Slasher</option>
+                                <option value="telekinetic">Telekinetic</option>
+                                <option value="telepathic">Telepathic</option>
+                            </optgroup>
+                            <optgroup label="Player´s Handbook">
+                                <option value="actor">Actor</option>
+                                <option value="alert">Alert</option>
+                                <option value="athlete">Athlete</option>
+                                <option value="charger">Charger</option>
+                                <option value="crossbow-expert">Crossbow Expert</option>
+                                <option value="defensive-duelist">Defensive Duelist</option>
+                                <option value="dual-wielder">Dual Wielder</option>
+                                <option value="dungeon-delver">Dungeon Delver</option>
+                                <option value="durable">Durable</option>
+                                <option value="elemental-adept">Elemental Adept</option>
+                                <option value="grappler">Grappler</option>
+                                <option value="great-weapon-master">Great Weapon Master</option>
+                                <option value="healer">Healer</option>
+                                <option value="heavily-armored">Heavily Armored</option>
+                                <option value="heavy-armor-master">Heavy Armor Master</option>
+                                <option value="inspiring-leader">Inspiring Leader</option>
+                                <option value="keen-mind">Keen Mind</option>
+                                <option value="lightly-armored">Lightly Armored</option>
+                                <option value="linguist">Linguist</option>
+                                <option value="lucky">Lucky</option>
+                                <option value="mage-slayer">Mage Slayer</option>
+                                <option value="magic-initiate">Magic Initiate</option>
+                                <option value="martial-adept">Martial Adept</option>
+                                <option value="medium-armor-master">Medium Armor Master</option>
+                                <option value="mobile">Mobile</option>
+                                <option value="moderately-armored">Moderately Armored</option>
+                                <option value="mounted-combatant">Mounted Combatant</option>
+                                <option value="observant">Observant</option>
+                                <option value="polearm-master">Polearm Master</option>
+                                <option value="resilient">Resilient</option>
+                                <option value="ritual-caster">Ritual Caster</option>
+                                <option value="savage-attacker">Savage Attacker</option>
+                                <option value="sentinel">Sentinel</option>
+                                <option value="sharpshooter">Sharpshooter</option>
+                                <option value="shield-master">Shield Master</option>
+                                <option value="skilled">Skilled</option>
+                                <option value="skulker">Skulker</option>
+                                <option value="spell-sniper">Spell Sniper</option>
+                                <option value="tavern-brawler">Tavern Brawler</option>
+                                <option value="tough">Tough</option>
+                                <option value="war-caster">War Caster</option>
+                                <option value="weapon-master">Weapon Master</option>
+                            </optgroup>
+                            <optgroup label="Xanathar´s Guide to Everything">
+                                <option value="bountiful-luck">Bountiful Luck</option>
+                                <option value="dragon-fear">Dragon Fear</option>
+                                <option value="dragon-hide">Dragon Hide</option>
+                                <option value="drow-high-magic">Drow High Magic</option>
+                                <option value="dwarf-fortitude">Dwarf Fortitude</option>
+                                <option value="elven-accuracy">Elven Accuracy</option>
+                                <option value="fade-away">Fade away</option>
+                                <option value="fey-teleportation">Fey Teleportation</option>
+                                <option value="flames-of-phlegethos">Flames of Phlegethos</option>
+                                <option value="infernal-constitution">Infernal Constitution</option>
+                                <option value="orcish-fury">Orcish Fury</option>
+                                <option value="prodigy">Prodigy</option>
+                                <option value="second-chance">Second Chance</option>
+                                <option value="squat-nimbleness">Squat Nimbleness</option>
+                                <option value="wood-elf-magic">Wood Elf Magic</option>
+                            </optgroup>
+                            <optgroup label="Extra">
+                                <option value="blood-magic">Blood Magic</option>
+                                <option value="competent">Competent</option>
+                                <option value="expert">Expert</option>
+                            </optgroup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <select class="btn btn-info" name="" id="">
+        <option class="dropdown-item">Strength</option>
+        <option class="dropdown-item">Dexterity</option>
+        <option class="dropdown-item">Constitution</option>
+        <option class="dropdown-item">Intelligence</option>
+        <option class="dropdown-item">Wisdom</option>
+        <option class="dropdown-item">Charisma</option>
+    </select>
+
+
+    <footer>
+    </footer>
+</body>
+
+</html>

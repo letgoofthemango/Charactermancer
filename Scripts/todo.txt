@@ -1,0 +1,15 @@
+--Continue with classes!
+
+
+- Klassenauswahl mal aufspielen!!!!
+
+
+-Subclasses classes
+
+-Nacchschaun was man alles ins switch statement schmeißen kann.
+
+
+
+-sanitize inputs!!!!!!
+-Json für items
+JS maps nachschaun
