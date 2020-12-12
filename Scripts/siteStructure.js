@@ -18,6 +18,10 @@ document.getElementById("displayContent").addEventListener('click', function(eve
             for (let i = 0; i < characterLevel; i++) {
                 document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
             }
+        } else if (characterClass === "Bard") {
+            for (let i = 0; i < characterLevel; i++) {
+                document.getElementById("showClassDetails").innerHTML += bardFeaturesByLevel[i];
+            }
         } else if (characterClass === "Cleric") {
             for (let i = 0; i < characterLevel; i++) {
                 document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
@@ -81,6 +85,10 @@ document.onchange = function(event) {
         for (let i = 0; i < characterLevel; i++) {
             document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
         }
+    } else if (characterClass === "Bard") {
+        for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML += bardFeaturesByLevel[i];
+        }
     } else if (characterClass === "Cleric") {
         for (let i = 0; i < characterLevel; i++) {
             document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
@@ -130,72 +138,6 @@ document.onchange = function(event) {
 };
 
 
-/*###################################################################
-######################### Load class features #########################
-######################################################################*/
-
-testArray = [` `, ` `, ` `, `ASI`, ` `, ` `, ` `, `ASI`, ` `, ` `, ` `, `ASI`, ` `, ` `, ` `, `ASI`, ` `, ` `, `ASI`, ` `]
-
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#goTotFeatures")) { //check if the target is the target and it matches the id
-        document.getElementById("displayContent").innerHTML = ""; //clean the element displayContent for other DOM stuff to be displayed
-        if (characterClass === "Artificer") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("displayContent").innerHTML += testArray[i];
-            }
-        }
-        /*else if (characterClass === "Barbarian") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Cleric") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Druid") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += druidFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Fighter") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += fighterFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Monk") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += monkFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Mystic") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += mysticFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Paladin") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += paladinFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Ranger") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += rangerFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Rogue") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += rogueFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Sorcerer") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += sorcererFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Warlock") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += warlockFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Wizard") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
-                   }
-               }
-               document.getElementById("summaryClass").textContent = characterClass; */
-    }
-});
 
 
 
@@ -238,6 +180,9 @@ const siteClassChoice = `<h1 class="text-center">Choose your class</h1>
         <input id="barbarian" value="Barbarian" type="radio" name="class" />
         <label for="barbarian">Barbarian</label>
 
+        <input id="bard" value="Bard" type="radio" name="class" />
+        <label for="bard">Bard</label>
+
         <input id="cleric" value="Cleric" type="radio" name="class" />
         <label for="cleric">Cleric</label>
 
@@ -273,7 +218,7 @@ const siteClassChoice = `<h1 class="text-center">Choose your class</h1>
     </div>
     <div class="form-group col-3 offset-4 d-flex justify-content-center">
         <label for="characterLevel">How many levels do you want in this class?</label>
-        <select class="form-control col-3" id="characterLevel">
+        <select class="form-control col-3" id="characterLevel" disabled>
           <option>1</option>
           <option>2</option>
           <option>3</option>

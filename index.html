@@ -17,9 +17,7 @@
     <div id="characterOverview">
         <div class="container mt-2">
             <div>Name:</div>
-            <div>Class:
-                <span id="summaryClass"></span>
-            </div>
+            <div>Class:<span id="summaryClass"></span><span id="summarySubClass"></span></div>
             <div>Level: <span id="summaryLevel"></span></div>
             <div>Background: <span id="summaryBackground"></span></div>
             <hr>
@@ -75,27 +73,29 @@
             </div>
             <hr>
             <div>
-                <p class="text-center">Skills:</p>
-                <ul>
-                    <li>Acrobatics:</li>
-                    <li>Animal Handling:</li>
-                    <li>Arcana:</li>
-                    <li>Athletics:</li>
-                    <li>Deception:</li>
-                    <li>History:</li>
-                    <li>Insight:</li>
-                    <li>Intimidation:</li>
-                    <li>Investigation:</li>
-                    <li>Medicine:</li>
-                    <li>Nature:</li>
-                    <li>Perception:</li>
-                    <li>Performance:</li>
-                    <li>Persuasion:</li>
-                    <li>Religion:</li>
-                    <li>Sleight of Hand:</li>
-                    <li>Stealth:</li>
-                    <li>Survival:</li>
-                </ul>
+                <p class="text-center">Skills:<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#skills" aria-expanded="true" aria-controls="skills">[-]</button></span></p>
+                <div class="collapse show" id="skills">
+                    <ul class="listNone">
+                        <li>Acrobatics:</li>
+                        <li>Animal Handling:</li>
+                        <li>Arcana:</li>
+                        <li>Athletics:</li>
+                        <li>Deception:</li>
+                        <li>History:</li>
+                        <li>Insight:</li>
+                        <li>Intimidation:</li>
+                        <li>Investigation:</li>
+                        <li>Medicine:</li>
+                        <li>Nature:</li>
+                        <li>Perception:</li>
+                        <li>Performance:</li>
+                        <li>Persuasion:</li>
+                        <li>Religion:</li>
+                        <li>Sleight of Hand:</li>
+                        <li>Stealth:</li>
+                        <li>Survival:</li>
+                    </ul>
+                </div>
             </div>
             <hr>
             <div class="text-center">Proficiencies:</div>
@@ -140,155 +140,176 @@
             <h1 class="text-center">Introduction</h1 class="text-center">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
                 aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. <br><br>foundry import!!! The green checkmark tells the Charactermancer that you have decided that your choice can be added to your character. <br><br>Not all Variants of all Subclasses/Races have been added to this
-                Charactermancer.
-                <br><br>The character summary on the right is scrollable and automatically updated. <br><br>It will give you a summery of the choices you made at the end. <br><br>Each class dependant skills and features are marked by that class' icon.
-                <br><br>First class will be considered your starting class. This is relevant when choosing skills and starting equipment. <br><br>There is more than one version of most things, this app does not intend to have each and every version. reference
-                is given where needed.</p>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-info" id="toClassChoice">Start</button>
-            </div>
+                dolore magna aliqua.
+                <p>foundry import!!! The green checkmark tells the Charactermancer that you have decided that your choice can be added to your character.</p>
+                <p>Not all Variants of all Subclasses/Races have been added to this Charactermancer.</p>
 
-            <script type="text/javascript" src="./Scripts/general.js"></script>
-            <script type="text/javascript" src="./Scripts/classFeatures.js"></script>
-            <script type="text/javascript" src="./Scripts/siteStructure.js"></script>
+                <p>The character summary on the right is scrollable and automatically updated.</p>
+                <p>It will give you a summery of the choices you made at the end.</p>
+                <p>Each class dependant skills and features are marked by that class' icon.</p>
+
+                <p>First class will be considered your starting class. This is relevant when choosing skills and starting equipment.</p>
+                <p>There is more than one version of most things, this app does not intend to have each and every version. reference is given where needed.</p>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-info" id="toClassChoice">Start</button>
+                </div>
+
+                <!--             <h2 class="text-center">Level 3<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level3" aria-expanded="true" aria-controls="level3">[-]</button></span></h2>
+            <div class="collapse show" id="level3">
+
+                <h5><u>Artificer Specialist</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
+                <hr>
+
+                <div class="collapse show" id="feature13">
+                    <p>At 3rd level, you choose the type of specialist you are. Your choice grants you features at 5th level and again at 9th and 15th level.</p>
+                    <div class="d-flex justify-content-around mb-5">
+                        <button type="button" class="btn btn-secondary" id="alchemistSubclass">Alchemist</button>
+                        <button type="button" class="btn btn-secondary" id="armorerSubclass">Armorer</button>
+                        <button type="button" class="btn btn-secondary" id="alchemistSubclass">Artillerist</button>
+                        <button type="button" class="btn btn-secondary" id="alchemistSubclass">Battle Smith</button>
+                    </div>
+                    <div id="artificierSubClass"></div>
+                </div>
+
+                <h5><u>The Right Tool for the Job</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
+                <hr>
+
+                <div class="collapse show" id="feature14">
+                    <p>At 3rd level, you learn how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires
+                        1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.</p>
+                </div>
+            </div> -->
+
+                <script type="text/javascript" src="./Scripts/general.js"></script>
+                <script type="text/javascript" src="./Scripts/classFeatures.js"></script>
+                <script type="text/javascript" src="./Scripts/siteStructure.js"></script>
         </div>
-        <h2 class="text-center"><u>Level 4</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
-        <div class="collapse show" id="level4">
+        <!-- ----------------------------------------------------------------------TESTING AREA -------------------------------------------- -->
 
-            <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
+        <h1 class="text-center">Mystic<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+
+        <div class="collapse show" id="collapseIntro">
+            <p>A human clad in simple robes walks along a forest path. A gang of goblins emerges from the brush, arrows trained on him, their smiles wide at their good fortune of finding such easy prey for the legion's slave pens. Their smiles turn to shrieks
+                of terror as the traveler grows to giant size and leaps at them, his staff now a deadly cudgel.</p>
+            <p>The militia forms in ranks to prepare for the orcs' charge. The growling brutes howl their battle cries and surge forward. To their surprise, the human rabble holds its ground and fights with surprising ferocity. Suddenly, mindless fear clings
+                to the orcs' minds and they, despite facing a far inferior foe, turn and run, never noticing the calm half-elf standing amid the militia and directing its efforts.</p>
+            <p>Baron von Ludwig was always proud of his grand library. Little did he know that each evening, a gnome laden with blank scrolls slipped past his guards each night and dutifully copied his most heavily guarded archives. When the duke's men arrived
+                to arrest him for dealing with demons, he never guessed that the gnome scribe traveling with them had spent more time in his keep than he had over the past year.</p>
+            <p>These heroes are all mystics, followers of a strange and mysterious form of power. Mystics shun the world to turn their eyes inward, mastering the full potential of their minds and exploring their psyches before turning to face the world.
+                Mystics are incredibly rare, and most prefer to keep the nature of their abilities secret. Using their inner, psychic strength, they can read minds, fade into invisibility, transform their bodies into living iron, and seize control of
+                the physical world and bend it to their will.</p>
+
+            <h5>Eccentric Minds</h5>
+            <p>In order to maintain the strict discipline and intense self-knowledge needed to tap into their power, mystics develop a variety of practices to keep their focus sharp.</p>
+            <p>These practices are reflected in taboos and quirks, strange little behaviors that govern a mystic's actions. These quirks are oaths or behavioral tics that help keep mystics in the proper frame of mind while maintaining perfect control over
+                their minds and bodies.</p>
+            <p>While these taboos are harmless, they help cast mystics as outsiders. Few feel accepted by society, and fewer still care to become integrated with it. To mystics, the life of the mind is where they feel most at home.</p>
+        </div>
+
+        <h2 class="text-center">Features</h2>
+        <hr class="class-2">
+
+
+        <h2 class="text-center">Level 1<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
+        <div class="collapse show" id="level1">
+
+            <h5><u>Psionics</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
             <hr>
 
-            <div class="collapse show" id="feature19">
-                <p>Because you reached 4th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
-                <p>If your DM allows the use of feats, you may instead take a feat.</p>
-                <div class="d-flex justify-content-center">
-                    <div class="dropdown d-inline">
-                        <button class="btn btn-sm btn-secondary dropdown-toggle rel" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ability Score</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <option class="dropdown-item">Strength</option>
-                            <option class="dropdown-item">Dexterity</option>
-                            <option class="dropdown-item">Constitution</option>
-                            <option class="dropdown-item">Intelligence</option>
-                            <option class="dropdown-item">Wisdom</option>
-                            <option class="dropdown-item">Charisma</option>
-                        </div>
-                    </div>
-                    <div class="dropdown d-inline">
-                        <button class="btn btn-sm btn-secondary dropdown-toggle rel" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ability Score</button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <option class="dropdown-item">Strength</option>
-                            <option class="dropdown-item">Dexterity</option>
-                            <option class="dropdown-item">Constitution</option>
-                            <option class="dropdown-item">Intelligence</option>
-                            <option class="dropdown-item">Wisdom</option>
-                            <option class="dropdown-item">Charisma</option>
-                        </div>
-                    </div>
-                    or
-                    <div class="dropdown d-inline">
-                        <select class="btn btn-sm btn-secondary dropdown-toggle rel" type="select" id="dropdownMenuButton" aria-haspopup="true" aria-expanded="false" data-style="btn-primary">Feat</select>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <option value="">---</option>
-                            <optgroup label="Tasha´s Cauldron of Everything">
-                                <option value="artificer-initiate">Artificer Initiate</option>
-                                <option value="chef">Chef</option>
-                                <option value="crusher">Crusher</option>
-                                <option value="eldritch-adept">Eldritch Adept</option>
-                                <option value="fey-touched">Fey Touched</option>
-                                <option value="fighting-initiate">Fighting Initiate</option>
-                                <option value="gunner">Gunner</option>
-                                <option value="metamagic-adept">Metamagic Adept</option>
-                                <option value="piercer">Piercer</option>
-                                <option value="poisoner">Poisoner</option>
-                                <option value="shadow-touched">Shadow Touched</option>
-                                <option value="skill-expert">Skill Expert</option>
-                                <option value="slasher">Slasher</option>
-                                <option value="telekinetic">Telekinetic</option>
-                                <option value="telepathic">Telepathic</option>
-                            </optgroup>
-                            <optgroup label="Player´s Handbook">
-                                <option value="actor">Actor</option>
-                                <option value="alert">Alert</option>
-                                <option value="athlete">Athlete</option>
-                                <option value="charger">Charger</option>
-                                <option value="crossbow-expert">Crossbow Expert</option>
-                                <option value="defensive-duelist">Defensive Duelist</option>
-                                <option value="dual-wielder">Dual Wielder</option>
-                                <option value="dungeon-delver">Dungeon Delver</option>
-                                <option value="durable">Durable</option>
-                                <option value="elemental-adept">Elemental Adept</option>
-                                <option value="grappler">Grappler</option>
-                                <option value="great-weapon-master">Great Weapon Master</option>
-                                <option value="healer">Healer</option>
-                                <option value="heavily-armored">Heavily Armored</option>
-                                <option value="heavy-armor-master">Heavy Armor Master</option>
-                                <option value="inspiring-leader">Inspiring Leader</option>
-                                <option value="keen-mind">Keen Mind</option>
-                                <option value="lightly-armored">Lightly Armored</option>
-                                <option value="linguist">Linguist</option>
-                                <option value="lucky">Lucky</option>
-                                <option value="mage-slayer">Mage Slayer</option>
-                                <option value="magic-initiate">Magic Initiate</option>
-                                <option value="martial-adept">Martial Adept</option>
-                                <option value="medium-armor-master">Medium Armor Master</option>
-                                <option value="mobile">Mobile</option>
-                                <option value="moderately-armored">Moderately Armored</option>
-                                <option value="mounted-combatant">Mounted Combatant</option>
-                                <option value="observant">Observant</option>
-                                <option value="polearm-master">Polearm Master</option>
-                                <option value="resilient">Resilient</option>
-                                <option value="ritual-caster">Ritual Caster</option>
-                                <option value="savage-attacker">Savage Attacker</option>
-                                <option value="sentinel">Sentinel</option>
-                                <option value="sharpshooter">Sharpshooter</option>
-                                <option value="shield-master">Shield Master</option>
-                                <option value="skilled">Skilled</option>
-                                <option value="skulker">Skulker</option>
-                                <option value="spell-sniper">Spell Sniper</option>
-                                <option value="tavern-brawler">Tavern Brawler</option>
-                                <option value="tough">Tough</option>
-                                <option value="war-caster">War Caster</option>
-                                <option value="weapon-master">Weapon Master</option>
-                            </optgroup>
-                            <optgroup label="Xanathar´s Guide to Everything">
-                                <option value="bountiful-luck">Bountiful Luck</option>
-                                <option value="dragon-fear">Dragon Fear</option>
-                                <option value="dragon-hide">Dragon Hide</option>
-                                <option value="drow-high-magic">Drow High Magic</option>
-                                <option value="dwarf-fortitude">Dwarf Fortitude</option>
-                                <option value="elven-accuracy">Elven Accuracy</option>
-                                <option value="fade-away">Fade away</option>
-                                <option value="fey-teleportation">Fey Teleportation</option>
-                                <option value="flames-of-phlegethos">Flames of Phlegethos</option>
-                                <option value="infernal-constitution">Infernal Constitution</option>
-                                <option value="orcish-fury">Orcish Fury</option>
-                                <option value="prodigy">Prodigy</option>
-                                <option value="second-chance">Second Chance</option>
-                                <option value="squat-nimbleness">Squat Nimbleness</option>
-                                <option value="wood-elf-magic">Wood Elf Magic</option>
-                            </optgroup>
-                            <optgroup label="Extra">
-                                <option value="blood-magic">Blood Magic</option>
-                                <option value="competent">Competent</option>
-                                <option value="expert">Expert</option>
-                            </optgroup>
-                        </div>
-                    </div>
-                </div>
+            <div class="collapse show" id="feature1">
+                <p>As a student of psionics, you can master and use psionic talents and disciplines, the rules for which appear at the end of this document. Psionics is a special form of magic use, distinct from spellcasting.</p>
+
+                <h6><b>Psionic Talents</b></h6>
+                <p>A psionic talent is a minor psionic effect you have mastered. At 1st level, you know one psionic talent of your choice. You learn additional talents of your choice at higher levels. The Talents Known column of the Mystic table shows the
+                    total number of talents you know at each level; when that number goes up for you, choose a new talent.</p>
+
+                <h6><b>Psionic Disciplines</b></h6>
+                <p>A psionic discipline is a rigid set of mental exercises that allows a mystic to manifest psionic power. A mystic masters only a few disciplines at a time.</p>
+                <p>At 1st level, you know one psionic discipline of your choice. The Disciplines Known column of the Mystic table shows the total number of disciplines you know at each level; when that number goes up for you, choose a new discipline.</p>
+                <p>In addition, whenever you gain a level in this class, you can replace one discipline you know with a different one of your choice.</p>
+
+                <h6><b>Psi Points</b></h6>
+                <p>You have an internal reservoir of energy that can be devoted to psionic disciplines you know. This energy is represented by psi points. Each psionic discipline describes effects you can create with it by spending a certain number of psi
+                    points. A psionic talent requires no psi points.</p>
+                <p>The number of psi points you have is based on your mystic level, as shown in the Psi Points column of the Mystic table. The number shown for your level is your psi point maximum. Your psi point total returns to its maximum when you finish
+                    a long rest. The number of psi points you have can't go below 0 or over your maximum.</p>
+
+                <h6><b>Psi Limit</b></h6>
+                <p>Though you have access to a potent amount of psionic energy, it takes training and practice to channel that energy. There is a limit on the number of psi points you can spend to activate a psionic discipline. The limit is based on your
+                    mystic level, as shown in the Psi Limit column of the Mystic table. For example, as a 3rd-level mystic, you can spend no more than 3 psi points on a discipline each time you use it, no matter how many psi points you have.
+                </p>
+
+                <h6><b>Psychic Focus</b></h6>
+                <p>You can focus psionic energy on one of your psionic disciplines to draw ongoing benefits from it. As a bonus action, you can choose one of your psionic disciplines and gain its psychic focus benefit, which is detailed in that discipline's
+                    description. The benefit lasts until you are incapacitated or until you use another bonus action to choose a different focus benefit.</p>
+                <p>You can have only one psychic focus benefit at a time, and using the psychic focus of one discipline doesn't limit your ability to use other disciplines.</p>
+
+                <h6><b>Psionic Ability</b></h6>
+                <p>Intelligence is your psionic ability for your psionic disciplines. You use your Intelligence modifier when setting the saving throw DC for a psionic discipline or when making an attack roll with one.</p>
+                <p><b>Discipline save DC</b> = 8 + your proficiency bonus + your Intelligence modifier</p>
+                <p><b>Discipline attack modifier</b> = your proficiency bonus + your Intelligence modifier</p>
+            </div>
+
+            <h5><u>Psionic Disciplines and Talents</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+            <hr>
+
+            <div class="collapse show" id="feature2">
+                <p>Psionic talents and disciplines are the heart of a mystic's craft. They are the mental exercises and psionic formulae used to forge will into tangible, magical effects.</p>
+                <p>Psionic disciplines were each discovered by different orders and tend to reflect their creators' specialties. However, a mystic can learn any discipline regardless of its associated order.</p>
+            </div>
+
+            <h5><u>Using a Discipline</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
+            <hr>
+
+            <div class="collapse show" id="feature3">
+                <p>Each psionic discipline has several ways you can use it, all contained in its description. The discipline specifies the type of action and number of psi points it requires. It also details whether you must concentrate on its effects, how
+                    many targets it affects, what saving throws it requires, and so on.</p>
+                <p>The following sections go into more detail on using a discipline. Psionic disciplines are magical and function similarly to spells.</p>
+
+                <h6><b>Psychic Focus</b></h6>
+                <p>The Psychic Focus section of a discipline describes the benefit you gain when you choose that discipline for your psychic focus.</p>
+
+                <h6><b>Effect Options and Psi Points</b></h6>
+                <p>A discipline provides different options for how to use it with your psi points. Each effect option has a name, and the psi point cost of that option appears in parentheses after its name. You must spend that number of psi points to use
+                    that option, while abiding by your psi limit. If you don't have enough psi points left, or the cost is above your psi limit, you can't use the option.</p>
+                <p>Some options show a range of psi points, rather than a specific cost. To use that option, you must spend a number of points within that point range, still abiding by your psi limit. Some options let you spend additional psi points to increase
+                    a discipline's potency. Again, you must abide by your psi limit, and you must spend all the points when you first use the discipline; you can't decide to spend additional points once you see the discipline in action.</p>
+                <p>Each option notes specific information about its effect, including any action required to use it and its range.</p>
+
+                <h6><b>Components</b></h6>
+                <p>Disciplines don't require the components that many spells require. Using a discipline requires no spoken words, gestures, or materials. The power of psionics comes from the mind.</p>
+
+                <h6><b>Duration</b></h6>
+                <p>An effect option in a discipline specifies how long its effect lasts.</p>
+                <p> <b>Instantaneous.</b> If no duration is specified, the effect of the option is instantaneous.</p>
+                <p> <b>Concentration.</b> Some options require concentration to maintain their effects. This requirement is noted with "conc." after the option's psi point cost. The "conc." notation is followed by the maximum duration of the concentration.
+                    For example, if an option says "conc., 1 min.," you can concentrate on its effect for up to 1 minute. Concentrating on a discipline follows the same rules as concentrating on a spell. This rule means you can't concentrate on a spell
+                    and a discipline at the same time, nor can you concentrate on two disciplines at the same time. See chapter 10, "Spellcasting," in the Player's Handbook for how concentration works.</p>
+
+                <h6><b>Targets and Areas of Effect</b></h6>
+                <p>Psionic disciplines use the same rules as spells for determining targets and areas of effect, as presented in chapter 10, "Spellcasting," of the Player's Handbook.</p>
+
+                <h6><b>Saving Throws and Attack Rolls</b></h6>
+                <p>If a discipline requires a saving throw, it specifies the type of save and the results of a successful or failed saving throw. The DC is determined by your psionic ability.</p>
+                <p>Some disciplines require you to make an attack roll to determine whether the discipline's effect hits its target. The attack roll uses your psionic ability.</p>
+
+                <h6><b>Combining Psionic Effects</b></h6>
+                <p>The effects of different psionic disciplines add together while the durations of the disciplines overlap. Likewise, different options from a psionic discipline combine if they are active at the same time. However, a specific option from
+                    a psionic discipline doesn't combine with itself if the option is used multiple times. Instead, the most potent effect—usually dependent on how many psi points were used to create the effect—applies while the durations of the effects
+                    overlap.
+                </p>
+                <p>Psionics and spells are separate effects, and therefore their benefits and drawbacks overlap. A psionic effect that reproduces a spell is an exception to this rule.</p>
+            </div>
+            <h5><u>Mystic Order</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature4" aria-expanded="true" aria-controls="feature4">[-]</button></span></h5>
+            <hr>
+
+            <div class="collapse show" id="feature4">
+                <p>At 1st level, you choose a Mystic Order from the list of available orders. Each order specializes in a specific approach to psionics.</p>
+                <p>Your order gives you features when you choose it at 1st level and additional features at 3rd, 6th, and 14th level.</p>
             </div>
         </div>
+
     </div>
-
-    <select class="btn btn-info" name="" id="">
-        <option class="dropdown-item">Strength</option>
-        <option class="dropdown-item">Dexterity</option>
-        <option class="dropdown-item">Constitution</option>
-        <option class="dropdown-item">Intelligence</option>
-        <option class="dropdown-item">Wisdom</option>
-        <option class="dropdown-item">Charisma</option>
-    </select>
-
 
     <footer>
     </footer>
