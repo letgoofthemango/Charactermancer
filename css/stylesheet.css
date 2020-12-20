@@ -19,7 +19,7 @@
 	    border: black 1px solid;
 	}
 	
-	.butt {
+	.collapseButton {
 	    height: 10px;
 	    width: 10px;
 	    font-size: small;
@@ -39,6 +39,12 @@
 	.rel {
 	    position: relative;
 	    top: -5px;
+	}
+	
+	#collapseIntro {
+	    background-color: rgb(221, 152, 87);
+	    border-radius: 15px;
+	    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.445);
 	}
 	
 	.statBox {
@@ -65,6 +71,14 @@
 	.dropdown-menu {
 	    overflow-y: auto;
 	    max-height: 80vh
+	}
+	
+	.choiceBG {
+	    background-color: #F2F2F2
+	}
+	
+	.addedChoice {
+	    color: #2ac51c;
 	}
 	
 	.navbar {

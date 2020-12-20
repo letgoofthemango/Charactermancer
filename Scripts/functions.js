@@ -25,10 +25,10 @@ function getCharacterArmorClass() {
         return characterArmorClass;
     }
 }
-getCharacterArmorClass();
+/* getCharacterArmorClass(); */
 /* console.log("Your character has an AC of " + characterArmorClass); */
 
-//--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------
+/* //--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------
 
 function updateSkills() {
     for (let i = 0; i < skills.length; i++) {
@@ -44,7 +44,8 @@ function updateSkills() {
             console.log(`something went terribly wrong with the calculation at ${skills[i].name} !!!!`);
         }
     }
+    console.log("updated");
 }
-updateSkills();
+updateSkills(); */
 
 //--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------

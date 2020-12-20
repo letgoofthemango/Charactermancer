@@ -68,19 +68,19 @@ class Artificer extends Character {
     spellSaveDC = 8 + intelligenceMod + proficiencyBonus;
     spellAttackBonus = intelligenceMod + proficiencyBonus;
     source = 2;
-    alchemist = `<h4 class="text-center">Alchemist<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#alchemistCollapse" aria-expanded="true" aria-controls="alchemistCollapse">[-]</button></span></h4>
+    alchemist = `<h4 class="text-center">Alchemist<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#alchemistCollapse" aria-expanded="true" aria-controls="alchemistCollapse">[-]</button></span></h4>
 <div class="collapse show" id="alchemistCollapse">
     <p>An Alchemist is an expert at combining reagents to produce mystical effects. Alchemists use their creations to give life and to leech it away. Alchemy is the oldest of artificer traditions, and its versatility has long been valued during times
         of war and peace.</p>
 
-    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureToolProf" aria-expanded="true" aria-controls="featureToolProf">[-]</button></span></h5>
+    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureToolProf" aria-expanded="true" aria-controls="featureToolProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureToolProf">
         <p>When you adopt this specialization at 3rd level, you gain proficiency with alchemist's supplies. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice</p>
     </div>
 
-    <h5><u>Alchemist Spells</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureAlchemistSpells" aria-expanded="true" aria-controls="featureAlchemistSpells">[-]</button></span></h5>
+    <h5><u>Alchemist Spells</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureAlchemistSpells" aria-expanded="true" aria-controls="featureAlchemistSpells">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureAlchemistSpells">
@@ -119,7 +119,7 @@ class Artificer extends Character {
         </table>
     </div>
     <div>
-        <h5><u>Experimental Elixir</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureExperimentalElixier" aria-expanded="true" aria-controls="featureExperimentalElixier">[-]</button></span></h5>
+        <h5><u>Experimental Elixir</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExperimentalElixier" aria-expanded="true" aria-controls="featureExperimentalElixier">[-]</button></span></h5>
         <div class="collapse show" id="featureExperimentalElixier">
             <p>Beginning at 3rd level, whenever you finish a long rest, you can magically produce an <i>experimental elixir</i> in an empty flask you touch. Roll on the Experimental Elixir table for the elixir's effect, which is triggered when someone
                 drinks the elixir. As an action, a creature can drink the elixir or administer it to an incapacitated creature.</p>
@@ -164,7 +164,7 @@ class Artificer extends Character {
         </div>
     </div>
 
-    <h5><u>Alchemical Savant</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureAlchemicalSavant" aria-expanded="true" aria-controls="featureAlchemicalSavant">[-]</button></span></h5>
+    <h5><u>Alchemical Savant</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureAlchemicalSavant" aria-expanded="true" aria-controls="featureAlchemicalSavant">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureAlchemicalSavant">
@@ -172,7 +172,7 @@ class Artificer extends Character {
             of the spell. That roll must restore hit points or be a damage roll that deals acid, fire, necrotic, or poison damage, and the bonus equals your Intelligence modifier (minimum of +1).</p>
     </div>
 
-    <h5><u>Restorative Reagents</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureRestorativeReagents" aria-expanded="true" aria-controls="featureRestorativeReagents">[-]</button></span></h5>
+    <h5><u>Restorative Reagents</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRestorativeReagents" aria-expanded="true" aria-controls="featureRestorativeReagents">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureRestorativeReagents">
@@ -183,7 +183,7 @@ class Artificer extends Character {
                 of once), and you regain all expended uses when you finish a long rest.</li>
         </ul>
     </div>
-    <h5><u>Chemical Mastery</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureChemicalMastery" aria-expanded="true" aria-controls="featureChemicalMastery">[-]</button></span></h5>
+    <h5><u>Chemical Mastery</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureChemicalMastery" aria-expanded="true" aria-controls="featureChemicalMastery">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureChemicalMastery">
@@ -196,19 +196,19 @@ class Artificer extends Character {
     </div>
 </div>`;
 
-    armorer = `<h4 class="text-center">Armorer<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
+    armorer = `<h4 class="text-center">Armorer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
 <div class="collapse show" id="armorerCollapse">
     <p>An artificer who specializes as an Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the artificer's magic, unleash potent attacks, and generate a formidable defense. The artificer bonds with this
         armor, becoming one with it even as they experiment with it and refine its magical capabilities.</p>
 
-    <h5><u>Tools of the Trade</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
+    <h5><u>Tools of the Trade</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureToolTrade">
         <p>You gain proficiency with heavy armor. You also gain proficiency with smith's tools. If you already have this tool proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
     </div>
 
-    <h5><u>Armorer Spells</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
+    <h5><u>Armorer Spells</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorerSpells">
@@ -247,7 +247,7 @@ class Artificer extends Character {
         </table>
     </div>
 
-    <h5><u>Arcane Armor</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
+    <h5><u>Arcane Armor</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureArcaneArmor">
         <p>Your metallurgical pursuits have led to you making armor a conduit for your magic. As an action, you can turn a suit of armor you are wearing into Arcane Armor, provided you have smith's tools in hand. You gain the following benefits while
@@ -262,7 +262,7 @@ class Artificer extends Character {
     </div>
 
 
-    <h5><u>Armor Model</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
+    <h5><u>Armor Model</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModel">
@@ -286,14 +286,14 @@ class Artificer extends Character {
         </ul>
     </div>
 
-    <h5><u>Extra Attack</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
+    <h5><u>Extra Attack</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureExtraAttack">
         <p>You can attack twice, rather than once, whenever you take the Attack action on your turn.</p>
     </div>
 
-    <h5><u>Armor Modifications</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
+    <h5><u>Armor Modifications</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModifications">
@@ -307,7 +307,7 @@ class Artificer extends Character {
         </ul>
     </div>
 
-    <h5><u>Perfected Armor</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
+    <h5><u>Perfected Armor</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePerfectedArmor">
@@ -320,20 +320,20 @@ class Artificer extends Character {
     </div>
 </div>`;
 
-    artillerist = `<h4 class="text-center">Artillerist<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
+    artillerist = `<h4 class="text-center">Artillerist<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
 <div class="collapse show" id="armorerCollapse">
     <p>An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield. This destructive power was valued by all the armies of the Last War. Now that the war is over, some members of this specialization have
         sought to build a more peaceful world by using their powers to fight the resurgence of strife in Khorvaire. The gnome artificer Vi, an unlikely yet key member of House Cannith's warforged project, has been especially vocal about making
         things right: "It's about time we fixed things instead of blowing them all to hell."</p>
 
-    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
+    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureToolTrade">
         <p>When you adopt this specialization at 3rd level, you gain proficiency with woodcarver's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
     </div>
 
-    <h5><u>Artillerist Spells</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
+    <h5><u>Artillerist Spells</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorerSpells">
@@ -372,7 +372,7 @@ class Artificer extends Character {
         </table>
     </div>
 
-    <h5><u>Eldritch Cannon</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
+    <h5><u>Eldritch Cannon</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureArcaneArmor">
         <p>At 3rd level, you learn how to create a magical cannon. Using woodcarver's tools or smith's tools, you can take an action to magically create a Small or Tiny eldritch cannon in an unoccupied space on a horizontal surface within 5 feet
@@ -412,7 +412,7 @@ class Artificer extends Character {
     </div>
 
 
-    <h5><u>Arcane Firearm</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
+    <h5><u>Arcane Firearm</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModel">
@@ -421,7 +421,7 @@ class Artificer extends Character {
         <p>You can use your arcane firearm as a spellcasting focus for your artificer spells. When you cast an artificer spell through the firearm, roll a d8, and you gain a bonus to one of the spell's damage rolls equal to the number rolled.</p>
     </div>
 
-    <h5><u>Explosive Cannon</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
+    <h5><u>Explosive Cannon</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureExtraAttack">
@@ -433,7 +433,7 @@ class Artificer extends Character {
         </ul>
     </div>
 
-    <h5><u>Armor Modifications</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
+    <h5><u>Armor Modifications</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModifications">
@@ -447,7 +447,7 @@ class Artificer extends Character {
         </ul>
     </div>
 
-    <h5><u>Fortified Position</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
+    <h5><u>Fortified Position</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePerfectedArmor">
@@ -460,20 +460,20 @@ class Artificer extends Character {
     </div>
 </div>`
 
-    battlesmith = `<h4 class="text-center">Battle Smith<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
+    battlesmith = `<h4 class="text-center">Battle Smith<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#armorerCollapse" aria-expanded="true" aria-controls="armorerCollapse">[-]</button></span></h4>
 <div class="collapse show" id="armorerCollapse">
     <p>Armies require protection, and someone has to put things back together if defenses fail. A combination of protector and medic, a Battle Smith is an expert at defending others and repairing both material and personnel. To aid in their work,
         Battle Smiths are usually accompanied by a steel defender, a protective companion of their own creation. Many soldiers tell stories of nearly dying before being saved by a Battle Smith and a steel defender.</p>
     <p>Battle Smiths played a key role in House Cannith's work on battle constructs and the original warforged, and after the Last War, these artificers led efforts to aid those who were injured in the war's horrific battles.</p>
 
-    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
+    <h5><u>Tool Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureToolTrade" aria-expanded="true" aria-controls="featureToolTrade">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureToolTrade">
         <p>When you adopt this specialization at 3rd level, you gain proficiency with smith's tools. If you already have this proficiency, you gain proficiency with one other type of artisan's tools of your choice.</p>
     </div>
 
-    <h5><u>Battle Smith Spells</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
+    <h5><u>Battle Smith Spells</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorerSpells" aria-expanded="true" aria-controls="featureArmorerSpells">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorerSpells">
@@ -512,7 +512,7 @@ class Artificer extends Character {
         </table>
     </div>
 
-    <h5><u>Battle Ready</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
+    <h5><u>Battle Ready</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneArmor" aria-expanded="true" aria-controls="featureArcaneArmor">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureArcaneArmor">
         <p>When you reach 3rd level, your combat training and your experiments with magic have paid off in two ways:</p>
@@ -529,7 +529,7 @@ class Artificer extends Character {
     </div>
 
 
-    <h5><u>Steel Defender</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
+    <h5><u>Steel Defender</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModel" aria-expanded="true" aria-controls="featureArmorModel">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModel">
@@ -542,14 +542,14 @@ class Artificer extends Character {
         <p>At the end of a long rest, you can create a new steel defender if you have your smith's tools with you. If you already have a steel defender from this feature, the first one immediately perishes. The defender also perishes if you die.</p>
     </div>
 
-    <h5><u>Extra Attack</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
+    <h5><u>Extra Attack</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExtraAttack" aria-expanded="true" aria-controls="featureExtraAttack">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureExtraAttack">
         <p>Starting at 5th level, you can attack twice, rather than once, whenever you take the Attack action on your turn.</p>
     </div>
 
-    <h5><u>Arcane Jolt</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
+    <h5><u>Arcane Jolt</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArmorModifications" aria-expanded="true" aria-controls="featureArmorModifications">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArmorModifications">
@@ -562,7 +562,7 @@ class Artificer extends Character {
         <p>You can use this energy a number of times equal to your Intelligence modifier (minimum of once), but you can do so no more than once on a turn. You regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Improved Defender</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
+    <h5><u>Improved Defender</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePerfectedArmor" aria-expanded="true" aria-controls="featurePerfectedArmor">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePerfectedArmor">
@@ -686,19 +686,19 @@ let armorClass = armor[4].armorClass; // to save specific armor's class for AC c
 } */ //for iterating through the armor array!!!
 
 
-let skills = [{
+/* let skills = [{
     name: "Acrobatics",
-    proficiency: 1, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
+    proficiency: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
     calcStat: dexterityMod,
     mod: 0,
 }, {
     name: "Animal Handling",
-    proficiency: 2,
+    proficiency: 0,
     calcStat: wisdomMod,
     mod: 0,
 }, {
     name: "Arcana",
-    proficiency: 3,
+    proficiency: 0,
     calcStat: intelligenceMod,
     mod: 0,
 }, {
@@ -776,4 +776,4 @@ let skills = [{
     proficiency: 0,
     calcStat: wisdomMod,
     mod: 0,
-}];
+}]; */

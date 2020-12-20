@@ -7,12 +7,14 @@ document.getElementById("toClassChoice").addEventListener('click', function() {
 
 /*###################Class choice and features with chosen level######*/
 document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+    characterSubClass = "";
     if (event.target && event.target.matches("input[type='radio']")) { //check if the target is the target and an input type radio
         characterClass = document.querySelector('input[name="class"]:checked').value; //set character class with the selection from the radio buttons
         document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
         if (characterClass === "Artificer") {
             for (let i = 0; i < characterLevel; i++) {
                 document.getElementById("showClassDetails").innerHTML += artificerFeaturesByLevel[i];
+                document.getElementById("featuresList").innerHTML += artificerFeaturesList[i];
             }
         } else if (characterClass === "Barbarian") {
             for (let i = 0; i < characterLevel; i++) {
@@ -67,9 +69,47 @@ document.getElementById("displayContent").addEventListener('click', function(eve
                 document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
             }
         }
+        document.getElementById("summaryClass").setAttribute("class", "addedChoice");
+        document.getElementById("summarySubClass").setAttribute("class", "addedChoice");
+
+        /*      var res = document.querySelectorAll("#div,#par,#head");
+for (var i = 0; i < res.length; i++){
+ res[i].style.backgroundColor = '#DCDCDC'
+} */
         document.getElementById("summaryClass").textContent = characterClass;
     }
 });
+
+
+artificerFeaturesList = [
+    [`<li>
+        Firearm Proficiency
+    </li><li>
+        Magical Tinkering
+    </li><li>
+        Spellcasting
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
+
 
 /*## Select character level ##########################################*/
 document.onchange = function(event) {
@@ -134,6 +174,7 @@ document.onchange = function(event) {
             document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
         }
     }
+    document.getElementById("summaryLevel").setAttribute("class", "addedChoice");
     document.getElementById("summaryLevel").textContent = characterLevel;
 };
 
@@ -195,8 +236,8 @@ const siteClassChoice = `<h1 class="text-center">Choose your class</h1>
         <input id="monk" value="Monk" type="radio" name="class" />
         <label for="monk">Monk</label>
 
-        <input id="mystic" value="Mystic" type="radio" name="class" />
-        <label for="mystic">Mystic</label>
+        <!-- <input id="mystic" value="Mystic" type="radio" name="class" />
+        <label for="mystic">Mystic</label> -->
 
         <input id="paladin" value="Paladin" type="radio" name="class" />
         <label for="paladin">Paladin</label>
@@ -244,8 +285,6 @@ const siteClassChoice = `<h1 class="text-center">Choose your class</h1>
 </div>
 
 <div id="showClassDetails"></div>
-
-<div id="showClassText"></div>
 <div class="d-flex justify-content-center">
     <button class="btn btn-info" id="goTotFeatures">Features</button>
 </div>`;
