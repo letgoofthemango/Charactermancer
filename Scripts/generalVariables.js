@@ -1,34 +1,55 @@
-//Stats
-let strength = 8;
-let strengthMod = Math.floor((strength - 10) / 2);
-let strengthSaveMod;
-
-let dexterity = 8;
-let dexterityMod = Math.floor((dexterity - 10) / 2);
-let dexteritySaveMod;
-
-let constitution = 8;
-let constitutionMod = Math.floor((constitution - 10) / 2);
-let constitutionSaveMod;
-
-let intelligence = 8;
-let intelligenceMod = Math.floor((intelligence - 10) / 2);
-let intelligenceSaveMod;
-
-let wisdom = 8;
-let wisdomMod = Math.floor((wisdom - 10) / 2);
-let wisdomSaveMod;
-
-let charisma = 8;
-let charismaMod = Math.floor((charisma - 10) / 2);
-let charismaSaveMod;
-
+ let proficiencyBonus = 2;
+//------------------------------STATS--------------------------------------
+let abilityScores = [{
+    name: "Strength",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Dexterity",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Constitution",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Intelligence",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Wisdom",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Charisma",
+    value: 8,
+    mod: function() { return Math.floor((this.value - 10) / 2); },
+    saveMod: function() { return this.mod() + proficiencyBonus; }
+}];
 //Class
 let characterClass = " ";
 let characterSubClass = " ";
+const ARTIFICER = 'Artificer';
+const BARBARIAN = 'Barbarian';
+const BARD = 'Bard';
+const CLERIC = 'Cleric';
+const DRUID = 'Druid';
+const FIGHTER = 'Fighter';
+const MONK = 'Monk';
+const MYSTIC = 'Mystic';
+const PALADIN = 'Paladin';
+const RANGER = 'Ranger';
+const ROGUE = 'Rogue';
+const SORCERER = 'Sorcerer';
+const WARLOCK = 'Warlock';
+const WIZARD = 'Wizard';
 
 //Level
-let proficiencyBonus = 2;
 let characterLevel = 1;
 
 // Name
@@ -46,123 +67,113 @@ let characterBackground = " ";
 //Speed
 let characterSpeed = "";
 
-//Initiative
-let initiativeMod = dexterityMod;
+/* //Initiative
+let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
 
 //Passive perception
-let passivePerception = 10 + wisdomMod;
+let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])(); */
 
 
 
 let skills = [{
     name: "Acrobatics",
     proficiency: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
-    calcStat: dexterityMod,
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
     mod: 0,
 }, {
     name: "Animal Handling",
     proficiency: 0,
-    calcStat: wisdomMod,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
     mod: 0,
 }, {
     name: "Arcana",
     proficiency: 0,
-    calcStat: intelligenceMod,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
     mod: 0,
 }, {
     name: "Athletics",
     proficiency: 0,
-    calcStat: strengthMod,
+    calcStat: abilityScores[0].mod.bind(abilityScores[0]),
     mod: 0,
 }, {
     name: "Deception",
     proficiency: 0,
-    calcStat: charismaMod,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
     mod: 0,
 }, {
     name: "History",
     proficiency: 0,
-    calcStat: intelligenceMod,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
     mod: 0,
 }, {
     name: "Insight",
     proficiency: 0,
-    calcStat: wisdomMod,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
     mod: 0,
 }, {
     name: "Intimidation",
     proficiency: 0,
-    calcStat: charismaMod,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
     mod: 0,
 }, {
     name: "Investigation",
     proficiency: 0,
-    calcStat: intelligenceMod,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
     mod: 0,
 }, {
     name: "Medicine",
     proficiency: 0,
-    calcStat: wisdomMod,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
     mod: 0,
 }, {
     name: "Nature",
     proficiency: 0,
-    calcStat: intelligenceMod,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
     mod: 0,
 }, {
     name: "Perception",
     proficiency: 0,
-    calcStat: wisdomMod,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
     mod: 0,
 }, {
     name: "Performance",
     proficiency: 0,
-    calcStat: charismaMod,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
     mod: 0,
 }, {
     name: "Persuasion",
     proficiency: 0,
-    calcStat: charismaMod,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
     mod: 0,
 }, {
     name: "Religion",
     proficiency: 0,
-    calcStat: intelligenceMod,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
     mod: 0,
 }, {
     name: "Sleight of Hand",
     proficiency: 0,
-    calcStat: dexterityMod,
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
     mod: 0,
 }, {
     name: "Stealth",
     proficiency: 0,
-    calcStat: dexterityMod,
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
     mod: 0,
 }, {
     name: "Survival",
     proficiency: 0,
-    calcStat: wisdomMod,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
     mod: 0,
 }];
 
-//--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------
-function updateSkills() {
-    for (let i = 0; i < skills.length; i++) {
-        if (skills[i].proficiency == 0) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 0);
-        } else if (skills[i].proficiency == 1) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 0.5);
-        } else if (skills[i].proficiency == 2) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 1);
-        } else if (skills[i].proficiency == 3) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 2);
-        } else {
-            console.log(`something went terribly wrong with the calculation at ${skills[i].name} !!!!`);
-        }
+function getNumber(mod) {
+    if (mod >= 0) {
+        return "+" + mod;
+    } else {
+        return mod.toString();
     }
 }
-updateSkills();
 
 //Skills
 let acrobaticsMod = skills[0].mod;
@@ -183,29 +194,6 @@ let religionMod = skills[14].mod;
 let sleightOfHandMod = skills[15].mod;
 let stealthMod = skills[16].mod;
 let survivalMod = skills[17].mod;
-
-function getNumber(mod) {
-    if (mod >= 0) {
-        return "+" + mod;
-    } else {
-        return mod.toString();
-    }
-}
-
-//Weapon Proficiencies
-let characterWeaponProficiency = [
-    ["Simple Weapons", true],
-    ["Martial Weapons", true]
-];
-
-
-//Armor Proficiencies
-/* let characterArmorProficiency = [
-    ["None", true],
-    ["Light Armor", true]
-    ["Medium Armor", true]
-    ["Heavy Armor", true]
-]; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
@@ -254,24 +242,7 @@ let characterRace;
 let characterAlignment = "";
 
 
-//Languages
-let characterLanguages = [
-    ["Abyssal", true],
-    ["Celestial", true],
-    ["Deep Speech", true],
-    ["Draconic", true],
-    ["Dwarvish", true],
-    ["Elvish", true],
-    ["Giant", true],
-    ["Gnomish", true],
-    ["Goblin", true],
-    ["Halfling", true],
-    ["Infernal", true],
-    ["Orc", true],
-    ["Primordial", true],
-    ["Sylvan", true],
-    ["Undercommon", true]
-];
+
 
 
 //Money

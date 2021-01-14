@@ -1,3 +1,12 @@
+//Armor Proficiencies
+let characterArmorProficiencies = [
+    ["None", false],
+    ["Light Armor", false],
+    ["Medium Armor", false],
+    ["Heavy Armor", false],
+    ["Shields", false]
+];
+
 const armors = [{
     name: "Padded Armor",
     armorType: "Light",

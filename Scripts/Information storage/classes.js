@@ -584,25 +584,22 @@ class Artificer extends Character {
     /*###################################################################
     ######################### Methods ##############################
     ######################################################################*/
-    getAC = () => {
+    getAC = function() {
         if (hasShield && armorType == "Medium") {
             characterArmorClass = armorClass + Math.min(Math.max(-4, dexterityMod), 2) + 2;
-            return characterArmorClass;
         } else if (hasShield && armorType == "Light") {
             characterArmorClass = armorClass + dexterityMod + 2;
-            return characterArmorClass;
         } else {
             characterArmorClass = 10 + dexterityMod;
-            return characterArmorClass;
         }
     };
 
-    getHitpointsFirstLvl = () => {};
-    getHitpointsLvl = () => {};
-    getMaxSpellLvl = () => {};
-    getSpellSlots = () => {};
-    getSpellSaveDC = () => {};
-    getInfusionsCount = () => {};
+    getHitpointsFirstLvl = function() {};
+    getHitpointsLvl =function() {};
+    getMaxSpellLvl =function() {};
+    getSpellSlots =function() {};
+    getSpellSaveDC =function() {};
+    getInfusionsCount =function() {};
 
 }, {
     name: "Barbarian",

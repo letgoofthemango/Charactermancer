@@ -28,24 +28,10 @@ function getCharacterArmorClass() {
 /* getCharacterArmorClass(); */
 /* console.log("Your character has an AC of " + characterArmorClass); */
 
-/* //--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------
-
-function updateSkills() {
-    for (let i = 0; i < skills.length; i++) {
-        if (skills[i].proficiency == 0) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 0);
-        } else if (skills[i].proficiency == 1) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 0.5);
-        } else if (skills[i].proficiency == 2) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 1);
-        } else if (skills[i].proficiency == 3) {
-            skills[i].mod = skills[i].calcStat + (proficiencyBonus * 2);
-        } else {
-            console.log(`something went terribly wrong with the calculation at ${skills[i].name} !!!!`);
-        }
+function getNumber(mod) {
+    if (mod >= 0) {
+        return "+" + mod;
+    } else {
+        return mod.toString();
     }
-    console.log("updated");
 }
-updateSkills(); */
-
-//--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------

@@ -1,12 +1,15 @@
+row für dreiteilung der Seite links outline.
+
+
 --Continue with classes!
 
 
-- Klassenauswahl mal aufspielen!!!!
+
 
 
 -Subclasses classes
 
--Nacchschaun was man alles ins switch statement schmeißen kann.
+
 
 
 

@@ -810,3 +810,36 @@ function showClassDetails() {
     }
     console.log(characterClass);
 }
+
+
+/* let abilityScores = [{
+    name: "Strength",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Dexterity",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Constitution",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Intelligence",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Wisdom",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}, {
+    name: "Charisma",
+    value: 8,
+    mod: ()=> { return Math.floor((this.value - 10) / 2); },
+    saveMod: ()=> { return this.mod() + proficiencyBonus; }
+}]; */

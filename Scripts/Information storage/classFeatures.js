@@ -1,113 +1,554 @@
 /*###################################################################
 ######################### Artificer ##################################
 #####################################################################*/
-const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions. You can find everything you need
-        to play one of these inventors in the next few sections. Artificers use a variety of tools to channel their arcane power. To cast a spell, an artificer might use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe
-        a sigil of power, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents, and few other characters can produce the right tool for a job as well as an artificer.</p>
 
-    <h5>Artificers in Many Worlds</h5>
-    <p>Throughout the D&D multiverse, artificers create inventions and magic items of peace and war. Many lives have been brightened or saved because of the work of kind artificers, but countless lives have also been lost because of the mass destruction
-        unleashed by certain artificers' creations.</p>
-
-    <p>In the Forgotten Realms, the island of Lantan is home to many artificers, and in the world of Dragonlance, tinker gnomes are often members of this class. The strange technologies in the Barrier Peaks of the world of Greyhawk have inspired some folk
-        to walk the path of the artificer, and in Mystara, various nations employ artificers to keep airships and other wondrous devices operational.</p>
-
-    <p>Artificers in the City of Sigil share discoveries from throughout the multiverse, and from there, the gnome artificer Vi runs a cosmos-spanning business that hires adventurers to fix problems that others deem unfixable. In Vi's home world, Eberron,
-        magic is harnessed as a form of science and deployed throughout society, largely as a result of the wondrous ingenuity of artificers.</p>
-    <p>Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane power, crafting magical objects. To cast a spell, an artificer could use alchemist's supplies to create a potent elixir, calligrapher's supplies to inscribe a sigil of power on an ally's armor, or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and their talents.</p>
-    
-    <h5>Arcane Science</h5>
-    <p>In the world of Eberron, arcane magic has been harnessed as a form of science and deployed throughout society. Artificers reflect this development. Their knowledge of magical devices, and their ability to infuse mundane items with magic, allows Eberron's most miraculous projects to continue.</p>
-    <p>During the Last War, artificers were marshaled on a massive scale. Many lives were saved because of the inventions of brave artificers, but countless lives were also lost because of the mass destruction unleashed by their creations.</p>
-
-    <h5>Seekers of New Lore</h5>
-    <p>Nothing excites an artificer quite like uncovering a new metal or discovering a source of elemental energy. In artificer circles, new inventions and strange discoveries create the most excitement. Artificers who wish to make their mark must innovate, creating something fresh, rather than iterating on familiar designs.</p>
-    <p>This drive for novelty pushes artificers to become adventurers. Eberron's main travel routes and populated regions have long since been explored. Thus, artificers seek the frontiers of civilization in hopes of making the next great discovery in arcane research.</p>
-<i>“Artificers invent cutting-edge problems, then try to solve them-loudly and often with collateral damage.”</i>
-<p class="text-right">— Tasha</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Masters of invention, artificers use ingenuity and magic to unlock extraordinary capabilities in
+    objects. They see magic as a complex system waiting to be decoded and then harnessed in their
+    spells and inventions. You can find everything you need
+    to play one of these inventors in the next few sections. Artificers use a variety of tools to
+    channel their arcane power. To cast a spell, an artificer might use alchemist's supplies to
+    create a potent elixir, calligrapher's supplies to inscribe
+    a sigil of power, or tinker's tools to craft a temporary charm. The magic of artificers is tied
+    to their tools and their talents, and few other characters can produce the right tool for a job
+    as well as an artificer.</p>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
+<h5>Artificers in Many Worlds</h5>
+<p>Throughout the D&D multiverse, artificers create inventions and magic items of peace and war.
+    Many lives have been brightened or saved because of the work of kind artificers, but countless
+    lives have also been lost because of the mass destruction
+    unleashed by certain artificers' creations.</p>
+
+<p>In the Forgotten Realms, the island of Lantan is home to many artificers, and in the world of
+    Dragonlance, tinker gnomes are often members of this class. The strange technologies in the
+    Barrier Peaks of the world of Greyhawk have inspired some folk
+    to walk the path of the artificer, and in Mystara, various nations employ artificers to keep
+    airships and other wondrous devices operational.</p>
+
+<p>Artificers in the City of Sigil share discoveries from throughout the multiverse, and from there,
+    the gnome artificer Vi runs a cosmos-spanning business that hires adventurers to fix problems
+    that others deem unfixable. In Vi's home world, Eberron,
+    magic is harnessed as a form of science and deployed throughout society, largely as a result of
+    the wondrous ingenuity of artificers.</p>
+<p>Masters of unlocking magic in everyday objects, artificers are supreme inventors. They see magic
+    as a complex system waiting to be decoded and controlled. Artificers use tools to channel arcane
+    power, crafting magical objects. To cast a spell, an artificer could use alchemist's supplies to
+    create a potent elixir, calligrapher's supplies to inscribe a sigil of power on an ally's armor,
+    or tinker's tools to craft a temporary charm. The magic of artificers is tied to their tools and
+    their talents.</p>
+
+<h5>Arcane Science</h5>
+<p>In the world of Eberron, arcane magic has been harnessed as a form of science and deployed
+    throughout society. Artificers reflect this development. Their knowledge of magical devices, and
+    their ability to infuse mundane items with magic, allows Eberron's most miraculous projects to
+    continue.</p>
+<p>During the Last War, artificers were marshaled on a massive scale. Many lives were saved because
+    of the inventions of brave artificers, but countless lives were also lost because of the mass
+    destruction unleashed by their creations.</p>
+
+<h5>Seekers of New Lore</h5>
+<p>Nothing excites an artificer quite like uncovering a new metal or discovering a source of
+    elemental energy. In artificer circles, new inventions and strange discoveries create the most
+    excitement. Artificers who wish to make their mark must innovate, creating something fresh,
+    rather than iterating on familiar designs.</p>
+<p>This drive for novelty pushes artificers to become adventurers. Eberron's main travel routes and
+    populated regions have long since been explored. Thus, artificers seek the frontiers of
+    civilization in hopes of making the next great discovery in arcane research.</p>
+<i>“Artificers invent cutting-edge problems, then try to solve them-loudly and often with collateral
+    damage.”</i>
+<p class="text-right">— Tasha</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr style="background-color: transparent;">
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="3"></th>
+            <th class="cls-tbl__col-group" colspan="5">Spell Slots per Spell Level</th>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>
+                <div>Infusions Known</div>
+            </th>
+            <th>
+                <div>Infused Items</div>
+            </th>
+            <th>Cantrips Known
+</div>
+</th>
+<th>
+<div>1st</div>
+</th>
+<th>
+<div>2nd</div>
+</th>
+<th>
+<div>3rd</div>
+</th>
+<th>
+<div>4th</div>
+</th>
+<th>
+<div>5th</div>
+</th>
+</tr>
+<tr>
+<td>1st</td>
+<td>+2</td>
+<td>
+    <div>Optional Rule: Firearm Proficiency<span class="mr-1">,</span></div>
+    <div class="inline-block">Magical Tinkering<span class="mr-1">,</span></div>
+    <div class="inline-block">Spellcasting<span class="hidden"></span></div>
+</td>
+<td>—</td>
+<td>—</td>
+<td>2</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2nd</td>
+<td>+2</td>
+<td>
+    <div class="inline-block">Infuse Item<span class="hidden"></span></div>
+</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3rd</td>
+<td>+2</td>
+<td>
+    <div class="inline-block">Artificer Specialist<span class="mr-1">,</span></div>
+    <div class="inline-block">The Right Tool for the Job<span class="hidden"></span></div>
+</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4th</td>
+<td>+2</td>
+<td>
+    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5th</td>
+<td>+3</td>
+<td>
+    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6th</td>
+<td>+3</td>
+<td>
+    <div class="inline-block">Tool Expertise<span class="hidden"></span></div>
+</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7th</td>
+<td>+3</td>
+<td>
+    <div class="inline-block">Flash of Genius<span class="hidden"></span></div>
+</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8th</td>
+<td>+3</td>
+<td>
+    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9th</td>
+<td>+4</td>
+<td>
+    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+</td>
+<td>6</td>
+<td>3</td>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10th</td>
+<td>+4</td>
+<td>
+    <div class="inline-block">Magic Item Adept<span class="hidden"></span></div>
+</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11th</td>
+<td>+4</td>
+<td>
+    <div class="inline-block">Spell-Storing Item<span class="hidden"></span></div>
+</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12th</td>
+<td>+4</td>
+<td>
+    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>13th</td>
+<td>+5</td>
+<td>—</td>
+<td>8</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>14th</td>
+<td>+5</td>
+<td>
+    <div class="inline-block">Magic Item Savant<span class="hidden"></span></div>
+</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>15th</td>
+<td>+5</td>
+<td>
+    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>16th</td>
+<td>+5</td>
+<td>
+    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>17th</td>
+<td>+6</td>
+<td>—</td>
+<td>10</td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>18th</td>
+<td>+6</td>
+<td>
+    <div class="inline-block">Magic Item Master<span class="hidden"></span></div>
+</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>19th</td>
+<td>+6</td>
+<td>
+    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>20th</td>
+<td>+6</td>
+<td>
+    <div class="inline-block">Soul of Artifice<span class="hidden"></span></div>
+</td>
+<td>12</td>
+<td>6</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+</div><!-- -------------------------end table div-->
 
 
-<h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
+
+<h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#level1" aria-expanded="true"
+    aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Firearm Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
-    <hr>
+<h5>Firearm Proficiency<span class="ml-2"><button class="collapseButton" type="button"
+        data-toggle="collapse" data-target="#feature1" aria-expanded="true"
+        aria-controls="feature1">[-]</button></span></h5>
+<hr>
 
-    <div class="collapse show" id="feature1">
-        <p>The secrets of creating and operating gunpowder weapons have been discovered in various corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in chapter 9 of the Dungeon Master's Guide and your artificer has been exposed
-            to the operation of such weapons, your artificer is proficient with them.</p>
-    </div>
+<div class="collapse show" id="feature1">
+<p>The secrets of creating and operating gunpowder weapons have been discovered in various
+    corners of the D&D multiverse. If your Dungeon Master uses the rules on firearms in chapter
+    9 of the Dungeon Master's Guide and your artificer has been exposed
+    to the operation of such weapons, your artificer is proficient with them.</p>
+</div>
 
-    <h5><u>Magical Tinkering</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
-    <hr>
+<h5>Magical Tinkering<span class="ml-2"><button class="collapseButton" type="button"
+        data-toggle="collapse" data-target="#feature2" aria-expanded="true"
+        aria-controls="feature2">[-]</button></span></h5>
+<hr>
 
-    <div class="collapse show" id="feature2">
-        <p>At 1st level, you learn how to invest a spark of magic into mundane objects. To use this ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny nonmagical object as an action and give it one of the following magical
-            properties of your choice:</p>
-        <ul>
-            <li>The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.</li>
-            <li>Whenever tapped by a creature, the object emits a recorded message that can be heard up to 10 feet away. You utter the message when you bestow this property on the object, and the recording can be no more than 6 seconds long.</li>
-            <li>The object continuously emits your choice of an odor or a nonverbal sound (wind, waves, chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.</li>
-            <li>A static visual effect appears on one of the object's surfaces. This effect can be a picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as you like.</li>
-        </ul>
-        <p>The chosen property lasts indefinitely. As an action, you can touch the object and end the property early. You can bestow magic on multiple objects, touching one object each time you use this feature, though a single object can only bear one property
-            at a time. The maximum number of objects you can affect with this feature at one time is equal to your Intelligence modifier (minimum of one object). If you try to exceed your maximum, the oldest property immediately ends, and then the new
-            property applies.</p>
-    </div>
+<div class="collapse show" id="feature2">
+<p>At 1st level, you learn how to invest a spark of magic into mundane objects. To use this
+    ability, you must have thieves' tools or artisan's tools in hand. You then touch a Tiny
+    nonmagical object as an action and give it one of the following magical
+    properties of your choice:</p>
+<ul>
+    <li>The object sheds bright light in a 5-foot radius and dim light for an additional 5 feet.
+    </li>
+    <li>Whenever tapped by a creature, the object emits a recorded message that can be heard up
+        to 10 feet away. You utter the message when you bestow this property on the object, and
+        the recording can be no more than 6 seconds long.</li>
+    <li>The object continuously emits your choice of an odor or a nonverbal sound (wind, waves,
+        chirping, or the like). The chosen phenomenon is perceivable up to 10 feet away.</li>
+    <li>A static visual effect appears on one of the object's surfaces. This effect can be a
+        picture, up to 25 words of text, lines and shapes, or a mixture of these elements, as
+        you like.</li>
+</ul>
+<p>The chosen property lasts indefinitely. As an action, you can touch the object and end the
+    property early. You can bestow magic on multiple objects, touching one object each time you
+    use this feature, though a single object can only bear one property
+    at a time. The maximum number of objects you can affect with this feature at one time is
+    equal to your Intelligence modifier (minimum of one object). If you try to exceed your
+    maximum, the oldest property immediately ends, and then the new
+    property applies.</p>
+</div>
 
-    <h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
-    <hr>
+<h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+        data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span>
+</h5>
+<hr>
 
-    <div class="collapse show" id="feature3">
-        <p>You have studied the workings of magic and how to channel it through objects. As a result, you have gained the ability to cast spells. To observers, you don't appear to be casting spells in a conventional way; you look as if you're producing wonders
-            using mundane items or outlandish inventions.</p>
+<div class="collapse show" id="feature3">
+<p>You have studied the workings of magic and how to channel it through objects. As a result,
+    you have gained the ability to cast spells. To observers, you don't appear to be casting
+    spells in a conventional way; you look as if you're producing wonders
+    using mundane items or outlandish inventions.</p>
 
-        <h6><b>Tools Required</b></h6>
-        <p>You produce your artificer spell effects through your tools. You must have a spellcasting focus—specifically thieves' tools or some kind of artisan's tool—in hand when you cast any spell with this Spellcasting feature (meaning the spell has an
-            'M' component when you cast it). You must be proficient with the tool to use it in this way. See chapter 5, "Equipment," in the Player's Handbook for descriptions of these tools.</p>
-        <p>After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of your infusions as a spellcasting focus.</p>
+<h6><b>Tools Required</b></h6>
+<p>You produce your artificer spell effects through your tools. You must have a spellcasting
+    focus—specifically thieves' tools or some kind of artisan's tool—in hand when you cast any
+    spell with this Spellcasting feature (meaning the spell has an
+    'M' component when you cast it). You must be proficient with the tool to use it in this way.
+    See chapter 5, "Equipment," in the Player's Handbook for descriptions of these tools.</p>
+<p>After you gain the Infuse Item feature at 2nd level, you can also use any item bearing one of
+    your infusions as a spellcasting focus.</p>
 
-        <h6><b>The Magic of Artifice</b></h6>
-        <p>As an artificer, you use tools when you cast your spells. When describing your spellcasting, think about how you're using a tool to perform the spell effect. If you cast cure wounds using alchemist's supplies, you could be quickly producing a
-            salve. If you cast it using tinker's tools, you might have a miniature mechanical spider that binds wounds. When you cast poison spray, you could fling foul chemicals or use a wand that spits venom. The effect of the spell is the same as for
-            a spellcaster of any other class, but your method of spellcasting is special. The same principle applies when you prepare your spells. As an artificer, you don't study a spellbook or pray to prepare your spells. Instead, you work with your
-            tools and create the specialized items you'll use to produce your effects. If you replace cure wounds with heat metal, you might be altering the device you use to heal—perhaps modifying a tool so that it channels heat instead of healing energy.
-            Such details don't limit you in any way or provide you with any benefit beyond the spell's effects. You don't have to justify how you're using tools to cast a spell. But describing your spellcasting creatively is a fun way to distinguish yourself
-            from other spellcasters.</p>
+<h6><b>The Magic of Artifice</b></h6>
+<p>As an artificer, you use tools when you cast your spells. When describing your spellcasting,
+    think about how you're using a tool to perform the spell effect. If you cast cure wounds
+    using alchemist's supplies, you could be quickly producing a
+    salve. If you cast it using tinker's tools, you might have a miniature mechanical spider
+    that binds wounds. When you cast poison spray, you could fling foul chemicals or use a wand
+    that spits venom. The effect of the spell is the same as for
+    a spellcaster of any other class, but your method of spellcasting is special. The same
+    principle applies when you prepare your spells. As an artificer, you don't study a spellbook
+    or pray to prepare your spells. Instead, you work with your
+    tools and create the specialized items you'll use to produce your effects. If you replace
+    cure wounds with heat metal, you might be altering the device you use to heal—perhaps
+    modifying a tool so that it channels heat instead of healing energy.
+    Such details don't limit you in any way or provide you with any benefit beyond the spell's
+    effects. You don't have to justify how you're using tools to cast a spell. But describing
+    your spellcasting creatively is a fun way to distinguish yourself
+    from other spellcasters.</p>
 
-        <h6><b>Cantrips (0-Level Spells)</b></h6>
-        <p>At 1st level, you know two cantrips of your choice from the artificer spell list. At higher levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips Known column of the Artificer table.</p>
-        <p>When you gain a level in this class, you can replace one of the artificer cantrips you know with another cantrip from the artificer spell list.</p>
+<h6><b>Cantrips (0-Level Spells)</b></h6>
+<p>At 1st level, you know two cantrips of your choice from the artificer spell list. At higher
+    levels, you learn additional artificer cantrips of your choice, as shown in the Cantrips
+    Known column of the Artificer table.</p>
+<p>When you gain a level in this class, you can replace one of the artificer cantrips you know
+    with another cantrip from the artificer spell list.</p>
 
-        <h6><b>Preparing and Casting Spells</b></h6>
-        <p>The Artificer table shows how many spell slots you have to cast your artificer spells. To cast one of your artificer spells of 1st level or higher, you must expend a slot of the spell's level or higher. You regain all expended spell slots when
-            you finish a long rest.</p>
-        <p>You prepare the list of artificer spells that are available for you to cast, choosing from the artificer spell list. When you do so, choose a number of artificer spells equal to your Intelligence modifier + half your artificer level, rounded down
-            (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
-        <p>For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 14, your list of prepared spells can include four spells of 1st or 2nd level, in any combination. If you prepare the
-            1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.</p>
-        <p>You can change your list of prepared spells when you finish a long rest. Preparing a new list of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1 minute per spell level for each spell on your list.</p>
+<h6><b>Preparing and Casting Spells</b></h6>
+<p>The Artificer table shows how many spell slots you have to cast your artificer spells. To
+    cast one of your artificer spells of 1st level or higher, you must expend a slot of the
+    spell's level or higher. You regain all expended spell slots when
+    you finish a long rest.</p>
+<p>You prepare the list of artificer spells that are available for you to cast, choosing from
+    the artificer spell list. When you do so, choose a number of artificer spells equal to your
+    Intelligence modifier + half your artificer level, rounded down
+    (minimum of one spell). The spells must be of a level for which you have spell slots.</p>
+<p>For example, if you are a 5th-level artificer, you have four 1st-level and two 2nd-level
+    spell slots. With an Intelligence of 14, your list of prepared spells can include four
+    spells of 1st or 2nd level, in any combination. If you prepare the
+    1st-level spell cure wounds, you can cast it using a 1st-level or a 2nd-level slot. Casting
+    the spell doesn't remove it from your list of prepared spells.</p>
+<p>You can change your list of prepared spells when you finish a long rest. Preparing a new list
+    of artificer spells requires time spent tinkering with your spellcasting focuses: at least 1
+    minute per spell level for each spell on your list.</p>
 
-        <h6><b>Spellcasting Ability</b></h6>
-        <p>Intelligence is your spellcasting ability for your artificer spells; your understanding of the theory behind magic allows you to wield these spells with superior skill. You use your Intelligence whenever an artificer spell refers to your spellcasting
-            ability. In addition, you use your Intelligence modifier when setting the saving throw DC for an artificer spell you cast and when making an attack roll with one.</p>
-        <p class="text-center"><b>Spell save DC</b> = 8 + your proficiency bonus + your Intelligence modifier</p>
-        <p class="text-center"><b>Spell attack modifier</b> = your proficiency bonus + your Intelligence modifier</p>
+<h6><b>Spellcasting Ability</b></h6>
+<p>Intelligence is your spellcasting ability for your artificer spells; your understanding of
+    the theory behind magic allows you to wield these spells with superior skill. You use your
+    Intelligence whenever an artificer spell refers to your spellcasting
+    ability. In addition, you use your Intelligence modifier when setting the saving throw DC
+    for an artificer spell you cast and when making an attack roll with one.</p>
+<p class="text-center"><b>Spell save DC</b> = 8 + your proficiency bonus + your Intelligence
+    modifier</p>
+<p class="text-center"><b>Spell attack modifier</b> = your proficiency bonus + your Intelligence
+    modifier</p>
 
-        <h6><b>Ritual Casting</b></h6>
-        <p>You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the spell prepared.</p>
-    </div>
+<h6><b>Ritual Casting</b></h6>
+<p>You can cast an artificer spell as a ritual if that spell has the ritual tag and you have the
+    spell prepared.</p>
+</div>
+</div>
+</div>
 </div>`, `<h2 class="text-center">Level 2<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level2" aria-expanded="true" aria-controls="level2">[-]</button></span></h2>
 <div class="collapse show" id="level2">
 
-    <h5><u>Infuse Item</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature7" aria-expanded="true" aria-controls="feature7">[-]</button></span></h5>
+    <h5>Infuse Item<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature7" aria-expanded="true" aria-controls="feature7">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature7">
@@ -134,13 +575,13 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 3<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level3" aria-expanded="true" aria-controls="level3">[-]</button></span></h2>
 <div class="collapse show" id="level3">
 
-    <h5><u>Artificer Specialist</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
+    <h5>Artificer Specialist<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
     <hr>
 
     <h2 class="text-center">Level 3<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level3" aria-expanded="true" aria-controls="level3">[-]</button></span></h2>
     <div class="collapse show" id="level3">
 
-        <h5><u>Artificer Specialist</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
+        <h5>Artificer Specialist<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
         <hr>
 
         <div class="collapse show" id="feature13">
@@ -154,7 +595,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
             <div id="artificierSubClass"></div>
         </div>
 
-        <h5><u>The Right Tool for the Job</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
+        <h5>The Right Tool for the Job<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
         <hr>
 
         <div class="collapse show" id="feature14">
@@ -163,7 +604,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         </div>
     </div>
 
-    <h5><u>The Right Tool for the Job</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
+    <h5>The Right Tool for the Job<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature14">
@@ -173,7 +614,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 4<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
 <div class="collapse show" id="level4">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature19">
@@ -182,7 +623,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         <p><b><em>You will be able to make your choice regarding this feature on the next page.</em></b></p>
     </div>
 
-    <h5><u>Proficiency Versatility</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
+    <h5>Proficiency Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature20">
@@ -192,7 +633,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 5<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level5" aria-expanded="true" aria-controls="level5">[-]</button></span></h2>
 <div class="collapse show" id="level5">
 
-    <h5><u>Artificer Specialist Feature</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature25" aria-expanded="true" aria-controls="feature25">[-]</button></span></h5>
+    <h5>Artificer Specialist Feature<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature25" aria-expanded="true" aria-controls="feature25">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature25">
@@ -201,7 +642,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 6<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level6" aria-expanded="true" aria-controls="level6">[-]</button></span></h2>
 <div class="collapse show" id="level6">
 
-    <h5><u>Tool Expertise</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature31" aria-expanded="true" aria-controls="feature31">[-]</button></span></h5>
+    <h5>Tool Expertise<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature31" aria-expanded="true" aria-controls="feature31">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature31">
@@ -210,7 +651,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 7<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level7" aria-expanded="true" aria-controls="level7">[-]</button></span></h2>
 <div class="collapse show" id="level7">
 
-    <h5><u>Flash of Genius</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature37" aria-expanded="true" aria-controls="feature37">[-]</button></span></h5>
+    <h5>Flash of Genius<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature37" aria-expanded="true" aria-controls="feature37">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature37">
@@ -221,7 +662,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 8<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level8" aria-expanded="true" aria-controls="level8">[-]</button></span></h2>
 <div class="collapse show" id="level8">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature43" aria-expanded="true" aria-controls="feature43">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature43" aria-expanded="true" aria-controls="feature43">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature43">
@@ -230,7 +671,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         <p><b><em>You will be able to make your choice regarding this feature on the next page.</em></b></p>
     </div>
 
-    <h5><u>Proficiency Versatility</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature44" aria-expanded="true" aria-controls="feature44">[-]</button></span></h5>
+    <h5>Proficiency Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature44" aria-expanded="true" aria-controls="feature44">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature44">
@@ -240,7 +681,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 9<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level9" aria-expanded="true" aria-controls="level9">[-]</button></span></h2>
 <div class="collapse show" id="level9">
 
-    <h5><u>Artificer Specialist Feature</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature49" aria-expanded="true" aria-controls="feature49">[-]</button></span></h5>
+    <h5>Artificer Specialist Feature<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature49" aria-expanded="true" aria-controls="feature49">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature49">
@@ -249,7 +690,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 10<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level10" aria-expanded="true" aria-controls="level10">[-]</button></span></h2>
 <div class="collapse show" id="level10">
 
-    <h5><u>Magic Item Adept</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature55" aria-expanded="true" aria-controls="feature55">[-]</button></span></h5>
+    <h5>Magic Item Adept<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature55" aria-expanded="true" aria-controls="feature55">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature55">
@@ -262,7 +703,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 11<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level11" aria-expanded="true" aria-controls="level11">[-]</button></span></h2>
 <div class="collapse show" id="level11">
 
-    <h5><u>Spell-Storing Item</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature61" aria-expanded="true" aria-controls="feature61">[-]</button></span></h5>
+    <h5>Spell-Storing Item<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature61" aria-expanded="true" aria-controls="feature61">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature61">
@@ -274,7 +715,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 12<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level12" aria-expanded="true" aria-controls="level12">[-]</button></span></h2>
 <div class="collapse show" id="level12">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature67" aria-expanded="true" aria-controls="feature67">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature67" aria-expanded="true" aria-controls="feature67">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature67">
@@ -283,7 +724,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         <p><b><em>You will be able to make your choice regarding this feature on the next page.</em></b></p>
     </div>
 
-    <h5><u>Proficiency Versatility</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature68" aria-expanded="true" aria-controls="feature68">[-]</button></span></h5>
+    <h5>Proficiency Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature68" aria-expanded="true" aria-controls="feature68">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature68">
@@ -298,7 +739,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 14<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level14" aria-expanded="true" aria-controls="level14">[-]</button></span></h2>
 <div class="collapse show" id="level14">
 
-    <h5><u>Magic Item Savant</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature79" aria-expanded="true" aria-controls="feature79">[-]</button></span></h5>
+    <h5>Magic Item Savant<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature79" aria-expanded="true" aria-controls="feature79">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature79">
@@ -311,7 +752,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 15<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level15" aria-expanded="true" aria-controls="level15">[-]</button></span></h2>
 <div class="collapse show" id="level15">
 
-    <h5><u>Artificer Specialist Feature</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature85" aria-expanded="true" aria-controls="feature85">[-]</button></span></h5>
+    <h5>Artificer Specialist Feature<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature85" aria-expanded="true" aria-controls="feature85">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature85">
@@ -320,7 +761,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 16<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level16" aria-expanded="true" aria-controls="level16">[-]</button></span></h2>
 <div class="collapse show" id="level16">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature91" aria-expanded="true" aria-controls="feature91">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature91" aria-expanded="true" aria-controls="feature91">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature91">
@@ -329,7 +770,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         <p><b><em>You will be able to make your choice regarding this feature on the next page.</em></b></p>
     </div>
 
-    <h5><u>Proficiency Versatility</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature92" aria-expanded="true" aria-controls="feature92">[-]</button></span></h5>
+    <h5>Proficiency Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature92" aria-expanded="true" aria-controls="feature92">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature92">
@@ -347,7 +788,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 18<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level18" aria-expanded="true" aria-controls="level18">[-]</button></span></h2>
 <div class="collapse show" id="level18">
 
-    <h5><u>Magic Item Master</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature103" aria-expanded="true" aria-controls="feature103">[-]</button></span></h5>
+    <h5>Magic Item Master<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature103" aria-expanded="true" aria-controls="feature103">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature103">
@@ -356,7 +797,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 19<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level19" aria-expanded="true" aria-controls="level19">[-]</button></span></h2>
 <div class="collapse show" id="level19">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature109" aria-expanded="true" aria-controls="feature109">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature109" aria-expanded="true" aria-controls="feature109">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature109">
@@ -366,7 +807,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
     </div>
 
 
-    <h5><u>Proficiency Versatility</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature110" aria-expanded="true" aria-controls="feature110">[-]</button></span></h5>
+    <h5>Proficiency Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature110" aria-expanded="true" aria-controls="feature110">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature110">
@@ -376,7 +817,7 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
 </div>`, `<h2 class="text-center">Level 20<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level20" aria-expanded="true" aria-controls="level20">[-]</button></span></h2>
 <div class="collapse show" id="level20">
 
-    <h5><u>Soul of Artifice</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature115" aria-expanded="true" aria-controls="feature115">[-]</button></span></h5>
+    <h5>Soul of Artifice<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature115" aria-expanded="true" aria-controls="feature115">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature115">
@@ -387,6 +828,32 @@ const artificerFeaturesByLevel = [`<h1 class="text-center">Artificer<span class=
         </ul>
     </div>
 </div>`];
+const artificerFeaturesList = [
+    [`<li>
+        Magical Tinkering
+    </li><li>
+        Spellcasting
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 
 /*###################################################################
@@ -422,14 +889,12 @@ const barbarianFeaturesByLevel = [`<h1 class="text-center">Barbarian<span class=
     <p>— Seret, Arch wizard</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Rage</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Rage<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
@@ -447,20 +912,18 @@ const barbarianFeaturesByLevel = [`<h1 class="text-center">Barbarian<span class=
         <p>Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.</p>
     </div>
 
-    <h5><u>Unarmored Defense</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+    <h5>Unarmored Defense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature2">
         <p>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</p>
     </div>
 </div>`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 4`, `<p>barbarian 5`, `<p>barbarian 6`, `<p>barbarian 7`, `<p>barbarian 8`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 1`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`];
-artificerFeaturesShort = [
+const barbarianFeaturesList = [
     [`<li>
-        Firearm Proficiency
+    Rage
     </li><li>
-        Magical Tinkering
-    </li><li>
-        Spellcasting
+    Unarmored Defense
     </li>`],
     [2],
     [3],
@@ -486,7 +949,7 @@ artificerFeaturesShort = [
 barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
 <div class="collapse show" id="level4">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature19">
@@ -602,7 +1065,7 @@ barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<sp
 </div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 8<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level8" aria-expanded="true" aria-controls="level8">[-]</button></span></h2>
 <div class="collapse show" id="level8">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature20">
@@ -718,7 +1181,7 @@ barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<sp
 </div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 12<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level12" aria-expanded="true" aria-controls="level12">[-]</button></span></h2>
 <div class="collapse show" id="level12">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature21" aria-expanded="true" aria-controls="feature21">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature21" aria-expanded="true" aria-controls="feature21">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature21">
@@ -834,7 +1297,7 @@ barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<sp
 </div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 16<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level16" aria-expanded="true" aria-controls="level16">[-]</button></span></h2>
 <div class="collapse show" id="level16">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature22" aria-expanded="true" aria-controls="feature22">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature22" aria-expanded="true" aria-controls="feature22">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature21">
@@ -950,7 +1413,7 @@ barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<sp
 </div>`, ` `, ` `, `<br><h2 class="text-center">Level 19<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level19" aria-expanded="true" aria-controls="level19">[-]</button></span></h2>
 <div class="collapse show" id="level19">
 
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature23" aria-expanded="true" aria-controls="feature23">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature23" aria-expanded="true" aria-controls="feature23">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature23">
@@ -1099,14 +1562,12 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
 
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Bardic Inspiration</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Bardic Inspiration<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
@@ -1121,7 +1582,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
         <p>If a creature has a Bardic Inspiration die from you and casts a spell, the creature can roll that die and add the number rolled to one damage or healing roll of the spell. The Bardic Inspiration die is then lost.</p>
     </div>
 
-    <h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
+    <h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature3">
@@ -1160,7 +1621,32 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
 
     </div>
 </div>`, `<p>bard 2`, `<p>bard 3`, `<p>bard 4`, `<p>bard 5`, `<p>bard 6`, `<p>bard 7`, `<p>bard 8`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`];
-
+const bardFeaturesList = [
+    [`<li>
+    Bardic Inspiration
+    </li><li>
+    Spellcasting
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 
 
@@ -1200,15 +1686,13 @@ const clericFeaturesByLevel = [`<h1 class="text-center">Cleric<span class="ml-2"
     <p>— Riggby the patriarch</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Divine Domain</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-            data-target="#featureDomain" aria-expanded="true" aria-controls="featureDomain">[-]</button></span></h5>
+<h3>Divine Domain<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+            data-target="#featureDomain" aria-expanded="true" aria-controls="featureDomain">[-]</button></span></h3>
         <hr>
 
         <div class="collapse show mb-3" id="featureDomain">
@@ -1234,7 +1718,7 @@ const clericFeaturesByLevel = [`<h1 class="text-center">Cleric<span class="ml-2"
             <div id="clericDomain" class="choiceBG"></div>
         </div>
 
-    <h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
@@ -1270,6 +1754,32 @@ const clericFeaturesByLevel = [`<h1 class="text-center">Cleric<span class="ml-2"
     </div>
 
 </div>`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 4`, `<p>cleric 5`, `<p>cleric 6`, `<p>cleric 7`, `<p>cleric 8`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`];
+const clericFeaturesList = [
+    [`<li>
+    Divine Domain <span id="domain">TEST</span>
+    </li><li>
+    Spellcasting
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#arcanaCollapse" aria-expanded="true" aria-controls="arcanaCollapse">[-]</button></span></h4>
         <div class="collapse show" id="arcanaCollapse">
             <p>Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility
@@ -1278,7 +1788,7 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
                 worlds, this domain includes Hecate, Math Mathonwy, and Isis; the triple moon gods of Solinari, Lunitari, and Nuitari of Krynn; and Boccob, Vecna, and WeeJas of Greyhawk.</p>
             <p>At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.</p>
 
-            <table class="table-striped mb-2">
+            <table class="table-striped table-hover mb-2">
                 <thead>
                     <tr>
                         <th class="col-2 text-center" data-rd-isroller="false">Cleric Level</th>
@@ -1309,7 +1819,7 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
                 </tbody>
             </table>
 
-            <h5><u>Arcane Initiate</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneInitiate" aria-expanded="true" aria-controls="featureArcaneInitiate">[-]</button></span></h5>
+            <h5>Arcane Initiate<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneInitiate" aria-expanded="true" aria-controls="featureArcaneInitiate">[-]</button></span></h5>
             <hr>
 
             <div class="collapse show" id="featureArcaneInitiate">
@@ -1317,7 +1827,7 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
             </div>
 
 
-            <h5><u>Channel Divinity: Arcane Abjuration</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneAbjuration" aria-expanded="true" aria-controls="featureArcaneAbjuration">[-]</button></span></h5>
+            <h5>Channel Divinity: Arcane Abjuration<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArcaneAbjuration" aria-expanded="true" aria-controls="featureArcaneAbjuration">[-]</button></span></h5>
             <hr>
 
             <div class="collapse show" id="featureArcaneAbjuration">
@@ -1328,7 +1838,7 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
                     try to escape from an effect that prevents it from moving. If there's nowhere to move, then the creature can use the Dodge action.</p>
                 <p>After you reach 5th level, when a creature fails its saving throw against your Arcane Abjuration feature, the creature is banished for 1 minute (as in the banishment spell, no concentration required) if it isn't on its plane of origin,
                     and its challenge rating is at or below a certain threshold, as shown below.</p>
-                <table class="table-striped">
+                <table class="table-striped table-hover mb-2">
                     <thead>
                         <tr>
                             <th class="col-2 text-center" data-rd-isroller="false">Cleric Level</th>
@@ -1360,7 +1870,7 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
                 </table>
             </div>
 
-            <h5 class="mt-2"><u>Spell Breaker</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSpellBreaker" aria-expanded="true" aria-controls="featureSpellBreaker">[-]</button></span></h5>
+            <h5 class="mt-2">Spell Breaker<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSpellBreaker" aria-expanded="true" aria-controls="featureSpellBreaker">[-]</button></span></h5>
             <hr>
 
             <div class="collapse show" id="featureSpellBreaker">
@@ -1368,12 +1878,12 @@ const arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><b
                     spell slot you use to cast the healing spell.</p>
             </div>
 
-            <h5><u>Potent Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
+            <h5>Potent Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
             <div class="collapse show" id="featurePotent">
                 <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
             </div>
 
-            <h5><u>Arcane Mastery</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureMastery" aria-expanded="true" aria-controls="featureMastery">[-]</button></span></h5>
+            <h5>Arcane Mastery<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureMastery" aria-expanded="true" aria-controls="featureMastery">[-]</button></span></h5>
             <hr>
 
             <div class="collapse show" id="featureMastery">
@@ -1387,7 +1897,7 @@ const deathDomain = `<h4 class="text-center">Death Domain<span class="ml-2"><but
         and vampires. Gods of the Death domain also embody murder (Anubis, Bhaal, and Pyremius), pain (Iuz or Loviatar), disease or poison (Incabulos, Talona, or Morgion), and the underworld (Hades and Hel).</p>
     <p>At each indicated cleric level, add the listed spells to your spells prepared. They do not count towards your limit.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1418,14 +1928,14 @@ const deathDomain = `<h4 class="text-center">Death Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusProf">
         <p>When the cleric chooses this domain at 1st level, he or she gains proficiency with martial weapons.</p>
     </div>
 
-    <h5><u>Reaper</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureReaper" aria-expanded="true" aria-controls="featureReaper">[-]</button></span></h5>
+    <h5>Reaper<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureReaper" aria-expanded="true" aria-controls="featureReaper">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureReaper">
@@ -1434,7 +1944,7 @@ const deathDomain = `<h4 class="text-center">Death Domain<span class="ml-2"><but
     </div>
 
 
-    <h5><u>Channel Divinity: Touch of Death</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureTouchDeath" aria-expanded="true" aria-controls="featureTouchDeath">[-]</button></span></h5>
+    <h5>Channel Divinity: Touch of Death<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureTouchDeath" aria-expanded="true" aria-controls="featureTouchDeath">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureTouchDeath">
@@ -1442,20 +1952,20 @@ const deathDomain = `<h4 class="text-center">Death Domain<span class="ml-2"><but
         <p>When the cleric hits a creature with a melee attack, the cleric can use Channel Divinity to deal extra necrotic damage to the target. The damage equals 5 + twice his or her cleric level.</p>
     </div>
 
-    <h5><u>Inescapable Destruction</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDestruction" aria-expanded="true" aria-controls="featureDestruction">[-]</button></span></h5>
+    <h5>Inescapable Destruction<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDestruction" aria-expanded="true" aria-controls="featureDestruction">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDestruction">
         <p>Starting at 6th level, the cleric's ability to channel negative energy becomes more potent. Necrotic damage dealt by the character's cleric spells and Channel Divinity options ignores resistance to necrotic damage.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, the cleric gains the ability to infuse his or her weapon strikes with necrotic energy. Once on each of the cleric's turns when he or she hits a creature with a weapon attack, the cleric can cause the attack to deal an extra
             1d8 necrotic damage to the target. When the cleric reaches 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Improved Reaper</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImpReaper" aria-expanded="true" aria-controls="featureImpReaper">[-]</button></span></h5>
+    <h5>Improved Reaper<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImpReaper" aria-expanded="true" aria-controls="featureImpReaper">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureImpReaper">
@@ -1471,7 +1981,7 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
         them. Deities of this domain include Gond, Reorx, Onatar, Moradin, Hephaestus, and Goibhniu.</p>
     <p>At each indicated cleric level, add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1502,14 +2012,14 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusProf">
         <p>When you choose this domain at 1st level, you gain proficiency with heavy armor and smith's tools.</p>
     </div>
 
-    <h5><u>Blessing of the Forge</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#Blessing" aria-expanded="true" aria-controls="Blessing">[-]</button></span></h5>
+    <h5>Blessing of the Forge<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#Blessing" aria-expanded="true" aria-controls="Blessing">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="Blessing">
@@ -1519,7 +2029,7 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
     </div>
 
 
-    <h5><u>Channel Divinity: Artisan's Blessing</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArtisan" aria-expanded="true" aria-controls="featureArtisan">[-]</button></span></h5>
+    <h5>Channel Divinity: Artisan's Blessing<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureArtisan" aria-expanded="true" aria-controls="featureArtisan">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureArtisan">
@@ -1530,7 +2040,7 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
             the creation at the ritual's end, magically forming even nonmetal parts of the creation. The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual.</p>
     </div>
 
-    <h5><u>Soul of the Forge</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSoul" aria-expanded="true" aria-controls="featureSoul">[-]</button></span></h5>
+    <h5>Soul of the Forge<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSoul" aria-expanded="true" aria-controls="featureSoul">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSoul">
@@ -1541,13 +2051,13 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
         </ul>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, the cleric gains the ability to infuse his or her weapon strikes with necrotic energy. Once on each of the cleric's turns when he or she hits a creature with a weapon attack, the cleric can cause the attack to deal an extra
             1d8 fire damage to the target. When the cleric reaches 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Saint of Forge and Fire</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSaint" aria-expanded="true" aria-controls="featureSaint">[-]</button></span></h5>
+    <h5>Saint of Forge and Fire<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSaint" aria-expanded="true" aria-controls="featureSaint">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSaint">
@@ -1564,7 +2074,7 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
         Wee Jas, the ancestral spirits of the Undying Court, Hades, Anubis, and Osiris. Followers of these deities seek to put wandering spirits to rest, destroy the undead, and ease the suffering of the dying. Their magic also allows them to
         stave off death for a time, particularly for a person who still has some great work to accomplish in the world. This is a delay of death, not a denial of it, for death will eventually get its due.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1595,7 +2105,7 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Circle of Mortality</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
+    <h5>Circle of Mortality<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusProf">
@@ -1604,7 +2114,7 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
         <p>In addition, you learn the spare the dying cantrip, which doesn't count against the number of cleric cantrips you know. For you, it has a range of 30 feet, and you can cast it as a bonus action.</p>
     </div>
 
-    <h5><u>Eyes of the Grave</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEyes" aria-expanded="true" aria-controls="featureEyes">[-]</button></span></h5>
+    <h5>Eyes of the Grave<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEyes" aria-expanded="true" aria-controls="featureEyes">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureEyes">
@@ -1614,7 +2124,7 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
     </div>
 
 
-    <h5><u>Channel Divinity: Path to the Grave</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePath" aria-expanded="true" aria-controls="featurePath">[-]</button></span></h5>
+    <h5>Channel Divinity: Path to the Grave<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePath" aria-expanded="true" aria-controls="featurePath">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePath">
@@ -1623,7 +2133,7 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
             that attack's damage, and then the curse ends.</p>
     </div>
 
-    <h5><u>Sentinel at Death's Door</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSentinel" aria-expanded="true" aria-controls="featureSentinel">[-]</button></span></h5>
+    <h5>Sentinel at Death's Door<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSentinel" aria-expanded="true" aria-controls="featureSentinel">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSentinel">
@@ -1632,12 +2142,12 @@ const graveDomain = `<h4 class="text-center">Grave Domain<span class="ml-2"><but
         <p>You can use this feature a number of times equal to your Wisdom modifier (minimum of once). You regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Potent Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
+    <h5>Potent Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
     <div class="collapse show" id="featurePotent">
         <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
     </div>
 
-    <h5><u>Keeper of Souls</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureKeeper" aria-expanded="true" aria-controls="featureKeeper">[-]</button></span></h5>
+    <h5>Keeper of Souls<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureKeeper" aria-expanded="true" aria-controls="featureKeeper">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureKeeper">
@@ -1653,7 +2163,7 @@ const knowledgeDomain = `<h4 class="text-center">Knowledge Domain<span class="ml
         and Goibhniu.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1684,7 +2194,7 @@ const knowledgeDomain = `<h4 class="text-center">Knowledge Domain<span class="ml
         </tbody>
     </table>
 
-    <h5><u>Blessings of Knowledge</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessing" aria-expanded="true" aria-controls="featureBlessing">[-]</button></span></h5>
+    <h5>Blessings of Knowledge<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessing" aria-expanded="true" aria-controls="featureBlessing">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBlessing">
@@ -1692,7 +2202,7 @@ const knowledgeDomain = `<h4 class="text-center">Knowledge Domain<span class="ml
         <p>Your proficiency bonus is doubled for any ability check you make that uses either of those skills.</p>
     </div>
 
-    <h5><u>Channel Divinity: Knowledge of the Ages</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureAges" aria-expanded="true" aria-controls="featureAges">[-]</button></span></h5>
+    <h5>Channel Divinity: Knowledge of the Ages<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureAges" aria-expanded="true" aria-controls="featureAges">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureAges">
@@ -1700,7 +2210,7 @@ const knowledgeDomain = `<h4 class="text-center">Knowledge Domain<span class="ml
     </div>
 
 
-    <h5><u>Channel Divinity: Read Thoughts</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePath" aria-expanded="true" aria-controls="featurePath">[-]</button></span></h5>
+    <h5>Channel Divinity: Read Thoughts<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePath" aria-expanded="true" aria-controls="featurePath">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePath">
@@ -1710,12 +2220,12 @@ const knowledgeDomain = `<h4 class="text-center">Knowledge Domain<span class="ml
         <p>During that time, you can use your action to end this effect and cast the suggestion spell on the creature without expending a spell slot. The target automatically fails its saving throw against the spell.</p>
     </div>
 
-    <h5><u>Potent Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
+    <h5>Potent Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
     <div class="collapse show" id="featurePotent">
         <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
     </div>
 
-    <h5><u>Visions of the Past</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVisions" aria-expanded="true" aria-controls="featureVisions">[-]</button></span></h5>
+    <h5>Visions of the Past<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVisions" aria-expanded="true" aria-controls="featureVisions">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureVisions">
@@ -1738,7 +2248,7 @@ const lifeDomain = `<h4 class="text-center">Life Domain<span class="ml-2"><butto
         of healing or endurance (such as Ilmater, Mishakal, Apollo, and Diancecht), and gods of home and community (such as Hestia, Hathor, and Boldrei).</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1769,21 +2279,21 @@ const lifeDomain = `<h4 class="text-center">Life Domain<span class="ml-2"><butto
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureProf">
         <p>When you choose this domain at 1st level, you gain proficiency with heavy armor.</p>
     </div>
 
-    <h5><u>Disciple of Life</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDisciple" aria-expanded="true" aria-controls="featureDisciple">[-]</button></span></h5>
+    <h5>Disciple of Life<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDisciple" aria-expanded="true" aria-controls="featureDisciple">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDisciple">
         <p>Also starting at 1st level, your healing spells are more effective. Whenever you use a spell of 1st level or higher to restore hit points to a creature, the creature regains additional hit points equal to 2 + the spell's level.</p>
     </div>
 
-    <h5><u>Channel Divinity: Preserve Life</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePreserve" aria-expanded="true" aria-controls="featurePreserve">[-]</button></span></h5>
+    <h5>Channel Divinity: Preserve Life<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePreserve" aria-expanded="true" aria-controls="featurePreserve">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePreserve">
@@ -1793,21 +2303,21 @@ const lifeDomain = `<h4 class="text-center">Life Domain<span class="ml-2"><butto
     </div>
 
 
-    <h5><u>Blessed Healer</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
+    <h5>Blessed Healer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBlessed">
         <p>Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Supreme Healing</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSupreme" aria-expanded="true" aria-controls="featureSupreme">[-]</button></span></h5>
+    <h5>Supreme Healing<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSupreme" aria-expanded="true" aria-controls="featureSupreme">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSupreme">
@@ -1823,7 +2333,7 @@ const lightDomain = `<h4 class="text-center">Light Domain<span class="ml-2"><but
         art is a vehicle for the soul's improvement. Clerics of a god of light are enlightened souls infused with radiance and the power of their gods' discerning vision, charged with chasing away lies and burning away darkness.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1854,14 +2364,14 @@ const lightDomain = `<h4 class="text-center">Light Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Bonus Cantrip</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
+    <h5>Bonus Cantrip<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureLight">
         <p>When you choose this domain at 1st level, you gain the light cantrip if you don't already know it.</p>
     </div>
 
-    <h5><u>Warding Flare</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureFlare" aria-expanded="true" aria-controls="featureFlare">[-]</button></span></h5>
+    <h5>Warding Flare<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureFlare" aria-expanded="true" aria-controls="featureFlare">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureFlare">
@@ -1870,7 +2380,7 @@ const lightDomain = `<h4 class="text-center">Light Domain<span class="ml-2"><but
         <p>You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Channel Divinity: Radiance of the Dawn</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRadiance" aria-expanded="true" aria-controls="featureRadiance">[-]</button></span></h5>
+    <h5>Channel Divinity: Radiance of the Dawn<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRadiance" aria-expanded="true" aria-controls="featureRadiance">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureRadiance">
@@ -1880,19 +2390,19 @@ const lightDomain = `<h4 class="text-center">Light Domain<span class="ml-2"><but
     </div>
 
 
-    <h5><u>Improved Flare</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
+    <h5>Improved Flare<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBlessed">
         <p>Starting at 6th level, you can also use your Warding Flare feature when a creature that you can see within 30 feet of you attacks a creature other than you.</p>
     </div>
 
-    <h5><u>Potent Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
+    <h5>Potent Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
     <div class="collapse show" id="featurePotent">
         <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
     </div>
 
-    <h5><u>Corona of Light</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCorona" aria-expanded="true" aria-controls="featureCorona">[-]</button></span></h5>
+    <h5>Corona of Light<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCorona" aria-expanded="true" aria-controls="featureCorona">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureCorona">
@@ -1907,7 +2417,7 @@ const natureDomain = `        <h4 class="text-center">Nature Domain<span class="
         active role in advancing the interests of a particular nature god. These clerics might hunt the evil monstrosities that despoil the woodlands, bless the harvest of the faithful, or wither the crops of those who anger their gods.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -1938,21 +2448,21 @@ const natureDomain = `        <h4 class="text-center">Nature Domain<span class="
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureLight">
         <p>Also at 1st level, you gain proficiency with heavy armor.</p>
     </div>
 
-    <h5><u>Acolyte of Nature</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureFlare" aria-expanded="true" aria-controls="featureFlare">[-]</button></span></h5>
+    <h5>Acolyte of Nature<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureFlare" aria-expanded="true" aria-controls="featureFlare">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureFlare">
         <p>At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.</p>
     </div>
 
-    <h5><u>Channel Divinity: Charm Animals and Plants</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCharm" aria-expanded="true" aria-controls="featureCharm">[-]</button></span></h5>
+    <h5>Channel Divinity: Charm Animals and Plants<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCharm" aria-expanded="true" aria-controls="featureCharm">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureCharm">
@@ -1962,21 +2472,21 @@ const natureDomain = `        <h4 class="text-center">Nature Domain<span class="
     </div>
 
 
-    <h5><u>Dampen Elements</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDampen" aria-expanded="true" aria-controls="featureDampen">[-]</button></span></h5>
+    <h5>Dampen Elements<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDampen" aria-expanded="true" aria-controls="featureDampen">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDampen">
         <p>Starting at 6th level, when you or a creature within 30 feet of you takes acid, cold, fire, lightning, or thunder damage, you can use your reaction to grant resistance to the creature against that instance of the damage.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 cold, fire, or lightning damage
             (your choice) to the target. When you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Master of Nature</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureMaster" aria-expanded="true" aria-controls="featureMaster">[-]</button></span></h5>
+    <h5>Master of Nature<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureMaster" aria-expanded="true" aria-controls="featureMaster">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureMaster">
@@ -1995,7 +2505,7 @@ const orderDomain = `<h4 class="text-center">Order Domain<span class="ml-2"><but
         in a chaotic multiverse.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2026,14 +2536,14 @@ const orderDomain = `<h4 class="text-center">Order Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiencies</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
+    <h5>Bonus Proficiencies<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureLight" aria-expanded="true" aria-controls="featureLight">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureLight">
-        <p>When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice). <b><u>INSERT SKILLS CHOICE HERE!!!!!!!!</u></b></p>
+        <p>When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice). <b>INSERT SKILLS CHOICE HERE!!!!!!!!</b></p>
     </div>
 
-    <h5><u>Voice of Authority</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVoice" aria-expanded="true" aria-controls="featureVoice">[-]</button></span></h5>
+    <h5>Voice of Authority<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVoice" aria-expanded="true" aria-controls="featureVoice">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureVoice">
@@ -2042,7 +2552,7 @@ const orderDomain = `<h4 class="text-center">Order Domain<span class="ml-2"><but
         <p>If the spell targets more than one ally, you choose the ally who can make the attack.</p>
     </div>
 
-    <h5><u>Channel Divinity: Order's Demand</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDemand" aria-expanded="true" aria-controls="featureDemand">[-]</button></span></h5>
+    <h5>Channel Divinity: Order's Demand<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDemand" aria-expanded="true" aria-controls="featureDemand">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDemand">
@@ -2051,7 +2561,7 @@ const orderDomain = `<h4 class="text-center">Order Domain<span class="ml-2"><but
             creature takes any damage. You can also cause any of the charmed creatures to drop what they are holding when they fail the saving throw.</p>
     </div>
 
-    <h5><u>Embodiment of the Law</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDampen" aria-expanded="true" aria-controls="featureDampen">[-]</button></span></h5>
+    <h5>Embodiment of the Law<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDampen" aria-expanded="true" aria-controls="featureDampen">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDampen">
@@ -2060,14 +2570,14 @@ const orderDomain = `<h4 class="text-center">Order Domain<span class="ml-2"><but
         <p>You can use this feature a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses of it when you finish a long rest.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 psychic damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Order's Wrath</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCorona" aria-expanded="true" aria-controls="featureCorona">[-]</button></span></h5>
+    <h5>Order's Wrath<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCorona" aria-expanded="true" aria-controls="featureCorona">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureCorona">
@@ -2081,7 +2591,7 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
         prevent peace from flourishing. See the Peace Deities table for a list of some of the gods associated with this domain.</p>
     <p>Clerics of the Peace Domain preside over the signing of treaties, and they are often asked to arbitrate in disputes. These clerics' blessings draw people together and help them shoulder one another's burdens, and the clerics' magic aids those
         who are driven to fight for the way of peace.</p>
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-6 text-center">Example Deity</th>
@@ -2125,7 +2635,7 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
     </table>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2156,14 +2666,14 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
         </tbody>
     </table>
 
-    <h5><u>Implement of Peace</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImplement" aria-expanded="true" aria-controls="featureImplement">[-]</button></span></h5>
+    <h5>Implement of Peace<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImplement" aria-expanded="true" aria-controls="featureImplement">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureImplement">
-        <p>You gain proficiency in the Insight, Performance, or Persuasion skill (your choice).<b><u>INSERT SKILLS CHOICE HERE!!!!!!!!</u></b></p>
+        <p>You gain proficiency in the Insight, Performance, or Persuasion skill (your choice).<b>INSERT SKILLS CHOICE HERE!!!!!!!!</b></p>
     </div>
 
-    <h5><u>Emboldening Bond</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEmboldening" aria-expanded="true" aria-controls="featureEmboldening">[-]</button></span></h5>
+    <h5>Emboldening Bond<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEmboldening" aria-expanded="true" aria-controls="featureEmboldening">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureEmboldening">
@@ -2173,7 +2683,7 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
         <p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Channel Divinity: Balm of Peace</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBalm" aria-expanded="true" aria-controls="featureBalm">[-]</button></span></h5>
+    <h5>Channel Divinity: Balm of Peace<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBalm" aria-expanded="true" aria-controls="featureBalm">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBalm">
@@ -2181,7 +2691,7 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
             you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action.</p>
     </div>
 
-    <h5><u>Protective Bond</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBond" aria-expanded="true" aria-controls="featureBond">[-]</button></span></h5>
+    <h5>Protective Bond<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBond" aria-expanded="true" aria-controls="featureBond">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBond">
@@ -2189,12 +2699,12 @@ const peaceDomain = `<h4 class="text-center">Peace Domain<span class="ml-2"><but
             an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead.</p>
     </div>
 
-    <h5><u>Potent Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
+    <h5>Potent Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePotent" aria-expanded="true" aria-controls="featurePotent">[-]</button></span></h5>
     <div class="collapse show" id="featurePotent">
         <p>Starting at 8th level, you add your Wisdom modifier to the damage you deal with any cleric cantrip.</p>
     </div>
 
-    <h5><u>Expansive Bond</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExpansive" aria-expanded="true" aria-controls="featureExpansive">[-]</button></span></h5>
+    <h5>Expansive Bond<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExpansive" aria-expanded="true" aria-controls="featureExpansive">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureExpansive">
@@ -2209,7 +2719,7 @@ const protectionDomain = `<h4 class="text-center">Protection Domain<span class="
         St. Cuthbert, Paladine, Dol Dorn, the Silver Flame, Bahamut, Yondalla, Athena, and Odin.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2240,14 +2750,14 @@ const protectionDomain = `<h4 class="text-center">Protection Domain<span class="
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusProf">
         <p>When you choose this domain at 1st level, you gain proficiency with heavy armor.</p>
     </div>
 
-    <h5><u>Shield of the Faithful</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShield" aria-expanded="true" aria-controls="featureShield">[-]</button></span></h5>
+    <h5>Shield of the Faithful<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShield" aria-expanded="true" aria-controls="featureShield">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureShield">
@@ -2255,7 +2765,7 @@ const protectionDomain = `<h4 class="text-center">Protection Domain<span class="
             so, you must be able to see both the attacker and the target. You interpose an arm, a shield, or some other part of yourself to try to throw the attack off target.</p>
     </div>
 
-    <h5><u>Channel Divinity: Radiant Defense</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRadiant" aria-expanded="true" aria-controls="featureRadiant">[-]</button></span></h5>
+    <h5>Channel Divinity: Radiant Defense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRadiant" aria-expanded="true" aria-controls="featureRadiant">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureRadiant">
@@ -2263,21 +2773,21 @@ const protectionDomain = `<h4 class="text-center">Protection Domain<span class="
         <p>As an action, you channel blessed energy into an ally that you can see within 30 feet of you. The first time that ally is hit by an attack within the next minute, the attacker takes radiant damage equal to 2d10 + your cleric level.</p>
     </div>
 
-    <h5><u>Blessed Healer</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
+    <h5>Blessed Healer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBlessed" aria-expanded="true" aria-controls="featureBlessed">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBlessed">
         <p>Beginning at 6th level, the healing spells you cast on others heal you as well. When you cast a spell of 1st level or higher that restores hit points to a creature other than you, you regain hit points equal to 2 + the spell's level.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Indomitable Defense</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExpansive" aria-expanded="true" aria-controls="featureExpansive">[-]</button></span></h5>
+    <h5>Indomitable Defense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureExpansive" aria-expanded="true" aria-controls="featureExpansive">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureExpansive">
@@ -2294,7 +2804,7 @@ const tempestDomain = `<h4 class="text-center">Tempest Domain<span class="ml-2">
     </p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2325,14 +2835,14 @@ const tempestDomain = `<h4 class="text-center">Tempest Domain<span class="ml-2">
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiency</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
+    <h5>Bonus Proficiency<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusProf" aria-expanded="true" aria-controls="featureBonusProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusProf">
         <p>When you choose this domain at 1st level, you gain proficiency with heavy armor and martial weapons.</p>
     </div>
 
-    <h5><u>Wrath of the Storm</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureWrath" aria-expanded="true" aria-controls="featureWrath">[-]</button></span></h5>
+    <h5>Wrath of the Storm<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureWrath" aria-expanded="true" aria-controls="featureWrath">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureWrath">
@@ -2341,7 +2851,7 @@ const tempestDomain = `<h4 class="text-center">Tempest Domain<span class="ml-2">
         <p>You can use this feature a number of times equal to your Wisdom modifier (a minimum of once). You regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Channel Divinity: Destructive Wrath</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDestructive" aria-expanded="true" aria-controls="featureDestructive">[-]</button></span></h5>
+    <h5>Channel Divinity: Destructive Wrath<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDestructive" aria-expanded="true" aria-controls="featureDestructive">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDestructive">
@@ -2349,21 +2859,21 @@ const tempestDomain = `<h4 class="text-center">Tempest Domain<span class="ml-2">
         <p>When you roll lightning or thunder damage, you can use your Channel Divinity to deal maximum damage, instead of rolling.</p>
     </div>
 
-    <h5><u>Thunderbolt Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureThunderbolt" aria-expanded="true" aria-controls="featureThunderbolt">[-]</button></span></h5>
+    <h5>Thunderbolt Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureThunderbolt" aria-expanded="true" aria-controls="featureThunderbolt">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureThunderbolt">
         <p>At 6th level, when you deal lightning damage to a Large or smaller creature, you can also push it up to 10 feet away from you.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Stormborn</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStormborn" aria-expanded="true" aria-controls="featureStormborn">[-]</button></span></h5>
+    <h5>Stormborn<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStormborn" aria-expanded="true" aria-controls="featureStormborn">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureStormborn">
@@ -2377,7 +2887,7 @@ const trickeryDomain = `<h4 class="text-center">Trickery Domain<span class="ml-2
         deception, and theft rather than direct confrontation.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2408,7 +2918,7 @@ const trickeryDomain = `<h4 class="text-center">Trickery Domain<span class="ml-2
         </tbody>
     </table>
 
-    <h5><u>Blessing of the Trickster</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusTrick" aria-expanded="true" aria-controls="featureBonusTrick">[-]</button></span></h5>
+    <h5>Blessing of the Trickster<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureBonusTrick" aria-expanded="true" aria-controls="featureBonusTrick">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureBonusTrick">
@@ -2417,7 +2927,7 @@ const trickeryDomain = `<h4 class="text-center">Trickery Domain<span class="ml-2
         </p>
     </div>
 
-    <h5><u>Invoke Duplicity</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDuplicity" aria-expanded="true" aria-controls="featureDuplicity">[-]</button></span></h5>
+    <h5>Invoke Duplicity<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureDuplicity" aria-expanded="true" aria-controls="featureDuplicity">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureDuplicity">
@@ -2428,7 +2938,7 @@ const trickeryDomain = `<h4 class="text-center">Trickery Domain<span class="ml-2
             on attack rolls against that creature, given how distracting the illusion is to the target.</p>
     </div>
 
-    <h5><u>Channel Divinity: Cloak of Shadows</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCloak" aria-expanded="true" aria-controls="featureCloak">[-]</button></span></h5>
+    <h5>Channel Divinity: Cloak of Shadows<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCloak" aria-expanded="true" aria-controls="featureCloak">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureCloak">
@@ -2436,14 +2946,14 @@ const trickeryDomain = `<h4 class="text-center">Trickery Domain<span class="ml-2
         <p>As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Improved Duplicity</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImpro" aria-expanded="true" aria-controls="featureImpro">[-]</button></span></h5>
+    <h5>Improved Duplicity<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureImpro" aria-expanded="true" aria-controls="featureImpro">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureImpro">
@@ -2455,7 +2965,7 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
     <p>The twilit transition from light into darkness often brings calm and even joy, as the day's labors end and the hours of rest begin. The darkness can also bring terrors, but the gods of twilight guard against the horrors of the night.</p>
     <p>Clerics who serve these deities-examples of which appear on the Twilight Deities table-bring comfort to those who seek rest and protect them by venturing into the encroaching darkness to ensure that the dark is a comfort, not a terror.</p>
 
-    <table class="table-striped">
+    <table class="table-striped table-hover mb-2">
         <caption>Twilight Deities</caption>
         <thead>
             <tr>
@@ -2500,7 +3010,7 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
     </table>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2531,14 +3041,14 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiencies</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
+    <h5>Bonus Proficiencies<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureProf">
         <p>You gain proficiency with martial weapons and heavy armor.</p>
     </div>
 
-    <h5><u>Eyes of Night</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEyes" aria-expanded="true" aria-controls="featureEyes">[-]</button></span></h5>
+    <h5>Eyes of Night<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEyes" aria-expanded="true" aria-controls="featureEyes">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureEyes">
@@ -2547,7 +3057,7 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
             for 1 hour. Once you share it, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to share it again.</p>
     </div>
 
-    <h5><u>Vigilant Blessing</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVigilant" aria-expanded="true" aria-controls="featureVigilant">[-]</button></span></h5>
+    <h5>Vigilant Blessing<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVigilant" aria-expanded="true" aria-controls="featureVigilant">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureVigilant">
@@ -2555,7 +3065,7 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
             feature again.</p>
     </div>
 
-    <h5><u>Channel Divinity: Twilight Sanctuary</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSanctuary" aria-expanded="true" aria-controls="featureSanctuary">[-]</button></span></h5>
+    <h5>Channel Divinity: Twilight Sanctuary<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSanctuary" aria-expanded="true" aria-controls="featureSanctuary">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSanctuary">
@@ -2568,21 +3078,21 @@ const twilightDomain = `<h4 class="text-center">Twilight Domain<span class="ml-2
         </ul>
     </div>
 
-    <h5><u>Steps of Night</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSteps" aria-expanded="true" aria-controls="featureSteps">[-]</button></span></h5>
+    <h5>Steps of Night<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSteps" aria-expanded="true" aria-controls="featureSteps">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureSteps">
         <p>You can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus
             action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 radiant damage to the target. When
             you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Twilight Shroud</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShroud" aria-expanded="true" aria-controls="featureShroud">[-]</button></span></h5>
+    <h5>Twilight Shroud<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShroud" aria-expanded="true" aria-controls="featureShroud">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureShroud">
@@ -2597,7 +3107,7 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
         a more neutral stance, promoting war in all its manifestations and supporting warriors in any circumstance.</p>
     <p>At each indicated cleric level, you add the listed spells to your spells prepared.</p>
 
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center">Cleric Level</th>
@@ -2628,14 +3138,14 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
         </tbody>
     </table>
 
-    <h5><u>Bonus Proficiencies</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
+    <h5>Bonus Proficiencies<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureProf" aria-expanded="true" aria-controls="featureProf">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureProf">
         <p>You gain proficiency with martial weapons and heavy armor.</p>
     </div>
 
-    <h5><u>War Priest</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePriest" aria-expanded="true" aria-controls="featurePriest">[-]</button></span></h5>
+    <h5>War Priest<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePriest" aria-expanded="true" aria-controls="featurePriest">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePriest">
@@ -2643,7 +3153,7 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
             modifier (a minimum of once). You regain all expended uses when you finish a long rest.</p>
     </div>
 
-    <h5><u>Channel Divinity: Guided Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureGuided" aria-expanded="true" aria-controls="featureGuided">[-]</button></span></h5>
+    <h5>Channel Divinity: Guided Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureGuided" aria-expanded="true" aria-controls="featureGuided">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureGuided">
@@ -2651,7 +3161,7 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
             but before the DM says whether the attack hits or misses.</p>
     </div>
 
-    <h5><u>Channel Divinity: War God's Blessing</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSanctuary" aria-expanded="true" aria-controls="featureSanctuary">[-]</button></span></h5>
+    <h5>Channel Divinity: War God's Blessing<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSanctuary" aria-expanded="true" aria-controls="featureSanctuary">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureSanctuary">
@@ -2659,14 +3169,14 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
             DM says whether the attack hits or misses.</p>
     </div>
 
-    <h5><u>Divine Strike</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
+    <h5>Divine Strike<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureStrike" aria-expanded="true" aria-controls="featureStrike">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureStrike">
         <p>At 8th level, you gain the ability to infuse your weapon strikes with divine energy. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 damage of the same type dealt by
             the weapon to the target. When you reach 14th level, the extra damage increases to 2d8.</p>
     </div>
 
-    <h5><u>Avatar of Battle</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShroud" aria-expanded="true" aria-controls="featureShroud">[-]</button></span></h5>
+    <h5>Avatar of Battle<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureShroud" aria-expanded="true" aria-controls="featureShroud">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureShroud">
@@ -2762,14 +3272,12 @@ const druidFeaturesByLevel = [`<h1 class="text-center">Druid<span class="ml-2"><
     <p class="text-right">— Safhran, Arch druid</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Druidic</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Druidic<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
@@ -2777,7 +3285,7 @@ const druidFeaturesByLevel = [`<h1 class="text-center">Druid<span class="ml-2"><
             DC 15 Wisdom (Perception) check but can't decipher it without magic.</p>
     </div>
 
-    <h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
+    <h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature3">
@@ -2812,6 +3320,33 @@ const druidFeaturesByLevel = [`<h1 class="text-center">Druid<span class="ml-2"><
     </div>
 
 </div>`, `<p>druid 2`, `<p>druid 3`, `<p>druid 4`, `<p>druid 5`, `<p>druid 6`, `<p>druid 7`, `<p>druid 8`, `<p>druid 3`, `<p>druid 2`, `<p>druid 3`, `<p>druid 2`, `<p>druid 3`, `<p>druid 2`, `<p>druid 3`, `<p>druid 2`, `<p>druid 3`, `<p>druid 2`, `<p>druid 3`, `<p>druid 2`];
+const druidFeaturesList = [
+    [`<li>
+    Druidic
+    </li><li>
+    Spellcasting
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
+
 
 /*###################################################################
 ######################### Fighter ##################################
@@ -2849,14 +3384,12 @@ const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-
     <p>— Tordek</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-           <h5><u>Fighting Style</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+           <h5>Fighting Style<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
         data-target="#featureStyle" aria-expanded="true" aria-controls="featureStyle">[-]</button></span></h5>
     <hr>
 
@@ -2891,7 +3424,7 @@ const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-
         
     </div>
 
-    <h5><u>Second Wind</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+    <h5>Second Wind<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature2">
@@ -2967,6 +3500,32 @@ document.getElementById("displayContent").addEventListener('click', function(eve
         document.getElementById("fightingStyle").innerHTML = unarmedFighting;
     }
 });
+const fighterFeaturesList = [
+    [`<li>
+    Fighting style <span id="fStyle">TEST</span>
+    </li><li>
+    Second Wind
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 /*###################################################################
 ######################### Monk ##################################
@@ -3006,21 +3565,19 @@ const monkFeaturesByLevel = [`<h1 class="text-center">Monk<span class="ml-2"><bu
     <p class="text-right">— Ember, grand master of flowers</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Unarmored Defense</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Unarmored Defense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
         <p>Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.</p>
     </div>
 
-    <h5><u>Martial Arts</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+    <h5>Martial Arts<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature2">
@@ -3035,7 +3592,7 @@ const monkFeaturesByLevel = [`<h1 class="text-center">Monk<span class="ml-2"><bu
         <p>Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama).</p>
     </div>
 
-    <h5><u>Monk Weapons</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
+    <h5>Monk Weapons<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature3">
@@ -3049,6 +3606,32 @@ const monkFeaturesByLevel = [`<h1 class="text-center">Monk<span class="ml-2"><bu
             <li>The weapon must lack these properties: heavy, special, or two-handed.</li>
         </ul>
 </div>`, `<p>monk 2`, `<p>monk 3`, `<p>monk 4`, `<p>monk 5`, `<p>monk 6`, `<p>monk 7`, `<p>monk 8`, `<p>monk 3`, `<p>monk 8`, `<p>monk 3`, `<p>monk 2`, `<p>monk 3`, `<p>monk 2`, `<p>monk 3`, `<p>monk 2`, `<p>monk 3`, `<p>monk 2`, `<p>monk 3`, `<p>monk 2`];
+const monkFeaturesList = [
+    [`<li>
+    Martial Arts
+    </li><li>
+    Unarmored Defense
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 
 /*###################################################################
@@ -3084,7 +3667,7 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
                     data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
         <div class="collapse show" id="level1">
 
-<h5><u>Psionics</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+<h5>Psionics<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
 <div class="collapse show" id="feature1">
@@ -3121,7 +3704,7 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
     <p><b>Discipline attack modifier</b> = your proficiency bonus + your Intelligence modifier</p>
 </div>
 
-<h5><u>Psionic Disciplines and Talents</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+<h5>Psionic Disciplines and Talents<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
 <hr>
 
 <div class="collapse show" id="feature2">
@@ -3129,7 +3712,7 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
     <p>Psionic disciplines were each discovered by different orders and tend to reflect their creators' specialties. However, a mystic can learn any discipline regardless of its associated order.</p>
 </div>
 
-<h5><u>Using a Discipline</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
+<h5>Using a Discipline<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
 <hr>
 
 <div class="collapse show" id="feature3">
@@ -3171,7 +3754,7 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
     </p>
     <p>Psionics and spells are separate effects, and therefore their benefits and drawbacks overlap. A psionic effect that reproduces a spell is an exception to this rule.</p>
 </div>
-<h5><u>Mystic Order</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature4" aria-expanded="true" aria-controls="feature4">[-]</button></span></h5>
+<h5>Mystic Order<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature4" aria-expanded="true" aria-controls="feature4">[-]</button></span></h5>
 <hr>
 
 <div class="collapse show" id="feature4">
@@ -3217,14 +3800,12 @@ const paladinFeaturesByLevel = [`<h1 class="text-center">Paladin<span class="ml-
     <p class="text-right">— Isteval</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-    <h5><u>Divine Sense</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
+    <h5>Divine Sense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature1">
@@ -3235,7 +3816,7 @@ const paladinFeaturesByLevel = [`<h1 class="text-center">Paladin<span class="ml-
         <p>You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.</p>
     </div>
 
-    <h5><u>Lay on Hands</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
+    <h5>Lay on Hands<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="feature2">
@@ -3246,7 +3827,32 @@ const paladinFeaturesByLevel = [`<h1 class="text-center">Paladin<span class="ml-
         <p>This feature has no effect on undead and constructs.</p>
     </div>
 </div>`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 4`, `<p>paladin 5`, `<p>paladin 6`, `<p>paladin 7`, `<p>paladin 8`, `<p>paladin 3`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 2`, `<p>paladin 3`, `<p>paladin 2`];
-
+const paladinFeaturesList = [
+    [`<li>
+    Divine Sense
+    </li><li>
+    Lay on Hands
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 /*###################################################################
 ######################### Ranger ##################################
@@ -3306,15 +3912,13 @@ put together.”</i>
 <p class="text-right">— Soveliss</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
 data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Favored Enemy</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Favored Enemy<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
@@ -3349,7 +3953,7 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
       </select></p>
 </div>
 
-<h5><u>Natural Explorer</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Natural Explorer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
 <hr>
 
@@ -3376,6 +3980,32 @@ traveling for an hour or more:</p>
 </ul>
 </div>
 </div>`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 4`, `<p>ranger 5`, `<p>ranger 6`, `<p>ranger 7`, `<p>ranger 8`, `<p>ranger 3`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 2`, `<p>ranger 3`, `<p>ranger 2`];
+const rangerFeaturesList = [
+    [`<li>
+    Fighting style <span id="enemy">TEST</span>
+    </li><li>
+    Natural Explorer
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 /*###################################################################
 ######################### Rogue ##################################
@@ -3446,15 +4076,13 @@ hidden away there. Fighting is for fools. Dead men can't spend their fortunes.�
 <p class="text-right">— Barnabas Bladecutter</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
 data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Expertise</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Expertise<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
@@ -3467,7 +4095,7 @@ that uses either of the chosen proficiencies.</p>
 gain this benefit.</p>
 </div>
 
-<h5><u>Sneak Attack</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Sneak Attack<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
 <hr>
 
@@ -3481,7 +4109,7 @@ that enemy isn't incapacitated, and you don't have disadvantage on the attack ro
 Attack column of the Rogue table.</p>
 </div>
 
-<h5><u>Thieves' Cant</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Thieves' Cant<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature3" aria-expanded="true" aria-controls="feature3">[-]</button></span></h5>
 <hr>
 
@@ -3491,6 +4119,34 @@ Attack column of the Rogue table.</p>
 </div>
 
 </div>`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 4`, `<p>rogue 5`, `<p>rogue 6`, `<p>rogue 7`, `<p>rogue 8`, `<p>rogue 3`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 2`, `<p>rogue 3`, `<p>rogue 2`];
+const rogueFeaturesList = [
+    [`<li>
+    Expertise <span id="enemy">TEST</span>
+    </li><li>
+    Sneak attack
+    </li><li>
+    Thieves' Cant
+    </li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 
 /*###################################################################
@@ -3534,15 +4190,13 @@ homes after the sudden, terrifying arrival of their abilities.</p>
 <p class="text-right">— Hennet, scion of Tiamat</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
 data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Sorcerous Origin</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Sorcerous Origin<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
             data-target="#featureOrigin" aria-expanded="true" aria-controls="featureOrigin">[-]</button></span></h5>
         <hr>
 
@@ -3555,17 +4209,15 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
                 <button type="button" class="btn btn-secondary" id="draconic">Draconic</button>
                 <button type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
                 <button type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
-                <button type="button" class="btn btn-secondary" id="pyro">Pyromancer</button>
                 <button type="button" class="btn btn-secondary" id="sea">Sea</button>
                 <button type="button" class="btn btn-secondary" id="shadow">Shadow</button>
-                <button type="button" class="btn btn-secondary" id="stone">Stone</button>
                 <button type="button" class="btn btn-secondary" id="storm">Storm</button>
                 <button type="button" class="btn btn-secondary" id="wild">Wild magic</button>
             </div>
             <div id="sorcOrigin" class="choiceBG"></div>
         </div>
 
-<h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
@@ -3606,7 +4258,7 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
     <p>An alien influence has wrapped its tendrils around your mind, giving you psionic power. You can now touch other minds with that power and alter the world around you by using it to control the magical energy of the multiverse. Will this power
         shine from you as a hopeful beacon to others? Or will you be a source of terror to those who feel the stab of your mind and witness the strange manifestations of your might?</p>
     <p>As an Aberrant Mind sorcerer, you decide how you acquired your powers. Were you born with them? Or did an event later in life leave you shining with psionic awareness? Consult the Aberrant Origins table for a possible origin of your power.</p>
-    <table class="table-striped mb-2">
+    <table class="table-striped table-hover mb-2">
         <thead>
             <tr>
                 <th class="col-2 text-center"><span>d6</span></th>
@@ -3641,13 +4293,13 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
         </tbody>
     </table>
 
-    <h5><u>Psionic Spells</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsionic" aria-expanded="true" aria-controls="featurePsionic">[-]</button></span></h5>
+    <h5>Psionic Spells<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsionic" aria-expanded="true" aria-controls="featurePsionic">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePsionic">
         <p>You learn additional spells when you reach certain levels in this class, as shown on the Psionic Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against the number of sorcerer spells you know.</p>
         <p>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with another spell of the same level. <b>The new spell must be a divination or an enchantment spell from the sorcerer, warlock, or wizard spell list.</b></p>
-        <table class="table-striped mb-2">
+        <table class="table-striped table-hover mb-2">
             <thead>
                 <tr>
                     <th class="col-2 text-center" data-rd-isroller="false">Sorcerer Level</th>
@@ -3679,7 +4331,7 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
         </table>
     </div>
 
-    <h5><u>Telepathic Speech</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureTelepathic" aria-expanded="true" aria-controls="featureTelepathic">[-]</button></span></h5>
+    <h5>Telepathic Speech<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureTelepathic" aria-expanded="true" aria-controls="featureTelepathic">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureTelepathic">
@@ -3688,7 +4340,7 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
         <p>The telepathic connection lasts for a number of minutes equal to your sorcerer level. It ends early if you are incapacitated or die or if you use this ability to form a connection with a different creature.</p>
     </div>
 
-    <h5><u>Psionic Sorcery</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsiSorcery" aria-expanded="true" aria-controls="featurePsiSorcery">[-]</button></span></h5>
+    <h5>Psionic Sorcery<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsiSorcery" aria-expanded="true" aria-controls="featurePsiSorcery">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePsiSorcery">
@@ -3696,14 +4348,14 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
         <p>If you cast the spell using sorcery points, it requires no verbal or somatic components, and it requires no material components, unless they are consumed by the spell.</p>
     </div>
 
-    <h5 class="mt-2"><u>Psychic Defenses</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsychicDefenses" aria-expanded="true" aria-controls="featurePsychicDefenses">[-]</button></span></h5>
+    <h5 class="mt-2">Psychic Defenses<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featurePsychicDefenses" aria-expanded="true" aria-controls="featurePsychicDefenses">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featurePsychicDefenses">
         <p>At 6th level you gain resistance to psychic damage, and you have advantage on saving throws against being charmed or frightened.</p>
     </div>
 
-    <h5><u>Revelation in Flesh</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRevelation" aria-expanded="true" aria-controls="featureRevelation">[-]</button></span></h5>
+    <h5>Revelation in Flesh<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureRevelation" aria-expanded="true" aria-controls="featureRevelation">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureRevelation">
         <p>Starting at 14th level, you can unleash the aberrant truth hidden within yourself. As a bonus action, you can spend 1 or more sorcery points to magically transform your body for 10 minutes. For each sorcery point you spend, you can gain
@@ -3718,7 +4370,7 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
         </ul>
     </div>
 
-    <h5><u>Warping Implosion</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureWarping" aria-expanded="true" aria-controls="featureWarping">[-]</button></span></h5>
+    <h5>Warping Implosion<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureWarping" aria-expanded="true" aria-controls="featureWarping">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureWarping">
@@ -3729,17 +4381,1185 @@ const aberrant = `<h4 class="text-center">Aberrant Mind<span class="ml-2"><butto
     </div>
 </div>
 </div>`;
-const clockwork = `clockwork works`;
-const divine = `divine works`;
-const draconic = `draconic works`;
-const giant = `giant works`;
-const phoenix = `phoenix works`;
-const pyro = `pyro works`;
-const sea = `sea works`;
-const shadow = `shadow works`;
-const stone = `stone works`;
-const storm = `storm works`;
-const wild = `wild works`;
+const clockwork = `<h4 class="text-center">Clockwork Soul<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>The cosmic force of order has suffused you with magic. That power arises from Mechanus or a realm like
+it-a plane of existence shaped entirely by clockwork efficiency. You, or someone from your lineage,
+might have become entangled in the machinations of the modrons, the orderly beings who inhabit Mechanus.
+Perhaps your ancestor even took part in the Great Modron March. Whatever its origin within you, the
+power of order can seem strange to others, but for you, it is part of a vast and glorious system.</p>
+
+<h5>Clockwork Magic<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureClockMagic" aria-expanded="true"
+    aria-controls="featureClockMagic">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureClockMagic">
+<p>You learn additional spells when you reach certain levels in this class, as shown on the Psionic
+Spells table. Each of these spells counts as a sorcerer spell for you, but it doesn't count against
+the number of sorcerer spells you know.</p>
+<p>Whenever you gain a sorcerer level, you can replace one spell you gained from this feature with
+another spell of the same level.<b>The new spell must be an abjuration or a transmutation spell
+    from the sorcerer, warlock, or wizard spell list.</b></p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center" data-rd-isroller="false">Sorcerer Level</th>
+        <th class="col-10" data-rd-isroller="false">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">alarm, protection from evil and good</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">aid, lesser restoration</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10"> dispel magic, protection from energy</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">7th</td>
+        <td class="col-10">freedom of movement, summon construct</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">9th</td>
+        <td class="col-10">greater restoration, wall of force</td>
+    </tr>
+</tbody>
+</table>
+<p>In addition, consult the Manifestations of Order table and choose or randomly determine a way your
+connection to order manifests while you are casting any of your sorcerer spells.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center"><span>d6</span>
+        </th>
+        <th class="col-10">Manifestation</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1</td>
+        <td class="col-10">Spectral cogwheels hover behind you.</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2</td>
+        <td class="col-10">The hands of a clock spin in your eyes.</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3</td>
+        <td class="col-10">Your skin glows with a brassy sheen.</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4</td>
+        <td class="col-10">Floating equations and geometric objects overlay your body.</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5</td>
+        <td class="col-10">Your spellcasting focus temporarily takes the form of a Tiny clockwork
+            mechanism.</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">6</td>
+        <td class="col-10">The ticking of gears or ringing of a clock can be heard by you and those
+            affected by your magic.</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Restore Balance<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRestore" aria-expanded="true"
+    aria-controls="featureRestore">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureRestore">
+<p>Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.</p>
+<p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+</div>
+
+<h5>Bastion of Law<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureBastion" aria-expanded="true"
+    aria-controls="featureBastion">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureBastion">
+<p>Starting at 6th level, you can tap into the grand equation of existence to imbue a creature with a shimmering shield of order. As an action, you can expend 1 to 5 sorcery points to create a magical ward around yourself or another creature you can see within 30 feet of you. The ward lasts until you finish a long rest or until you use this feature again.</p>
+<p>The ward is represented by a number of d8s equal to the number of sorcery points spent to create it. When the warded creature takes damage, it can expend a number of those dice, roll them, and reduce the damage taken by the total rolled on those dice.</p>
+</div>
+
+<h5 class="mt-2">Trance of Order<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureTrance" aria-expanded="true"
+    aria-controls="featureTrance">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureTrance">
+<p>At 14th level you gain the ability to align your consciousness to the endless calculations of Mechanus. As a bonus action, you can enter this state for 1 minute. For the duration, attack rolls against you can't benefit from advantage, and whenever you make an attack roll, an ability check, or a saving throw, you can treat a roll of 9 or lower on the d20 as a 10.</p>
+<p>Once you use this bonus action, you can't use it again until you finish a long rest, unless you spend 5 sorcery points to use it again.</p>
+</div>
+
+<h5>Clockwork Cavalcade<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureCavalcade" aria-expanded="true"
+    aria-controls="featureCavalcade">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureCavalcade">
+<p>Starting at 18th level, You summon spirits of order to expunge disorder around you. As an action, you summon the spirits in a 30-foot cube originating from you. The spirits look like modrons or other constructs of your choice. The spirits are intangible and invulnerable, and they create the following effects within the cube before vanishing:</p>
+<ul>
+<li>The spirits restore up to 100 hit points, divided as you choose among any number of creatures of your choice in the cube.</li>
+<li>Any damaged objects entirely in the cube are repaired instantly.</li>
+<li>Every spell of 6th level or lower ends on creatures and objects of your choice in the cube.</li>
+</ul>
+<p>Once you use this action, you can't use it again until you finish a long rest, unless you spend 7 sorcery points to use it again.</p>
+</div>
+</div>
+</div>`;
+const divine = `<h4 class="text-center">Divine Soul<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>Sometimes the spark of magic that fuels a sorcerer comes from a divine source that glimmers within the
+soul. Having such a blessed soul is a sign that your innate magic might come from a distant but powerful
+familial connection to a divine being. Perhaps your ancestor was an angel, transformed into a mortal and
+sent to fight in a god's name.</p>
+<p>Or your birth might align with an ancient prophecy, marking you as a servant of the gods or a chosen
+vessel of divine magic.</p>
+<p>A Divine Soul, with a natural magnetism, is seen as a threat by some religious hierarchies. As an
+outsider who commands sacred power, a Divine Soul can undermine an existing order by claiming a direct
+tie to the divine.</p>
+<p>In some cultures, only those who can claim the power of a Divine Soul may command religious power. In
+these lands, ecclesiastical positions are dominated by a few bloodlines and preserved over generations.
+</p>
+
+<h5>Divine Magic<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureDivine" aria-expanded="true"
+    aria-controls="featureDivine">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureDivine">
+<p>Your link to the divine allows you to learn spells from the cleric class. When your Spellcasting
+feature lets you learn or replace a sorcerer cantrip or a sorcerer spell of 1st level or higher, you
+can choose the new spell from the cleric spell list or the sorcerer spell list. You must otherwise
+obey all the restrictions for selecting the spell, and it becomes a sorcerer spell for you.</p>
+<p>In addition, choose an affinity for the source of your divine power: good, evil, law, chaos, or
+neutrality. You learn an additional spell based on that affinity, as shown below. It is a sorcerer
+spell for you, but it doesn't count against your number of sorcerer spells known. If you later
+replace this spell, you must replace it with a spell from the cleric spell list. <b>If you later
+    replace this spell, you must replace it with a spell from the cleric spell list.</b></p>
+
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-5" data-rd-isroller="false">Affinity</th>
+        <th class="col-7" data-rd-isroller="false">Spell</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-5">Good</td>
+        <td class="col-7">cure wounds</td>
+    </tr>
+    <tr>
+        <td class="col-5">Evil</td>
+        <td class="col-7">inflict wounds</td>
+    </tr>
+    <tr>
+        <td class="col-5">Law</td>
+        <td class="col-7">bless</td>
+    </tr>
+    <tr>
+        <td class="col-5">Chaos</td>
+        <td class="col-7">bane</td>
+    </tr>
+    <tr>
+        <td class="col-5">Neutrality</td>
+        <td class="col-7">protection from evil and good</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Favored by the Gods<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureFavored" aria-expanded="true"
+    aria-controls="featureFavored">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureFavored">
+<p>Starting at 1st level, divine power guards your destiny. If you fail a saving throw or miss with an attack roll, you can roll 2d4 and add it to the total, possibly changing the outcome. Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Empowered Healing<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureEmpowered" aria-expanded="true"
+    aria-controls="featureEmpowered">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureEmpowered">
+<p>Starting at 6th level, the divine energy coursing through you can empower healing spells. Whenever you or an ally within 5 feet of you rolls dice to determine the number of hit points a spell restores, you can spend 1 sorcery point to reroll any number of those dice once, provided you aren't incapacitated. You can use this feature only once per turn.</p>
+</div>
+
+<h5 class="mt-2">Otherworldly Wings<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWings" aria-expanded="true"
+    aria-controls="featureWings">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureWings">
+<p>Starting at 14th level, you can use a bonus action to manifest a pair of spectral wings from your back. While the wings are present, you have a flying speed of 30 feet. The wings last until you're incapacitated, you die, or you dismiss them as a bonus action.</p>
+<p>The affinity you chose for your Divine Magic feature determines the appearance of the spectral wings: eagle wings for good or law, bat wings for evil or chaos, and dragonfly wings for neutrality.</p>
+</div>
+
+<h5>Unearthly Recovery<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRecovery" aria-expanded="true"
+    aria-controls="featureRecovery">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureRecovery">
+<p>At 18th level, you gain the ability to overcome grievous injuries. As a bonus action when you have fewer than half of your hit points remaining, you can regain a number of hit points equal to half your hit point maximum.</p>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+</div>
+</div>
+</div>`;
+const draconic = `<h4 class="text-center">Draconic Bloodline<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>Your innate magic comes from draconic magic that was mingled with your blood or that of your ancestors.
+Most often, sorcerers with this origin trace their descent back to a mighty sorcerer of ancient times
+who made a bargain with a dragon or who might even have claimed a dragon parent. Some of these
+bloodlines are well established in the world, but most are obscure. Any given sorcerer could be the
+first of a new bloodline, as a result of a pact or some other exceptional circumstance.</p>
+
+<h5>Dragon Ancestor<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureAncestor" aria-expanded="true"
+    aria-controls="featureAncestor">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureAncestor">
+<p>At 1st level, you choose one type of dragon as your ancestor. The damage type associated with each
+dragon is used by features you gain later.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-6 text-center" data-rd-isroller="false">Dragon</th>
+        <th class="col-6 text-center" data-rd-isroller="false">Damage Type</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-6 text-center">Black</td>
+        <td class="col-6 text-center">Acid</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Blue</td>
+        <td class="col-6 text-center">Lightning</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Brass</td>
+        <td class="col-6 text-center">Fire</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Bronze</td>
+        <td class="col-6 text-center">Lightning</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Copper</td>
+        <td class="col-6 text-center">Acid</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Gold</td>
+        <td class="col-6 text-center">Fire</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Green</td>
+        <td class="col-6 text-center">Poison</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Red</td>
+        <td class="col-6 text-center">Fire</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">Silver</td>
+        <td class="col-6 text-center">Cold</td>
+    </tr>
+    <tr>
+        <td class="col-6 text-center">White</td>
+        <td class="col-6 text-center">Cold</td>
+    </tr>
+</tbody>
+</table>
+<p>You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check.</p>
+</div>
+
+<h5>Elemental Affinity<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureAffinity" aria-expanded="true"
+    aria-controls="featureAffinity">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureAffinity">
+<p>Starting at 6th level, when you cast a spell that deals damage of the type associated with your draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>
+</div>
+
+<h5>Dragon Wings<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWings" aria-expanded="true"
+    aria-controls="featureWings">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureWings">
+<p>At 14th level, you gain the ability to sprout a pair of dragon wings from your back, gaining a flying speed equal to your current speed. You can create these wings as a bonus action on your turn. They last until you dismiss them as a bonus action on your turn.</p>
+<p>You can't manifest your wings while wearing armor unless the armor is made to accommodate them, and clothing not made to accommodate your wings might be destroyed when you manifest them.</p>
+</div>
+
+<h5 class="mt-2">Draconic Presence<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featurePresence" aria-expanded="true"
+    aria-controls="featurePresence">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featurePresence">
+<p>Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.</p>
+</div>
+</div>`;
+const giant = `<h4 class="text-center">Giant Soul<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>The giants once dwelled in a fabled realm known as Ostoria, a paradise for their folk that reflected
+their mastery of the mortal realm. In time, Ostoria fell, and the giants were scattered and broken.
+During that mythic era, the giants granted a few chosen individuals among the small folk a shard of
+their great power. These favored people were caught in the same tragedy that sundered Ostoria. Since
+that time, they have spread across the many worlds of the multiverse. Now and again, one of their
+descendants manifests the gifts imparted by the giants, granting them sorcerous magic that allows them
+to command the elements and gain the might of a giant.</p>
+
+<h5>Jotun Resilience<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureJotun" aria-expanded="true"
+    aria-controls="featureJotun">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureJotun">
+<p>At 1st level, you discover innate magical abilities within yourself that are based on your giant
+heritage. Select one of the giant types from the Mark of the Ordning table. At 1st and 3rd level,
+you learn the spells associated with your choice, as shown in the table. These spells count as
+sorcerer spells for you, but they don't count against your number of sorcerer spells known.</p>
+</div>
+
+<h5>Mark of the Ordning<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureMark" aria-expanded="true"
+    aria-controls="featureMark">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureMark">
+<p>Starting at 6th level, when you cast a spell that deals damage of the type associated with your
+draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same
+time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-3">Giant Type</th>
+        <th class="col-3">Spells at 1st Level</th>
+        <th class="col-3">Spells at 3rd Level</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-3">Cloud Giant</td>
+        <td class="col-3">fog cloud, minor illusion</a>
+        </td>
+        <td class="col-3">invisibility</td>
+    </tr>
+    <tr>
+        <td class="col-3">Fire Giant</td>
+        <td class="col-3">burning hands, fire bolt</td>
+        <td class="col-3">flaming sphere</td>
+    </tr>
+    <tr>
+        <td class="col-3">Frost Giant</td>
+        <td class="col-3">armor of Agathys, ray of frost</td>
+        <td class="col-3">hold person</td>
+    </tr>
+    <tr>
+        <td class="col-3">Hill Giant</td>
+        <td class="col-3">heroism, shillelagh</td>
+        <td class="col-3">enlarge/reduce</td>
+    </tr>
+    <tr>
+        <td class="col-3">Stone Giant</td>
+        <td class="col-3">entangle, resistance</td>
+        <td class="col-3">spike growth</td>
+    </tr>
+    <tr>
+        <td class="col-3">Storm Giant</td>
+        <td class="col-3">shocking grasp, thunderwave</td>
+        <td class="col-3">gust of wind</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Soul of Lost Ostoria<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureOstoria" aria-expanded="true"
+    aria-controls="featureOstoria">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureOstoria">
+<p>Starting at 6th level, you gain a benefit whenever you cast one of the spells granted by your Mark of
+the Ordning Feature.</p>
+<p><b>Cloud Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, you can
+magically teleport as a bonus action. You teleport to an unoccupied space you can see that is no
+farther away than a number of feet equal to 10 + your Constitution modifier.</p>
+
+<p><b>Fire Giant.</b> You gain a bonus to the damage rolls of your Mark of the Ordning spells. The bonus
+equals your Constitution modifier (minimum of +1).</p>
+
+<p><b>Frost Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, you gain
+temporary hit points equal to your Constitution modifier (minimum of 1). But if the spell is armor
+of Agathys, you instead increase its temporary hit points by an amount equal to your Constitution
+modifier (minimum of 1).</p>
+
+<p><b>Hill Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, you can target
+up to two creatures within 5 feet of you that you can see. Each target must succeed on a Strength
+saving throw against your spell save DC or be pushed a number of feet away from you equal to 5 +
+your Constitution modifier (minimum of +1). A target can choose to fail this save.</p>
+
+<p><b>Stone Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, you gain a
+bonus to AC equal to your Constitution modifier (minimum of +1) until the end of your next turn.</p>
+
+<p><b>Storm Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, up to three
+creatures of your choice that you can see within 30 feet of you take lightning damage equal to your
+Constitution modifier (minimum of 1).</p>
+</div>
+
+<h5>Rage of Fallen Ostoria<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRage" aria-expanded="true"
+    aria-controls="featureRage">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureRage">
+<p>Starting at 14th level, you gain the ability to channel the souls of your ancestors into your
+physical form. When you start casting a sorcerer spell on your turn and expend a spell slot, you can
+increase your size by one category—from Medium to Large, for example.</p>
+<p>This increase lasts for 1 minute. It ends early if you die or are incapacitated. Until it ends, you
+enjoy the following benefits:</p>
+<ul>
+<li>Your current hit points and your hit point maximum both increase by 1 per sorcerer level.</li>
+<li>Your reach increases by 5 feet.</li>
+<li>Your walking speed increases by 5 feet</li>
+<li>You have advantage on Strength checks and Strength saving throws.</li>
+<li>You gain a bonus to the damage rolls of your melee weapon attacks; the bonus equals your
+    Constitution modifier (minimum of +1).</li>
+</ul>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5 class="mt-2">Blessing of the All Father<span class="ml-2"><button class="collapseButton"
+    type="button" data-toggle="collapse" data-target="#featureBlessing" aria-expanded="true"
+    aria-controls="featureBlessing">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureBlessing">
+<p>At 18th level, your Constitution score increases by 2, up to a maximum of 22.</p>
+<p>In addition, you can now use Rage of Fallen Ostoria twice between rests, but no more than once on a
+turn. If you use that feature while under its effects, its increases to your size, hit points,
+reach, and walking speed are cumulative.</p>
+</div>
+</div>`;
+const phoenix = `<h4 class="text-center">Phoenix Sorcery<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>Your power draws from the immortal flame that fuels the legendary phoenix. You or your ancestors perhaps
+rendered a phoenix a great service, or you were born in its presence. Whatever the cause, a shard of the
+phoenix's power dwells within you.</p>
+<p>That power is a mixed blessing. Like the mythical creature, you can invoke fiery energy and gain the
+ability to cheat death itself. This power comes at a cost. The fire within you seethes, demanding to be
+unleashed. You sometimes find yourself absentmindedly feeding fires. You can't bear to allow a fire to
+sputter out. You feel most comfortable while holding a lit torch or sitting in front of a campfire.</p>
+<p>More importantly, this gift comes with no special protection from fire. You are as vulnerable as any
+other creature to fiery magic, including your own. Phoenix sorcerers can use their powers to pull
+themselves back from the brink of death, and all too often their own, rash nature or reliance on
+destructive magic is what puts them there in the first place.</p>
+<p>Such sorcerers are wanderers by necessity. The volatile nature of their magic makes other folk nervous.
+If a fire breaks out in town, a phoenix sorcerer had best flee, whether guilty or not. Fire is a
+dangerous force, and phoenix sorcerers have a reputation (deserved or not) for reckless behavior,
+confident that the essence of the phoenix can save them.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+<tr>
+    <th class="col-1 text-center">d6</span>
+    </th>
+    <th class="col-11">Phoenix Soul</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td class="col-1 text-center">1</td>
+    <td class="col-11">You absentmindedly ignite small fires that quickly sputter out.</td>
+</tr>
+<tr>
+    <td class="col-1 text-center">2</td>
+    <td class="col-11">You cackle like a fiend when you unleash your fire spells.</td>
+</tr>
+<tr>
+    <td class="col-1 text-center">3</td>
+    <td class="col-11">You admire fire, even if it burns your friends.</td>
+</tr>
+<tr>
+    <td class="col-1 text-center">4</td>
+    <td class="col-11">You are covered in burns that mark the first time your power manifested.</td>
+</tr>
+<tr>
+    <td class="col-1 text-center">5</td>
+    <td class="col-11">You like your food charred.</td>
+</tr>
+<tr>
+    <td class="col-1 text-center">6</td>
+    <td class="col-11">You are brave to the point of recklessness.</td>
+</tr>
+</tbody>
+</table>
+
+<h5>Ignite<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+    data-target="#featureIgnnite" aria-expanded="true"
+    aria-controls="featureIgnnite">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureIgnnite">
+<p>At 1st level, you gain the ability to start fires with a touch. As an action, you can magically
+ignite a flammable object you touch with your hand—an object such as a torch, a piece of tinder, or the hem of drapes.</p>
+</div>
+
+<h5>Mantle of Flame<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureMantle" aria-expanded="true"
+    aria-controls="featureMantle">[-]</button></span>
+</h5>
+<hr>
+
+<div class="collapse show" id="featureMantle">
+<p>Starting at 1st level, you can unleash the phoenix fire that blazes within you.</p>
+<p>As a bonus action, you magically wreathe yourself in swirling fire, as your eyes glow like hot coals.
+For
+1 minute, you gain the following benefits:</p>
+<ul>
+<li>You shed bright light in a 30-foot radius and dim light for an additional 30 feet.</li>
+<li>Any creature takes fire damage equal to your Charisma modifier if it hits you with a melee
+    attack
+    from within 5 feet of you or if it touches you.</li>
+<li>Whenever you roll fire damage on your turn, the roll gains a bonus to equal to your Charisma
+    modifier.</li>
+</ul>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+</div>
+
+<h5>Phoenix Spark<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpark" aria-expanded="true"
+    aria-controls="featureSpark">[-]</button></span>
+</h5>
+<hr>
+
+<div class="collapse show" id="featureSpark">
+<p>Starting at 6th level, the fiery energy within you grows restless and vengeful. In the face of
+defeat, it surges outward to preserve you in a fiery roar.</p>
+<p>If you are reduced to 0 hit points, you can use your reaction to draw on the spark of the phoenix.
+You are instead reduced to 1 hit point, and each creature within 10 feet of you takes fire damage
+equal to half your sorcerer level + your Charisma modifier.</p>
+<p>If you use this feature while under the effects of your Mantle of Flame, this feature instead deals
+fire damage equal to your sorcerer level + double your Charisma modifier, and your Mantle of Flame
+immediately ends.</p>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+
+</div>
+
+<h5>Nourishing Fire<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRage" aria-expanded="true"
+    aria-controls="featureRage">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureRage">
+<p>Starting at 14th level, your fire spells soothe and restore you. When you expend a spell slot to cast
+a spell that includes a fire damage roll, you regain hit points equal to the slot's level + your
+Charisma modifier.</p>
+</div>
+
+<h5 class="mt-2">Form of the Phoenix<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureBlessing" aria-expanded="true"
+    aria-controls="featureBlessing">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureBlessing">
+<p>At 18th level, you finally master the spark of fire that dances within you. While under the effect of
+your Mantle of Flame feature, you gain additional benefits:</p>
+<ul>
+<li>You have a flying speed of 40 feet and can hover.</li>
+<li>You have resistance to all damage.</li>
+<li>If you use your Phoenix Spark, that feature deals an extra 20 fire damage to each creature.</li>
+</ul>
+</div>
+</div>`;
+const sea = `<h4 class="text-center">Sea Sorcery<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>The power of water is the strength of flexibility, resilience, and a relentless nature. Water parts to
+allow a ship to sail over it or a diver to plunge into it, but their passing leaves no mark. Water
+flowing down a mountain reaches the sea. It might bend and turn across valleys and down hillsides, but
+it slowly and steadily returns to the waves. Those whose souls are touched by the power of elemental
+water command a similar power.</p>
+<p>Your heritage ties to powerful creatures of the sea, such as nereids, the lords of the merfolk, and
+elemental powers. Like a river, you feel the call of the ocean. The call is ever present in your heart,
+and you are never completely at peace until you are near the sea.</p>
+
+<h5>Soul of the Sea<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSoul" aria-expanded="true"
+    aria-controls="featureSoul">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSoul">
+<p>At 1st level, your tie to the sea grants you the ability to breathe underwater, and you have a swim
+speed equal to your walking speed.</p>
+</div>
+
+<h5>Curse of the Sea<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureCurse" aria-expanded="true"
+    aria-controls="featureCurse">[-]</button></span>
+</h5>
+<hr>
+
+<div class="collapse show" id="featureCurse">
+<p>When you choose this origin at 1st level, you learn the secret of infusing your spells with a watery
+curse.</p>
+<p>When you hit a creature with a cantrip's attack or when a creature fails a saving throw against your
+cantrip, you can curse the target until the end of your next turn or until you curse a different
+creature with this feature.</p>
+<p>Once per turn when you cast a spell, you can trigger the curse if that spell deals cold or lightning
+damage to the cursed target or forces it to move. Doing so subjects the target to the appropriate
+additional effect below, and then the curse ends if the spell isn't a cantrip (you choose the effect
+to use if more than one effect applies):</p>
+<p><b>Cold damage.</b> If the affected target takes cold damage from your spell, the target's speed is also reduced by 15 feet until the end of your next turn. If the spell already reduces the target's speed, use whichever reduction is greater.</p>
+<p><b>Lightning Damage.</b> If the affected target takes lightning damage from your spell, the target takes additional lightning damage equal to your Charisma modifier.</p>
+<p><b>Forced Movement.</b> If the target is moved by your spell, increase the distance it is moved by 15 feet.</p>
+</div>
+
+<h5>Watery Defense<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureDefense" aria-expanded="true"
+    aria-controls="featureDefense">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureDefense">
+<p>At 6th level, you gain resistance to fire damage.</p>
+<p>You also gain the ability to defend yourself by momentarily assuming a watery form. As a reaction when you are hit by an attack and take bludgeoning, piercing, or slashing damage from it, you can reduce that damage by an amount equal to your sorcerer level plus your Charisma score, and then you can move up to 30 feet without provoking opportunity attacks. Once you use this special reaction, you can't use it again until you finish a short or long rest.</p>
+
+</div>
+
+<h5>Shifting Form<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureShifting" aria-expanded="true"
+    aria-controls="featureShifting">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureShifting">
+<p>Starting at 14th level, you gain the ability to enter a liquid state while moving.</p>
+<p>When you move on your turn, you take only half damage from opportunity attacks, and you can move through any enemy's space but can't willingly end your move there.</p>
+<p>On your turn, you can move through any space that is at least 3 inches in diameter and do so without squeezing. When you stop moving, the regular squeezing rules apply if you're in a space one size smaller than you. You can't willingly stop in a space smaller than that, and if you're forced to do so, you immediately flow to the nearest space that can fit you, back along the path of your movement.</p>
+</div>
+
+<h5 class="mt-2">Water Soul<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWaterSoul" aria-expanded="true"
+    aria-controls="featureWaterSoul">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureWaterSoul">
+<p>Starting at 18th level, your being is altered by the power of the sea. You gain the following benefits:</p>
+<ul>
+<li>You no longer need to eat, drink, or sleep.</li>
+<li>A critical hit against you becomes a normal hit.</li>
+<li>You have resistance to bludgeoning, piercing, and slashing damage.</li>
+</ul>
+</div>
+</div>`;
+const shadow = `<h4 class="text-center">Shadow Magic<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>You are a creature of shadow, for your innate magic comes from the Shadowfell itself. You might trace
+your lineage to an entity from that place, or perhaps you were exposed to its fell energy and
+transformed by it.</p>
+<p>The power of shadow magic casts a strange pall over your physical presence. The spark of life that
+sustains you is muffled, as if it struggles to remain viable against the dark energy that imbues your
+soul. At your option, you can pick from or roll on the Shadow Sorcerer Quirks table to create a quirk
+for your character.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+<tr>
+    <th class="col-2 text-center"><span>d6</span>
+    </th>
+    <th class="col-10">Quirk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td class="col-2 text-center">1</td>
+    <td class="col-10">You are always icy cold to the touch.</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">2</td>
+    <td class="col-10">When you are asleep, you don't appear to breathe (though you must still
+        breathe to survive).</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">3</td>
+    <td class="col-10">You barely bleed, even when badly injured.</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">4</td>
+    <td class="col-10">Your heart beats once per minute. This event sometimes surprises you.</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">5</td>
+    <td class="col-10">You have trouble remembering that living creatures and corpses should be
+        treated differently.</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">6</td>
+    <td class="col-10">You blinked. Once. Last week.</td>
+</tr>
+</tbody>
+</table>
+
+<h5>Eyes of the Dark<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureEyes" aria-expanded="true"
+    aria-controls="featureEyes">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureEyes">
+<p>Starting at 1st level, you have darkvision with a range of 120 feet.</p>
+<p>When you reach 3rd level in this class, you learn the darkness spell, which doesn't count against your number of sorcerer spells known. In addition, you can cast it by spending 2 sorcery points or by expending a spell slot. If you cast it with sorcery points, you can see through the darkness created by the spell.</p>
+</div>
+
+<h5>Strength of the Grave<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureGrave" aria-expanded="true"
+    aria-controls="featureGrave">[-]</button></span>
+</h5>
+<hr>
+
+<div class="collapse show" id="featureGrave">
+<p>Starting at 1st level, your existence in a twilight state between life and death makes you difficult to defeat. When damage reduces you to 0 hit points, you can make a Charisma saving throw (DC 5 + the damage taken). On a success, you instead drop to 1 hit point. You can't use this feature if you are reduced to 0 hit points by radiant damage or by a critical hit.</p>
+<p>After the saving throw succeeds, you can't use this feature again until you finish a long rest.</p>
+</div>
+
+<h5>Hound of Ill Omen<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHound" aria-expanded="true"
+    aria-controls="featureHound">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHound">
+<p>At 6th level, you gain the ability to call forth a howling creature of darkness to harass your foes. As a bonus action, you can spend 3 sorcery points to magically summon a hound of ill omen to target one creature you can see within 120 feet of you. The hound uses the dire wolf's statistics (see the Monster Manual or appendix C in the Player's Handbook), with the following changes:</p>
+<ul>
+<li>The hound is size Medium, not Large, and it counts as a monstrosity, not a beast.</li>
+<li>It appears with a number of temporary hit points equal to half your sorcerer level.</li>
+<li>It can move through other creatures and objects as if they were difficult terrain. The hound takes 5 force damage if it ends its turn inside an object.</li>
+<li>At the start of its turn, the hound automatically knows its target's location. If the target was hidden, it is no longer hidden from the hound.</li>
+</ul>
+<p>The hound appears in an unoccupied space of your choice within 30 feet of the target. Roll initiative for the hound. On its turn, it can move only toward its target by the most direct route, and it can use its action only to attack its target. The hound can make opportunity attacks, but only against its target. Additionally, while the hound is within 5 feet of the target, the target has disadvantage on saving throws against any spell you cast. The hound disappears if it is reduced to 0 hit points, if its target is reduced to 0 hit points, or after 5 minutes.</p>
+
+</div>
+
+<h5>Shadow Walk<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWalk" aria-expanded="true"
+    aria-controls="featureWalk">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureWalk">
+<p>At 14th level, you gain the ability to step from one shadow into another. When you are in dim light or darkness, as a bonus action, you can magically teleport up to 120 feet to an unoccupied space you can see that is also in dim light or darkness.</p>
+</div>
+
+<h5 class="mt-2">Umbral Form<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureUmbral" aria-expanded="true"
+    aria-controls="featureUmbral">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureUmbral">
+<p>Starting at 18th level, you can spend 6 sorcery points as a bonus action to magically transform yourself into a shadowy form. In this form, you have resistance to all damage except force and radiant damage, and you can move through other creatures and objects as if they were difficult terrain. You take 5 force damage if you end your turn inside an object.</p>
+<p>You remain in this form for 1 minute. It ends early if you are incapacitated, if you die, or if you dismiss it as a bonus action.</p>
+</div>
+</div>`;
+const storm = `<h4 class="text-center">Storm Sorcery<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>Your innate magic comes from the power of elemental air. Many with this power can trace their magic back
+to a near-death experience caused by the Great Rain, but perhaps you were born during a howling gale so
+powerful that folk still tell stories of it, or your lineage might include the influence of potent air
+creatures such as djinn. Whatever the case, the magic of the storm permeates your being.</p>
+<p>Storm sorcerers are invaluable members of a ship's crew. Their magic allows them to exert control over
+wind and weather in their immediate area. Their abilities also prove useful in repelling attacks by
+sahuagin, pirates, and other waterborne threats.</p>
+
+
+<h5>Wind Speaker<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpeaker" aria-expanded="true"
+    aria-controls="featureSpeaker">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpeaker">
+<p>The arcane magic you command is infused with elemental air. You can speak, read, and write
+Primordial. Knowing this language allows you to understand and be understood by those who speak its
+dialects: Aquan, Auran, Ignan, and Terran.</p>
+</div>
+
+<h5>Tempestuous Magic<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureTempest" aria-expanded="true"
+    aria-controls="featureTempest">[-]</button></span>
+</h5>
+<hr>
+
+<div class="collapse show" id="featureTempest">
+<p>Starting at 1st level, you can use a bonus action on your turn to cause whirling gusts of elemental
+air to briefly surround you, immediately before or after you cast a spell of 1st level or higher.
+Doing so allows you to fly up to 10 feet without provoking opportunity attacks.</p>
+</div>
+
+<h5>Heart of the Storm<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHeart" aria-expanded="true"
+    aria-controls="featureHeart">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHeart">
+<p>At 6th level, you gain resistance to lightning and thunder damage. In addition, whenever you start
+casting a spell of 1st level or higher that deals lightning or thunder damage, stormy magic erupts
+from you. This eruption causes creatures of your choice that you can see within 10 feet of you to
+take lightning or thunder damage (choose each time this ability activates) equal to half your
+sorcerer level.</p>
+</div>
+
+<h5>Storm Guide<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+    data-target="#featureWalk" aria-expanded="true" aria-controls="featureWalk">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureWalk">
+<p>At 6th level, you gain the ability to subtly control the weather around you.</p>
+<p>If it is raining, you can use an action to cause the rain to stop falling in a 20-foot-radius sphere
+centered on you. You can end this effect as a bonus action.</p>
+<p>If it is windy, you can use a bonus action each round to choose the direction that the wind blows in
+a 100-foot-radius sphere centered on you. The wind blows in that direction until the end of your
+next turn. This feature doesn't alter the speed of the wind.</p>
+</div>
+
+<h5 class="mt-2">Storm's Fury<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureFury" aria-expanded="true"
+    aria-controls="featureFury">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureFury">
+<p>Starting at 14th level, when you are hit by a melee attack, you can use your reaction to deal
+lightning damage to the attacker. The damage equals your sorcerer level. The attacker must also make
+a Strength saving throw against your sorcerer spell save DC. On a failed save, the attacker is
+pushed in a straight line up to 20 feet away from you.</p>
+</div>
+
+<h5 class="mt-2">Wind Soul<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWind" aria-expanded="true"
+    aria-controls="featureWind">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureWind">
+<p>At 18th level, you gain immunity to lightning and thunder damage.</p>
+<p>You also gain a magical flying speed of 60 feet. As an action, you can reduce your flying speed to 30 feet for 1 hour and choose a number of creatures within 30 feet of you equal to 3 + your Charisma modifier. The chosen creatures gain a magical flying speed of 30 feet for 1 hour. Once you reduce your flying speed in this way, you can't do so again until you finish a short or long rest.</p>
+</div>
+</div>`;
+const wild = `<h4 class="text-center">Wild Magic<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Origin" aria-expanded="true"
+aria-controls="Origin">[-]</button></span></h4>
+<div class="collapse show" id="Origin">
+<p>Your innate magic comes from the wild forces of chaos that underlie the order of creation. You might have
+endured exposure to some form of raw magic, perhaps through a planar portal leading to Limbo, the
+Elemental Planes, or the mysterious Far Realm. Perhaps you were blessed by a powerful fey creature or
+marked by a demon. Or your magic could be a fluke of your birth, with no apparent cause or reason.
+However it came to be, this chaotic magic churns within you, waiting for any outlet.</p>
+
+
+<h5>Wild Magic Surge<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSurge" aria-expanded="true"
+    aria-controls="featureSurge">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureSurge">
+<p>TStarting when you choose this origin at 1st level, your spellcasting can unleash surges of untamed
+magic. Immediately after you cast a sorcerer spell of 1st level or higher, the DM can have you roll
+a d20. If you roll a 1, roll on the Wild Magic Surge table to create a random magical effect. A Wild
+Magic Surge can happen once per turn.</p>
+<p>If a Wild Magic effect is a spell, it's too wild to be affected by Metamagic. If it normally requires
+concentration, it doesn't require concentration in this case; the spell lasts for its full duration.
+</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-1 text-center"><span>d100</span>
+        </th>
+        <th class="col-11">Effect</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-1 text-center">01-02</td>
+        <td class="col-11">Roll on this table at the start of each of your turns for the next
+            minute, ignoring this result on subsequent rolls.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">03-04</td>
+        <td class="col-11">For the next minute, you can see any invisible creature if you have line of sight to it.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">05-06</td>
+        <td class="col-11">A modron chosen and controlled by the DM appears in an unoccupied space within 5 feet of you, then disappears 1 minute later.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">07-08</td>
+        <td class="col-11">You cast fireball as a 3rd-level spell centered on yourself.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">09-10</td>
+        <td class="col-11">You cast magic missile as a 5th-level spell.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">11-12</td>
+        <td class="col-11">Roll a d10. Your height changes by a number of inches equal to the roll. If the roll is odd, you shrink. If the roll is even, you grow.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">13-14</td>
+        <td class="col-11">You cast confusion centered on yourself.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">15-16</td>
+        <td class="col-11">For the next minute, you regain 5 hit points at the start of each of your
+            turns.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">17-18</td>
+        <td class="col-11">You grow a long beard made of feathers that remains until you sneeze, at
+            which point the feathers explode out from your face.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">19-20</td>
+        <td class="col-11">You cast grease centered on yourself.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">21-22</td>
+        <td class="col-11">Creatures have disadvantage on saving throws against the next spell you
+            cast in the next minute that involves a saving throw.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">23-24</td>
+        <td class="col-11">Your skin turns a vibrant shade of blue. A remove curse spell can end this effect.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">25-26</td>
+        <td class="col-11">An eye appears on your forehead for the next minute. During that time,
+            you have advantage on Wisdom (Perception) checks that rely on sight.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">27-28</td>
+        <td class="col-11">For the next minute, all your spells with a casting time of 1 action have
+            a casting time of 1 bonus action.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">29-30</td>
+        <td class="col-11">You teleport up to 60 feet to an unoccupied space of your choice that you
+            can see.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">31-32</td>
+        <td class="col-11">You are transported to the Astral Plane until the end of your next turn,
+            after which time you return to the space you previously occupied or the nearest
+            unoccupied space if that space is occupied.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">33-34</td>
+        <td class="col-11">Maximize the damage of the next damaging spell you cast within the next
+            minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">35-36</td>
+        <td class="col-11">Roll a d10. Your age changes by a number of years equal to the roll. If the roll is odd, you get younger (minimum 1 year old). If the roll is even, you get older.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">37-38</td>
+        <td class="col-11">1d6 flumphs controlled by the DM appear in unoccupied spaces within 60 feet of you and are frightened of you. They vanish after 1 minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">39-40</td>
+        <td class="col-11">You regain 2d10 hit points.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">41-42</td>
+        <td class="col-11">You turn into a potted plant until the start of your next turn. While a
+            plant, you are incapacitated and have vulnerability to all damage. If you drop to 0 hit points, your pot breaks, and your form reverts.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">43-44</td>
+        <td class="col-11">For the next minute, you can teleport up to 20 feet as a bonus action on
+            each of your turns.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">45-46</td>
+        <td class="col-11">You cast levitate on yourself.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">47-48</td>
+        <td class="col-11">A unicorn controlled by the DM appears in a space within 5 feet of you, then disappears 1 minute later.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">49-50</td>
+        <td class="col-11">You can't speak for the next minute. Whenever you try, pink bubbles float
+            out of your mouth.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">51-52</td>
+        <td class="col-11">A spectral shield hovers near you for the next minute, granting you a +2
+            bonus to AC and immunity to magic missile.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">53-54</td>
+        <td class="col-11">You are immune to being intoxicated by alcohol for the next 5d6 days.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">55-56</td>
+        <td class="col-11">Your hair falls out but grows back within 24 hours.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">57-58</td>
+        <td class="col-11">For the next minute, any flammable object you touch that isn't being worn
+            or carried by another creature bursts into flame.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">59-60</td>
+        <td class="col-11">You regain your lowest-level expended spell slot.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">61-62</td>
+        <td class="col-11">For the next minute, you must shout when you speak.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">63-64</td>
+        <td class="col-11">You cast fog cloud centered on yourself.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">65-66</td>
+        <td class="col-11">Up to three creatures you choose within 30 feet of you take 4d10 lightning damage.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">67-68</td>
+        <td class="col-11">You are frightened by the nearest creature until the end of your next turn.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">69-70</td>
+        <td class="col-11">Each creature within 30 feet of you becomes invisible for the next minute. The invisibility ends on a creature when it attacks or casts a spell.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">71-72</td>
+        <td class="col-11">You gain resistance to all damage for the next minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">73-74</td>
+        <td class="col-11">A random creature within 60 feet of you becomes poisoned for 1d4 hours.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">75-76</td>
+        <td class="col-11">You glow with bright light in a 30-foot radius for the next minute. Any
+            creature that ends its turn within 5 feet of you is blinded until the end of its next turn.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">77-78</td>
+        <td class="col-11">You cast polymorph on yourself. If you fail the saving throw, you turn into a sheep for the spell's duration.
+        </td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">79-80</td>
+        <td class="col-11">Illusory butterflies and flower petals flutter in the air within 10 feet
+            of you for the next minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">81-82</td>
+        <td class="col-11">You can take one additional action immediately.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">83-84</td>
+        <td class="col-11">Each creature within 30 feet of you takes 1d10 necrotic damage. You regain hit points equal to the sum of the necrotic damage dealt.
+        </td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">85-86</td>
+        <td class="col-11">You cast mirror image.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">87-88</td>
+        <td class="col-11">You cast fly on a random creature within 60 feet of you.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">89-90</td>
+        <td class="col-11">You become invisible for the next minute. During that time, other creatures can't hear you. The invisibility ends if you attack or cast a spell.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">91-92</td>
+        <td class="col-11">If you die within the next minute, you immediately come back to life as
+            if by the reincarnate spell.
+        </td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">93-94</td>
+        <td class="col-11">Your size increases by one size category for the next minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">95-96</td>
+        <td class="col-11">You and all creatures within 30 feet of you gain vulnerability to
+            piercing damage for the next minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">97-98</td>
+        <td class="col-11">You are surrounded by faint, ethereal music for the next minute.</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">99-00</td>
+        <td class="col-11">You regain all expended sorcery points.</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Tides of Chaos<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureTides" aria-expanded="true"
+    aria-controls="featureTides">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureTides">
+<p>Starting at 1st level, you can manipulate the forces of chance and chaos to gain advantage on one attack roll, ability check, or saving throw. Once you do so, you must finish a long rest before you can use this feature again.</p>
+<p>Any time before you regain the use of this feature, the DM can have you roll on the Wild Magic Surge table immediately after you cast a sorcerer spell of 1st level or higher. You then regain the use of this feature.</p>
+</div>
+
+<h5>Bend Luck<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureLuck" aria-expanded="true"
+    aria-controls="featureLuck">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureLuck">
+<p>Starting at 6th level, you have the ability to twist fate using your wild magic. When another creature you can see makes an attack roll, an ability check, or a saving throw, you can use your reaction and spend 2 sorcery points to roll 1d4 and apply the number rolled as a bonus or penalty (your choice) to the creature's roll. You can do so after the creature rolls but before any effects of the roll occur.</p>
+</div>
+
+<h5>Controlled Chaos<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+    data-target="#featureChaos" aria-expanded="true" aria-controls="featureChaos">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureChaos">
+<p>At 14th level, you gain a modicum of control over the surges of your wild magic. Whenever you roll on the Wild Magic Surge table, you can roll twice and use either number.</p>
+</div>
+
+<h5 class="mt-2">Spell Bombardment<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureBombardment" aria-expanded="true"
+    aria-controls="featureBombardment">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureBombardment">
+<p>Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn.</p>
+</div>
+</div>`;
 //Sorcerer origins
 document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#aberrant")) {
@@ -3760,18 +5580,12 @@ document.getElementById("displayContent").addEventListener('click', function(eve
     } else if (event.target && event.target.matches("#phoenix")) {
         characterSubClass = "(Phoenix)";
         document.getElementById("sorcOrigin").innerHTML = phoenix;
-    } else if (event.target && event.target.matches("#pyro")) {
-        characterSubClass = "(Pyromancer)";
-        document.getElementById("sorcOrigin").innerHTML = pyro;
     } else if (event.target && event.target.matches("#sea")) {
         characterSubClass = "(Sea)";
         document.getElementById("sorcOrigin").innerHTML = sea;
     } else if (event.target && event.target.matches("#shadow")) {
         characterSubClass = "(Shadow)";
         document.getElementById("sorcOrigin").innerHTML = shadow;
-    } else if (event.target && event.target.matches("#stone")) {
-        characterSubClass = "(Stone)";
-        document.getElementById("sorcOrigin").innerHTML = stone;
     } else if (event.target && event.target.matches("#storm")) {
         characterSubClass = "(Storm)";
         document.getElementById("sorcOrigin").innerHTML = storm;
@@ -3781,6 +5595,31 @@ document.getElementById("displayContent").addEventListener('click', function(eve
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
 });
+const sorcererFeaturesList = [
+    [`<li>
+    Sorcerous Origin <span id="origin">TEST</span>
+    </li><li>
+    Spellcasting</li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 
 /*###################################################################
@@ -3817,15 +5656,13 @@ of the entity a warlock is bound to. Unlike clerics, who typically embrace a dei
 <p class="text-right">— Xarren, herald of Acamar</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
 data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Otherworldly Patron</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Otherworldly Patron<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
             data-target="#featurePatron" aria-expanded="true" aria-controls="featurePatron">[-]</button></span></h5>
         <hr>
 
@@ -3847,7 +5684,7 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
             <div id="warlockOrigin" class="choiceBG"></div>
         </div>
 
-<h5><u>Pact Magic</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Pact Magic<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
@@ -3884,17 +5721,1187 @@ you cast and when making an attack roll with one.</p>
 
 
 </div>`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 4`, `<p>warlock 5`, `<p>warlock 6`, `<p>warlock 7`, `<p>warlock 8`, `<p>warlock 3`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 2`, `<p>warlock 3`, `<p>warlock 2`];
-const archfey = `archfey works`;
-const celestial = `celestial works`;
-const fathomless = `fathomless works`;
-const fiend = `fiend works`;
-const genie = `genie works`;
-const greatOldOne = `greatOldOne works`;
-const hexBlade = `hexBlade works`;
-const ravenQueen = `ravenQueen works`;
-const seeker = `seeker works`;
-const undead = `undead works`;
-const undying = `undying works`;
+const archfey = `<h4 class="text-center">The Archfey<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Your patron is a lord or lady of the fey, a creature of legend who holds secrets that were forgotten
+before the mortal races were born. This being's motivations are often inscrutable, and sometimes
+whimsical, and might involve a striving for greater magical power or the settling of age-old grudges.
+Beings of this sort include the Prince of Frost; the Queen of Air and Darkness, ruler of the Gloaming
+Court; Titania of the Summer Court; her consort Oberon, the Green Lord; Hyrsam, the Prince of Fools; and
+ancient hags.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Archfey lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">faerie fire, sleep</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">calm emotions, phantasmal force</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">blink, plant growth</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">dominate beast, greater invisibility</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">dominate person, seeming</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Fey Presence<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featurePresence" aria-expanded="true"
+    aria-controls="featurePresence">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featurePresence">
+<p>Starting at 1st level, your patron bestows upon you the ability to project the beguiling and fearsome presence of the fey. As an action, you can cause each creature in a 10-foot cube originating from you to make a Wisdom saving throw against your warlock spell save DC. The creatures that fail their saving throws are all charmed or frightened by you (your choice) until the end of your next turn.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Misty Escape<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureEscape" aria-expanded="true"
+    aria-controls="featureEscape">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureEscape">
+<p>Starting at 6th level, you can vanish in a puff of mist in response to harm. When you take damage, you can use your reaction to turn invisible and teleport up to 60 feet to an unoccupied space you can see. You remain invisible until the start of your next turn or until you attack or cast a spell.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Beguiling Defenses<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+    data-target="#featureBeguiling" aria-expanded="true" aria-controls="featureBeguiling">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureBeguiling">
+<p>Beginning at 10th level, your patron teaches you how to turn the mind-affecting magic of your enemies against them. You are immune to being charmed, and when another creature attempts to charm you, you can use your reaction to attempt to turn the charm back on that creature. The creature must succeed on a Wisdom saving throw against your warlock spell save DC or be charmed by you for 1 minute or until the creature takes any damage.</p>
+</div>
+
+<h5 class="mt-2">Dark Delirium<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureDelirium" aria-expanded="true"
+    aria-controls="featureDelirium">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureDelirium">
+<p>Starting at 14th level, you can plunge a creature into an illusory realm. As an action, choose a creature that you can see within 60 feet of you. It must make a Wisdom saving throw against your warlock spell save DC. On a failed save, it is charmed or frightened by you (your choice) for 1 minute or until your concentration is broken (as if you are concentrating on a spell). This effect ends early if the creature takes any damage.</p>
+<p>Until this illusion ends, the creature thinks it is lost in a misty realm, the appearance of which you choose. The creature can see and hear only itself, you, and the illusion.</p>
+<p>You must finish a short or long rest before you can use this feature again.</p>
+</div>
+</div>`;
+const celestial = `<h4 class="text-center">The Celestial<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Your patron is a powerful being of the Upper Planes. You have bound yourself to an ancient empyrean, solar, ki-rin, unicorn, or other entity that resides in the planes of everlasting bliss. Your pact with that being allows you to experience the barest touch of the holy light that illuminates the multiverse.</p>
+<p>Being connected to such power can cause changes in your behavior and beliefs. You might find yourself driven to annihilate the undead, to defeat fiends, and to protect the innocent. At times, your heart might also be filled with a longing for the celestial realm of your patron, and a desire to wander that paradise for the rest of your days. But you know that your mission is among mortals for now, and that your pact binds you to bring light to the dark places of the world.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Celestial lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">cure wounds, guiding bolt</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">flaming sphere, lesser restoration</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">daylight, revivify</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">guardian of faith, wall of fire</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">flame strike, greater restoration</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Bonus Cantrips<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureCantrips" aria-expanded="true"
+    aria-controls="featureCantrips">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureCantrips">
+<p>At 1st level, you learn the sacred flame and light cantrips. They count as warlock cantrips for you, but they don't count against your number of cantrips known.</p>
+</div>
+
+<h5>Healing Light<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureLight" aria-expanded="true"
+    aria-controls="featureLight">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureLight">
+<p>At 1st level, you gain the ability to channel celestial energy to heal wounds. You have a pool of d6s that you spend to fuel this healing. The number of dice in the pool equals 1 + your warlock level.</p>
+<p>As a bonus action, you can heal one creature you can see within 60 feet of you, spending dice from the pool. The maximum number of dice you can spend at once equals your Charisma modifier (minimum of one die). Roll the dice you spend, add them together, and restore a number of hit points equal to the total.</p>
+<p>Your pool regains all expended dice when you finish a long rest.</p>
+</div>
+
+<h5>Radiant Soul<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRadiant" aria-expanded="true"
+    aria-controls="featureRadiant">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureRadiant">
+<p>Starting at 6th level, your link to the Celestial allows you to serve as a conduit for radiant energy. You have resistance to radiant damage, and when you cast a spell that deals radiant or fire damage, you can add your Charisma modifier to one radiant or fire damage roll of that spell against one of its targets.</p>
+</div>
+
+<h5>Celestial Resilience<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureResilience" aria-expanded="true" aria-controls="featureResilience">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureResilience">
+<p>Starting at 10th level, you gain temporary hit points whenever you finish a short or long rest. These temporary hit points equal your warlock level + your Charisma modifier. Additionally, choose up to five creatures you can see at the end of the rest. Those creatures each gain temporary hit points equal to half your warlock level + your Charisma modifier.</p>
+</div>
+
+<h5 class="mt-2">Searing Vengeance<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSearing" aria-expanded="true"
+    aria-controls="featureSearing">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureSearing">
+<p>Starting at 14th level, the radiant energy you channel allows you to resist death. When you have to make a death saving throw at the start of your turn, you can instead spring back to your feet with a burst of radiant energy. You regain hit points equal to half your hit point maximum, and then you stand up if you so choose. Each creature of your choice that is within 30 feet of you takes radiant damage equal to 2d8 + your Charisma modifier, and it is blinded until the end of the current turn.</p>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+</div>
+</div>`;
+const fathomless = `<h4 class="text-center">The Fathomless<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>You have plunged into a pact with the deeps. An entity of the ocean, the Elemental Plane of Water, or
+another otherworldly sea now allows you to draw on its thalassic power. Is it merely using you to learn
+about terrestrial realms, or does it want you to open cosmic floodgates and drown the world?</p>
+<p>Perhaps you were born into a generational cult that venerates the Fathomless and its spawn. Or you might
+have been shipwrecked and on the brink of drowning when your patron's grasp offered you a chance at
+life. Whatever the reason for your pact, the sea and its unknown depths call to you.</p>
+<p>Entities of the deep that might empower a warlock include krakens, ancient water elementals, godlike
+hallucinations dreamed into being by kuo-toa, merfolk demigods, and sea hag covens.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Fathomless lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">create or destroy water, thunderwave</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">gust of wind, silence</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">lightning bolt, sleet storm</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">control water, summon elemental (water only)</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">	Bigby's hand (appears as a tentacle), cone of cold</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Tentacle of the Deeps<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureTentacle" aria-expanded="true"
+    aria-controls="featureTentacle">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureTentacle">
+<p>You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.</p>
+<p>When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.</p>
+<p>As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.</p>
+<p>You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+</div>
+
+<h5>Gift of the Sea<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureGift" aria-expanded="true"
+    aria-controls="featureGift">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureGift">
+<p>You gain a swimming speed of 40 feet, and you can breathe underwater.</p>
+</div>
+
+<h5>Oceanic Soul<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureOceanic" aria-expanded="true"
+    aria-controls="featureOceanic">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureOceanic">
+<p>Starting at 6th level you are now even more at home in the depths. You gain resistance to cold damage. In addition, when you are fully submerged, any creature that is also fully submerged can understand your speech, and you can understand theirs.</p>
+</div>
+
+<h5>Guardian Coil<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureCoil" aria-expanded="true"
+    aria-controls="featureCoil">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureCoil">
+<p>At 6th level your Tentacle of the Deeps can defend you and others, interposing itself between them and harm. When you or a creature you can see takes damage while within 10 feet of the tentacle, you can use your reaction to choose one of those creatures and reduce the damage to that creature by 1d8. When you reach 10th level in this class, the damage reduced by the tentacle increases to 2d8.</p>
+</div>
+
+<h5 class="mt-2">Grasping Tentacles<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureGrasping" aria-expanded="true"
+    aria-controls="featureGrasping">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featureGrasping">
+<p>You learn the spell Evard's black tentacles. It counts as a warlock spell for you, but it doesn't count against the number of spells you know. You can also cast it once without a spell slot, and you regain the ability to do so when you finish a long rest.</p>
+<p>Whenever you cast this spell, your patron's magic bolsters you, granting you a number of temporary hit points equal to your warlock level. Moreover, damage can't break your concentration on this spell.</p>
+</div>
+
+<h5 class="mt-2">Fathomless Plunge<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featurePlunge" aria-expanded="true"
+    aria-controls="featurePlunge">[-]</button></span></h5>
+<hr>
+<div class="collapse show" id="featurePlunge">
+<p>You can magically open temporary conduits to watery destinations. As an action, you can teleport yourself and up to five other willing creatures that you can see within 30 feet of you. Amid a whirl of tentacles, you all vanish and then reappear up to 1 mile away in a body of water you've seen (pond size or larger) or within 30 feet of it, each of you appearing in an unoccupied space within 30 feet of the others.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+</div>`;
+const fiend = `<h4 class="text-center">The Fiend<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>You have made a pact with a fiend from the lower planes of existence, a being whose aims are evil, even
+if you strive against those aims. Such beings desire the corruption or destruction of all things,
+ultimately including you. Fiends powerful enough to forge a pact include demon lords such as Demogorgon,
+Orcus, Fraz'Urb-luu, and Baphomet; archdevils such as Asmodeus, Dispater, Mephistopheles, and Belial;
+pit fiends and balors that are especially mighty; and ultroloths and other lords of the yugoloths.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Fiend lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">burning hands, command</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">blindness/deafness, scorching ray</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">fireball, stinking cloud</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10"> fire shield, wall of fire</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">flame strike, hallow</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Dark One's Blessing<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureBlessing" aria-expanded="true"
+    aria-controls="featureBlessing">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureBlessing">
+<p>Starting at 1st level, when you reduce a hostile creature to 0 hit points, you gain temporary hit
+points equal to your Charisma modifier + your warlock level (minimum of 1).</p>
+</div>
+
+<h5>Dark One's Own Luck<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureLuck" aria-expanded="true"
+    aria-controls="featureLuck">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureLuck">
+<p>Starting at 6th level, you can call on your patron to alter fate in your favor. When you make an
+ability check or a saving throw, you can use this feature to add a d10 to your roll. You can do so
+after seeing the initial roll but before any of the roll's effects occur.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Fiendish Resilience<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureResilience" aria-expanded="true"
+    aria-controls="featureResilience">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureResilience">
+<p>Starting at 10th level, you can choose one damage type when you finish a short or long rest. You gain
+resistance to that damage type until you choose a different one with this feature. Damage from
+magical weapons or silver weapons ignores this resistance.</p>
+</div>
+
+<h5>Hurl Through Hell<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHurl" aria-expanded="true"
+    aria-controls="featureHurl">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHurl">
+<p>Starting at 14th level, when you hit a creature with an attack, you can use this feature to instantly
+transport the target through the lower planes. The creature disappears and hurtles through a
+nightmare landscape.</p>
+<p>At the end of your next turn, the target returns to the space it previously occupied, or the nearest
+unoccupied space. If the target is not a fiend, it takes 10d10 psychic damage as it reels from its
+horrific experience.</p>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+</div>
+</div>`;
+const genie = `<h4 class="text-center">The Genie<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>You have made a pact with one of the rarest kinds of genie, a noble genie. Such entities rule vast fiefs
+on the Elemental Planes and have great influence over lesser genies and elemental creatures. Noble
+genies are varied in their motivations, but most are arrogant and wield power that rivals that of lesser
+deities. They delight in turning the table on mortals, who often bind genies into servitude, and readily
+enter into pacts that expand their reach.</p>
+<p>You choose your patron's kind or determine it randomly, using the Genie Kind table.</p>
+<table class="table-striped table-hover mb-2">
+<caption>Genie Kind</caption>
+<thead>
+<tr>
+    <th class="col-2 text-center" data-rd-isroller="true"><span class="roller render-roller"
+            title="Click to roll. SHIFT/CTRL to roll twice." onmousedown="event.preventDefault()"
+            onclick="Renderer.dice.pRollerClickUseData(event, this)"
+            data-packed-dice="{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;d4&quot;}">d4</span>
+    </th>
+    <th class="col-5" data-rd-isroller="false">Kind</th>
+    <th class="col-5" data-rd-isroller="false">Element</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td class="col-2 text-center">1</td>
+    <td class="col-5">Dao</td>
+    <td class="col-5">Earth</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">2</td>
+    <td class="col-5">Djinni</td>
+    <td class="col-5">Air</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">3</td>
+    <td class="col-5">Efreeti</td>
+    <td class="col-5">Fire</td>
+</tr>
+<tr>
+    <td class="col-2 text-center">4</td>
+    <td class="col-5">Marid</td>
+    <td class="col-5">Water</td>
+</tr>
+</tbody>
+</table>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Genie lets you choose from an expanded list of spells when you learn a warlock spell. The Genie
+Expanded Spells table shows the genie spells that are added to the warlock spell list for you, along
+with the spells associated in the table with your patron's kind: dao, djinni, efreeti, or marid.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-1 text-center" data-rd-isroller="false">Spell Level</th>
+        <th class="col-2-2" data-rd-isroller="false">Genie Spells</th>
+        <th class="col-2-2" data-rd-isroller="false">Dao Spells</th>
+        <th class="col-2-2" data-rd-isroller="false">Djinni Spells</th>
+        <th class="col-2-2" data-rd-isroller="false">Efreeti Spells</th>
+        <th class="col-2-2" data-rd-isroller="false">Marid Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-1 text-center">1st</td>
+        <td class="col-2-2">detect evil and good</td>
+        <td class="col-2-2">sanctuary</td>
+        <td class="col-2-2">thunderwave</td>
+        <td class="col-2-2">burning hands</td>
+        <td class="col-2-2">fog cloud</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">2nd</td>
+        <td class="col-2-2">phantasmal force</td>
+        <td class="col-2-2">spike growth</td>
+        <td class="col-2-2">gust of wind</td>
+        <td class="col-2-2">scorching ray</td>
+        <td class="col-2-2">blur</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">3rd</td>
+        <td class="col-2-2">create food and water</td>
+        <td class="col-2-2">meld into stone</td>
+        <td class="col-2-2">wind wall
+        </td>
+        <td class="col-2-2">fireball</td>
+        <td class="col-2-2">sleet storm</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">4th</td>
+        <td class="col-2-2">phantasmal killer
+        </td>
+        <td class="col-2-2">stone shape
+        </td>
+        <td class="col-2-2">greater invisibility
+        </td>
+        <td class="col-2-2">fire shield</td>
+        <td class="col-2-2">control water</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">5th</td>
+        <td class="col-2-2">creation</td>
+        <td class="col-2-2">wall of stone</td>
+        <td class="col-2-2">seeming</td>
+        <td class="col-2-2">flame strike</td>
+        <td class="col-2-2">cone of cold</td>
+    </tr>
+    <tr>
+        <td class="col-1 text-center">9th</td>
+        <td class="col-2-2">wish</td>
+        <td class="col-2-2">—</td>
+        <td class="col-2-2">—</td>
+        <td class="col-2-2">—</td>
+        <td class="col-2-2">—</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Genie's Vessel<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureVessel" aria-expanded="true"
+    aria-controls="featureVessel">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureVessel">
+<p>Your patron gifts you a magical vessel that grants you a measure of the genie's power. The vessel is
+a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what
+the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.</p>
+<table class="table-striped table-hover mb-2">
+<caption>Genie's Vessel</caption>
+<thead>
+    <tr>
+        <th class="col-2 text-center"><span>d6</span>
+        </th>
+        <th class="col-10">Vessel</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1</td>
+        <td class="col-10">Oil lamp</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2</td>
+        <td class="col-10">Urn</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3</td>
+        <td class="col-10">Ring with a compartment</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4</td>
+        <td class="col-10">Stoppered bottle</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5</td>
+        <td class="col-10">Hollow statuette</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">6</td>
+        <td class="col-10">Ornate lantern</td>
+    </tr>
+</tbody>
+</table>
+<p>While you are touching the vessel, you can use it in the following ways:</p>
+<p><b>Bottled Respite.</b> As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest.</p>
+<p>Genie's Wrath. Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.</p>
+<p>If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die.</p>
+</div>
+
+<h5>Elemental Gift<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureGift" aria-expanded="true"
+    aria-controls="featureGift">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureGift">
+<p>When you reach 6th level, you begin to take on characteristics of your patron's kind. You now have resistance to a damage type determined by your patron's kind: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).</p>
+<p>In addition, as a bonus action, you can give yourself a flying speed of 30 feet that lasts for 10 minutes, during which you can hover. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+</div>
+
+<h5>Sanctuary Vessel<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSanctuary" aria-expanded="true"
+    aria-controls="featureSanctuary">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureSanctuary">
+<p>Starting at 10th level, When you enter your Genie's Vessel via the Bottled Respite feature, you can now choose up to five willing creatures that you can see within 30 feet of you, and the chosen creatures are drawn into the vessel with you.</p>
+<p>As a bonus action, you can eject any number of creatures from the vessel, and everyone is ejected if you leave or die or if the vessel is destroyed.</p>
+<p>In addition, anyone (including you) who remains within the vessel for at least 10 minutes gains the benefit of finishing a short rest, and anyone can add your proficiency bonus to the number of hit points they regain if they spend any Hit Dice as part of a short rest there.</p>
+</div>
+
+<h5>Limited Wish<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWish" aria-expanded="true"
+    aria-controls="featureWish">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureWish">
+<p>You entreat your patron to grant you a small wish. As an action, you can speak your desire to your Genie's Vessel, requesting the effect of one spell that is 6th level or lower and has a casting time of 1 action. The spell can be from any class's spell list, and you don't need to meet the requirements in that spell, including costly components; the spell simply takes effect as part of this action.</p>
+<p>Once you use this feature, you can't use it again until you finish 1d4 long rests.</p>
+</div>
+</div>`;
+const greatOldOne = `<h4 class="text-center">The Great Old One<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Your patron is a mysterious entity whose nature is utterly foreign to the fabric of reality. It might
+come from the Far Realm, the space beyond reality, or it could be one of the elder gods known only in
+legends. Its motives are incomprehensible to mortals, and its knowledge so immense and ancient that even
+the greatest libraries pale in comparison to the vast secrets it holds. The Great Old One might be
+unaware of your existence or entirely indifferent to you, but the secrets you have learned allow you to
+draw your magic from it. Entities of this type include Ghaunadar, called That Which Lurks; Tharizdun,
+the Chained God; Dendar, the Night Serpent; Zargon, the Returner; Great Cthulhu; and other unfathomable
+beings.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Great Old One lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">dissonant whispers, Tasha's hideous laughter</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">detect thoughts, phantasmal force</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">clairvoyance, sending</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">dominate beast, Evard's black tentacles</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10"> dominate person, telekinesis</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Awakened Mind<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureAwakend" aria-expanded="true"
+    aria-controls="featureAwakend">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureAwakend">
+<p>Starting at 1st level, your alien knowledge gives you the ability to touch the minds of other
+creatures. You can communicate telepathically with any creature you can see within 30 feet of you.
+You don't need to share a language with the creature for it to understand your telepathic
+utterances, but the creature must be able to understand at least one language.</p>
+</div>
+
+<h5>Entropic Ward<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureEntropic" aria-expanded="true"
+    aria-controls="featureEntropic">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureEntropic">
+<p>At 6th level, you learn to magically ward yourself against attack and to turn an enemy's failed
+strike into good luck for yourself. When a creature makes an attack roll against you, you can use
+your reaction to impose disadvantage on that roll. If the attack misses you, your next attack roll
+against the creature has advantage if you make it before the end of your next turn.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Thought Shield<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureShield" aria-expanded="true"
+    aria-controls="featureShield">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureShield">
+<p>Starting at 10th level, your thoughts can't be read by telepathy or other means unless you allow it.
+You also have resistance to psychic damage, and whenever a creature deals psychic damage to you,
+that creature takes the same amount of damage that you do.</p>
+</div>
+
+<h5>Create Thrall<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHurl" aria-expanded="true"
+    aria-controls="featureHurl">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHurl">
+<p>At 14th level, you gain the ability to infect a humanoid's mind with the alien magic of your patron.
+You can use your action to touch an incapacitated humanoid. That creature is then charmed by you
+until a remove curse spell is cast on it, the charmed condition is removed from it, or you use this
+feature again.</p>
+<p>You can communicate telepathically with the charmed creature as long as the two of you are on the
+same plane of existence.</p>
+</div>
+</div>`;
+const hexBlade = `<h4 class="text-center">The Hexblade<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>You have made your pact with a mysterious entity from the Shadowfell—a force that manifests in sentient magic weapons carved from the stuff of shadow. The mighty sword Blackrazor is the most notable of these weapons, which have been spread across the multiverse over the ages. The shadowy force behind these weapons can offer power to warlocks who form pacts with it. Many hexblade warlocks create weapons that emulate those formed in the Shadowfell. Others forgo such arms, content to weave the dark magic of that plane into their spellcasting.</p>
+<p>Because the Raven Queen is known to have forged the first of these weapons, many sages speculate that she and the force are one and that the weapons, along with hexblade warlocks, are tools she uses to manipulate events on the Material Plane to her inscrutable ends.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Hexblade lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">shield, wrathful smite</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">blur, branding smite</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">blink, elemental weapon</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">phantasmal killer, staggering smite</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">banishing smite, cone of cold</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Hexblade's Curse<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureCurse" aria-expanded="true"
+    aria-controls="featureCurse">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureCurse">
+<p>Starting at 1st level, you gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits:</p>
+<ul>
+<li>You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.</l>
+<li>Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the d20.</l>
+<li>If the cursed target dies, you regain hit points equal to your warlock level + your Charisma modifier (minimum of 1 hit point).</l>
+</ul>
+<p>You can't use this feature again until you finish a short or long rest.</p>
+</div>
+
+<h5>Hex Warrior<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWarrior" aria-expanded="true"
+    aria-controls="featureWarrior">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureWarrior">
+<p>At 1st level, you acquire the training necessary to effectively arm yourself for battle. You gain proficiency with medium armor, shields, and martial weapons.</p>
+<p>The influence of your patron also allows you to mystically channel your will through a particular weapon. Whenever you finish a long rest, you can touch one weapon that you are proficient with and that lacks the two-handed property. When you attack with that weapon, you can use your Charisma modifier, instead of Strength or Dexterity, for the attack and damage rolls. This benefit lasts until you finish a long rest. If you later gain the Pact of the Blade feature, this benefit extends to every pact weapon you conjure with that feature, no matter the weapon's type.</p>
+</div>
+
+<h5>Accursed Specter<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpecter" aria-expanded="true"
+    aria-controls="featureSpecter">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureSpecter">
+<p>Starting at 6th level, you can curse the soul of a person you slay, temporarily binding it to your service. When you slay a humanoid, you can cause its spirit to rise from its corpse as a specter, the statistics for which are in the Monster Manual. When the specter appears, it gains temporary hit points equal to half your warlock level. Roll initiative for the specter, which has its own turns. It obeys your verbal commands, and it gains a special bonus to its attack rolls equal to your Charisma modifier (minimum of +0).</p>
+<p>The specter remains in your service until the end of your next long rest, at which point it vanishes to the afterlife.</p>
+<p>Once you bind a specter with this feature, you can't use the feature again until you finish a long rest.</p>
+</div>
+
+<h5>Armor of Hexes<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureArmor" aria-expanded="true"
+    aria-controls="featureArmor">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureArmor">
+<p>At 10th level, your hex grows more powerful. If the target cursed by your Hexblade's Curse hits you with an attack roll, you can use your reaction to roll a d6. On a 4 or higher, the attack instead misses you, regardless of its roll.</p>
+</div>
+
+<h5>Master of Hexes<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureMaster" aria-expanded="true"
+    aria-controls="featureMaster">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureMaster">
+<p>Starting at 14th level, you can spread your Hexblade's Curse from a slain creature to another creature. When the creature cursed by your Hexblade's Curse dies, you can apply the curse to a different creature you can see within 30 feet of you, provided you aren't incapacitated. When you apply the curse in this way, you don't regain hit points from the death of the previously cursed creature.</p>
+</div>
+</div>`;
+const ravenQueen = `<h4 class="text-center">The Raven Queen<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Your patron is the Raven Queen, a mysterious being who rules the Shadowfell from a palace of ice deep within that dread realm. The Raven Queen watches over the world, anticipating each creature's death and ensuring that it meets its end at the proscribed time and place. As the ruler of the Shadowfell, she dwells in a decayed, dark reflection of the world. Her ability to reach into the world is limited. Thus, she turns to mortal warlocks to serve her will. Warlocks sworn to the Raven Queen receive visions and whispers from her in their dreams, sending them on quests and warning them of impending dangers.</p>
+<p>The Raven Queen's followers are expected to serve her will in the world. She concerns herself with ensuring that those fated to die pass from the world as expected, and bids her agents to defeat those who seek to cheat death through undeath or other imitations of immortality. She hates intelligent undead and expects her followers to strike them down, whereas mindless undead such as skeletons and zombies are little more than stumbling automatons in her eyes.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Raven Queen lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">false life, sanctuary</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">silence, spiritual weapon</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">feign death, speak with dead</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">ice storm, locate creature</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">commune, cone of cold</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Sentinel Raven<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRaven" aria-expanded="true"
+    aria-controls="featureRaven">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureRaven">
+<p>Starting at 1st level, you gain the service of a spirit sent by the Raven Queen to watch over you. The spirit assumes the form and game statistics of a raven, and it always obeys your commands, which you can give telepathically while it is within 100 feet of you.</p>
+<p>While the raven is perched on your shoulder, you gain darkvision with a range of 30 feet and a bonus to your passive Wisdom (Perception) score and to Wisdom (Perception) checks. The bonus equals your Charisma modifier. While perched on your shoulder, the raven can't be targeted by any attack or other harmful effect; only you can cast spells on it; it can't take damage; and it is incapacitated.</p>
+<p>You can see through the raven's eyes and hear what it hears while it is within 100 feet of you. In combat, you roll initiative for the raven and control how it acts. If it is slain by a creature, you gain advantage on all attack rolls against the killer for the next 24 hours.</p>
+<p>The raven doesn't require sleep. While it is within 100 feet of you, it can awaken you from sleep as a bonus action. The raven vanishes when it dies, if you die, or if the two of you are separated by more than 5 miles.</p>
+<p>At the end of a short or long rest, you can call the raven back to you—no matter where it is or whether it died—and it reappears within 5 feet of you.</p>
+</div>
+
+<h5>Soul of the Raven<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRavenSoul" aria-expanded="true"
+    aria-controls="featureRavenSoul">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureRavenSoul">
+<p>At 6th level, you gain the ability to merge with your raven spirit. As a bonus action when your raven is perched on your shoulder, your body merges with your raven's form. While merged, you become Tiny, you replace your speed with the raven's, and you can use your action only to Dash, Disengage, Dodge, Help, Hide, or Search. During this time, you gain the benefits of your raven being perched on your shoulder. As an action, you and the raven return to normal.</p>
+</div>
+
+<h5>Raven's Shield<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureShield" aria-expanded="true"
+    aria-controls="featureShield">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureShield">
+<p>At 10th level, the Raven Queen grants you a protective blessing. You gain advantage on death saving throws, immunity to the frightened condition, and resistance to necrotic damage.</p>
+</div>
+
+<h5>Queen's Right Hand<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHand" aria-expanded="true"
+    aria-controls="featureHand">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHand">
+<p>Starting at 14th level, you can channel the Raven Queen's power to slay a creature. You can cast finger of death. After you cast the spell with this feature, you can't do so again until you finish a long rest.</p>
+</div>
+</div>`;
+const seeker = `<h4 class="text-center">The Seeker<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Your patron is an inscrutable being who travels the Astral Plane in search of knowledge and secrets. In return for your patron's gifts, you wander the world seeking lore that you can share with the Seeker.</p>
+<p>Your patron could be any deity or other powerful entity dedicated to knowledge or forgotten lore. Celestian is an ideal patron for a Greyhawk campaign, and was the inspiration for this concept. In the Forgotten Realms, your patron might be Azuth or Oghma. Aureon makes an excellent patron in Eberron, while in Krynn and the Dragonlance campaign setting, Gilean is a good match for the Seeker's role.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Seeker lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">feather fall, jump</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">levitate, locate object</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">clairvoyance, sending</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">arcane eye, locate creature</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">legend lore, passwall</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Shielding Aurora<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureAurora" aria-expanded="true"
+    aria-controls="featureAurora">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureAurora">
+<p>Starting at 1st level, you can invoke the Seeker's power to protect you from harm. As a bonus action, you create a whirling aurora of brilliant energy that swirls around you. Until the end of your next turn, you gain resistance to all damage, and if a hostile creature ends its turn within 10 feet of you, it takes radiant damage equal to your warlock level + your Charisma modifier.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+
+<h5>Astral Refuge<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureRefuge" aria-expanded="true"
+    aria-controls="featureRefuge">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureRefuge">
+<p>At 6th level, you gain the ability to step into an astral refuge. As an action, you disappear from the world for a brief moment and enter the Astral Plane, taking advantage of its timeless nature. While in your astral refuge, you can take two actions to cast spells that target only you. After using those two actions, you return to the space you occupied and your turn ends.</p>
+</div>
+
+<h5>Far Wanderer<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureWanderer" aria-expanded="true"
+    aria-controls="featureWanderer">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureWanderer">
+<p>At 10th level, you no longer need to breathe, and you gain resistance to fire damage and cold damage.</p>
+</div>
+
+<h5>Astral Sequestration<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHand" aria-expanded="true"
+    aria-controls="featureHand">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHand">
+<p>Starting at 14th level, you gain the ability to sequester yourself and your allies on the Astral Plane.</p>
+<p>By performing a special ritual over the course of 5 minutes, you shift yourself and up to ten willing creatures you can see to the Astral Plane. You and those creatures gain the benefits of a short rest while sequestered on the Astral Plane. You then return to the spaces you all occupied when you used this ability, with no time having passed in the world.</p>
+<p>During this short rest, you and the creatures you sequester can make use of any options available during a rest that affect only you and the creatures you sequester.</p>
+<p>Once you use this ability, you cannot use it again until you complete a long rest.</p>
+</div>
+</div>`;
+const undead = `<h4 class="text-center">The Undead<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>The Undead is an entity that resides in the dark corners of the multiverse. Your patron could be Acererak, Azalin, Lord Soth, Strahd, or some other ancient undead being. You may seek to gain knowledge from your patron's countless lifetimes of experience, while it may see you as a piece of a centuries long plan.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Undead lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">bane, false life</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">blindness/deafness, phantasmal force</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">speak with dead, phantom steed</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">death ward, greater invisibility</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">antilife shell, cloudkill</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Form of Dread<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureDread" aria-expanded="true"
+    aria-controls="featureDread">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureDread">
+<p>You manifest an aspect of your patron's dreadful power. As a bonus action, you transform for 1 minute. You gain the following benefits while transformed:</p>
+<ul>
+<li>You gain temporary hit points equal to 1d10 + your warlock level.</li>
+<li>Once during each of your turns, when you hit a creature with an attack, you can force it to make a Wisdom saving throw, and if the saving throw fails, the target is frightened of you until the end of your next turn.</li>
+<li>You are immune to the frightened condition.</li>
+</ul>
+<p>You can transform a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+<p>The appearance of your Form of Dread reflects some aspect of your patron. For example, your form could be a shroud of shadows forming the crown and robes of your lich patron, or your face might transform into bat-like features due to your vampire patron.</p>
+</div>
+
+<h5>Grave Touched<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureTouched" aria-expanded="true"
+    aria-controls="featureTouched">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureTouched">
+<p>At 6th level, your patron's powers have a profound effect on your body and magic. You don't need to eat, drink, or breathe.</p>
+<p>In addition, when you hit a creature with an attack and roll damage against the creature, you can replace the damage type with necrotic damage. While you are using your Form of Dread, you can roll one additional damage die when determining the necrotic damage the target takes.</p>
+</div>
+
+<h5>Mortal Husk<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureHusk" aria-expanded="true"
+    aria-controls="featureHusk">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureHusk">
+<p>At 10th level, your connection to undeath and necrotic energy now saturates your body. You have resistance to necrotic damage. If you are transformed using your Form of Dread, you instead become immune to necrotic damage.</p>
+<p>In addition, when you are reduced to 0 hit points, you can cause your body to explode. Each creature within 30 feet of you takes necrotic damage equal to 2d10 + your warlock level. You then revive with 1 hit point in your previous space, along with your gear, and you gain 1 level of exhaustion. Once you revive this way, you can't do so again until you finish 1d4 long rests.</p>
+</div>
+
+<h5>Spirit Projection<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureProjection" aria-expanded="true"
+    aria-controls="featureProjection">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureProjection">
+<p>Starting at 14th level, your body is now simply a vessel for your spirit. As an action, you can project your spirit from your body. The body you leave behind is unconscious and in a state of suspended animation.</p>
+<p>Your spirit can remain outside your body for up to 1 hour or until your concentration is broken (as if concentrating on a spell). When your projection ends, your spirit returns to your body or your body magically teleports to your spirit's space (your choice).</p>
+<p>While projecting your spirit, you gain the following benefits:</p>
+<ul>
+<li>Your spirit and body gain resistance to bludgeoning, piercing, and slashing damage.</li>
+<li>When you cast a spell of the conjuration or necromancy school, the spell doesn't require verbal, somatic, or material components that lack a gold cost.</li>
+<li>You have a flying speed equal to your walking speed and can hover. You can move through creatures and objects as if they were difficult terrain, but you take 1d10 force damage if you end your turn inside a creature or an object.</li>
+<li>While you are using your Form of Dread, once during each of your turns when you deal necrotic damage to a creature, you regain hit points equal to half the amount of necrotic damage dealt.</li>
+</ul>
+<p>Once you use this feature, you can't do so again until you finish a long rest.</p>
+</div>
+</div>`;
+const undying = `<h4 class="text-center">The Undying<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#Patron" aria-expanded="true"
+aria-controls="Patron">[-]</button></span></h4>
+<div class="collapse show" id="Patron">
+<p>Death holds no sway over your patron, who has unlocked the secrets of everlasting life, although such a prize—like all power—comes at a price. Once mortal, the Undying has seen mortal lifetimes pass like the seasons, like the flicker of endless days and nights. It has the secrets of the ages to share, secrets of life and death. Beings of this sort include Vecna, Lord of the Hand and the Eye; the dread Iuz; the lich-queen Vol; the Undying Court of Aerenal; Vlaakith, lich-queen of the githyanki; and the deathless wizard Fistandantalus.</p>
+<p>In the Realms, Undying patrons include Larloch the Shadow King, legendary master of Warlock's Crypt, and Gilgeam, the God-King of Unther.</p>
+
+
+<h5>Expanded Spell List<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureSpellList" aria-expanded="true"
+    aria-controls="featureSpellList">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureSpellList">
+<p>The Undying lets you choose from an expanded list of spells when you learn a warlock spell. The
+following spells are added to the warlock spell list for you.</p>
+<table class="table-striped table-hover mb-2">
+<thead>
+    <tr>
+        <th class="col-2 text-center">Spell Level</th>
+        <th class="col-10">Spells</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="col-2 text-center">1st</td>
+        <td class="col-10">false life, ray of sickness</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">2nd</td>
+        <td class="col-10">blindness/deafness, silence</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">3rd</td>
+        <td class="col-10">feign death, speak with dead</td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">4th</td>
+        <td class="col-10">aura of life, death ward</a>
+        </td>
+    </tr>
+    <tr>
+        <td class="col-2 text-center">5th</td>
+        <td class="col-10">contagion, legend lore</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<h5>Among the Dead<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureAmong" aria-expanded="true"
+    aria-controls="featureAmong">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureAmong">
+<p>Starting at 1st level, you learn the spare the dying cantrip, which counts as a warlock cantrip for you. You also have advantage on saving throws against any disease.</p>
+<p>Additionally, undead have difficulty harming you. If an undead targets you directly with an attack or a harmful spell, that creature must make a Wisdom saving throw against your spell save DC (an undead needn't make the save when it includes you in an area effect, such as the explosion of fireball). On a failed save, the creature must choose a new target or forfeit targeting someone instead of you, potentially wasting the attack or spell. On a successful save, the creature is immune to this effect for 24 hours. An undead is also immune to this effect for 24 hours if you target it with an attack or a harmful spell.</p>
+</div>
+
+<h5>Defy Death<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureDefy" aria-expanded="true"
+    aria-controls="featureDefy">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureDefy">
+<p>Starting at 6th level, you can give yourself vitality when you cheat death or when you help someone else cheat it. You can regain hit points equal to 1d8 + your Constitution modifier (minimum of 1 hit point) when you succeed on a death saving throw or when you stabilize a creature with spare the dying.</p>
+<p>Once you use this feature, you can't use it again until you finish a long rest.</p>
+</div>
+
+<h5>Undying Nature<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureNature" aria-expanded="true"
+    aria-controls="featureNature">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureNature">
+<p>Beginning at 10th level, you can hold your breath indefinitely, and you don't require food, water, or sleep, although you still require rest to reduce exhaustion and still benefit from finishing short and long rests.</p>
+<p>In addition, you age at a slower rate. For every 10 years that pass, your body ages only 1 year, and you are immune to being magically aged.</p>
+</div>
+
+<h5>Indestructible Life<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureProjection" aria-expanded="true"
+    aria-controls="featureProjection">[-]</button></span>
+</h5>
+<hr>
+<div class="collapse show" id="featureProjection">
+<p>When you reach 14th level, you partake some of the true secrets of the Undying. On your turn, you can use a bonus action to regain hit points equal to 1d8 + your warlock level. Additionally, if you put a severed body part of yours back in place when you use this feature, the part reattaches.</p>
+<p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
+</div>
+</div>`;
 document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#archfey")) {
         characterSubClass = "(Archfey)";
@@ -3932,6 +6939,31 @@ document.getElementById("displayContent").addEventListener('click', function(eve
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
 });
+const warlockFeaturesList = [
+    [`<li>
+    Otherworldly Patron <span id="patron">TEST</span>
+    </li><li>
+    Pact Magic</li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];
 
 /*###################################################################
 ######################### Wizard ##################################
@@ -3971,15 +7003,13 @@ wizards and other spellcasters who aspire to the highest echelons of the profess
 <p class="text-right">— Gimble the illusionist</p>
 </div>
 
-<h2 class="text-center">Features</h2>
-<hr class="class-2">
 
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
 data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
 
-<h5><u>Spellcasting</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Spellcasting<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
 <hr>
 
@@ -4038,7 +7068,7 @@ other spells that you can add to your spellbook (see "Spellbook").</p>
 
 </div>
 
-<h5><u>Arcane Recovery</u><span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+<h5>Arcane Recovery<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
     data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
 <hr>
 
@@ -4049,3 +7079,28 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
 <p>You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>
 </div>
 </div>`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 4`, `<p>wizard 5`, `<p>wizard 6`, `<p>wizard 7`, `<p>wizard 8`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`];
+const wizardFeaturesList = [
+    [`<li>
+    Spellcasting
+    </li><li>
+    Arcane Recovery</li>`],
+    [2],
+    [3],
+    [4],
+    [5],
+    [6],
+    [7],
+    [8],
+    [9],
+    [10],
+    [11],
+    [12],
+    [13],
+    [14],
+    [15],
+    [16],
+    [17],
+    [18],
+    [19],
+    [20]
+];

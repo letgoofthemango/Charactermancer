@@ -1,212 +1,230 @@
 /*###################################################################
 ######################### Load class choice #########################
 ######################################################################*/
-document.getElementById("toClassChoice").addEventListener('click', function() {
-    document.getElementById("displayContent").innerHTML = siteClassChoice;
+document.getElementById("toClassChoice").addEventListener("click", function () {
+  document.getElementById("displayContent").innerHTML = siteClassChoice;
+  document.getElementById("characterOverview").style.visibility = "visible";
+  update();
 });
 
 /*###################Class choice and features with chosen level######*/
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
-    characterSubClass = "";
-    if (event.target && event.target.matches("input[type='radio']")) { //check if the target is the target and an input type radio
-        characterClass = document.querySelector('input[name="class"]:checked').value; //set character class with the selection from the radio buttons
-        document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
-        if (characterClass === "Artificer") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += artificerFeaturesByLevel[i];
-                document.getElementById("featuresList").innerHTML += artificerFeaturesList[i];
-            }
-        } else if (characterClass === "Barbarian") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Bard") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += bardFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Cleric") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Druid") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += druidFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Fighter") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += fighterFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Monk") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += monkFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Mystic") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += mysticFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Paladin") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += paladinFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Ranger") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += rangerFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Rogue") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += rogueFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Sorcerer") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += sorcererFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Warlock") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += warlockFeaturesByLevel[i];
-            }
-        } else if (characterClass === "Wizard") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
-            }
-        }
-        document.getElementById("summaryClass").setAttribute("class", "addedChoice");
-        document.getElementById("summarySubClass").setAttribute("class", "addedChoice");
+document
+  .getElementById("displayContent")
+  .addEventListener("click", function (event) {
+    //to pin the eventlistener to the parent node
+    reset();
+    /*     document.getElementById("proficienciesList").innerHTML = ""; */
+    if (event.target && event.target.matches("input[type='radio']")) {
+      //check if the target is the target and an input type radio
+      characterClass = document.querySelector('input[name="class"]:checked')
+        .value; //set character class with the selection from the radio buttons
+      document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
 
-        /*      var res = document.querySelectorAll("#div,#par,#head");
-for (var i = 0; i < res.length; i++){
- res[i].style.backgroundColor = '#DCDCDC'
-} */
-        document.getElementById("summaryClass").textContent = characterClass;
+      switch (characterClass) {
+        case ARTIFICER:
+          characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = characterWeaponProficiencies[39][1] = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              artificerFeaturesByLevel[i];
+            document.getElementById("featuresList").innerHTML +=
+              artificerFeaturesList[i];
+          }
+          break;
+        case BARBARIAN:
+          characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = characterWeaponProficiencies[0][1] = characterWeaponProficiencies[1][1] = true;
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              barbarianFeaturesByLevel[i];
+            document.getElementById("featuresList").innerHTML +=
+              barbarianFeaturesList[i];
+          }
+          break;
+        case BARD:
+          characterArmorProficiencies[1][1] = characterWeaponProficiencies[0][1] = characterWeaponProficiencies[35][1] = characterWeaponProficiencies[23][1] = characterWeaponProficiencies[27][1] = characterWeaponProficiencies[29][1] = characterToolProficiencies[40][1] = true;
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              bardFeaturesByLevel[i];
+            document.getElementById("featuresList").innerHTML +=
+              bardFeaturesList[i];
+          }
+          break;
+        case CLERIC:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              clericFeaturesByLevel[i];
+          }
+          break;
+        case DRUID:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              druidFeaturesByLevel[i];
+          }
+          break;
+        case FIGHTER:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              fighterFeaturesByLevel[i];
+          }
+          break;
+        case MONK:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              monkFeaturesByLevel[i];
+          }
+          break;
+        case MYSTIC:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              mysticFeaturesByLevel[i];
+          }
+          break;
+        case PALADIN:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              paladinFeaturesByLevel[i];
+          }
+          break;
+        case RANGER:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              rangerFeaturesByLevel[i];
+          }
+          break;
+        case ROGUE:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              rogueFeaturesByLevel[i];
+          }
+          break;
+        case SORCERER:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              sorcererFeaturesByLevel[i];
+          }
+          break;
+        case WARLOCK:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              warlockFeaturesByLevel[i];
+          }
+          break;
+        case WIZARD:
+          for (let i = 0; i < characterLevel; i++) {
+            document.getElementById("showClassDetails").innerHTML +=
+              wizardFeaturesByLevel[i];
+          }
+          break;
+      }
+
+      const changeToGreen = document.querySelectorAll(
+        "#summaryClass, #summarySubClass #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies"
+      );
+      
+      for (const i of changeToGreen) {
+        i.classList.add("addedChoice");
+      }
+
+      document.getElementById("summaryClass").textContent = characterClass;
+      update();
+    } else {
+      return;
     }
-});
-
-
-artificerFeaturesList = [
-    [`<li>
-        Firearm Proficiency
-    </li><li>
-        Magical Tinkering
-    </li><li>
-        Spellcasting
-    </li>`],
-    [2],
-    [3],
-    [4],
-    [5],
-    [6],
-    [7],
-    [8],
-    [9],
-    [10],
-    [11],
-    [12],
-    [13],
-    [14],
-    [15],
-    [16],
-    [17],
-    [18],
-    [19],
-    [20]
-];
-
+  });
 
 /*## Select character level ##########################################*/
-document.onchange = function(event) {
-    if (event.target.matches('#characterLevel')) {
-        characterLevel = document.getElementById("characterLevel").value;
-    }
-    document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
-    if (characterClass === "Artificer") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += artificerFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Barbarian") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Bard") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += bardFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Cleric") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Druid") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += druidFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Fighter") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += fighterFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Monk") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += monkFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Mystic") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += mysticFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Paladin") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += paladinFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Ranger") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += rangerFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Rogue") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += rogueFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Sorcerer") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += sorcererFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Warlock") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += warlockFeaturesByLevel[i];
-        }
-    } else if (characterClass === "Wizard") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
-        }
-    }
-    document.getElementById("summaryLevel").setAttribute("class", "addedChoice");
-    document.getElementById("summaryLevel").textContent = characterLevel;
+document.onchange = function (event) {
+  if (event.target.matches("#characterLevel")) {
+    characterLevel = document.getElementById("characterLevel").value;
+  }
+  document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
+  switch (characterClass) {
+    case ARTIFICER:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          artificerFeaturesByLevel[i];
+      }
+      break;
+    case BARBARIAN:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          barbarianFeaturesByLevel[i];
+      }
+      break;
+    case BARD:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          bardFeaturesByLevel[i];
+      }
+      break;
+    case CLERIC:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          clericFeaturesByLevel[i];
+      }
+      break;
+    case DRUID:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          druidFeaturesByLevel[i];
+      }
+      break;
+    case FIGHTER:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          fighterFeaturesByLevel[i];
+      }
+      break;
+    case MONK:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          monkFeaturesByLevel[i];
+      }
+      break;
+    case MYSTIC:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          mysticFeaturesByLevel[i];
+      }
+      break;
+    case PALADIN:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          paladinFeaturesByLevel[i];
+      }
+      break;
+    case RANGER:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          rangerFeaturesByLevel[i];
+      }
+      break;
+    case ROGUE:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          rogueFeaturesByLevel[i];
+      }
+      break;
+    case SORCERER:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          sorcererFeaturesByLevel[i];
+      }
+      break;
+    case WARLOCK:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          warlockFeaturesByLevel[i];
+      }
+      break;
+    case WIZARD:
+      for (let i = 0; i < characterLevel; i++) {
+        document.getElementById("showClassDetails").innerHTML +=
+          wizardFeaturesByLevel[i];
+      }
+  }
+  document.getElementById("summaryLevel").setAttribute("class", "addedChoice");
+  document.getElementById("summaryLevel").textContent = characterLevel;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*###################################################################
 ######################### Site structure ##############################
