@@ -129,12 +129,12 @@ function update() {
   );
 }
 
-document.getElementById("characterOverview").addEventListener("click", function () {
-  abilityScores[0].value = 18;
-  abilityScores[1].value = 18;
-  abilityScores[2].value = 18;
-  abilityScores[3].value = 18;
-  abilityScores[4].value = 18;
-  abilityScores[5].value = 18;
-  update();
-});
+// document.getElementById("characterOverview").addEventListener("click", function () {
+//   abilityScores[0].value = 18;
+//   abilityScores[1].value = 18;
+//   abilityScores[2].value = 18;
+//   abilityScores[3].value = 18;
+//   abilityScores[4].value = 18;
+//   abilityScores[5].value = 18;
+//   update();
+// });
