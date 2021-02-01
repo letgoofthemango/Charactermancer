@@ -71,7 +71,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     civilization in hopes of making the next great discovery in arcane research.</p>
 <i>“Artificers invent cutting-edge problems, then try to solve them-loudly and often with collateral
     damage.”</i>
-<p class="text-right">— Tasha</p>
+<p>— Tasha</p>
 </div><!-- -------------------------------------------------------------end description div-->
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><!-- -------------------------beginning table div-->
@@ -4383,7 +4383,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     of the mortal races. The farther away from nature their actions take them, the more corrupting
     their influence becomes. As druids, we seek mainly to protect and educate, to preserve the Great
     Balance, but there are times when we must rise up against danger and eradicate it.”</i>
-<p class="text-right">— Safhran, Arch druid</p>
+<p>— Safhran, Arch druid</p>
 </div><!-- -------------------------------------------------------------end description div-->
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -5355,7 +5355,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
 <i>“Do not mistake my silence for acceptance of your villainy. While you blustered and threatened,
     I've planned four different ways to snap your neck with my bare hands.”</i>
-<p class="text-right">— Ember, grand master of flowers</p>
+<p>— Ember, grand master of flowers</p>
 </div><!-- -------------------------------------------------------------end description div-->
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -6045,7 +6045,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     remain so rigid in their attitudes—if only to keep from alienating their companions.</p>
 
 <i>“The true worth of a paladin is measured not in foes defeated or dungeons plundered. It is measured in lives saved and hearts turned to the causes of mercy and justice.”</i>
-<p class="text-right">— Isteval</p>
+<p>— Isteval</p>
 </div><!-- -------------------------------------------------------------end description div-->
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -6462,7 +6462,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     because I don't bend the knee to your king that I haven't done more to protect him than all his
     knights
     put together.”</i>
-<p class="text-right">— Soveliss</p>
+<p>— Soveliss</p>
 </div><!-- -------------------------------------------------------------end description div-->
 
 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
@@ -6851,71 +6851,352 @@ const rangerFeaturesList = [
 /*###################################################################
 ######################### Rogue ##################################
 #####################################################################*/
-const rogueFeaturesByLevel = [`<h1 class="text-center">Rogue<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const rogueFeaturesByLevel = [`<h1 class="text-center">Rogue<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-<p>Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an
-ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she
-disappears into the shadows as her fighter friend moves forward to kick the door open.</p>
-<p>A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When
-their target—a notorious slaver—passes the alleyway, the accomplice cries out, the slaver comes to
-investigate, and the assassin's blade cuts his throat before he can make a sound.</p>
-<p>Suppressing a giggle, a gnome waggles her fingers and magically lifts the key ring from the guard's belt.
-In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to
-make their escape.</p>
-<p>Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation.
-They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness
-and versatility that is the cornerstone of any successful adventuring party.</p>
 
-<h5>Skill and Precision</h5>
-<p>Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their
-combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus
-on stealth and deception, while others refine the skills that help them in a dungeon environment, such
-as climbing, finding and disarming traps, and opening locks.</p>
-<p>When it comes to combat, rogues prioritize cunning over brute strength. A rogue would rather make one
-precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent
-down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few
-learn magical tricks to supplement their other abilities.</p>
-
-<h5>A Shady Living</h5>
-<p>Every town and city has its share of rogues. Most of them live up to the worst stereotypes of the class,
-making a living as burglars, assassins, cutpurses, and con artists. Often, these scoundrels are
-organized into thieves' guilds or crime families. Plenty of rogues operate independently, but even they
-sometimes recruit apprentices to help them in their scams and heists. A few rogues make an honest living
-as locksmiths, investigators, or exterminators, which can be a dangerous job in a world where dire
-rats—and wererats—haunt the sewers.</p>
-<p>As adventurers, rogues fall on both sides of the law. Some are hardened criminals who decide to seek
-their fortune in treasure hoards, while others take up a life of adventure to escape from the law. Some
-have learned and perfected their skills with the explicit purpose of infiltrating ancient ruins and
-hidden crypts in search of treasure.</p>
-<p>When brute force won't get the job done, or when magic isn't available or appropriate, the rogue rises to
-the fore. With skills tied to stealth, subterfuge, and trickery, rogues can get into and out of trouble
-in ways that few other characters can emulate.</p>
-<p>Some rogues who turn to adventuring are former criminals who have decided that dodging monsters is
-preferable to remaining one step ahead of the law. Others are professional killers in search of a
-profitable application of their talents between contracts. Some simply love the thrill of overcoming any
-challenge that stands in their way.</p>
-<p>On adventures, a rogue is likely to mix an outwardly cautious approach—few rogues enjoy combat—with a
-ravenous hunger for loot. Most of the time, in a rogue's mind, taking up arms against a creature is not
-about killing the creature but about becoming the new owner of its treasure.</p>
-<h5>A Shady Living</h5>
-<p>Most of what rogues do revolves around obtaining treasure and preventing others from doing the same.
-Little gets in the way of attaining those goals, except that many rogues are enticed away from that path
-by a compulsion that clouds their thinking—an irresistible need that must be satisfied, even if doing so
-is risky.</p>
-<p>A rogue's guilty pleasure could be the acquisition of a physical item, something to be experienced, or a
-way of conducting oneself at certain times. One rogue might not be able to pass up any loot made of
-silver, for instance, even if said loot is hanging around the neck of a castle guard. Another one can't
-go through a day in the city without lifting a purse or two, just to keep in practice.</p>
-<p>What's the one form of temptation that your rogue character can't resist when the opportunity presents
-itself, even if giving into it might mean trouble for you and your companions?</p>
-
-<i>“People forget that the entire point of venturing down into a dusty tomb is to bring back the prizes
-hidden away there. Fighting is for fools. Dead men can't spend their fortunes.”</i>
-<p class="text-right">— Barnabas Bladecutter</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an
+    ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she
+    disappears into the shadows as her fighter friend moves forward to kick the door open.</p>
+    <p>A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When
+    their target—a notorious slaver—passes the alleyway, the accomplice cries out, the slaver comes to
+    investigate, and the assassin's blade cuts his throat before he can make a sound.</p>
+    <p>Suppressing a giggle, a gnome waggles her fingers and magically lifts the key ring from the guard's belt.
+    In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to
+    make their escape.</p>
+    <p>Rogues rely on skill, stealth, and their foes' vulnerabilities to get the upper hand in any situation.
+    They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness
+    and versatility that is the cornerstone of any successful adventuring party.</p>
+    
+    <h5>Skill and Precision</h5>
+    <p>Rogues devote as much effort to mastering the use of a variety of skills as they do to perfecting their
+    combat abilities, giving them a broad expertise that few other characters can match. Many rogues focus
+    on stealth and deception, while others refine the skills that help them in a dungeon environment, such
+    as climbing, finding and disarming traps, and opening locks.</p>
+    <p>When it comes to combat, rogues prioritize cunning over brute strength. A rogue would rather make one
+    precise strike, placing it exactly where the attack will hurt the target most, than wear an opponent
+    down with a barrage of attacks. Rogues have an almost supernatural knack for avoiding danger, and a few
+    learn magical tricks to supplement their other abilities.</p>
+    
+    <h5>A Shady Living</h5>
+    <p>Every town and city has its share of rogues. Most of them live up to the worst stereotypes of the class,
+    making a living as burglars, assassins, cutpurses, and con artists. Often, these scoundrels are
+    organized into thieves' guilds or crime families. Plenty of rogues operate independently, but even they
+    sometimes recruit apprentices to help them in their scams and heists. A few rogues make an honest living
+    as locksmiths, investigators, or exterminators, which can be a dangerous job in a world where dire
+    rats—and wererats—haunt the sewers.</p>
+    <p>As adventurers, rogues fall on both sides of the law. Some are hardened criminals who decide to seek
+    their fortune in treasure hoards, while others take up a life of adventure to escape from the law. Some
+    have learned and perfected their skills with the explicit purpose of infiltrating ancient ruins and
+    hidden crypts in search of treasure.</p>
+    <p>When brute force won't get the job done, or when magic isn't available or appropriate, the rogue rises to
+    the fore. With skills tied to stealth, subterfuge, and trickery, rogues can get into and out of trouble
+    in ways that few other characters can emulate.</p>
+    <p>Some rogues who turn to adventuring are former criminals who have decided that dodging monsters is
+    preferable to remaining one step ahead of the law. Others are professional killers in search of a
+    profitable application of their talents between contracts. Some simply love the thrill of overcoming any
+    challenge that stands in their way.</p>
+    <p>On adventures, a rogue is likely to mix an outwardly cautious approach—few rogues enjoy combat—with a
+    ravenous hunger for loot. Most of the time, in a rogue's mind, taking up arms against a creature is not
+    about killing the creature but about becoming the new owner of its treasure.</p>
+    <h5>A Shady Living</h5>
+    <p>Most of what rogues do revolves around obtaining treasure and preventing others from doing the same.
+    Little gets in the way of attaining those goals, except that many rogues are enticed away from that path
+    by a compulsion that clouds their thinking—an irresistible need that must be satisfied, even if doing so
+    is risky.</p>
+    <p>A rogue's guilty pleasure could be the acquisition of a physical item, something to be experienced, or a
+    way of conducting oneself at certain times. One rogue might not be able to pass up any loot made of
+    silver, for instance, even if said loot is hanging around the neck of a castle guard. Another one can't
+    go through a day in the city without lifting a purse or two, just to keep in practice.</p>
+    <p>What's the one form of temptation that your rogue character can't resist when the opportunity presents
+    itself, even if giving into it might mean trouble for you and your companions?</p>
+    
+    <i>“People forget that the entire point of venturing down into a dusty tomb is to bring back the prizes
+    hidden away there. Fighting is for fools. Dead men can't spend their fortunes.”</i>
+    <p>— Barnabas Bladecutter</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th> <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="2"></th>
+            <th scope="col" colspan="4">Spell Slots per Spell Level (Arcane Trickster)</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Sneak Attack</th>
+            <th>Cantrips Known</th>
+            <th>SpellsKnown</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>Expertise,Sneak Attack,Thieves' Cant</td>
+            <td>1d6</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>Cunning Action</td>
+            <td>1d6</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>Roguish Archetype</td>
+            <td>2d6</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>Ability Score Improvement</td>
+            <td>2d6</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>Uncanny Dodge</td>
+            <td>3d6</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>Expertise</td>
+            <td>3d6</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>Evasion</td>
+            <td>4d6</td>
+            <td>3</td>
+            <td>5</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>Ability Score Improvement</td>
+            <td>4d6</td>
+            <td>3</td>
+            <td>6</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>Roguish Archetype feature</td>
+            <td>5d6</td>
+            <td>3</td>
+            <td>6</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>Ability Score Improvement</td>
+            <td>5d6</td>
+            <td>4</td>
+            <td>7</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>Reliable Talent</td>
+            <td>6d6</td>
+            <td>4</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>Ability Score Improvement</td>
+            <td>6d6</td>
+            <td>4</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>Roguish Archetype feature</td>
+            <td>7d6</td>
+            <td>4</td>
+            <td>9</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>Blindsense</td>
+            <td>7d6</td>
+            <td>4</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>Slippery Mind</td>
+            <td>8d6</td>
+            <td>4</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>Ability Score Improvement</td>
+            <td>8d6</td>
+            <td>4</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>Roguish Archetype feature</td>
+            <td>9d6</td>
+            <td>4</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>Elusive</td>
+            <td>9d6</td>
+            <td>4</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>Ability Score Improvement</td>
+            <td>10d6</td>
+            <td>4</td>
+            <td>12</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>Stroke of Luck</td>
+            <td>10d6</td>
+            <td>4</td>
+            <td>13</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -6993,43 +7274,462 @@ const rogueFeaturesList = [
 /*###################################################################
 ######################### Sorcerer ##################################
 #####################################################################*/
-const sorcererFeaturesByLevel = [`<h1 class="text-center">Sorcerer<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const sorcererFeaturesByLevel = [`<h1 class="text-center">Sorcerer<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-<p>Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in her veins. As an inferno rages around her foes, leathery wings spread from her back and she takes to the air.</p>
-<p>Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back. Lifting him momentarily off the ground, a wave of magic surges up in him, through him, and out from him in a mighty blast of lightning.</p>
-<p>Crouching behind a stalagmite, a halfling points a finger at a charging troglodyte. A blast of fire springs from her finger to strike the creature. She ducks back behind the rock formation with a grin, unaware that her wild magic has turned
-her skin bright blue.</p>
-<p>Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. One can't study sorcery as one learns a language, any more than one can learn to live a legendary
-life. No one chooses sorcery; the power chooses the sorcerer.</p>
+
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Golden eyes flashing, a human stretches out her hand and unleashes the dragonfire that burns in
+    her veins. As an inferno rages around her foes, leathery wings spread from her back and she
+    takes to the air.</p>
+<p>Long hair whipped by a conjured wind, a half-elf spreads his arms wide and throws his head back.
+    Lifting him momentarily off the ground, a wave of magic surges up in him, through him, and out
+    from him in a mighty blast of lightning.</p>
+<p>Crouching behind a stalagmite, a halfling points a finger at a charging troglodyte. A blast of
+    fire springs from her finger to strike the creature. She ducks back behind the rock formation
+    with a grin, unaware that her wild magic has turned
+    her skin bright blue.</p>
+<p>Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some
+    otherworldly influence, or exposure to unknown cosmic forces. One can't study sorcery as one
+    learns a language, any more than one can learn to live a legendary
+    life. No one chooses sorcery; the power chooses the sorcerer.</p>
 
 <h5>Raw Magic</h5>
-<p>Magic is a part of every sorcerer, suffusing body, mind, and spirit with a latent power that waits to be tapped. Some sorcerers wield magic that springs from an ancient bloodline infused with the magic of dragons. Others carry a raw, uncontrolled
-magic within them, a chaotic storm that manifests in unexpected ways.</p>
-<p>The appearance of sorcerous powers is wildly unpredictable. Some draconic bloodlines produce exactly one sorcerer in every generation, but in other lines of descent every individual is a sorcerer. Most of the time, the talents of sorcery appear
-as apparent flukes. Some sorcerers can't name the origin of their power, while others trace it to strange events in their own lives. The touch of a demon, the blessing of a dryad at a baby's birth, or a taste of the water from a mysterious
-spring might spark the gift of sorcery. So too might the gift of a deity of magic, exposure to the elemental forces of the Inner Planes or the maddening chaos of Limbo, or a glimpse into the inner workings of reality.</p>
-<p>Sorcerers have no use for the spellbooks and ancient tomes of magic lore that wizards rely on, nor do they rely on a patron to grant their spells as warlocks do. By learning to harness and channel their own inborn magic, they can discover
-new and staggering ways to unleash that power.</p>
+<p>Magic is a part of every sorcerer, suffusing body, mind, and spirit with a latent power that
+    waits to be tapped. Some sorcerers wield magic that springs from an ancient bloodline infused
+    with the magic of dragons. Others carry a raw, uncontrolled
+    magic within them, a chaotic storm that manifests in unexpected ways.</p>
+<p>The appearance of sorcerous powers is wildly unpredictable. Some draconic bloodlines produce
+    exactly one sorcerer in every generation, but in other lines of descent every individual is a
+    sorcerer. Most of the time, the talents of sorcery appear
+    as apparent flukes. Some sorcerers can't name the origin of their power, while others trace it
+    to strange events in their own lives. The touch of a demon, the blessing of a dryad at a baby's
+    birth, or a taste of the water from a mysterious
+    spring might spark the gift of sorcery. So too might the gift of a deity of magic, exposure to
+    the elemental forces of the Inner Planes or the maddening chaos of Limbo, or a glimpse into the
+    inner workings of reality.</p>
+<p>Sorcerers have no use for the spellbooks and ancient tomes of magic lore that wizards rely on,
+    nor do they rely on a patron to grant their spells as warlocks do. By learning to harness and
+    channel their own inborn magic, they can discover
+    new and staggering ways to unleash that power.</p>
 
 <h5>Unexplained Powers</h5>
-<p>Sorcerers are rare in the world, and it's unusual to find a sorcerer who is not involved in the adventuring life in some way. People with magical power seething in their veins soon discover that the power doesn't like to stay quiet. A sorcerer's
-magic wants to be wielded, and it has a tendency to spill out in unpredictable ways if it isn't called on.</p>
-<p>Sorcerers often have obscure or quixotic motivations driving them to adventure. Some seek a greater understanding of the magical force that infuses them, or the answer to the mystery of its origin. Others hope to find a way to get rid of it,
-or to unleash its full potential. Whatever their goals, sorcerers are every bit as useful to an adventuring party as wizards, making up for a comparative lack of breadth in their magical knowledge with enormous flexibility in using the
-spells they know.</p>
-<p>When it comes to drawing forth their abilities in times of need, sorcerers have it easy compared to other characters. Their power not only rests within them, but it likely takes some effort to keep it at bay. Every sorcerer is born to the
-role, or stumbles into it through cosmic chance. Unlike other characters, who must actively learn, embrace, and pursue their talents, sorcerers have their power thrust upon them.</p>
-<p>Because the idea of an innately magical being traveling among them does not sit well with many folk, sorcerers tend to breed mistrust and suspicion in others they come across. Nonetheless, many sorcerers succeed in overcoming that prejudice
-through deeds that benefit their less magically gifted contemporaries.</p>
-<p>Sorcerers are often defined by the events surrounding the manifestation of their power. For those who receive it as an expected birthright, its appearance is a cause for celebration. Other sorcerers are treated as outcasts, banished from their
-homes after the sudden, terrifying arrival of their abilities.</p>
+<p>Sorcerers are rare in the world, and it's unusual to find a sorcerer who is not involved in the
+    adventuring life in some way. People with magical power seething in their veins soon discover
+    that the power doesn't like to stay quiet. A sorcerer's
+    magic wants to be wielded, and it has a tendency to spill out in unpredictable ways if it isn't
+    called on.</p>
+<p>Sorcerers often have obscure or quixotic motivations driving them to adventure. Some seek a
+    greater understanding of the magical force that infuses them, or the answer to the mystery of
+    its origin. Others hope to find a way to get rid of it,
+    or to unleash its full potential. Whatever their goals, sorcerers are every bit as useful to an
+    adventuring party as wizards, making up for a comparative lack of breadth in their magical
+    knowledge with enormous flexibility in using the
+    spells they know.</p>
+<p>When it comes to drawing forth their abilities in times of need, sorcerers have it easy compared
+    to other characters. Their power not only rests within them, but it likely takes some effort to
+    keep it at bay. Every sorcerer is born to the
+    role, or stumbles into it through cosmic chance. Unlike other characters, who must actively
+    learn, embrace, and pursue their talents, sorcerers have their power thrust upon them.</p>
+<p>Because the idea of an innately magical being traveling among them does not sit well with many
+    folk, sorcerers tend to breed mistrust and suspicion in others they come across. Nonetheless,
+    many sorcerers succeed in overcoming that prejudice
+    through deeds that benefit their less magically gifted contemporaries.</p>
+<p>Sorcerers are often defined by the events surrounding the manifestation of their power. For those
+    who receive it as an expected birthright, its appearance is a cause for celebration. Other
+    sorcerers are treated as outcasts, banished from their
+    homes after the sudden, terrifying arrival of their abilities.</p>
 
 <i>“Practice and study are for amateurs. True power is a birthright.”</i>
-<p class="text-right">— Hennet, scion of Tiamat</p>
+<p>— Hennet, scion of Tiamat</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="2"></th>
+            <th colspan="9">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Sorcery Points</th>
+            <th>Cantrips Known</th>
+            <th>Spells Known</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th>5th</th>
+            <th>6th</th>
+            <th>7th</th>
+            <th>8th</th>
+            <th>9th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>Spellcasting, Sorcerous Origin</td>
+            <td>—</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>Font of Magic</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>Metamagic</td>
+            <td>3</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>5</td>
+            <td>5</td>
+            <td>6</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>Sorcerous Origin feature</td>
+            <td>6</td>
+            <td>5</td>
+            <td>7</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>7</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>Ability Score Improvement</td>
+            <td>8</td>
+            <td>5</td>
+            <td>9</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>9</td>
+            <td>5</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>Metamagic</td>
+            <td>10</td>
+            <td>6</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>11</td>
+            <td>6</td>
+            <td>12</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>Ability Score Improvement</td>
+            <td>12</td>
+            <td>6</td>
+            <td>12</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>13</td>
+            <td>6</td>
+            <td>13</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>Sorcerous Origin feature</td>
+            <td>14</td>
+            <td>6</td>
+            <td>13</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>15</td>
+            <td>6</td>
+            <td>14</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>Ability Score Improvement</td>
+            <td>16</td>
+            <td>6</td>
+            <td>14</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>Metamagic</td>
+            <td>17</td>
+            <td>6</td>
+            <td>15</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>Sorcerous Origin feature</td>
+            <td>18</td>
+            <td>6</td>
+            <td>15</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>Ability Score Improvement</td>
+            <td>19</td>
+            <td>6</td>
+            <td>15</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>Sorcerous Restoration</td>
+            <td>20</td>
+            <td>6</td>
+            <td>15</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
 </div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -8466,36 +9166,299 @@ const sorcererFeaturesList = [
 /*###################################################################
 ######################### Warlock ##################################
 #####################################################################*/
-const warlockFeaturesByLevel = [`<h1 class="text-center">Warlock<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const warlockFeaturesByLevel = [`<h1 class="text-center">Warlock<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-<p>With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly, weaving a magical charm into his honeyed words and bending the palace sentinel to his will.</p>
-<p>As flames spring to life in her hands, a wizened human whispers the secret name of her demonic patron, infusing her spell with fiendish magic.</p>
-<p>Shifting his gaze between a battered tome and the odd alignment of the stars overhead, a wild-eyed tiefling chants the mystic ritual that will open a doorway to a distant world.</p>
-<p>Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular. Drawing on the ancient knowledge
-of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm, warlocks piece together arcane secrets to bolster their own power.</p>
+
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>With a pseudodragon curled on his shoulder, a young elf in golden robes smiles warmly, weaving a
+    magical charm into his honeyed words and bending the palace sentinel to his will.</p>
+<p>As flames spring to life in her hands, a wizened human whispers the secret name of her demonic
+    patron, infusing her spell with fiendish magic.</p>
+<p>Shifting his gaze between a battered tome and the odd alignment of the stars overhead, a
+    wild-eyed tiefling chants the mystic ritual that will open a doorway to a distant world.</p>
+<p>Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through
+    pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both
+    subtle and spectacular. Drawing on the ancient knowledge
+    of beings such as fey nobles, demons, devils, hags, and alien entities of the Far Realm,
+    warlocks piece together arcane secrets to bolster their own power.</p>
 
 <h5>Sworn and Beholden</h5>
-<p>A warlock is defined by a pact with an otherworldly being. Sometimes the relationship between warlock and patron is like that of a cleric and a deity, though the beings that serve as patrons for warlocks are not gods. A warlock might lead
-a cult dedicated to a demon prince, an archdevil, or an utterly alien entity—beings not typically served by clerics. More often, though, the arrangement is similar to that between a master and an apprentice. The warlock learns and grows
-in power, at the cost of occasional services performed on the patron's behalf.</p>
-<p>The magic bestowed on a warlock ranges from minor but lasting alterations to the warlock's being (such as the ability to see in darkness or to read any language) to access to powerful spells. Unlike bookish wizards, warlocks supplement their
-magic with some facility at hand-to-hand combat. They are comfortable in light armor and know how to use simple weapons.</p>
+<p>A warlock is defined by a pact with an otherworldly being. Sometimes the relationship between
+    warlock and patron is like that of a cleric and a deity, though the beings that serve as patrons
+    for warlocks are not gods. A warlock might lead
+    a cult dedicated to a demon prince, an archdevil, or an utterly alien entity—beings not
+    typically served by clerics. More often, though, the arrangement is similar to that between a
+    master and an apprentice. The warlock learns and grows
+    in power, at the cost of occasional services performed on the patron's behalf.</p>
+<p>The magic bestowed on a warlock ranges from minor but lasting alterations to the warlock's being
+    (such as the ability to see in darkness or to read any language) to access to powerful spells.
+    Unlike bookish wizards, warlocks supplement their
+    magic with some facility at hand-to-hand combat. They are comfortable in light armor and know
+    how to use simple weapons.</p>
 
 <h5>Delvers into Secrets</h5>
-<p>Warlocks are driven by an insatiable need for knowledge and power, which compels them into their pacts and shapes their lives. This thirst drives warlocks into their pacts and shapes their later careers as well.</p>
-<p>Stories of warlocks binding themselves to fiends are widely known. But many warlocks serve patrons that are not fiendish. Sometimes a traveler in the wilds comes to a strangely beautiful tower, meets its fey lord or lady, and stumbles into
-a pact without being fully aware of it. And sometimes, while poring over tomes of forbidden lore, a brilliant but crazed student's mind is opened to realities beyond the material world and to the alien beings that dwell in the outer void.</p>
-<p>Warlocks are finders and keepers of secrets. They push at the edge of our understanding of the world, always seeking to expand their expertise. Where sages or wizards might heed a clear sign of danger and end their research, a warlock plunges
-ahead, heedless of the cost. Thus, it takes a peculiar mixture of intelligence, curiosity, and recklessness to produce a warlock. Many folk would describe that combination as evidence of madness. Warlocks see it as a demonstration of bravery.</p>
-<p>Warlocks are defined by two elements that work in concert to forge their path into this class. The first element is the event or circumstances that led to a warlock's entering into a pact with a planar entity. The second one is the nature
-of the entity a warlock is bound to. Unlike clerics, who typically embrace a deity and that god's ethos, a warlock might have no love for a patron, or vice versa.</p>
+<p>Warlocks are driven by an insatiable need for knowledge and power, which compels them into their
+    pacts and shapes their lives. This thirst drives warlocks into their pacts and shapes their
+    later careers as well.</p>
+<p>Stories of warlocks binding themselves to fiends are widely known. But many warlocks serve
+    patrons that are not fiendish. Sometimes a traveler in the wilds comes to a strangely beautiful
+    tower, meets its fey lord or lady, and stumbles into
+    a pact without being fully aware of it. And sometimes, while poring over tomes of forbidden
+    lore, a brilliant but crazed student's mind is opened to realities beyond the material world and
+    to the alien beings that dwell in the outer void.</p>
+<p>Warlocks are finders and keepers of secrets. They push at the edge of our understanding of the
+    world, always seeking to expand their expertise. Where sages or wizards might heed a clear sign
+    of danger and end their research, a warlock plunges
+    ahead, heedless of the cost. Thus, it takes a peculiar mixture of intelligence, curiosity, and
+    recklessness to produce a warlock. Many folk would describe that combination as evidence of
+    madness. Warlocks see it as a demonstration of bravery.</p>
+<p>Warlocks are defined by two elements that work in concert to forge their path into this class.
+    The first element is the event or circumstances that led to a warlock's entering into a pact
+    with a planar entity. The second one is the nature
+    of the entity a warlock is bound to. Unlike clerics, who typically embrace a deity and that
+    god's ethos, a warlock might have no love for a patron, or vice versa.</p>
 
-<i>“You think me mad? I think true insanity is being content to live a life of mortal drudgery when knowledge and power is there for the taking in the realm beyond.”</i>
-<p class="text-right">— Xarren, herald of Acamar</p>
+<i>“You think me mad? I think true insanity is being content to live a life of mortal drudgery when
+    knowledge and power is there for the taking in the realm beyond.”</i>
+<p>— Xarren, herald of Acamar</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="5"></th>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Cantrips Known</th>
+            <th>Spells Known</th>
+            <th>Spell Slots</th>
+            <th>Slot Level</th>
+            <th>Invocations Known</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>Pact Magic, Otherworldly Patron</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1st</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>Eldritch Invocations</td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1st</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>Pact Boon</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2nd</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>Ability Score Improvement</td>
+            <td>3</td>
+            <td>5</td>
+            <td>2</td>
+            <td>2nd</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>3</td>
+            <td>6</td>
+            <td>2</td>
+            <td>3rd</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>Otherworldly Patron feature</td>
+            <td>3</td>
+            <td>7</td>
+            <td>2</td>
+            <td>3rd</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>3</td>
+            <td>8</td>
+            <td>2</td>
+            <td>4th</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>Ability Score Improvement</td>
+            <td>3</td>
+            <td>9</td>
+            <td>2</td>
+            <td>4th</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>3</td>
+            <td>10</td>
+            <td>2</td>
+            <td>5th</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>Otherworldly Patron feature</td>
+            <td>4</td>
+            <td>10</td>
+            <td>2</td>
+            <td>5th</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>Mystic Arcanum (6th level)</td>
+            <td>4</td>
+            <td>11</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>11</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>Mystic Arcanum (7th level)</td>
+            <td>4</td>
+            <td>12</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>Otherworldly Patron feature</td>
+            <td>4</td>
+            <td>12</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>Mystic Arcanum (8th level)</td>
+            <td>4</td>
+            <td>13</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>13</td>
+            <td>3</td>
+            <td>5th</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>Mystic Arcanum (9th level)</td>
+            <td>4</td>
+            <td>14</td>
+            <td>4</td>
+            <td>5th</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>4</td>
+            <td>14</td>
+            <td>4</td>
+            <td>5th</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>15</td>
+            <td>4</td>
+            <td>5th</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>Eldritch Master</td>
+            <td>4</td>
+            <td>15</td>
+            <td>4</td>
+            <td>5th</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
 </div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -9809,40 +10772,373 @@ const warlockFeaturesList = [
 /*###################################################################
 ######################### Wizard ##################################
 #####################################################################*/
-const wizardFeaturesByLevel = [`<h1 class="text-center">Wizard<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const wizardFeaturesByLevel = [`<h1 class="text-center">Wizard<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-<p>Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire
-toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.</p>
-<p>Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole
-opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.</p>
-<p>Crouching on the floor in a dungeon intersection, a gnome tosses a handful of small bones inscribed with mystic symbols, muttering a few words of power over them. Closing his eyes to see the visions more clearly, he nods slowly, then opens
-his eyes and points down the passage to his left.</p>
-<p>Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force
-mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals
-to other worlds.</p>
 
-<h5>Scholars of the Arcane</h5>
-<p>Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance
-of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.</p>
-<p>Wizards live and die by their spells. Everything else is secondary. They learn new spells as they experiment and grow in experience. They can also learn them from other wizards, from ancient tomes or inscriptions, and from ancient creatures
-(such as the fey) that are steeped in magic.</p>
-
-<h5>The Lure of Knowledge</h5>
-<p>Wizards' lives are seldom mundane. The closest a wizard is likely to come to an ordinary life is working as a sage or lecturer in a library or university, teaching others the secrets of the multiverse. Other wizards sell their services as
-diviners, serve in military forces, or pursue lives of crime or domination.</p>
-<p>But the lure of knowledge and power calls even the most unadventurous wizards out of the safety of their libraries and laboratories and into crumbling ruins and lost cities. Most wizards believe that their counterparts in ancient civilizations
-knew secrets of magic that have been lost to the ages, and discovering those secrets could unlock the path to a power greater than any magic available in the present age.</p>
-<p>Only a select few people in the world are wielders of magic. Of all those, wizards stand at the pinnacle of the craft. Even the least of them can manipulate forces that flout the laws of nature, and the most accomplished among them can cast
-spells with world-shaking effects.</p>
-<p>The price that wizards pay for their mastery is that most valuable of commodities: time. It takes years of study, instruction, and experimentation to learn how to harness magical energy and carry spells around in one's own mind. For adventuring
-wizards and other spellcasters who aspire to the highest echelons of the profession, the studying never ends, nor does the quest for knowledge and power.</p>
-
-<i>“Wizardry requires understanding. The knowledge of how and why magic works, and our efforts to broaden that understanding, have brought about the key advances in civilization over the centuries.”</i>
-<p class="text-right">— Gimble the illusionist</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Clad in the silver robes that denote her station, an elf closes her eyes to shut out the distractions of the battlefield and begins her quiet chant. Fingers weaving in front of her, she completes her spell and launches a tiny bead of fire toward the enemy ranks, where it erupts into a conflagration that engulfs the soldiers.</p>
+    <p>Checking and rechecking his work, a human scribes an intricate magic circle in chalk on the bare stone floor, then sprinkles powdered iron along every line and graceful curve. When the circle is complete, he drones a long incantation. A hole opens in space inside the circle, bringing a whiff of brimstone from the otherworldly plane beyond.</p>
+    <p>Crouching on the floor in a dungeon intersection, a gnome tosses a handful of small bones inscribed with mystic symbols, muttering a few words of power over them. Closing his eyes to see the visions more clearly, he nods slowly, then opens his eyes and points down the passage to his left.</p>
+    <p>Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, and brute-force mind control. Their magic conjures monsters from other planes of existence, glimpses the future, or turns slain foes into zombies. Their mightiest spells change one substance into another, call meteors down from the sky, or open portals
+    to other worlds.</p>
+    
+    <h5>Scholars of the Arcane</h5>
+    <p>Wild and enigmatic, varied in form and function, the power of magic draws students who seek to master its mysteries. Some aspire to become like the gods, shaping reality itself. Though the casting of a typical spell requires merely the utterance of a few strange words, fleeting gestures, and sometimes a pinch or clump of exotic materials, these surface components barely hint at the expertise attained after years of apprenticeship and countless hours of study.</p>
+    <p>Wizards live and die by their spells. Everything else is secondary. They learn new spells as they experiment and grow in experience. They can also learn them from other wizards, from ancient tomes or inscriptions, and from ancient creatures (such as the fey) that are steeped in magic.</p>
+    
+    <h5>The Lure of Knowledge</h5>
+    <p>Wizards' lives are seldom mundane. The closest a wizard is likely to come to an ordinary life is working as a sage or lecturer in a library or university, teaching others the secrets of the multiverse. Other wizards sell their services as diviners, serve in military forces, or pursue lives of crime or domination.</p>
+    <p>But the lure of knowledge and power calls even the most unadventurous wizards out of the safety of their libraries and laboratories and into crumbling ruins and lost cities. Most wizards believe that their counterparts in ancient civilizations knew secrets of magic that have been lost to the ages, and discovering those secrets could unlock the path to a power greater than any magic available in the present age.</p>
+    <p>Only a select few people in the world are wielders of magic. Of all those, wizards stand at the pinnacle of the craft. Even the least of them can manipulate forces that flout the laws of nature, and the most accomplished among them can cast spells with world-shaking effects.</p>
+    <p>The price that wizards pay for their mastery is that most valuable of commodities: time. It takes years of study, instruction, and experimentation to learn how to harness magical energy and carry spells around in one's own mind. For adventuring wizards and other spellcasters who aspire to the highest echelons of the profession, the studying never ends, nor does the quest for knowledge and power.</p>
+    
+    <i>“Wizardry requires understanding. The knowledge of how and why magic works, and our efforts to broaden that understanding, have brought about the key advances in civilization over the centuries.”</i>
+    <p>— Gimble the illusionist</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th> <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="9">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Cantrips Known</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th>5th</th>
+            <th>6th</th>
+            <th>7th</th>
+            <th>8th</th>
+            <th>9th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>Arcane Recovery, </td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>Arcane Tradition</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>—</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>Arcane Tradition feature</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>Ability Score Improvement</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>Arcane Tradition feature</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>Ability Score Improvement</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>Arcane Tradition feature</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>Ability Score Improvement</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>Spell Mastery</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>Ability Score Improvement</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>Signature Spells</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 
 
