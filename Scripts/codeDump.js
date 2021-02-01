@@ -843,3 +843,364 @@ function showClassDetails() {
     mod: ()=> { return Math.floor((this.value - 10) / 2); },
     saveMod: ()=> { return this.mod() + proficiencyBonus; }
 }]; */
+
+
+// OLD TABLE
+
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+                        <tbody>
+                            <tr style="background-color: transparent;">
+                                <th colspan="3"></th>
+                                <!-- spacer to match the 3 default cols (level, prof, features) -->
+                                <th colspan="3"></th>
+                                <th class="cls-tbl__col-group" colspan="5">Spell Slots per Spell Level</th>
+                            </tr>
+                            <tr>
+                                <th>Level</th>
+                                <th>Proficiency Bonus</th>
+                                <th>Features</th>
+                                <th>
+                                    <div>Infusions Known</div>
+                                </th>
+                                <th>
+                                    <div>Infused Items</div>
+                                </th>
+                                <th>Cantrips Known
+                                </th>
+                </div>
+                <th>
+                    <div>1st</div>
+                </th>
+                <th>
+                    <div>2nd</div>
+                </th>
+                <th>
+                    <div>3rd</div>
+                </th>
+                <th>
+                    <div>4th</div>
+                </th>
+                <th>
+                    <div>5th</div>
+                </th>
+                <th>
+                    <div>6th</div>
+                </th>
+                <th>
+                    <div>7th</div>
+                </th>
+                <th>
+                    <div>8th</div>
+                </th>
+                <th>
+                    <div>9th</div>
+                </th>
+                </tr>
+                <tr>
+                    <td>1st</td>
+                    <td>+2</td>
+                    <td>
+                        <div>Optional Rule: Firearm Proficiency<span class="mr-1">,</span></div>
+                        <div class="inline-block">Magical Tinkering<span class="mr-1">,</span></div>
+                        <div class="inline-block">Spellcasting<span class="hidden"></span></div>
+                    </td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>2nd</td>
+                    <td>+2</td>
+                    <td>
+                        <div class="inline-block">Infuse Item<span class="hidden"></span></div>
+                    </td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>3rd</td>
+                    <td>+2</td>
+                    <td>
+                        <div class="inline-block">Artificer Specialist<span class="mr-1">,</span></div>
+                        <div class="inline-block">The Right Tool for the Job<span class="hidden"></span></div>
+                    </td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>4th</td>
+                    <td>+2</td>
+                    <td>
+                        <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+                    </td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>5th</td>
+                    <td>+3</td>
+                    <td>
+                        <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+                    </td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>6th</td>
+                    <td>+3</td>
+                    <td>
+                        <div class="inline-block">Tool Expertise<span class="hidden"></span></div>
+                    </td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>7th</td>
+                    <td>+3</td>
+                    <td>
+                        <div class="inline-block">Flash of Genius<span class="hidden"></span></div>
+                    </td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>8th</td>
+                    <td>+3</td>
+                    <td>
+                        <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+                    </td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>9th</td>
+                    <td>+4</td>
+                    <td>
+                        <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+                    </td>
+                    <td>6</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>10th</td>
+                    <td>+4</td>
+                    <td>
+                        <div class="inline-block">Magic Item Adept<span class="hidden"></span></div>
+                    </td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>11th</td>
+                    <td>+4</td>
+                    <td>
+                        <div class="inline-block">Spell-Storing Item<span class="hidden"></span></div>
+                    </td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>12th</td>
+                    <td>+4</td>
+                    <td>
+                        <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+                    </td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>—</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>13th</td>
+                    <td>+5</td>
+                    <td>—</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>14th</td>
+                    <td>+5</td>
+                    <td>
+                        <div class="inline-block">Magic Item Savant<span class="hidden"></span></div>
+                    </td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>15th</td>
+                    <td>+5</td>
+                    <td>
+                        <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+                    </td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>16th</td>
+                    <td>+5</td>
+                    <td>
+                        <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+                    </td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>—</td>
+                </tr>
+                <tr>
+                    <td>17th</td>
+                    <td>+6</td>
+                    <td>—</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>18th</td>
+                    <td>+6</td>
+                    <td>
+                        <div class="inline-block">Magic Item Master<span class="hidden"></span></div>
+                    </td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>19th</td>
+                    <td>+6</td>
+                    <td>
+                        <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+                    </td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>20th</td>
+                    <td>+6</td>
+                    <td>
+                        <div class="inline-block">Soul of Artifice<span class="hidden"></span></div>
+                    </td>
+                    <td>12</td>
+                    <td>6</td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th class="border" colspan="15"></th>
+                </tr>
+                </tbody>
+                </table>

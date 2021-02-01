@@ -859,35 +859,269 @@ const artificerFeaturesList = [
 /*###################################################################
 ######################### Barbarian ##################################
 #####################################################################*/
-const barbarianFeaturesByLevel = [`<h1 class="text-center">Barbarian<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const barbarianFeaturesByLevel = [`<h1 class="text-center">Barbarian<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people's elk herd.</p>
-    <p>A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.</p>
-    <p>Frothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to drive his armored elbow into the gut of another.</p>
-    <p>These barbarians, different as they might be, are defined by their rage: unbridled, unquenchable, and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered predator, the unrelenting assault of a storm, the churning
-        turmoil of the sea.</p>
-    <p>For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes,
-        resilience, and feats of strength.</p>
 
-    <h5>Primal Instinct</h5>
-    <p>People of towns and cities take pride in how their civilized ways set them apart from animals, as if denying one's own nature was a mark of superiority. To a barbarian, though, civilization is no virtue, but a sign of weakness. The strong
-        embrace their animal nature—keen instincts, primal physicality, and ferocious rage. Barbarians are uncomfortable when hedged in by walls and crowds. They thrive in the wilds of their homelands: the tundra, jungle, or grasslands where their
-        tribes live and hunt.</p>
-    <p>Barbarians come alive in the chaos of combat. They can enter a berserk state where rage takes over, giving them superhuman strength and resilience. A barbarian can draw on this reservoir of fury only a few times without resting, but those
-        few rages are usually sufficient to defeat whatever threats arise.</p>
-
-    <h5>A Life of Danger</h5>
-    <p>Not every member of the tribes deemed "barbarians" by scions of civilized society has the barbarian class. A true barbarian among these people is as uncommon as a skilled fighter in a town, and he or she plays a similar role as a protector
-        of the people and a leader in times of war. Life in the wild places of the world is fraught with peril: rival tribes, deadly weather, and terrifying monsters. Barbarians charge headlong into that danger so that their people don't have
-        to.
-    </p>
-    <p>Their courage in the face of danger makes barbarians perfectly suited for adventuring. Wandering is often a way of life for their native tribes, and the rootless life of the adventurer is little hardship for a barbarian. Some barbarians miss
-        the close-knit family structures of the tribe, but eventually find them replaced by the bonds formed among the members of their adventuring parties.</p>
-
-    <i>I have witnessed the indomitable performance of barbarians on the field of battle, and it makes me wonder what force lies at the heart of their rage.</i>—
-    <p>— Seret, Arch wizard</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs
+    as he charges toward the frost giant who dared poach his people's elk herd.</p>
+<p>A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to
+    break his neck with her bare hands as she did to the last six rivals.</p>
+<p>Frothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to
+    drive his armored elbow into the gut of another.</p>
+<p>These barbarians, different as they might be, are defined by their rage: unbridled, unquenchable,
+    and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered
+    predator, the unrelenting assault of a storm, the churning
+    turmoil of the sea.</p>
+<p>For some, their rage springs from a communion with fierce animal spirits. Others draw from a
+    roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that
+    fuels not just a battle frenzy but also uncanny reflexes,
+    resilience, and feats of strength.</p>
+
+<h5>Primal Instinct</h5>
+<p>People of towns and cities take pride in how their civilized ways set them apart from animals, as
+    if denying one's own nature was a mark of superiority. To a barbarian, though, civilization is
+    no virtue, but a sign of weakness. The strong
+    embrace their animal nature—keen instincts, primal physicality, and ferocious rage. Barbarians
+    are uncomfortable when hedged in by walls and crowds. They thrive in the wilds of their
+    homelands: the tundra, jungle, or grasslands where their
+    tribes live and hunt.</p>
+<p>Barbarians come alive in the chaos of combat. They can enter a berserk state where rage takes
+    over, giving them superhuman strength and resilience. A barbarian can draw on this reservoir of
+    fury only a few times without resting, but those
+    few rages are usually sufficient to defeat whatever threats arise.</p>
+
+<h5>A Life of Danger</h5>
+<p>Not every member of the tribes deemed "barbarians" by scions of civilized society has the
+    barbarian class. A true barbarian among these people is as uncommon as a skilled fighter in a
+    town, and he or she plays a similar role as a protector
+    of the people and a leader in times of war. Life in the wild places of the world is fraught with
+    peril: rival tribes, deadly weather, and terrifying monsters. Barbarians charge headlong into
+    that danger so that their people don't have
+    to.
+</p>
+<p>Their courage in the face of danger makes barbarians perfectly suited for adventuring. Wandering
+    is often a way of life for their native tribes, and the rootless life of the adventurer is
+    little hardship for a barbarian. Some barbarians miss
+    the close-knit family structures of the tribe, but eventually find them replaced by the bonds
+    formed among the members of their adventuring parties.</p>
+
+<i>I have witnessed the indomitable performance of barbarians on the field of battle, and it makes
+    me wonder what force lies at the heart of their rage.</i>
+<p>— Seret, Arch wizard</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr>
+            <!-- row so table striped coloring doesnt start with Black-->
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th><div>Rages</div></th>
+            <th><div>Rage Damage</div></th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td><div>Rage,</div><div>Unarmored Defense</div></td>
+            <td>2</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <div>Danger Sense,</div>
+                <div>Reckless Attack</div>
+            </td>
+            <td>2</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>
+                <div>Primal Path</div>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <div>Ability Score Improvement</div>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>
+                <div>Extra Attack,</div>
+                <div>Fast Movement</div>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <div>Path Feature</div>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>
+                <div>Feral Instinct</div>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <div>Ability Score
+                    Improvement</div>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>
+                <div>Brutal Critical (1 die)</div>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <div>Path feature</div>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <div>Relentless Rage</div>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <div>Ability Score Improvement</div>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>
+                <div>Brutal Critical (2 dice)</div>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <div>Path feature</div>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>
+                <div>Persistent Rage</div>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <div>Ability Score Improvement</div>
+            </td>
+            <td>5</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>
+                <div>Brutal Critical (3 dice)</div>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>
+                <div>Indomitable Might</div>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <div>Ability Score Improvement</div>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <div>Primal Champion</div>
+            </td>
+            <td>Unlimited</td>
+            <td>+4</td>
+        </tr>
+    </tbody>
+</table>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -1531,36 +1765,445 @@ barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<sp
 /*###################################################################
 ######################### Bard ##################################
 #####################################################################*/
-const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><button class="collapseButton" type="button"
+                    data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+                    aria-controls="collapseIntro">[-]</button></span></h1>
 
-<div class="collapse show" id="collapseIntro">
-    <p>Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the
-        monument and the mythic saga it depicts.</p>
-    <p>A stern human warrior bangs his sword rhythmically against his scale mail, setting the tempo for his war chant and exhorting his companions to bravery and heroism. The magic of his song fortifies and emboldens them.</p>
-    <p>Laughing as she tunes her cittern, a gnome weaves her subtle magic over the assembled nobles, ensuring that her companions' words will be well received.</p>
-    <p>Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.</p>
+        <div class="collapse show" id="collapseIntro">
 
-    <h5>Music and Magic</h5>
-    <p>In the worlds of D&D, words and music are not just vibrations of air, but vocalizations with power all their own. The bard is a master of song, speech, and the magic they contain. Bards say that the multiverse was spoken into existence, that
-        the words of the gods gave it shape, and that echoes of these primordial Words of Creation still resound throughout the cosmos. The music of bards is an attempt to snatch and harness those echoes, subtly woven into their spells and powers.</p>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                        aria-controls="nav-home" aria-selected="true">Class table</a>
+                    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">Class description</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <!-- -------------------------------------------------------------beginning description div-->
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <p>Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the
+                        monument and the mythic saga it depicts.</p>
+                    <p>A stern human warrior bangs his sword rhythmically against his scale mail, setting the tempo for his war chant and exhorting his companions to bravery and heroism. The magic of his song fortifies and emboldens them.</p>
+                    <p>Laughing as she tunes her cittern, a gnome weaves her subtle magic over the assembled nobles, ensuring that her companions' words will be well received.</p>
+                    <p>Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.</p>
+                
+                    <h5>Music and Magic</h5>
+                    <p>In the worlds of D&D, words and music are not just vibrations of air, but vocalizations with power all their own. The bard is a master of song, speech, and the magic they contain. Bards say that the multiverse was spoken into existence, that
+                        the words of the gods gave it shape, and that echoes of these primordial Words of Creation still resound throughout the cosmos. The music of bards is an attempt to snatch and harness those echoes, subtly woven into their spells and powers.</p>
+                
+                    <p>The greatest strength of bards is their sheer versatility. Many bards prefer to stick to the sidelines in combat, using their magic to inspire their allies and hinder their foes from a distance. But bards are capable of defending themselves
+                        in melee if necessary, using their magic to bolster their swords and armor. Their spells lean toward charms and illusions rather than blatantly destructive spells. They have a wide-ranging knowledge of many subjects and a natural aptitude
+                        that lets them do almost anything well. Bards become masters of the talents they set their minds to perfecting, from musical performance to esoteric knowledge.</p>
+                
+                    <h5>Learning from Experience</h5>
+                    <p>True bards are not common in the world. Not every minstrel singing in a tavern or jester cavorting in a royal court is a bard. Discovering the magic hidden in music requires hard study and some measure of natural talent that most troubadours
+                        and jongleurs lack. It can be hard to spot the difference between these performers and true bards, though. A bard's life is spent wandering across the land gathering lore, telling stories, and living on the gratitude of audiences, much
+                        like any other entertainer. But a depth of knowledge, a level of musical skill, and a touch of magic set bards apart from their fellows.</p>
+                
+                    <p>Only rarely do bards settle in one place for long, and their natural desire to travel—to find new tales to tell, new skills to learn, and new discoveries beyond the horizon—makes an adventuring career a natural calling. Every adventure is
+                        an opportunity to learn, practice a variety of skills, enter long-forgotten tombs, discover lost works of magic, decipher old tomes, travel to strange places, or encounter exotic creatures. Bards love to accompany heroes to witness their
+                        deeds firsthand. A bard who can tell an awe-inspiring story from personal experience earns renown among other bards. Indeed, after telling so many stories about heroes accomplishing mighty deeds, many bards take these themes to heart and
+                        assume heroic roles themselves.</p>
+                    <i>“Music is the fruit of the divine tree that vibrates with the Words of Creation. But the question I ask you is, can a bard go to the root of this tree? Can one tap into the source of that power? Ah, then what manner of music they would bring to this world!”</i>
+                    <p>— Fletcher Danairia, master bard</p>
+                </div><!-- -------------------------------------------------------------end description div-->
 
-    <p>The greatest strength of bards is their sheer versatility. Many bards prefer to stick to the sidelines in combat, using their magic to inspire their allies and hinder their foes from a distance. But bards are capable of defending themselves
-        in melee if necessary, using their magic to bolster their swords and armor. Their spells lean toward charms and illusions rather than blatantly destructive spells. They have a wide-ranging knowledge of many subjects and a natural aptitude
-        that lets them do almost anything well. Bards become masters of the talents they set their minds to perfecting, from musical performance to esoteric knowledge.</p>
-
-    <h5>Learning from Experience</h5>
-    <p>True bards are not common in the world. Not every minstrel singing in a tavern or jester cavorting in a royal court is a bard. Discovering the magic hidden in music requires hard study and some measure of natural talent that most troubadours
-        and jongleurs lack. It can be hard to spot the difference between these performers and true bards, though. A bard's life is spent wandering across the land gathering lore, telling stories, and living on the gratitude of audiences, much
-        like any other entertainer. But a depth of knowledge, a level of musical skill, and a touch of magic set bards apart from their fellows.</p>
-
-    <p>Only rarely do bards settle in one place for long, and their natural desire to travel—to find new tales to tell, new skills to learn, and new discoveries beyond the horizon—makes an adventuring career a natural calling. Every adventure is
-        an opportunity to learn, practice a variety of skills, enter long-forgotten tombs, discover lost works of magic, decipher old tomes, travel to strange places, or encounter exotic creatures. Bards love to accompany heroes to witness their
-        deeds firsthand. A bard who can tell an awe-inspiring story from personal experience earns renown among other bards. Indeed, after telling so many stories about heroes accomplishing mighty deeds, many bards take these themes to heart and
-        assume heroic roles themselves.</p>
-    <i>“Music is the fruit of the divine tree that vibrates with the Words of Creation. But the question I ask you is, can a bard go to the root of this tree? Can one tap into the source of that power? Ah, then what manner of music they would bring to this world!”</i>
-    <p>— Fletcher Danairia, master bard</p>
-
-</div>
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <!-- -------------------------beginning table div-->
+                    <table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+                        <tbody>
+                            <tr></tr> <!-- row so that  the table wont start with black -->
+                            <tr>
+                                <th colspan="3"></th>
+                                <!-- spacer to match the 3 default cols (level, prof, features) -->
+                                <th colspan="2"></th>
+                                <th colspan="9">Spell Slots per Spell Level</th>
+                            </tr>
+                            <tr></tr> <!-- row so that  the table wont start with black -->
+                            <tr>
+                                <th>Level</th>
+                                <th>Proficiency Bonus</th>
+                                <th>Features</th>
+                                <th><div>Cantrips Known</div></th>
+                                <th><div>Spells Known</div></th>
+                                <th><div>1st</div></th>
+                                <th><div>2nd</div></th>
+                                <th><div>3rd</div></th>
+                                <th><div>4th</div></th>
+                                <th><div>5th</div></th>
+                                <th><div>6th</div></th>
+                                <th><div>7th</div></th>
+                                <th><div>8th</div></th>
+                                <th><div>9th</div></th>
+                            </tr>
+                            <tr>
+                                <td>1st</td>
+                                <td>+2</td>
+                                <td>
+                                    <div>Bardic Inspiration,</div>
+                                    <div>Spellcasting</div>
+                                </td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>2nd</td>
+                                <td>+2</td>
+                                <td>
+                                    <div>Jack of All Trades,</div>
+                                    <div>Song of Rest (d6)</div>
+                                </td>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>3rd</td>
+                                <td>+2</td>
+                                <td>
+                                    <div>Bard College,</div>
+                                    <div>Expertise</div>
+                                </td>
+                                <td>2</td>
+                                <td>6</td>
+                                <td>4</td>
+                                <td>2</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>4th</td>
+                                <td>+2</td>
+                                <td>
+                                    <div>Ability Score Improvement</div>
+                                </td>
+                                <td>3</td>
+                                <td>7</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>5th</td>
+                                <td>+3</td>
+                                <td>
+                                    <div>Bardic Inspiration (d8),</div>
+                                    <div>Font of Inspiration</div>
+                                </td>
+                                <td>3</td>
+                                <td>8</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>6th</td>
+                                <td>+3</td>
+                                <td>
+                                    <div>Countercharm,</div>
+                                    <div>Bard College feature</div>
+                                </td>
+                                <td>3</td>
+                                <td>9</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>7th</td>
+                                <td>+3</td>
+                                <td>—</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>8th</td>
+                                <td>+3</td>
+                                <td>
+                                    <div>Ability Score Improvement</div>
+                                </td>
+                                <td>3</td>
+                                <td>11</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>9th</td>
+                                <td>+4</td>
+                                <td>
+                                    <div>Song of Rest (d8)</div>
+                                </td>
+                                <td>3</td>
+                                <td>12</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>10th</td>
+                                <td>+4</td>
+                                <td>
+                                    <div>Bardic Inspiration (d10),</div>
+                                    <div>Expertise,</div>
+                                    <div>Magical Secrets</div>
+                                </td>
+                                <td>4</td>
+                                <td>14</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>11th</td>
+                                <td>+4</td>
+                                <td>—</td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>12th</td>
+                                <td>+4</td>
+                                <td>
+                                    <div>Ability Score Improvement</div>
+                                </td>
+                                <td>4</td>
+                                <td>15</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>13th</td>
+                                <td>+5</td>
+                                <td>
+                                    <div>Song of Rest (d10)</div>
+                                </td>
+                                <td>4</td>
+                                <td>16</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>14th</td>
+                                <td>+5</td>
+                                <td>
+                                    <div>Magical Secrets,</div>
+                                    <div>Bard College feature</div>
+                                </td>
+                                <td>4</td>
+                                <td>18</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>—</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>15th</td>
+                                <td>+5</td>
+                                <td>
+                                    <div>Bardic Inspiration (d12)</div>
+                                </td>
+                                <td>4</td>
+                                <td>19</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>16th</td>
+                                <td>+5</td>
+                                <td>
+                                    <div>Ability Score Improvement</div>
+                                </td>
+                                <td>4</td>
+                                <td>19</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>—</td>
+                            </tr>
+                            <tr>
+                                <td>17th</td>
+                                <td>+6</td>
+                                <td>
+                                    <div>Song of Rest (d12)</div>
+                                </td>
+                                <td>4</td>
+                                <td>20</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>18th</td>
+                                <td>+6</td>
+                                <td>
+                                    <div>Magical Secrets</div>
+                                </td>
+                                <td>4</td>
+                                <td>22</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>19th</td>
+                                <td>+6</td>
+                                <td>
+                                    <div>Ability Score Improvement</div>
+                                </td>
+                                <td>4</td>
+                                <td>22</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>20th</td>
+                                <td>+6</td>
+                                <td>
+                                    <div>Superior Inspiration</div>
+                                </td>
+                                <td>4</td>
+                                <td>22</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><!-- -------------------------end table div-->
 
 
 

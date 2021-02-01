@@ -7,8 +7,7 @@ row für dreiteilung der Seite links outline.
 
 
 
--Subclasses classes
-
+wenn man bei subclasses in den Inneren bereich clickt wird die subclass gelöscht weil 
 
 
 
