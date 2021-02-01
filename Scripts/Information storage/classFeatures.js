@@ -116,9 +116,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>1st</td>
 <td>+2</td>
 <td>
-    <div>Optional Rule: Firearm Proficiency<span class="mr-1">,</span></div>
-    <div class="inline-block">Magical Tinkering<span class="mr-1">,</span></div>
-    <div class="inline-block">Spellcasting<span class="hidden"></span></div>
+    <div>Optional Rule: Firearm Proficiency</div>
+    <span>Magical Tinkering, </span>
+    <span>Spellcasting</span>
 </td>
 <td>—</td>
 <td>—</td>
@@ -133,7 +133,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>2nd</td>
 <td>+2</td>
 <td>
-    <div class="inline-block">Infuse Item<span class="hidden"></span></div>
+    <span>Infuse Item</span>
 </td>
 <td>4</td>
 <td>2</td>
@@ -148,8 +148,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>3rd</td>
 <td>+2</td>
 <td>
-    <div class="inline-block">Artificer Specialist<span class="mr-1">,</span></div>
-    <div class="inline-block">The Right Tool for the Job<span class="hidden"></span></div>
+    <span>Artificer Specialist, </span>
+    <span>The Right Tool for the Job</span>
 </td>
 <td>4</td>
 <td>2</td>
@@ -164,7 +164,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>4th</td>
 <td>+2</td>
 <td>
-    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+    <span>Ability Score Improvement</span>
 </td>
 <td>4</td>
 <td>2</td>
@@ -179,7 +179,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>5th</td>
 <td>+3</td>
 <td>
-    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+    <span>Artificer Specialist Feature</span>
 </td>
 <td>4</td>
 <td>2</td>
@@ -194,7 +194,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>6th</td>
 <td>+3</td>
 <td>
-    <div class="inline-block">Tool Expertise<span class="hidden"></span></div>
+    <span>Tool Expertise</span>
 </td>
 <td>6</td>
 <td>3</td>
@@ -209,7 +209,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>7th</td>
 <td>+3</td>
 <td>
-    <div class="inline-block">Flash of Genius<span class="hidden"></span></div>
+    <span>Flash of Genius</span>
 </td>
 <td>6</td>
 <td>3</td>
@@ -224,7 +224,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>8th</td>
 <td>+3</td>
 <td>
-    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+    <span>Ability Score Improvement</span>
 </td>
 <td>6</td>
 <td>3</td>
@@ -239,7 +239,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>9th</td>
 <td>+4</td>
 <td>
-    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+    <span>Artificer Specialist Feature</span>
 </td>
 <td>6</td>
 <td>3</td>
@@ -254,7 +254,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>10th</td>
 <td>+4</td>
 <td>
-    <div class="inline-block">Magic Item Adept<span class="hidden"></span></div>
+    <span>Magic Item Adept</span>
 </td>
 <td>8</td>
 <td>4</td>
@@ -269,7 +269,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>11th</td>
 <td>+4</td>
 <td>
-    <div class="inline-block">Spell-Storing Item<span class="hidden"></span></div>
+    <span>Spell-Storing Item</span>
 </td>
 <td>8</td>
 <td>4</td>
@@ -284,7 +284,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>12th</td>
 <td>+4</td>
 <td>
-    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+    <span>Ability Score Improvement</span>
 </td>
 <td>8</td>
 <td>4</td>
@@ -312,7 +312,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>14th</td>
 <td>+5</td>
 <td>
-    <div class="inline-block">Magic Item Savant<span class="hidden"></span></div>
+    <span>Magic Item Savant</span>
 </td>
 <td>10</td>
 <td>5</td>
@@ -327,7 +327,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>15th</td>
 <td>+5</td>
 <td>
-    <div class="inline-block">Artificer Specialist Feature<span class="hidden"></span></div>
+    <span>Artificer Specialist Feature</span>
 </td>
 <td>10</td>
 <td>5</td>
@@ -342,7 +342,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>16th</td>
 <td>+5</td>
 <td>
-    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+    <span>Ability Score Improvement</span>
 </td>
 <td>10</td>
 <td>5</td>
@@ -370,7 +370,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>18th</td>
 <td>+6</td>
 <td>
-    <div class="inline-block">Magic Item Master<span class="hidden"></span></div>
+    <span>Magic Item Master</span>
 </td>
 <td>12</td>
 <td>6</td>
@@ -385,7 +385,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>19th</td>
 <td>+6</td>
 <td>
-    <div class="inline-block">Ability Score Improvement<span class="hidden"></span></div>
+    <span>Ability Score Improvement</span>
 </td>
 <td>12</td>
 <td>6</td>
@@ -400,7 +400,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <td>20th</td>
 <td>+6</td>
 <td>
-    <div class="inline-block">Soul of Artifice<span class="hidden"></span></div>
+    <span>Soul of Artifice</span>
 </td>
 <td>12</td>
 <td>6</td>
@@ -941,7 +941,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         <tr>
             <td>1st</td>
             <td>+2</td>
-            <td><div>Rage,</div><div>Unarmored Defense</div></td>
+            <td><span>Rage, </span><span>Unarmored Defense</span></td>
             <td>2</td>
             <td>+2</td>
         </tr>
@@ -949,8 +949,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>2nd</td>
             <td>+2</td>
             <td>
-                <div>Danger Sense,</div>
-                <div>Reckless Attack</div>
+                <span>Danger Sense,</span>
+                <span>Reckless Attack</span>
             </td>
             <td>2</td>
             <td>+2</td>
@@ -959,7 +959,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>3rd</td>
             <td>+2</td>
             <td>
-                <div>Primal Path</div>
+                <span>Primal Path</span>
             </td>
             <td>3</td>
             <td>+2</td>
@@ -968,7 +968,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>4th</td>
             <td>+2</td>
             <td>
-                <div>Ability Score Improvement</div>
+                <span>Ability Score Improvement</span>
             </td>
             <td>3</td>
             <td>+2</td>
@@ -977,8 +977,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>5th</td>
             <td>+3</td>
             <td>
-                <div>Extra Attack,</div>
-                <div>Fast Movement</div>
+                <span>Extra Attack,</span>
+                <span>Fast Movement</span>
             </td>
             <td>3</td>
             <td>+2</td>
@@ -987,7 +987,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>6th</td>
             <td>+3</td>
             <td>
-                <div>Path Feature</div>
+                <span>Path Feature</span>
             </td>
             <td>4</td>
             <td>+2</td>
@@ -996,7 +996,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>7th</td>
             <td>+3</td>
             <td>
-                <div>Feral Instinct</div>
+                <span>Feral Instinct</span>
             </td>
             <td>4</td>
             <td>+2</td>
@@ -1005,8 +1005,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>8th</td>
             <td>+3</td>
             <td>
-                <div>Ability Score
-                    Improvement</div>
+                <span>Ability Score
+                    Improvement</span>
             </td>
             <td>4</td>
             <td>+2</td>
@@ -1015,7 +1015,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>9th</td>
             <td>+4</td>
             <td>
-                <div>Brutal Critical (1 die)</div>
+                <span>Brutal Critical (1 die)</span>
             </td>
             <td>4</td>
             <td>+3</td>
@@ -1024,7 +1024,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>10th</td>
             <td>+4</td>
             <td>
-                <div>Path feature</div>
+                <span>Path feature</span>
             </td>
             <td>4</td>
             <td>+3</td>
@@ -1033,7 +1033,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>11th</td>
             <td>+4</td>
             <td>
-                <div>Relentless Rage</div>
+                <span>Relentless Rage</span>
             </td>
             <td>4</td>
             <td>+3</td>
@@ -1042,7 +1042,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>12th</td>
             <td>+4</td>
             <td>
-                <div>Ability Score Improvement</div>
+                <span>Ability Score Improvement</span>
             </td>
             <td>5</td>
             <td>+3</td>
@@ -1051,7 +1051,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>13th</td>
             <td>+5</td>
             <td>
-                <div>Brutal Critical (2 dice)</div>
+                <span>Brutal Critical (2 dice)</span>
             </td>
             <td>5</td>
             <td>+3</td>
@@ -1060,7 +1060,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>14th</td>
             <td>+5</td>
             <td>
-                <div>Path feature</div>
+                <span>Path feature</span>
             </td>
             <td>5</td>
             <td>+3</td>
@@ -1069,7 +1069,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>15th</td>
             <td>+5</td>
             <td>
-                <div>Persistent Rage</div>
+                <span>Persistent Rage</span>
             </td>
             <td>5</td>
             <td>+3</td>
@@ -1078,7 +1078,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>16th</td>
             <td>+5</td>
             <td>
-                <div>Ability Score Improvement</div>
+                <span>Ability Score Improvement</span>
             </td>
             <td>5</td>
             <td>+4</td>
@@ -1087,7 +1087,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>17th</td>
             <td>+6</td>
             <td>
-                <div>Brutal Critical (3 dice)</div>
+                <span>Brutal Critical (3 dice)</span>
             </td>
             <td>6</td>
             <td>+4</td>
@@ -1096,7 +1096,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>18th</td>
             <td>+6</td>
             <td>
-                <div>Indomitable Might</div>
+                <span>Indomitable Might</span>
             </td>
             <td>6</td>
             <td>+4</td>
@@ -1105,7 +1105,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>19th</td>
             <td>+6</td>
             <td>
-                <div>Ability Score Improvement</div>
+                <span>Ability Score Improvement</span>
             </td>
             <td>6</td>
             <td>+4</td>
@@ -1114,7 +1114,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <td>20th</td>
             <td>+6</td>
             <td>
-                <div>Primal Champion</div>
+                <span>Primal Champion</span>
             </td>
             <td>Unlimited</td>
             <td>+4</td>
@@ -1841,8 +1841,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>1st</td>
                                 <td>+2</td>
                                 <td>
-                                    <div>Bardic Inspiration,</div>
-                                    <div>Spellcasting</div>
+                                    <span>Bardic Inspiration,</span>
+                                    <span>Spellcasting</span>
                                 </td>
                                 <td>2</td>
                                 <td>4</td>
@@ -1860,8 +1860,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>2nd</td>
                                 <td>+2</td>
                                 <td>
-                                    <div>Jack of All Trades,</div>
-                                    <div>Song of Rest (d6)</div>
+                                    <span>Jack of All Trades,</span>
+                                    <span>Song of Rest (d6)</span>
                                 </td>
                                 <td>2</td>
                                 <td>5</td>
@@ -1879,8 +1879,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>3rd</td>
                                 <td>+2</td>
                                 <td>
-                                    <div>Bard College,</div>
-                                    <div>Expertise</div>
+                                    <span>Bard College,</span>
+                                    <span>Expertise</span>
                                 </td>
                                 <td>2</td>
                                 <td>6</td>
@@ -1898,7 +1898,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>4th</td>
                                 <td>+2</td>
                                 <td>
-                                    <div>Ability Score Improvement</div>
+                                    <span>Ability Score Improvement</span>
                                 </td>
                                 <td>3</td>
                                 <td>7</td>
@@ -1916,8 +1916,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>5th</td>
                                 <td>+3</td>
                                 <td>
-                                    <div>Bardic Inspiration (d8),</div>
-                                    <div>Font of Inspiration</div>
+                                    <span>Bardic Inspiration (d8),</span>
+                                    <span>Font of Inspiration</span>
                                 </td>
                                 <td>3</td>
                                 <td>8</td>
@@ -1935,8 +1935,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>6th</td>
                                 <td>+3</td>
                                 <td>
-                                    <div>Countercharm,</div>
-                                    <div>Bard College feature</div>
+                                    <span>Countercharm,</span>
+                                    <span>Bard College feature</span>
                                 </td>
                                 <td>3</td>
                                 <td>9</td>
@@ -1970,7 +1970,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>8th</td>
                                 <td>+3</td>
                                 <td>
-                                    <div>Ability Score Improvement</div>
+                                    <span>Ability Score Improvement</span>
                                 </td>
                                 <td>3</td>
                                 <td>11</td>
@@ -1988,7 +1988,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>9th</td>
                                 <td>+4</td>
                                 <td>
-                                    <div>Song of Rest (d8)</div>
+                                    <span>Song of Rest (d8)</span>
                                 </td>
                                 <td>3</td>
                                 <td>12</td>
@@ -2006,9 +2006,9 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>10th</td>
                                 <td>+4</td>
                                 <td>
-                                    <div>Bardic Inspiration (d10),</div>
-                                    <div>Expertise,</div>
-                                    <div>Magical Secrets</div>
+                                    <span>Bardic Inspiration (d10),</span>
+                                    <span>Expertise,</span>
+                                    <span>Magical Secrets</span>
                                 </td>
                                 <td>4</td>
                                 <td>14</td>
@@ -2042,7 +2042,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>12th</td>
                                 <td>+4</td>
                                 <td>
-                                    <div>Ability Score Improvement</div>
+                                    <span>Ability Score Improvement</span>
                                 </td>
                                 <td>4</td>
                                 <td>15</td>
@@ -2060,7 +2060,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>13th</td>
                                 <td>+5</td>
                                 <td>
-                                    <div>Song of Rest (d10)</div>
+                                    <span>Song of Rest (d10)</span>
                                 </td>
                                 <td>4</td>
                                 <td>16</td>
@@ -2078,8 +2078,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>14th</td>
                                 <td>+5</td>
                                 <td>
-                                    <div>Magical Secrets,</div>
-                                    <div>Bard College feature</div>
+                                    <span>Magical Secrets,</span>
+                                    <span>Bard College feature</span>
                                 </td>
                                 <td>4</td>
                                 <td>18</td>
@@ -2097,7 +2097,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>15th</td>
                                 <td>+5</td>
                                 <td>
-                                    <div>Bardic Inspiration (d12)</div>
+                                    <span>Bardic Inspiration (d12)</span>
                                 </td>
                                 <td>4</td>
                                 <td>19</td>
@@ -2115,7 +2115,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>16th</td>
                                 <td>+5</td>
                                 <td>
-                                    <div>Ability Score Improvement</div>
+                                    <span>Ability Score Improvement</span>
                                 </td>
                                 <td>4</td>
                                 <td>19</td>
@@ -2133,7 +2133,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>17th</td>
                                 <td>+6</td>
                                 <td>
-                                    <div>Song of Rest (d12)</div>
+                                    <span>Song of Rest (d12)</span>
                                 </td>
                                 <td>4</td>
                                 <td>20</td>
@@ -2151,7 +2151,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>18th</td>
                                 <td>+6</td>
                                 <td>
-                                    <div>Magical Secrets</div>
+                                    <span>Magical Secrets</span>
                                 </td>
                                 <td>4</td>
                                 <td>22</td>
@@ -2169,7 +2169,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>19th</td>
                                 <td>+6</td>
                                 <td>
-                                    <div>Ability Score Improvement</div>
+                                    <span>Ability Score Improvement</span>
                                 </td>
                                 <td>4</td>
                                 <td>22</td>
@@ -2187,7 +2187,7 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
                                 <td>20th</td>
                                 <td>+6</td>
                                 <td>
-                                    <div>Superior Inspiration</div>
+                                    <span>Superior Inspiration</span>
                                 </td>
                                 <td>4</td>
                                 <td>22</td>
@@ -2296,38 +2296,464 @@ const bardFeaturesList = [
 /*###################################################################
 ######################### Cleric ##################################
 #####################################################################*/
-const clericFeaturesByLevel = [`<h1 class="text-center">Cleric<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const clericFeaturesByLevel = [`<h1 class="text-center">Cleric<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>Arms and eyes upraised toward the sun and a prayer on his lips, an elf begins to glow with an inner light that spills out to heal his battle-worn companions.</p>
-    <p>Chanting a song of glory, a dwarf swings his axe in wide swaths to cut through the ranks of orcs arrayed against him, shouting praise to the gods with every foe's fall.</p>
-    <p>Calling down a curse upon the forces of undeath, a human lifts her holy symbol as light pours from it to drive back the zombies crowding in on her companions.</p>
-    <p>Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.</p>
 
-    <h5>Healers and Warriors</h5>
-    <p>Divine magic, as the name suggests, is the power of the gods, flowing from them into the world. Clerics are conduits for that power, manifesting it as miraculous effects. The gods don't grant this power to everyone who seeks it, but only to
-        those chosen to fulfill a high calling.</p>
-    <p>Harnessing divine magic doesn't rely on study or training. A cleric might learn formulaic prayers and ancient rites, but the ability to cast cleric spells relies on devotion and an intuitive sense of a deity's wishes.</p>
-    <p>Clerics combine the helpful magic of healing and inspiring their allies with spells that harm and hinder foes. They can provoke awe and dread, lay curses of plague or poison, and even call down flames from heaven to consume their enemies.
-        For those evildoers who will benefit most from a mace to the head, clerics depend on their combat training to let them wade into melee with the power of the gods on their side.</p>
-
-    <h5>Divine Agents</h5>
-    <p>Not every acolyte or officiant at a temple or shrine is a cleric. Some priests are called to a simple life of temple service, carrying out their gods' will through prayer and sacrifice, not by magic and strength of arms. In some cities, priesthood
-        amounts to a political office, viewed as a stepping stone to higher positions of authority and involving no communion with a god at all. True clerics are rare in most hierarchies.</p>
-
-    <p>When a cleric takes up an adventuring life, it is usually because his or her god demands it. Pursuing the goals of the gods often involves braving dangers beyond the walls of civilization, smiting evil or seeking holy relics in ancient tombs.
-        Many clerics are also expected to protect their deities' worshipers, which can mean fighting rampaging orcs, negotiating peace between warring nations, or sealing a portal that would allow a demon prince to enter the world.</p>
-    <p>Most adventuring clerics maintain some connection to established temples and orders of their faiths. A temple might ask for a cleric's aid, or a high priest might be in a position to demand it.</p>
-
-    <p>Almost all the folk in the world who revere a deity live their lives without ever being directly touched by a divine being. As such, they can never know what it feels like to be a cleric—someone who is not only a devout worshiper, but who
-        has also been invested with a measure of a deity's power.</p>
-    <p>The question has long been debated: Does a mortal become a cleric as a consequence of deep devotion to one's deity, thereby attracting the god's favor? Or is it the deity who sees the potential in a person and calls that individual into service?
-        Ultimately, perhaps, the answer doesn't matter. However clerics come into being, the world needs clerics as much as clerics and deities need each other.</p>
-    <p>If you're playing a cleric character, the following sections offer ways to add some detail to that character's history and personality.</p>
-
-    <i>“To become a cleric is to become a messenger of the gods. The power the divine offers is great, but it always comes with tremendous responsibility.”</i>
-    <p>— Riggby the patriarch</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Arms and eyes upraised toward the sun and a prayer on his lips, an elf begins to glow with an
+    inner light that spills out to heal his battle-worn companions.</p>
+<p>Chanting a song of glory, a dwarf swings his axe in wide swaths to cut through the ranks of orcs
+    arrayed against him, shouting praise to the gods with every foe's fall.</p>
+<p>Calling down a curse upon the forces of undeath, a human lifts her holy symbol as light pours
+    from it to drive back the zombies crowding in on her companions.</p>
+<p>Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied
+    as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary
+    priest, a cleric is imbued with divine magic.</p>
+
+<h5>Healers and Warriors</h5>
+<p>Divine magic, as the name suggests, is the power of the gods, flowing from them into the world.
+    Clerics are conduits for that power, manifesting it as miraculous effects. The gods don't grant
+    this power to everyone who seeks it, but only to those chosen to fulfill a high calling.</p>
+<p>Harnessing divine magic doesn't rely on study or training. A cleric might learn formulaic prayers
+    and ancient rites, but the ability to cast cleric spells relies on devotion and an intuitive
+    sense of a deity's wishes.</p>
+<p>Clerics combine the helpful magic of healing and inspiring their allies with spells that harm and
+    hinder foes. They can provoke awe and dread, lay curses of plague or poison, and even call down
+    flames from heaven to consume their enemies. For those evildoers who will benefit most from a mace to the head, clerics depend on their
+    combat training to let them wade into melee with the power of the gods on their side.</p>
+
+<h5>Divine Agents</h5>
+<p>Not every acolyte or officiant at a temple or shrine is a cleric. Some priests are called to a
+    simple life of temple service, carrying out their gods' will through prayer and sacrifice, not
+    by magic and strength of arms. In some cities, priesthood amounts to a political office, viewed as a stepping stone to higher positions of authority and
+    involving no communion with a god at all. True clerics are rare in most hierarchies.</p>
+
+<p>When a cleric takes up an adventuring life, it is usually because his or her god demands it.
+    Pursuing the goals of the gods often involves braving dangers beyond the walls of civilization,
+    smiting evil or seeking holy relics in ancient tombs.
+    Many clerics are also expected to protect their deities' worshipers, which can mean fighting
+    rampaging orcs, negotiating peace between warring nations, or sealing a portal that would allow
+    a demon prince to enter the world.</p>
+<p>Most adventuring clerics maintain some connection to established temples and orders of their
+    faiths. A temple might ask for a cleric's aid, or a high priest might be in a position to demand
+    it.</p>
+
+<p>Almost all the folk in the world who revere a deity live their lives without ever being directly
+    touched by a divine being. As such, they can never know what it feels like to be a
+    cleric—someone who is not only a devout worshiper, but who
+    has also been invested with a measure of a deity's power.</p>
+<p>The question has long been debated: Does a mortal become a cleric as a consequence of deep
+    devotion to one's deity, thereby attracting the god's favor? Or is it the deity who sees the
+    potential in a person and calls that individual into service?
+    Ultimately, perhaps, the answer doesn't matter. However clerics come into being, the world needs
+    clerics as much as clerics and deities need each other.</p>
+<p>If you're playing a cleric character, the following sections offer ways to add some detail to
+    that character's history and personality.</p>
+
+<i>“To become a cleric is to become a messenger of the gods. The power the divine offers is great,
+    but it always comes with tremendous responsibility.”</i>
+<p>— Riggby the patriarch</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="9">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>
+                <div>Cantrips Known</div>
+            </th>
+            <th>
+                <div>1st</div>
+            </th>
+            <th>
+                <div>2nd</div>
+            </th>
+            <th>
+                <div>3rd</div>
+            </th>
+            <th>
+                <div>4th</div>
+            </th>
+            <th>
+                <div>5th</div>
+            </th>
+            <th>
+                <div>6th</div>
+            </th>
+            <th>
+                <div>7th</div>
+            </th>
+            <th>
+                <div>8th</div>
+            </th>
+            <th>
+                <div>9th</div>
+            </th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>
+                <span>Spellcasting,</span>
+                <span>Divine Domain</span>
+            </td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <span>Channel Divinity (1/rest),</span>
+                <span>Divine Domain feature</span>
+            </td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>—</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>
+                <span>Destroy Undead (CR 1/2)</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <span>Channel Divinity (2/rest),</span>
+                <span>Divine Domain feature</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <span>Ability Score Improvement,</span>
+                <span>Destroy Undead (CR 1),</span>
+                <span>Divine Domain feature</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <span>Divine Intervention</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <span>Destroy Undead (CR 2)</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <span>Destroy Undead (CR 3)</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>
+                <span>Destroy Undead (CR 4),</span>
+                <span>Divine Domain feature</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>
+                <span>Channel Divinity (3/rest)</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <span>Divine Intervention Improvement</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</div><!-- -------------------------end table div-->
 
 
 

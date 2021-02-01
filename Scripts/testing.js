@@ -70,9 +70,14 @@ function update() {
       weaponProficiencies.push(characterWeaponProficiencies[i][0]);
     }
   }
-  //update tools prof loop
 
+  //update tools prof loop
   tools.forEach((tool) => {
+/*     if (tool[0].exception==true){ // Possible Bard instruments workaround
+      if(characterClass==BARD){
+        document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
+      }
+    } */
     if (tool[0].proficient == true) {
       toolProficiencies.push(tool[0].name);
     }

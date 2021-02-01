@@ -9,7 +9,7 @@ row für dreiteilung der Seite links outline.
 
 wenn man bei subclasses in den Inneren bereich clickt wird die subclass gelöscht weil 
 
-
+Bard Musikintrumente in der Updatefunction besser machen???
 
 
 -sanitize inputs!!!!!!

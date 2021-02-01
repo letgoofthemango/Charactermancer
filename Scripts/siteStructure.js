@@ -41,7 +41,6 @@ document
           break;
         case BARD:
           characterArmorProficiencies[1][1] = characterWeaponProficiencies[0][1] = characterWeaponProficiencies[35][1] = characterWeaponProficiencies[23][1] = characterWeaponProficiencies[27][1] = characterWeaponProficiencies[29][1] = true;
-          document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
           for (let i = 0; i < characterLevel; i++) {
             document.getElementById("showClassDetails").innerHTML +=
               bardFeaturesByLevel[i];
@@ -127,6 +126,10 @@ document
 
       document.getElementById("summaryClass").textContent = characterClass;
       update();
+      
+      if (characterClass== BARD){
+        document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
+      }
     } else {
       return;
     }
