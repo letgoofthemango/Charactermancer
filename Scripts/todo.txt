@@ -12,6 +12,13 @@ wenn man bei subclasses in den Inneren bereich clickt wird die subclass gelösch
 Bard Musikintrumente in der Updatefunction besser machen???
 
 
+table rows ignore striped coloring
+Table first row should not be a row.
+
+
+Ranger dropdown menus not workings!!!
+
+
 -sanitize inputs!!!!!!
 -Json für items
 JS maps nachschaun

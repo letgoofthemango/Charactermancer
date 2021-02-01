@@ -4252,7 +4252,7 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
         <p>At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.</p>
     </div>
 </div>`;
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#arcana")) {
         document.getElementById("clericDomain").innerHTML = arcanaDomain;
         characterSubClass = "(Arcana)";
@@ -4306,40 +4306,434 @@ document.getElementById("displayContent").addEventListener('click', function(eve
 /*###################################################################
 ######################### Druid ##################################
 #####################################################################*/
-const druidFeaturesByLevel = [`<h1 class="text-center">Druid<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const druidFeaturesByLevel = [`<h1 class="text-center">Druid<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>Holding high a gnarled staff wreathed with holly, an elf summons the fury of the storm and calls down explosive bolts of lightning to smite the torch-carrying orcs who threaten her forest.</p>
-    <p>Crouching out of sight on a high tree branch in the form of a leopard, a human peers out of the jungle at the strange construction of a temple of Evil Elemental Air, keeping a close eye on the cultists' activities.</p>
-    <p>Swinging a blade formed of pure fire, a half-elf charges into a mass of skeletal soldiers, sundering the unnatural magic that gives the foul creatures the mocking semblance of life.</p>
-    <p>Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature. Instead, they see themselves as extensions
-        of nature's indomitable will.</p>
 
-    <h5>Power of Nature</h5>
-    <p>Druids revere nature above all, gaining their spells and other magical powers either from the force of nature itself or from a nature deity. Many druids pursue a mystic spirituality of transcendent union with nature rather than devotion to
-        a divine entity, while others serve gods of wild nature, animals, or elemental forces. The ancient druidic traditions are sometimes called the Old Faith, in contrast to the worship of gods in temples and shrines.</p>
-
-    <p>Druid spells are oriented toward nature and animals—the power of tooth and claw, of sun and moon, of fire and storm. Druids also gain the ability to take on animal forms, and some druids make a particular study of this practice, even to the
-        point where they prefer animal form to their natural form.</p>
-
-    <h5>Preserve the Balance</h5>
-    <p>For druids, nature exists in a precarious balance. The four elements that make up a world—air, earth, fire, and water—must remain in equilibrium. If one element were to gain power over the others, the world could be destroyed, drawn into one
-        of the elemental planes and broken apart into its component elements. Thus, druids oppose cults of Elemental Evil and others who promote one element to the exclusion of others.</p>
-    <p>Druids are also concerned with the delicate ecological balance that sustains plant and animal life, and the need for civilized folk to live in harmony with nature, not in opposition to it. Druids accept that which is cruel in nature, and they
-        hate that which is unnatural, including aberrations (such as beholders and mind flayers) and undead (such as zombies and vampires). Druids sometimes lead raids against such creatures, especially when the monsters encroach on the druids'
-        territory.
-    </p>
-    <p>Druids are often found guarding sacred sites or watching over regions of unspoiled nature. But when a significant danger arises, threatening nature's balance or the lands they protect, druids take on a more active role in combating the threat,
-        as adventurers.</p>
-
-    <p>Druids are the caretakers of the natural world, and it is said that in time a druid becomes the voice of nature, speaking the truth that is too subtle for the general populace to hear. Many who become druids find that they naturally gravitate
-        toward nature; its forces, cycles, and movements fill their minds and spirits with wonder and insight. Many sages and wise folk have studied nature, writing volumes about its mystery and power, but druids are a special kind of being: at
-        some point, they begin to embody these natural forces, producing magical phenomena that link them to the spirit of nature and the flow of life. Because of their strange and mysterious power, druids are often revered, shunned, or considered
-        dangerous by the people around them.</p>
-
-    <i>“Even in death, each creature plays its part in maintaining the Great Balance. But now an imbalance grows, a force that seeks to hold sway over nature. This is the destructive behavior of the mortal races. The farther away from nature their actions take them, the more corrupting their influence becomes. As druids, we seek mainly to protect and educate, to preserve the Great Balance, but there are times when we must rise up against danger and eradicate it.”</i>
-    <p class="text-right">— Safhran, Arch druid</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Holding high a gnarled staff wreathed with holly, an elf summons the fury of the storm and calls
+    down explosive bolts of lightning to smite the torch-carrying orcs who threaten her forest.</p>
+<p>Crouching out of sight on a high tree branch in the form of a leopard, a human peers out of the
+    jungle at the strange construction of a temple of Evil Elemental Air, keeping a close eye on the
+    cultists' activities.</p>
+<p>Swinging a blade formed of pure fire, a half-elf charges into a mass of skeletal soldiers,
+    sundering the unnatural magic that gives the foul creatures the mocking semblance of life.</p>
+<p>Whether calling on the elemental forces of nature or emulating the creatures of the animal world,
+    druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery over
+    nature. Instead, they see themselves as extensions
+    of nature's indomitable will.</p>
+
+<h5>Power of Nature</h5>
+<p>Druids revere nature above all, gaining their spells and other magical powers either from the
+    force of nature itself or from a nature deity. Many druids pursue a mystic spirituality of
+    transcendent union with nature rather than devotion to
+    a divine entity, while others serve gods of wild nature, animals, or elemental forces. The
+    ancient druidic traditions are sometimes called the Old Faith, in contrast to the worship of
+    gods in temples and shrines.</p>
+
+<p>Druid spells are oriented toward nature and animals—the power of tooth and claw, of sun and moon,
+    of fire and storm. Druids also gain the ability to take on animal forms, and some druids make a
+    particular study of this practice, even to the
+    point where they prefer animal form to their natural form.</p>
+
+<h5>Preserve the Balance</h5>
+<p>For druids, nature exists in a precarious balance. The four elements that make up a world—air,
+    earth, fire, and water—must remain in equilibrium. If one element were to gain power over the
+    others, the world could be destroyed, drawn into one
+    of the elemental planes and broken apart into its component elements. Thus, druids oppose cults
+    of Elemental Evil and others who promote one element to the exclusion of others.</p>
+<p>Druids are also concerned with the delicate ecological balance that sustains plant and animal
+    life, and the need for civilized folk to live in harmony with nature, not in opposition to it.
+    Druids accept that which is cruel in nature, and they
+    hate that which is unnatural, including aberrations (such as beholders and mind flayers) and
+    undead (such as zombies and vampires). Druids sometimes lead raids against such creatures,
+    especially when the monsters encroach on the druids'
+    territory.
+</p>
+<p>Druids are often found guarding sacred sites or watching over regions of unspoiled nature. But
+    when a significant danger arises, threatening nature's balance or the lands they protect, druids
+    take on a more active role in combating the threat,
+    as adventurers.</p>
+
+<p>Druids are the caretakers of the natural world, and it is said that in time a druid becomes the
+    voice of nature, speaking the truth that is too subtle for the general populace to hear. Many
+    who become druids find that they naturally gravitate
+    toward nature; its forces, cycles, and movements fill their minds and spirits with wonder and
+    insight. Many sages and wise folk have studied nature, writing volumes about its mystery and
+    power, but druids are a special kind of being: at
+    some point, they begin to embody these natural forces, producing magical phenomena that link
+    them to the spirit of nature and the flow of life. Because of their strange and mysterious
+    power, druids are often revered, shunned, or considered
+    dangerous by the people around them.</p>
+
+<i>“Even in death, each creature plays its part in maintaining the Great Balance. But now an
+    imbalance grows, a force that seeks to hold sway over nature. This is the destructive behavior
+    of the mortal races. The farther away from nature their actions take them, the more corrupting
+    their influence becomes. As druids, we seek mainly to protect and educate, to preserve the Great
+    Balance, but there are times when we must rise up against danger and eradicate it.”</i>
+<p class="text-right">— Safhran, Arch druid</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="9">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Cantrips Known</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th>5th</th>
+            <th>6th</th>
+            <th>7th</th>
+            <th>8th</th>
+            <th>9th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td><span>Druidic, </span>
+                <span>Spellcasting</span>
+            </td>
+            <td>2</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td><span>Wild Shape, </span>
+                <span>Druid Circle</span>
+            </td>
+            <td>2</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>—</td>
+            <td>2</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td><span>Wild Shape Improvement, </span>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td><span>Druid Circle feature</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td><span>Wild Shape Improvement, </span>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td><span>Druid Circle feature</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td><span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td><span>Druid Circle feature</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td><span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td><span>Timeless Body, </span>
+                <span>Beast Spells</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td><span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td><span>Archdruid</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+
+    </tbody>
+</table>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -4420,40 +4814,327 @@ const druidFeaturesList = [
 /*###################################################################
 ######################### Fighter ##################################
 #####################################################################*/
-const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts
-        orders, helping the two combatants coordinate their assault to the best advantage.</p>
-    <p>A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for
-        a blind spot in its defenses.</p>
-    <p>A gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling foes and moving them around for the crowd's delight—and his own tactical advantage. His opponent's sword flares with blue light an instant before
-        she sends lightning flashing forth to smite him.</p>
-    <p>All of these heroes are fighters, perhaps the most diverse class of characters in the worlds of Dungeons & Dragons. Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings—as fighters,
-        they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face.</p>
 
-    <h5>Well-Rounded Specialists</h5>
-    <p>Fighters learn the basics of all combat styles. Every fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some degree of skill. Likewise, a fighter is adept with shields
-        and every form of armor. Beyond that basic degree of familiarity, each fighter specializes in a certain style of combat. Some concentrate on archery, some on fighting with two weapons at once, and some on augmenting their martial skills
-        with magic. This combination of broad general ability and extensive specialization makes fighters superior combatants on battlefields and in dungeons alike.</p>
-
-    <h5>Trained for Danger</h5>
-    <p>Not every member of the city watch, the village militia, or the queen's army is a fighter. Most of these troops are relatively untrained soldiers with only the most basic combat knowledge. Veteran soldiers, military officers, trained bodyguards,
-        dedicated knights, and similar figures are fighters.</p>
-
-    <p>Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster slaying, and other dangerous work common among adventurers is second nature for a fighter, not all that different from the life he or she left behind.
-        There are greater risks, perhaps, but also much greater rewards—few fighters in the city watch have the opportunity to discover a magic flame tongue sword, for example.</p>
-
-    <p>Of all the adventurers in the worlds of D&D, the fighter is perhaps the greatest paradox. On the one hand, a singular feature of the class is that no two fighters ply their craft in quite the same way; their weapons, armor, and tactics differ
-        across a vast spectrum. On the other hand, regardless of the tools and methods one uses, at the heart of every fighter's motivation lies the same basic truth: it is better to wound than to be wounded.</p>
-    <p>Although some adventuring fighters risk their lives fighting for glory or treasure, others are primarily concerned with the welfare of others. They put more value on the well-being of the society, the village, or the group than on their own
-        safety. Even if there's gold in the offing, the true reward for most fighters comes from sending enemies to their doom.</p>
-
-    <i>“Let me know when you're all done talking.”</i>
-    <p>— Tordek</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>A human in clanging plate armor holds her shield before her as she runs toward the massed
+    goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows
+    loosed from his exquisite bow. The half-orc nearby shouts
+    orders, helping the two combatants coordinate their assault to the best advantage.</p>
+<p>A dwarf in chain mail interposes his shield between the ogre's club and his companion, knocking
+    the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a
+    blinding whirl as she circles the ogre, looking for
+    a blind spot in its defenses.</p>
+<p>A gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling
+    foes and moving them around for the crowd's delight—and his own tactical advantage. His
+    opponent's sword flares with blue light an instant before
+    she sends lightning flashing forth to smite him.</p>
+<p>All of these heroes are fighters, perhaps the most diverse class of characters in the worlds of
+    Dungeons & Dragons. Questing knights, conquering overlords, royal champions, elite foot
+    soldiers, hardened mercenaries, and bandit kings—as fighters,
+    they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the
+    skills of combat. And they are well acquainted with death, both meting it out and staring it
+    defiantly in the face.</p>
 
+<h5>Well-Rounded Specialists</h5>
+<p>Fighters learn the basics of all combat styles. Every fighter can swing an axe, fence with a
+    rapier, wield a longsword or a greatsword, use a bow, and even trap foes in a net with some
+    degree of skill. Likewise, a fighter is adept with shields
+    and every form of armor. Beyond that basic degree of familiarity, each fighter specializes in a
+    certain style of combat. Some concentrate on archery, some on fighting with two weapons at once,
+    and some on augmenting their martial skills
+    with magic. This combination of broad general ability and extensive specialization makes
+    fighters superior combatants on battlefields and in dungeons alike.</p>
 
+<h5>Trained for Danger</h5>
+<p>Not every member of the city watch, the village militia, or the queen's army is a fighter. Most
+    of these troops are relatively untrained soldiers with only the most basic combat knowledge.
+    Veteran soldiers, military officers, trained bodyguards,
+    dedicated knights, and similar figures are fighters.</p>
+
+<p>Some fighters feel drawn to use their training as adventurers. The dungeon delving, monster
+    slaying, and other dangerous work common among adventurers is second nature for a fighter, not
+    all that different from the life he or she left behind.
+    There are greater risks, perhaps, but also much greater rewards—few fighters in the city watch
+    have the opportunity to discover a magic flame tongue sword, for example.</p>
+
+<p>Of all the adventurers in the worlds of D&D, the fighter is perhaps the greatest paradox. On the
+    one hand, a singular feature of the class is that no two fighters ply their craft in quite the
+    same way; their weapons, armor, and tactics differ
+    across a vast spectrum. On the other hand, regardless of the tools and methods one uses, at the
+    heart of every fighter's motivation lies the same basic truth: it is better to wound than to be
+    wounded.</p>
+<p>Although some adventuring fighters risk their lives fighting for glory or treasure, others are
+    primarily concerned with the welfare of others. They put more value on the well-being of the
+    society, the village, or the group than on their own
+    safety. Even if there's gold in the offing, the true reward for most fighters comes from sending
+    enemies to their doom.</p>
+
+<i>“Let me know when you're all done talking.”</i>
+<p>— Tordek</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="2"></th>
+            <th colspan="4">Spell Slots per Spell Level (for Eldritch Knight)</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th class="col-1">Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Cantrips Known</th>
+            <th>Spells Known</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td><span>Fighting Style, </span><span>Second Wind</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td><span>Action Surge</span></td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td><span>Martial Archetype</span></td>
+            <td>2</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td><span>Extra Attack</span></td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td><span>Martial Archetype feature</span></td>
+            <td>2</td>
+            <td>5</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>2</td>
+            <td>6</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td><span>Indomitable</span></td>
+            <td>2</td>
+            <td>6</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td><span>Martial Archetype feature</span></td>
+            <td>3</td>
+            <td>7</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td><span>Extra Attack (2)</span></td>
+            <td>3</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>3</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td><span>Indomitable (two uses)</span></td>
+            <td>3</td>
+            <td>9</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>3</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td><span>Martial Archetype feature</span></td>
+            <td>3</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>3</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td><span>Action Surge (two uses), </span><span>Indomitable (three uses)</span></td>
+            <td>3</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td><span>Martial Archetype feature</span></td>
+            <td>3</td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>3</td>
+            <td>12</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td><span>Extra Attack (3)</span></td>
+            <td>3</td>
+            <td>13</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
 <div class="collapse show" id="level1">
@@ -4483,14 +5164,7 @@ const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-
         <div id="fightingStyle" class="choiceBG"></div>
         <hr>
         <h6><b>Martial Versatility</b></h6>
-        <p>Whenever you gain a level in this class, you can replace a fighting style you know with another style available to your class. This change represents a shift of focus in your martial training and practice, causing you to lose the benefits
-            of one style and gain the benefits of another style.</p>
-    </div>
-        
-
-        
-
-        
+        <p>Whenever you gain a level in this class, you can replace a fighting style you know with another style available to your class. This change represents a shift of focus in your martial training and practice, causing you to lose the benefits of one style and gain the benefits of another style.</p>
     </div>
 
     <h5>Second Wind<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
@@ -4500,7 +5174,12 @@ const fighterFeaturesByLevel = [`<h1 class="text-center">Fighter<span class="ml-
         <p>You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.</p>
         <p>Once you use this feature, you must finish a short or long rest before you can use it again.</p>
     </div>
-</div>`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 4`, `<p>fighter 5`, `<p>fighter 6`, `<p>fighter 7`, `<p>fighter 8`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`];
+</div>
+
+
+
+
+`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 4`, `<p>fighter 5`, `<p>fighter 6`, `<p>fighter 7`, `<p>fighter 8`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`, `<p>fighter 3`, `<p>fighter 2`];
 const archery = `    <h6 class="text-center"><b>Archery</b></h6>
 <p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>`;
 const blindFighting = `<h6 class="text-center"><b>Blind Fighting</b></h6>
@@ -4538,7 +5217,7 @@ const twoWeaponFighting = `<h6 class="text-center"><b>Two-Weapon Fighting</b></h
 const unarmedFighting = `<h6 class="text-center"><b>Unarmed Fighting</b></h6>
 <p>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.</p>
 <p>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>`;
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#archery")) {
         document.getElementById("fightingStyle").innerHTML = archery;
     } else if (event.target && event.target.matches("#blind")) {
@@ -4599,40 +5278,270 @@ const fighterFeaturesList = [
 /*###################################################################
 ######################### Monk ##################################
 #####################################################################*/
-const monkFeaturesByLevel = [`<h1 class="text-center">Monk<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const monkFeaturesByLevel = [`<h1 class="text-center">Monk<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>Her fists a blur as they deflect an incoming hail of arrows, a half-elf springs over a barricade and throws herself into the massed ranks of hobgoblins on the other side. She whirls among them, knocking their blows aside and sending them reeling,
-        until at last she stands alone.</p>
-    <p>Taking a deep breath, a human covered in tattoos settles into a battle stance. As the first charging orcs reach him, he exhales and a blast of fire roars from his mouth, engulfing his foes.</p>
-    <p>Moving with the silence of the night, a black-clad halfling steps into a shadow beneath an arch and emerges from another inky shadow on a balcony a stone's throw away. She slides her blade free of its cloth-wrapped scabbard and peers through
-        the open window at the tyrant prince, so vulnerable in the grip of sleep.</p>
-    <p>Whatever their discipline, monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler focus of defensive ability and speed, this energy
-        infuses all that a monk does.</p>
 
-    <h5>The Magic of Ki</h5>
-    <p>Monks make careful study of a magical energy that most monastic traditions call ki. This energy is an element of the magic that suffuses the multiverse—specifically, the element that flows through living bodies. Monks harness this power within
-        themselves to create magical effects and exceed their bodies' physical capabilities, and some of their special attacks can hinder the flow of ki in their opponents. Using this energy, monks channel uncanny speed and strength into their
-        unarmed strikes. As they gain experience, their martial training and their mastery of ki gives them more power over their bodies and the bodies of their foes.</p>
-
-    <h5>Training and Asceticism</h5>
-    <p>Small walled cloisters dot the landscapes of the worlds of D&D, tiny refuges from the flow of ordinary life, where time seems to stand still. The monks who live there seek personal perfection through contemplation and rigorous training. Many
-        entered the monastery as children, sent to live there when their parents died, when food couldn't be found to support them, or in return for some kindness that the monks had performed for their families.</p>
-    <p>Some monks live entirely apart from the surrounding population, secluded from anything that might impede their spiritual progress. Others are sworn to isolation, emerging only to serve as spies or assassins at the command of their leader,
-        a noble patron, or some other mortal or divine power.</p>
-    <p>The majority of monks don't shun their neighbors, making frequent visits to nearby towns or villages and exchanging their service for food and other goods. As versatile warriors, monks often end up protecting their neighbors from monsters
-        or tyrants.</p>
-    <p>For a monk, becoming an adventurer means leaving a structured, communal lifestyle to become a wanderer. This can be a harsh transition, and monks don't undertake it lightly. Those who leave their cloisters take their work seriously, approaching
-        their adventures as personal tests of their physical and spiritual growth. As a rule, monks care little for material wealth and are driven by a desire to accomplish a greater mission than merely slaying monsters and plundering their treasure.</p>
-
-    <p>Monks walk a path of contradiction. They study their art as a wizard does, and like a wizard, they wear no armor and typically eschew weapons. Yet they are deadly combatants, their abilities on a par with those of a raging barbarian or a superbly
-        trained fighter. Monks embrace this seeming contradiction, for it speaks to the core of all monastic study. By coming to know oneself completely, one learns much of the wider world.</p>
-    <p>A monk's focus on inner mastery leads many such individuals to become detached from society, more concerned with their personal experience than with happenings elsewhere. Adventuring monks are a rare breed of an already rare type of character,
-        taking their quest for perfection beyond the walls of the monastery into the world at large.</p>
-
-    <i>“Do not mistake my silence for acceptance of your villainy. While you blustered and threatened, I've planned four different ways to snap your neck with my bare hands.”</i>
-    <p class="text-right">— Ember, grand master of flowers</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Her fists a blur as they deflect an incoming hail of arrows, a half-elf springs over a barricade
+    and throws herself into the massed ranks of hobgoblins on the other side. She whirls among them,
+    knocking their blows aside and sending them reeling,
+    until at last she stands alone.</p>
+<p>Taking a deep breath, a human covered in tattoos settles into a battle stance. As the first
+    charging orcs reach him, he exhales and a blast of fire roars from his mouth, engulfing his
+    foes.</p>
+<p>Moving with the silence of the night, a black-clad halfling steps into a shadow beneath an arch
+    and emerges from another inky shadow on a balcony a stone's throw away. She slides her blade
+    free of its cloth-wrapped scabbard and peers through
+    the open window at the tyrant prince, so vulnerable in the grip of sleep.</p>
+<p>Whatever their discipline, monks are united in their ability to magically harness the energy that
+    flows in their bodies. Whether channeled as a striking display of combat prowess or a subtler
+    focus of defensive ability and speed, this energy
+    infuses all that a monk does.</p>
+
+<h5>The Magic of Ki</h5>
+<p>Monks make careful study of a magical energy that most monastic traditions call ki. This energy
+    is an element of the magic that suffuses the multiverse—specifically, the element that flows
+    through living bodies. Monks harness this power within
+    themselves to create magical effects and exceed their bodies' physical capabilities, and some of
+    their special attacks can hinder the flow of ki in their opponents. Using this energy, monks
+    channel uncanny speed and strength into their
+    unarmed strikes. As they gain experience, their martial training and their mastery of ki gives
+    them more power over their bodies and the bodies of their foes.</p>
+
+<h5>Training and Asceticism</h5>
+<p>Small walled cloisters dot the landscapes of the worlds of D&D, tiny refuges from the flow of
+    ordinary life, where time seems to stand still. The monks who live there seek personal
+    perfection through contemplation and rigorous training. Many
+    entered the monastery as children, sent to live there when their parents died, when food
+    couldn't be found to support them, or in return for some kindness that the monks had performed
+    for their families.</p>
+<p>Some monks live entirely apart from the surrounding population, secluded from anything that might
+    impede their spiritual progress. Others are sworn to isolation, emerging only to serve as spies
+    or assassins at the command of their leader,
+    a noble patron, or some other mortal or divine power.</p>
+<p>The majority of monks don't shun their neighbors, making frequent visits to nearby towns or
+    villages and exchanging their service for food and other goods. As versatile warriors, monks
+    often end up protecting their neighbors from monsters
+    or tyrants.</p>
+<p>For a monk, becoming an adventurer means leaving a structured, communal lifestyle to become a
+    wanderer. This can be a harsh transition, and monks don't undertake it lightly. Those who leave
+    their cloisters take their work seriously, approaching
+    their adventures as personal tests of their physical and spiritual growth. As a rule, monks care
+    little for material wealth and are driven by a desire to accomplish a greater mission than
+    merely slaying monsters and plundering their treasure.</p>
+
+<p>Monks walk a path of contradiction. They study their art as a wizard does, and like a wizard,
+    they wear no armor and typically eschew weapons. Yet they are deadly combatants, their abilities
+    on a par with those of a raging barbarian or a superbly
+    trained fighter. Monks embrace this seeming contradiction, for it speaks to the core of all
+    monastic study. By coming to know oneself completely, one learns much of the wider world.</p>
+<p>A monk's focus on inner mastery leads many such individuals to become detached from society, more
+    concerned with their personal experience than with happenings elsewhere. Adventuring monks are a
+    rare breed of an already rare type of character,
+    taking their quest for perfection beyond the walls of the monastery into the world at large.</p>
+
+<i>“Do not mistake my silence for acceptance of your villainy. While you blustered and threatened,
+    I've planned four different ways to snap your neck with my bare hands.”</i>
+<p class="text-right">— Ember, grand master of flowers</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>
+                <div>Martial Arts</div>
+            </th>
+            <th>
+                <div>Ki Points</div>
+            </th>
+            <th>
+                <div>Unarmored Movement</div>
+            </th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td><span>Unarmored Defense,<span>Martial Arts</span></td>
+            <td>1d4</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td><span>Ki, </span><span>Unarmored Movement</span></td>
+            <td>1d4</td>
+            <td>2</td>
+            <td>+10 ft.</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td><span>Deflect Missiles, </span><span>Monastic Tradition</span></td>
+            <td>1d4</td>
+            <td>3</td>
+            <td>+10 ft.</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td><span>Ability Score Improvement, </span><span>Slow Fall</span></td>
+            <td>1d4</td>
+            <td>4</td>
+            <td>+10 ft.</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td><span>Extra Attack, </span><span>Stunning Strike</span></td>
+            <td>1d6</td>
+            <td>5</td>
+            <td>+10 ft.</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td><span>Ki-Empowered Strikes, </span><span>Monastic Tradition feature</span></td>
+            <td>1d6</td>
+            <td>6</td>
+            <td>+15 ft.</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td><span>Evasion,</span><span>Stillness of Mind</span></td>
+            <td>1d6</td>
+            <td>7</td>
+            <td>+15 ft.</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>1d6</td>
+            <td>8</td>
+            <td>+15 ft.</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td><span>Unarmored Movement improvement</span></td>
+            <td>1d6</td>
+            <td>9</td>
+            <td>+15 ft.</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td><span>Purity of Body</span></td>
+            <td>1d6</td>
+            <td>10</td>
+            <td>+20 ft.</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td><span>Monastic Tradition feature</span></td>
+            <td>1d8</td>
+            <td>11</td>
+            <td>+20 ft.</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>1d8</td>
+            <td>12</td>
+            <td>+20 ft.</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td><span>Tongue of the Sun and Moon</span></td>
+            <td>1d8</td>
+            <td>13</td>
+            <td>+20 ft.</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td><span>Diamond Soul</span></td>
+            <td>1d8</td>
+            <td>14</td>
+            <td>+25 ft.</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td><span>Timeless Body</span></td>
+            <td>1d8</td>
+            <td>15</td>
+            <td>+25 ft.</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>1d8</td>
+            <td>16</td>
+            <td>+25 ft.</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td><span>Monastic Tradition feature</span></td>
+            <td>1d10</td>
+            <td>17</td>
+            <td>+25 ft.</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td><span>Empty Body</span></td>
+            <td>1d10</td>
+            <td>18</td>
+            <td>+30 ft.</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td><span>Ability Score Improvement</span></td>
+            <td>1d10</td>
+            <td>19</td>
+            <td>+30 ft.</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td><span>Perfect Self</span></td>
+            <td>1d10</td>
+            <td>20</td>
+            <td>+30 ft.</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -4706,11 +5615,23 @@ const monkFeaturesList = [
 /*###################################################################
 ######################### mystic ##################################
 #####################################################################*/
-const mysticFeaturesByLevel = [`<h1 class="text-center">Mystic<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const mysticFeaturesByLevel = [`<h1 class="text-center">Mystic<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
+
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
 <p>A human clad in simple robes walks along a forest path. A gang of goblins emerges from the brush, arrows trained on him, their smiles wide at their good fortune of finding such easy prey for the legion's slave pens. Their smiles turn to shrieks of terror as the traveler grows to giant size and leaps at them, his staff now a deadly cudgel.</p>
 <p>The militia forms in ranks to prepare for the orcs' charge. The growling brutes howl their battle cries and surge forward. To their surprise, the human rabble holds its ground and fights with surprising ferocity. Suddenly, mindless fear clings to the orcs' minds and they, despite facing a far inferior foe, turn and run, never noticing the calm half-elf standing amid the militia and directing its efforts.</p>
 <p>Baron von Ludwig was always proud of his grand library. Little did he know that each evening, a gnome laden with blank scrolls slipped past his guards each night and dutifully copied his most heavily guarded archives. When the duke's men arrived to arrest him for dealing with demons, he never guessed that the gnome scribe traveling with them had spent more time in his keep than he had over the past year.</p>
@@ -4725,11 +5646,255 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
 <p>In order to maintain the strict discipline and intense self-knowledge needed to tap into their power, mystics develop a variety of practices to keep their focus sharp.</p>
 <p>These practices are reflected in taboos and quirks, strange little behaviors that govern a mystic's actions. These quirks are oaths or behavioral tics that help keep mystics in the proper frame of mind while maintaining perfect control over their minds and bodies.</p>
 
-<P>While these taboos are harmless, they help cast mystics as outsiders. Few feel accepted by society, and fewer still care to become integrated with it. To mystics, the life of the mind is where they feel most at home.</P>
-</div>
+<p>While these taboos are harmless, they help cast mystics as outsiders. Few feel accepted by society, and fewer still care to become integrated with it. To mystics, the life of the mind is where they feel most at home.</p>
+</div><!-- -------------------------------------------------------------end description div-->
 
-<h2 class="text-center">Features</h2>
-        <hr class="class-2">
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr>
+            <th colspan="4"></th>
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Talents Known
+            </th>
+            <th>Disciplines Known
+            </th>
+            <th>
+                <span>Psi Points</span>
+            </th>
+            <th>
+                <span>Psi Limit</span>
+            </th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>
+                <span>Psionics,</span>
+                <span>Psionic Disciplines and Talents,
+                </span>
+                <span>Using a Discipline,</span>
+                <span>Mystic Order</span>
+            </td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <span>Mystical Recovery,</span>
+                <span>Telepathy</span>
+            </td>
+            <td>1</td>
+            <td>1</td>
+            <td>6</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>
+                <span>Mystic Order feature</span>
+            </td>
+            <td>2</td>
+            <td>2</td>
+            <td>14</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <span>Ability Score Improvement,</span>
+                <span>Strength of Mind</span>
+            </td>
+            <td>2</td>
+            <td>2</td>
+            <td>17</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>2</td>
+            <td>3</td>
+            <td>27</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <span>Mystic Order feature</span>
+            </td>
+            <td>2</td>
+            <td>3</td>
+            <td>32</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>—</td>
+            <td>2</td>
+            <td>4</td>
+            <td>38</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <span>Ability Score Improvement,</span>
+                <span>Potent Psionics (1d8)</span>
+            </td>
+            <td>2</td>
+            <td>4</td>
+            <td>44</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>2</td>
+            <td>5</td>
+            <td>57</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <span>Consumptive Power</span>
+            </td>
+            <td>3</td>
+            <td>5</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <span>Psionic Mastery (1/Day)</span>
+            </td>
+            <td>3</td>
+            <td>5</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>6</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>
+                <span>Psionic Mastery (2/Day)</span>
+            </td>
+            <td>3</td>
+            <td>6</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <span>Mystic Order feature,</span>
+                <span>Potent Psionics (2d8)</span>
+            </td>
+            <td>3</td>
+            <td>6</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>
+                <span>Psionic Mastery (3/Day)</span>
+            </td>
+            <td>3</td>
+            <td>7</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>7</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>
+                <span>Psionic Mastery (4/Day)</span>
+            </td>
+            <td>4</td>
+            <td>7</td>
+            <td>64</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>4</td>
+            <td>8</td>
+            <td>71</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>8</td>
+            <td>71</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <span>Psionic Body</span>
+            </td>
+            <td>4</td>
+            <td>8</td>
+            <td>71</td>
+            <td>7</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 
         <h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
@@ -4836,38 +6001,315 @@ data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">
 /*###################################################################
 ######################### Paladin ##################################
 #####################################################################*/
-const paladinFeaturesByLevel = [`<h1 class="text-center">Paladin<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span></h1>
+const paladinFeaturesByLevel = [`<h1 class="text-center">Paladin<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-    <p>Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit
-        closed, and his eyes open wide with amazement.</p>
-    <p>A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before
-        they even realize he is there.</p>
-    <p>Silver hair shining in a shaft of light that seems to illuminate only him, an elf laughs with exultation. His spear flashes like his eyes as he jabs again and again at a twisted giant, until at last his light overcomes its hideous darkness.</p>
-    <p>Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in
-        a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.</p>
 
-    <h5>The Cause of Righteousness</h5>
-    <p>A paladin swears to uphold justice and righteousness, to stand with the good things of the world against the encroaching darkness, and to hunt the forces of evil wherever they lurk. Different paladins focus on various aspects of the cause
-        of righteousness, but all are bound by the oaths that grant them power to do their sacred work. Although many paladins are devoted to gods of good, a paladin's power comes as much from a commitment to justice itself as it does from a god.</p>
-    <p>Paladins train for years to learn the skills of combat, mastering a variety of weapons and armor. Even so, their martial skills are secondary to the magical power they wield: power to heal the sick and injured, to smite the wicked and the
-        undead, and to protect the innocent and those who join them in the fight for justice.</p>
-
-    <h5>Beyond the Mundane Life</h5>
-    <p>Almost by definition, the life of a paladin is an adventuring life. Unless a lasting injury has taken him or her away from adventuring for a time, every paladin lives on the front lines of the cosmic struggle against evil. Fighters are rare
-        enough among the ranks of the militias and armies of the world, but even fewer people can claim the true calling of a paladin. When they do receive the call, these warriors turn from their former occupations and take up arms to fight evil.
-        Sometimes their oaths lead them into the service of the crown as leaders of elite groups of knights, but even then their loyalty is first to the cause of righteousness, not to crown and country.</p>
-    <p>Adventuring paladins take their work seriously. A delve into an ancient ruin or dusty crypt can be a quest driven by a higher purpose than the acquisition of treasure. Evil lurks in dungeons and primeval forests, and even the smallest victory
-        against it can tilt the cosmic balance away from oblivion.</p>
-
-    <P>A paladin is a living embodiment of an oath—a promise or a vow made manifest in the person of a holy warrior who has the skill and the determination to see the cause through to the end. Some paladins devote themselves expressly to protecting
-        the innocent and spreading justice in the world, while others resolve to attain that goal by conquering those who stand defiant and bringing them under the rule of law.</P>
-    <p>Although no paladin in the world could be described as typical, a number of them are narrow-minded do-gooders who refuse to tolerate even the smallest deviation from their own outlook. Paladins who take up the adventuring life, however, rarely
-        remain so rigid in their attitudes—if only to keep from alienating their companions.</p>
-
-    <i>“The true worth of a paladin is measured not in foes defeated or dungeons plundered. It is measured in lives saved and hearts turned to the causes of mercy and justice.”</i>
-    <p class="text-right">— Isteval</p>
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
 </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Clad in plate armor that gleams in the sunlight despite the dust and grime of long travel, a human lays down her sword and shield and places her hands on a mortally wounded man. Divine radiance shines from her hands, the man's wounds knit
+    closed, and his eyes open wide with amazement.</p>
+<p>A dwarf crouches behind an outcrop, his black cloak making him nearly invisible in the night, and watches an orc war band celebrating its recent victory. Silently, he stalks into their midst and whispers an oath, and two orcs are dead before
+    they even realize he is there.</p>
+<p>Silver hair shining in a shaft of light that seems to illuminate only him, an elf laughs with exultation. His spear flashes like his eyes as he jabs again and again at a twisted giant, until at last his light overcomes its hideous darkness.</p>
+<p>Whatever their origin and their mission, paladins are united by their oaths to stand against the forces of evil. Whether sworn before a god's altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in
+    a moment of desperation and grief with the dead as the only witness, a paladin's oath is a powerful bond. It is a source of power that turns a devout warrior into a blessed champion.</p>
+
+<h5>The Cause of Righteousness</h5>
+<p>A paladin swears to uphold justice and righteousness, to stand with the good things of the world against the encroaching darkness, and to hunt the forces of evil wherever they lurk. Different paladins focus on various aspects of the cause
+    of righteousness, but all are bound by the oaths that grant them power to do their sacred work. Although many paladins are devoted to gods of good, a paladin's power comes as much from a commitment to justice itself as it does from a god.</p>
+<p>Paladins train for years to learn the skills of combat, mastering a variety of weapons and armor. Even so, their martial skills are secondary to the magical power they wield: power to heal the sick and injured, to smite the wicked and the
+    undead, and to protect the innocent and those who join them in the fight for justice.</p>
+
+<h5>Beyond the Mundane Life</h5>
+<p>Almost by definition, the life of a paladin is an adventuring life. Unless a lasting injury has taken him or her away from adventuring for a time, every paladin lives on the front lines of the cosmic struggle against evil. Fighters are rare
+    enough among the ranks of the militias and armies of the world, but even fewer people can claim the true calling of a paladin. When they do receive the call, these warriors turn from their former occupations and take up arms to fight evil.
+    Sometimes their oaths lead them into the service of the crown as leaders of elite groups of knights, but even then their loyalty is first to the cause of righteousness, not to crown and country.</p>
+<p>Adventuring paladins take their work seriously. A delve into an ancient ruin or dusty crypt can be a quest driven by a higher purpose than the acquisition of treasure. Evil lurks in dungeons and primeval forests, and even the smallest victory
+    against it can tilt the cosmic balance away from oblivion.</p>
+
+<P>A paladin is a living embodiment of an oath—a promise or a vow made manifest in the person of a holy warrior who has the skill and the determination to see the cause through to the end. Some paladins devote themselves expressly to protecting
+    the innocent and spreading justice in the world, while others resolve to attain that goal by conquering those who stand defiant and bringing them under the rule of law.</P>
+<p>Although no paladin in the world could be described as typical, a number of them are narrow-minded do-gooders who refuse to tolerate even the smallest deviation from their own outlook. Paladins who take up the adventuring life, however, rarely
+    remain so rigid in their attitudes—if only to keep from alienating their companions.</p>
+
+<i>“The true worth of a paladin is measured not in foes defeated or dungeons plundered. It is measured in lives saved and hearts turned to the causes of mercy and justice.”</i>
+<p class="text-right">— Isteval</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr></tr>
+        <tr>
+            <th colspan="3"></th> <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="5">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th>5th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>
+                <span>Divine Sense,</span>
+                <span>Lay on Hands</span>
+            </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <span>Divine Smite,</span>
+                <span>Fighting Style,</span>
+                <span>Spellcasting</span>
+            </td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>
+                <span>Divine Health,</span>
+                <span>Sacred Oath</span>
+            </td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>
+                <span>Extra Attack</span>
+            </td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <span>Aura of Protection</span>
+            </td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>
+                <span>Sacred Oath feature</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <span>Aura of Courage</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <span>Improved Divine Smite</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <span>Cleansing Touch</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>
+                <span>Sacred Oath feature</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>
+                <span>Aura improvements</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <span>Sacred Oath feature</span>
+            </td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -4926,60 +6368,390 @@ const paladinFeaturesList = [
 /*###################################################################
 ######################### Ranger ##################################
 #####################################################################*/
-const rangerFeaturesByLevel = [`<h1 class="text-center">Ranger<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
-data-target="#collapseIntro" aria-expanded="true" aria-controls="collapseIntro">[-]</button></span>
-</h1>
+const rangerFeaturesByLevel = [`<h1 class="text-center">Ranger<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
 
 <div class="collapse show" id="collapseIntro">
-<p>Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are
-planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel,
-cutting down one enemy after another.</p>
-<p>Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the bird back
-to his side. Whispering instructions in Elvish, he points to the owlbear he's been tracking and sends
-the hawk to distract the creature while he readies his bow.</p>
-<p>Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the
-terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains,
-rangers keep their unending watch.</p>
+
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he
+    knows are
+    planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of
+    steel,
+    cutting down one enemy after another.</p>
+<p>Holding his hand high, a half-elf whistles to the hawk that circles high above him, calling the
+    bird back
+    to his side. Whispering instructions in Elvish, he points to the owlbear he's been tracking and
+    sends
+    the hawk to distract the creature while he readies his bow.</p>
+<p>Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from
+    the
+    terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty
+    plains,
+    rangers keep their unending watch.</p>
 
 <h5>Deadly Hunters</h5>
 <p>Warriors of the wilderness, rangers specialize in hunting the monsters that threaten the edges of
-civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly dragons.
-They learn to track their quarry as a predator does, moving stealthily through the wilds and hiding
-themselves in brush and rubble. Rangers focus their combat training on techniques that are particularly
-useful against their specific favored foes.</p>
-<p>Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that harness
-nature's power, much as a druid does. Their spells, like their combat abilities, emphasize speed,
-stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim task of
-protecting the borderlands.</p>
+    civilization—humanoid raiders, rampaging beasts and monstrosities, terrible giants, and deadly
+    dragons.
+    They learn to track their quarry as a predator does, moving stealthily through the wilds and
+    hiding
+    themselves in brush and rubble. Rangers focus their combat training on techniques that are
+    particularly
+    useful against their specific favored foes.</p>
+<p>Thanks to their familiarity with the wilds, rangers acquire the ability to cast spells that
+    harness
+    nature's power, much as a druid does. Their spells, like their combat abilities, emphasize
+    speed,
+    stealth, and the hunt. A ranger's talents and abilities are honed with deadly focus on the grim
+    task of
+    protecting the borderlands.</p>
 
 <h5>Independent Adventurers</h5>
-<p>Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling is to
-defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press in from
-the wild. In some places, rangers gather in secretive orders or join forces with druidic circles. Many
-rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of orcs
-attacks, a ranger might be the first—and possibly the last—line of defense.</p>
-<p>This fierce independence makes rangers well suited to adventuring, since they are accustomed to life far
-from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and whine
-about the hardships of the wild, rangers respond with some mixture of amusement, frustration, and
-compassion. But they quickly learn that other adventurers who can carry their own weight in a fight
-against civilization's foes are worth any extra burden. Coddled city folk might not know how to feed
-themselves or find fresh water in the wild, but they make up for it in other ways.</p>
+<p>Though a ranger might make a living as a hunter, a guide, or a tracker, a ranger's true calling
+    is to
+    defend the outskirts of civilization from the ravages of monsters and humanoid hordes that press
+    in from
+    the wild. In some places, rangers gather in secretive orders or join forces with druidic
+    circles. Many
+    rangers, though, are independent almost to a fault, knowing that, when a dragon or a band of
+    orcs
+    attacks, a ranger might be the first—and possibly the last—line of defense.</p>
+<p>This fierce independence makes rangers well suited to adventuring, since they are accustomed to
+    life far
+    from the comforts of a dry bed and a hot bath. Faced with city-bred adventurers who grouse and
+    whine
+    about the hardships of the wild, rangers respond with some mixture of amusement, frustration,
+    and
+    compassion. But they quickly learn that other adventurers who can carry their own weight in a
+    fight
+    against civilization's foes are worth any extra burden. Coddled city folk might not know how to
+    feed
+    themselves or find fresh water in the wild, but they make up for it in other ways.</p>
 
-<P>Rangers are free-minded wanderers and seekers who patrol the edges of civilized territory, turning back
-the denizens of the wild lands beyond. It is a thankless job, since their efforts are rarely understood
-and almost never rewarded. Yet rangers persist in their duties, never doubting that their work makes the
-world a safer place.</P>
+<P>Rangers are free-minded wanderers and seekers who patrol the edges of civilized territory,
+    turning back
+    the denizens of the wild lands beyond. It is a thankless job, since their efforts are rarely
+    understood
+    and almost never rewarded. Yet rangers persist in their duties, never doubting that their work
+    makes the
+    world a safer place.</P>
 <p>A relationship with civilization informs every ranger's personality and history. Some rangers see
-themselves as enforcers of the law and bringers of justice on civilization's frontier, answering to no
-sovereign power. Others are survivalists who eschew civilization altogether. They vanquish monsters to
-keep themselves safe while they live in and travel through the perilous wild areas of the world. If
-their efforts also benefit the kingdoms and other civilized realms that they avoid, so be it.</p>
+    themselves as enforcers of the law and bringers of justice on civilization's frontier, answering
+    to no
+    sovereign power. Others are survivalists who eschew civilization altogether. They vanquish
+    monsters to
+    keep themselves safe while they live in and travel through the perilous wild areas of the world.
+    If
+    their efforts also benefit the kingdoms and other civilized realms that they avoid, so be it.
+</p>
 
-<i>“I spend a lot of my life away from civilization, keeping to its fringes to protect it. Don't assume that
-because I don't bend the knee to your king that I haven't done more to protect him than all his knights
-put together.”</i>
+<i>“I spend a lot of my life away from civilization, keeping to its fringes to protect it. Don't
+    assume that
+    because I don't bend the knee to your king that I haven't done more to protect him than all his
+    knights
+    put together.”</i>
 <p class="text-right">— Soveliss</p>
+</div><!-- -------------------------------------------------------------end description div-->
+
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+    <tr></tr>
+        <tr>
+            <th colspan="3"></th>
+            <!-- spacer to match the 3 default cols (level, prof, features) -->
+            <th colspan="1"></th>
+            <th colspan="5">Spell Slots per Spell Level</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th>Spells Known</th>
+            <th>1st</th>
+            <th>2nd</th>
+            <th>3rd</th>
+            <th>4th</th>
+            <th>5th</th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td>
+                <span>Favored Enemy,</span>
+                <span>Natural Explorer</span>
+            </td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <span>Spellcasting, </span>
+                <span>Fighting
+                    Style
+                </span>
+            </td>
+            <td>2</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>
+                <span>Primeval Awareness, </span>
+                <span>Ranger Conclave</span>
+            </td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>
+                <span>Ranger Conclave feature</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <span>Greater Favored Enemy</span>
+            </td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>
+                <span>Ranger Conclave feature</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <span>Ability Score Improvement, </span>
+                <span>Fleet of Foot</span>
+            </td>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>—</td>
+            <td>6</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <span>Hide in Plain Sight </span>
+            </td>
+            <td>6</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <span>Ranger Conclave feature</span>
+            </td>
+            <td>7</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>7</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>—</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>—</td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <span>Vanish</span>
+            </td>
+            <td>8</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>
+                <span>Ranger Conclave feature</span>
+            </td>
+            <td>9</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>9</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+            <td>—</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>—</td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>
+                <span>Feral Senses</span>
+            </td>
+            <td>10</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <span>Foe Slayer</span>
+            </td>
+            <td>11</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>2</td>
+        </tr>
+    </tbody>
+</table>
 </div>
+</div><!-- -------------------------end table div-->
 
 
 
@@ -6630,7 +8402,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 </div>
 </div>`;
 //Sorcerer origins
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#aberrant")) {
         characterSubClass = "(Aberrant Mind)";
         document.getElementById("sorcOrigin").innerHTML = aberrant;
@@ -7971,7 +9743,7 @@ following spells are added to the warlock spell list for you.</p>
 <p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
 </div>
 </div>`;
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#archfey")) {
         characterSubClass = "(Archfey)";
         document.getElementById("warlockOrigin").innerHTML = archfey;
