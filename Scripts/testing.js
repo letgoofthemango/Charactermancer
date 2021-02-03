@@ -91,20 +91,9 @@ function update() {
   /* tools.forEach((tool) => { //--------------------alternative idee für wenn das nicht mit den Maps so funktioniert wie gedacht.
     if (tool[0].proficient == true) {
       toolProficiencies.push([tool[0].name, tool[0].gold, tool[0].proficient]);
-    }
-
-  });
-  let checkArray = [];
-  for (let index = 0; index < toolProficiencies.length; index++) {
-    if(toolProficiencies[i].proficient==true){
-      checkArray.push
-    } */
+    }*/
     
-
-
   console.table(toolProficiencies);
-
-
 
   //update language prof loop
   for (let i = 0; i < characterLanguageProficiencies.length; i++) {
@@ -139,12 +128,12 @@ function update() {
   );
 }
 
-// document.getElementById("characterOverview").addEventListener("click", function () {
-//   abilityScores[0].value = 18;
-//   abilityScores[1].value = 18;
-//   abilityScores[2].value = 18;
-//   abilityScores[3].value = 18;
-//   abilityScores[4].value = 18;
-//   abilityScores[5].value = 18;
-//   update();
-// });
+/* document.getElementById("characterOverview").addEventListener("click", function () {
+  abilityScores[0].value = 20;
+  abilityScores[1].value = 20;
+  abilityScores[2].value = 20;
+  abilityScores[3].value = 20;
+  abilityScores[4].value = 20;
+  abilityScores[5].value = 20;
+  update();
+}); */

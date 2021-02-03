@@ -4253,72 +4253,73 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
 </div>`;
 
 function setClericSubclass(subclass) {
+    const domain = document.getElementById("clericDomain");
     switch (subclass) {
         case "arcana":
             characterSubClass = "(Arcana)";
-            document.getElementById("clericDomain").innerHTML = arcanaDomain;
+            domain.innerHTML = arcanaDomain;
             break;
         case "death":
             characterSubClass = "(Death)";
-            document.getElementById("clericDomain").innerHTML = deathDomain;
+            domain.innerHTML = deathDomain;
             break;
         case "forge":
             characterSubClass = "(Forge)";
-            document.getElementById("clericDomain").innerHTML = forgeDomain;
+            domain.innerHTML = forgeDomain;
             break;
         case "grave":
             characterSubClass = "(Grave)";
-            document.getElementById("clericDomain").innerHTML = graveDomain;
+            domain.innerHTML = graveDomain;
             break;
         case "knowledge":
             characterSubClass = "(Knowledge)";
-            document.getElementById("clericDomain").innerHTML = knowledgeDomain;
+            domain.innerHTML = knowledgeDomain;
             break;
         case "life":
             characterSubClass = "(Life)";
-            document.getElementById("clericDomain").innerHTML = lifeDomain;
+            domain.innerHTML = lifeDomain;
             break;
         case "light":
             characterSubClass = "(Light)";
-            document.getElementById("clericDomain").innerHTML = lightDomain;
+            domain.innerHTML = lightDomain;
             break;
         case "nature":
             characterSubClass = "(Nature)";
-            document.getElementById("clericDomain").innerHTML = natureDomain;
+            domain.innerHTML = natureDomain;
             break;
         case "order":
             characterSubClass = "(Order)";
-            document.getElementById("clericDomain").innerHTML = orderDomain;
+            domain.innerHTML = orderDomain;
             break;
         case "peace":
             characterSubClass = "(Peace)";
-            document.getElementById("clericDomain").innerHTML = peaceDomain;
+            domain.innerHTML = peaceDomain;
             break;
         case "protection":
             characterSubClass = "(Protection)";
-            document.getElementById("clericDomain").innerHTML = protectionDomain;
+            domain.innerHTML = protectionDomain;
             break;
         case "tempest":
             characterSubClass = "(Tempest)";
-            document.getElementById("clericDomain").innerHTML = tempestDomain;
+            domain.innerHTML = tempestDomain;
             break;
         case "trickery":
             characterSubClass = "(Trickery)";
-            document.getElementById("clericDomain").innerHTML = trickeryDomain;
+            domain.innerHTML = trickeryDomain;
             break;
         case "twilight":
             characterSubClass = "(Twilight)";
-            document.getElementById("clericDomain").innerHTML = twilightDomain;
+            domain.innerHTML = twilightDomain;
             break;
         case "war":
             characterSubClass = "(War)";
-            document.getElementById("clericDomain").innerHTML = warDomain;
+            domain.innerHTML = warDomain;
             break;
         default:
             break;
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
-};
+}
 
 
 /*###################################################################
@@ -4920,7 +4921,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         <tr></tr>
         <tr>
             <th>Level</th>
-            <th class="col-1">Proficiency Bonus</th>
+            <th>Proficiency Bonus</th>
             <th>Features</th>
             <th>Cantrips Known</th>
             <th>Spells Known</th>
@@ -5164,20 +5165,20 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <div class="collapse show" id="featureStyle">
         <p>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.</p>
         <div class="d-flex justify-content-around row mb-3">
-            <button type="button" class="btn btn-secondary" id="archery">Archery</button>
-            <button type="button" class="btn btn-secondary" id="blind">Blind fighting</button>
-            <button type="button" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
-            <button type="button" class="btn btn-secondary" id="defense">Denfense</button>
-            <button type="button" class="btn btn-secondary" id="dueling">Dueling</button>
-            <button type="button" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
-            <button type="button" class="btn btn-secondary" id="interception">Interception</button>
-            <button type="button" class="btn btn-secondary" id="mariner">Mariner</button>
-            <button type="button" class="btn btn-secondary" id="protectionStyle">Protection</button>
-            <button type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
-            <button type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
-            <button type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
-            <button type="button" class="btn btn-secondary" id="twoWeapon">Two-Weapon-Fighting</button>
-            <button type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="archery">Archery</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="blind">Blind fighting</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="defense">Denfense</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="dueling">Dueling</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="interception">Interception</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="mariner">Mariner</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two-Weapon-Fighting</button>
+            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
         </div>
         <div id="fightingStyle" class="choiceBG"></div>
         <hr>
@@ -5235,39 +5236,71 @@ const twoWeaponFighting = `<h6 class="text-center"><b>Two-Weapon Fighting</b></h
 const unarmedFighting = `<h6 class="text-center"><b>Unarmed Fighting</b></h6>
 <p>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.</p>
 <p>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>`;
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#archery")) {
-        document.getElementById("fightingStyle").innerHTML = archery;
-    } else if (event.target && event.target.matches("#blind")) {
-        document.getElementById("fightingStyle").innerHTML = blindFighting;
-    } else if (event.target && event.target.matches("#closeQuarter")) {
-        document.getElementById("fightingStyle").innerHTML = closeQuartersShooter;
-    } else if (event.target && event.target.matches("#defense")) {
-        document.getElementById("fightingStyle").innerHTML = defense;
-    } else if (event.target && event.target.matches("#dueling")) {
-        document.getElementById("fightingStyle").innerHTML = dueling;
-    } else if (event.target && event.target.matches("#great")) {
-        document.getElementById("fightingStyle").innerHTML = greatWeaponFighting;
-    } else if (event.target && event.target.matches("#interception")) {
-        document.getElementById("fightingStyle").innerHTML = interception;
-    } else if (event.target && event.target.matches("#mariner")) {
-        document.getElementById("fightingStyle").innerHTML = mariner;
-    } else if (event.target && event.target.matches("#protectionStyle")) {
-        document.getElementById("fightingStyle").innerHTML = protection;
-    } else if (event.target && event.target.matches("#superior")) {
-        document.getElementById("fightingStyle").innerHTML = superiorTechnique;
-    } else if (event.target && event.target.matches("#thrown")) {
-        document.getElementById("fightingStyle").innerHTML = thrownWeaponFighting;
-    } else if (event.target && event.target.matches("#tunnel")) {
-        document.getElementById("fightingStyle").innerHTML = tunnelFighter;
-    } else if (event.target && event.target.matches("#twoWeapon")) {
-        document.getElementById("fightingStyle").innerHTML = twoWeaponFighting;
-    } else if (event.target && event.target.matches("#unarmed")) {
-        document.getElementById("fightingStyle").innerHTML = unarmedFighting;
-    } else {
-        return
+function setFightingStyle(style) {
+    const fightingStyle = document.getElementById("fightingStyle");
+    switch (style) {
+        case "archery":
+            characterFightingStyle = "(Archery)";
+            fightingStyle.innerHTML = archery;
+            break;
+        case "blind":
+            characterFightingStyle = "(Blind Fighting)";
+            fightingStyle.innerHTML = blindFighting;
+            break;
+        case "closeQuarter":
+            characterFightingStyle = "(Close Quarters Shooter)";
+            fightingStyle.innerHTML = closeQuartersShooter;
+            break;
+        case "defense":
+            characterFightingStyle = "(Defense)";
+            fightingStyle.innerHTML = defense;
+            break;
+        case "dueling":
+            characterFightingStyle = "(Dueling)";
+            fightingStyle.innerHTML = dueling;
+            break;
+        case "great":
+            characterFightingStyle = "(Great Weapon Fighting)";
+            fightingStyle.innerHTML = greatWeaponFighting;
+            break;
+        case "interception":
+            characterFightingStyle = "(Interception)";
+            fightingStyle.innerHTML = interception;
+            break;
+        case "mariner":
+            characterFightingStyle = "(Mariner)";
+            fightingStyle.innerHTML = mariner;
+            break;
+        case "protection":
+            characterFightingStyle = "(Protection)";
+            fightingStyle.innerHTML = protection;
+            break;
+        case "superior":
+            characterFightingStyle = "(Superior Technique)";
+            fightingStyle.innerHTML = superiorTechnique;
+            break;
+        case "thrown":
+            characterFightingStyle = "(Thrown Weapon Fighting)";
+            fightingStyle.innerHTML = thrownWeaponFighting;
+            break;
+        case "tunnel":
+            characterFightingStyle = "(Tunnel Fighter)";
+            fightingStyle.innerHTML = tunnelFighter;
+            break;
+        case "twoWeapon":
+            characterFightingStyle = "(Two Weapon Fighting)";
+            fightingStyle.innerHTML = twoWeaponFighting;
+            break;
+        case "unarmed":
+            characterFightingStyle = "(Unarmed Fighting)";
+            fightingStyle.innerHTML = unarmedFighting;
+            break;
+        default:
+            break;
     }
-});
+    document.getElementById("summarySubClass").textContent = characterFightingStyle;
+};
+
 const fighterFeaturesList = [
     [`<li>
     Fighting style <span id="fStyle">TEST</span>
@@ -5954,8 +5987,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     <h6><b>Psionic Ability</b></h6>
     <p>Intelligence is your psionic ability for your psionic disciplines. You use your Intelligence modifier when setting the saving throw DC for a psionic discipline or when making an attack roll with one.</p>
-    <p><b>Discipline save DC</b> = 8 + your proficiency bonus + your Intelligence modifier</p>
-    <p><b>Discipline attack modifier</b> = your proficiency bonus + your Intelligence modifier</p>
+    <p class="text-center"><b>Discipline save DC</b> = 8 + your proficiency bonus + your Intelligence modifier</p>
+    <p class="text-center"><b>Discipline attack modifier</b> = your proficiency bonus + your Intelligence modifier</p>
 </div>
 
 <h5>Psionic Disciplines and Talents<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
@@ -9122,46 +9155,47 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 </div>`;
 //Sorcerer origins
 function setSorcererSubclass(subclass) {
+    const origin = document.getElementById("sorcOrigin");
     switch (subclass) {
         case "aberrant":
             characterSubClass = "(Aberrant Mind)";
-            document.getElementById("sorcOrigin").innerHTML = aberrant;
+            origin.innerHTML = aberrant;
             break;
         case "clockwork":
             characterSubClass = "(Clockwork Soul)";
-            document.getElementById("sorcOrigin").innerHTML = clockwork;
+            origin.innerHTML = clockwork;
             break;
         case "divine":
             characterSubClass = "(Divine Soul)";
-            document.getElementById("sorcOrigin").innerHTML = divine;
+            origin.innerHTML = divine;
             break;
         case "draconic":
             characterSubClass = "(Draconic)";
-            document.getElementById("sorcOrigin").innerHTML = draconic;
+            origin.innerHTML = draconic;
             break;
         case "giant":
             characterSubClass = "(Giant Soul)";
-            document.getElementById("sorcOrigin").innerHTML = genie;
+            origin.innerHTML = giant;
             break;
         case "phoenix":
             characterSubClass = "(Phoenix)";
-            document.getElementById("sorcOrigin").innerHTML = phoenix;
+            origin.innerHTML = phoenix;
             break;
         case "sea":
             characterSubClass = "(Sea)";
-            document.getElementById("sorcOrigin").innerHTML = sea;
+            origin.innerHTML = sea;
             break;
         case "shadow":
             characterSubClass = "(Shadow)";
-            document.getElementById("sorcOrigin").innerHTML = shadow;
+            origin.innerHTML = shadow;
             break;
         case "storm":
             characterSubClass = "(Storm)";
-            document.getElementById("sorcOrigin").innerHTML = storm;
+            origin.innerHTML = storm;
             break;
         case "wild":
             characterSubClass = "(Wild Magic)";
-            document.getElementById("sorcOrigin").innerHTML = wild;
+            origin.innerHTML = wild;
             break;
         default:
             break;
@@ -9518,7 +9552,7 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
                 <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undead">Undead</button>
                 <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undying">Undying</button>
             </div>
-            <div id="warlockOrigin" class="choiceBG"></div>
+            <div id="warlockPatron" class="choiceBG"></div>
         </div>
 
 <h5>Pact Magic<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
@@ -9966,7 +10000,6 @@ deities. They delight in turning the table on mortals, who often bind genies int
 enter into pacts that expand their reach.</p>
 <p>You choose your patron's kind or determine it randomly, using the Genie Kind table.</p>
 <table class="table-striped table-hover mb-2">
-<caption>Genie Kind</caption>
 <thead>
 <tr>
     <th class="col-2 text-center" data-rd-isroller="true"><span class="roller render-roller"
@@ -10739,52 +10772,54 @@ following spells are added to the warlock spell list for you.</p>
 <p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
 </div>
 </div>`;
-// document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
+
+
 function setWarlockSubclass(subclass) {
+    const patron = document.getElementById("warlockPatron");
     switch (subclass) {
         case "archfey":
             characterSubClass = "(Archfey)";
-            document.getElementById("warlockOrigin").innerHTML = archfey;
+            patron.innerHTML = archfey;
             break;
         case "celestial":
             characterSubClass = "(Celestial)";
-            document.getElementById("warlockOrigin").innerHTML = celestial;
+            patron.innerHTML = celestial;
             break;
         case "fathomless":
             characterSubClass = "(Fathomless)";
-            document.getElementById("warlockOrigin").innerHTML = fathomless;
+            patron.innerHTML = fathomless;
             break;
         case "fiend":
             characterSubClass = "(Fiend)";
-            document.getElementById("warlockOrigin").innerHTML = fiend;
+            patron.innerHTML = fiend;
             break;
         case "genie":
             characterSubClass = "(Genie)";
-            document.getElementById("warlockOrigin").innerHTML = genie;
+            patron.innerHTML = genie;
             break;
         case "greatOldOne":
             characterSubClass = "(Great Old One)";
-            document.getElementById("warlockOrigin").innerHTML = greatOldOne;
+            patron.innerHTML = greatOldOne;
             break;
         case "hexBlade":
             characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
+            patron.innerHTML = hexBlade;
             break;
         case "ravenQueen":
             characterSubClass = "(Raven Queen)";
-            document.getElementById("warlockOrigin").innerHTML = ravenQueen;
+            patron.innerHTML = ravenQueen;
             break;
         case "seeker":
             characterSubClass = "(Seeker)";
-            document.getElementById("warlockOrigin").innerHTML = seeker;
+            patron.innerHTML = seeker;
             break;
         case "undead":
             characterSubClass = "(Undead)";
-            document.getElementById("warlockOrigin").innerHTML = undead;
+            patron.innerHTML = undead;
             break;
         case "undying":
             characterSubClass = "(Undying)";
-            document.getElementById("warlockOrigin").innerHTML = undying;
+            patron.innerHTML = undying;
             break;
         default:
             break;
@@ -10887,7 +10922,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         <tr>
             <td>1st</td>
             <td>+2</td>
-            <td>Arcane Recovery, </td>
+            <td>Arcane Recovery, Spellcasting</td>
             <td>3</td>
             <td>2</td>
             <td>—</td>

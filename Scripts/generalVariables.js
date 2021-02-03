@@ -73,7 +73,7 @@ let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
 //Passive perception
 let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])(); */
 
-
+let characterFightingStyle;
 
 let skills = [{
     name: "Acrobatics",
