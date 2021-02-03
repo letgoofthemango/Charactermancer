@@ -2229,8 +2229,8 @@ const bardFeaturesByLevel = [`<h1 class="text-center">Bard<span class="ml-2"><bu
     <hr>
 
     <div class="collapse show" id="feature3">
-        <p>You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations. See chapter 10 for the general rules of
-            spellcasting and chapter 11 for the bard spell list.</p>
+        <p>You have learned to untangle and reshape the fabric of reality in harmony with your wishes and music. Your spells are part of your vast repertoire, magic that you can tune to different situations. See chapter 10 of the Players Handbook for the general rules of
+            spellcasting.</p>
 
         <h6><b>Cantrips</b></h6>
         <p>You know two cantrips of your choice from the bard spell list. You learn additional bard cantrips of your choice at higher levels, learning a 3rd cantrip at 4th level and a 4th at 10th level.</p>
@@ -2768,21 +2768,21 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <p>Choose one domain related to your deity from the list of available domains. Each domain is detailed in their own feature, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when
                 you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.</p>
             <div class="d-flex justify-content-around row mb-3">
-                <button type="button" class="btn btn-secondary" id="arcana">Arcana</button>
-                <button type="button" class="btn btn-secondary" id="death">Death</button>
-                <button type="button" class="btn btn-secondary" id="forge">Forge</button>
-                <button type="button" class="btn btn-secondary" id="grave">Grave</button>
-                <button type="button" class="btn btn-secondary" id="knowledge">Knowledge</button>
-                <button type="button" class="btn btn-secondary" id="life">Life</button>
-                <button type="button" class="btn btn-secondary" id="light">Light</button>
-                <button type="button" class="btn btn-secondary" id="nature">Nature</button>
-                <button type="button" class="btn btn-secondary" id="order">Order</button>
-                <button type="button" class="btn btn-secondary" id="peace">Peace</button>
-                <button type="button" class="btn btn-secondary" id="protection">Protection</button>
-                <button type="button" class="btn btn-secondary" id="tempest">Tempest</button>
-                <button type="button" class="btn btn-secondary" id="trickery">Trickery</button>
-                <button type="button" class="btn btn-secondary" id="twilight">Twilight</button>
-                <button type="button" class="btn btn-secondary" id="war">War</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="arcana">Arcana</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="death">Death</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="forge">Forge</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="grave">Grave</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="knowledge">Knowledge</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="life">Life</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="light">Light</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="nature">Nature</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="order">Order</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="peace">Peace</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="tempest">Tempest</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="trickery">Trickery</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="twilight">Twilight</button>
+                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="war">War</button>
             </div>
             <div id="clericDomain" class="choiceBG"></div>
         </div>
@@ -3103,8 +3103,7 @@ const forgeDomain = `<h4 class="text-center">Forge Domain<span class="ml-2"><but
 
     <div class="collapse show" id="featureArtisan">
         <p>Starting at 2nd level, you can use your Channel Divinity to create simple items.</p>
-        <p>You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object (see chapter 5, "Equipment," in
-            the Player's Handbook for examples of these items). The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.</p>
+        <p>You conduct an hour-long ritual that crafts a nonmagical item that must include some metal: a simple or martial weapon, a suit of armor, ten pieces of ammunition, a set of tools, or another metal object (see chapter 5, "Equipment," in the Player's Handbook for examples of these items). The creation is completed at the end of the hour, coalescing in an unoccupied space of your choice on a surface within 5 feet of you.</p>
         <p>The thing you create can be something that is worth no more than 100 gp. As part of this ritual, you must lay out metal, which can include coins, with a value equal to the creation. The metal irretrievably coalesces and transforms into
             the creation at the ritual's end, magically forming even nonmetal parts of the creation. The ritual can create a duplicate of a nonmagical item that contains metal, such as a key, if you possess the original during the ritual.</p>
     </div>
@@ -4252,55 +4251,74 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
         <p>At 17th level, you gain resistance to bludgeoning, piercing, and slashing damage from nonmagical weapons.</p>
     </div>
 </div>`;
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#arcana")) {
-        document.getElementById("clericDomain").innerHTML = arcanaDomain;
-        characterSubClass = "(Arcana)";
-    } else if (event.target && event.target.matches("#death")) {
-        document.getElementById("clericDomain").innerHTML = deathDomain;
-        characterSubClass = "(Death)";
-    } else if (event.target && event.target.matches("#forge")) {
-        document.getElementById("clericDomain").innerHTML = forgeDomain;
-        characterSubClass = "(Forge)";
-    } else if (event.target && event.target.matches("#grave")) {
-        document.getElementById("clericDomain").innerHTML = graveDomain;
-        characterSubClass = "(Grave)";
-    } else if (event.target && event.target.matches("#knowledge")) {
-        document.getElementById("clericDomain").innerHTML = knowledgeDomain;
-        characterSubClass = "(Knowledge)";
-    } else if (event.target && event.target.matches("#life")) {
-        document.getElementById("clericDomain").innerHTML = lifeDomain;
-        characterSubClass = "(Life)";
-    } else if (event.target && event.target.matches("#light")) {
-        document.getElementById("clericDomain").innerHTML = lightDomain;
-        characterSubClass = "(Light)";
-    } else if (event.target && event.target.matches("#nature")) {
-        document.getElementById("clericDomain").innerHTML = natureDomain;
-        characterSubClass = "(Nature)";
-    } else if (event.target && event.target.matches("#order")) {
-        document.getElementById("clericDomain").innerHTML = orderDomain;
-        characterSubClass = "(Order)";
-    } else if (event.target && event.target.matches("#peace")) {
-        document.getElementById("clericDomain").innerHTML = peaceDomain;
-        characterSubClass = "(Peace)";
-    } else if (event.target && event.target.matches("#protection")) {
-        document.getElementById("clericDomain").innerHTML = protectionDomain;
-        characterSubClass = "(Protection)";
-    } else if (event.target && event.target.matches("#tempest")) {
-        document.getElementById("clericDomain").innerHTML = tempestDomain;
-        characterSubClass = "(Tempest)";
-    } else if (event.target && event.target.matches("#trickery")) {
-        document.getElementById("clericDomain").innerHTML = trickeryDomain;
-        characterSubClass = "(Trickery)";
-    } else if (event.target && event.target.matches("#twilight")) {
-        document.getElementById("clericDomain").innerHTML = twilightDomain;
-        characterSubClass = "(Twilight)";
-    } else if (event.target && event.target.matches("#war")) {
-        document.getElementById("clericDomain").innerHTML = warDomain;
-        characterSubClass = "(War)";
+
+function setClericSubclass(subclass) {
+    switch (subclass) {
+        case "arcana":
+            characterSubClass = "(Arcana)";
+            document.getElementById("clericDomain").innerHTML = arcanaDomain;
+            break;
+        case "death":
+            characterSubClass = "(Death)";
+            document.getElementById("clericDomain").innerHTML = deathDomain;
+            break;
+        case "forge":
+            characterSubClass = "(Forge)";
+            document.getElementById("clericDomain").innerHTML = forgeDomain;
+            break;
+        case "grave":
+            characterSubClass = "(Grave)";
+            document.getElementById("clericDomain").innerHTML = graveDomain;
+            break;
+        case "knowledge":
+            characterSubClass = "(Knowledge)";
+            document.getElementById("clericDomain").innerHTML = knowledgeDomain;
+            break;
+        case "life":
+            characterSubClass = "(Life)";
+            document.getElementById("clericDomain").innerHTML = lifeDomain;
+            break;
+        case "light":
+            characterSubClass = "(Light)";
+            document.getElementById("clericDomain").innerHTML = lightDomain;
+            break;
+        case "nature":
+            characterSubClass = "(Nature)";
+            document.getElementById("clericDomain").innerHTML = natureDomain;
+            break;
+        case "order":
+            characterSubClass = "(Order)";
+            document.getElementById("clericDomain").innerHTML = orderDomain;
+            break;
+        case "peace":
+            characterSubClass = "(Peace)";
+            document.getElementById("clericDomain").innerHTML = peaceDomain;
+            break;
+        case "protection":
+            characterSubClass = "(Protection)";
+            document.getElementById("clericDomain").innerHTML = protectionDomain;
+            break;
+        case "tempest":
+            characterSubClass = "(Tempest)";
+            document.getElementById("clericDomain").innerHTML = tempestDomain;
+            break;
+        case "trickery":
+            characterSubClass = "(Trickery)";
+            document.getElementById("clericDomain").innerHTML = trickeryDomain;
+            break;
+        case "twilight":
+            characterSubClass = "(Twilight)";
+            document.getElementById("clericDomain").innerHTML = twilightDomain;
+            break;
+        case "war":
+            characterSubClass = "(War)";
+            document.getElementById("clericDomain").innerHTML = warDomain;
+            break;
+        default:
+            break;
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
-});
+};
 
 
 /*###################################################################
@@ -4752,7 +4770,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="feature3">
-        <p>Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will. See chapter 10 for the general rules of spellcasting and chapter 11 for the druid spell list.</p>
+        <p>Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will. See chapter 10 of the Player's Handbook for the general rules of spellcasting.</p>
 
         <h6><b>Cantrips</b></h6>
         <p>At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.</p>
@@ -5246,6 +5264,8 @@ document.getElementById("displayContent").addEventListener('click', function (ev
         document.getElementById("fightingStyle").innerHTML = twoWeaponFighting;
     } else if (event.target && event.target.matches("#unarmed")) {
         document.getElementById("fightingStyle").innerHTML = unarmedFighting;
+    } else {
+        return
     }
 });
 const fighterFeaturesList = [
@@ -5971,8 +5991,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <p>An effect option in a discipline specifies how long its effect lasts.</p>
     <p> <b>Instantaneous.</b> If no duration is specified, the effect of the option is instantaneous.</p>
     <p> <b>Concentration.</b> Some options require concentration to maintain their effects. This requirement is noted with "conc." after the option's psi point cost. The "conc." notation is followed by the maximum duration of the concentration.
-        For example, if an option says "conc., 1 min.," you can concentrate on its effect for up to 1 minute. Concentrating on a discipline follows the same rules as concentrating on a spell. This rule means you can't concentrate on a spell
-        and a discipline at the same time, nor can you concentrate on two disciplines at the same time. See chapter 10, "Spellcasting," in the Player's Handbook for how concentration works.</p>
+        For example, if an option says "conc., 1 min.," you can concentrate on its effect for up to 1 minute. Concentrating on a discipline follows the same rules as concentrating on a spell. This rule means you can't concentrate on a spell and a discipline at the same time, nor can you concentrate on two disciplines at the same time. See chapter 10, "Spellcasting," in the Player's Handbook for how concentration works.</p>
 
     <h6><b>Targets and Areas of Effect</b></h6>
     <p>Psionic disciplines use the same rules as spells for determining targets and areas of effect, as presented in chapter 10, "Spellcasting," of the Player's Handbook.</p>
@@ -7744,16 +7763,16 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featureOrigin">
             <p>Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p>
             <div class="d-flex justify-content-around row">
-                <button type="button" class="btn btn-secondary" id="aberrant">Aberrant Mind</button>
-                <button type="button" class="btn btn-secondary" id="clockwork">Clockwork soul</button>
-                <button type="button" class="btn btn-secondary" id="divine">Divine Soul</button>
-                <button type="button" class="btn btn-secondary" id="draconic">Draconic</button>
-                <button type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
-                <button type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
-                <button type="button" class="btn btn-secondary" id="sea">Sea</button>
-                <button type="button" class="btn btn-secondary" id="shadow">Shadow</button>
-                <button type="button" class="btn btn-secondary" id="storm">Storm</button>
-                <button type="button" class="btn btn-secondary" id="wild">Wild magic</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="aberrant">Aberrant Mind</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="clockwork">Clockwork soul</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="divine">Divine Soul</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="draconic">Draconic</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="sea">Sea</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="shadow">Shadow</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="storm">Storm</button>
+                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="wild">Wild magic</button>
             </div>
             <div id="sorcOrigin" class="choiceBG"></div>
         </div>
@@ -9102,40 +9121,54 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 </div>
 </div>`;
 //Sorcerer origins
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#aberrant")) {
-        characterSubClass = "(Aberrant Mind)";
-        document.getElementById("sorcOrigin").innerHTML = aberrant;
-    } else if (event.target && event.target.matches("#clockwork")) {
-        characterSubClass = "(Clockwork Soul)";
-        document.getElementById("sorcOrigin").innerHTML = clockwork;
-    } else if (event.target && event.target.matches("#divine")) {
-        characterSubClass = "(Divine Soul)";
-        document.getElementById("sorcOrigin").innerHTML = divine;
-    } else if (event.target && event.target.matches("#draconic")) {
-        characterSubClass = "(Draconic)";
-        document.getElementById("sorcOrigin").innerHTML = draconic;
-    } else if (event.target && event.target.matches("#giant")) {
-        characterSubClass = "(Giant Soul)";
-        document.getElementById("sorcOrigin").innerHTML = giant;
-    } else if (event.target && event.target.matches("#phoenix")) {
-        characterSubClass = "(Phoenix)";
-        document.getElementById("sorcOrigin").innerHTML = phoenix;
-    } else if (event.target && event.target.matches("#sea")) {
-        characterSubClass = "(Sea)";
-        document.getElementById("sorcOrigin").innerHTML = sea;
-    } else if (event.target && event.target.matches("#shadow")) {
-        characterSubClass = "(Shadow)";
-        document.getElementById("sorcOrigin").innerHTML = shadow;
-    } else if (event.target && event.target.matches("#storm")) {
-        characterSubClass = "(Storm)";
-        document.getElementById("sorcOrigin").innerHTML = storm;
-    } else if (event.target && event.target.matches("#wild")) {
-        characterSubClass = "(Wild Magic)";
-        document.getElementById("sorcOrigin").innerHTML = wild;
+function setSorcererSubclass(subclass) {
+    switch (subclass) {
+        case "aberrant":
+            characterSubClass = "(Aberrant Mind)";
+            document.getElementById("sorcOrigin").innerHTML = aberrant;
+            break;
+        case "clockwork":
+            characterSubClass = "(Clockwork Soul)";
+            document.getElementById("sorcOrigin").innerHTML = clockwork;
+            break;
+        case "divine":
+            characterSubClass = "(Divine Soul)";
+            document.getElementById("sorcOrigin").innerHTML = divine;
+            break;
+        case "draconic":
+            characterSubClass = "(Draconic)";
+            document.getElementById("sorcOrigin").innerHTML = draconic;
+            break;
+        case "giant":
+            characterSubClass = "(Giant Soul)";
+            document.getElementById("sorcOrigin").innerHTML = genie;
+            break;
+        case "phoenix":
+            characterSubClass = "(Phoenix)";
+            document.getElementById("sorcOrigin").innerHTML = phoenix;
+            break;
+        case "sea":
+            characterSubClass = "(Sea)";
+            document.getElementById("sorcOrigin").innerHTML = sea;
+            break;
+        case "shadow":
+            characterSubClass = "(Shadow)";
+            document.getElementById("sorcOrigin").innerHTML = shadow;
+            break;
+        case "storm":
+            characterSubClass = "(Storm)";
+            document.getElementById("sorcOrigin").innerHTML = storm;
+            break;
+        case "wild":
+            characterSubClass = "(Wild Magic)";
+            document.getElementById("sorcOrigin").innerHTML = wild;
+            break;
+        default:
+            break;
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
-});
+};
+
 const sorcererFeaturesList = [
     [`<li>
     Sorcerous Origin <span id="origin">TEST</span>
@@ -9473,17 +9506,17 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featurePatron">
             <p>At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p>
             <div class="d-flex justify-content-around row">
-                <button type="button" class="btn btn-secondary" id="archfey">Archfey</button>
-                <button type="button" class="btn btn-secondary" id="celestial">Celestial</button>
-                <button type="button" class="btn btn-secondary" id="fathomless">Fathomless</button>
-                <button type="button" class="btn btn-secondary" id="fiend">Fiend</button>
-                <button type="button" class="btn btn-secondary" id="genie">Genie</button>
-                <button type="button" class="btn btn-secondary" id="greatOldOne">Great Old One</button>
-                <button type="button" class="btn btn-secondary" id="hexBlade">Hexblade</button>
-                <button type="button" class="btn btn-secondary" id="ravenQueen">Raven Queen</button>
-                <button type="button" class="btn btn-secondary" id="seeker">Seeker</button>
-                <button type="button" class="btn btn-secondary" id="undead">Undead</button>
-                <button type="button" class="btn btn-secondary" id="undying">Undying</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="archfey">Archfey</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="celestial">Celestial</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fathomless">Fathomless</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fiend">Fiend</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="genie">Genie</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="greatOldOne">Great Old One</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="hexBlade">Hexblade</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="ravenQueen">Raven Queen</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="seeker">Seeker</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undead">Undead</button>
+                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undying">Undying</button>
             </div>
             <div id="warlockOrigin" class="choiceBG"></div>
         </div>
@@ -9493,7 +9526,7 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
 <hr>
 
 <div class="collapse show" id="feature1">
-<p>Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See chapter 10 for the general rules of spellcasting and chapter 11 for the warlock spell list.</p>
+<p>Your arcane research and the magic bestowed on you by your patron have given you facility with spells. See chapter 10 of the Player's Handbook for the general rules of spellcasting.</p>
 
 <h6><b>Cantrips</b></h6>
 <p>You know two cantrips of your choice from the warlock spell list. You learn additional warlock cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Warlock table.</p>
@@ -10706,43 +10739,59 @@ following spells are added to the warlock spell list for you.</p>
 <p>Once you use this feature, you can't use it again until you finish a short or long rest.</p>
 </div>
 </div>`;
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#archfey")) {
-        characterSubClass = "(Archfey)";
-        document.getElementById("warlockOrigin").innerHTML = archfey;
-    } else if (event.target && event.target.matches("#celestial")) {
-        characterSubClass = "(Celestial)";
-        document.getElementById("warlockOrigin").innerHTML = celestial;
-    } else if (event.target && event.target.matches("#fathomless")) {
-        characterSubClass = "(Fathomless)";
-        document.getElementById("warlockOrigin").innerHTML = fathomless;
-    } else if (event.target && event.target.matches("#fiend")) {
-        characterSubClass = "(Fiend)";
-        document.getElementById("warlockOrigin").innerHTML = fiend;
-    } else if (event.target && event.target.matches("#genie")) {
-        characterSubClass = "(Genie)";
-        document.getElementById("warlockOrigin").innerHTML = genie;
-    } else if (event.target && event.target.matches("#greatOldOne")) {
-        characterSubClass = "(Great Old One)";
-        document.getElementById("warlockOrigin").innerHTML = greatOldOne;
-    } else if (event.target && event.target.matches("#hexBlade")) {
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-    } else if (event.target && event.target.matches("#ravenQueen")) {
-        characterSubClass = "(Raven Queen)";
-        document.getElementById("warlockOrigin").innerHTML = ravenQueen;
-    } else if (event.target && event.target.matches("#seeker")) {
-        characterSubClass = "(Seeker)";
-        document.getElementById("warlockOrigin").innerHTML = seeker;
-    } else if (event.target && event.target.matches("#undead")) {
-        characterSubClass = "(Undead)";
-        document.getElementById("warlockOrigin").innerHTML = undead;
-    } else if (event.target && event.target.matches("#undying")) {
-        characterSubClass = "(Undying)";
-        document.getElementById("warlockOrigin").innerHTML = undying;
+// document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
+function setWarlockSubclass(subclass) {
+    switch (subclass) {
+        case "archfey":
+            characterSubClass = "(Archfey)";
+            document.getElementById("warlockOrigin").innerHTML = archfey;
+            break;
+        case "celestial":
+            characterSubClass = "(Celestial)";
+            document.getElementById("warlockOrigin").innerHTML = celestial;
+            break;
+        case "fathomless":
+            characterSubClass = "(Fathomless)";
+            document.getElementById("warlockOrigin").innerHTML = fathomless;
+            break;
+        case "fiend":
+            characterSubClass = "(Fiend)";
+            document.getElementById("warlockOrigin").innerHTML = fiend;
+            break;
+        case "genie":
+            characterSubClass = "(Genie)";
+            document.getElementById("warlockOrigin").innerHTML = genie;
+            break;
+        case "greatOldOne":
+            characterSubClass = "(Great Old One)";
+            document.getElementById("warlockOrigin").innerHTML = greatOldOne;
+            break;
+        case "hexBlade":
+            characterSubClass = "(Hexblade)";
+            document.getElementById("warlockOrigin").innerHTML = hexBlade;
+            break;
+        case "ravenQueen":
+            characterSubClass = "(Raven Queen)";
+            document.getElementById("warlockOrigin").innerHTML = ravenQueen;
+            break;
+        case "seeker":
+            characterSubClass = "(Seeker)";
+            document.getElementById("warlockOrigin").innerHTML = seeker;
+            break;
+        case "undead":
+            characterSubClass = "(Undead)";
+            document.getElementById("warlockOrigin").innerHTML = undead;
+            break;
+        case "undying":
+            characterSubClass = "(Undying)";
+            document.getElementById("warlockOrigin").innerHTML = undying;
+            break;
+        default:
+            break;
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
-});
+}
+
 const warlockFeaturesList = [
     [`<li>
     Otherworldly Patron <span id="patron">TEST</span>

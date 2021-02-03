@@ -19,8 +19,13 @@ weapon[0].proficient=false;
     tool[0].proficient = false;
   });
   characterSubClass = "";
+  document.getElementById("summarySubClass").textContent = characterSubClass;
   document.getElementById("featuresList").innerHTML = "";
+  console.log('RESET');
 }
+
+
+
 //--------------------------------------function to calculate the characters skill modifiers---------------------------------------------------------------------
 function update() {
   let totals = document.getElementsByClassName("statTotal");

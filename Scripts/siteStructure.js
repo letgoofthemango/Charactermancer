@@ -12,12 +12,13 @@ document
   .getElementById("displayContent")
   .addEventListener("click", function (event) {
     //to pin the eventlistener to the parent node
-    reset();
+
     /*     document.getElementById("proficienciesList").innerHTML = ""; */
     if (event.target && event.target.matches("input[type='radio']")) {
       //check if the target is the target and an input type radio
       characterClass = document.querySelector('input[name="class"]:checked')
         .value; //set character class with the selection from the radio buttons
+      reset();
       document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
 
       switch (characterClass) {
@@ -119,15 +120,15 @@ document
       const changeToGreen = document.querySelectorAll(
         "#summaryClass, #summarySubClass, #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies"
       );
-      
+
       for (const i of changeToGreen) {
         i.classList.add("addedChoice");
       }
 
       document.getElementById("summaryClass").textContent = characterClass;
       update();
-      
-      if (characterClass== BARD){
+
+      if (characterClass == BARD) {
         document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
       }
     } else {
