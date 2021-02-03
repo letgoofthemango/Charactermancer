@@ -2292,7 +2292,6 @@ const bardFeaturesList = [
 ];
 
 
-
 /*###################################################################
 ######################### Cleric ##################################
 #####################################################################*/
@@ -4254,6 +4253,7 @@ const warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button 
 
 function setClericSubclass(subclass) {
     const domain = document.getElementById("clericDomain");
+    characterSubClass= null;
     switch (subclass) {
         case "arcana":
             characterSubClass = "(Arcana)";
@@ -5238,6 +5238,7 @@ const unarmedFighting = `<h6 class="text-center"><b>Unarmed Fighting</b></h6>
 <p>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>`;
 function setFightingStyle(style) {
     const fightingStyle = document.getElementById("fightingStyle");
+    characterSubClass= null;
     switch (style) {
         case "archery":
             characterFightingStyle = "(Archery)";
@@ -9156,6 +9157,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 //Sorcerer origins
 function setSorcererSubclass(subclass) {
     const origin = document.getElementById("sorcOrigin");
+    characterSubClass= null;
     switch (subclass) {
         case "aberrant":
             characterSubClass = "(Aberrant Mind)";
@@ -10776,6 +10778,7 @@ following spells are added to the warlock spell list for you.</p>
 
 function setWarlockSubclass(subclass) {
     const patron = document.getElementById("warlockPatron");
+    characterSubClass= null;
     switch (subclass) {
         case "archfey":
             characterSubClass = "(Archfey)";

@@ -231,7 +231,8 @@ let characterAttacks = [];
 
 
 //Hitpoints
-/* let characterHitpoints; */
+let characterHitpoints;
+let hitDice;
 
 
 //Race
@@ -267,3 +268,53 @@ let characterHair = "";
 
 //Backstory
 let characterBackstory = "";
+
+
+// App nodes
+const nameNode = document.getElementById("summaryName");
+const classNode = document.getElementById("summaryClass");
+const subClassNode = document.getElementById("summarySubClass");
+const levelNode = document.getElementById("summaryLevel");
+const hpNode = document.getElementById("summaryHP");
+const backgroundNode = document.getElementById("summaryBackground");
+const acNode = document.getElementById("summaryAC");
+const initiativeNode = document.getElementById("summaryInitiative");
+const speedNode = document.getElementById("summarySpeed");
+const passivePerceptionNode = document.getElementById("summaryPassivePerception");
+const acrobaticsNode = document.getElementById("summaryAcrobatics");
+const animalHandlingNode = document.getElementById("summaryAnimalHandling");
+const arcanaNode = document.getElementById("summaryArcana");
+const athleticsNode = document.getElementById("summaryAthletics");
+const deceptionNode = document.getElementById("summaryDeception");
+const historyNode = document.getElementById("summaryHistory");
+const insightNode = document.getElementById("summaryInsight");
+const intimidationNode = document.getElementById("summaryIntimidation");
+const investigationNode = document.getElementById("summaryInvestigation");
+const medicineNode = document.getElementById("summaryMedicine");
+const natureNode = document.getElementById("summaryNature");
+const perceptionNode = document.getElementById("summaryPerception");
+const performanceNode = document.getElementById("summaryPerformance");
+const persuationNode = document.getElementById("summaryPersuasion");
+const religionNode = document.getElementById("summaryReligion");
+const sleightNode = document.getElementById("summarySleight");
+const stealthNode = document.getElementById("summaryStealth");
+const survivalNode = document.getElementById("summarySurvival");
+const weaponProficienciesNode = document.getElementById("weaponProficiencies");
+const armorProficienciesNode = document.getElementById("armorProficiencies");
+const toolProficienciesNode = document.getElementById("toolProficiencies");
+const languageProficienciesNode = document.getElementById("languageProficiencies");
+const featuresNode = document.getElementById("featuresList");
+const equipmentNode = document.getElementById("equipmentList");
+const attacksNode = document.getElementById("attacksList");
+const cantripsNode = document.getElementById("cantrips");
+const firstLevelNode = document.getElementById("firstLevel");
+const secondLevelNode = document.getElementById("secondLevel");
+const thirdLevelNode = document.getElementById("thirdLevel");
+const fourthLevelNode = document.getElementById("fourthLevel");
+const fifthLevelNode = document.getElementById("fifthLevel");
+const sixthLevelNode = document.getElementById("sixthLevel");
+const seventhLevelNode = document.getElementById("seventhLevel");
+const eigthLevelNode = document.getElementById("eigthLevel");
+const ninethLevelNode = document.getElementById("ninethLevel");
+const mainNode = document.getElementById("displayContent");
+const overviewNode = document.getElementById("characterOverview");

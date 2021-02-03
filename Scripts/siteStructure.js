@@ -2,119 +2,129 @@
 ######################### Load class choice #########################
 ######################################################################*/
 function startApp() {
-  document.getElementById("displayContent").innerHTML = siteClassChoice;
-  document.getElementById("characterOverview").style.visibility = "visible";
+  mainNode.innerHTML = siteClassChoice;
+  overviewNode.style.visibility = "visible";
   update();
 };
 
 /*###################Class choices and features with chosen level######*/
 function setCharacterClass(characterClass) {
   reset();
-  document.getElementById("showClassDetails").innerHTML = ""; //clean the element for other text to be displayed
+  const classDetailsNode = document.getElementById("showClassDetails");
+  classDetailsNode.innerHTML = ""; //clean the element for other text to be displayed
 
   switch (characterClass) {
     case ARTIFICER:
+      hitDice = 8;
       characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = characterWeaponProficiencies[39][1] = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           artificerFeaturesByLevel[i];
         document.getElementById("featuresList").innerHTML +=
           artificerFeaturesList[i];
       }
       break;
     case BARBARIAN:
+      hitDice = 12;
       characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = characterWeaponProficiencies[0][1] = characterWeaponProficiencies[1][1] = true;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           barbarianFeaturesByLevel[i];
         document.getElementById("featuresList").innerHTML +=
           barbarianFeaturesList[i];
       }
       break;
     case BARD:
+      hitDice = 8;
       characterArmorProficiencies[1][1] = characterWeaponProficiencies[0][1] = characterWeaponProficiencies[35][1] = characterWeaponProficiencies[23][1] = characterWeaponProficiencies[27][1] = characterWeaponProficiencies[29][1] = true;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           bardFeaturesByLevel[i];
         document.getElementById("featuresList").innerHTML +=
           bardFeaturesList[i];
       }
       break;
     case CLERIC:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           clericFeaturesByLevel[i];
       }
       break;
     case DRUID:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           druidFeaturesByLevel[i];
       }
       break;
     case FIGHTER:
+      hitDice = 10;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           fighterFeaturesByLevel[i];
       }
       break;
     case MONK:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           monkFeaturesByLevel[i];
       }
       break;
     case MYSTIC:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           mysticFeaturesByLevel[i];
       }
       break;
     case PALADIN:
+      hitDice = 10;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           paladinFeaturesByLevel[i];
       }
       break;
     case RANGER:
+      hitDice = 10;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           rangerFeaturesByLevel[i];
       }
       break;
     case ROGUE:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           rogueFeaturesByLevel[i];
       }
       break;
     case SORCERER:
+      hitDice = 6;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           sorcererFeaturesByLevel[i];
       }
       break;
     case WARLOCK:
+      hitDice = 8;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           warlockFeaturesByLevel[i];
       }
       break;
     case WIZARD:
+      hitDice = 6;
       for (let i = 0; i < characterLevel; i++) {
-        document.getElementById("showClassDetails").innerHTML +=
+        classDetailsNode.innerHTML +=
           wizardFeaturesByLevel[i];
       }
       break;
   }
-  if (characterClass == BARD) {
-    document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
-  }
-
-
 
   const changeToGreen = document.querySelectorAll(
-    "#summaryClass, #summarySubClass, #summaryLevel, #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies"
+    "#summaryClass, #summarySubClass, #summaryLevel, #summaryHP, #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies"
   );
 
   for (const i of changeToGreen) {
@@ -126,10 +136,15 @@ function setCharacterClass(characterClass) {
 
   update();
 
+  if (characterClass == BARD) {
+    document.getElementById("toolProficiencies").textContent = "Three musical instruments of your choice";
+    // document.getElementById("skillsSummary").textContent = "Three musical instruments of your choice";
+  }
+
 }
 
 /*## Select character level ##########################################*/
-document.onchange = function (event) {
+/* document.onchange = function (event) {
   if (event.target.matches("#characterLevel")) {
     characterLevel = document.getElementById("characterLevel").value;
   }
@@ -221,7 +236,7 @@ document.onchange = function (event) {
   }
   document.getElementById("summaryLevel").setAttribute("class", "addedChoice");
   document.getElementById("summaryLevel").textContent = characterLevel;
-};
+}; */
 
 /*###################################################################
 ######################### Site structure ##############################
@@ -275,5 +290,5 @@ const siteClassChoice = `<h1 class="text-center">Choose your class</h1>
 
 <div id="showClassDetails"></div>
 <div class="d-flex justify-content-center">
-    <button class="btn btn-info" id="goTotFeatures">Features</button>
+    <button class="btn btn-info" id="goToFeatures">Features</button>
 </div>`;
