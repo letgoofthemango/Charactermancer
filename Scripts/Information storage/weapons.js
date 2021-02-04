@@ -1,4 +1,5 @@
 let weapons = new Map([
+    ["Firearms", [{ name: "Firearms", proficient: false }]],
     ["Simpleweapons", [{ name: "Simple weapons", proficient: false }]], //this will likely be a problem later when it comes to items
     ["Martialweapons", [{ name: "Martial weapons", proficient: false }]],
     ["Club", [{ name: "Club", simple: true, martial: false, melee: true, reach: false, ranged: false, range: 0, damage: "1d4", damageType: "bludgeoning", copper: 0, silver: 1, gold: 0, platinum: 0, weight: 2, light: true, heavy: false, finesse: false, thrown: false, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: false, proficient: false }]],

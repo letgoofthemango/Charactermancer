@@ -14,6 +14,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
     <script type="text/javascript" src="./Scripts/generalVariables.js" defer></script>
+    <script type="text/javascript" src="./Scripts/Information storage/classes.js" defer></script>
     <script type="text/javascript" src="./Scripts/Information storage/armors.js"></script>
     <script type="text/javascript" src="./Scripts/Information storage/weapons.js"></script>
     <script type="text/javascript" src="./Scripts/Information storage/toolProficiencies.js"></script>
@@ -95,11 +96,12 @@
             </div>
             <hr>
             <div>
-                <p class="text-center">Skills:<span class="ml-2"><button class="collapseButton" type="button"
+                <p class="text-center mb-0">Skills:<span class="ml-2"><button class="collapseButton" type="button"
                             data-toggle="collapse" data-target="#skills" aria-expanded="true"
                             aria-controls="skills">[-]</button></span></p>
                 <div class="collapse show" id="skills">
                     <ul class="listNone">
+                        <!-- <li class="text-center" ><b><u><span id="summarySkillsText"></span></u></b></li> -->
                         <li id="summaryAcrobatics">Acrobatics:&nbsp;<span id="skillsID0"></span></li>
                         <li id="summaryAnimalHandling">Animal Handling:&nbsp;<span id="skillsID1"></span></li>
                         <li id="summaryArcana">Arcana:&nbsp;<span id="skillsID2"></span></li>
@@ -236,7 +238,7 @@
             <p>Right now ony lvl 1 characters but as I get better, lvl 20 and eventually multiclassing is planned for
                 this.</p>
             <div class="d-flex justify-content-center">
-                <button onclick="startApp()" class="btn btn-info" id="initButton">Start</button>
+                <button onclick="App.startApp()" class="btn btn-info" id="initButton">Start</button>
             </div>
 
 

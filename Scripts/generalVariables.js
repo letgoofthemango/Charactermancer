@@ -167,14 +167,6 @@ let skills = [{
     mod: 0,
 }];
 
-function getNumber(mod) {
-    if (mod >= 0) {
-        return "+" + mod;
-    } else {
-        return mod.toString();
-    }
-}
-
 //Skills
 let acrobaticsMod = skills[0].mod;
 let animalHandlingMod = skills[1].mod;
@@ -299,6 +291,7 @@ const religionNode = document.getElementById("summaryReligion");
 const sleightNode = document.getElementById("summarySleight");
 const stealthNode = document.getElementById("summaryStealth");
 const survivalNode = document.getElementById("summarySurvival");
+const skillsTextNode = document.getElementById("summarySkillsText");
 const weaponProficienciesNode = document.getElementById("weaponProficiencies");
 const armorProficienciesNode = document.getElementById("armorProficiencies");
 const toolProficienciesNode = document.getElementById("toolProficiencies");
