@@ -8,8 +8,6 @@ Go back Button!
 bestätigung abfragen?
 
 
-wenn man bei subclasses in den Inneren bereich clickt wird die subclass gelöscht weil 
-
 Bard Musikintrumente in der Updatefunction besser machen???
 
 
@@ -20,6 +18,8 @@ Table first row should not be a row.
 Ranger dropdown menus not workings!!!
 
 
+popover für skills etc machen!
+
+
+
 -sanitize inputs!!!!!!
--Json für items
-JS maps nachschaun
