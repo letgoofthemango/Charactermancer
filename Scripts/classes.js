@@ -3668,21 +3668,21 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <p>Choose one domain related to your deity from the list of available domains. Each domain is detailed in their own feature, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when
                 you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.</p>
             <div class="d-flex justify-content-around row mb-3">
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="arcana">Arcana</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="death">Death</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="forge">Forge</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="grave">Grave</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="knowledge">Knowledge</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="life">Life</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="light">Light</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="nature">Nature</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="order">Order</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="peace">Peace</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="tempest">Tempest</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="trickery">Trickery</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="twilight">Twilight</button>
-                <button onclick="setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="war">War</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="arcana">Arcana</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="death">Death</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="forge">Forge</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="grave">Grave</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="knowledge">Knowledge</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="life">Life</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="light">Light</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="nature">Nature</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="order">Order</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="peace">Peace</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="tempest">Tempest</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="trickery">Trickery</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="twilight">Twilight</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="war">War</button>
             </div>
             <div id="clericDomain" class="choiceBG"></div>
         </div>
@@ -5158,68 +5158,68 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         switch (subclass) {
             case "arcana":
                 characterSubClass = "(Arcana)";
-                domain.innerHTML = arcanaDomain;
+                domain.innerHTML = this.arcanaDomain;
                 break;
             case "death":
                 characterSubClass = "(Death)";
-                domain.innerHTML = deathDomain;
+                domain.innerHTML = this.deathDomain;
                 break;
             case "forge":
                 characterSubClass = "(Forge)";
-                domain.innerHTML = forgeDomain;
+                domain.innerHTML = this.forgeDomain;
                 break;
             case "grave":
                 characterSubClass = "(Grave)";
-                domain.innerHTML = graveDomain;
+                domain.innerHTML = this.graveDomain;
                 break;
             case "knowledge":
                 characterSubClass = "(Knowledge)";
-                domain.innerHTML = knowledgeDomain;
+                domain.innerHTML = this.knowledgeDomain;
                 break;
             case "life":
                 characterSubClass = "(Life)";
-                domain.innerHTML = lifeDomain;
+                domain.innerHTML = this.lifeDomain;
                 break;
             case "light":
                 characterSubClass = "(Light)";
-                domain.innerHTML = lightDomain;
+                domain.innerHTML = this.lightDomain;
                 break;
             case "nature":
                 characterSubClass = "(Nature)";
-                domain.innerHTML = natureDomain;
+                domain.innerHTML = this.natureDomain;
                 break;
             case "order":
                 characterSubClass = "(Order)";
-                domain.innerHTML = orderDomain;
+                domain.innerHTML = this.orderDomain;
                 break;
             case "peace":
                 characterSubClass = "(Peace)";
-                domain.innerHTML = peaceDomain;
+                domain.innerHTML = this.peaceDomain;
                 break;
             case "protection":
                 characterSubClass = "(Protection)";
-                domain.innerHTML = protectionDomain;
+                domain.innerHTML = this.protectionDomain;
                 break;
             case "tempest":
                 characterSubClass = "(Tempest)";
-                domain.innerHTML = tempestDomain;
+                domain.innerHTML = this.tempestDomain;
                 break;
             case "trickery":
                 characterSubClass = "(Trickery)";
-                domain.innerHTML = trickeryDomain;
+                domain.innerHTML = this.trickeryDomain;
                 break;
             case "twilight":
                 characterSubClass = "(Twilight)";
-                domain.innerHTML = twilightDomain;
+                domain.innerHTML = this.twilightDomain;
                 break;
             case "war":
                 characterSubClass = "(War)";
-                domain.innerHTML = warDomain;
+                domain.innerHTML = this.warDomain;
                 break;
             default:
                 break;
         }
-        document.getElementById("summarySubClass").textContent = characterSubClass;
+        subClassNode.textContent = characterSubClass;
     }
 }
 class Druid extends Character {
@@ -6061,20 +6061,20 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <div class="collapse show" id="featureStyle">
         <p>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.</p>
         <div class="d-flex justify-content-around row mb-3">
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="archery">Archery</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="blind">Blind fighting</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="defense">Denfense</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="dueling">Dueling</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="interception">Interception</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="mariner">Mariner</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two-Weapon-Fighting</button>
-            <button onclick="setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="archery">Archery</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="blind">Blind fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="defense">Denfense</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="dueling">Dueling</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="interception">Interception</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="mariner">Mariner</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two-Weapon-Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
         </div>
         <div id="fightingStyle" class="choiceBG"></div>
         <hr>
@@ -6138,64 +6138,64 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         switch (style) {
             case "archery":
                 characterFightingStyle = "(Archery)";
-                fightingStyle.innerHTML = archery;
+                fightingStyle.innerHTML = this.archery;
                 break;
             case "blind":
                 characterFightingStyle = "(Blind Fighting)";
-                fightingStyle.innerHTML = blindFighting;
+                fightingStyle.innerHTML = this.blindFighting;
                 break;
             case "closeQuarter":
                 characterFightingStyle = "(Close Quarters Shooter)";
-                fightingStyle.innerHTML = closeQuartersShooter;
+                fightingStyle.innerHTML = this.closeQuartersShooter;
                 break;
             case "defense":
                 characterFightingStyle = "(Defense)";
-                fightingStyle.innerHTML = defense;
+                fightingStyle.innerHTML = this.defense;
                 break;
             case "dueling":
                 characterFightingStyle = "(Dueling)";
-                fightingStyle.innerHTML = dueling;
+                fightingStyle.innerHTML = this.dueling;
                 break;
             case "great":
                 characterFightingStyle = "(Great Weapon Fighting)";
-                fightingStyle.innerHTML = greatWeaponFighting;
+                fightingStyle.innerHTML = this.greatWeaponFighting;
                 break;
             case "interception":
                 characterFightingStyle = "(Interception)";
-                fightingStyle.innerHTML = interception;
+                fightingStyle.innerHTML = this.interception;
                 break;
             case "mariner":
                 characterFightingStyle = "(Mariner)";
-                fightingStyle.innerHTML = mariner;
+                fightingStyle.innerHTML = this.mariner;
                 break;
             case "protection":
                 characterFightingStyle = "(Protection)";
-                fightingStyle.innerHTML = protection;
+                fightingStyle.innerHTML = this.protection;
                 break;
             case "superior":
                 characterFightingStyle = "(Superior Technique)";
-                fightingStyle.innerHTML = superiorTechnique;
+                fightingStyle.innerHTML = this.superiorTechnique;
                 break;
             case "thrown":
                 characterFightingStyle = "(Thrown Weapon Fighting)";
-                fightingStyle.innerHTML = thrownWeaponFighting;
+                fightingStyle.innerHTML = this.thrownWeaponFighting;
                 break;
             case "tunnel":
                 characterFightingStyle = "(Tunnel Fighter)";
-                fightingStyle.innerHTML = tunnelFighter;
+                fightingStyle.innerHTML = this.tunnelFighter;
                 break;
             case "twoWeapon":
                 characterFightingStyle = "(Two Weapon Fighting)";
-                fightingStyle.innerHTML = twoWeaponFighting;
+                fightingStyle.innerHTML = this.twoWeaponFighting;
                 break;
             case "unarmed":
                 characterFightingStyle = "(Unarmed Fighting)";
-                fightingStyle.innerHTML = unarmedFighting;
+                fightingStyle.innerHTML = this.unarmedFighting;
                 break;
             default:
                 break;
         }
-        document.getElementById("summarySubClass").textContent = characterFightingStyle;
+        subClassNode.textContent = characterFightingStyle;
     };
 
     static fighterFeaturesList = [
@@ -10042,48 +10042,48 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         switch (subclass) {
             case "aberrant":
                 characterSubClass = "(Aberrant Mind)";
-                origin.innerHTML = aberrant;
+                origin.innerHTML = this.aberrant;
                 break;
             case "clockwork":
                 characterSubClass = "(Clockwork Soul)";
-                origin.innerHTML = clockwork;
+                origin.innerHTML = this.clockwork;
                 break;
             case "divine":
                 characterSubClass = "(Divine Soul)";
-                origin.innerHTML = divine;
+                origin.innerHTML = this.divine;
                 break;
             case "draconic":
                 characterSubClass = "(Draconic)";
-                origin.innerHTML = draconic;
+                origin.innerHTML = this.draconic;
                 break;
             case "giant":
                 characterSubClass = "(Giant Soul)";
-                origin.innerHTML = giant;
+                origin.innerHTML = this.giant;
                 break;
             case "phoenix":
                 characterSubClass = "(Phoenix)";
-                origin.innerHTML = phoenix;
+                origin.innerHTML = this.phoenix;
                 break;
             case "sea":
                 characterSubClass = "(Sea)";
-                origin.innerHTML = sea;
+                origin.innerHTML = this.sea;
                 break;
             case "shadow":
                 characterSubClass = "(Shadow)";
-                origin.innerHTML = shadow;
+                origin.innerHTML = this.shadow;
                 break;
             case "storm":
                 characterSubClass = "(Storm)";
-                origin.innerHTML = storm;
+                origin.innerHTML = this.storm;
                 break;
             case "wild":
                 characterSubClass = "(Wild Magic)";
-                origin.innerHTML = wild;
+                origin.innerHTML = this.wild;
                 break;
             default:
                 break;
         }
-        document.getElementById("summarySubClass").textContent = characterSubClass;
+        subClassNode.textContent = characterSubClass;
     };
 
     static sorcererFeaturesList = [
@@ -10421,17 +10421,17 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featurePatron">
             <p>At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p>
             <div class="d-flex justify-content-around row">
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="archfey">Archfey</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="celestial">Celestial</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fathomless">Fathomless</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fiend">Fiend</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="genie">Genie</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="greatOldOne">Great Old One</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="hexBlade">Hexblade</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="ravenQueen">Raven Queen</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="seeker">Seeker</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undead">Undead</button>
-                <button onclick="setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undying">Undying</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="archfey">Archfey</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="celestial">Celestial</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fathomless">Fathomless</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fiend">Fiend</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="genie">Genie</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="greatOldOne">Great Old One</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="hexBlade">Hexblade</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="ravenQueen">Raven Queen</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="seeker">Seeker</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undead">Undead</button>
+                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undying">Undying</button>
             </div>
             <div id="warlockPatron" class="choiceBG"></div>
         </div>
@@ -11660,52 +11660,52 @@ following spells are added to the warlock spell list for you.</p>
         switch (subclass) {
             case "archfey":
                 characterSubClass = "(Archfey)";
-                patron.innerHTML = archfey;
+                patron.innerHTML = this.archfey;
                 break;
             case "celestial":
                 characterSubClass = "(Celestial)";
-                patron.innerHTML = celestial;
+                patron.innerHTML = this.celestial;
                 break;
             case "fathomless":
                 characterSubClass = "(Fathomless)";
-                patron.innerHTML = fathomless;
+                patron.innerHTML = this.fathomless;
                 break;
             case "fiend":
                 characterSubClass = "(Fiend)";
-                patron.innerHTML = fiend;
+                patron.innerHTML = this.fiend;
                 break;
             case "genie":
                 characterSubClass = "(Genie)";
-                patron.innerHTML = genie;
+                patron.innerHTML = this.genie;
                 break;
             case "greatOldOne":
                 characterSubClass = "(Great Old One)";
-                patron.innerHTML = greatOldOne;
+                patron.innerHTML = this.greatOldOne;
                 break;
             case "hexBlade":
                 characterSubClass = "(Hexblade)";
-                patron.innerHTML = hexBlade;
+                patron.innerHTML = this.hexBlade;
                 break;
             case "ravenQueen":
                 characterSubClass = "(Raven Queen)";
-                patron.innerHTML = ravenQueen;
+                patron.innerHTML = this.ravenQueen;
                 break;
             case "seeker":
                 characterSubClass = "(Seeker)";
-                patron.innerHTML = seeker;
+                patron.innerHTML = this.seeker;
                 break;
             case "undead":
                 characterSubClass = "(Undead)";
-                patron.innerHTML = undead;
+                patron.innerHTML = this.undead;
                 break;
             case "undying":
                 characterSubClass = "(Undying)";
-                patron.innerHTML = undying;
+                patron.innerHTML = this.undying;
                 break;
             default:
                 break;
         }
-        document.getElementById("summarySubClass").textContent = characterSubClass;
+        subClassNode.textContent = characterSubClass;
     }
 
     static warlockFeaturesList = [
@@ -12213,4 +12213,4 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
 
 /* for (let i = 0; i < armor.length; i++) {
     console.table(armor[i]);
-} */ //for iterating through the armor array!!!
+} */ 

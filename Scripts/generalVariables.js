@@ -1,35 +1,35 @@
- let proficiencyBonus = 2;
+let proficiencyBonus = 2;
 //------------------------------STATS--------------------------------------
 let abilityScores = [{
     name: "Strength",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }, {
     name: "Dexterity",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }, {
     name: "Constitution",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }, {
     name: "Intelligence",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }, {
     name: "Wisdom",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }, {
     name: "Charisma",
     value: 8,
-    mod: function() { return Math.floor((this.value - 10) / 2); },
-    saveMod: function() { return this.mod() + proficiencyBonus; }
+    mod: function () { return Math.floor((this.value - 10) / 2); },
+    saveMod: function () { return this.mod() + proficiencyBonus; }
 }];
 //Class
 let characterClass = " ";
@@ -311,3 +311,15 @@ const eigthLevelNode = document.getElementById("eigthLevel");
 const ninethLevelNode = document.getElementById("ninethLevel");
 const mainNode = document.getElementById("displayContent");
 const overviewNode = document.getElementById("characterOverview");
+
+
+
+document.getElementById("characterOverview").addEventListener("click", function () {
+    abilityScores[0].value = 20;
+    abilityScores[1].value = 20;
+    abilityScores[2].value = 20;
+    abilityScores[3].value = 20;
+    abilityScores[4].value = 20;
+    abilityScores[5].value = 20;
+    App.update();
+});

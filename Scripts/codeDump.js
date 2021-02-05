@@ -608,7 +608,7 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
     </div>
 </div>`, ` `];
 
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#goTotFeatures")) { //check if the target is the target and it matches the id
         document.getElementById("displayContent").innerHTML = ""; //clean the element displayContent for other DOM stuff to be displayed
         if (characterClass === "Artificer") {
@@ -669,7 +669,7 @@ document.getElementById("displayContent").addEventListener('click', function(eve
     }
 });
 
-document.getElementById("displayContent").addEventListener('click', function(event) { //to pin the eventlistener to the parent node
+document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
     if (event.target && event.target.matches("#alchemistSubclass")) { //check if the target is the target and it matches the id
         document.getElementById("artificierSubClass").innerHTML = alchemist;
         document.getElementById("summarySubClass").textContent = "(Alchemist)";
@@ -838,7 +838,7 @@ function showClassDetails() {
 
 
 
-function setWarlockSubclass(subclass){
+function setWarlockSubclass(subclass) {
     if (target && target.matches("#archfey")) {
         characterSubClass = "(Archfey)";
         document.getElementById("warlockOrigin").innerHTML = archfey;
@@ -876,53 +876,80 @@ function setWarlockSubclass(subclass){
         return;
     }
     document.getElementById("summarySubClass").textContent = characterSubClass;
-    }
+}
 
-    switch (subclass) {
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        case "hexBlade":
-            characterSubClass = "(Hexblade)";
-            document.getElementById("warlockOrigin").innerHTML = hexBlade;
-            break;
-        default:
-            break;
+switch (subclass) {
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    case "hexBlade":
+        characterSubClass = "(Hexblade)";
+        document.getElementById("warlockOrigin").innerHTML = hexBlade;
+        break;
+    default:
+        break;
+}
+
+function getCharacterArmorClass() {
+    if (characterClass === "Monk" && hasShield === false) {
+        characterArmorClass = 10 + dexterityMod + WisdomMod;
+        return characterArmorClass;
+    } else if (characterClass === "Barbarian") {
+        characterArmorClass = 10 + dexterityMod + ConstitutionMod;
+        return characterArmorClass;
+    } else if (hasShield && armorType == "Heavy") {
+        characterArmorClass = armorClass + 2;
+        return characterArmorClass;
+    } else if (hasShield && armorType == "Medium") {
+        /* function clamp(dexterityMod) {
+            let acCalcDexMod = Math.min(Math.max(-4, dexterityMod), 2);
+            return acCalcDexMod;
+        }
+        let acCalcDexMod = clamp(dexterityMod); function version of Medium armor Dex Mod Maxmimum*/
+        characterArmorClass = armorClass + Math.min(Math.max(-4, dexterityMod), 2) + 2; //shorter more concise version
+        return characterArmorClass;
+    } else if (hasShield && armorType == "Light") {
+        characterArmorClass = armorClass + dexterityMod + 2;
+        return characterArmorClass;
+    } else {
+        characterArmorClass = 10 + dexterityMod;
+        return characterArmorClass;
     }
+}
