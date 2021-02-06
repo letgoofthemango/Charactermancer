@@ -1,37 +1,315 @@
-/*###################################################################
-######################### Load class features for lvl 2 + #######################
-#####################################################################*/
-
-testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level3" aria-expanded="true" aria-controls="level3">[-]</button></span></h2>
-<div class="collapse show" id="level3">
-
-    <h5><u>Artificer Specialist</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature13" aria-expanded="true" aria-controls="feature13">[-]</button></span></h5>
+class Barbarian extends Character {
+    static barbarianFeaturesByLevel = [`<h1 class="text-center">Barbarian<span class="ml-2"><button class="collapseButton" type="button"
+data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
+aria-controls="collapseIntro">[-]</button></span></h1>
+<div class="collapse show" id="collapseIntro">
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+    aria-controls="nav-home" aria-selected="true">Class table</a>
+<a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+    aria-controls="nav-profile" aria-selected="false">Class description</a>
+</div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+<!-- -------------------------------------------------------------beginning description div-->
+<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+<p>A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs
+    as he charges toward the frost giant who dared poach his people's elk herd.</p>
+<p>A half-orc snarls at the latest challenger to her authority over their savage tribe, ready to
+    break his neck with her bare hands as she did to the last six rivals.</p>
+<p>Frothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to
+    drive his armored elbow into the gut of another.</p>
+<p>These barbarians, different as they might be, are defined by their rage: unbridled, unquenchable,
+    and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered
+    predator, the unrelenting assault of a storm, the churning
+    turmoil of the sea.</p>
+<p>For some, their rage springs from a communion with fierce animal spirits. Others draw from a
+    roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that
+    fuels not just a battle frenzy but also uncanny reflexes,
+    resilience, and feats of strength.</p>
+<h5>Primal Instinct</h5>
+<p>People of towns and cities take pride in how their civilized ways set them apart from animals, as
+    if denying one's own nature was a mark of superiority. To a barbarian, though, civilization is
+    no virtue, but a sign of weakness. The strong
+    embrace their animal nature—keen instincts, primal physicality, and ferocious rage. Barbarians
+    are uncomfortable when hedged in by walls and crowds. They thrive in the wilds of their
+    homelands: the tundra, jungle, or grasslands where their
+    tribes live and hunt.</p>
+<p>Barbarians come alive in the chaos of combat. They can enter a berserk state where rage takes
+    over, giving them superhuman strength and resilience. A barbarian can draw on this reservoir of
+    fury only a few times without resting, but those
+    few rages are usually sufficient to defeat whatever threats arise.</p>
+<h5>A Life of Danger</h5>
+<p>Not every member of the tribes deemed "barbarians" by scions of civilized society has the
+    barbarian class. A true barbarian among these people is as uncommon as a skilled fighter in a
+    town, and he or she plays a similar role as a protector
+    of the people and a leader in times of war. Life in the wild places of the world is fraught with
+    peril: rival tribes, deadly weather, and terrifying monsters. Barbarians charge headlong into
+    that danger so that their people don't have
+    to.
+</p>
+<p>Their courage in the face of danger makes barbarians perfectly suited for adventuring. Wandering
+    is often a way of life for their native tribes, and the rootless life of the adventurer is
+    little hardship for a barbarian. Some barbarians miss
+    the close-knit family structures of the tribe, but eventually find them replaced by the bonds
+    formed among the members of their adventuring parties.</p>
+<i>I have witnessed the indomitable performance of barbarians on the field of battle, and it makes
+    me wonder what force lies at the heart of their rage.</i>
+<p>— Seret, Arch wizard</p>
+</div><!-- -------------------------------------------------------------end description div-->
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<!-- -------------------------beginning table div-->
+<table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
+    <tbody>
+        <tr>
+            <!-- row so table striped coloring doesnt start with Black-->
+        </tr>
+        <tr>
+            <th>Level</th>
+            <th>Proficiency Bonus</th>
+            <th>Features</th>
+            <th><div>Rages</div></th>
+            <th><div>Rage Damage</div></th>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>+2</td>
+            <td><span>Rage, </span><span>Unarmored Defense</span></td>
+            <td>2</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>+2</td>
+            <td>
+                <span>Danger Sense,</span>
+                <span>Reckless Attack</span>
+            </td>
+            <td>2</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>+2</td>
+            <td>
+                <span>Primal Path</span>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>+2</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>+3</td>
+            <td>
+                <span>Extra Attack,</span>
+                <span>Fast Movement</span>
+            </td>
+            <td>3</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>+3</td>
+            <td>
+                <span>Path Feature</span>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>+3</td>
+            <td>
+                <span>Feral Instinct</span>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>+3</td>
+            <td>
+                <span>Ability Score
+                    Improvement</span>
+            </td>
+            <td>4</td>
+            <td>+2</td>
+        </tr>
+        <tr>
+            <td>9th</td>
+            <td>+4</td>
+            <td>
+                <span>Brutal Critical (1 die)</span>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>10th</td>
+            <td>+4</td>
+            <td>
+                <span>Path feature</span>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>11th</td>
+            <td>+4</td>
+            <td>
+                <span>Relentless Rage</span>
+            </td>
+            <td>4</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>12th</td>
+            <td>+4</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>13th</td>
+            <td>+5</td>
+            <td>
+                <span>Brutal Critical (2 dice)</span>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>14th</td>
+            <td>+5</td>
+            <td>
+                <span>Path feature</span>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>15th</td>
+            <td>+5</td>
+            <td>
+                <span>Persistent Rage</span>
+            </td>
+            <td>5</td>
+            <td>+3</td>
+        </tr>
+        <tr>
+            <td>16th</td>
+            <td>+5</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>5</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>17th</td>
+            <td>+6</td>
+            <td>
+                <span>Brutal Critical (3 dice)</span>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>18th</td>
+            <td>+6</td>
+            <td>
+                <span>Indomitable Might</span>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>19th</td>
+            <td>+6</td>
+            <td>
+                <span>Ability Score Improvement</span>
+            </td>
+            <td>6</td>
+            <td>+4</td>
+        </tr>
+        <tr>
+            <td>20th</td>
+            <td>+6</td>
+            <td>
+                <span>Primal Champion</span>
+            </td>
+            <td>Unlimited</td>
+            <td>+4</td>
+        </tr>
+    </tbody>
+</table>
+</div><!-- -------------------------end table div-->
+<h2 class="text-center">Level 1<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></span></h2>
+<div class="collapse show" id="level1">
+    <h5>Rage<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature1" aria-expanded="true" aria-controls="feature1">[-]</button></span></h5>
     <hr>
-
-    <div class="collapse show" id="feature13">
-        <p>At 3rd level, you choose the type of specialist you are. Your choice grants you features at 5th level and again at 9th and 15th level.</p>
-        <div class="d-flex justify-content-around mb-5">
-            <button type="button" class="btn btn-secondary" id="alchemistSubclass">Alchemist</button>
-            <button type="button" class="btn btn-secondary" id="armorerSubclass">Armorer</button>
-            <button type="button" class="btn btn-secondary" id="alchemistSubclass">Artillerist</button>
-            <button type="button" class="btn btn-secondary" id="alchemistSubclass">Battle Smith</button>
-        </div>
-        <div id="artificierSubClass"></div>
+    <div class="collapse show" id="feature1">
+        <p>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.</p>
+        <p>While raging, you gain the following benefits if you aren't wearing heavy armor:</p>
+        <ul>
+            <li>You have advantage on Strength checks and Strength saving throws.</li>
+            <li>When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.</li>
+            <li>You have resistance to bludgeoning, piercing, and slashing damage.</li>
+        </ul>
+        <p>If you are able to cast spells, you can't cast them or concentrate on them while raging.</p>
+        <p>Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus
+            action.
+        </p>
+        <p>Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again. You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.</p>
     </div>
-
-    <h5><u>The Right Tool for the Job</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature14" aria-expanded="true" aria-controls="feature14">[-]</button></span></h5>
+    <h5>Unarmored Defense<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature2" aria-expanded="true" aria-controls="feature2">[-]</button></span></h5>
     <hr>
-
-    <div class="collapse show" id="feature14">
-        <p>At 3rd level, you learn how to produce exactly the tool you need: with thieves' tools or artisan's tools in hand, you can magically create one set of artisan's tools in an unoccupied space within 5 feet of you. This creation requires
-            1 hour of uninterrupted work, which can coincide with a short or long rest. Though the product of magic, the tools are nonmagical, and they vanish when you use this feature again.</p>
+    <div class="collapse show" id="feature2">
+        <p>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.</p>
     </div>
-</div>`, `<br><h2 class="text-center">Level 4<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
+</div>`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 4`, `<p>barbarian 5`, `<p>barbarian 6`, `<p>barbarian 7`, `<p>barbarian 8`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 1`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`, `<p>barbarian 3`, `<p>barbarian 2`];
+    static barbarianFeaturesList = [
+        [`<li>
+    Rage
+    </li><li>
+    Unarmored Defense
+    </li>`],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [7],
+        [8],
+        [9],
+        [10],
+        [11],
+        [12],
+        [13],
+        [14],
+        [15],
+        [16],
+        [17],
+        [18],
+        [19],
+        [20]
+    ];
+    static barbarianFeatureChoice = [` `, ` `, ` `, `<br><h2 class="text-center">Level 4<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level4" aria-expanded="true" aria-controls="level4">[-]</button></span></h2>
 <div class="collapse show" id="level4">
-
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature19" aria-expanded="true" aria-controls="feature19">[-]</button></span></h5>
     <hr>
-
     <div class="collapse show" id="feature19">
         <p>Because you reached 4th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
         <p>If your DM allows the use of feats, you may take a feat instead of the ability score improvements.</p>
@@ -142,12 +420,10 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
             </select>
         </div>
     </div>
-</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 8<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level8" aria-expanded="true" aria-controls="level8">[-]</button></span></h2>
+</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 8<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level8" aria-expanded="true" aria-controls="level8">[-]</button></span></h2>
 <div class="collapse show" id="level8">
-
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature20" aria-expanded="true" aria-controls="feature20">[-]</button></span></h5>
     <hr>
-
     <div class="collapse show" id="feature20">
         <p>Because you reached 8th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
         <p>If your DM allows the use of feats, you may take a feat instead of the ability score improvements.</p>
@@ -258,12 +534,10 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
             </select>
         </div>
     </div>
-</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 12<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level12" aria-expanded="true" aria-controls="level12">[-]</button></span></h2>
+</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 12<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level12" aria-expanded="true" aria-controls="level12">[-]</button></span></h2>
 <div class="collapse show" id="level12">
-
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature21" aria-expanded="true" aria-controls="feature21">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature21" aria-expanded="true" aria-controls="feature21">[-]</button></span></h5>
     <hr>
-
     <div class="collapse show" id="feature21">
         <p>Because you reached 8th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
         <p>If your DM allows the use of feats, you may take a feat instead of the ability score improvements.</p>
@@ -374,12 +648,10 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
             </select>
         </div>
     </div>
-</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 16<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level16" aria-expanded="true" aria-controls="level16">[-]</button></span></h2>
+</div>`, ` `, ` `, ` `, `<br><h2 class="text-center">Level 16<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level16" aria-expanded="true" aria-controls="level16">[-]</button></span></h2>
 <div class="collapse show" id="level16">
-
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature22" aria-expanded="true" aria-controls="feature22">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature22" aria-expanded="true" aria-controls="feature22">[-]</button></span></h5>
     <hr>
-
     <div class="collapse show" id="feature21">
         <p>Because you reached 8th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
         <p>If your DM allows the use of feats, you may take a feat instead of the ability score improvements.</p>
@@ -490,12 +762,10 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
             </select>
         </div>
     </div>
-</div>`, ` `, ` `, `<br><h2 class="text-center">Level 19<span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#level19" aria-expanded="true" aria-controls="level19">[-]</button></span></h2>
+</div>`, ` `, ` `, `<br><h2 class="text-center">Level 19<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#level19" aria-expanded="true" aria-controls="level19">[-]</button></span></h2>
 <div class="collapse show" id="level19">
-
-    <h5><u>Ability Score Improvement</u><span class="ml-2"><button class="butt" type="button" data-toggle="collapse" data-target="#feature23" aria-expanded="true" aria-controls="feature23">[-]</button></span></h5>
+    <h5>Ability Score Improvement<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#feature23" aria-expanded="true" aria-controls="feature23">[-]</button></span></h5>
     <hr>
-
     <div class="collapse show" id="feature23">
         <p>Because you reached 8th level, you can now increase your ability scores. You can increase either one ability by 2, or two by 1.</p>
         <p>If your DM allows the use of feats, you may take a feat instead of the ability score improvements.</p>
@@ -606,360 +876,5 @@ testArray = [` `, ` `, `<h2 class="text-center">Level 3<span class="ml-2"><butto
             </select>
         </div>
     </div>
-</div>`, ` `];
-
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#goTotFeatures")) { //check if the target is the target and it matches the id
-        document.getElementById("displayContent").innerHTML = ""; //clean the element displayContent for other DOM stuff to be displayed
-        if (characterClass === "Artificer") {
-            for (let i = 0; i < characterLevel; i++) {
-                document.getElementById("displayContent").innerHTML += testArray[i];
-            }
-        } else { console.log("got to features doesnt work") }
-        /*else if (characterClass === "Barbarian") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Cleric") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Druid") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += druidFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Fighter") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += fighterFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Monk") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += monkFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Mystic") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += mysticFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Paladin") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += paladinFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Ranger") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += rangerFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Rogue") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += rogueFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Sorcerer") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += sorcererFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Warlock") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += warlockFeaturesByLevel[i];
-                   }
-               } else if (characterClass === "Wizard") {
-                   for (let i = 0; i < characterLevel; i++) {
-                       document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
-                   }
-               }
-               document.getElementById("summaryClass").textContent = characterClass; */
-    }
-});
-
-document.getElementById("displayContent").addEventListener('click', function (event) { //to pin the eventlistener to the parent node
-    if (event.target && event.target.matches("#alchemistSubclass")) { //check if the target is the target and it matches the id
-        document.getElementById("artificierSubClass").innerHTML = alchemist;
-        document.getElementById("summarySubClass").textContent = "(Alchemist)";
-
-    }
-});
-//--------------------------------------------------------------------------------------------------------------
-
-
-//everything levedependent goes here!!!!!!!
-switch (characterLevel) {
-    case 2:
-        proficiencyBonus = 2;
-        break;
-    case 3:
-        proficiencyBonus = 2;
-        break;
-    case 4:
-        proficiencyBonus = 2;
-        break;
-    case 5:
-        proficiencyBonus = 3;
-        break;
-    case 6:
-        proficiencyBonus = 3;
-        break;
-    case 7:
-        proficiencyBonus = 3;
-        break;
-    case 8:
-        proficiencyBonus = 3;
-        break;
-    case 9:
-        proficiencyBonus = 4;
-        break;
-    case 10:
-        proficiencyBonus = 4;
-        break;
-    case 11:
-        proficiencyBonus = 4;
-        break;
-    case 12:
-        proficiencyBonus = 4;
-        break;
-    case 13:
-        proficiencyBonus = 5;
-        break;
-    case 14:
-        proficiencyBonus = 5;
-        break;
-    case 15:
-        proficiencyBonus = 5;
-        break;
-    case 16:
-        proficiencyBonus = 5;
-        break;
-    case 17:
-        proficiencyBonus = 6;
-        break;
-    case 18:
-        proficiencyBonus = 6;
-        break;
-    case 19:
-        proficiencyBonus = 6;
-        break;
-    case 20:
-        proficiencyBonus = 6;
-        break;
-    default:
-        proficiencyBonus = 2;
-        break;
-};
-
-//function for displaying features by level
-function showClassDetails() {
-    characterClass = document.querySelector('input[name="class"]:checked').value;
-    document.getElementById("showClassDetails").innerHTML = "";
-    if (characterClass === "artificer") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += artificerFeaturesByLevel[i];
-        }
-    } else if (characterClass === "barbarian") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += barbarianFeaturesByLevel[i];
-        }
-    } else if (characterClass === "cleric") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += clericFeaturesByLevel[i];
-        }
-    } else if (characterClass === "druid") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += druidFeaturesByLevel[i];
-        }
-    } else if (characterClass === "fighter") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += fighterFeaturesByLevel[i];
-        }
-    } else if (characterClass === "monk") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += monkFeaturesByLevel[i];
-        }
-    } else if (characterClass === "mystic") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += mysticFeaturesByLevel[i];
-        }
-    } else if (characterClass === "paladin") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += paladinFeaturesByLevel[i];
-        }
-    } else if (characterClass === "ranger") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += rangerFeaturesByLevel[i];
-        }
-    } else if (characterClass === "rogue") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += rogueFeaturesByLevel[i];
-        }
-    } else if (characterClass === "sorcerer") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += sorcererFeaturesByLevel[i];
-        }
-    } else if (characterClass === "warlock") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += warlockFeaturesByLevel[i];
-        }
-    } else if (characterClass === "wizard") {
-        for (let i = 0; i < characterLevel; i++) {
-            document.getElementById("showClassDetails").innerHTML += wizardFeaturesByLevel[i];
-        }
-    }
-    console.log(characterClass);
-}
-
-
-/* let abilityScores = [{
-    name: "Strength",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}, {
-    name: "Dexterity",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}, {
-    name: "Constitution",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}, {
-    name: "Intelligence",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}, {
-    name: "Wisdom",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}, {
-    name: "Charisma",
-    value: 8,
-    mod: ()=> { return Math.floor((this.value - 10) / 2); },
-    saveMod: ()=> { return this.mod() + proficiencyBonus; }
-}]; */
-
-
-
-function setWarlockSubclass(subclass) {
-    if (target && target.matches("#archfey")) {
-        characterSubClass = "(Archfey)";
-        document.getElementById("warlockOrigin").innerHTML = archfey;
-    } else if (target && target.matches("#celestial")) {
-        characterSubClass = "(Celestial)";
-        document.getElementById("warlockOrigin").innerHTML = celestial;
-    } else if (target && target.matches("#fathomless")) {
-        characterSubClass = "(Fathomless)";
-        document.getElementById("warlockOrigin").innerHTML = fathomless;
-    } else if (target && target.matches("#fiend")) {
-        characterSubClass = "(Fiend)";
-        document.getElementById("warlockOrigin").innerHTML = fiend;
-    } else if (target && target.matches("#genie")) {
-        characterSubClass = "(Genie)";
-        document.getElementById("warlockOrigin").innerHTML = genie;
-    } else if (target && target.matches("#greatOldOne")) {
-        characterSubClass = "(Great Old One)";
-        document.getElementById("warlockOrigin").innerHTML = greatOldOne;
-    } else if (target && target.matches("#hexBlade")) {
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-    } else if (target && target.matches("#ravenQueen")) {
-        characterSubClass = "(Raven Queen)";
-        document.getElementById("warlockOrigin").innerHTML = ravenQueen;
-    } else if (target && target.matches("#seeker")) {
-        characterSubClass = "(Seeker)";
-        document.getElementById("warlockOrigin").innerHTML = seeker;
-    } else if (target && target.matches("#undead")) {
-        characterSubClass = "(Undead)";
-        document.getElementById("warlockOrigin").innerHTML = undead;
-    } else if (target && target.matches("#undying")) {
-        characterSubClass = "(Undying)";
-        document.getElementById("warlockOrigin").innerHTML = undying;
-    } else {
-        return;
-    }
-    document.getElementById("summarySubClass").textContent = characterSubClass;
-}
-
-switch (subclass) {
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    case "hexBlade":
-        characterSubClass = "(Hexblade)";
-        document.getElementById("warlockOrigin").innerHTML = hexBlade;
-        break;
-    default:
-        break;
-}
-
-function getCharacterArmorClass() {
-    if (characterClass === "Monk" && hasShield === false) {
-        characterArmorClass = 10 + dexterityMod + WisdomMod;
-        return characterArmorClass;
-    } else if (characterClass === "Barbarian") {
-        characterArmorClass = 10 + dexterityMod + ConstitutionMod;
-        return characterArmorClass;
-    } else if (hasShield && armorType == "Heavy") {
-        characterArmorClass = armorClass + 2;
-        return characterArmorClass;
-    } else if (hasShield && armorType == "Medium") {
-        /* function clamp(dexterityMod) {
-            let acCalcDexMod = Math.min(Math.max(-4, dexterityMod), 2);
-            return acCalcDexMod;
-        }
-        let acCalcDexMod = clamp(dexterityMod); function version of Medium armor Dex Mod Maxmimum*/
-        characterArmorClass = armorClass + Math.min(Math.max(-4, dexterityMod), 2) + 2; //shorter more concise version
-        return characterArmorClass;
-    } else if (hasShield && armorType == "Light") {
-        characterArmorClass = armorClass + dexterityMod + 2;
-        return characterArmorClass;
-    } else {
-        characterArmorClass = 10 + dexterityMod;
-        return characterArmorClass;
-    }
-}
-
-
-let armorType = armor[4].armorType; // to save specific armor's type for AC calc
-//console.log(armorType);
-let armorClass = armor[4].armorClass; // to save specific armor's class for AC calc
-//console.log(armorClass);
-
-for (let i = 0; i < armor.length; i++) {
-    console.table(armor[i]);
+</div>`, ` `]
 }

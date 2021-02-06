@@ -1,4 +1,4 @@
-let proficiencyBonus = 2;
+let proficiencyBonus;
 //------------------------------STATS--------------------------------------
 let abilityScores = [{
     name: "Strength",
@@ -50,7 +50,7 @@ const WARLOCK = 'Warlock';
 const WIZARD = 'Wizard';
 
 //Level
-let characterLevel = 1;
+let characterLevel = 20;
 
 // Name
 let characterName = "Your character doesnt have a name yet";
