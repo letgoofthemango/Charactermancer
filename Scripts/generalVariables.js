@@ -50,19 +50,19 @@ const WARLOCK = 'Warlock';
 const WIZARD = 'Wizard';
 
 //Level
-let characterLevel = 20;
+let characterLevel = 1;
 
 // Name
 let characterName = "Your character doesnt have a name yet";
 
 //AC
 let characterArmorClass;
-let armorClass = 12;
-let armorType = "Medium";
-let hasShield = true;
+let armorClass;
+let armorType;
+let hasShield = false;
 
 //Background
-let characterBackground = " ";
+let characterBackground = "";
 
 //Speed
 let characterSpeed = "";
@@ -321,5 +321,5 @@ document.getElementById("characterOverview").addEventListener("click", function 
     abilityScores[3].value = 20;
     abilityScores[4].value = 20;
     abilityScores[5].value = 20;
-    App.update();
+    Character.fullCharacterUpdate();
 });

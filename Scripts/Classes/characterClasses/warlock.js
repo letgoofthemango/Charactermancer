@@ -73,11 +73,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <!-- -------------------------beginning table div-->
 <table class="table-striped table-hover cls-tbl shadow-big w-100 mb-2">
     <tbody>
-        <tr>
-            <th colspan="3"></th>
-            <!-- spacer to match the 3 default cols (level, prof, features) -->
-            <th colspan="5"></th>
-        </tr>
+        <tr></tr>
         <tr>
             <th>Level</th>
             <th>Proficiency Bonus</th>
@@ -1541,51 +1537,63 @@ following spells are added to the warlock spell list for you.</p>
 
     static setWarlockSubclass(subclass) {
         const patron = document.getElementById("warlockPatron");
+        const featurepatron = document.getElementById("patron");
         characterSubClass = null;
         switch (subclass) {
             case "archfey":
                 characterSubClass = "(Archfey)";
                 patron.innerHTML = this.archfey;
+                featurepatron.innerHTML = ": Archfey";
                 break;
             case "celestial":
                 characterSubClass = "(Celestial)";
                 patron.innerHTML = this.celestial;
+                featurepatron.innerHTML = ": Celestial";
                 break;
             case "fathomless":
                 characterSubClass = "(Fathomless)";
                 patron.innerHTML = this.fathomless;
+                featurepatron.innerHTML = ": Fathomless";
                 break;
             case "fiend":
                 characterSubClass = "(Fiend)";
                 patron.innerHTML = this.fiend;
+                featurepatron.innerHTML = ": Fiend";
                 break;
             case "genie":
                 characterSubClass = "(Genie)";
                 patron.innerHTML = this.genie;
+                featurepatron.innerHTML = ": Genie";
                 break;
             case "greatOldOne":
                 characterSubClass = "(Great Old One)";
                 patron.innerHTML = this.greatOldOne;
+                featurepatron.innerHTML = ": Great Old One";
                 break;
             case "hexBlade":
                 characterSubClass = "(Hexblade)";
                 patron.innerHTML = this.hexBlade;
+                featurepatron.innerHTML = ": Hexblade";
                 break;
             case "ravenQueen":
                 characterSubClass = "(Raven Queen)";
                 patron.innerHTML = this.ravenQueen;
+                featurepatron.innerHTML = ": Raven Queen";
                 break;
             case "seeker":
                 characterSubClass = "(Seeker)";
                 patron.innerHTML = this.seeker;
+                featurepatron.innerHTML = ": Seeker";
                 break;
             case "undead":
                 characterSubClass = "(Undead)";
                 patron.innerHTML = this.undead;
+                featurepatron.innerHTML = ": Undead";
                 break;
             case "undying":
                 characterSubClass = "(Undying)";
                 patron.innerHTML = this.undying;
+                featurepatron.innerHTML = ": Undying";
                 break;
             default:
                 break;
@@ -1594,10 +1602,8 @@ following spells are added to the warlock spell list for you.</p>
     }
 
     static warlockFeaturesList = [
-        [`<li>
-    Otherworldly Patron <span id="patron">TEST</span>
-    </li><li>
-    Pact Magic</li>`],
+        [`<li>Otherworldly Patron<span id="patron"></span></li>
+        <li>Pact Magic</li>`],
         [2],
         [3],
         [4],

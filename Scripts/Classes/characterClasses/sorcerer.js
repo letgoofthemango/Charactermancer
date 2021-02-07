@@ -469,16 +469,16 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featureOrigin">
             <p>Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p>
             <div class="d-flex justify-content-around row">
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="aberrant">Aberrant Mind</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="clockwork">Clockwork soul</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="divine">Divine Soul</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="draconic">Draconic</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="sea">Sea</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="shadow">Shadow</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="storm">Storm</button>
-                <button onclick="setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="wild">Wild magic</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="aberrant">Aberrant Mind</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="clockwork">Clockwork soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="divine">Divine Soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="draconic">Draconic</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="sea">Sea</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="shadow">Shadow</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="storm">Storm</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="wild">Wild magic</button>
             </div>
             <div id="sorcOrigin" class="choiceBG"></div>
         </div>
@@ -1829,47 +1829,59 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
     //Sorcerer origins
     static setSorcererSubclass(subclass) {
         const origin = document.getElementById("sorcOrigin");
+        const featureOrigin = document.getElementById("origin");
+        featureOrigin.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
             case "aberrant":
                 characterSubClass = "(Aberrant Mind)";
                 origin.innerHTML = this.aberrant;
+                featureOrigin.innerHTML = ": Aberrant Mind";
                 break;
             case "clockwork":
                 characterSubClass = "(Clockwork Soul)";
                 origin.innerHTML = this.clockwork;
+                featureOrigin.innerHTML = ": Clockwork Soul";
                 break;
             case "divine":
                 characterSubClass = "(Divine Soul)";
                 origin.innerHTML = this.divine;
+                featureOrigin.innerHTML = ": Divine Soul";
                 break;
             case "draconic":
                 characterSubClass = "(Draconic)";
                 origin.innerHTML = this.draconic;
+                featureOrigin.innerHTML = ": Draconic";
                 break;
             case "giant":
                 characterSubClass = "(Giant Soul)";
                 origin.innerHTML = this.giant;
+                featureOrigin.innerHTML = ": Giant Soul";
                 break;
             case "phoenix":
                 characterSubClass = "(Phoenix)";
                 origin.innerHTML = this.phoenix;
+                featureOrigin.innerHTML = ": Phoenix";
                 break;
             case "sea":
                 characterSubClass = "(Sea)";
                 origin.innerHTML = this.sea;
+                featureOrigin.innerHTML = ": Sea";
                 break;
             case "shadow":
                 characterSubClass = "(Shadow)";
                 origin.innerHTML = this.shadow;
+                featureOrigin.innerHTML = ": Shadow";
                 break;
             case "storm":
                 characterSubClass = "(Storm)";
                 origin.innerHTML = this.storm;
+                featureOrigin.innerHTML = ": Storm";
                 break;
             case "wild":
                 characterSubClass = "(Wild Magic)";
                 origin.innerHTML = this.wild;
+                featureOrigin.innerHTML = ": Wild Magic";
                 break;
             default:
                 break;
@@ -1879,7 +1891,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 
     static sorcererFeaturesList = [
         [`<li>
-    Sorcerous Origin <span id="origin">TEST</span>
+    Sorcerous Origin<span id="origin"></span>
     </li><li>
     Spellcasting</li>`],
         [2],

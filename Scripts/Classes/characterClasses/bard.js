@@ -499,11 +499,8 @@ class Bard extends Character {
     </div>
 </div>`, `<p>bard 2`, `<p>bard 3`, `<p>bard 4`, `<p>bard 5`, `<p>bard 6`, `<p>bard 7`, `<p>bard 8`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`, `<p>bard 3`, `<p>bard 2`];
     static bardFeaturesList = [
-        [`<li>
-    Bardic Inspiration
-    </li><li>
-    Spellcasting
-    </li>`],
+        [`<li>Bardic Inspiration (d6)</li>
+        <li>Spellcasting</li>`],
         [2],
         [3],
         [4],

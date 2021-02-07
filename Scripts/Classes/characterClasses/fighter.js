@@ -343,7 +343,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
             <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
             <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two-Weapon-Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two Weapon Fighting</button>
             <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
         </div>
         <div id="fightingStyle" class="choiceBG"></div>
@@ -404,76 +404,88 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 <p>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>`;
     static setFightingStyle(style) {
         const fightingStyle = document.getElementById("fightingStyle");
-        characterSubClass = null;
+        const featureFStyle = document.getElementById("fStyle");
+        featureFStyle.innerHTML = "";
+        characterFightingStyle = null;
         switch (style) {
             case "archery":
-                characterFightingStyle = "(Archery)";
+                characterFightingStyle = "Archery";
                 fightingStyle.innerHTML = this.archery;
+                featureFStyle.innerHTML = ": Archery";
                 break;
             case "blind":
-                characterFightingStyle = "(Blind Fighting)";
+                characterFightingStyle = "Blind Fighting";
                 fightingStyle.innerHTML = this.blindFighting;
+                featureFStyle.innerHTML = ": Blind Fighting";
                 break;
             case "closeQuarter":
-                characterFightingStyle = "(Close Quarters Shooter)";
+                characterFightingStyle = "Close Quarters Shooter";
                 fightingStyle.innerHTML = this.closeQuartersShooter;
+                featureFStyle.innerHTML = ": Close Quarters Shooter";
                 break;
             case "defense":
-                characterFightingStyle = "(Defense)";
+                characterFightingStyle = "Defense";
                 fightingStyle.innerHTML = this.defense;
+                featureFStyle.innerHTML = ": Defense";
                 break;
             case "dueling":
-                characterFightingStyle = "(Dueling)";
+                characterFightingStyle = "Dueling";
                 fightingStyle.innerHTML = this.dueling;
+                featureFStyle.innerHTML = ": Dueling";
                 break;
             case "great":
-                characterFightingStyle = "(Great Weapon Fighting)";
+                characterFightingStyle = "Great Weapon Fighting";
                 fightingStyle.innerHTML = this.greatWeaponFighting;
+                featureFStyle.innerHTML = ": Great Weapon Fighting";
                 break;
             case "interception":
-                characterFightingStyle = "(Interception)";
+                characterFightingStyle = "Interception";
                 fightingStyle.innerHTML = this.interception;
+                featureFStyle.innerHTML = ": Interception";
                 break;
             case "mariner":
-                characterFightingStyle = "(Mariner)";
+                characterFightingStyle = "Mariner";
                 fightingStyle.innerHTML = this.mariner;
+                featureFStyle.innerHTML = ": Mariner";
                 break;
             case "protection":
-                characterFightingStyle = "(Protection)";
+                characterFightingStyle = "Protection";
                 fightingStyle.innerHTML = this.protection;
+                featureFStyle.innerHTML = ": Protection";
                 break;
             case "superior":
-                characterFightingStyle = "(Superior Technique)";
+                characterFightingStyle = "Superior Technique";
                 fightingStyle.innerHTML = this.superiorTechnique;
+                featureFStyle.innerHTML = ": Superior Technique";
                 break;
             case "thrown":
-                characterFightingStyle = "(Thrown Weapon Fighting)";
+                characterFightingStyle = "Thrown Weapon Fighting";
                 fightingStyle.innerHTML = this.thrownWeaponFighting;
+                featureFStyle.innerHTML = ": Thrown Weapon Fighting";
                 break;
             case "tunnel":
-                characterFightingStyle = "(Tunnel Fighter)";
+                characterFightingStyle = "Tunnel Fighter";
                 fightingStyle.innerHTML = this.tunnelFighter;
+                featureFStyle.innerHTML = ": Tunnel Fighter";
                 break;
             case "twoWeapon":
-                characterFightingStyle = "(Two Weapon Fighting)";
+                characterFightingStyle = "Two Weapon Fighting";
                 fightingStyle.innerHTML = this.twoWeaponFighting;
+                featureFStyle.innerHTML = ": Two Weapon Fighting";
                 break;
             case "unarmed":
-                characterFightingStyle = "(Unarmed Fighting)";
+                characterFightingStyle = "Unarmed Fighting";
                 fightingStyle.innerHTML = this.unarmedFighting;
+                featureFStyle.innerHTML = ": Unarmed Fighting";
                 break;
             default:
                 break;
         }
-        subClassNode.textContent = characterFightingStyle;
     };
 
     static fighterFeaturesList = [
-        [`<li>
-    Fighting style <span id="fStyle">TEST</span>
-    </li><li>
-    Second Wind
-    </li>`],
+        [`<li>Fighting style<span id="fStyle"></span></li>
+        <li>Second Wind</li>`],
         [2],
         [3],
         [4],

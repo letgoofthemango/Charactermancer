@@ -77,7 +77,6 @@ class Character {
                 );
             }
             document.getElementById("skillsID" + i).textContent = App.getNumber(skills[i].mod);
-            console.log(proficiencyBonus);
         }
     }
 
@@ -154,6 +153,14 @@ class Character {
         this.updateLanguageProficiencies();
         this.updateInitiative();
         this.updatePassivePerception();
+        console.log("UPDATE");
+    }
+
+    static resetSkillColors(){
+        const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
+        for (const i of classSkills) {
+            i.classList.remove("toBeAdded");
+        }
     }
 
 

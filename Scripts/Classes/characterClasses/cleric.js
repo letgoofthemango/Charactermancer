@@ -526,12 +526,10 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     </div>
 
 </div>`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 4`, `<p>cleric 5`, `<p>cleric 6`, `<p>cleric 7`, `<p>cleric 8`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`, `<p>cleric 3`, `<p>cleric 2`];
+
     static clericFeaturesList = [
-        [`<li>
-    Divine Domain <span id="domain">TEST</span>
-    </li><li>
-    Spellcasting
-    </li>`],
+        [`<li>Divine Domain<span id="domain"></span></li>
+        <li>Spellcasting</li>`],
         [2],
         [3],
         [4],
@@ -552,6 +550,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         [19],
         [20]
     ];
+
+
     static arcanaDomain = `<h4 class="text-center">Arcana Domain<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#arcanaCollapse" aria-expanded="true" aria-controls="arcanaCollapse">[-]</button></span></h4>
         <div class="collapse show" id="arcanaCollapse">
             <p>Magic is an energy that suffuses the multiverse and that fuels both destruction and creation. Gods of the Arcana domain know the secrets and potential of magic intimately. For some of these gods, magical knowledge is a great responsibility
@@ -595,7 +595,72 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <hr>
 
             <div class="collapse show" id="featureArcaneInitiate">
-                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips.</p>
+                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips. 
+                <label for="arcanaCantrip1">Cantrip one:</label>
+                <select class="custom-select-sm" id="arcanaCantrip1">
+                    <option value="Acid Splash">Acid Splash</option>
+                    <option value="Blade Ward">Blade Ward</option>
+                    <option value="Booming Blade">Booming Blade</option>
+                    <option value="Chill Touch">Chill Touch</option>
+                    <option value="Control Flames">Control Flames</option>
+                    <option value="Create Bonfire">Create Bonfire</option>
+                    <option value="Dancing Lights">Dancing Lights</option>
+                    <option value="Fire Bolt">Fire Bolt</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Frostbite">Frostbite</option>
+                    <option value="Green-Flame Blade">Green-Flame Blade</option>
+                    <option value="Gust">Gust</option>
+                    <option value="Infestation">Infestation</option>
+                    <option value="Light">Light</option>
+                    <option value="Lightning Lure">Lightning Lure</option></p>
+                    <option value="Mage Hand">Mage Hand</option></p>
+                    <option value="Mending">Mending</option></p>
+                    <option value="Message">Message</option></p>
+                    <option value="Minor Illusion">Minor Illusion</option></p>
+                    <option value="Mold Earth">Mold Earth</option></p>
+                    <option value="Poison Spray">Poison Spray</option></p>
+                    <option value="Prestidigitation">Prestidigitation</option></p>
+                    <option value="Ray of Frost">Ray of Frost</option></p>
+                    <option value="Shape Water">Shape Water</option></p>
+                    <option value="Shocking Grasp">Shocking Grasp</option></p>
+                    <option value="Sword Burst">Sword Burst</option></p>
+                    <option value="Thunderclap">Thunderclap</option></p>
+                    <option value="Toll the Dead">Toll the Dead</option></p>
+                    <option value="True Strike">True Strike</option></p>
+                </select>
+                
+                <label for="arcanaCantrip2">Cantrip two:</label>
+                <select class="custom-select-sm" id="arcanaCantrip2">
+                    <option value="Acid Splash">Acid Splash</option>
+                    <option value="Blade Ward">Blade Ward</option>
+                    <option value="Booming Blade">Booming Blade</option>
+                    <option value="Chill Touch">Chill Touch</option>
+                    <option value="Control Flames">Control Flames</option>
+                    <option value="Create Bonfire">Create Bonfire</option>
+                    <option value="Dancing Lights">Dancing Lights</option>
+                    <option value="Fire Bolt">Fire Bolt</option>
+                    <option value="Friends">Friends</option>
+                    <option value="Frostbite">Frostbite</option>
+                    <option value="Green-Flame Blade">Green-Flame Blade</option>
+                    <option value="Gust">Gust</option>
+                    <option value="Infestation">Infestation</option>
+                    <option value="Light">Light</option>
+                    <option value="Lightning Lure">Lightning Lure</option></p>
+                    <option value="Mage Hand">Mage Hand</option></p>
+                    <option value="Mending">Mending</option></p>
+                    <option value="Message">Message</option></p>
+                    <option value="Minor Illusion">Minor Illusion</option></p>
+                    <option value="Mold Earth">Mold Earth</option></p>
+                    <option value="Poison Spray">Poison Spray</option></p>
+                    <option value="Prestidigitation">Prestidigitation</option></p>
+                    <option value="Ray of Frost">Ray of Frost</option></p>
+                    <option value="Shape Water">Shape Water</option></p>
+                    <option value="Shocking Grasp">Shocking Grasp</option></p>
+                    <option value="Sword Burst">Sword Burst</option></p>
+                    <option value="Thunderclap">Thunderclap</option></p>
+                    <option value="Toll the Dead">Toll the Dead</option></p>
+                    <option value="True Strike">True Strike</option></p>
+                </select>
             </div>
 
 
@@ -1955,69 +2020,96 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     </div>
 </div>`;
 
+    static setClericSkillColors() {
+        const clericSkills = document.querySelectorAll('#summaryHistory, #summaryInsight, #summaryMedicine, #summaryPersuasion, #summaryReligion');
+        for (const i of clericSkills) {
+            i.classList.add("toBeAdded");
+        }
+    }
+
     static setClericSubclass(subclass) {
         const domain = document.getElementById("clericDomain");
+        const featureDomain = document.getElementById("domain");
+        Character.resetSkillColors();
+        Cleric.setClericSkillColors();
+        featureDomain.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
             case "arcana":
                 characterSubClass = "(Arcana)";
                 domain.innerHTML = this.arcanaDomain;
+                featureDomain.innerHTML = ": Arcana";
+                arcanaNode.classList.add("toBeAdded");
                 break;
             case "death":
                 characterSubClass = "(Death)";
                 domain.innerHTML = this.deathDomain;
+                featureDomain.innerHTML = ": Death";
                 break;
             case "forge":
                 characterSubClass = "(Forge)";
                 domain.innerHTML = this.forgeDomain;
+                featureDomain.innerHTML = ": Forge";
                 break;
             case "grave":
                 characterSubClass = "(Grave)";
                 domain.innerHTML = this.graveDomain;
+                featureDomain.innerHTML = ": Grave";
                 break;
             case "knowledge":
                 characterSubClass = "(Knowledge)";
                 domain.innerHTML = this.knowledgeDomain;
+                featureDomain.innerHTML = ": Knowledge";
                 break;
             case "life":
                 characterSubClass = "(Life)";
                 domain.innerHTML = this.lifeDomain;
+                featureDomain.innerHTML = ": Life";
                 break;
             case "light":
                 characterSubClass = "(Light)";
                 domain.innerHTML = this.lightDomain;
+                featureDomain.innerHTML = ": Light";
                 break;
             case "nature":
                 characterSubClass = "(Nature)";
                 domain.innerHTML = this.natureDomain;
+                featureDomain.innerHTML = ": Nature";
                 break;
             case "order":
                 characterSubClass = "(Order)";
                 domain.innerHTML = this.orderDomain;
+                featureDomain.innerHTML = ": Order";
                 break;
             case "peace":
                 characterSubClass = "(Peace)";
                 domain.innerHTML = this.peaceDomain;
+                featureDomain.innerHTML = ": Peace";
                 break;
             case "protection":
                 characterSubClass = "(Protection)";
                 domain.innerHTML = this.protectionDomain;
+                featureDomain.innerHTML = ": Protection";
                 break;
             case "tempest":
                 characterSubClass = "(Tempest)";
                 domain.innerHTML = this.tempestDomain;
+                featureDomain.innerHTML = ": Tempest";
                 break;
             case "trickery":
                 characterSubClass = "(Trickery)";
                 domain.innerHTML = this.trickeryDomain;
+                featureDomain.innerHTML = ": Trickery";
                 break;
             case "twilight":
                 characterSubClass = "(Twilight)";
                 domain.innerHTML = this.twilightDomain;
+                featureDomain.innerHTML = ": Twilight";
                 break;
             case "war":
                 characterSubClass = "(War)";
                 domain.innerHTML = this.warDomain;
+                featureDomain.innerHTML = ": War";
                 break;
             default:
                 break;

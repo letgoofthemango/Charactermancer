@@ -102,7 +102,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         <tr>
             <td>1st</td>
             <td>+2</td>
-            <td><span>Unarmored Defense,<span>Martial Arts</span></td>
+            <td><span>Unarmored Defense, <span>Martial Arts</span></td>
             <td>1d4</td>
             <td>—</td>
             <td>—</td>
@@ -150,7 +150,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         <tr>
             <td>7th</td>
             <td>+3</td>
-            <td><span>Evasion,</span><span>Stillness of Mind</span></td>
+            <td><span>Evasion, </span><span>Stillness of Mind</span></td>
             <td>1d6</td>
             <td>7</td>
             <td>+15 ft.</td>
