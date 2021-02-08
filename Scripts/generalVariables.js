@@ -313,6 +313,12 @@ const mainNode = document.getElementById("displayContent");
 const overviewNode = document.getElementById("characterOverview");
 
 
+var request = new XMLHttpRequest();
+request.open("GET", "Scripts/spells.json", false);
+request.send(null)
+var my_JSON_object = JSON.parse(request.responseText);
+console.log(my_JSON_object);
+
 
 document.getElementById("characterOverview").addEventListener("click", function () {
     abilityScores[0].value = 20;
