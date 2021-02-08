@@ -1,5 +1,5 @@
 let spells = new Map([
-    ["", [{
+    ["HorridWilting", [{
         name: "Abi-Dalzim's Horrid Wilting",
         source: "XGE",
         level: "8th",
@@ -13,7 +13,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["AbsorbElements", [{
         name: "Absorb Elements",
         source: "XGE",
         level: "1st",
@@ -27,7 +27,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["AcidSplash", [{
         name: "Acid Splash",
         source: "PHB",
         level: "Cantrip",
@@ -41,7 +41,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Aganazzar", [{
         name: "Aganazzar's Scorcher",
         source: "XGE",
         level: "2nd",
@@ -55,7 +55,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Aid", [{
         name: "Aid",
         source: "PHB",
         level: "2nd",
@@ -69,7 +69,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Alarm", [{
         name: "Alarm",
         source: "PHB",
         level: "1st",
@@ -83,7 +83,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["AlterSelf", [{
         name: "Alter Self",
         source: "PHB",
         level: "2nd",
@@ -97,7 +97,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["AnimalFriendship", [{
         name: "Animal Friendship",
         source: "PHB",
         level: "1st",
@@ -111,7 +111,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["AnimalMessenger", [{
         name: "Animal Messenger",
         source: "PHB",
         level: "2nd",
@@ -125,7 +125,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 3rd level or higher, the duration of the spell increases by 48 hours for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["AnimalShapes", [{
         name: "Animal Shapes",
         source: "PHB",
         level: "8th",
@@ -139,7 +139,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Animate Dead", [{
         name: "Animate Dead",
         source: "PHB",
         level: "3rd",
@@ -153,7 +153,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones."
     }]],
 
-    ["", [{
+    ["Animate Objects", [{
         name: "Animate Objects",
         source: "PHB",
         level: "5th",
@@ -167,7 +167,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 6th level or higher, you can animate two additional objects for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Antilife Shell", [{
         name: "Antilife Shell",
         source: "PHB",
         level: "5th",
@@ -181,7 +181,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Antimagic Field", [{
         name: "Antimagic Field",
         source: "PHB",
         level: "8th",
@@ -195,7 +195,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Antipathy", [{
         name: "Antipathy/Sympathy",
         source: "PHB",
         level: "8th",
@@ -209,7 +209,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Arcane Eye", [{
         name: "Arcane Eye",
         source: "PHB",
         level: "4th",
@@ -223,7 +223,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Arcane Gate", [{
         name: "Arcane Gate",
         source: "PHB",
         level: "6th",
@@ -237,7 +237,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Arcane Lock", [{
         name: "Arcane Lock",
         source: "PHB",
         level: "2nd",
@@ -251,7 +251,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Armor of Agathys", [{
         name: "Armor of Agathys",
         source: "PHB",
         level: "1st",
@@ -265,7 +265,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Arms of Hadar", [{
         name: "Arms of Hadar",
         source: "PHB",
         level: "1st",
@@ -279,7 +279,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Astral Projection", [{
         name: "Astral Projection",
         source: "PHB",
         level: "9th",
@@ -293,7 +293,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Augury", [{
         name: "Augury",
         source: "PHB",
         level: "2nd",
@@ -307,7 +307,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Aura of Life", [{
         name: "Aura of Life",
         source: "PHB",
         level: "4th",
@@ -321,7 +321,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Aura of Purity", [{
         name: "Aura of Purity",
         source: "PHB",
         level: "4th",
@@ -335,7 +335,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Aura of Vitality", [{
         name: "Aura of Vitality",
         source: "PHB",
         level: "3rd",
@@ -349,7 +349,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Awaken", [{
         name: "Awaken",
         source: "PHB",
         level: "5th",
@@ -363,7 +363,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Bane", [{
         name: "Bane",
         source: "PHB",
         level: "1st",
@@ -377,7 +377,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Banishing Smite", [{
         name: "Banishing Smite",
         source: "PHB",
         level: "5th",
@@ -391,7 +391,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Banishment", [{
         name: "Banishment",
         source: "PHB",
         level: "4th",
@@ -405,7 +405,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Barkskin", [{
         name: "Barkskin",
         source: "PHB",
         level: "2nd",
@@ -419,7 +419,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Beacon of Hope", [{
         name: "Beacon of Hope",
         source: "PHB",
         level: "3rd",
@@ -433,7 +433,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Beast Bond", [{
         name: "Beast Bond",
         source: "XGE",
         level: "1st",
@@ -447,7 +447,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Beast Sense", [{
         name: "Beast Sense",
         source: "PHB",
         level: "2nd",
@@ -461,7 +461,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Bestow Curse", [{
         name: "Bestow Curse",
         source: "PHB",
         level: "3rd",
@@ -475,7 +475,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration."
     }]],
 
-    ["", [{
+    ["Bigby's Hand", [{
         name: "Bigby's Hand",
         source: "PHB",
         level: "5th",
@@ -489,7 +489,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage from the clenched fist option increases by 2d8 and the damage from the grasping hand increases by 2d6 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Blade Barrier", [{
         name: "Blade Barrier",
         source: "PHB",
         level: "6th",
@@ -503,7 +503,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Blade Ward", [{
         name: "Blade Ward",
         source: "PHB",
         level: "Cantrip",
@@ -517,7 +517,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Bless", [{
         name: "Bless",
         source: "PHB",
         level: "1st",
@@ -531,7 +531,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Blight", [{
         name: "Blight",
         source: "PHB",
         level: "4th",
@@ -545,7 +545,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Blinding Smite", [{
         name: "Blinding Smite",
         source: "PHB",
         level: "3rd",
@@ -559,7 +559,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Blindness", [{
         name: "Blindness/Deafness",
         source: "PHB",
         level: "2nd",
@@ -573,7 +573,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Blink", [{
         name: "Blink",
         source: "PHB",
         level: "3rd",
@@ -587,7 +587,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Blur", [{
         name: "Blur",
         source: "PHB",
         level: "2nd",
@@ -601,7 +601,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Bones of the Earth", [{
         name: "Bones of the Earth",
         source: "XGE",
         level: "6th",
@@ -615,7 +615,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Booming Blade", [{
         name: "Booming Blade",
         source: "TCE",
         level: "Cantrip",
@@ -629,7 +629,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Branding Smite", [{
         name: "Branding Smite",
         source: "PHB",
         level: "2nd",
@@ -643,7 +643,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the extra damage increases by 1d6 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Burning Hands", [{
         name: "Burning Hands",
         source: "PHB",
         level: "1st",
@@ -657,7 +657,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Call Lightning", [{
         name: "Call Lightning",
         source: "PHB",
         level: "3rd",
@@ -671,7 +671,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th or higher level, the damage increases by 1d10 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Calm Emotions", [{
         name: "Calm Emotions",
         source: "PHB",
         level: "2nd",
@@ -685,7 +685,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Catapult", [{
         name: "Catapult",
         source: "XGE",
         level: "1st",
@@ -699,7 +699,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by 1d8, for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Catnap", [{
         name: "Catnap",
         source: "XGE",
         level: "3rd",
@@ -713,7 +713,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Cause Fear", [{
         name: "Cause Fear",
         source: "XGE",
         level: "1st",
@@ -727,7 +727,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Ceremony", [{
         name: "Ceremony",
         source: "XGE",
         level: "1st",
@@ -741,7 +741,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Chain Lightning", [{
         name: "Chain Lightning",
         source: "PHB",
         level: "6th",
@@ -755,7 +755,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, one additional bolt leaps from the first target to another target for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Chaos Bolt", [{
         name: "Chaos Bolt",
         source: "XGE",
         level: "1st",
@@ -769,7 +769,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Charm Monster", [{
         name: "Charm Monster",
         source: "XGE",
         level: "4th",
@@ -783,7 +783,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Charm Person", [{
         name: "Charm Person",
         source: "PHB",
         level: "1st",
@@ -797,7 +797,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Chill Touch", [{
         name: "Chill Touch",
         source: "PHB",
         level: "Cantrip",
@@ -811,7 +811,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Chromatic Orb", [{
         name: "Chromatic Orb",
         source: "PHB",
         level: "1st",
@@ -825,7 +825,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Circle of Death", [{
         name: "Circle of Death",
         source: "PHB",
         level: "6th",
@@ -839,7 +839,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage increases by 2d6 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Circle of Power", [{
         name: "Circle of Power",
         source: "PHB",
         level: "5th",
@@ -853,7 +853,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Clairvoyance", [{
         name: "Clairvoyance",
         source: "PHB",
         level: "3rd",
@@ -867,7 +867,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Clone", [{
         name: "Clone",
         source: "PHB",
         level: "8th",
@@ -881,7 +881,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Cloud of Daggers", [{
         name: "Cloud of Daggers",
         source: "PHB",
         level: "2nd",
@@ -895,7 +895,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Cloudkill", [{
         name: "Cloudkill",
         source: "PHB",
         level: "5th",
@@ -909,7 +909,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Color Spray", [{
         name: "Color Spray",
         source: "PHB",
         level: "1st",
@@ -923,7 +923,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d10 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Command", [{
         name: "Command",
         source: "PHB",
         level: "1st",
@@ -937,7 +937,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Commune", [{
         name: "Commune",
         source: "PHB",
         level: "5th",
@@ -951,7 +951,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Commune with Nature", [{
         name: "Commune with Nature",
         source: "PHB",
         level: "5th",
@@ -965,7 +965,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Compelled Duel", [{
         name: "Compelled Duel",
         source: "PHB",
         level: "1st",
@@ -979,7 +979,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Comprehend Languages", [{
         name: "Comprehend Languages",
         source: "PHB",
         level: "1st",
@@ -993,7 +993,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Compulsion", [{
         name: "Compulsion",
         source: "PHB",
         level: "4th",
@@ -1007,7 +1007,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Cone of Cold", [{
         name: "Cone of Cold",
         source: "PHB",
         level: "5th",
@@ -1021,7 +1021,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Confusion", [{
         name: "Confusion",
         source: "PHB",
         level: "4th",
@@ -1035,7 +1035,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Conjure Animals", [{
         name: "Conjure Animals",
         source: "PHB",
         level: "3rd",
@@ -1049,7 +1049,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 5th-level slot, three times as many with a 7th-level slot, and four times as many with a 9th-level slot."
     }]],
 
-    ["", [{
+    ["Conjure Barrage", [{
         name: "Conjure Barrage",
         source: "PHB",
         level: "3rd",
@@ -1063,7 +1063,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Conjure Celestial", [{
         name: "Conjure Celestial",
         source: "PHB",
         level: "7th",
@@ -1077,7 +1077,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a 9th-level spell slot, you summon a celestial of challenge rating 5 or lower."
     }]],
 
-    ["", [{
+    ["Conjure Elemental", [{
         name: "Conjure Elemental",
         source: "PHB",
         level: "5th",
@@ -1091,7 +1091,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Conjure Fey", [{
         name: "Conjure Fey",
         source: "PHB",
         level: "6th",
@@ -1105,7 +1105,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the challenge rating increases by 1 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Conjure Minor Elementals", [{
         name: "Conjure Minor Elementals",
         source: "PHB",
         level: "4th",
@@ -1119,7 +1119,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
     }]],
 
-    ["", [{
+    ["Conjure Volley", [{
         name: "Conjure Volley",
         source: "PHB",
         level: "5th",
@@ -1133,7 +1133,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Conjure Woodland Beings", [{
         name: "Conjure Woodland Beings",
         source: "PHB",
         level: "4th",
@@ -1147,7 +1147,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using certain higher-level spell slots, you choose one of the summoning options above, and more creatures appear: twice as many with a 6th-level slot and three times as many with an 8th-level slot."
     }]],
 
-    ["", [{
+    ["Contact Other Plane", [{
         name: "Contact Other Plane",
         source: "PHB",
         level: "5th",
@@ -1161,7 +1161,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Contagion", [{
         name: "Contagion",
         source: "PHB",
         level: "5th",
@@ -1175,7 +1175,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Contingency", [{
         name: "Contingency",
         source: "PHB",
         level: "6th",
@@ -1189,7 +1189,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Continual Flame", [{
         name: "Continual Flame",
         source: "PHB",
         level: "2nd",
@@ -1203,7 +1203,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Control Flames", [{
         name: "Control Flames",
         source: "XGE",
         level: "Cantrip",
@@ -1217,7 +1217,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Control Water", [{
         name: "Control Water",
         source: "PHB",
         level: "4th",
@@ -1231,7 +1231,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Control Weather", [{
         name: "Control Weather",
         source: "PHB",
         level: "8th",
@@ -1245,7 +1245,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Control Winds", [{
         name: "Control Winds",
         source: "XGE",
         level: "5th",
@@ -1259,7 +1259,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Cordon of Arrows", [{
         name: "Cordon of Arrows",
         source: "PHB",
         level: "2nd",
@@ -1273,7 +1273,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the amount of ammunition that can be affected increases by two for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Counterspell", [{
         name: "Counterspell",
         source: "PHB",
         level: "3rd",
@@ -1287,7 +1287,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used."
     }]],
 
-    ["", [{
+    ["Create Bonfire", [{
         name: "Create Bonfire",
         source: "XGE",
         level: "Cantrip",
@@ -1301,7 +1301,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["CreateFood", [{
         name: "Create Food and Water",
         source: "PHB",
         level: "3rd",
@@ -1315,7 +1315,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Create Homunculus", [{
         name: "Create Homunculus",
         source: "XGE",
         level: "6th",
@@ -1329,7 +1329,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Create Magen", [{
         name: "Create Magen",
         source: "IDRotF",
         level: "7th",
@@ -1343,7 +1343,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Create Undead", [{
         name: "Create Undead",
         source: "PHB",
         level: "6th",
@@ -1357,7 +1357,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a 7th-level spell slot, you can animate or reassert control over four ghouls. When you cast this spell using an 8th-level spell slot, you can animate or reassert control over five ghouls or two ghasts or wights. When you cast this spell using a 9th-level spell slot, you can animate or reassert control over six ghouls, three ghasts or wights, or two mummies."
     }]],
 
-    ["", [{
+    ["CreateWater", [{
         name: "Create or Destroy Water",
         source: "PHB",
         level: "1st",
@@ -1371,7 +1371,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Creation", [{
         name: "Creation",
         source: "PHB",
         level: "5th",
@@ -1385,7 +1385,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the cube increases by 5 feet for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Crown of Madness", [{
         name: "Crown of Madness",
         source: "PHB",
         level: "2nd",
@@ -1399,7 +1399,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Crown of Stars", [{
         name: "Crown of Stars",
         source: "XGE",
         level: "7th",
@@ -1413,7 +1413,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th."
     }]],
 
-    ["", [{
+    ["Crusader's Mantle", [{
         name: "Crusader's Mantle",
         source: "PHB",
         level: "3rd",
@@ -1427,7 +1427,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Cure Wounds", [{
         name: "Cure Wounds",
         source: "PHB",
         level: "1st",
@@ -1441,7 +1441,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Dancing Lights", [{
         name: "Dancing Lights",
         source: "PHB",
         level: "Cantrip",
@@ -1455,7 +1455,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Danse Macabre", [{
         name: "Danse Macabre",
         source: "XGE",
         level: "5th",
@@ -1469,7 +1469,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you animate up to two additional corpses for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Darkness", [{
         name: "Darkness",
         source: "PHB",
         level: "2nd",
@@ -1483,7 +1483,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Darkvision", [{
         name: "Darkvision",
         source: "PHB",
         level: "2nd",
@@ -1497,7 +1497,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dawn", [{
         name: "Dawn",
         source: "XGE",
         level: "5th",
@@ -1511,7 +1511,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Daylight", [{
         name: "Daylight",
         source: "PHB",
         level: "3rd",
@@ -1525,7 +1525,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Death Ward", [{
         name: "Death Ward",
         source: "PHB",
         level: "4th",
@@ -1539,7 +1539,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Delayed Blast", [{
         name: "Delayed Blast Fireball",
         source: "PHB",
         level: "7th",
@@ -1553,7 +1553,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 8th level or higher, the base damage increases by 1d6 for each slot level above 7th."
     }]],
 
-    ["", [{
+    ["Demiplane", [{
         name: "Demiplane",
         source: "PHB",
         level: "8th",
@@ -1567,7 +1567,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Destructive Wave", [{
         name: "Destructive Wave",
         source: "PHB",
         level: "5th",
@@ -1581,7 +1581,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Detect Evil", [{
         name: "Detect Evil and Good",
         source: "PHB",
         level: "1st",
@@ -1595,7 +1595,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Detect Magic", [{
         name: "Detect Magic",
         source: "PHB",
         level: "1st",
@@ -1609,7 +1609,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Detect Poison", [{
         name: "Detect Poison and Disease",
         source: "PHB",
         level: "1st",
@@ -1623,7 +1623,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Detect Thoughts", [{
         name: "Detect Thoughts",
         source: "PHB",
         level: "2nd",
@@ -1637,7 +1637,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dimension Door", [{
         name: "Dimension Door",
         source: "PHB",
         level: "4th",
@@ -1651,7 +1651,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Disguise Self", [{
         name: "Disguise Self",
         source: "PHB",
         level: "1st",
@@ -1665,7 +1665,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Disintegrate", [{
         name: "Disintegrate",
         source: "PHB",
         level: "6th",
@@ -1679,7 +1679,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage increases by 3d6 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Dispel Evil", [{
         name: "Dispel Evil and Good",
         source: "PHB",
         level: "5th",
@@ -1693,7 +1693,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dispel Magic", [{
         name: "Dispel Magic",
         source: "PHB",
         level: "3rd",
@@ -1707,7 +1707,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used."
     }]],
 
-    ["", [{
+    ["Dissonant Whispers", [{
         name: "Dissonant Whispers",
         source: "PHB",
         level: "1st",
@@ -1721,7 +1721,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Distort Value", [{
         name: "Distort Value",
         source: "AI",
         level: "1st",
@@ -1735,7 +1735,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the maximum size of the object increases by 1 foot for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Divination", [{
         name: "Divination",
         source: "PHB",
         level: "4th",
@@ -1749,7 +1749,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Divine Favor", [{
         name: "Divine Favor",
         source: "PHB",
         level: "1st",
@@ -1763,7 +1763,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Divine Word", [{
         name: "Divine Word",
         source: "PHB",
         level: "7th",
@@ -1777,7 +1777,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dominate Beast", [{
         name: "Dominate Beast",
         source: "PHB",
         level: "4th",
@@ -1791,7 +1791,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell with a 5th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 6th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 7th level or higher, the duration is concentration, up to 8 hours."
     }]],
 
-    ["", [{
+    ["Dominate Monster", [{
         name: "Dominate Monster",
         source: "PHB",
         level: "8th",
@@ -1805,7 +1805,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell with a 9th-level spell slot, the duration is concentration, up to 8 hours."
     }]],
 
-    ["", [{
+    ["Dominate Person", [{
         name: "Dominate Person",
         source: "PHB",
         level: "5th",
@@ -1819,7 +1819,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours."
     }]],
 
-    ["", [{
+    ["Dragon's Breath", [{
         name: "Dragon's Breath",
         source: "XGE",
         level: "2nd",
@@ -1833,7 +1833,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Drawmij", [{
         name: "Drawmij's Instant Summons",
         source: "PHB",
         level: "6th",
@@ -1843,11 +1843,11 @@ let spells = new Map([
         range: "Touch",
         components: "V, S, M (a sapphire worth 1,000 gp)",
         classes: "Wizard",
-        text: "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.At any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment.Dispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
+        text: "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire. At any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends. If another creature is holding or carrying the item, crushing the sapphire doesn't transport the item to you, but instead you learn who the creature possessing the object is and roughly where that creature is located at that moment. Dispel magic or a similar effect successfully applied to the sapphire ends this spell's effect.",
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dream", [{
         name: "Dream",
         source: "PHB",
         level: "5th",
@@ -1861,7 +1861,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Druid Grove", [{
         name: "Druid Grove",
         source: "XGE",
         level: "6th",
@@ -1875,7 +1875,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Druidcraft", [{
         name: "Druidcraft",
         source: "PHB",
         level: "Cantrip",
@@ -1889,7 +1889,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Dust Devil", [{
         name: "Dust Devil",
         source: "XGE",
         level: "2nd",
@@ -1903,7 +1903,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Earth Tremor", [{
         name: "Earth Tremor",
         source: "XGE",
         level: "1st",
@@ -1917,7 +1917,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Earthbind", [{
         name: "Earthbind",
         source: "XGE",
         level: "2nd",
@@ -1931,7 +1931,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Earthquake", [{
         name: "Earthquake",
         source: "PHB",
         level: "8th",
@@ -1945,7 +1945,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Eldritch Blast", [{
         name: "Eldritch Blast",
         source: "PHB",
         level: "Cantrip",
@@ -1959,7 +1959,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Elemental Bane", [{
         name: "Elemental Bane",
         source: "XGE",
         level: "4th",
@@ -1973,7 +1973,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Elemental Weapon", [{
         name: "Elemental Weapon",
         source: "PHB",
         level: "3rd",
@@ -1987,7 +1987,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4. When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4."
     }]],
 
-    ["", [{
+    ["Enemies Abound", [{
         name: "Enemies Abound",
         source: "XGE",
         level: "3rd",
@@ -2001,7 +2001,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Enervation", [{
         name: "Enervation",
         source: "XGE",
         level: "5th",
@@ -2015,7 +2015,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Enhance Ability", [{
         name: "Enhance Ability",
         source: "PHB",
         level: "2nd",
@@ -2029,7 +2029,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Enlarge", [{
         name: "Enlarge/Reduce",
         source: "PHB",
         level: "2nd",
@@ -2043,7 +2043,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Ensnaring Strike", [{
         name: "Ensnaring Strike",
         source: "PHB",
         level: "1st",
@@ -2057,7 +2057,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Entangle", [{
         name: "Entangle",
         source: "PHB",
         level: "1st",
@@ -2071,7 +2071,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Enthrall", [{
         name: "Enthrall",
         source: "PHB",
         level: "2nd",
@@ -2085,7 +2085,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Erupting Earth", [{
         name: "Erupting Earth",
         source: "XGE",
         level: "3rd",
@@ -2099,7 +2099,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d12 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Etherealness", [{
         name: "Etherealness",
         source: "PHB",
         level: "7th",
@@ -2113,7 +2113,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 8th level or higher, you can target up to three willing creatures (including you) for each slot level above 7th. The creatures must be within 10 feet of you when you cast the spell."
     }]],
 
-    ["", [{
+    ["Evard", [{
         name: "Evard's Black Tentacles",
         source: "PHB",
         level: "4th",
@@ -2127,7 +2127,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Expeditious", [{
         name: "Expeditious Retreat",
         source: "PHB",
         level: "1st",
@@ -2141,7 +2141,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Eyebite", [{
         name: "Eyebite",
         source: "PHB",
         level: "6th",
@@ -2155,7 +2155,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fabricate", [{
         name: "Fabricate",
         source: "PHB",
         level: "4th",
@@ -2169,7 +2169,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Faerie", [{
         name: "Faerie Fire",
         source: "PHB",
         level: "1st",
@@ -2183,7 +2183,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["False", [{
         name: "False Life",
         source: "PHB",
         level: "1st",
@@ -2197,7 +2197,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Far Step", [{
         name: "Far Step",
         source: "XGE",
         level: "5th",
@@ -2211,7 +2211,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fast Friends", [{
         name: "Fast Friends",
         source: "AI",
         level: "3rd",
@@ -2225,7 +2225,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Fear", [{
         name: "Fear",
         source: "PHB",
         level: "3rd",
@@ -2239,7 +2239,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Feather", [{
         name: "Feather Fall",
         source: "PHB",
         level: "1st",
@@ -2253,7 +2253,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Feeblemind", [{
         name: "Feeblemind",
         source: "PHB",
         level: "8th",
@@ -2267,7 +2267,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Feign Death", [{
         name: "Feign Death",
         source: "PHB",
         level: "3rd",
@@ -2281,7 +2281,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Find Familiar", [{
         name: "Find Familiar",
         source: "PHB",
         level: "1st",
@@ -2295,7 +2295,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Find Greater Steed", [{
         name: "Find Greater Steed",
         source: "XGE",
         level: "4th",
@@ -2309,7 +2309,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Find Steed", [{
         name: "Find Steed",
         source: "PHB",
         level: "2nd",
@@ -2323,7 +2323,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Find Traps", [{
         name: "Find Traps",
         source: "PHB",
         level: "2nd",
@@ -2337,7 +2337,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["FindPath", [{
         name: "Find the Path",
         source: "PHB",
         level: "6th",
@@ -2351,7 +2351,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Finger of Death", [{
         name: "Finger of Death",
         source: "PHB",
         level: "7th",
@@ -2365,7 +2365,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fire Bolt", [{
         name: "Fire Bolt",
         source: "PHB",
         level: "Cantrip",
@@ -2379,7 +2379,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fire Shield", [{
         name: "Fire Shield",
         source: "PHB",
         level: "4th",
@@ -2393,7 +2393,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fire Storm", [{
         name: "Fire Storm",
         source: "PHB",
         level: "7th",
@@ -2407,7 +2407,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fireball", [{
         name: "Fireball",
         source: "PHB",
         level: "3rd",
@@ -2421,7 +2421,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Flame Arrows", [{
         name: "Flame Arrows",
         source: "XGE",
         level: "3rd",
@@ -2435,7 +2435,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Flame Blade", [{
         name: "Flame Blade",
         source: "PHB",
         level: "2nd",
@@ -2449,7 +2449,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for every two slot levels above 2nd."
     }]],
 
-    ["", [{
+    ["Flame Strike", [{
         name: "Flame Strike",
         source: "PHB",
         level: "5th",
@@ -2463,7 +2463,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the fire damage or the radiant damage (your choice) increases by 1d6 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Flaming Sphere", [{
         name: "Flaming Sphere",
         source: "PHB",
         level: "2nd",
@@ -2477,7 +2477,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Flesh to Stone", [{
         name: "Flesh to Stone",
         source: "PHB",
         level: "6th",
@@ -2491,7 +2491,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Fly", [{
         name: "Fly",
         source: "PHB",
         level: "3rd",
@@ -2505,7 +2505,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Fog Cloud", [{
         name: "Fog Cloud",
         source: "PHB",
         level: "1st",
@@ -2519,7 +2519,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the radius of the fog increases by 20 feet for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Forbiddance", [{
         name: "Forbiddance",
         source: "PHB",
         level: "6th",
@@ -2533,7 +2533,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Forcecage", [{
         name: "Forcecage",
         source: "PHB",
         level: "7th",
@@ -2547,7 +2547,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Foresight", [{
         name: "Foresight",
         source: "PHB",
         level: "9th",
@@ -2561,7 +2561,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Freedom of Movement", [{
         name: "Freedom of Movement",
         source: "PHB",
         level: "4th",
@@ -2575,7 +2575,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Friends", [{
         name: "Friends",
         source: "PHB",
         level: "Cantrip",
@@ -2589,7 +2589,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Frost Fingers", [{
         name: "Frost Fingers",
         source: "IDRotF",
         level: "1st",
@@ -2603,7 +2603,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Frostbite", [{
         name: "Frostbite",
         source: "XGE",
         level: "Cantrip",
@@ -2617,7 +2617,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Gaseous Form", [{
         name: "Gaseous Form",
         source: "PHB",
         level: "3rd",
@@ -2631,7 +2631,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Gate", [{
         name: "Gate",
         source: "PHB",
         level: "9th",
@@ -2645,7 +2645,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Geas", [{
         name: "Geas",
         source: "PHB",
         level: "5th",
@@ -2659,7 +2659,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th or 8th level, the duration is 1 year. When you cast this spell using a spell slot of 9th level, the spell lasts until it is ended by one of the spells mentioned above."
     }]],
 
-    ["", [{
+    ["Gentle Repose", [{
         name: "Gentle Repose",
         source: "PHB",
         level: "2nd",
@@ -2673,7 +2673,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Giant Insect", [{
         name: "Giant Insect",
         source: "PHB",
         level: "4th",
@@ -2687,7 +2687,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Gift of Gab", [{
         name: "Gift of Gab",
         source: "AI",
         level: "2nd",
@@ -2701,7 +2701,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Glibness", [{
         name: "Glibness",
         source: "PHB",
         level: "8th",
@@ -2715,7 +2715,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Globe of Invulnerability", [{
         name: "Globe of Invulnerability",
         source: "PHB",
         level: "6th",
@@ -2729,7 +2729,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the barrier blocks spells of one level higher for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Glyph of Warding", [{
         name: "Glyph of Warding",
         source: "PHB",
         level: "3rd",
@@ -2743,7 +2743,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding."
     }]],
 
-    ["", [{
+    ["Goodberry", [{
         name: "Goodberry",
         source: "PHB",
         level: "1st",
@@ -2757,7 +2757,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Grasping Vine", [{
         name: "Grasping Vine",
         source: "PHB",
         level: "4th",
@@ -2771,7 +2771,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Grease", [{
         name: "Grease",
         source: "PHB",
         level: "1st",
@@ -2785,7 +2785,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Greater Invisibility", [{
         name: "Greater Invisibility",
         source: "PHB",
         level: "4th",
@@ -2799,7 +2799,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Greater Restoration", [{
         name: "Greater Restoration",
         source: "PHB",
         level: "5th",
@@ -2813,7 +2813,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Green-Flame Blade", [{
         name: "Green-Flame Blade",
         source: "TCE",
         level: "Cantrip",
@@ -2827,7 +2827,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Guardian of Faith", [{
         name: "Guardian of Faith",
         source: "PHB",
         level: "4th",
@@ -2841,7 +2841,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Guardian of Nature", [{
         name: "Guardian of Nature",
         source: "XGE",
         level: "4th",
@@ -2855,7 +2855,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Guards and Wards", [{
         name: "Guards and Wards",
         source: "PHB",
         level: "6th",
@@ -2869,7 +2869,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Guidance", [{
         name: "Guidance",
         source: "PHB",
         level: "Cantrip",
@@ -2883,7 +2883,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Guiding Bolt", [{
         name: "Guiding Bolt",
         source: "PHB",
         level: "1st",
@@ -2897,7 +2897,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Gust", [{
         name: "Gust",
         source: "XGE",
         level: "Cantrip",
@@ -2911,7 +2911,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Gust of Wind", [{
         name: "Gust of Wind",
         source: "PHB",
         level: "2nd",
@@ -2925,7 +2925,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Hail of Thorns", [{
         name: "Hail of Thorns",
         source: "PHB",
         level: "1st",
@@ -2939,7 +2939,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st (to a maximum of 6d10)."
     }]],
 
-    ["", [{
+    ["Hallow", [{
         name: "Hallow",
         source: "PHB",
         level: "5th",
@@ -2953,7 +2953,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Hallucinatory Terrain", [{
         name: "Hallucinatory Terrain",
         source: "PHB",
         level: "4th",
@@ -2967,7 +2967,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Harm", [{
         name: "Harm",
         source: "PHB",
         level: "6th",
@@ -2981,7 +2981,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Haste", [{
         name: "Haste",
         source: "PHB",
         level: "3rd",
@@ -2995,7 +2995,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Heal", [{
         name: "Heal",
         source: "PHB",
         level: "6th",
@@ -3009,7 +3009,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the amount of healing increases by 10 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Healing Spirit", [{
         name: "Healing Spirit",
         source: "XGE",
         level: "2nd",
@@ -3023,7 +3023,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d6 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Healing Word", [{
         name: "Healing Word",
         source: "PHB",
         level: "1st",
@@ -3037,7 +3037,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Heat Metal", [{
         name: "Heat Metal",
         source: "PHB",
         level: "2nd",
@@ -3051,7 +3051,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Hellish Rebuke", [{
         name: "Hellish Rebuke",
         source: "PHB",
         level: "1st",
@@ -3065,7 +3065,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["HeroesFeast", [{
         name: "Heroes' Feast",
         source: "PHB",
         level: "6th",
@@ -3079,7 +3079,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Heroism", [{
         name: "Heroism",
         source: "PHB",
         level: "1st",
@@ -3093,7 +3093,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Hex", [{
         name: "Hex",
         source: "PHB",
         level: "1st",
@@ -3107,7 +3107,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours."
     }]],
 
-    ["", [{
+    ["Hold Monster", [{
         name: "Hold Monster",
         source: "PHB",
         level: "5th",
@@ -3121,7 +3121,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, you can target one additional creature for each slot level above 5th. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Hold Person", [{
         name: "Hold Person",
         source: "PHB",
         level: "2nd",
@@ -3135,7 +3135,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Holy Aura", [{
         name: "Holy Aura",
         source: "PHB",
         level: "8th",
@@ -3149,7 +3149,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Holy Weapon", [{
         name: "Holy Weapon",
         source: "XGE",
         level: "5th",
@@ -3163,7 +3163,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Hunger of Hadar", [{
         name: "Hunger of Hadar",
         source: "PHB",
         level: "3rd",
@@ -3177,7 +3177,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["HuntersMark", [{
         name: "Hunter's Mark",
         source: "PHB",
         level: "1st",
@@ -3191,7 +3191,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd or 4th level, you can maintain your concentration on the spell for up to 8 hours. When you use a spell slot of 5th level or higher, you can maintain your concentration on the spell for up to 24 hours."
     }]],
 
-    ["", [{
+    ["Hypnotic Pattern", [{
         name: "Hypnotic Pattern",
         source: "PHB",
         level: "3rd",
@@ -3205,7 +3205,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Ice Knife", [{
         name: "Ice Knife",
         source: "XGE",
         level: "1st",
@@ -3219,7 +3219,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Ice Storm", [{
         name: "Ice Storm",
         source: "PHB",
         level: "4th",
@@ -3233,7 +3233,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the bludgeoning damage increases by 1d8 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Identify", [{
         name: "Identify",
         source: "PHB",
         level: "1st",
@@ -3247,7 +3247,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Illusory Dragon", [{
         name: "Illusory Dragon",
         source: "XGE",
         level: "8th",
@@ -3261,7 +3261,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Illusory Script", [{
         name: "Illusory Script",
         source: "PHB",
         level: "1st",
@@ -3275,7 +3275,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Immolation", [{
         name: "Immolation",
         source: "XGE",
         level: "5th",
@@ -3289,7 +3289,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Imprisonment", [{
         name: "Imprisonment",
         source: "PHB",
         level: "9th",
@@ -3303,7 +3303,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Incendiary Cloud", [{
         name: "Incendiary Cloud",
         source: "PHB",
         level: "8th",
@@ -3317,7 +3317,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Incite Greed", [{
         name: "Incite Greed",
         source: "AI",
         level: "3rd",
@@ -3331,7 +3331,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Infernal Calling", [{
         name: "Infernal Calling",
         source: "XGE",
         level: "5th",
@@ -3345,7 +3345,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Infestation", [{
         name: "Infestation",
         source: "XGE",
         level: "Cantrip",
@@ -3359,7 +3359,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Inflict Wounds", [{
         name: "Inflict Wounds",
         source: "PHB",
         level: "1st",
@@ -3373,7 +3373,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Insect Plague", [{
         name: "Insect Plague",
         source: "PHB",
         level: "5th",
@@ -3387,7 +3387,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d10 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Intellect Fortress", [{
         name: "Intellect Fortress",
         source: "TCE",
         level: "3rd",
@@ -3401,7 +3401,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can target one additional creature for each slot level above 3rd. The creatures must be within 30 feet of each other when you target them."
     }]],
 
-    ["", [{
+    ["Investiture of Flame", [{
         name: "Investiture of Flame",
         source: "XGE",
         level: "6th",
@@ -3415,7 +3415,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Investiture of Ice", [{
         name: "Investiture of Ice",
         source: "XGE",
         level: "6th",
@@ -3429,7 +3429,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Investiture of Stone", [{
         name: "Investiture of Stone",
         source: "XGE",
         level: "6th",
@@ -3443,7 +3443,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Investiture of Wind", [{
         name: "Investiture of Wind",
         source: "XGE",
         level: "6th",
@@ -3457,7 +3457,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Invisibility", [{
         name: "Invisibility",
         source: "PHB",
         level: "2nd",
@@ -3471,7 +3471,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Invulnerability", [{
         name: "Invulnerability",
         source: "XGE",
         level: "9th",
@@ -3485,7 +3485,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Jims Glowing Coin", [{
         name: "Jim's Glowing Coin",
         source: "AI",
         level: "2nd",
@@ -3499,7 +3499,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Jims Magic Missile", [{
         name: "Jim's Magic Missile",
         source: "AI",
         level: "1st",
@@ -3513,7 +3513,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart, and the royalty component increases by 1 gp, for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Jump", [{
         name: "Jump",
         source: "PHB",
         level: "1st",
@@ -3527,7 +3527,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Knock", [{
         name: "Knock",
         source: "PHB",
         level: "2nd",
@@ -3541,7 +3541,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Legend Lore", [{
         name: "Legend Lore",
         source: "PHB",
         level: "5th",
@@ -3555,7 +3555,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["LeomundsSecretChest", [{
         name: "Leomund's Secret Chest",
         source: "PHB",
         level: "4th",
@@ -3569,7 +3569,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["LeomundsTinyHut", [{
         name: "Leomund's Tiny Hut",
         source: "PHB",
         level: "3rd",
@@ -3583,7 +3583,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Lesser Restoration", [{
         name: "Lesser Restoration",
         source: "PHB",
         level: "2nd",
@@ -3597,7 +3597,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Levitate", [{
         name: "Levitate",
         source: "PHB",
         level: "2nd",
@@ -3611,7 +3611,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Life Transference", [{
         name: "Life Transference",
         source: "XGE",
         level: "3rd",
@@ -3625,7 +3625,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Light", [{
         name: "Light",
         source: "PHB",
         level: "Cantrip",
@@ -3639,7 +3639,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Lightning Arrow", [{
         name: "Lightning Arrow",
         source: "PHB",
         level: "3rd",
@@ -3653,7 +3653,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by 1d8 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Lightning Bolt", [{
         name: "Lightning Bolt",
         source: "PHB",
         level: "3rd",
@@ -3667,7 +3667,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Lightning Lure", [{
         name: "Lightning Lure",
         source: "TCE",
         level: "Cantrip",
@@ -3681,7 +3681,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Locate Animals", [{
         name: "Locate Animals or Plants",
         source: "PHB",
         level: "2nd",
@@ -3695,7 +3695,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Locate Creature", [{
         name: "Locate Creature",
         source: "PHB",
         level: "4th",
@@ -3709,7 +3709,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Locate Object", [{
         name: "Locate Object",
         source: "PHB",
         level: "2nd",
@@ -3723,7 +3723,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Longstrider", [{
         name: "Longstrider",
         source: "PHB",
         level: "1st",
@@ -3737,7 +3737,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Maddening Darkness", [{
         name: "Maddening Darkness",
         source: "XGE",
         level: "8th",
@@ -3751,7 +3751,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Maelstrom", [{
         name: "Maelstrom",
         source: "XGE",
         level: "5th",
@@ -3765,7 +3765,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mage Armor", [{
         name: "Mage Armor",
         source: "PHB",
         level: "1st",
@@ -3779,7 +3779,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mage Hand", [{
         name: "Mage Hand",
         source: "PHB",
         level: "Cantrip",
@@ -3793,7 +3793,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Magic Circle", [{
         name: "Magic Circle",
         source: "PHB",
         level: "3rd",
@@ -3807,7 +3807,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Magic Jar", [{
         name: "Magic Jar",
         source: "PHB",
         level: "6th",
@@ -3821,7 +3821,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Magic Missile", [{
         name: "Magic Missile",
         source: "PHB",
         level: "1st",
@@ -3835,7 +3835,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Magic Mouth", [{
         name: "Magic Mouth",
         source: "PHB",
         level: "2nd",
@@ -3849,7 +3849,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Magic Stone", [{
         name: "Magic Stone",
         source: "XGE",
         level: "Cantrip",
@@ -3863,7 +3863,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Magic Weapon", [{
         name: "Magic Weapon",
         source: "PHB",
         level: "2nd",
@@ -3877,7 +3877,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."
     }]],
 
-    ["", [{
+    ["Major Image", [{
         name: "Major Image",
         source: "PHB",
         level: "3rd",
@@ -3891,7 +3891,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration."
     }]],
 
-    ["", [{
+    ["Mass Cure Wounds", [{
         name: "Mass Cure Wounds",
         source: "PHB",
         level: "5th",
@@ -3905,7 +3905,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the healing increases by 1d8 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Mass Heal", [{
         name: "Mass Heal",
         source: "PHB",
         level: "9th",
@@ -3919,7 +3919,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mass Healing Word", [{
         name: "Mass Healing Word",
         source: "PHB",
         level: "3rd",
@@ -3933,7 +3933,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Mass Polymorph", [{
         name: "Mass Polymorph",
         source: "XGE",
         level: "9th",
@@ -3947,7 +3947,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mass Suggestion", [{
         name: "Mass Suggestion",
         source: "PHB",
         level: "6th",
@@ -3961,7 +3961,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day."
     }]],
 
-    ["", [{
+    ["MaximiliansEarthenGrasp", [{
         name: "Maximilian's Earthen Grasp",
         source: "XGE",
         level: "2nd",
@@ -3975,7 +3975,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Maze", [{
         name: "Maze",
         source: "PHB",
         level: "8th",
@@ -3989,7 +3989,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Meld into Stone", [{
         name: "Meld into Stone",
         source: "PHB",
         level: "3rd",
@@ -4003,7 +4003,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["MelfsAcidArrow", [{
         name: "Melf's Acid Arrow",
         source: "PHB",
         level: "2nd",
@@ -4017,7 +4017,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["MelfsMinuteMeteors", [{
         name: "Melf's Minute Meteors",
         source: "XGE",
         level: "3rd",
@@ -4031,7 +4031,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Mending", [{
         name: "Mending",
         source: "PHB",
         level: "Cantrip",
@@ -4045,7 +4045,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mental Prison", [{
         name: "Mental Prison",
         source: "XGE",
         level: "6th",
@@ -4059,7 +4059,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Message", [{
         name: "Message",
         source: "PHB",
         level: "Cantrip",
@@ -4073,7 +4073,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Meteor Swarm", [{
         name: "Meteor Swarm",
         source: "PHB",
         level: "9th",
@@ -4087,7 +4087,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mighty Fortress", [{
         name: "Mighty Fortress",
         source: "XGE",
         level: "8th",
@@ -4101,7 +4101,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mind Blank", [{
         name: "Mind Blank",
         source: "PHB",
         level: "8th",
@@ -4115,7 +4115,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mind Spike", [{
         name: "Mind Spike",
         source: "XGE",
         level: "2nd",
@@ -4129,7 +4129,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Minor Illusion", [{
         name: "Minor Illusion",
         source: "PHB",
         level: "Cantrip",
@@ -4143,7 +4143,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mirage Arcane", [{
         name: "Mirage Arcane",
         source: "PHB",
         level: "7th",
@@ -4157,7 +4157,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mirror Image", [{
         name: "Mirror Image",
         source: "PHB",
         level: "2nd",
@@ -4171,7 +4171,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Mislead", [{
         name: "Mislead",
         source: "PHB",
         level: "5th",
@@ -4185,7 +4185,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Misty Step", [{
         name: "Misty Step",
         source: "PHB",
         level: "2nd",
@@ -4199,7 +4199,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Modify Memory", [{
         name: "Modify Memory",
         source: "PHB",
         level: "5th",
@@ -4213,7 +4213,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level)."
     }]],
 
-    ["", [{
+    ["Mold Earth", [{
         name: "Mold Earth",
         source: "XGE",
         level: "Cantrip",
@@ -4227,7 +4227,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Moonbeam", [{
         name: "Moonbeam",
         source: "PHB",
         level: "2nd",
@@ -4241,7 +4241,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d10 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["MordenkainensFaithfulHound", [{
         name: "Mordenkainen's Faithful Hound",
         source: "PHB",
         level: "4th",
@@ -4255,7 +4255,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["MordenkainensMagnificentMansion", [{
         name: "Mordenkainen's Magnificent Mansion",
         source: "PHB",
         level: "7th",
@@ -4269,7 +4269,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["MordenkainensPrivateSanctum", [{
         name: "Mordenkainen's Private Sanctum",
         source: "PHB",
         level: "4th",
@@ -4283,7 +4283,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level."
     }]],
 
-    ["", [{
+    ["MordenkainensSword", [{
         name: "Mordenkainen's Sword",
         source: "PHB",
         level: "7th",
@@ -4297,7 +4297,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Motivational Speech", [{
         name: "Motivational Speech",
         source: "AI",
         level: "3rd",
@@ -4311,7 +4311,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the temporary hit points increase by 5 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Move Earth", [{
         name: "Move Earth",
         source: "PHB",
         level: "6th",
@@ -4325,7 +4325,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Negative Energy Flood", [{
         name: "Negative Energy Flood",
         source: "XGE",
         level: "5th",
@@ -4339,7 +4339,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Nondetection", [{
         name: "Nondetection",
         source: "PHB",
         level: "3rd",
@@ -4353,7 +4353,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Nystul's Magic Aura", [{
         name: "Nystul's Magic Aura",
         source: "PHB",
         level: "2nd",
@@ -4367,7 +4367,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Otiluke's Freezing Sphere", [{
         name: "Otiluke's Freezing Sphere",
         source: "PHB",
         level: "6th",
@@ -4381,7 +4381,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage increases by 1d6 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Otiluke's Resilient Sphere", [{
         name: "Otiluke's Resilient Sphere",
         source: "PHB",
         level: "4th",
@@ -4395,7 +4395,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Otto's Irresistible Dance", [{
         name: "Otto's Irresistible Dance",
         source: "PHB",
         level: "6th",
@@ -4409,7 +4409,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Pass without Trace", [{
         name: "Pass without Trace",
         source: "PHB",
         level: "2nd",
@@ -4423,7 +4423,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Passwall", [{
         name: "Passwall",
         source: "PHB",
         level: "5th",
@@ -4437,7 +4437,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Phantasmal Force", [{
         name: "Phantasmal Force",
         source: "PHB",
         level: "2nd",
@@ -4451,7 +4451,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Phantasmal Killer", [{
         name: "Phantasmal Killer",
         source: "PHB",
         level: "4th",
@@ -4465,7 +4465,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d10 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Phantom Steed", [{
         name: "Phantom Steed",
         source: "PHB",
         level: "3rd",
@@ -4479,7 +4479,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Planar Ally", [{
         name: "Planar Ally",
         source: "PHB",
         level: "6th",
@@ -4493,7 +4493,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Planar Binding", [{
         name: "Planar Binding",
         source: "PHB",
         level: "5th",
@@ -4507,7 +4507,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of a higher level, the duration increases to 10 days with a 6th-level slot, to 30 days with a 7th-level slot, to 180 days with an 8th-level slot, and to a year and a day with a 9th-level spell slot."
     }]],
 
-    ["", [{
+    ["Plane Shift", [{
         name: "Plane Shift",
         source: "PHB",
         level: "7th",
@@ -4521,7 +4521,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Plant Growth", [{
         name: "Plant Growth",
         source: "PHB",
         level: "3rd",
@@ -4535,7 +4535,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Poison Spray", [{
         name: "Poison Spray",
         source: "PHB",
         level: "Cantrip",
@@ -4549,7 +4549,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Polymorph", [{
         name: "Polymorph",
         source: "PHB",
         level: "4th",
@@ -4563,7 +4563,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Power Word Heal", [{
         name: "Power Word Heal",
         source: "PHB",
         level: "9th",
@@ -4577,7 +4577,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Power Word Kill", [{
         name: "Power Word Kill",
         source: "PHB",
         level: "9th",
@@ -4591,7 +4591,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Power Word Pain", [{
         name: "Power Word Pain",
         source: "XGE",
         level: "7th",
@@ -4605,7 +4605,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Power Word Stun", [{
         name: "Power Word Stun",
         source: "PHB",
         level: "8th",
@@ -4619,7 +4619,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Prayer of Healing", [{
         name: "Prayer of Healing",
         source: "PHB",
         level: "2nd",
@@ -4633,7 +4633,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Prestidigitation", [{
         name: "Prestidigitation",
         source: "PHB",
         level: "Cantrip",
@@ -4647,7 +4647,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Primal Savagery", [{
         name: "Primal Savagery",
         source: "XGE",
         level: "Cantrip",
@@ -4661,7 +4661,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Primordial Ward", [{
         name: "Primordial Ward",
         source: "XGE",
         level: "6th",
@@ -4675,7 +4675,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Prismatic Spray", [{
         name: "Prismatic Spray",
         source: "PHB",
         level: "7th",
@@ -4689,7 +4689,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Prismatic Wall", [{
         name: "Prismatic Wall",
         source: "PHB",
         level: "9th",
@@ -4703,7 +4703,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Produce Flame", [{
         name: "Produce Flame",
         source: "PHB",
         level: "Cantrip",
@@ -4717,7 +4717,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Programmed Illusion", [{
         name: "Programmed Illusion",
         source: "PHB",
         level: "6th",
@@ -4731,7 +4731,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Project Image", [{
         name: "Project Image",
         source: "PHB",
         level: "7th",
@@ -4745,7 +4745,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Protection from Energy", [{
         name: "Protection from Energy",
         source: "PHB",
         level: "3rd",
@@ -4759,7 +4759,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Protection from Evil", [{
         name: "Protection from Evil and Good",
         source: "PHB",
         level: "1st",
@@ -4773,7 +4773,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Protection from Poison", [{
         name: "Protection from Poison",
         source: "PHB",
         level: "2nd",
@@ -4787,7 +4787,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Psychic Scream", [{
         name: "Psychic Scream",
         source: "XGE",
         level: "9th",
@@ -4801,7 +4801,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Purify Food", [{
         name: "Purify Food and Drink",
         source: "PHB",
         level: "1st",
@@ -4815,7 +4815,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Pyrotechnics", [{
         name: "Pyrotechnics",
         source: "XGE",
         level: "2nd",
@@ -4829,7 +4829,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Raise Dead", [{
         name: "Raise Dead",
         source: "PHB",
         level: "5th",
@@ -4843,7 +4843,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Rary's Telepathic Bond", [{
         name: "Rary's Telepathic Bond",
         source: "PHB",
         level: "5th",
@@ -4857,7 +4857,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Ray of Enfeeblement", [{
         name: "Ray of Enfeeblement",
         source: "PHB",
         level: "2nd",
@@ -4871,7 +4871,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Ray of Frost", [{
         name: "Ray of Frost",
         source: "PHB",
         level: "Cantrip",
@@ -4885,7 +4885,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Ray of Sickness", [{
         name: "Ray of Sickness",
         source: "PHB",
         level: "1st",
@@ -4899,7 +4899,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Regenerate", [{
         name: "Regenerate",
         source: "PHB",
         level: "7th",
@@ -4913,7 +4913,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Reincarnate", [{
         name: "Reincarnate",
         source: "PHB",
         level: "5th",
@@ -4927,7 +4927,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Remove Curse", [{
         name: "Remove Curse",
         source: "PHB",
         level: "3rd",
@@ -4941,7 +4941,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Resistance", [{
         name: "Resistance",
         source: "PHB",
         level: "Cantrip",
@@ -4955,7 +4955,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Resurrection", [{
         name: "Resurrection",
         source: "PHB",
         level: "7th",
@@ -4969,7 +4969,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Reverse Gravity", [{
         name: "Reverse Gravity",
         source: "PHB",
         level: "7th",
@@ -4983,7 +4983,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Revivify", [{
         name: "Revivify",
         source: "PHB",
         level: "3rd",
@@ -4997,7 +4997,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Rope Trick", [{
         name: "Rope Trick",
         source: "PHB",
         level: "2nd",
@@ -5011,7 +5011,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sacred Flame", [{
         name: "Sacred Flame",
         source: "PHB",
         level: "Cantrip",
@@ -5025,7 +5025,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sanctuary", [{
         name: "Sanctuary",
         source: "PHB",
         level: "1st",
@@ -5039,7 +5039,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Scatter", [{
         name: "Scatter",
         source: "XGE",
         level: "6th",
@@ -5053,7 +5053,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Scorching Ray", [{
         name: "Scorching Ray",
         source: "PHB",
         level: "2nd",
@@ -5067,7 +5067,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Scrying", [{
         name: "Scrying",
         source: "PHB",
         level: "5th",
@@ -5081,7 +5081,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Searing Smite", [{
         name: "Searing Smite",
         source: "PHB",
         level: "1st",
@@ -5095,7 +5095,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial extra damage dealt by the attack increases by 1d6 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["See Invisibility", [{
         name: "See Invisibility",
         source: "PHB",
         level: "2nd",
@@ -5109,7 +5109,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Seeming", [{
         name: "Seeming",
         source: "PHB",
         level: "5th",
@@ -5123,7 +5123,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sending", [{
         name: "Sending",
         source: "PHB",
         level: "3rd",
@@ -5137,7 +5137,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sequester", [{
         name: "Sequester",
         source: "PHB",
         level: "7th",
@@ -5151,7 +5151,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shadow Blade", [{
         name: "Shadow Blade",
         source: "XGE",
         level: "2nd",
@@ -5165,7 +5165,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a 3rd- or 4th-level spell slot, the damage increases to 3d8. When you cast it using a 5th- or 6th-level spell slot, the damage increases to 4d8. When you cast it using a spell slot of 7th level or higher, the damage increases to 5d8."
     }]],
 
-    ["", [{
+    ["Shadow of Moil", [{
         name: "Shadow of Moil",
         source: "XGE",
         level: "4th",
@@ -5179,7 +5179,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shape Water", [{
         name: "Shape Water",
         source: "XGE",
         level: "Cantrip",
@@ -5193,7 +5193,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shapechange", [{
         name: "Shapechange",
         source: "PHB",
         level: "9th",
@@ -5207,7 +5207,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shatter", [{
         name: "Shatter",
         source: "PHB",
         level: "2nd",
@@ -5221,7 +5221,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Shield", [{
         name: "Shield",
         source: "PHB",
         level: "1st",
@@ -5235,7 +5235,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shield of Faith", [{
         name: "Shield of Faith",
         source: "PHB",
         level: "1st",
@@ -5249,7 +5249,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shillelagh", [{
         name: "Shillelagh",
         source: "PHB",
         level: "Cantrip",
@@ -5263,7 +5263,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Shocking Grasp", [{
         name: "Shocking Grasp",
         source: "PHB",
         level: "Cantrip",
@@ -5277,7 +5277,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sickening Radiance", [{
         name: "Sickening Radiance",
         source: "XGE",
         level: "4th",
@@ -5291,7 +5291,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Silence", [{
         name: "Silence",
         source: "PHB",
         level: "2nd",
@@ -5305,7 +5305,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Silent Image", [{
         name: "Silent Image",
         source: "PHB",
         level: "1st",
@@ -5319,7 +5319,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Simulacrum", [{
         name: "Simulacrum",
         source: "PHB",
         level: "7th",
@@ -5333,7 +5333,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Skill Empowerment", [{
         name: "Skill Empowerment",
         source: "XGE",
         level: "5th",
@@ -5347,7 +5347,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Skywrite", [{
         name: "Skywrite",
         source: "XGE",
         level: "2nd",
@@ -5361,7 +5361,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sleep", [{
         name: "Sleep",
         source: "PHB",
         level: "1st",
@@ -5375,7 +5375,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Sleet Storm", [{
         name: "Sleet Storm",
         source: "PHB",
         level: "3rd",
@@ -5389,7 +5389,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Slow", [{
         name: "Slow",
         source: "PHB",
         level: "3rd",
@@ -5403,7 +5403,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Snare", [{
         name: "Snare",
         source: "XGE",
         level: "1st",
@@ -5417,7 +5417,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Snilloc", [{
         name: "Snilloc's Snowball Swarm",
         source: "XGE",
         level: "2nd",
@@ -5431,7 +5431,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d6 for each slot level above 2nd."
     }]],
 
-    ["", [{
+    ["Soul Cage", [{
         name: "Soul Cage",
         source: "XGE",
         level: "6th",
@@ -5445,7 +5445,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Spare the Dying", [{
         name: "Spare the Dying",
         source: "PHB",
         level: "Cantrip",
@@ -5459,7 +5459,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Speak with Animals", [{
         name: "Speak with Animals",
         source: "PHB",
         level: "1st",
@@ -5473,7 +5473,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Speak with Dead", [{
         name: "Speak with Dead",
         source: "PHB",
         level: "3rd",
@@ -5487,7 +5487,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Speak with Plants", [{
         name: "Speak with Plants",
         source: "PHB",
         level: "3rd",
@@ -5501,7 +5501,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Spider Climb", [{
         name: "Spider Climb",
         source: "PHB",
         level: "2nd",
@@ -5515,7 +5515,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Spike Growth", [{
         name: "Spike Growth",
         source: "PHB",
         level: "2nd",
@@ -5529,7 +5529,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Spirit Guardians", [{
         name: "Spirit Guardians",
         source: "PHB",
         level: "3rd",
@@ -5543,7 +5543,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Spiritual Weapon", [{
         name: "Spiritual Weapon",
         source: "PHB",
         level: "2nd",
@@ -5557,7 +5557,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above 2nd."
     }]],
 
-    ["", [{
+    ["Staggering Smite", [{
         name: "Staggering Smite",
         source: "PHB",
         level: "4th",
@@ -5571,7 +5571,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Steel Wind Strike", [{
         name: "Steel Wind Strike",
         source: "XGE",
         level: "5th",
@@ -5585,7 +5585,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Stinking Cloud", [{
         name: "Stinking Cloud",
         source: "PHB",
         level: "3rd",
@@ -5599,7 +5599,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Stone Shape", [{
         name: "Stone Shape",
         source: "PHB",
         level: "4th",
@@ -5613,7 +5613,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Stoneskin", [{
         name: "Stoneskin",
         source: "PHB",
         level: "4th",
@@ -5627,7 +5627,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Storm Sphere", [{
         name: "Storm Sphere",
         source: "XGE",
         level: "4th",
@@ -5641,7 +5641,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage for each of its effects increases by 1d6 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Storm of Vengeance", [{
         name: "Storm of Vengeance",
         source: "PHB",
         level: "9th",
@@ -5655,7 +5655,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Suggestion", [{
         name: "Suggestion",
         source: "PHB",
         level: "2nd",
@@ -5669,7 +5669,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Summon Construct", [{
         name: "Summon Construct",
         source: "TCE",
         level: "4th",
@@ -5683,7 +5683,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, use the higher level wherever the spell's level appears in the stat block."
     }]],
 
-    ["", [{
+    ["Summon Greater Demon", [{
         name: "Summon Greater Demon",
         source: "XGE",
         level: "4th",
@@ -5697,7 +5697,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the challenge rating increases by 1 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Summon Lesser Demons", [{
         name: "Summon Lesser Demons",
         source: "XGE",
         level: "3rd",
@@ -5711,7 +5711,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."
     }]],
 
-    ["", [{
+    ["Sunbeam", [{
         name: "Sunbeam",
         source: "PHB",
         level: "6th",
@@ -5725,7 +5725,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sunburst", [{
         name: "Sunburst",
         source: "PHB",
         level: "8th",
@@ -5739,7 +5739,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Swift Quiver", [{
         name: "Swift Quiver",
         source: "PHB",
         level: "5th",
@@ -5753,7 +5753,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Sword Burst", [{
         name: "Sword Burst",
         source: "TCE",
         level: "Cantrip",
@@ -5767,7 +5767,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Symbol", [{
         name: "Symbol",
         source: "PHB",
         level: "7th",
@@ -5781,7 +5781,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Synaptic Static", [{
         name: "Synaptic Static",
         source: "XGE",
         level: "5th",
@@ -5795,7 +5795,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tasha's Caustic Brew", [{
         name: "Tasha's Caustic Brew",
         source: "TCE",
         level: "1st",
@@ -5809,7 +5809,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 2d4 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Tasha's Hideous Laughter", [{
         name: "Tasha's Hideous Laughter",
         source: "PHB",
         level: "1st",
@@ -5823,7 +5823,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Telekinesis", [{
         name: "Telekinesis",
         source: "PHB",
         level: "5th",
@@ -5837,7 +5837,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Telepathy", [{
         name: "Telepathy",
         source: "PHB",
         level: "8th",
@@ -5851,7 +5851,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Teleport", [{
         name: "Teleport",
         source: "PHB",
         level: "7th",
@@ -5865,7 +5865,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Teleportation Circle", [{
         name: "Teleportation Circle",
         source: "PHB",
         level: "5th",
@@ -5879,7 +5879,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Temple of the Gods", [{
         name: "Temple of the Gods",
         source: "XGE",
         level: "7th",
@@ -5893,7 +5893,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tenser's Floating Disk", [{
         name: "Tenser's Floating Disk",
         source: "PHB",
         level: "1st",
@@ -5907,7 +5907,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tenser's Transformation", [{
         name: "Tenser's Transformation",
         source: "XGE",
         level: "6th",
@@ -5921,7 +5921,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Thaumaturgy", [{
         name: "Thaumaturgy",
         source: "PHB",
         level: "Cantrip",
@@ -5935,7 +5935,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Thorn Whip", [{
         name: "Thorn Whip",
         source: "PHB",
         level: "Cantrip",
@@ -5949,7 +5949,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Thunder Step", [{
         name: "Thunder Step",
         source: "XGE",
         level: "3rd",
@@ -5963,7 +5963,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d10 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Thunderclap", [{
         name: "Thunderclap",
         source: "XGE",
         level: "Cantrip",
@@ -5977,7 +5977,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Thunderous Smite", [{
         name: "Thunderous Smite",
         source: "PHB",
         level: "1st",
@@ -5991,7 +5991,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Thunderwave", [{
         name: "Thunderwave",
         source: "PHB",
         level: "1st",
@@ -6005,7 +6005,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Tidal Wave", [{
         name: "Tidal Wave",
         source: "XGE",
         level: "3rd",
@@ -6019,7 +6019,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Time Stop", [{
         name: "Time Stop",
         source: "PHB",
         level: "9th",
@@ -6033,7 +6033,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tiny Servant", [{
         name: "Tiny Servant",
         source: "XGE",
         level: "3rd",
@@ -6047,7 +6047,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you can animate two additional objects for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Toll the Dead", [{
         name: "Toll the Dead",
         source: "XGE",
         level: "Cantrip",
@@ -6061,7 +6061,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tongues", [{
         name: "Tongues",
         source: "PHB",
         level: "3rd",
@@ -6075,7 +6075,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Transmute Rock", [{
         name: "Transmute Rock",
         source: "XGE",
         level: "5th",
@@ -6089,7 +6089,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Transport via Plants", [{
         name: "Transport via Plants",
         source: "PHB",
         level: "6th",
@@ -6103,7 +6103,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tree Stride", [{
         name: "Tree Stride",
         source: "PHB",
         level: "5th",
@@ -6117,7 +6117,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["True Polymorph", [{
         name: "True Polymorph",
         source: "PHB",
         level: "9th",
@@ -6131,7 +6131,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["True Resurrection", [{
         name: "True Resurrection",
         source: "PHB",
         level: "9th",
@@ -6145,7 +6145,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["True Seeing", [{
         name: "True Seeing",
         source: "PHB",
         level: "6th",
@@ -6159,7 +6159,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["True Strike", [{
         name: "True Strike",
         source: "PHB",
         level: "Cantrip",
@@ -6173,7 +6173,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Tsunami", [{
         name: "Tsunami",
         source: "PHB",
         level: "8th",
@@ -6187,7 +6187,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Unseen Servant", [{
         name: "Unseen Servant",
         source: "PHB",
         level: "1st",
@@ -6201,7 +6201,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Vampiric Touch", [{
         name: "Vampiric Touch",
         source: "PHB",
         level: "3rd",
@@ -6215,7 +6215,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."
     }]],
 
-    ["", [{
+    ["Vicious Mockery", [{
         name: "Vicious Mockery",
         source: "PHB",
         level: "Cantrip",
@@ -6229,7 +6229,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Vitriolic Sphere", [{
         name: "Vitriolic Sphere",
         source: "XGE",
         level: "4th",
@@ -6243,7 +6243,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by 2d4 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Wall of Fire", [{
         name: "Wall of Fire",
         source: "PHB",
         level: "4th",
@@ -6257,7 +6257,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th."
     }]],
 
-    ["", [{
+    ["Wall of Force", [{
         name: "Wall of Force",
         source: "PHB",
         level: "5th",
@@ -6271,7 +6271,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wall of Ice", [{
         name: "Wall of Ice",
         source: "PHB",
         level: "6th",
@@ -6285,7 +6285,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, the damage the wall deals when it appears increases by 2d6, and the damage from passing through the sheet of frigid air increases by 1d6, for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Wall of Light", [{
         name: "Wall of Light",
         source: "XGE",
         level: "5th",
@@ -6299,7 +6299,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th."
     }]],
 
-    ["", [{
+    ["Wall of Sand", [{
         name: "Wall of Sand",
         source: "XGE",
         level: "3rd",
@@ -6313,7 +6313,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wall of Stone", [{
         name: "Wall of Stone",
         source: "PHB",
         level: "5th",
@@ -6327,7 +6327,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wall of Thorns", [{
         name: "Wall of Thorns",
         source: "PHB",
         level: "6th",
@@ -6341,7 +6341,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 7th level or higher, both types of damage increase by 1d8 for each slot level above 6th."
     }]],
 
-    ["", [{
+    ["Wall of Water", [{
         name: "Wall of Water",
         source: "XGE",
         level: "3rd",
@@ -6355,7 +6355,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Warding Bond", [{
         name: "Warding Bond",
         source: "PHB",
         level: "2nd",
@@ -6369,7 +6369,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Warding Wind", [{
         name: "Warding Wind",
         source: "XGE",
         level: "2nd",
@@ -6383,7 +6383,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Water Breathing", [{
         name: "Water Breathing",
         source: "PHB",
         level: "3rd",
@@ -6397,7 +6397,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Water Walk", [{
         name: "Water Walk",
         source: "PHB",
         level: "3rd",
@@ -6411,7 +6411,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Watery Sphere", [{
         name: "Watery Sphere",
         source: "XGE",
         level: "4th",
@@ -6425,7 +6425,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Web", [{
         name: "Web",
         source: "PHB",
         level: "2nd",
@@ -6439,7 +6439,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Weird", [{
         name: "Weird",
         source: "PHB",
         level: "9th",
@@ -6453,7 +6453,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Whirlwind", [{
         name: "Whirlwind",
         source: "XGE",
         level: "7th",
@@ -6467,7 +6467,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wind Walk", [{
         name: "Wind Walk",
         source: "PHB",
         level: "6th",
@@ -6481,7 +6481,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wind Wall", [{
         name: "Wind Wall",
         source: "PHB",
         level: "3rd",
@@ -6495,7 +6495,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wish", [{
         name: "Wish",
         source: "PHB",
         level: "9th",
@@ -6509,7 +6509,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Witch Bolt", [{
         name: "Witch Bolt",
         source: "PHB",
         level: "1st",
@@ -6523,7 +6523,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the initial damage increases by 1d12 for each slot level above 1st."
     }]],
 
-    ["", [{
+    ["Word of Radiance", [{
         name: "Word of Radiance",
         source: "XGE",
         level: "Cantrip",
@@ -6537,7 +6537,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Word of Recall", [{
         name: "Word of Recall",
         source: "PHB",
         level: "6th",
@@ -6551,7 +6551,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wrath of Nature", [{
         name: "Wrath of Nature",
         source: "XGE",
         level: "5th",
@@ -6565,7 +6565,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Wrathful Smite", [{
         name: "Wrathful Smite",
         source: "PHB",
         level: "1st",
@@ -6579,7 +6579,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Zephyr Strike", [{
         name: "Zephyr Strike",
         source: "XGE",
         level: "1st",
@@ -6593,7 +6593,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["", [{
+    ["Zone of Truth", [{
         name: "Zone of Truth",
         source: "PHB",
         level: "2nd",
