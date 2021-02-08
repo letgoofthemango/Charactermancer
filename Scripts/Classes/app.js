@@ -86,7 +86,7 @@ class App {
         subClassNode.textContent = "";
         featuresNode.innerHTML = "";
 
-       Character.resetSkillColors();
+       Character.resetSkillNodes();
        
         console.log('RESET');
     }
@@ -137,7 +137,7 @@ class App {
             case CLERIC:
                 hitDice = 8;
                 characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = true;
-                Cleric.setClericSkillColors();
+                Cleric.setClericSkillNodes();
                 for (let i = 0; i < characterLevel; i++) {
                     classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
                     featuresNode.innerHTML += Cleric.clericFeaturesList[i];

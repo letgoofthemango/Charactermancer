@@ -2020,7 +2020,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     </div>
 </div>`;
 
-    static setClericSkillColors() {
+    static setClericSkillNodes() {
         const clericSkills = document.querySelectorAll('#summaryHistory, #summaryInsight, #summaryMedicine, #summaryPersuasion, #summaryReligion');
         for (const i of clericSkills) {
             i.classList.add("toBeAdded");
@@ -2030,16 +2030,18 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     static setClericSubclass(subclass) {
         const domain = document.getElementById("clericDomain");
         const featureDomain = document.getElementById("domain");
-        Character.resetSkillColors();
-        Cleric.setClericSkillColors();
+        Character.resetSkillNodes();
+        Cleric.setClericSkillNodes();
         featureDomain.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
             case "arcana":
-                characterSubClass = "(Arcana)";
                 domain.innerHTML = this.arcanaDomain;
+                characterSubClass = "(Arcana)";
                 featureDomain.innerHTML = ": Arcana";
                 arcanaNode.classList.add("toBeAdded");
+                firstLevelSpells += spells.get("MagicMissile")[0].name;
+
                 break;
             case "death":
                 characterSubClass = "(Death)";

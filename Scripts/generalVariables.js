@@ -62,10 +62,10 @@ let armorType;
 let hasShield = false;
 
 //Background
-let characterBackground = "";
+let characterBackground;
 
 //Speed
-let characterSpeed = "";
+let characterSpeed;
 
 /* //Initiative
 let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
@@ -208,18 +208,16 @@ let characterAttacks = [];
 
 
 //Spells
-/* let characterSpells = [
-    firstLevel[],
-    secondLevel[],
-    thirdLevel[],
-    fourthLevel[],
-    fifthLevel[],
-    sixthLevel[],
-    seventhLevel[],
-    eigthLevel[],
-    ninethLevel[],
-
-]; */
+let cantripSpells=[];
+let firstLevelSpells=[];
+let secondLevelSpells=[];
+let thirdLevelSpells=[];
+let fourthLevelSpells=[];
+let fifthLevelSpells=[];
+let sixthLevelSpells=[];
+let seventhLevelSpells=[];
+let eigthLevelSpells=[];
+let ninethLevelSpells=[];
 
 
 //Hitpoints
@@ -311,14 +309,6 @@ const eigthLevelNode = document.getElementById("eigthLevel");
 const ninethLevelNode = document.getElementById("ninethLevel");
 const mainNode = document.getElementById("displayContent");
 const overviewNode = document.getElementById("characterOverview");
-
-
-var request = new XMLHttpRequest();
-request.open("GET", "Scripts/spells.json", false);
-request.send(null)
-var my_JSON_object = JSON.parse(request.responseText);
-console.log(my_JSON_object);
-
 
 document.getElementById("characterOverview").addEventListener("click", function () {
     abilityScores[0].value = 20;

@@ -143,7 +143,19 @@ class Character {
         passivePerceptionNode.textContent = passivePerception;
     }
 
-    static fullCharacterUpdate(){
+    static characterSpellLevel() {
+        let spellLevel;
+        if (characterLevel <= 3) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+        } else {
+            console.log('FUUUUUUUUCK')
+        }
+        spellLevel.forEach(element => {
+            element.toggleAttribute("hidden");
+        });
+    }
+
+    static fullCharacterUpdate() {
         this.updateHitPoints();
         this.updateSkills();
         this.updateStats();
@@ -153,10 +165,11 @@ class Character {
         this.updateLanguageProficiencies();
         this.updateInitiative();
         this.updatePassivePerception();
+        this.characterSpellLevel();
         console.log("UPDATE");
     }
 
-    static resetSkillColors(){
+    static resetSkillNodes() {
         const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
         for (const i of classSkills) {
             i.classList.remove("toBeAdded");
