@@ -142,6 +142,7 @@ class App {
                     classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
                     featuresNode.innerHTML += Cleric.clericFeaturesList[i];
                 }
+                Cleric.setSpellLevel();
                 break;
             case DRUID:
                 hitDice = 8;

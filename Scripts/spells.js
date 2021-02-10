@@ -2,7 +2,7 @@ let spells = new Map([
     ["HorridWilting", [{
         name: "Abi-Dalzim's Horrid Wilting",
         source: "XGE",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -16,7 +16,7 @@ let spells = new Map([
     ["AbsorbElements", [{
         name: "Absorb Elements",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Reaction",
         duration: "1 round",
         school: "Abjuration",
@@ -30,7 +30,7 @@ let spells = new Map([
     ["AcidSplash", [{
         name: "Acid Splash",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -44,7 +44,7 @@ let spells = new Map([
     ["Aganazzar", [{
         name: "Aganazzar's Scorcher",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -58,7 +58,7 @@ let spells = new Map([
     ["Aid", [{
         name: "Aid",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "8 hours",
         school: "Abjuration",
@@ -72,7 +72,7 @@ let spells = new Map([
     ["Alarm", [{
         name: "Alarm",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Abjuration",
@@ -86,7 +86,7 @@ let spells = new Map([
     ["AlterSelf", [{
         name: "Alter Self",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -100,7 +100,7 @@ let spells = new Map([
     ["AnimalFriendship", [{
         name: "Animal Friendship",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "24 hours",
         school: "Enchantment",
@@ -114,7 +114,7 @@ let spells = new Map([
     ["AnimalMessenger", [{
         name: "Animal Messenger",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "24 hours",
         school: "Enchantment",
@@ -128,7 +128,7 @@ let spells = new Map([
     ["AnimalShapes", [{
         name: "Animal Shapes",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 24 hours",
         school: "Transmutation",
@@ -142,7 +142,7 @@ let spells = new Map([
     ["Animate Dead", [{
         name: "Animate Dead",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -156,7 +156,7 @@ let spells = new Map([
     ["Animate Objects", [{
         name: "Animate Objects",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -170,7 +170,7 @@ let spells = new Map([
     ["Antilife Shell", [{
         name: "Antilife Shell",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -184,7 +184,7 @@ let spells = new Map([
     ["Antimagic Field", [{
         name: "Antimagic Field",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -198,7 +198,7 @@ let spells = new Map([
     ["Antipathy", [{
         name: "Antipathy/Sympathy",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "1 Hour",
         duration: "10 days",
         school: "Enchantment",
@@ -212,7 +212,7 @@ let spells = new Map([
     ["Arcane Eye", [{
         name: "Arcane Eye",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
@@ -226,7 +226,7 @@ let spells = new Map([
     ["Arcane Gate", [{
         name: "Arcane Gate",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -240,7 +240,7 @@ let spells = new Map([
     ["Arcane Lock", [{
         name: "Arcane Lock",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Until dispelled",
         school: "Abjuration",
@@ -254,7 +254,7 @@ let spells = new Map([
     ["Armor of Agathys", [{
         name: "Armor of Agathys",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Abjuration",
@@ -268,7 +268,7 @@ let spells = new Map([
     ["Arms of Hadar", [{
         name: "Arms of Hadar",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -282,7 +282,7 @@ let spells = new Map([
     ["Astral Projection", [{
         name: "Astral Projection",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "1 Hour",
         duration: "Special",
         school: "Necromancy",
@@ -296,7 +296,7 @@ let spells = new Map([
     ["Augury", [{
         name: "Augury",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Divination",
@@ -310,7 +310,7 @@ let spells = new Map([
     ["Aura of Life", [{
         name: "Aura of Life",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -324,7 +324,7 @@ let spells = new Map([
     ["Aura of Purity", [{
         name: "Aura of Purity",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -338,7 +338,7 @@ let spells = new Map([
     ["Aura of Vitality", [{
         name: "Aura of Vitality",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -352,7 +352,7 @@ let spells = new Map([
     ["Awaken", [{
         name: "Awaken",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "8 Hours",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -366,7 +366,7 @@ let spells = new Map([
     ["Bane", [{
         name: "Bane",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -380,7 +380,7 @@ let spells = new Map([
     ["Banishing Smite", [{
         name: "Banishing Smite",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -394,7 +394,7 @@ let spells = new Map([
     ["Banishment", [{
         name: "Banishment",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -408,7 +408,7 @@ let spells = new Map([
     ["Barkskin", [{
         name: "Barkskin",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -422,7 +422,7 @@ let spells = new Map([
     ["Beacon of Hope", [{
         name: "Beacon of Hope",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -436,7 +436,7 @@ let spells = new Map([
     ["Beast Bond", [{
         name: "Beast Bond",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -450,7 +450,7 @@ let spells = new Map([
     ["Beast Sense", [{
         name: "Beast Sense",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
@@ -464,7 +464,7 @@ let spells = new Map([
     ["Bestow Curse", [{
         name: "Bestow Curse",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -478,7 +478,7 @@ let spells = new Map([
     ["Bigby's Hand", [{
         name: "Bigby's Hand",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -492,7 +492,7 @@ let spells = new Map([
     ["Blade Barrier", [{
         name: "Blade Barrier",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -506,7 +506,7 @@ let spells = new Map([
     ["Blade Ward", [{
         name: "Blade Ward",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 round",
         school: "Abjuration",
@@ -520,7 +520,7 @@ let spells = new Map([
     ["Bless", [{
         name: "Bless",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -534,7 +534,7 @@ let spells = new Map([
     ["Blight", [{
         name: "Blight",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -548,7 +548,7 @@ let spells = new Map([
     ["Blinding Smite", [{
         name: "Blinding Smite",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -562,7 +562,7 @@ let spells = new Map([
     ["Blindness", [{
         name: "Blindness/Deafness",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 minute",
         school: "Necromancy",
@@ -576,7 +576,7 @@ let spells = new Map([
     ["Blink", [{
         name: "Blink",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 minute",
         school: "Transmutation",
@@ -590,7 +590,7 @@ let spells = new Map([
     ["Blur", [{
         name: "Blur",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -604,7 +604,7 @@ let spells = new Map([
     ["Bones of the Earth", [{
         name: "Bones of the Earth",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -618,7 +618,7 @@ let spells = new Map([
     ["Booming Blade", [{
         name: "Booming Blade",
         source: "TCE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 round",
         school: "Evocation",
@@ -632,7 +632,7 @@ let spells = new Map([
     ["Branding Smite", [{
         name: "Branding Smite",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -646,7 +646,7 @@ let spells = new Map([
     ["Burning Hands", [{
         name: "Burning Hands",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -660,7 +660,7 @@ let spells = new Map([
     ["Call Lightning", [{
         name: "Call Lightning",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -674,7 +674,7 @@ let spells = new Map([
     ["Calm Emotions", [{
         name: "Calm Emotions",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -688,7 +688,7 @@ let spells = new Map([
     ["Catapult", [{
         name: "Catapult",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -702,7 +702,7 @@ let spells = new Map([
     ["Catnap", [{
         name: "Catnap",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Enchantment",
@@ -716,7 +716,7 @@ let spells = new Map([
     ["Cause Fear", [{
         name: "Cause Fear",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -730,7 +730,7 @@ let spells = new Map([
     ["Ceremony", [{
         name: "Ceremony",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -744,7 +744,7 @@ let spells = new Map([
     ["Chain Lightning", [{
         name: "Chain Lightning",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -758,7 +758,7 @@ let spells = new Map([
     ["Chaos Bolt", [{
         name: "Chaos Bolt",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -772,7 +772,7 @@ let spells = new Map([
     ["Charm Monster", [{
         name: "Charm Monster",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "1 hour",
         school: "Enchantment",
@@ -786,7 +786,7 @@ let spells = new Map([
     ["Charm Person", [{
         name: "Charm Person",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Enchantment",
@@ -800,7 +800,7 @@ let spells = new Map([
     ["Chill Touch", [{
         name: "Chill Touch",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 round",
         school: "Necromancy",
@@ -814,7 +814,7 @@ let spells = new Map([
     ["Chromatic Orb", [{
         name: "Chromatic Orb",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -828,7 +828,7 @@ let spells = new Map([
     ["Circle of Death", [{
         name: "Circle of Death",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -842,7 +842,7 @@ let spells = new Map([
     ["Circle of Power", [{
         name: "Circle of Power",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -856,7 +856,7 @@ let spells = new Map([
     ["Clairvoyance", [{
         name: "Clairvoyance",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "10 Minutes",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -870,7 +870,7 @@ let spells = new Map([
     ["Clone", [{
         name: "Clone",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -884,7 +884,7 @@ let spells = new Map([
     ["Cloud of Daggers", [{
         name: "Cloud of Daggers",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -898,7 +898,7 @@ let spells = new Map([
     ["Cloudkill", [{
         name: "Cloudkill",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -912,7 +912,7 @@ let spells = new Map([
     ["Color Spray", [{
         name: "Color Spray",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 round",
         school: "Illusion",
@@ -926,7 +926,7 @@ let spells = new Map([
     ["Command", [{
         name: "Command",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 round",
         school: "Enchantment",
@@ -940,7 +940,7 @@ let spells = new Map([
     ["Commune", [{
         name: "Commune",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "1 minute",
         school: "Divination",
@@ -954,7 +954,7 @@ let spells = new Map([
     ["Commune with Nature", [{
         name: "Commune with Nature",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Divination",
@@ -968,7 +968,7 @@ let spells = new Map([
     ["Compelled Duel", [{
         name: "Compelled Duel",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -982,7 +982,7 @@ let spells = new Map([
     ["Comprehend Languages", [{
         name: "Comprehend Languages",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Divination",
@@ -996,7 +996,7 @@ let spells = new Map([
     ["Compulsion", [{
         name: "Compulsion",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -1010,7 +1010,7 @@ let spells = new Map([
     ["Cone of Cold", [{
         name: "Cone of Cold",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1024,7 +1024,7 @@ let spells = new Map([
     ["Confusion", [{
         name: "Confusion",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -1038,7 +1038,7 @@ let spells = new Map([
     ["Conjure Animals", [{
         name: "Conjure Animals",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1052,7 +1052,7 @@ let spells = new Map([
     ["Conjure Barrage", [{
         name: "Conjure Barrage",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -1066,7 +1066,7 @@ let spells = new Map([
     ["Conjure Celestial", [{
         name: "Conjure Celestial",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1080,7 +1080,7 @@ let spells = new Map([
     ["Conjure Elemental", [{
         name: "Conjure Elemental",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1094,7 +1094,7 @@ let spells = new Map([
     ["Conjure Fey", [{
         name: "Conjure Fey",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1108,7 +1108,7 @@ let spells = new Map([
     ["Conjure Minor Elementals", [{
         name: "Conjure Minor Elementals",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1122,7 +1122,7 @@ let spells = new Map([
     ["Conjure Volley", [{
         name: "Conjure Volley",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -1136,7 +1136,7 @@ let spells = new Map([
     ["Conjure Woodland Beings", [{
         name: "Conjure Woodland Beings",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -1150,7 +1150,7 @@ let spells = new Map([
     ["Contact Other Plane", [{
         name: "Contact Other Plane",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "1 minute",
         school: "Divination",
@@ -1164,7 +1164,7 @@ let spells = new Map([
     ["Contagion", [{
         name: "Contagion",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "7 days",
         school: "Necromancy",
@@ -1178,7 +1178,7 @@ let spells = new Map([
     ["Contingency", [{
         name: "Contingency",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "10 days",
         school: "Evocation",
@@ -1192,7 +1192,7 @@ let spells = new Map([
     ["Continual Flame", [{
         name: "Continual Flame",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Until dispelled",
         school: "Evocation",
@@ -1206,7 +1206,7 @@ let spells = new Map([
     ["Control Flames", [{
         name: "Control Flames",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous or 1 hour (see below)",
         school: "Transmutation",
@@ -1220,7 +1220,7 @@ let spells = new Map([
     ["Control Water", [{
         name: "Control Water",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -1234,7 +1234,7 @@ let spells = new Map([
     ["Control Weather", [{
         name: "Control Weather",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "10 Minutes",
         duration: "Concentration, up to 8 hours",
         school: "Transmutation",
@@ -1248,7 +1248,7 @@ let spells = new Map([
     ["Control Winds", [{
         name: "Control Winds",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -1262,7 +1262,7 @@ let spells = new Map([
     ["Cordon of Arrows", [{
         name: "Cordon of Arrows",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "8 hours",
         school: "Transmutation",
@@ -1276,7 +1276,7 @@ let spells = new Map([
     ["Counterspell", [{
         name: "Counterspell",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Reaction",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -1290,7 +1290,7 @@ let spells = new Map([
     ["Create Bonfire", [{
         name: "Create Bonfire",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -1304,7 +1304,7 @@ let spells = new Map([
     ["CreateFood", [{
         name: "Create Food and Water",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -1318,7 +1318,7 @@ let spells = new Map([
     ["Create Homunculus", [{
         name: "Create Homunculus",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -1332,7 +1332,7 @@ let spells = new Map([
     ["Create Magen", [{
         name: "Create Magen",
         source: "IDRotF",
-        level: "7th",
+        level: 7,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -1346,7 +1346,7 @@ let spells = new Map([
     ["Create Undead", [{
         name: "Create Undead",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -1360,7 +1360,7 @@ let spells = new Map([
     ["CreateWater", [{
         name: "Create or Destroy Water",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -1374,7 +1374,7 @@ let spells = new Map([
     ["Creation", [{
         name: "Creation",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "Special",
         school: "Illusion",
@@ -1388,7 +1388,7 @@ let spells = new Map([
     ["Crown of Madness", [{
         name: "Crown of Madness",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -1402,7 +1402,7 @@ let spells = new Map([
     ["Crown of Stars", [{
         name: "Crown of Stars",
         source: "XGE",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "1 hour",
         school: "Evocation",
@@ -1416,7 +1416,7 @@ let spells = new Map([
     ["Crusader's Mantle", [{
         name: "Crusader's Mantle",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1430,7 +1430,7 @@ let spells = new Map([
     ["Cure Wounds", [{
         name: "Cure Wounds",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1444,7 +1444,7 @@ let spells = new Map([
     ["Dancing Lights", [{
         name: "Dancing Lights",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1458,7 +1458,7 @@ let spells = new Map([
     ["Danse Macabre", [{
         name: "Danse Macabre",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Necromancy",
@@ -1472,7 +1472,7 @@ let spells = new Map([
     ["Darkness", [{
         name: "Darkness",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -1486,7 +1486,7 @@ let spells = new Map([
     ["Darkvision", [{
         name: "Darkvision",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "8 hours",
         school: "Transmutation",
@@ -1500,7 +1500,7 @@ let spells = new Map([
     ["Dawn", [{
         name: "Dawn",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1514,7 +1514,7 @@ let spells = new Map([
     ["Daylight", [{
         name: "Daylight",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 hour",
         school: "Evocation",
@@ -1528,7 +1528,7 @@ let spells = new Map([
     ["Death Ward", [{
         name: "Death Ward",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "8 hours",
         school: "Abjuration",
@@ -1542,7 +1542,7 @@ let spells = new Map([
     ["Delayed Blast", [{
         name: "Delayed Blast Fireball",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1556,7 +1556,7 @@ let spells = new Map([
     ["Demiplane", [{
         name: "Demiplane",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "1 hour",
         school: "Conjuration",
@@ -1570,7 +1570,7 @@ let spells = new Map([
     ["Destructive Wave", [{
         name: "Destructive Wave",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1584,7 +1584,7 @@ let spells = new Map([
     ["Detect Evil", [{
         name: "Detect Evil and Good",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -1598,7 +1598,7 @@ let spells = new Map([
     ["Detect Magic", [{
         name: "Detect Magic",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -1612,7 +1612,7 @@ let spells = new Map([
     ["Detect Poison", [{
         name: "Detect Poison and Disease",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -1626,7 +1626,7 @@ let spells = new Map([
     ["Detect Thoughts", [{
         name: "Detect Thoughts",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Divination",
@@ -1640,7 +1640,7 @@ let spells = new Map([
     ["Dimension Door", [{
         name: "Dimension Door",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -1654,7 +1654,7 @@ let spells = new Map([
     ["Disguise Self", [{
         name: "Disguise Self",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Illusion",
@@ -1668,7 +1668,7 @@ let spells = new Map([
     ["Disintegrate", [{
         name: "Disintegrate",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -1682,7 +1682,7 @@ let spells = new Map([
     ["Dispel Evil", [{
         name: "Dispel Evil and Good",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -1696,7 +1696,7 @@ let spells = new Map([
     ["Dispel Magic", [{
         name: "Dispel Magic",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -1710,7 +1710,7 @@ let spells = new Map([
     ["Dissonant Whispers", [{
         name: "Dissonant Whispers",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -1724,7 +1724,7 @@ let spells = new Map([
     ["Distort Value", [{
         name: "Distort Value",
         source: "AI",
-        level: "1st",
+        level: 1,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Illusion",
@@ -1738,7 +1738,7 @@ let spells = new Map([
     ["Divination", [{
         name: "Divination",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Divination",
@@ -1752,7 +1752,7 @@ let spells = new Map([
     ["Divine Favor", [{
         name: "Divine Favor",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1766,7 +1766,7 @@ let spells = new Map([
     ["Divine Word", [{
         name: "Divine Word",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Bonus acn.",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1780,7 +1780,7 @@ let spells = new Map([
     ["Dominate Beast", [{
         name: "Dominate Beast",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -1794,7 +1794,7 @@ let spells = new Map([
     ["Dominate Monster", [{
         name: "Dominate Monster",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Enchantment",
@@ -1808,7 +1808,7 @@ let spells = new Map([
     ["Dominate Person", [{
         name: "Dominate Person",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -1822,7 +1822,7 @@ let spells = new Map([
     ["Dragon's Breath", [{
         name: "Dragon's Breath",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -1836,7 +1836,7 @@ let spells = new Map([
     ["Drawmij", [{
         name: "Drawmij's Instant Summons",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "Until dispelled",
         school: "Conjuration",
@@ -1850,7 +1850,7 @@ let spells = new Map([
     ["Dream", [{
         name: "Dream",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Illusion",
@@ -1864,7 +1864,7 @@ let spells = new Map([
     ["Druid Grove", [{
         name: "Druid Grove",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "24 hours",
         school: "Abjuration",
@@ -1878,7 +1878,7 @@ let spells = new Map([
     ["Druidcraft", [{
         name: "Druidcraft",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -1892,7 +1892,7 @@ let spells = new Map([
     ["Dust Devil", [{
         name: "Dust Devil",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -1906,7 +1906,7 @@ let spells = new Map([
     ["Earth Tremor", [{
         name: "Earth Tremor",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1920,7 +1920,7 @@ let spells = new Map([
     ["Earthbind", [{
         name: "Earthbind",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -1934,7 +1934,7 @@ let spells = new Map([
     ["Earthquake", [{
         name: "Earthquake",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -1948,7 +1948,7 @@ let spells = new Map([
     ["Eldritch Blast", [{
         name: "Eldritch Blast",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -1962,7 +1962,7 @@ let spells = new Map([
     ["Elemental Bane", [{
         name: "Elemental Bane",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -1976,7 +1976,7 @@ let spells = new Map([
     ["Elemental Weapon", [{
         name: "Elemental Weapon",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -1990,7 +1990,7 @@ let spells = new Map([
     ["Enemies Abound", [{
         name: "Enemies Abound",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -2004,7 +2004,7 @@ let spells = new Map([
     ["Enervation", [{
         name: "Enervation",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -2018,7 +2018,7 @@ let spells = new Map([
     ["Enhance Ability", [{
         name: "Enhance Ability",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -2032,7 +2032,7 @@ let spells = new Map([
     ["Enlarge", [{
         name: "Enlarge/Reduce",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -2046,7 +2046,7 @@ let spells = new Map([
     ["Ensnaring Strike", [{
         name: "Ensnaring Strike",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2060,7 +2060,7 @@ let spells = new Map([
     ["Entangle", [{
         name: "Entangle",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2074,7 +2074,7 @@ let spells = new Map([
     ["Enthrall", [{
         name: "Enthrall",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 minute",
         school: "Enchantment",
@@ -2088,7 +2088,7 @@ let spells = new Map([
     ["Erupting Earth", [{
         name: "Erupting Earth",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -2102,7 +2102,7 @@ let spells = new Map([
     ["Etherealness", [{
         name: "Etherealness",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Up to 8 hours",
         school: "Transmutation",
@@ -2116,7 +2116,7 @@ let spells = new Map([
     ["Evard", [{
         name: "Evard's Black Tentacles",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2130,7 +2130,7 @@ let spells = new Map([
     ["Expeditious", [{
         name: "Expeditious Retreat",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -2144,7 +2144,7 @@ let spells = new Map([
     ["Eyebite", [{
         name: "Eyebite",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -2158,7 +2158,7 @@ let spells = new Map([
     ["Fabricate", [{
         name: "Fabricate",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -2172,7 +2172,7 @@ let spells = new Map([
     ["Faerie", [{
         name: "Faerie Fire",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -2186,7 +2186,7 @@ let spells = new Map([
     ["False", [{
         name: "False Life",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Necromancy",
@@ -2200,7 +2200,7 @@ let spells = new Map([
     ["Far Step", [{
         name: "Far Step",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2214,7 +2214,7 @@ let spells = new Map([
     ["Fast Friends", [{
         name: "Fast Friends",
         source: "AI",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Enchantment",
@@ -2228,7 +2228,7 @@ let spells = new Map([
     ["Fear", [{
         name: "Fear",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -2242,7 +2242,7 @@ let spells = new Map([
     ["Feather", [{
         name: "Feather Fall",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Reaction",
         duration: "1 minute",
         school: "Transmutation",
@@ -2256,7 +2256,7 @@ let spells = new Map([
     ["Feeblemind", [{
         name: "Feeblemind",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -2270,7 +2270,7 @@ let spells = new Map([
     ["Feign Death", [{
         name: "Feign Death",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 hour",
         school: "Necromancy",
@@ -2284,7 +2284,7 @@ let spells = new Map([
     ["Find Familiar", [{
         name: "Find Familiar",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -2298,7 +2298,7 @@ let spells = new Map([
     ["Find Greater Steed", [{
         name: "Find Greater Steed",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -2312,7 +2312,7 @@ let spells = new Map([
     ["Find Steed", [{
         name: "Find Steed",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -2326,7 +2326,7 @@ let spells = new Map([
     ["Find Traps", [{
         name: "Find Traps",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Divination",
@@ -2340,7 +2340,7 @@ let spells = new Map([
     ["FindPath", [{
         name: "Find the Path",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 day",
         school: "Divination",
@@ -2354,7 +2354,7 @@ let spells = new Map([
     ["Finger of Death", [{
         name: "Finger of Death",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -2368,7 +2368,7 @@ let spells = new Map([
     ["Fire Bolt", [{
         name: "Fire Bolt",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2382,7 +2382,7 @@ let spells = new Map([
     ["Fire Shield", [{
         name: "Fire Shield",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Evocation",
@@ -2396,7 +2396,7 @@ let spells = new Map([
     ["Fire Storm", [{
         name: "Fire Storm",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2410,7 +2410,7 @@ let spells = new Map([
     ["Fireball", [{
         name: "Fireball",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2424,7 +2424,7 @@ let spells = new Map([
     ["Flame Arrows", [{
         name: "Flame Arrows",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -2438,7 +2438,7 @@ let spells = new Map([
     ["Flame Blade", [{
         name: "Flame Blade",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -2452,7 +2452,7 @@ let spells = new Map([
     ["Flame Strike", [{
         name: "Flame Strike",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2466,7 +2466,7 @@ let spells = new Map([
     ["Flaming Sphere", [{
         name: "Flaming Sphere",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2480,7 +2480,7 @@ let spells = new Map([
     ["Flesh to Stone", [{
         name: "Flesh to Stone",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -2494,7 +2494,7 @@ let spells = new Map([
     ["Fly", [{
         name: "Fly",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -2508,7 +2508,7 @@ let spells = new Map([
     ["Fog Cloud", [{
         name: "Fog Cloud",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -2522,7 +2522,7 @@ let spells = new Map([
     ["Forbiddance", [{
         name: "Forbiddance",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "1 day",
         school: "Abjuration",
@@ -2536,7 +2536,7 @@ let spells = new Map([
     ["Forcecage", [{
         name: "Forcecage",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "1 hour",
         school: "Evocation",
@@ -2550,7 +2550,7 @@ let spells = new Map([
     ["Foresight", [{
         name: "Foresight",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Divination",
@@ -2564,7 +2564,7 @@ let spells = new Map([
     ["Freedom of Movement", [{
         name: "Freedom of Movement",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "1 hour",
         school: "Abjuration",
@@ -2578,7 +2578,7 @@ let spells = new Map([
     ["Friends", [{
         name: "Friends",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -2592,7 +2592,7 @@ let spells = new Map([
     ["Frost Fingers", [{
         name: "Frost Fingers",
         source: "IDRotF",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2606,7 +2606,7 @@ let spells = new Map([
     ["Frostbite", [{
         name: "Frostbite",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2620,7 +2620,7 @@ let spells = new Map([
     ["Gaseous Form", [{
         name: "Gaseous Form",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -2634,7 +2634,7 @@ let spells = new Map([
     ["Gate", [{
         name: "Gate",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2648,7 +2648,7 @@ let spells = new Map([
     ["Geas", [{
         name: "Geas",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "30 days",
         school: "Enchantment",
@@ -2662,7 +2662,7 @@ let spells = new Map([
     ["Gentle Repose", [{
         name: "Gentle Repose",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "10 days",
         school: "Necromancy",
@@ -2676,7 +2676,7 @@ let spells = new Map([
     ["Giant Insect", [{
         name: "Giant Insect",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -2690,7 +2690,7 @@ let spells = new Map([
     ["Gift of Gab", [{
         name: "Gift of Gab",
         source: "AI",
-        level: "2nd",
+        level: 2,
         castingTime: "Reaction",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -2704,7 +2704,7 @@ let spells = new Map([
     ["Glibness", [{
         name: "Glibness",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "1 hour",
         school: "Transmutation",
@@ -2718,7 +2718,7 @@ let spells = new Map([
     ["Globe of Invulnerability", [{
         name: "Globe of Invulnerability",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -2732,7 +2732,7 @@ let spells = new Map([
     ["Glyph of Warding", [{
         name: "Glyph of Warding",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Hour",
         duration: "Until dispelled or triggered",
         school: "Abjuration",
@@ -2746,7 +2746,7 @@ let spells = new Map([
     ["Goodberry", [{
         name: "Goodberry",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -2760,7 +2760,7 @@ let spells = new Map([
     ["Grasping Vine", [{
         name: "Grasping Vine",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2774,7 +2774,7 @@ let spells = new Map([
     ["Grease", [{
         name: "Grease",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 minute",
         school: "Conjuration",
@@ -2788,7 +2788,7 @@ let spells = new Map([
     ["Greater Invisibility", [{
         name: "Greater Invisibility",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -2802,7 +2802,7 @@ let spells = new Map([
     ["Greater Restoration", [{
         name: "Greater Restoration",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -2816,7 +2816,7 @@ let spells = new Map([
     ["Green-Flame Blade", [{
         name: "Green-Flame Blade",
         source: "TCE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -2830,7 +2830,7 @@ let spells = new Map([
     ["Guardian of Faith", [{
         name: "Guardian of Faith",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "8 hours",
         school: "Conjuration",
@@ -2844,7 +2844,7 @@ let spells = new Map([
     ["Guardian of Nature", [{
         name: "Guardian of Nature",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -2858,7 +2858,7 @@ let spells = new Map([
     ["Guards and Wards", [{
         name: "Guards and Wards",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "24 hours",
         school: "Abjuration",
@@ -2872,7 +2872,7 @@ let spells = new Map([
     ["Guidance", [{
         name: "Guidance",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Divination",
@@ -2886,7 +2886,7 @@ let spells = new Map([
     ["Guiding Bolt", [{
         name: "Guiding Bolt",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 round",
         school: "Evocation",
@@ -2900,7 +2900,7 @@ let spells = new Map([
     ["Gust", [{
         name: "Gust",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -2914,7 +2914,7 @@ let spells = new Map([
     ["Gust of Wind", [{
         name: "Gust of Wind",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -2928,7 +2928,7 @@ let spells = new Map([
     ["Hail of Thorns", [{
         name: "Hail of Thorns",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -2942,7 +2942,7 @@ let spells = new Map([
     ["Hallow", [{
         name: "Hallow",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "24 Hours",
         duration: "Until dispelled",
         school: "Evocation",
@@ -2956,7 +2956,7 @@ let spells = new Map([
     ["Hallucinatory Terrain", [{
         name: "Hallucinatory Terrain",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "10 Minutes",
         duration: "24 hours",
         school: "Illusion",
@@ -2970,7 +2970,7 @@ let spells = new Map([
     ["Harm", [{
         name: "Harm",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -2984,7 +2984,7 @@ let spells = new Map([
     ["Haste", [{
         name: "Haste",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -2998,7 +2998,7 @@ let spells = new Map([
     ["Heal", [{
         name: "Heal",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3012,7 +3012,7 @@ let spells = new Map([
     ["Healing Spirit", [{
         name: "Healing Spirit",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -3026,7 +3026,7 @@ let spells = new Map([
     ["Healing Word", [{
         name: "Healing Word",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3040,7 +3040,7 @@ let spells = new Map([
     ["Heat Metal", [{
         name: "Heat Metal",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -3054,7 +3054,7 @@ let spells = new Map([
     ["Hellish Rebuke", [{
         name: "Hellish Rebuke",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Reaction",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3068,7 +3068,7 @@ let spells = new Map([
     ["HeroesFeast", [{
         name: "Heroes' Feast",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -3082,7 +3082,7 @@ let spells = new Map([
     ["Heroism", [{
         name: "Heroism",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -3096,7 +3096,7 @@ let spells = new Map([
     ["Hex", [{
         name: "Hex",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 hour",
         school: "Enchantment",
@@ -3110,7 +3110,7 @@ let spells = new Map([
     ["Hold Monster", [{
         name: "Hold Monster",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -3124,7 +3124,7 @@ let spells = new Map([
     ["Hold Person", [{
         name: "Hold Person",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -3138,7 +3138,7 @@ let spells = new Map([
     ["Holy Aura", [{
         name: "Holy Aura",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -3152,7 +3152,7 @@ let spells = new Map([
     ["Holy Weapon", [{
         name: "Holy Weapon",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 hour",
         school: "Evocation",
@@ -3166,7 +3166,7 @@ let spells = new Map([
     ["Hunger of Hadar", [{
         name: "Hunger of Hadar",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -3180,7 +3180,7 @@ let spells = new Map([
     ["HuntersMark", [{
         name: "Hunter's Mark",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
@@ -3194,7 +3194,7 @@ let spells = new Map([
     ["Hypnotic Pattern", [{
         name: "Hypnotic Pattern",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -3208,7 +3208,7 @@ let spells = new Map([
     ["Ice Knife", [{
         name: "Ice Knife",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -3222,7 +3222,7 @@ let spells = new Map([
     ["Ice Storm", [{
         name: "Ice Storm",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3236,7 +3236,7 @@ let spells = new Map([
     ["Identify", [{
         name: "Identify",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Divination",
@@ -3250,7 +3250,7 @@ let spells = new Map([
     ["Illusory Dragon", [{
         name: "Illusory Dragon",
         source: "XGE",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -3264,7 +3264,7 @@ let spells = new Map([
     ["Illusory Script", [{
         name: "Illusory Script",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "1 Minute",
         duration: "10 days",
         school: "Illusion",
@@ -3278,7 +3278,7 @@ let spells = new Map([
     ["Immolation", [{
         name: "Immolation",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -3292,7 +3292,7 @@ let spells = new Map([
     ["Imprisonment", [{
         name: "Imprisonment",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "1 Minute",
         duration: "Until dispelled",
         school: "Abjuration",
@@ -3306,7 +3306,7 @@ let spells = new Map([
     ["Incendiary Cloud", [{
         name: "Incendiary Cloud",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -3320,7 +3320,7 @@ let spells = new Map([
     ["Incite Greed", [{
         name: "Incite Greed",
         source: "AI",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -3334,7 +3334,7 @@ let spells = new Map([
     ["Infernal Calling", [{
         name: "Infernal Calling",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -3348,7 +3348,7 @@ let spells = new Map([
     ["Infestation", [{
         name: "Infestation",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -3362,7 +3362,7 @@ let spells = new Map([
     ["Inflict Wounds", [{
         name: "Inflict Wounds",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -3376,7 +3376,7 @@ let spells = new Map([
     ["Insect Plague", [{
         name: "Insect Plague",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -3390,7 +3390,7 @@ let spells = new Map([
     ["Intellect Fortress", [{
         name: "Intellect Fortress",
         source: "TCE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -3404,7 +3404,7 @@ let spells = new Map([
     ["Investiture of Flame", [{
         name: "Investiture of Flame",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -3418,7 +3418,7 @@ let spells = new Map([
     ["Investiture of Ice", [{
         name: "Investiture of Ice",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -3432,7 +3432,7 @@ let spells = new Map([
     ["Investiture of Stone", [{
         name: "Investiture of Stone",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -3446,7 +3446,7 @@ let spells = new Map([
     ["Investiture of Wind", [{
         name: "Investiture of Wind",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -3460,7 +3460,7 @@ let spells = new Map([
     ["Invisibility", [{
         name: "Invisibility",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Illusion",
@@ -3474,7 +3474,7 @@ let spells = new Map([
     ["Invulnerability", [{
         name: "Invulnerability",
         source: "XGE",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -3488,7 +3488,7 @@ let spells = new Map([
     ["Jims Glowing Coin", [{
         name: "Jim's Glowing Coin",
         source: "AI",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 minute",
         school: "Enchantment",
@@ -3502,7 +3502,7 @@ let spells = new Map([
     ["Jims Magic Missile", [{
         name: "Jim's Magic Missile",
         source: "AI",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3516,7 +3516,7 @@ let spells = new Map([
     ["Jump", [{
         name: "Jump",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 minute",
         school: "Transmutation",
@@ -3530,7 +3530,7 @@ let spells = new Map([
     ["Knock", [{
         name: "Knock",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -3544,7 +3544,7 @@ let spells = new Map([
     ["Legend Lore", [{
         name: "Legend Lore",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Divination",
@@ -3558,7 +3558,7 @@ let spells = new Map([
     ["LeomundsSecretChest", [{
         name: "Leomund's Secret Chest",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -3572,7 +3572,7 @@ let spells = new Map([
     ["LeomundsTinyHut", [{
         name: "Leomund's Tiny Hut",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Evocation",
@@ -3586,7 +3586,7 @@ let spells = new Map([
     ["Lesser Restoration", [{
         name: "Lesser Restoration",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -3600,7 +3600,7 @@ let spells = new Map([
     ["Levitate", [{
         name: "Levitate",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -3614,7 +3614,7 @@ let spells = new Map([
     ["Life Transference", [{
         name: "Life Transference",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -3628,7 +3628,7 @@ let spells = new Map([
     ["Light", [{
         name: "Light",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 hour",
         school: "Evocation",
@@ -3642,7 +3642,7 @@ let spells = new Map([
     ["Lightning Arrow", [{
         name: "Lightning Arrow",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -3656,7 +3656,7 @@ let spells = new Map([
     ["Lightning Bolt", [{
         name: "Lightning Bolt",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3670,7 +3670,7 @@ let spells = new Map([
     ["Lightning Lure", [{
         name: "Lightning Lure",
         source: "TCE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3684,7 +3684,7 @@ let spells = new Map([
     ["Locate Animals", [{
         name: "Locate Animals or Plants",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Divination",
@@ -3698,7 +3698,7 @@ let spells = new Map([
     ["Locate Creature", [{
         name: "Locate Creature",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
@@ -3712,7 +3712,7 @@ let spells = new Map([
     ["Locate Object", [{
         name: "Locate Object",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -3726,7 +3726,7 @@ let spells = new Map([
     ["Longstrider", [{
         name: "Longstrider",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Transmutation",
@@ -3740,7 +3740,7 @@ let spells = new Map([
     ["Maddening Darkness", [{
         name: "Maddening Darkness",
         source: "XGE",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -3754,7 +3754,7 @@ let spells = new Map([
     ["Maelstrom", [{
         name: "Maelstrom",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -3768,7 +3768,7 @@ let spells = new Map([
     ["Mage Armor", [{
         name: "Mage Armor",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "8 hours",
         school: "Abjuration",
@@ -3782,7 +3782,7 @@ let spells = new Map([
     ["Mage Hand", [{
         name: "Mage Hand",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 minute",
         school: "Conjuration",
@@ -3796,7 +3796,7 @@ let spells = new Map([
     ["Magic Circle", [{
         name: "Magic Circle",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "1 hour",
         school: "Abjuration",
@@ -3810,7 +3810,7 @@ let spells = new Map([
     ["Magic Jar", [{
         name: "Magic Jar",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "Until dispelled",
         school: "Necromancy",
@@ -3824,7 +3824,7 @@ let spells = new Map([
     ["MagicMissile", [{
         name: "Magic Missile",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3838,7 +3838,7 @@ let spells = new Map([
     ["Magic Mouth", [{
         name: "Magic Mouth",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "1 Minute",
         duration: "Until dispelled",
         school: "Illusion",
@@ -3852,7 +3852,7 @@ let spells = new Map([
     ["Magic Stone", [{
         name: "Magic Stone",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Bonus acn.",
         duration: "1 minute",
         school: "Transmutation",
@@ -3866,7 +3866,7 @@ let spells = new Map([
     ["Magic Weapon", [{
         name: "Magic Weapon",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -3880,7 +3880,7 @@ let spells = new Map([
     ["Major Image", [{
         name: "Major Image",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Illusion",
@@ -3894,7 +3894,7 @@ let spells = new Map([
     ["Mass Cure Wounds", [{
         name: "Mass Cure Wounds",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3908,7 +3908,7 @@ let spells = new Map([
     ["Mass Heal", [{
         name: "Mass Heal",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3922,7 +3922,7 @@ let spells = new Map([
     ["Mass Healing Word", [{
         name: "Mass Healing Word",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Bonus acn.",
         duration: "Instantaneous",
         school: "Evocation",
@@ -3936,7 +3936,7 @@ let spells = new Map([
     ["Mass Polymorph", [{
         name: "Mass Polymorph",
         source: "XGE",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -3950,7 +3950,7 @@ let spells = new Map([
     ["Mass Suggestion", [{
         name: "Mass Suggestion",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "24 hours",
         school: "Enchantment",
@@ -3964,7 +3964,7 @@ let spells = new Map([
     ["MaximiliansEarthenGrasp", [{
         name: "Maximilian's Earthen Grasp",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -3978,7 +3978,7 @@ let spells = new Map([
     ["Maze", [{
         name: "Maze",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -3992,7 +3992,7 @@ let spells = new Map([
     ["Meld into Stone", [{
         name: "Meld into Stone",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "8 hours",
         school: "Transmutation",
@@ -4006,7 +4006,7 @@ let spells = new Map([
     ["MelfsAcidArrow", [{
         name: "Melf's Acid Arrow",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4020,7 +4020,7 @@ let spells = new Map([
     ["MelfsMinuteMeteors", [{
         name: "Melf's Minute Meteors",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -4034,7 +4034,7 @@ let spells = new Map([
     ["Mending", [{
         name: "Mending",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4048,7 +4048,7 @@ let spells = new Map([
     ["Mental Prison", [{
         name: "Mental Prison",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -4062,7 +4062,7 @@ let spells = new Map([
     ["Message", [{
         name: "Message",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 round",
         school: "Transmutation",
@@ -4076,7 +4076,7 @@ let spells = new Map([
     ["Meteor Swarm", [{
         name: "Meteor Swarm",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4090,7 +4090,7 @@ let spells = new Map([
     ["Mighty Fortress", [{
         name: "Mighty Fortress",
         source: "XGE",
-        level: "8th",
+        level: 8,
         castingTime: "1 Minute",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -4104,7 +4104,7 @@ let spells = new Map([
     ["Mind Blank", [{
         name: "Mind Blank",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "24 hours",
         school: "Abjuration",
@@ -4118,7 +4118,7 @@ let spells = new Map([
     ["Mind Spike", [{
         name: "Mind Spike",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
@@ -4132,7 +4132,7 @@ let spells = new Map([
     ["Minor Illusion", [{
         name: "Minor Illusion",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "1 minute",
         school: "Illusion",
@@ -4146,7 +4146,7 @@ let spells = new Map([
     ["Mirage Arcane", [{
         name: "Mirage Arcane",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "10 Minutes",
         duration: "10 days",
         school: "Illusion",
@@ -4160,7 +4160,7 @@ let spells = new Map([
     ["Mirror Image", [{
         name: "Mirror Image",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 minute",
         school: "Illusion",
@@ -4174,7 +4174,7 @@ let spells = new Map([
     ["Mislead", [{
         name: "Mislead",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Illusion",
@@ -4188,7 +4188,7 @@ let spells = new Map([
     ["Misty Step", [{
         name: "Misty Step",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -4202,7 +4202,7 @@ let spells = new Map([
     ["Modify Memory", [{
         name: "Modify Memory",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -4216,7 +4216,7 @@ let spells = new Map([
     ["Mold Earth", [{
         name: "Mold Earth",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous or 1 hour (see below)",
         school: "Transmutation",
@@ -4230,7 +4230,7 @@ let spells = new Map([
     ["Moonbeam", [{
         name: "Moonbeam",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -4244,7 +4244,7 @@ let spells = new Map([
     ["MordenkainensFaithfulHound", [{
         name: "Mordenkainen's Faithful Hound",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "8 hours",
         school: "Conjuration",
@@ -4258,7 +4258,7 @@ let spells = new Map([
     ["MordenkainensMagnificentMansion", [{
         name: "Mordenkainen's Magnificent Mansion",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "1 Minute",
         duration: "24 hours",
         school: "Conjuration",
@@ -4272,7 +4272,7 @@ let spells = new Map([
     ["MordenkainensPrivateSanctum", [{
         name: "Mordenkainen's Private Sanctum",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "10 Minutes",
         duration: "24 hours",
         school: "Abjuration",
@@ -4286,7 +4286,7 @@ let spells = new Map([
     ["MordenkainensSword", [{
         name: "Mordenkainen's Sword",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -4300,7 +4300,7 @@ let spells = new Map([
     ["Motivational Speech", [{
         name: "Motivational Speech",
         source: "AI",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "1 hour",
         school: "Enchantment",
@@ -4314,7 +4314,7 @@ let spells = new Map([
     ["Move Earth", [{
         name: "Move Earth",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 2 hours",
         school: "Transmutation",
@@ -4328,7 +4328,7 @@ let spells = new Map([
     ["Negative Energy Flood", [{
         name: "Negative Energy Flood",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -4342,7 +4342,7 @@ let spells = new Map([
     ["Nondetection", [{
         name: "Nondetection",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "8 hours",
         school: "Abjuration",
@@ -4356,7 +4356,7 @@ let spells = new Map([
     ["Nystul's Magic Aura", [{
         name: "Nystul's Magic Aura",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "24 hours",
         school: "Illusion",
@@ -4370,7 +4370,7 @@ let spells = new Map([
     ["Otiluke's Freezing Sphere", [{
         name: "Otiluke's Freezing Sphere",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4384,7 +4384,7 @@ let spells = new Map([
     ["Otiluke's Resilient Sphere", [{
         name: "Otiluke's Resilient Sphere",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -4398,7 +4398,7 @@ let spells = new Map([
     ["Otto's Irresistible Dance", [{
         name: "Otto's Irresistible Dance",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -4412,7 +4412,7 @@ let spells = new Map([
     ["Pass without Trace", [{
         name: "Pass without Trace",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -4426,7 +4426,7 @@ let spells = new Map([
     ["Passwall", [{
         name: "Passwall",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "1 hour",
         school: "Transmutation",
@@ -4440,7 +4440,7 @@ let spells = new Map([
     ["Phantasmal Force", [{
         name: "Phantasmal Force",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -4454,7 +4454,7 @@ let spells = new Map([
     ["Phantasmal Killer", [{
         name: "Phantasmal Killer",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -4468,7 +4468,7 @@ let spells = new Map([
     ["Phantom Steed", [{
         name: "Phantom Steed",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "1 hour",
         school: "Illusion",
@@ -4482,7 +4482,7 @@ let spells = new Map([
     ["Planar Ally", [{
         name: "Planar Ally",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -4496,7 +4496,7 @@ let spells = new Map([
     ["Planar Binding", [{
         name: "Planar Binding",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Hour",
         duration: "24 hours",
         school: "Abjuration",
@@ -4510,7 +4510,7 @@ let spells = new Map([
     ["Plane Shift", [{
         name: "Plane Shift",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -4524,7 +4524,7 @@ let spells = new Map([
     ["Plant Growth", [{
         name: "Plant Growth",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4538,7 +4538,7 @@ let spells = new Map([
     ["Poison Spray", [{
         name: "Poison Spray",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -4552,7 +4552,7 @@ let spells = new Map([
     ["Polymorph", [{
         name: "Polymorph",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -4566,7 +4566,7 @@ let spells = new Map([
     ["Power Word Heal", [{
         name: "Power Word Heal",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4580,7 +4580,7 @@ let spells = new Map([
     ["Power Word Kill", [{
         name: "Power Word Kill",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -4594,7 +4594,7 @@ let spells = new Map([
     ["Power Word Pain", [{
         name: "Power Word Pain",
         source: "XGE",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -4608,7 +4608,7 @@ let spells = new Map([
     ["Power Word Stun", [{
         name: "Power Word Stun",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -4622,7 +4622,7 @@ let spells = new Map([
     ["Prayer of Healing", [{
         name: "Prayer of Healing",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "10 Minutes",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4636,7 +4636,7 @@ let spells = new Map([
     ["Prestidigitation", [{
         name: "Prestidigitation",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Up to 1 hour",
         school: "Transmutation",
@@ -4650,7 +4650,7 @@ let spells = new Map([
     ["Primal Savagery", [{
         name: "Primal Savagery",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4664,7 +4664,7 @@ let spells = new Map([
     ["Primordial Ward", [{
         name: "Primordial Ward",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -4678,7 +4678,7 @@ let spells = new Map([
     ["Prismatic Spray", [{
         name: "Prismatic Spray",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4692,7 +4692,7 @@ let spells = new Map([
     ["Prismatic Wall", [{
         name: "Prismatic Wall",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Abjuration",
@@ -4706,7 +4706,7 @@ let spells = new Map([
     ["Produce Flame", [{
         name: "Produce Flame",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Conjuration",
@@ -4720,7 +4720,7 @@ let spells = new Map([
     ["Programmed Illusion", [{
         name: "Programmed Illusion",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Until dispelled",
         school: "Illusion",
@@ -4734,7 +4734,7 @@ let spells = new Map([
     ["Project Image", [{
         name: "Project Image",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Concentration, up to 1 day",
         school: "Illusion",
@@ -4748,7 +4748,7 @@ let spells = new Map([
     ["Protection from Energy", [{
         name: "Protection from Energy",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -4762,7 +4762,7 @@ let spells = new Map([
     ["Protection from Evil", [{
         name: "Protection from Evil and Good",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -4776,7 +4776,7 @@ let spells = new Map([
     ["Protection from Poison", [{
         name: "Protection from Poison",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 hour",
         school: "Abjuration",
@@ -4790,7 +4790,7 @@ let spells = new Map([
     ["Psychic Scream", [{
         name: "Psychic Scream",
         source: "XGE",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -4804,7 +4804,7 @@ let spells = new Map([
     ["Purify Food", [{
         name: "Purify Food and Drink",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4818,7 +4818,7 @@ let spells = new Map([
     ["Pyrotechnics", [{
         name: "Pyrotechnics",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4832,7 +4832,7 @@ let spells = new Map([
     ["Raise Dead", [{
         name: "Raise Dead",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -4846,7 +4846,7 @@ let spells = new Map([
     ["Rary's Telepathic Bond", [{
         name: "Rary's Telepathic Bond",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "1 hour",
         school: "Divination",
@@ -4860,7 +4860,7 @@ let spells = new Map([
     ["Ray of Enfeeblement", [{
         name: "Ray of Enfeeblement",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -4874,7 +4874,7 @@ let spells = new Map([
     ["Ray of Frost", [{
         name: "Ray of Frost",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -4888,7 +4888,7 @@ let spells = new Map([
     ["Ray of Sickness", [{
         name: "Ray of Sickness",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -4902,7 +4902,7 @@ let spells = new Map([
     ["Regenerate", [{
         name: "Regenerate",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "1 Minute",
         duration: "1 hour",
         school: "Transmutation",
@@ -4916,7 +4916,7 @@ let spells = new Map([
     ["Reincarnate", [{
         name: "Reincarnate",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -4930,7 +4930,7 @@ let spells = new Map([
     ["Remove Curse", [{
         name: "Remove Curse",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Abjuration",
@@ -4944,7 +4944,7 @@ let spells = new Map([
     ["Resistance", [{
         name: "Resistance",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
@@ -4958,7 +4958,7 @@ let spells = new Map([
     ["Resurrection", [{
         name: "Resurrection",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -4972,7 +4972,7 @@ let spells = new Map([
     ["Reverse Gravity", [{
         name: "Reverse Gravity",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -4986,7 +4986,7 @@ let spells = new Map([
     ["Revivify", [{
         name: "Revivify",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -5000,7 +5000,7 @@ let spells = new Map([
     ["Rope Trick", [{
         name: "Rope Trick",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 hour",
         school: "Transmutation",
@@ -5014,7 +5014,7 @@ let spells = new Map([
     ["Sacred Flame", [{
         name: "Sacred Flame",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5028,7 +5028,7 @@ let spells = new Map([
     ["Sanctuary", [{
         name: "Sanctuary",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "1 minute",
         school: "Abjuration",
@@ -5042,7 +5042,7 @@ let spells = new Map([
     ["Scatter", [{
         name: "Scatter",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -5056,7 +5056,7 @@ let spells = new Map([
     ["Scorching Ray", [{
         name: "Scorching Ray",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5070,7 +5070,7 @@ let spells = new Map([
     ["Scrying", [{
         name: "Scrying",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "10 Minutes",
         duration: "Concentration, up to 10 minutes",
         school: "Divination",
@@ -5084,7 +5084,7 @@ let spells = new Map([
     ["Searing Smite", [{
         name: "Searing Smite",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5098,7 +5098,7 @@ let spells = new Map([
     ["See Invisibility", [{
         name: "See Invisibility",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 hour",
         school: "Divination",
@@ -5112,7 +5112,7 @@ let spells = new Map([
     ["Seeming", [{
         name: "Seeming",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "8 hours",
         school: "Illusion",
@@ -5126,7 +5126,7 @@ let spells = new Map([
     ["Sending", [{
         name: "Sending",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 round",
         school: "Evocation",
@@ -5140,7 +5140,7 @@ let spells = new Map([
     ["Sequester", [{
         name: "Sequester",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Until dispelled",
         school: "Transmutation",
@@ -5154,7 +5154,7 @@ let spells = new Map([
     ["Shadow Blade", [{
         name: "Shadow Blade",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -5168,7 +5168,7 @@ let spells = new Map([
     ["Shadow of Moil", [{
         name: "Shadow of Moil",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -5182,7 +5182,7 @@ let spells = new Map([
     ["Shape Water", [{
         name: "Shape Water",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous or 1 hour (see below)",
         school: "Transmutation",
@@ -5196,7 +5196,7 @@ let spells = new Map([
     ["Shapechange", [{
         name: "Shapechange",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -5210,7 +5210,7 @@ let spells = new Map([
     ["Shatter", [{
         name: "Shatter",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5224,7 +5224,7 @@ let spells = new Map([
     ["Shield", [{
         name: "Shield",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Reaction",
         duration: "1 round",
         school: "Abjuration",
@@ -5238,7 +5238,7 @@ let spells = new Map([
     ["Shield of Faith", [{
         name: "Shield of Faith",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
@@ -5252,7 +5252,7 @@ let spells = new Map([
     ["Shillelagh", [{
         name: "Shillelagh",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Bonus acn.",
         duration: "1 minute",
         school: "Transmutation",
@@ -5266,7 +5266,7 @@ let spells = new Map([
     ["Shocking Grasp", [{
         name: "Shocking Grasp",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5280,7 +5280,7 @@ let spells = new Map([
     ["Sickening Radiance", [{
         name: "Sickening Radiance",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -5294,7 +5294,7 @@ let spells = new Map([
     ["Silence", [{
         name: "Silence",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Illusion",
@@ -5308,7 +5308,7 @@ let spells = new Map([
     ["Silent Image", [{
         name: "Silent Image",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Illusion",
@@ -5322,7 +5322,7 @@ let spells = new Map([
     ["Simulacrum", [{
         name: "Simulacrum",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "12 Hours",
         duration: "Until dispelled",
         school: "Illusion",
@@ -5336,7 +5336,7 @@ let spells = new Map([
     ["Skill Empowerment", [{
         name: "Skill Empowerment",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -5350,7 +5350,7 @@ let spells = new Map([
     ["Skywrite", [{
         name: "Skywrite",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -5364,7 +5364,7 @@ let spells = new Map([
     ["Sleep", [{
         name: "Sleep",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 minute",
         school: "Enchantment",
@@ -5378,7 +5378,7 @@ let spells = new Map([
     ["Sleet Storm", [{
         name: "Sleet Storm",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -5392,7 +5392,7 @@ let spells = new Map([
     ["Slow", [{
         name: "Slow",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -5406,7 +5406,7 @@ let spells = new Map([
     ["Snare", [{
         name: "Snare",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Abjuration",
@@ -5420,7 +5420,7 @@ let spells = new Map([
     ["Snilloc", [{
         name: "Snilloc's Snowball Swarm",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5434,7 +5434,7 @@ let spells = new Map([
     ["Soul Cage", [{
         name: "Soul Cage",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Reaction",
         duration: "8 hours",
         school: "Necromancy",
@@ -5448,7 +5448,7 @@ let spells = new Map([
     ["Spare the Dying", [{
         name: "Spare the Dying",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -5462,7 +5462,7 @@ let spells = new Map([
     ["Speak with Animals", [{
         name: "Speak with Animals",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Divination",
@@ -5476,7 +5476,7 @@ let spells = new Map([
     ["Speak with Dead", [{
         name: "Speak with Dead",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Necromancy",
@@ -5490,7 +5490,7 @@ let spells = new Map([
     ["Speak with Plants", [{
         name: "Speak with Plants",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Transmutation",
@@ -5504,7 +5504,7 @@ let spells = new Map([
     ["Spider Climb", [{
         name: "Spider Climb",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -5518,7 +5518,7 @@ let spells = new Map([
     ["Spike Growth", [{
         name: "Spike Growth",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -5532,7 +5532,7 @@ let spells = new Map([
     ["Spirit Guardians", [{
         name: "Spirit Guardians",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -5546,7 +5546,7 @@ let spells = new Map([
     ["Spiritual Weapon", [{
         name: "Spiritual Weapon",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Bonus acn.",
         duration: "1 minute",
         school: "Evocation",
@@ -5560,7 +5560,7 @@ let spells = new Map([
     ["Staggering Smite", [{
         name: "Staggering Smite",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5574,7 +5574,7 @@ let spells = new Map([
     ["Steel Wind Strike", [{
         name: "Steel Wind Strike",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -5588,7 +5588,7 @@ let spells = new Map([
     ["Stinking Cloud", [{
         name: "Stinking Cloud",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -5602,7 +5602,7 @@ let spells = new Map([
     ["Stone Shape", [{
         name: "Stone Shape",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -5616,7 +5616,7 @@ let spells = new Map([
     ["Stoneskin", [{
         name: "Stoneskin",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Abjuration",
@@ -5630,7 +5630,7 @@ let spells = new Map([
     ["Storm Sphere", [{
         name: "Storm Sphere",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5644,7 +5644,7 @@ let spells = new Map([
     ["Storm of Vengeance", [{
         name: "Storm of Vengeance",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -5658,7 +5658,7 @@ let spells = new Map([
     ["Suggestion", [{
         name: "Suggestion",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 8 hours",
         school: "Enchantment",
@@ -5672,7 +5672,7 @@ let spells = new Map([
     ["Summon Construct", [{
         name: "Summon Construct",
         source: "TCE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -5686,7 +5686,7 @@ let spells = new Map([
     ["Summon Greater Demon", [{
         name: "Summon Greater Demon",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -5700,7 +5700,7 @@ let spells = new Map([
     ["Summon Lesser Demons", [{
         name: "Summon Lesser Demons",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -5714,7 +5714,7 @@ let spells = new Map([
     ["Sunbeam", [{
         name: "Sunbeam",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5728,7 +5728,7 @@ let spells = new Map([
     ["Sunburst", [{
         name: "Sunburst",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5742,7 +5742,7 @@ let spells = new Map([
     ["Swift Quiver", [{
         name: "Swift Quiver",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -5756,7 +5756,7 @@ let spells = new Map([
     ["Sword Burst", [{
         name: "Sword Burst",
         source: "TCE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -5770,7 +5770,7 @@ let spells = new Map([
     ["Symbol", [{
         name: "Symbol",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "1 Minute",
         duration: "Until dispelled or triggered",
         school: "Abjuration",
@@ -5784,7 +5784,7 @@ let spells = new Map([
     ["Synaptic Static", [{
         name: "Synaptic Static",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -5798,7 +5798,7 @@ let spells = new Map([
     ["Tasha's Caustic Brew", [{
         name: "Tasha's Caustic Brew",
         source: "TCE",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5812,7 +5812,7 @@ let spells = new Map([
     ["Tasha's Hideous Laughter", [{
         name: "Tasha's Hideous Laughter",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
@@ -5826,7 +5826,7 @@ let spells = new Map([
     ["Telekinesis", [{
         name: "Telekinesis",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -5840,7 +5840,7 @@ let spells = new Map([
     ["Telepathy", [{
         name: "Telepathy",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "Action",
         duration: "24 hours",
         school: "Evocation",
@@ -5854,7 +5854,7 @@ let spells = new Map([
     ["Teleport", [{
         name: "Teleport",
         source: "PHB",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -5868,7 +5868,7 @@ let spells = new Map([
     ["Teleportation Circle", [{
         name: "Teleportation Circle",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "1 Minute",
         duration: "1 round",
         school: "Conjuration",
@@ -5882,7 +5882,7 @@ let spells = new Map([
     ["Temple of the Gods", [{
         name: "Temple of the Gods",
         source: "XGE",
-        level: "7th",
+        level: 7,
         castingTime: "1 Hour",
         duration: "24 hours",
         school: "Conjuration",
@@ -5896,7 +5896,7 @@ let spells = new Map([
     ["Tenser's Floating Disk", [{
         name: "Tenser's Floating Disk",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Conjuration",
@@ -5910,7 +5910,7 @@ let spells = new Map([
     ["Tenser's Transformation", [{
         name: "Tenser's Transformation",
         source: "XGE",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
@@ -5924,7 +5924,7 @@ let spells = new Map([
     ["Thaumaturgy", [{
         name: "Thaumaturgy",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Up to 1 minute",
         school: "Transmutation",
@@ -5938,7 +5938,7 @@ let spells = new Map([
     ["Thorn Whip", [{
         name: "Thorn Whip",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -5952,7 +5952,7 @@ let spells = new Map([
     ["Thunder Step", [{
         name: "Thunder Step",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -5966,7 +5966,7 @@ let spells = new Map([
     ["Thunderclap", [{
         name: "Thunderclap",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -5980,7 +5980,7 @@ let spells = new Map([
     ["Thunderous Smite", [{
         name: "Thunderous Smite",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -5994,7 +5994,7 @@ let spells = new Map([
     ["Thunderwave", [{
         name: "Thunderwave",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -6008,7 +6008,7 @@ let spells = new Map([
     ["Tidal Wave", [{
         name: "Tidal Wave",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -6022,7 +6022,7 @@ let spells = new Map([
     ["Time Stop", [{
         name: "Time Stop",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Transmutation",
@@ -6036,7 +6036,7 @@ let spells = new Map([
     ["Tiny Servant", [{
         name: "Tiny Servant",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Transmutation",
@@ -6050,7 +6050,7 @@ let spells = new Map([
     ["Toll the Dead", [{
         name: "Toll the Dead",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -6064,7 +6064,7 @@ let spells = new Map([
     ["Tongues", [{
         name: "Tongues",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 hour",
         school: "Divination",
@@ -6078,7 +6078,7 @@ let spells = new Map([
     ["Transmute Rock", [{
         name: "Transmute Rock",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Until dispelled",
         school: "Transmutation",
@@ -6092,7 +6092,7 @@ let spells = new Map([
     ["Transport via Plants", [{
         name: "Transport via Plants",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "1 round",
         school: "Conjuration",
@@ -6106,7 +6106,7 @@ let spells = new Map([
     ["Tree Stride", [{
         name: "Tree Stride",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -6120,7 +6120,7 @@ let spells = new Map([
     ["True Polymorph", [{
         name: "True Polymorph",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
@@ -6134,7 +6134,7 @@ let spells = new Map([
     ["True Resurrection", [{
         name: "True Resurrection",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "1 Hour",
         duration: "Instantaneous",
         school: "Necromancy",
@@ -6148,7 +6148,7 @@ let spells = new Map([
     ["True Seeing", [{
         name: "True Seeing",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "1 hour",
         school: "Divination",
@@ -6162,7 +6162,7 @@ let spells = new Map([
     ["True Strike", [{
         name: "True Strike",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Concentration, up to 1 round",
         school: "Divination",
@@ -6176,7 +6176,7 @@ let spells = new Map([
     ["Tsunami", [{
         name: "Tsunami",
         source: "PHB",
-        level: "8th",
+        level: 8,
         castingTime: "1 Minute",
         duration: "Concentration, up to 6 rounds",
         school: "Conjuration",
@@ -6190,7 +6190,7 @@ let spells = new Map([
     ["Unseen Servant", [{
         name: "Unseen Servant",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "1 hour",
         school: "Conjuration",
@@ -6204,7 +6204,7 @@ let spells = new Map([
     ["Vampiric Touch", [{
         name: "Vampiric Touch",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Necromancy",
@@ -6218,7 +6218,7 @@ let spells = new Map([
     ["Vicious Mockery", [{
         name: "Vicious Mockery",
         source: "PHB",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Enchantment",
@@ -6232,7 +6232,7 @@ let spells = new Map([
     ["Vitriolic Sphere", [{
         name: "Vitriolic Sphere",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -6246,7 +6246,7 @@ let spells = new Map([
     ["Wall of Fire", [{
         name: "Wall of Fire",
         source: "PHB",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6260,7 +6260,7 @@ let spells = new Map([
     ["Wall of Force", [{
         name: "Wall of Force",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6274,7 +6274,7 @@ let spells = new Map([
     ["Wall of Ice", [{
         name: "Wall of Ice",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6288,7 +6288,7 @@ let spells = new Map([
     ["Wall of Light", [{
         name: "Wall of Light",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6302,7 +6302,7 @@ let spells = new Map([
     ["Wall of Sand", [{
         name: "Wall of Sand",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6316,7 +6316,7 @@ let spells = new Map([
     ["Wall of Stone", [{
         name: "Wall of Stone",
         source: "PHB",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6330,7 +6330,7 @@ let spells = new Map([
     ["Wall of Thorns", [{
         name: "Wall of Thorns",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Conjuration",
@@ -6344,7 +6344,7 @@ let spells = new Map([
     ["Wall of Water", [{
         name: "Wall of Water",
         source: "XGE",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6358,7 +6358,7 @@ let spells = new Map([
     ["Warding Bond", [{
         name: "Warding Bond",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "1 hour",
         school: "Abjuration",
@@ -6372,7 +6372,7 @@ let spells = new Map([
     ["Warding Wind", [{
         name: "Warding Wind",
         source: "XGE",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
@@ -6386,7 +6386,7 @@ let spells = new Map([
     ["Water Breathing", [{
         name: "Water Breathing",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "24 hours",
         school: "Transmutation",
@@ -6400,7 +6400,7 @@ let spells = new Map([
     ["Water Walk", [{
         name: "Water Walk",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "1 hour",
         school: "Transmutation",
@@ -6414,7 +6414,7 @@ let spells = new Map([
     ["Watery Sphere", [{
         name: "Watery Sphere",
         source: "XGE",
-        level: "4th",
+        level: 4,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
@@ -6428,7 +6428,7 @@ let spells = new Map([
     ["Web", [{
         name: "Web",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "Concentration, up to 1 hour",
         school: "Conjuration",
@@ -6442,7 +6442,7 @@ let spells = new Map([
     ["Weird", [{
         name: "Weird",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
@@ -6456,7 +6456,7 @@ let spells = new Map([
     ["Whirlwind", [{
         name: "Whirlwind",
         source: "XGE",
-        level: "7th",
+        level: 7,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6470,7 +6470,7 @@ let spells = new Map([
     ["Wind Walk", [{
         name: "Wind Walk",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "1 Minute",
         duration: "8 hours",
         school: "Transmutation",
@@ -6484,7 +6484,7 @@ let spells = new Map([
     ["Wind Wall", [{
         name: "Wind Wall",
         source: "PHB",
-        level: "3rd",
+        level: 3,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6498,7 +6498,7 @@ let spells = new Map([
     ["Wish", [{
         name: "Wish",
         source: "PHB",
-        level: "9th",
+        level: 9,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -6512,7 +6512,7 @@ let spells = new Map([
     ["Witch Bolt", [{
         name: "Witch Bolt",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6526,7 +6526,7 @@ let spells = new Map([
     ["Word of Radiance", [{
         name: "Word of Radiance",
         source: "XGE",
-        level: "Cantrip",
+        level: 0,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Evocation",
@@ -6540,7 +6540,7 @@ let spells = new Map([
     ["Word of Recall", [{
         name: "Word of Recall",
         source: "PHB",
-        level: "6th",
+        level: 6,
         castingTime: "Action",
         duration: "Instantaneous",
         school: "Conjuration",
@@ -6554,7 +6554,7 @@ let spells = new Map([
     ["Wrath of Nature", [{
         name: "Wrath of Nature",
         source: "XGE",
-        level: "5th",
+        level: 5,
         castingTime: "Action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6568,7 +6568,7 @@ let spells = new Map([
     ["Wrathful Smite", [{
         name: "Wrathful Smite",
         source: "PHB",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
@@ -6582,7 +6582,7 @@ let spells = new Map([
     ["Zephyr Strike", [{
         name: "Zephyr Strike",
         source: "XGE",
-        level: "1st",
+        level: 1,
         castingTime: "Bonus acn.",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
@@ -6596,7 +6596,7 @@ let spells = new Map([
     ["Zone of Truth", [{
         name: "Zone of Truth",
         source: "PHB",
-        level: "2nd",
+        level: 2,
         castingTime: "Action",
         duration: "10 minutes",
         school: "Enchantment",

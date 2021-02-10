@@ -143,18 +143,6 @@ class Character {
         passivePerceptionNode.textContent = passivePerception;
     }
 
-    static characterSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 3) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-        } else {
-            console.log('FUUUUUUUUCK')
-        }
-        spellLevel.forEach(element => {
-            element.toggleAttribute("hidden");
-        });
-    }
-
     static fullCharacterUpdate() {
         this.updateHitPoints();
         this.updateSkills();
@@ -165,7 +153,6 @@ class Character {
         this.updateLanguageProficiencies();
         this.updateInitiative();
         this.updatePassivePerception();
-        this.characterSpellLevel();
         console.log("UPDATE");
     }
 
