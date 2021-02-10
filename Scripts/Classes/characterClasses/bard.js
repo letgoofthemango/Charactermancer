@@ -521,4 +521,34 @@ class Bard extends Character {
         [19],
         [20]
     ];
+
+
+
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel <= 2) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Bard")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Bard")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Bard Spell level error');
+        }
+    }
 }

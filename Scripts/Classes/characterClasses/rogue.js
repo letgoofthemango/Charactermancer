@@ -417,4 +417,31 @@ Attack column of the Rogue table.</p>
         [19],
         [20]
     ];
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel >= 3) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Rogue")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Rogue")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Rogue Spell level error');
+        }
+    }
 }

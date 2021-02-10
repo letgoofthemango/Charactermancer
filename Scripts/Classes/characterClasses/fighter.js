@@ -402,6 +402,29 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     static unarmedFighting = `<h6 class="text-center"><b>Unarmed Fighting</b></h6>
 <p>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on a hit. If you aren't wielding any weapons or a shield when you make the attack roll, the d6 becomes a d8.</p>
 <p>At the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>`;
+    static fighterFeaturesList = [
+        [`<li>Fighting style<span id="fStyle"></span></li>
+        <li>Second Wind</li>`],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [7],
+        [8],
+        [9],
+        [10],
+        [11],
+        [12],
+        [13],
+        [14],
+        [15],
+        [16],
+        [17],
+        [18],
+        [19],
+        [20]
+    ];
     static setFightingStyle(style) {
         const fightingStyle = document.getElementById("fightingStyle");
         const featureFStyle = document.getElementById("fStyle");
@@ -482,28 +505,32 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 break;
         }
     };
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel >= 3) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Fighter")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Fighter")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Fighter Spell level error');
+        }
+    }
 
-    static fighterFeaturesList = [
-        [`<li>Fighting style<span id="fStyle"></span></li>
-        <li>Second Wind</li>`],
-        [2],
-        [3],
-        [4],
-        [5],
-        [6],
-        [7],
-        [8],
-        [9],
-        [10],
-        [11],
-        [12],
-        [13],
-        [14],
-        [15],
-        [16],
-        [17],
-        [18],
-        [19],
-        [20]
-    ];
 }

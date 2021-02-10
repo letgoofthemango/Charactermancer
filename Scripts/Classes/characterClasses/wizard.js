@@ -418,7 +418,7 @@ you use your Intelligence modifier when setting the saving throw DC for a wizard
 
 
 <h6><b>Spellcasting Focus</b></h6>
-<p>You can use an arcane focus as a spellcasting focus for your warlock spells.</p>
+<p>You can use an arcane focus as a spellcasting focus for your wizard spells.</p>
 
 <h6><b>Ritual Casting</b></h6>
 <p>You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared.</p>
@@ -468,4 +468,32 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
         [19],
         [20]
     ];
+
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel <= 3) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Wizard")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Wizard")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Wizard Spell level error');
+        }
+    }
 }

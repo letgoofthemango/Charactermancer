@@ -1826,6 +1826,32 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 <p>Beginning at 18th level, the harmful energy of your spells intensifies. When you roll damage for a spell and roll the highest number possible on any of the dice, choose one of those dice, roll it again and add that roll to the damage. You can use the feature only once per turn.</p>
 </div>
 </div>`;
+    static sorcererFeaturesList = [
+        [`<li>
+    Sorcerous Origin<span id="origin"></span>
+    </li><li>
+    Spellcasting</li>`],
+        [2],
+        [3],
+        [4],
+        [5],
+        [6],
+        [7],
+        [8],
+        [9],
+        [10],
+        [11],
+        [12],
+        [13],
+        [14],
+        [15],
+        [16],
+        [17],
+        [18],
+        [19],
+        [20]
+    ]; 
+    
     //Sorcerer origins
     static setSorcererSubclass(subclass) {
         const origin = document.getElementById("sorcOrigin");
@@ -1888,30 +1914,32 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         }
         subClassNode.textContent = characterSubClass;
     };
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel <= 2) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Sorcerer")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Sorcerer")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Sorcerer Spell level error');
+        }
+    }
 
-    static sorcererFeaturesList = [
-        [`<li>
-    Sorcerous Origin<span id="origin"></span>
-    </li><li>
-    Spellcasting</li>`],
-        [2],
-        [3],
-        [4],
-        [5],
-        [6],
-        [7],
-        [8],
-        [9],
-        [10],
-        [11],
-        [12],
-        [13],
-        [14],
-        [15],
-        [16],
-        [17],
-        [18],
-        [19],
-        [20]
-    ];
 }

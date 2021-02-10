@@ -2027,40 +2027,41 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-    static setSpellLevel() {
+    static setSpells() {
         let spellLevel;
         if (characterLevel <= 3) {
             spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Cleric")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Cleric")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
+            for (const i of lists) {
+                i.classList.toggle("toBeAdded");
+            }
         } else {
             console.log('Cleric Spell level error');
         }
-        spellLevel.forEach((element) => {
-            element.hidden = false;
-        });
-        spells.forEach((spell) => {
-            if (spell[0].level == 0 && spell[0].classes.includes("Cleric")) {
-                cantripSpells.push(spell[0].name);
-            }
-        })
-        spells.forEach((spell) => {
-            if (spell[0].level == 1 && spell[0].classes.includes("Cleric")) {
-                firstLevelSpells.push(spell[0].name);
-            }
-        })
-        cantripSpells.forEach((spell) =>{
-            cantripsListNode.innerHTML += `<li>${spell}</li>`;
-        })
-        firstLevelSpells.forEach((spell) =>{
-            firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-        })
     }
+
 
 
     static setClericSubclass(subclass) {
         const domain = document.getElementById("clericDomain");
         const featureDomain = document.getElementById("domain");
         Character.resetSkillNodes();
-        Cleric.setClericSkillNodes();
+        this.setClericSkillNodes();
+        Character.resetSpellLists();
+        // Cleric.setSpells();
         featureDomain.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
@@ -2069,8 +2070,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 characterSubClass = "(Arcana)";
                 featureDomain.innerHTML = ": Arcana";
                 arcanaNode.classList.add("toBeAdded");
-                firstLevelSpells += spells.get("MagicMissile")[0].name;
-
+                firstLevelSpells.push(spells.get("MagicMissile")[0].name, spells.get("DetectMagic")[0].name);
                 break;
             case "death":
                 characterSubClass = "(Death)";
@@ -2146,5 +2146,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 break;
         }
         subClassNode.textContent = characterSubClass;
+
+        Character.renderSpells();
+
+        const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
+        for (const i of lists) {
+            i.classList.toggle("toBeAdded");
+        }
     }
 }

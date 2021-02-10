@@ -1392,6 +1392,34 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     };
 
+    static setSpellLevel() {
+        let spellLevel;
+        if (characterLevel <= 4) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes("Artificer")) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes("Artificer")) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            cantripSpells.forEach((spell) => {
+                cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            })
+            firstLevelSpells.forEach((spell) => {
+                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            })
+        } else {
+            console.log('Artificer Spell level error');
+        }
+    }
+
     getHitpointsFirstLvl = function () { };
     getHitpointsLvl = function () { };
     getMaxSpellLvl = function () { };

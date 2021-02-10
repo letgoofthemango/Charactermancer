@@ -48,7 +48,7 @@ class App {
     
     <div id="showClassDetails"></div>
     <div class="d-flex justify-content-center">
-        <button class="btn btn-info" id="goToFeatures">Race</button>
+        <button class="btn btn-info" id="goToFeatures">Next</button>
     </div>`;
 
     static startApp() {
@@ -113,6 +113,7 @@ class App {
                     classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
                     featuresNode.innerHTML += Artificer.artificerFeaturesList[i];
                 }
+                Artificer.setSpellLevel();
                 break;
 
             case BARBARIAN:
@@ -140,6 +141,7 @@ class App {
                     classDetailsNode.innerHTML += Bard.bardFeaturesByLevel[i];
                     featuresNode.innerHTML += Bard.bardFeaturesList[i];
                 }
+                Bard.setSpellLevel();
                 break;
 
             case CLERIC:
@@ -150,7 +152,9 @@ class App {
                     classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
                     featuresNode.innerHTML += Cleric.clericFeaturesList[i];
                 }
-                Cleric.setSpellLevel();
+                Character.resetSpellLists();
+                Cleric.setSpells();
+                Cleric.renderSpells();
                 break;
 
             case DRUID:
@@ -164,6 +168,7 @@ class App {
                     classDetailsNode.innerHTML += Druid.druidFeaturesByLevel[i];
                     featuresNode.innerHTML += Druid.druidFeaturesList[i];
                 }
+                Druid.setSpellLevel();
                 break;
 
             case FIGHTER:
@@ -216,6 +221,7 @@ class App {
                     classDetailsNode.innerHTML += Paladin.paladinFeaturesByLevel[i];
                     featuresNode.innerHTML += Paladin.paladinFeaturesList[i];
                 }
+                Paladin.setSpellLevel();
                 break;
 
             case RANGER:
@@ -229,6 +235,7 @@ class App {
                     classDetailsNode.innerHTML += Ranger.rangerFeaturesByLevel[i];
                     featuresNode.innerHTML += Ranger.rangerFeaturesList[i];
                 }
+                Ranger.setSpellLevel();
                 break;
 
             case ROGUE:
@@ -242,6 +249,7 @@ class App {
                     classDetailsNode.innerHTML += Rogue.rogueFeaturesByLevel[i];
                     featuresNode.innerHTML += Rogue.rogueFeaturesList[i];
                 }
+                Rogue.setSpellLevel();
                 break;
 
             case SORCERER:
@@ -255,6 +263,7 @@ class App {
                     classDetailsNode.innerHTML += Sorcerer.sorcererFeaturesByLevel[i];
                     featuresNode.innerHTML += Sorcerer.sorcererFeaturesList[i];
                 }
+                Sorcerer.setSpellLevel();
                 break;
 
             case WARLOCK:
@@ -268,6 +277,7 @@ class App {
                     classDetailsNode.innerHTML += Warlock.warlockFeaturesByLevel[i];
                     featuresNode.innerHTML += Warlock.warlockFeaturesList[i];
                 }
+                Warlock.setSpellLevel();
                 break;
 
             case WIZARD:
@@ -281,8 +291,8 @@ class App {
                     classDetailsNode.innerHTML += Wizard.wizardFeaturesByLevel[i];
                     featuresNode.innerHTML += Wizard.wizardFeaturesList[i];
                 }
+                Wizard.setSpellLevel();
                 break;
-
         }
 
         const changeToGreen = document.querySelectorAll(

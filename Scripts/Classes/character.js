@@ -167,11 +167,23 @@ class Character {
         const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
         for (const i of spellLists) {
             i.classList.remove("toBeAdded");
-            i.innerHTML="";
+            i.innerHTML = "";
         }
-        cantripSpells=[];
-        firstLevelSpells=[];
-        console.table(cantripSpells, firstLevelSpells);
+    }
+
+    static resetSpells() {
+        cantripSpells = [];
+        firstLevelSpells = [];
+    }
+
+    static renderSpells() {
+        cantripSpells.forEach((spell) => {
+            cantripsListNode.innerHTML += `<li>${spell}</li>`;
+        })
+        firstLevelSpells.forEach((spell) => {
+            firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+        })
+        console.log('RENDER HAPPEND');
     }
 
 
