@@ -81,13 +81,18 @@ class App {
         tools.forEach((tool) => {
             tool[0].proficient = false;
         });
+        const spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+        spellLevel.forEach(element => {
+            element.hidden = true;
+        });
 
-        characterSubClass = "";
+        characterSubClass = null;
         subClassNode.textContent = "";
         featuresNode.innerHTML = "";
 
-       Character.resetSkillNodes();
-       
+        Character.resetSkillNodes();
+        Character.resetSpellLists();
+
         console.log('RESET');
     }
 
@@ -109,6 +114,7 @@ class App {
                     featuresNode.innerHTML += Artificer.artificerFeaturesList[i];
                 }
                 break;
+
             case BARBARIAN:
                 hitDice = 12;
                 const barbarianSkills = document.querySelectorAll('#summaryAnimalHandling, #summaryAthletics, #summaryIntimidation, #summaryNature, #summaryPerception, #summarySurvival');
@@ -121,6 +127,7 @@ class App {
                     featuresNode.innerHTML += Barbarian.barbarianFeaturesList[i];
                 }
                 break;
+
             case BARD:
                 hitDice = 8;
                 const bardSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
@@ -134,6 +141,7 @@ class App {
                     featuresNode.innerHTML += Bard.bardFeaturesList[i];
                 }
                 break;
+
             case CLERIC:
                 hitDice = 8;
                 characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = true;
@@ -144,6 +152,7 @@ class App {
                 }
                 Cleric.setSpellLevel();
                 break;
+
             case DRUID:
                 hitDice = 8;
                 characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Club")[0].proficient = weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Javelin")[0].proficient = weapons.get("Mace")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Scimitar")[0].proficient = weapons.get("Sickle")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Spear")[0].proficient = characterLanguageProficiencies[4][1] = true;
@@ -156,6 +165,7 @@ class App {
                     featuresNode.innerHTML += Druid.druidFeaturesList[i];
                 }
                 break;
+
             case FIGHTER:
                 hitDice = 10;
                 weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
@@ -168,6 +178,7 @@ class App {
                     featuresNode.innerHTML += Fighter.fighterFeaturesList[i];
                 }
                 break;
+
             case MONK:
                 hitDice = 8;
                 weapons.get("Simpleweapons")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[0][1] = true;
@@ -180,6 +191,7 @@ class App {
                     featuresNode.innerHTML += Monk.monkFeaturesList[i];
                 }
                 break;
+
             case MYSTIC:
                 hitDice = 8;
                 weapons.get("Simpleweapons")[0].proficient = characterArmorProficiencies[1][1] = true;
@@ -192,6 +204,7 @@ class App {
                     featuresNode.innerHTML += Mystic.mysticFeaturesList[i];
                 }
                 break;
+
             case PALADIN:
                 hitDice = 10;
                 weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
@@ -204,6 +217,7 @@ class App {
                     featuresNode.innerHTML += Paladin.paladinFeaturesList[i];
                 }
                 break;
+
             case RANGER:
                 hitDice = 10;
                 characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = true;
@@ -216,6 +230,7 @@ class App {
                     featuresNode.innerHTML += Ranger.rangerFeaturesList[i];
                 }
                 break;
+
             case ROGUE:
                 hitDice = 8;
                 weapons.get("Simpleweapons")[0].proficient = weapons.get("Handcrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = tools.get("Thieves")[0].proficient = characterLanguageProficiencies[15][1] = true;
@@ -228,6 +243,7 @@ class App {
                     featuresNode.innerHTML += Rogue.rogueFeaturesList[i];
                 }
                 break;
+
             case SORCERER:
                 hitDice = 6;
                 weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Lightcrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
@@ -240,6 +256,7 @@ class App {
                     featuresNode.innerHTML += Sorcerer.sorcererFeaturesList[i];
                 }
                 break;
+
             case WARLOCK:
                 hitDice = 8;
                 weapons.get("Simpleweapons")[0].proficient = characterArmorProficiencies[1][1] = true;
@@ -252,6 +269,7 @@ class App {
                     featuresNode.innerHTML += Warlock.warlockFeaturesList[i];
                 }
                 break;
+
             case WIZARD:
                 hitDice = 6;
                 weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Lightcrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
@@ -264,10 +282,11 @@ class App {
                     featuresNode.innerHTML += Wizard.wizardFeaturesList[i];
                 }
                 break;
+
         }
 
         const changeToGreen = document.querySelectorAll(
-            "#summaryClass, #summarySubClass, #summaryLevel, #summaryHP, #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies"
+            "#summaryClass, #summarySubClass, #summaryLevel, #summaryHP, #featuresList, #weaponProficiencies, #armorProficiencies, #toolProficiencies, #languageProficiencies, #cantripsList, #firstLevelList"
         );
 
         for (const i of changeToGreen) {

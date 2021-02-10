@@ -2032,105 +2032,116 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         if (characterLevel <= 3) {
             spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
         } else {
-            console.log('FUUUUUUUUCK')
+            console.log('Cleric Spell level error');
         }
-        spellLevel.forEach(element => {
+        spellLevel.forEach((element) => {
             element.hidden = false;
         });
         spells.forEach((spell) => {
-            if (spell[0].level = 0 && spell[0].classes.includes("Cleric")) {
-
+            if (spell[0].level == 0 && spell[0].classes.includes("Cleric")) {
+                cantripSpells.push(spell[0].name);
             }
-        }
+        })
+        spells.forEach((spell) => {
+            if (spell[0].level == 1 && spell[0].classes.includes("Cleric")) {
+                firstLevelSpells.push(spell[0].name);
+            }
+        })
+        cantripSpells.forEach((spell) =>{
+            cantripsListNode.innerHTML += `<li>${spell}</li>`;
+        })
+        firstLevelSpells.forEach((spell) =>{
+            firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+        })
     }
 
 
     static setClericSubclass(subclass) {
-            const domain = document.getElementById("clericDomain");
-            const featureDomain = document.getElementById("domain");
-            Character.resetSkillNodes();
-            Cleric.setClericSkillNodes();
-            featureDomain.innerHTML = "";
-            characterSubClass = null;
-            switch(subclass) {
+        const domain = document.getElementById("clericDomain");
+        const featureDomain = document.getElementById("domain");
+        Character.resetSkillNodes();
+        Cleric.setClericSkillNodes();
+        featureDomain.innerHTML = "";
+        characterSubClass = null;
+        switch (subclass) {
             case "arcana":
-            domain.innerHTML = this.arcanaDomain;
-            characterSubClass = "(Arcana)";
-            featureDomain.innerHTML = ": Arcana";
-            arcanaNode.classList.add("toBeAdded");
-            firstLevelSpells += spells.get("MagicMissile")[0].name;
+                domain.innerHTML = this.arcanaDomain;
+                characterSubClass = "(Arcana)";
+                featureDomain.innerHTML = ": Arcana";
+                arcanaNode.classList.add("toBeAdded");
+                firstLevelSpells += spells.get("MagicMissile")[0].name;
 
-            break;
+                break;
             case "death":
-            characterSubClass = "(Death)";
-            domain.innerHTML = this.deathDomain;
-            featureDomain.innerHTML = ": Death";
-            break;
+                characterSubClass = "(Death)";
+                domain.innerHTML = this.deathDomain;
+                featureDomain.innerHTML = ": Death";
+                break;
             case "forge":
-            characterSubClass = "(Forge)";
-            domain.innerHTML = this.forgeDomain;
-            featureDomain.innerHTML = ": Forge";
-            break;
+                characterSubClass = "(Forge)";
+                domain.innerHTML = this.forgeDomain;
+                featureDomain.innerHTML = ": Forge";
+                break;
             case "grave":
-            characterSubClass = "(Grave)";
-            domain.innerHTML = this.graveDomain;
-            featureDomain.innerHTML = ": Grave";
-            break;
+                characterSubClass = "(Grave)";
+                domain.innerHTML = this.graveDomain;
+                featureDomain.innerHTML = ": Grave";
+                break;
             case "knowledge":
-            characterSubClass = "(Knowledge)";
-            domain.innerHTML = this.knowledgeDomain;
-            featureDomain.innerHTML = ": Knowledge";
-            break;
+                characterSubClass = "(Knowledge)";
+                domain.innerHTML = this.knowledgeDomain;
+                featureDomain.innerHTML = ": Knowledge";
+                break;
             case "life":
-            characterSubClass = "(Life)";
-            domain.innerHTML = this.lifeDomain;
-            featureDomain.innerHTML = ": Life";
-            break;
+                characterSubClass = "(Life)";
+                domain.innerHTML = this.lifeDomain;
+                featureDomain.innerHTML = ": Life";
+                break;
             case "light":
-            characterSubClass = "(Light)";
-            domain.innerHTML = this.lightDomain;
-            featureDomain.innerHTML = ": Light";
-            break;
+                characterSubClass = "(Light)";
+                domain.innerHTML = this.lightDomain;
+                featureDomain.innerHTML = ": Light";
+                break;
             case "nature":
-            characterSubClass = "(Nature)";
-            domain.innerHTML = this.natureDomain;
-            featureDomain.innerHTML = ": Nature";
-            break;
+                characterSubClass = "(Nature)";
+                domain.innerHTML = this.natureDomain;
+                featureDomain.innerHTML = ": Nature";
+                break;
             case "order":
-            characterSubClass = "(Order)";
-            domain.innerHTML = this.orderDomain;
-            featureDomain.innerHTML = ": Order";
-            break;
+                characterSubClass = "(Order)";
+                domain.innerHTML = this.orderDomain;
+                featureDomain.innerHTML = ": Order";
+                break;
             case "peace":
-            characterSubClass = "(Peace)";
-            domain.innerHTML = this.peaceDomain;
-            featureDomain.innerHTML = ": Peace";
-            break;
+                characterSubClass = "(Peace)";
+                domain.innerHTML = this.peaceDomain;
+                featureDomain.innerHTML = ": Peace";
+                break;
             case "protection":
-            characterSubClass = "(Protection)";
-            domain.innerHTML = this.protectionDomain;
-            featureDomain.innerHTML = ": Protection";
-            break;
+                characterSubClass = "(Protection)";
+                domain.innerHTML = this.protectionDomain;
+                featureDomain.innerHTML = ": Protection";
+                break;
             case "tempest":
-            characterSubClass = "(Tempest)";
-            domain.innerHTML = this.tempestDomain;
-            featureDomain.innerHTML = ": Tempest";
-            break;
+                characterSubClass = "(Tempest)";
+                domain.innerHTML = this.tempestDomain;
+                featureDomain.innerHTML = ": Tempest";
+                break;
             case "trickery":
-            characterSubClass = "(Trickery)";
-            domain.innerHTML = this.trickeryDomain;
-            featureDomain.innerHTML = ": Trickery";
-            break;
+                characterSubClass = "(Trickery)";
+                domain.innerHTML = this.trickeryDomain;
+                featureDomain.innerHTML = ": Trickery";
+                break;
             case "twilight":
-            characterSubClass = "(Twilight)";
-            domain.innerHTML = this.twilightDomain;
-            featureDomain.innerHTML = ": Twilight";
-            break;
+                characterSubClass = "(Twilight)";
+                domain.innerHTML = this.twilightDomain;
+                featureDomain.innerHTML = ": Twilight";
+                break;
             case "war":
-            characterSubClass = "(War)";
-            domain.innerHTML = this.warDomain;
-            featureDomain.innerHTML = ": War";
-            break;
+                characterSubClass = "(War)";
+                domain.innerHTML = this.warDomain;
+                featureDomain.innerHTML = ": War";
+                break;
             default:
                 break;
         }
