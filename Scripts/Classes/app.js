@@ -100,6 +100,7 @@ class App {
         App.reset();
         const classDetailsNode = document.getElementById("showClassDetails");
         classDetailsNode.innerHTML = ""; //clean the element for other text to be displayed
+        Character.resetSpellLists();
 
         switch (characterClass) {
             case ARTIFICER:
@@ -152,7 +153,6 @@ class App {
                     classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
                     featuresNode.innerHTML += Cleric.clericFeaturesList[i];
                 }
-                Character.resetSpellLists();
                 Cleric.setSpells();
                 Cleric.renderSpells();
                 break;

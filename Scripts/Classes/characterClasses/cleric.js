@@ -598,6 +598,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips. 
                 <label for="arcanaCantrip1">Cantrip one:</label>
                 <select class="custom-select-sm" id="arcanaCantrip1">
+                    <option value=null>Select</option>
                     <option value="Acid Splash">Acid Splash</option>
                     <option value="Blade Ward">Blade Ward</option>
                     <option value="Booming Blade">Booming Blade</option>
@@ -631,6 +632,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 
                 <label for="arcanaCantrip2">Cantrip two:</label>
                 <select class="custom-select-sm" id="arcanaCantrip2">
+                    <option value=null>Select</option>
                     <option value="Acid Splash">Acid Splash</option>
                     <option value="Blade Ward">Blade Ward</option>
                     <option value="Booming Blade">Booming Blade</option>
@@ -2061,7 +2063,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.resetSkillNodes();
         this.setClericSkillNodes();
         Character.resetSpellLists();
-        // Cleric.setSpells();
+        Character.resetSpells();
+        this.setSpells();
         featureDomain.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
@@ -2070,27 +2073,32 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 characterSubClass = "(Arcana)";
                 featureDomain.innerHTML = ": Arcana";
                 arcanaNode.classList.add("toBeAdded");
-                firstLevelSpells.push(spells.get("MagicMissile")[0].name, spells.get("DetectMagic")[0].name);
+                firstLevelSpells.push(spells.get("MagicMissile")[0].name);
                 break;
             case "death":
                 characterSubClass = "(Death)";
                 domain.innerHTML = this.deathDomain;
                 featureDomain.innerHTML = ": Death";
+                firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
+                weapons.get('MartialWeapons')[0].proficient = true;
                 break;
             case "forge":
                 characterSubClass = "(Forge)";
                 domain.innerHTML = this.forgeDomain;
                 featureDomain.innerHTML = ": Forge";
+                firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
                 break;
             case "grave":
                 characterSubClass = "(Grave)";
                 domain.innerHTML = this.graveDomain;
                 featureDomain.innerHTML = ": Grave";
+                firstLevelSpells.push(spells.get("FalseLife")[0].name);
                 break;
             case "knowledge":
                 characterSubClass = "(Knowledge)";
                 domain.innerHTML = this.knowledgeDomain;
                 featureDomain.innerHTML = ": Knowledge";
+                firstLevelSpells.push(spells.get("Identify")[0].name);
                 break;
             case "life":
                 characterSubClass = "(Life)";
@@ -2101,46 +2109,55 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 characterSubClass = "(Light)";
                 domain.innerHTML = this.lightDomain;
                 featureDomain.innerHTML = ": Light";
+                firstLevelSpells.push(spells.get("BurningHands")[0].name, spells.get("FaerieFire")[0].name);
                 break;
             case "nature":
                 characterSubClass = "(Nature)";
                 domain.innerHTML = this.natureDomain;
                 featureDomain.innerHTML = ": Nature";
+                firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
                 break;
             case "order":
                 characterSubClass = "(Order)";
                 domain.innerHTML = this.orderDomain;
                 featureDomain.innerHTML = ": Order";
+                firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
             case "peace":
                 characterSubClass = "(Peace)";
                 domain.innerHTML = this.peaceDomain;
                 featureDomain.innerHTML = ": Peace";
+                firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
             case "protection":
                 characterSubClass = "(Protection)";
                 domain.innerHTML = this.protectionDomain;
                 featureDomain.innerHTML = ": Protection";
+                firstLevelSpells.push(spells.get("CompelledDuel")[0].name);
                 break;
             case "tempest":
                 characterSubClass = "(Tempest)";
                 domain.innerHTML = this.tempestDomain;
                 featureDomain.innerHTML = ": Tempest";
+                firstLevelSpells.push(spells.get("FogCloud")[0].name, spells.get("Thunderwave")[0].name);
                 break;
             case "trickery":
                 characterSubClass = "(Trickery)";
                 domain.innerHTML = this.trickeryDomain;
                 featureDomain.innerHTML = ": Trickery";
+                firstLevelSpells.push(spells.get("CharmPerson")[0].name, spells.get("DisguiseSelf")[0].name);
                 break;
             case "twilight":
                 characterSubClass = "(Twilight)";
                 domain.innerHTML = this.twilightDomain;
                 featureDomain.innerHTML = ": Twilight";
+                firstLevelSpells.push(spells.get("FaerieFire")[0].name, spells.get("Sleep")[0].name);
                 break;
             case "war":
                 characterSubClass = "(War)";
                 domain.innerHTML = this.warDomain;
                 featureDomain.innerHTML = ": War";
+                firstLevelSpells.push(spells.get("DivineFavor")[0].name);
                 break;
             default:
                 break;
@@ -2148,7 +2165,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         subClassNode.textContent = characterSubClass;
 
         Character.renderSpells();
-
         const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
         for (const i of lists) {
             i.classList.toggle("toBeAdded");

@@ -2169,7 +2169,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["Faerie", [{
+    ["FaerieFire", [{
         name: "Faerie Fire",
         source: "PHB",
         level: 1,
@@ -2183,7 +2183,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["False", [{
+    ["FalseLife", [{
         name: "False Life",
         source: "PHB",
         level: 1,
@@ -4829,7 +4829,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["RayofEnfeeblement", [{
+    ["RayOfEnfeeblement", [{
         name: "Ray of Enfeeblement",
         source: "PHB",
         level: 2,
@@ -4843,7 +4843,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["RayofFrost", [{
+    ["RayOfFrost", [{
         name: "Ray of Frost",
         source: "PHB",
         level: 0,
@@ -4857,7 +4857,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["RayofSickness", [{
+    ["RayOfSickness", [{
         name: "Ray of Sickness",
         source: "PHB",
         level: 1,

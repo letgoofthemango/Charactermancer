@@ -166,7 +166,6 @@ class Character {
     static resetSpellLists() {
         const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
         for (const i of spellLists) {
-            i.classList.remove("toBeAdded");
             i.innerHTML = "";
         }
     }
