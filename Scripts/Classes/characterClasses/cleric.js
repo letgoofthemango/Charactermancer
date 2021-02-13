@@ -471,21 +471,21 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <p>Choose one domain related to your deity from the list of available domains. Each domain is detailed in their own feature, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when
                 you choose it at 1st level. It also grants you additional ways to use Channel Divinity when you gain that feature at 2nd level, and additional benefits at 6th, 8th, and 17th levels.</p>
             <div class="d-flex justify-content-around row mb-3">
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="arcana">Arcana</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="death">Death</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="forge">Forge</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="grave">Grave</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="knowledge">Knowledge</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="life">Life</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="light">Light</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="nature">Nature</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="order">Order</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="peace">Peace</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="tempest">Tempest</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="trickery">Trickery</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="twilight">Twilight</button>
-                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary" id="war">War</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Arcana">Arcana</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Death">Death</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Forge">Forge</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Grave">Grave</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Knowledge">Knowledge</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Life">Life</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Light">Light</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Nature">Nature</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Order">Order</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Peace">Peace</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Protection">Protection</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Tempest">Tempest</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Trickery">Trickery</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="Twilight">Twilight</button>
+                <button onclick="Cleric.setClericSubclass(this.id)" type="button" class="btn btn-secondary clericSubclassButton" id="War">War</button>
             </div>
             <div id="clericDomain" class="choiceBG"></div>
         </div>
@@ -595,8 +595,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <hr>
 
             <div class="collapse show" id="featureArcaneInitiate">
-                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you gain two cantrips of your choice from the wizard spell list. For you, these cantrips count as cleric cantrips. 
-                <label for="arcanaCantrip1">Cantrip one:</label>
+                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you can choose two cantrips from the wizard spell list. For you, these cantrips count as cleric cantrips.
+                <!-- <label for="arcanaCantrip1">Cantrip one:</label>
                 <select class="custom-select-sm" id="arcanaCantrip1">
                     <option value=null>Select</option>
                     <option value="Acid Splash">Acid Splash</option>
@@ -662,7 +662,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                     <option value="Thunderclap">Thunderclap</option></p>
                     <option value="Toll the Dead">Toll the Dead</option></p>
                     <option value="True Strike">True Strike</option></p>
-                </select>
+                </select> -->
             </div>
 
 
@@ -2029,7 +2029,19 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-    static setSpells() {
+    static setClericHitdice() {
+        hitDice = 8;
+    }
+
+    static displayClericFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
+            featuresNode.innerHTML += Cleric.clericFeaturesList[i];
+        }
+    }
+
+    static setClericSpells() {
         let spellLevel;
         if (characterLevel <= 3) {
             spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
@@ -2055,119 +2067,105 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
+    static setClericWeaponProficiencies() {
+        weapons.get("SimpleWeapons")[0].proficient = true;
+    }
 
+    static setClericArmorProficiencies() {
+        characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = true;
+    }
 
     static setClericSubclass(subclass) {
         const domain = document.getElementById("clericDomain");
         const featureDomain = document.getElementById("domain");
-        Character.resetSkillNodes();
-        this.setClericSkillNodes();
-        Character.resetSpellLists();
-        Character.resetSpells();
-        this.setSpells();
+        this.resetSkillNodes();
+        Cleric.setClericSkillNodes();
+        this.resetSpellLists();
+        this.resetSpells();
+        Cleric.setClericSpells();
+        this.resetArmorProficienciesList();
+        Cleric.setClericArmorProficiencies();
+        this.updateArmorProficiencies();
+        this.resetWeaponProficienciesList();
+        this.resetWeaponProficiencies();
+        Cleric.setClericWeaponProficiencies();
+        this.updateWeaponProficiencies()
         featureDomain.innerHTML = "";
         characterSubClass = null;
         switch (subclass) {
-            case "arcana":
+            case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
-                characterSubClass = "(Arcana)";
-                featureDomain.innerHTML = ": Arcana";
                 arcanaNode.classList.add("toBeAdded");
                 firstLevelSpells.push(spells.get("MagicMissile")[0].name);
                 break;
-            case "death":
-                characterSubClass = "(Death)";
+            case "Death":
                 domain.innerHTML = this.deathDomain;
-                featureDomain.innerHTML = ": Death";
                 firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
                 weapons.get('MartialWeapons')[0].proficient = true;
                 break;
-            case "forge":
-                characterSubClass = "(Forge)";
+            case "Forge":
                 domain.innerHTML = this.forgeDomain;
-                featureDomain.innerHTML = ": Forge";
                 firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
                 break;
-            case "grave":
-                characterSubClass = "(Grave)";
+            case "Grave":
                 domain.innerHTML = this.graveDomain;
-                featureDomain.innerHTML = ": Grave";
                 firstLevelSpells.push(spells.get("FalseLife")[0].name);
                 break;
-            case "knowledge":
-                characterSubClass = "(Knowledge)";
+            case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
-                featureDomain.innerHTML = ": Knowledge";
                 firstLevelSpells.push(spells.get("Identify")[0].name);
                 break;
-            case "life":
-                characterSubClass = "(Life)";
+            case "Life":
                 domain.innerHTML = this.lifeDomain;
-                featureDomain.innerHTML = ": Life";
                 break;
-            case "light":
-                characterSubClass = "(Light)";
+            case "Light":
                 domain.innerHTML = this.lightDomain;
-                featureDomain.innerHTML = ": Light";
                 firstLevelSpells.push(spells.get("BurningHands")[0].name, spells.get("FaerieFire")[0].name);
                 break;
-            case "nature":
-                characterSubClass = "(Nature)";
+            case "Nature":
                 domain.innerHTML = this.natureDomain;
-                featureDomain.innerHTML = ": Nature";
                 firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
                 break;
-            case "order":
-                characterSubClass = "(Order)";
+            case "Order":
                 domain.innerHTML = this.orderDomain;
-                featureDomain.innerHTML = ": Order";
                 firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
-            case "peace":
-                characterSubClass = "(Peace)";
+            case "Peace":
                 domain.innerHTML = this.peaceDomain;
-                featureDomain.innerHTML = ": Peace";
                 firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
-            case "protection":
-                characterSubClass = "(Protection)";
+            case "Protection":
                 domain.innerHTML = this.protectionDomain;
-                featureDomain.innerHTML = ": Protection";
                 firstLevelSpells.push(spells.get("CompelledDuel")[0].name);
                 break;
-            case "tempest":
-                characterSubClass = "(Tempest)";
+            case "Tempest":
                 domain.innerHTML = this.tempestDomain;
-                featureDomain.innerHTML = ": Tempest";
                 firstLevelSpells.push(spells.get("FogCloud")[0].name, spells.get("Thunderwave")[0].name);
                 break;
-            case "trickery":
-                characterSubClass = "(Trickery)";
+            case "Trickery":
                 domain.innerHTML = this.trickeryDomain;
-                featureDomain.innerHTML = ": Trickery";
                 firstLevelSpells.push(spells.get("CharmPerson")[0].name, spells.get("DisguiseSelf")[0].name);
                 break;
-            case "twilight":
-                characterSubClass = "(Twilight)";
+            case "Twilight":
                 domain.innerHTML = this.twilightDomain;
-                featureDomain.innerHTML = ": Twilight";
                 firstLevelSpells.push(spells.get("FaerieFire")[0].name, spells.get("Sleep")[0].name);
                 break;
-            case "war":
-                characterSubClass = "(War)";
-                domain.innerHTML = this.warDomain;
+            case "War":
                 featureDomain.innerHTML = ": War";
                 firstLevelSpells.push(spells.get("DivineFavor")[0].name);
                 break;
             default:
                 break;
         }
-        subClassNode.textContent = characterSubClass;
+        subClassNode.textContent = `(${subclass})`;
+        featureDomain.innerText = `: ${subclass}`;
 
         Character.renderSpells();
         const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
+        this.fullCharacterUpdate();
     }
+
 }

@@ -1,5 +1,6 @@
+// change enumerable for the first three entries?
 let weapons = new Map([
-    ["Firearms", [{ name: "firearms", proficient: false }]],//this will likely be a problem later when it comes to items
+    ["Firearms", [{ name: "firearms", proficient: false }]],   //this will likely be a problem later when it comes to items
     ["SimpleWeapons", [{ name: "simple weapons", proficient: false }]], 
     ["MartialWeapons", [{ name: "martial weapons", proficient: false }]],
     ["Club", [{ name: "club", simple: true, martial: false, melee: true, reach: false, ranged: false, range: 0, damage: "1d4", damageType: "bludgeoning", copper: 0, silver: 1, gold: 0, weight: 2, light: true, heavy: false, finesse: false, thrown: false, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: false, proficient: false }]],
@@ -39,6 +40,8 @@ let weapons = new Map([
     ["HeavyCrossbow", [{ name: "heavy crossbow", simple: false, martial: true, melee: false, reach: false, ranged: true, range: "100/400", damage: "1d10", damageType: "piercing", copper: 0, silver: 0, gold: 50, weight: 18, light: false, heavy: true, finesse: false, thrown: false, twoHanded: true, versatile: false, versatileDMG: false, ammunition: true, loading: true, proficient: false }]],
     ["Longbow", [{ name: "longbow", simple: false, martial: true, melee: false, reach: false, ranged: true, range: "150/600", damage: "1d8", damageType: "piercing", copper: 0, silver: 0, gold: 50, weight: 2, light: false, heavy: true, finesse: false, thrown: false, twoHanded: true, versatile: false, versatileDMG: false, ammunition: true, loading: false, special: false, proficient: false }]],
     ["Net", [{ name: "net", simple: false, martial: true, melee: false, reach: false, ranged: false, range: "5/15", damage: 0, damageType: "bludgeoning", copper: 0, silver: 0, gold: 1, weight: 3, light: false, heavy: false, finesse: false, thrown: true, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: "A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make.", proficient: false }]]]);
+
+
 
 //Weapon Proficiencies
 /* let characterWeaponProficiencies = [

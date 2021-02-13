@@ -65,39 +65,9 @@ class App {
         }
     }
 
-    static reset() {
-        characterArmorProficiencies.forEach((prof) => {
-            prof[1] = false;
-        });
-
-        weapons.forEach((weapon) => {
-            weapon[0].proficient = false;
-        });
-
-        characterLanguageProficiencies.forEach((element) => {
-            element[1] = false;
-        });
-
-        tools.forEach((tool) => {
-            tool[0].proficient = false;
-        });
-        const spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-        spellLevel.forEach(element => {
-            element.hidden = true;
-        });
-
-        characterSubClass = null;
-        subClassNode.textContent = "";
-        featuresNode.innerHTML = "";
-
-        Character.resetSkillNodes();
-        Character.resetSpellLists();
-
-        console.log('RESET');
-    }
 
     static setCharacterClass(characterClass) {
-        App.reset();
+        Character.reset();
         const classDetailsNode = document.getElementById("showClassDetails");
         classDetailsNode.innerHTML = ""; //clean the element for other text to be displayed
         Character.resetSpellLists();
@@ -109,12 +79,12 @@ class App {
                 for (const i of artificerSkills) {
                     i.classList.add("toBeAdded");
                 }
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = weapons.get("Firearms")[0].proficient = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
+                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("Firearms")[0].proficient = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
                 for (let i = 0; i < characterLevel; i++) {
                     classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
                     featuresNode.innerHTML += Artificer.artificerFeaturesList[i];
                 }
-                Artificer.setSpellLevel();
+                Artificer.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case BARBARIAN:
@@ -123,7 +93,7 @@ class App {
                 for (const i of barbarianSkills) {
                     i.classList.add("toBeAdded");
                 }
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = true;
+                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = true;
                 for (let i = 0; i < characterLevel; i++) {
                     classDetailsNode.innerHTML += Barbarian.barbarianFeaturesByLevel[i];
                     featuresNode.innerHTML += Barbarian.barbarianFeaturesList[i];
@@ -136,25 +106,22 @@ class App {
                 for (const i of bardSkills) {
                     i.classList.add("toBeAdded");
                 }
-                weapons.get("Simpleweapons")[0].proficient = weapons.get("Handcrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = weapons.get("HandCrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = true;
 
                 for (let i = 0; i < characterLevel; i++) {
                     classDetailsNode.innerHTML += Bard.bardFeaturesByLevel[i];
                     featuresNode.innerHTML += Bard.bardFeaturesList[i];
                 }
-                Bard.setSpellLevel();
+                Bard.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case CLERIC:
-                hitDice = 8;
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = true;
+                Cleric.setClericHitdice();
                 Cleric.setClericSkillNodes();
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
-                    featuresNode.innerHTML += Cleric.clericFeaturesList[i];
-                }
-                Cleric.setSpells();
-                Cleric.renderSpells();
+                Cleric.setClericSpells();
+                Cleric.setClericWeaponProficiencies();
+                Cleric.setClericArmorProficiencies();
+                Cleric.displayClericFeaturesByLevel();
                 break;
 
             case DRUID:
@@ -173,7 +140,7 @@ class App {
 
             case FIGHTER:
                 hitDice = 10;
-                weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
                 const fighterSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryAthletics, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryPerception, #summarySurvival');
                 for (const i of fighterSkills) {
                     i.classList.add("toBeAdded");
@@ -186,7 +153,7 @@ class App {
 
             case MONK:
                 hitDice = 8;
-                weapons.get("Simpleweapons")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[0][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[0][1] = true;
                 const monkSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAthletics, #summaryHistory, #summaryInsight, #summaryReligion, #summaryStealth');
                 for (const i of monkSkills) {
                     i.classList.add("toBeAdded");
@@ -199,7 +166,7 @@ class App {
 
             case MYSTIC:
                 hitDice = 8;
-                weapons.get("Simpleweapons")[0].proficient = characterArmorProficiencies[1][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = characterArmorProficiencies[1][1] = true;
                 const mysticSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInsight, #summaryMedicine, #summaryNature, #summaryPerception, #summaryReligion');
                 for (const i of mysticSkills) {
                     i.classList.add("toBeAdded");
@@ -212,7 +179,7 @@ class App {
 
             case PALADIN:
                 hitDice = 10;
-                weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
                 const paladinSkills = document.querySelectorAll('#summaryAthletics, #summaryInsight, #summaryIntimidation, #summaryMedicine, #summaryPersuasion, #summaryReligion');
                 for (const i of paladinSkills) {
                     i.classList.add("toBeAdded");
@@ -221,12 +188,12 @@ class App {
                     classDetailsNode.innerHTML += Paladin.paladinFeaturesByLevel[i];
                     featuresNode.innerHTML += Paladin.paladinFeaturesList[i];
                 }
-                Paladin.setSpellLevel();
+                Paladin.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case RANGER:
                 hitDice = 10;
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Simpleweapons")[0].proficient = weapons.get("Martialweapons")[0].proficient = true;
+                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = true;
                 const rangerSkills = document.querySelectorAll('#summaryAnimalHandling, #summaryAthletics, #summaryInsight, #summaryInvestigation, #summaryNature, #summaryPerception, #summaryStealth, #summarySurvival');
                 for (const i of rangerSkills) {
                     i.classList.add("toBeAdded");
@@ -235,12 +202,12 @@ class App {
                     classDetailsNode.innerHTML += Ranger.rangerFeaturesByLevel[i];
                     featuresNode.innerHTML += Ranger.rangerFeaturesList[i];
                 }
-                Ranger.setSpellLevel();
+                Ranger.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case ROGUE:
                 hitDice = 8;
-                weapons.get("Simpleweapons")[0].proficient = weapons.get("Handcrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = tools.get("Thieves")[0].proficient = characterLanguageProficiencies[15][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = weapons.get("HandCrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = tools.get("Thieves")[0].proficient = characterLanguageProficiencies[15][1] = true;
                 const rogueSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAthletics, #summaryDeception, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summarySleight, #summaryStealth');
                 for (const i of rogueSkills) {
                     i.classList.add("toBeAdded");
@@ -249,12 +216,12 @@ class App {
                     classDetailsNode.innerHTML += Rogue.rogueFeaturesByLevel[i];
                     featuresNode.innerHTML += Rogue.rogueFeaturesList[i];
                 }
-                Rogue.setSpellLevel();
+                Rogue.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case SORCERER:
                 hitDice = 6;
-                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Lightcrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
+                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("LightCrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
                 const sorcererSkills = document.querySelectorAll('#summaryArcana, #summaryDeception, #summaryInsight, #summaryIntimidation, #summaryPersuasion, #summaryReligion');
                 for (const i of sorcererSkills) {
                     i.classList.add("toBeAdded");
@@ -263,12 +230,12 @@ class App {
                     classDetailsNode.innerHTML += Sorcerer.sorcererFeaturesByLevel[i];
                     featuresNode.innerHTML += Sorcerer.sorcererFeaturesList[i];
                 }
-                Sorcerer.setSpellLevel();
+                Sorcerer.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case WARLOCK:
                 hitDice = 8;
-                weapons.get("Simpleweapons")[0].proficient = characterArmorProficiencies[1][1] = true;
+                weapons.get("SimpleWeapons")[0].proficient = characterArmorProficiencies[1][1] = true;
                 const warlockSkills = document.querySelectorAll('#summaryArcana, #summaryDeception, #summaryHistory, #summaryIntimidation, #summaryInvestigation, #summaryNature, #summaryReligion');
                 for (const i of warlockSkills) {
                     i.classList.add("toBeAdded");
@@ -277,12 +244,12 @@ class App {
                     classDetailsNode.innerHTML += Warlock.warlockFeaturesByLevel[i];
                     featuresNode.innerHTML += Warlock.warlockFeaturesList[i];
                 }
-                Warlock.setSpellLevel();
+                Warlock.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
 
             case WIZARD:
                 hitDice = 6;
-                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Lightcrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
+                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("LightCrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
                 const wizardSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInsight, #summaryInvestigation, #summaryMedicine, #summaryReligion');
                 for (const i of wizardSkills) {
                     i.classList.add("toBeAdded");
@@ -291,7 +258,7 @@ class App {
                     classDetailsNode.innerHTML += Wizard.wizardFeaturesByLevel[i];
                     featuresNode.innerHTML += Wizard.wizardFeaturesList[i];
                 }
-                Wizard.setSpellLevel();
+                Wizard.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 break;
         }
 
@@ -307,6 +274,7 @@ class App {
         levelNode.textContent = characterLevel;
 
         Character.fullCharacterUpdate();
+        Character.renderSpells();
 
         if (characterClass == ARTIFICER) {
             toolProficienciesNode.textContent += ", and one type of artisan's tools of your choice";

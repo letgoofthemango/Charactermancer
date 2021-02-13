@@ -48,6 +48,38 @@ class Character {
             proficiencyBonus = 6;
         }
     }
+    static reset() {
+        characterArmorProficiencies.forEach((prof) => {
+            prof[1] = false;
+        });
+
+        weapons.forEach((weapon) => {
+            weapon[0].proficient = false;
+        });
+
+        characterLanguageProficiencies.forEach((element) => {
+            element[1] = false;
+        });
+
+        tools.forEach((tool) => {
+            tool[0].proficient = false;
+        });
+        const spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+        spellLevel.forEach(element => {
+            element.hidden = true;
+        });
+
+        characterSubClass = null;
+        subClassNode.textContent = "";
+        featuresNode.innerHTML = "";
+
+        this.resetSpells();
+        this.resetSkillNodes();
+        this.resetSpellLists();
+        this.resetArmorProficienciesList();
+
+        console.log('RESET');
+    }
 
     //Hitpoints
     static updateHitPoints() {
@@ -100,16 +132,6 @@ class Character {
         armorProficienciesNode.textContent = armorProficiencies.join(", ");
     }
 
-    //update weapon prof loop
-    static updateWeaponProficiencies() {
-        let weaponProficiencies = [];
-        weapons.forEach((weapon) => {
-            if (weapon[0].proficient == true) {
-                weaponProficiencies.push(weapon[0].name);
-            }
-        })
-        weaponProficienciesNode.textContent = weaponProficiencies.join(", ");
-    }
 
     //update tools prof loop
     static updateToolProficiencies() {
@@ -175,6 +197,36 @@ class Character {
         firstLevelSpells = [];
     }
 
+    static resetArmorProficienciesList() {
+        armorProficienciesNode.innerHTML = "";
+    }
+
+    static resetArmorProficiencies() {
+        characterArmorProficiencies.forEach((prof) => {
+            prof[1] = false;
+        });
+    }
+
+    static resetWeaponProficienciesList() {
+        weaponProficienciesNode.innerHTML = "";
+    }
+
+    static resetWeaponProficiencies() {
+        weapons.forEach((weapon) => {
+            weapon[0].proficient = false;
+        });
+    }
+
+    //update weapon prof loop
+    static updateWeaponProficiencies() {
+        let weaponProficiencies = [];
+        weapons.forEach((weapon) => {
+            if (weapon[0].proficient == true) {
+                weaponProficiencies.push(weapon[0].name);
+            }
+        })
+        weaponProficienciesNode.textContent = weaponProficiencies.join(", ");
+    }
     static renderSpells() {
         cantripSpells.forEach((spell) => {
             cantripsListNode.innerHTML += `<li>${spell}</li>`;
