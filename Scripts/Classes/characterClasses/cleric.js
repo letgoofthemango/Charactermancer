@@ -2151,14 +2151,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 firstLevelSpells.push(spells.get("FaerieFire")[0].name, spells.get("Sleep")[0].name);
                 break;
             case "War":
-                featureDomain.innerHTML = ": War";
+                domain.innerHTML = this.warDomain;
                 firstLevelSpells.push(spells.get("DivineFavor")[0].name);
                 break;
             default:
                 break;
         }
         subClassNode.textContent = `(${subclass})`;
-        featureDomain.innerText = `: ${subclass}`;
+        featureDomain.textContent = `: ${subclass}`;
 
         Character.renderSpells();
         const lists = document.querySelectorAll('#cantripsList,#firstLevelList');

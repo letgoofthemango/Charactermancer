@@ -48,6 +48,20 @@ class Character {
             proficiencyBonus = 6;
         }
     }
+
+    static setArcanaSkill() {
+
+        (skills[2].proficiency == 0) ? skills[2].proficiency == 1 : skills[2].proficiency == 0;
+        (skills[2].proficiency == 1) ? skills[2].proficiency == 0 : skills[2].proficiency == 1;
+
+        
+        if (skills[2].proficiency == 0) {
+            skills[2].proficiency == 1
+        } else if (skills[2].proficiency == 1) {
+            skills[2].proficiency == 0
+        }
+    }
+
     static reset() {
         characterArmorProficiencies.forEach((prof) => {
             prof[1] = false;
