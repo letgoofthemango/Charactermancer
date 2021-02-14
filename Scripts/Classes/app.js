@@ -118,6 +118,7 @@ class App {
             case CLERIC:
                 Cleric.setClericHitdice();
                 Cleric.setClericSkillNodes();
+                // Cleric.setClericSkills();
                 Cleric.setClericSpells();
                 Cleric.setClericWeaponProficiencies();
                 Cleric.setClericArmorProficiencies();

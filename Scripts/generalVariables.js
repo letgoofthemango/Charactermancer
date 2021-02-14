@@ -74,97 +74,43 @@ let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
 let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])(); */
 
 let characterFightingStyle;
-
+// 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
 let skills = [{
-    name: "Acrobatics",
-    proficiency: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
-    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
-    mod: 0,
+    name: "Acrobatics", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
 }, {
-    name: "Animal Handling",
-    proficiency: 0,
-    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
-    mod: 0,
+    name: "Animal Handling", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
-    name: "Arcana",
-    proficiency: 0,
-    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
-    mod: 0,
+    name: "Arcana", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Athletics",
-    proficiency: 0,
-    calcStat: abilityScores[0].mod.bind(abilityScores[0]),
-    mod: 0,
+    name: "Athletics", proficiency: 0, calcStat: abilityScores[0].mod.bind(abilityScores[0]), mod: 0,
 }, {
-    name: "Deception",
-    proficiency: 0,
-    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
-    mod: 0,
+    name: "Deception", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0,
 }, {
-    name: "History",
-    proficiency: 0,
-    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
-    mod: 0,
+    name: "History", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Insight",
-    proficiency: 0,
-    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
-    mod: 0,
+    name: "Insight", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
-    name: "Intimidation",
-    proficiency: 0,
-    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
-    mod: 0,
+    name: "Intimidation", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0,
 }, {
-    name: "Investigation",
-    proficiency: 0,
-    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
-    mod: 0,
+    name: "Investigation", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Medicine",
-    proficiency: 0,
-    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
-    mod: 0,
+    name: "Medicine", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
-    name: "Nature",
-    proficiency: 0,
-    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
-    mod: 0,
+    name: "Nature", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Perception",
-    proficiency: 0,
-    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
-    mod: 0,
+    name: "Perception", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
-    name: "Performance",
-    proficiency: 0,
-    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
-    mod: 0,
+    name: "Performance", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0,
 }, {
-    name: "Persuasion",
-    proficiency: 0,
-    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
-    mod: 0,
+    name: "Persuasion", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0,
 }, {
-    name: "Religion",
-    proficiency: 0,
-    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
-    mod: 0,
+    name: "Religion", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Sleight of Hand",
-    proficiency: 0,
-    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
-    mod: 0,
+    name: "Sleight of Hand", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
 }, {
-    name: "Stealth",
-    proficiency: 0,
-    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
-    mod: 0,
+    name: "Stealth", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
 }, {
-    name: "Survival",
-    proficiency: 0,
-    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
-    mod: 0,
+    name: "Survival", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }];
 
 //Skills
@@ -208,16 +154,16 @@ let characterAttacks = [];
 
 
 //Spells
-let cantripSpells=[];
-let firstLevelSpells=[];
-let secondLevelSpells=[];
-let thirdLevelSpells=[];
-let fourthLevelSpells=[];
-let fifthLevelSpells=[];
-let sixthLevelSpells=[];
-let seventhLevelSpells=[];
-let eigthLevelSpells=[];
-let ninethLevelSpells=[];
+let cantripSpells = [];
+let firstLevelSpells = [];
+let secondLevelSpells = [];
+let thirdLevelSpells = [];
+let fourthLevelSpells = [];
+let fifthLevelSpells = [];
+let sixthLevelSpells = [];
+let seventhLevelSpells = [];
+let eigthLevelSpells = [];
+let ninethLevelSpells = [];
 
 
 //Hitpoints
@@ -286,7 +232,7 @@ const perceptionNode = document.getElementById("summaryPerception");
 const performanceNode = document.getElementById("summaryPerformance");
 const persuationNode = document.getElementById("summaryPersuasion");
 const religionNode = document.getElementById("summaryReligion");
-const sleightNode = document.getElementById("summarySleight");
+const sleightOfHandNode = document.getElementById("summarySleight");
 const stealthNode = document.getElementById("summaryStealth");
 const survivalNode = document.getElementById("summarySurvival");
 const skillsTextNode = document.getElementById("summarySkillsText");

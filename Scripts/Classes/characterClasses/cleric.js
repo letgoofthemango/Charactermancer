@@ -595,7 +595,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             <hr>
 
             <div class="collapse show" id="featureArcaneInitiate">
-                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you can choose two cantrips from the wizard spell list. For you, these cantrips count as cleric cantrips.
+                <p>When you choose this domain at 1st level, you gain proficiency in the Arcana skill, and you can choose two cantrips from the wizard spell list. For you, these cantrips count as cleric cantrips. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
                 <!-- <label for="arcanaCantrip1">Cantrip one:</label>
                 <select class="custom-select-sm" id="arcanaCantrip1">
                     <option value=null>Select</option>
@@ -778,8 +778,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureReaper">
-        <p>At 1st level, the cleric learns one necromancy cantrip of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range
-            and within 5 feet of each other.</p>
+        <p>At 1st level, the cleric learns one necromancy cantrip of his or her choice from any spell list. When the cleric casts a necromancy cantrip that normally targets only one creature, the spell can instead target two creatures within range and within 5 feet of each other. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
+        <!-- <select class="custom-select-sm" id="deathCantrip">
+                    <option value=null>Select</option>
+                    <option value="ChillTouch">Chill Touch</option>
+                    <option value="SappingSting">Sapping Sting</option>
+                    <option value="SpareTheDying">Spare the Dying</option>
+                    <option value="TollTheDead">Toll the Dead</option>
+        </select> --></p>
     </div>
 
 
@@ -2029,6 +2035,10 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
+/*     static setClericSkills() {
+        skills[5].proficiency = skills[6].proficiency = skills[9].proficiency = skills[13].proficiency = skills[14].proficiency = 1;
+    } */
+
     static setClericHitdice() {
         hitDice = 8;
     }
@@ -2079,7 +2089,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         const domain = document.getElementById("clericDomain");
         const featureDomain = document.getElementById("domain");
         this.resetSkillNodes();
+        this.resetSkills();
         Cleric.setClericSkillNodes();
+        // Cleric.setClericSkills();
         this.resetSpellLists();
         this.resetSpells();
         Cleric.setClericSpells();
@@ -2095,7 +2107,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         switch (subclass) {
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
-                arcanaNode.classList.add("toBeAdded");
+                this.setSkill("Arcana");
                 firstLevelSpells.push(spells.get("MagicMissile")[0].name);
                 break;
             case "Death":

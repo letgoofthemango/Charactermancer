@@ -963,3 +963,116 @@ let armorClass = armor[4].armorClass; // to save specific armor's class for AC c
 for (let i = 0; i < armor.length; i++) {
     console.table(armor[i]);
 }
+
+
+let skills = [{
+    name: "Acrobatics",
+    proficiency: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
+    mod: 0,
+}, {
+    name: "Animal Handling",
+    proficiency: 0,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
+    mod: 0,
+}, {
+    name: "Arcana",
+    proficiency: 0,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
+    mod: 0,
+}, {
+    name: "Athletics",
+    proficiency: 0,
+    calcStat: abilityScores[0].mod.bind(abilityScores[0]),
+    mod: 0,
+}, {
+    name: "Deception",
+    proficiency: 0,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
+    mod: 0,
+}, {
+    name: "History",
+    proficiency: 0,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
+    mod: 0,
+}, {
+    name: "Insight",
+    proficiency: 0,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
+    mod: 0,
+}, {
+    name: "Intimidation",
+    proficiency: 0,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
+    mod: 0,
+}, {
+    name: "Investigation",
+    proficiency: 0,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
+    mod: 0,
+}, {
+    name: "Medicine",
+    proficiency: 0,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
+    mod: 0,
+}, {
+    name: "Nature",
+    proficiency: 0,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
+    mod: 0,
+}, {
+    name: "Perception",
+    proficiency: 0,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
+    mod: 0,
+}, {
+    name: "Performance",
+    proficiency: 0,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
+    mod: 0,
+}, {
+    name: "Persuasion",
+    proficiency: 0,
+    calcStat: abilityScores[5].mod.bind(abilityScores[5]),
+    mod: 0,
+}, {
+    name: "Religion",
+    proficiency: 0,
+    calcStat: abilityScores[3].mod.bind(abilityScores[3]),
+    mod: 0,
+}, {
+    name: "Sleight of Hand",
+    proficiency: 0,
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
+    mod: 0,
+}, {
+    name: "Stealth",
+    proficiency: 0,
+    calcStat: abilityScores[1].mod.bind(abilityScores[1]),
+    mod: 0,
+}, {
+    name: "Survival",
+    proficiency: 0,
+    calcStat: abilityScores[4].mod.bind(abilityScores[4]),
+    mod: 0,
+}];
+
+let skills = new Map([
+    ["Acrobatics", [{ name: "Acrobatics", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, }]] // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
+    ["AnimalHandling", [{ name: "Animal Handling", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0, }]]
+    ["Arcana", [{ name: "Arcana", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0, }]]
+    ["Athletics", [{ name: "Athletics", proficiency: 0, calcStat: abilityScores[0].mod.bind(abilityScores[0]), mod: 0, }]]
+    ["Deception", [{ name: "Deception", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0, }]]
+    ["History", [{ name: "History", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0, }]]
+    ["Insight", [{ name: "Insight", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0, }]]
+    ["Intimidation", [{ name: "Intimidation", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0, }]]
+    ["Investigation", [{ name: "Investigation", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0, }]]
+    ["Medicine", [{ name: "Medicine", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0, }]]
+    ["Nature", [{ name: "Nature", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0, }]]
+    ["Perception", [{ name: "Perception", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0, }]]
+    ["Performance", [{ name: "Performance", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0, }]]
+    ["Persuasion", [{ name: "Persuasion", proficiency: 0, calcStat: abilityScores[5].mod.bind(abilityScores[5]), mod: 0, }]]
+    ["Religion", [{ name: "Religion", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0, }]]
+    ["SleightOfHand", [{ name: "Sleight of Hand", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, }]]
+    ["Stealth", [{ name: "Stealth", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, }]]
+    ["Survival", [{ name: "Survival", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0 }]]]);

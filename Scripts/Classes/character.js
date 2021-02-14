@@ -49,24 +49,94 @@ class Character {
         }
     }
 
-    static setArcanaSkill() {
+    static resetSkills() {
+        skills.forEach((skill) => {
+            skill.proficiency = 0;
+        })
+    }
 
-        (skills[2].proficiency == 0) ? skills[2].proficiency == 1 : skills[2].proficiency == 0;
-        (skills[2].proficiency == 1) ? skills[2].proficiency == 0 : skills[2].proficiency == 1;
-
-        
-        if (skills[2].proficiency == 0) {
-            skills[2].proficiency == 1
-        } else if (skills[2].proficiency == 1) {
-            skills[2].proficiency == 0
+    static setSkill(skill) {
+        switch (skill) {
+            case "Acrobatics":
+                (skills[0].proficiency == 0) ? skills[0].proficiency = 1 : skills[0].proficiency = 0;
+                (skills[0].proficiency == 1) ? acrobaticsNode.classList.add('toBeAdded') : acrobaticsNode.classList.remove('toBeAdded');
+                break;
+            case "AnimalHandling":
+                (skills[1].proficiency == 0) ? skills[1].proficiency = 1 : skills[1].proficiency = 0;
+                (skills[1].proficiency == 1) ? animalHandlingNode.classList.add('toBeAdded') : animalHandlingNode.classList.remove('toBeAdded');
+                break;
+            case "Arcana":
+                (skills[2].proficiency == 0) ? skills[2].proficiency = 1 : skills[2].proficiency = 0;
+                (skills[2].proficiency == 1) ? arcanaNode.classList.add('toBeAdded') : arcanaNode.classList.remove('toBeAdded');
+                break;
+            case "Athletics":
+                (skills[3].proficiency == 0) ? skills[3].proficiency = 1 : skills[3].proficiency = 0;
+                (skills[3].proficiency == 1) ? athleticsNode.classList.add('toBeAdded') : athleticsNode.classList.remove('toBeAdded');
+                break;
+            case "Deception":
+                (skills[4].proficiency == 0) ? skills[4].proficiency = 1 : skills[4].proficiency = 0;
+                (skills[4].proficiency == 1) ? deceptionNode.classList.add('toBeAdded') : deceptionNode.classList.remove('toBeAdded');
+                break;
+            case "History":
+                (skills[5].proficiency == 0) ? skills[5].proficiency = 1 : skills[5].proficiency = 0;
+                (skills[5].proficiency == 1) ? historyNode.classList.add('toBeAdded') : historyNode.classList.remove('toBeAdded');
+                break;
+            case "Insight":
+                (skills[6].proficiency == 0) ? skills[6].proficiency = 1 : skills[6].proficiency = 0;
+                (skills[6].proficiency == 1) ? insightNode.classList.add('toBeAdded') : insightNode.classList.remove('toBeAdded');
+                break;
+            case "Intimidation":
+                (skills[7].proficiency == 0) ? skills[7].proficiency = 1 : skills[7].proficiency = 0;
+                (skills[7].proficiency == 1) ? intimidationNode.classList.add('toBeAdded') : intimidationNode.classList.remove('toBeAdded');
+                break;
+            case "Investigation":
+                (skills[8].proficiency == 0) ? skills[8].proficiency = 1 : skills[8].proficiency = 0;
+                (skills[8].proficiency == 1) ? investigationNode.classList.add('toBeAdded') : investigationNode.classList.remove('toBeAdded');
+                break;
+            case "Medicine":
+                (skills[9].proficiency == 0) ? skills[9].proficiency = 1 : skills[9].proficiency = 0;
+                (skills[9].proficiency == 1) ? medicineNode.classList.add('toBeAdded') : medicineNode.classList.remove('toBeAdded');
+                break;
+            case "Nature":
+                (skills[10].proficiency == 0) ? skills[10].proficiency = 1 : skills[10].proficiency = 0;
+                (skills[10].proficiency == 1) ? natureNode.classList.add('toBeAdded') : natureNode.classList.remove('toBeAdded');
+                break;
+            case "Perception":
+                (skills[11].proficiency == 0) ? skills[11].proficiency = 1 : skills[11].proficiency = 0;
+                (skills[11].proficiency == 1) ? perceptionNode.classList.add('toBeAdded') : perceptionNode.classList.remove('toBeAdded');
+                break;
+            case "Performance":
+                (skills[12].proficiency == 0) ? skills[12].proficiency = 1 : skills[12].proficiency = 0;
+                (skills[12].proficiency == 1) ? performanceNode.classList.add('toBeAdded') : performanceNode.classList.remove('toBeAdded');
+                break;
+            case "Persuasion":
+                (skills[13].proficiency == 0) ? skills[13].proficiency = 1 : skills[13].proficiency = 0;
+                (skills[13].proficiency == 1) ? persuationNode.classList.add('toBeAdded') : persuationNode.classList.remove('toBeAdded');
+                break;
+            case "Religion":
+                (skills[14].proficiency == 0) ? skills[14].proficiency = 1 : skills[14].proficiency = 0;
+                (skills[14].proficiency == 1) ? religionNode.classList.add('toBeAdded') : religionNode.classList.remove('toBeAdded');
+                break;
+            case "SleightOfHand":
+                (skills[15].proficiency == 0) ? skills[15].proficiency = 1 : skills[15].proficiency = 0;
+                (skills[15].proficiency == 1) ? sleightOfHandNode.classList.add('toBeAdded') : sleightOfHandNode.classList.remove('toBeAdded');
+                break;
+            case "Stealth":
+                (skills[16].proficiency == 0) ? skills[16].proficiency = 1 : skills[16].proficiency = 0;
+                (skills[16].proficiency == 1) ? stealthNode.classList.add('toBeAdded') : stealthNode.classList.remove('toBeAdded');
+                break;
+            case "Survival":
+                (skills[17].proficiency == 0) ? skills[17].proficiency = 1 : skills[17].proficiency = 0;
+                (skills[17].proficiency == 1) ? survivalNode.classList.add('toBeAdded') : survivalNode.classList.remove('toBeAdded');
+                break;
         }
+        console.log(`${skill} skill is now 1`);
     }
 
     static reset() {
         characterArmorProficiencies.forEach((prof) => {
             prof[1] = false;
         });
-
         weapons.forEach((weapon) => {
             weapon[0].proficient = false;
         });
@@ -89,6 +159,7 @@ class Character {
 
         this.resetSpells();
         this.resetSkillNodes();
+        this.resetSkills();
         this.resetSpellLists();
         this.resetArmorProficienciesList();
 
@@ -248,7 +319,6 @@ class Character {
         firstLevelSpells.forEach((spell) => {
             firstLevelListNode.innerHTML += `<li>${spell}</li>`;
         })
-        console.log('RENDER HAPPEND');
     }
 
 
