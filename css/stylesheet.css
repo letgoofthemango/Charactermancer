@@ -157,6 +157,7 @@ html {
 
 .toBeAdded {
   color: #0d9900;
+  font-weight: bolder;
 }
 
 .navbar {

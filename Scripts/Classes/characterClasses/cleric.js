@@ -2032,12 +2032,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         const clericSkills = document.querySelectorAll('#summaryHistory, #summaryInsight, #summaryMedicine, #summaryPersuasion, #summaryReligion');
         for (const i of clericSkills) {
             i.classList.add("toBeAdded");
+            i.removeAttribute('hidden');
         }
     }
-
-/*     static setClericSkills() {
-        skills[5].proficiency = skills[6].proficiency = skills[9].proficiency = skills[13].proficiency = skills[14].proficiency = 1;
-    } */
 
     static setClericHitdice() {
         hitDice = 8;
@@ -2091,7 +2088,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         this.resetSkillNodes();
         this.resetSkills();
         Cleric.setClericSkillNodes();
-        // Cleric.setClericSkills();
         this.resetSpellLists();
         this.resetSpells();
         Cleric.setClericSpells();
@@ -2107,8 +2103,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         switch (subclass) {
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
-                this.setSkill("Arcana");
+                this.setSkill("Arcana", 2);
                 firstLevelSpells.push(spells.get("MagicMissile")[0].name);
+                // featuresNode.create
                 break;
             case "Death":
                 domain.innerHTML = this.deathDomain;
