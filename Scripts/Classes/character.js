@@ -54,6 +54,26 @@ class Character {
             skill.proficiency = 0;
         })
     }
+    static resetCharacterFeatures() {
+        characterFeatures = null;
+        featuresNode.innerHTML = "";
+        console.log('features have been reset');
+    }
+
+    static renderCharacterfeatures() {
+        characterFeatures.forEach((feature) => {
+            const newLi = document.createElement("li");
+            const newSpan = document.createElement("span");
+            const newContent = document.createTextNode(`${feature}`);
+            const newName = feature.replace(" ", "");
+            newLi.setAttribute('id', `${newName}Feature`);
+            newLi.appendChild(newContent);
+            newSpan.setAttribute('id', `${newName}FeatureSpan`);
+            newLi.appendChild(newSpan);
+            featuresNode.append(newLi);
+            console.log(`${feature} has been set!`);
+        })
+    }
 
     static setSkill(skill, number) {
         let skillNumber;
@@ -168,14 +188,13 @@ class Character {
 
         characterSubClass = null;
         subClassNode.textContent = "";
-        featuresNode.innerHTML = "";
+        this.resetCharacterFeatures();
 
         this.resetSpells();
         this.resetSkillNodes();
         this.resetSkills();
         this.resetSpellLists();
         this.resetArmorProficienciesList();
-
         console.log('RESET');
     }
 
@@ -273,6 +292,7 @@ class Character {
         this.updateLanguageProficiencies();
         this.updateInitiative();
         this.updatePassivePerception();
+        this.renderCharacterfeatures();
         console.log("UPDATE");
     }
 

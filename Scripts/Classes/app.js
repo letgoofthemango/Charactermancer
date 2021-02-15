@@ -75,10 +75,7 @@ class App {
         switch (characterClass) {
             case ARTIFICER:
                 hitDice = 8;
-                const artificerSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summarySleight');
-                for (const i of artificerSkills) {
-                    i.classList.add("toBeAdded");
-                }
+                Artificer.setArtificerSkillNodes();
                 characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("Firearms")[0].proficient = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
                 for (let i = 0; i < characterLevel; i++) {
                     classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
@@ -116,6 +113,7 @@ class App {
                 break;
 
             case CLERIC:
+                Cleric.setClericFeatures();
                 Cleric.setClericHitdice();
                 Cleric.setClericSkillNodes();
                 Cleric.setClericSpells();

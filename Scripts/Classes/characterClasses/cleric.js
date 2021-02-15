@@ -2044,7 +2044,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         const classDetailsNode = document.getElementById("showClassDetails");
         for (let i = 0; i < characterLevel; i++) {
             classDetailsNode.innerHTML += Cleric.clericFeaturesByLevel[i];
-            featuresNode.innerHTML += Cleric.clericFeaturesList[i];
         }
     }
 
@@ -2082,9 +2081,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = true;
     }
 
+    static setClericFeatures() {
+        characterFeatures = ["Divine Domain", "Spellcasting"];
+    }
+
     static setClericSubclass(subclass) {
         const domain = document.getElementById("clericDomain");
-        const featureDomain = document.getElementById("domain");
         this.resetSkillNodes();
         this.resetSkills();
         Cleric.setClericSkillNodes();
@@ -2097,31 +2099,45 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         this.resetWeaponProficienciesList();
         this.resetWeaponProficiencies();
         Cleric.setClericWeaponProficiencies();
-        this.updateWeaponProficiencies()
-        featureDomain.innerHTML = "";
+        this.updateWeaponProficiencies();
+        this.resetCharacterFeatures();
+        Cleric.setClericFeatures();
         characterSubClass = null;
         switch (subclass) {
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
                 this.setSkill("Arcana", 2);
+                characterFeatures.push('Arcane Initiate');
                 firstLevelSpells.push(spells.get("MagicMissile")[0].name);
-                // featuresNode.create
                 break;
             case "Death":
                 domain.innerHTML = this.deathDomain;
+                characterFeatures.push('Reaper');
                 firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
                 weapons.get('MartialWeapons')[0].proficient = true;
                 break;
             case "Forge":
                 domain.innerHTML = this.forgeDomain;
+                characterFeatures.push('Blessing of the Forge');
+                characterArmorProficiencies[3][1] = true;
+                tools.get("Smith")[0].proficient = true;
                 firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
                 break;
             case "Grave":
                 domain.innerHTML = this.graveDomain;
+                characterFeatures.push('Circle of Mortality');
+                characterFeatures.push('Eyes of the Grave');
+                cantripSpells.push(spells.get("SpareTheDying")[0].name);
                 firstLevelSpells.push(spells.get("FalseLife")[0].name);
                 break;
             case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
+                characterFeatures.push('Blessing of Knowledge');
+                const knowledgeSkills = document.querySelectorAll('#summaryArcana, #summaryNature');
+                for (const i of knowledgeSkills) {
+                    i.classList.add("toBeAdded");
+                    i.removeAttribute('hidden');
+                }
                 firstLevelSpells.push(spells.get("Identify")[0].name);
                 break;
             case "Life":
@@ -2163,18 +2179,20 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.warDomain;
                 firstLevelSpells.push(spells.get("DivineFavor")[0].name);
                 break;
-            default:
-                break;
         }
-        subClassNode.textContent = `(${subclass})`;
-        featureDomain.textContent = `: ${subclass}`;
 
         Character.renderSpells();
-        const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
+        const lists = document.querySelectorAll('#cantripsList, #firstLevelList');
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
         this.fullCharacterUpdate();
+        const featureDomain = document.getElementById("DivineDomainFeatureSpan");
+        featureDomain.textContent = `: ${subclass}`;
+        subClassNode.textContent = `(${subclass})`;
+        if (subclass == "Knowledge") {
+            languageProficienciesNode.innerHTML = "Two languages of your choice.";
+        }
     }
 
 }

@@ -1420,6 +1420,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
+    static setArtificerSkillNodes() {
+        const skillsNodes = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summarySleight');
+        for (const i of skillsNodes) {
+            i.classList.add("toBeAdded");
+            i.removeAttribute('hidden');
+        }
+    }
+
     getHitpointsFirstLvl = function () { };
     getHitpointsLvl = function () { };
     getMaxSpellLvl = function () { };
