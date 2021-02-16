@@ -113,13 +113,7 @@ class App {
                 break;
 
             case CLERIC:
-                Cleric.setClericFeatures();
-                Cleric.setClericHitdice();
-                Cleric.setClericSkillNodes();
-                Cleric.setClericClassSkills();
-                Cleric.setClericSpells();
-                Cleric.setClericWeaponProficiencies();
-                Cleric.setClericArmorProficiencies();
+                Cleric.setClericClass();
                 Cleric.displayClericFeaturesByLevel();
                 break;
 

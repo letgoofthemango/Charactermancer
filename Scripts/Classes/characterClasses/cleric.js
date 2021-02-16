@@ -2028,6 +2028,29 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     </div>
 </div>`;
 
+
+    /*###################################################################
+    ######################### Methods ##############################
+    ######################################################################*/
+
+    // Weapons-------------------------------------------------------------------------------------------------------------------------------
+    static setClericWeaponProficiencies() {
+        weapons.get("SimpleWeapons")[0].proficient = true;
+    }
+
+
+    // Armors-------------------------------------------------------------------------------------------------------------------------------------
+    static setClericArmorProficiencies() {
+        characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = true;
+    }
+
+
+    // Skills-------------------------------------------------------------------------------------------------------------------------------------------------
+    static setClericClassSkills() {
+        possibleSkills.push("History", "Insight", "Medicine", "Persuasion", "Religion");
+    }
+
+
     static setClericSkillNodes() {
         const clericSkills = document.querySelectorAll('#summaryHistory, #summaryInsight, #summaryMedicine, #summaryPersuasion, #summaryReligion');
         for (const i of clericSkills) {
@@ -2036,13 +2059,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-    static setClericClassSkills() {
-        possibleSkills.push("History", "Insight", "Medicine", "Persuasion", "Religion");
+
+    // Features--------------------------------------------------------------------------------------------------------------------------------------------------
+    static setClericFeatures() {
+        characterFeatures = ["Divine Domain", "Spellcasting"];
     }
 
-    static setClericHitdice() {
-        hitDice = 8;
-    }
 
     static displayClericFeaturesByLevel() {
         const classDetailsNode = document.getElementById("showClassDetails");
@@ -2051,6 +2073,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
+
+    // Spells----------------------------------------------------------------------------------------------------------------------------------------------------
     static setClericSpells() {
         let spellLevel;
         if (characterLevel <= 3) {
@@ -2077,38 +2101,29 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-    static setClericWeaponProficiencies() {
-        weapons.get("SimpleWeapons")[0].proficient = true;
-    }
 
-    static setClericArmorProficiencies() {
-        characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = true;
-    }
 
-    static setClericFeatures() {
-        characterFeatures = ["Divine Domain", "Spellcasting"];
+
+
+
+
+
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setClericClass() {
+        Character.setCharacterHitdice(8);
+        this.setClericSkillNodes();
+        this.setClericClassSkills();
+        this.setClericFeatures();
+        this.setClericWeaponProficiencies();
+        this.setClericArmorProficiencies();
+        this.setClericSpells();
     }
 
     static setClericSubclass(subclass) {
-        Character.resetSkillNodes();
-        Character.resetSkills();
-        this.setClericSkillNodes();
-        Character.resetSpellLists();
-        Character.resetSpells();
-        this.setClericSpells();
-        Character.resetArmorProficienciesList();
-        Character.resetArmorProficiencies();
-        this.setClericArmorProficiencies();
-        Character.updateArmorProficiencies();
-        Character.resetWeaponProficienciesList();
-        Character.resetWeaponProficiencies();
-        this.setClericWeaponProficiencies();
-        Character.updateWeaponProficiencies();
-        Character.resetCharacterFeatures();
-        Character.resetLanguageProficiencies();
-        Character.resetToolProficiencies();
-        this.setClericFeatures();
-        Character.resetChosenSkills();
+        Character.fullCharacterReset();
+        this.setClericClass();
         characterSubClass = null;
         const domain = document.getElementById("clericDomain");
         switch (subclass) {

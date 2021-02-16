@@ -48,7 +48,7 @@ class Character {
         weaponProficienciesNode.innerHTML = "";
     }
 
-    static updateWeaponProficiencies() {
+    static updateCharacterWeaponProficiencies() {
         let weaponProficiencies = [];
         weapons.forEach((weapon) => {
             if (weapon[0].proficient == true) {
@@ -252,7 +252,7 @@ class Character {
         }
     }
 
-    static resetChosenSkills() {
+    static resetCharacterChosenSkills() {
         chosenSkills = [];
     }
 
@@ -323,7 +323,7 @@ class Character {
         });
     }
 
-    static resetSpells() {
+    static resetCharacterSpells() {
         cantripSpells = [];
         firstLevelSpells = [];
     }
@@ -376,6 +376,11 @@ class Character {
     }
 
 
+    static setCharacterHitdice(number) {
+        hitDice = number;
+    }
+
+
     static updateCharacterInitiative() {
         let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
         initiativeNode.textContent = App.getNumber(initiativeMod);
@@ -396,14 +401,14 @@ class Character {
 
 
 
-// Full character actions
+// Full character actions----------------------------------------------------------------------------------------------------------------------
 
 static fullCharacterUpdate() {
         this.updateCharacterHitPoints();
         this.updateSkills();
         this.updateCharacterStats();
         this.updateCharacterArmorProficiencies();
-        this.updateWeaponProficiencies();
+        this.updateCharacterWeaponProficiencies();
         this.updateCharacterToolProficiencies();
         this.updateLanguageProficiencies();
         this.updateCharacterInitiative();
@@ -421,10 +426,10 @@ static fullCharacterUpdate() {
         this.resetCharacterToolProficiencies();
         this.resetCharacterSkills();
         this.resetSkillNodes();
-        this.resetChosenSkills();
+        this.resetCharacterChosenSkills();
         this.resetPossibleSkills();
         this.resetCharacterFeatures();
-        this.resetSpells();
+        this.resetCharacterSpells();
         this.resetSpellLists();
         this.resetCharacterSubClass();
         console.log('RESET');
