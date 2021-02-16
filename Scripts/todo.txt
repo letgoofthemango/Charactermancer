@@ -8,14 +8,9 @@ Go back Button!
 bestätigung abfragen?
 
 
-Bard Musikintrumente in der Updatefunction besser machen???
-
 
 table rows ignore striped coloring
 Table first row should not be a row.
-
-
-Ranger dropdown menus not workings!!!
 
 
 popover für skills etc machen!

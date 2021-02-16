@@ -1043,6 +1043,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     <div class="collapse show" id="featureBlessing">
         <p>At 1st level, you learn two languages of your choice. You also become proficient in your choice of two of the following skills: Arcana, History, Nature, or Religion.</p>
+        <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
         <p>Your proficiency bonus is doubled for any ability check you make that uses either of those skills.</p>
     </div>
 
@@ -1303,7 +1304,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureFlare">
-        <p>At 1st level, you learn one druid cantrip of your choice. You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.</p>
+        <p>At 1st level, you learn one druid cantrip of your choice. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b> You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.</p>
     </div>
 
     <h5>Channel Divinity: Charm Animals and Plants<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCharm" aria-expanded="true" aria-controls="featureCharm">[-]</button></span></h5>
@@ -2101,12 +2102,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-
-
-
-
-
-
+    static setClericCantripsKnown(){
+        cantripsKnown=3;
+    }
 
 
 
@@ -2118,6 +2116,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         this.setClericFeatures();
         this.setClericWeaponProficiencies();
         this.setClericArmorProficiencies();
+        this.setClericCantripsKnown();
         this.setClericSpells();
     }
 
@@ -2161,17 +2160,29 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                     i.classList.add("toBeAdded");
                     i.removeAttribute('hidden');
                 }
+                possibleSkills.push("Arcana", "Nature");
                 firstLevelSpells.push(spells.get("Identify")[0].name);
                 break;
             case "Life":
                 domain.innerHTML = this.lifeDomain;
+                characterArmorProficiencies[3][1] = true;
+                characterFeatures.push('Disciple of Life');
                 break;
             case "Light":
                 domain.innerHTML = this.lightDomain;
+                cantripSpellsChosen.push('Light');
                 firstLevelSpells.push(spells.get("BurningHands")[0].name, spells.get("FaerieFire")[0].name);
+                characterFeatures.push('Warding Flare');
                 break;
             case "Nature":
                 domain.innerHTML = this.natureDomain;
+                characterArmorProficiencies[3][1] = true;
+                const natureSkills = document.querySelectorAll('#summaryAnimalHandling,#summaryNature, #summarySurvival');
+                for (const i of natureSkills) {
+                    i.classList.add("toBeAdded");
+                    i.removeAttribute('hidden');
+                }
+                possibleSkills.push("Animal Handling", "Nature", "Survival");
                 firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
                 break;
             case "Order":
@@ -2209,6 +2220,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
+        firstLevelSpellsChosen = [...firstLevelSpells];
 
         this.fullCharacterUpdate();
 

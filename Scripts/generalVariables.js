@@ -115,7 +115,7 @@ let skills = [{
 
 
 let possibleSkills=[];
-let chosenSkills=[];
+let chosenCharacterSkills=[];
 
 
 //Skills
@@ -160,15 +160,51 @@ let characterAttacks = [];
 
 //Spells
 let cantripSpells = [];
+let cantripSpellsChosen = [];
+let cantripsKnown;
+
 let firstLevelSpells = [];
+let firstLevelSpellsChosen = [];
+let firstLevelSpellsKnown;
+
 let secondLevelSpells = [];
+let secondLevelSpellsChosen = [];
+let secondLevelSpellsKnown;
+
 let thirdLevelSpells = [];
+let thirdLevelSpellsChosen = [];
+let thirdLevelSpellsKnown;
+
 let fourthLevelSpells = [];
+let fourthLevelSpellsChosen = [];
+let fourthLevelSpellsKnown;
+
 let fifthLevelSpells = [];
+let fifthLevelSpellsChosen = [];
+let fifthLevelSpellsKnown;
+
 let sixthLevelSpells = [];
+let sixthLevelSpellsChosen = [];
+let sixthLevelSpellsKnown;
+
 let seventhLevelSpells = [];
+let seventhLevelSpellsChosen = [];
+let seventhLevelSpellsKnown;
+
 let eigthLevelSpells = [];
+let eigthLevelSpellsChosen = [];
+let eigthLevelSpellsKnown;
+
 let ninethLevelSpells = [];
+let ninethLevelSpellsChosen = [];
+let ninethLevelSpellsKnown = [];
+
+
+
+
+
+
+
 
 
 //Hitpoints

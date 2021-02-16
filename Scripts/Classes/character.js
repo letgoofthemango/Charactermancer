@@ -139,7 +139,7 @@ class Character {
                     `something went terribly wrong with the calculation at ${skills[i].name} !!!!`
                 );
             }
-            document.getElementById("skillsID" + i).textContent = App.getNumber(skills[i].mod);
+            document.getElementById("skillsID" + i).textContent = `: ${App.getNumber(skills[i].mod)}`;
         }
     }
 
@@ -230,8 +230,7 @@ class Character {
             node.setAttribute('hidden', true);
         }
 
-        chosenSkills.push(skill); //push it into the chosen skills for later use.
-        // console.log(chosenSkills);
+        chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
 
         switch (number) {
             case 0:
@@ -253,7 +252,7 @@ class Character {
     }
 
     static resetCharacterChosenSkills() {
-        chosenSkills = [];
+        chosenCharacterSkills = [];
     }
 
     static resetPossibleSkills() {
