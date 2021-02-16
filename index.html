@@ -38,22 +38,22 @@
 <body class="parallax">
     <div class="container" id="characterOverview" style="visibility: hidden;">
         <div class="container mt-2">
-            <p class="pm0" id="summaryName">Name:</p>
-            <p class="pm0">Class:&nbsp;<span id="summaryClass"></span>&nbsp;<span id="summarySubClass"></span></p>
+            <p class="pm0" id="summary" hidden>Name:</span><span id="summaryName"></span></p>
+            <p class="pm0" id="summary">Class:&nbsp;<span id="summaryClass"></span>&nbsp;<span id="summarySubClass"></span></p>
             <p class="pm0">Level: <span id="summaryLevel"></span></p>
-            <p class="pm0">Hitpoints: <span id="summaryHP"></span></p>
-            <p class="pm0">Background: <span id="summaryBackground"></span></p>
-            <hr>
-            <p class="pm0">AC: <span id="summaryAC"></span></p>
-            <p class="pm0">Initiative: <span id="summaryInitiative"></span></p>
-            <p class="pm0">Speed: <span id="summarySpeed"></span></p>
-            <hr>
+            <p class="pm0" id="summary" hidden>Hitpoints: <span id="summaryHP"></span></p>
+            <p class="pm0" id="summary" hidden>Background: <span id="summaryBackground"></span></p>
+            <hr id="hr1" hidden>
+            <p class="pm0" id="summary" hidden>AC: <span id="summaryAC"></span></p>
+            <p class="pm0" id="summary" hidden>Initiative: <span id="summaryInitiative"></span></p>
+            <p class="pm0" id="summary" hidden>Speed: <span id="summarySpeed"></span></p>
+            <hr id="hr2" hidden>
             <div>
                 <div>
-                    <p class="text-center">Ability Scores:<span class="ml-2"><button class="collapseButton"
+                    <p class="text-center" hidden>Ability Scores:<span class="ml-2"><button class="collapseButton"
                                 type="button" data-toggle="collapse" data-target="#collapseStats" aria-expanded="true"
                                 aria-controls="collapseStats">[-]</button></span></p>
-                    <div class="collapse col-12 show" id="collapseStats">
+                    <div class="collapse col-12 show" id="collapseStats" hidden>
                         <div class="d-flex justify-content-around">
                             <div class="statBox">
                                 <p class="statName text-center">STR</p>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
             </div>
-            <hr>
+            <hr id="hr3">
             <div>
                 <p class="text-center mb-0">Skills:<span class="ml-2"><button class="collapseButton" type="button"
                             data-toggle="collapse" data-target="#skills" aria-expanded="true"
@@ -133,20 +133,20 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+            <hr id="hr4">
             <div>
                 <p class="text-center">Proficiencies:<span class="ml-2"><button class="collapseButton" type="button"
                             data-toggle="collapse" data-target="#proficiencies" aria-expanded="true"
                             aria-controls="proficiencies">[-]</button></span></p>
                 <div class="collapse show" id="proficiencies">
                     <ul id="proficienciesList" class="listNone">
-                        <li>Weapons: <span id="weaponProficiencies"></span></li>
-                        <li>Armor: <span id="armorProficiencies"></span></li>
-                        <li>Tools: <span id="toolProficiencies"></span></li>
-                        <li>Languages: <span id="languageProficiencies"></span></li>
+                        <li id="summary">Weapons: <span id="weaponProficiencies"></span></li>
+                        <li id="summary">Armor: <span id="armorProficiencies"></span></li>
+                        <li id="summary">Tools: <span id="toolProficiencies"></span></li>
+                        <li id="summary">Languages: <span id="languageProficiencies"></span></li>
                     </ul>
                 </div>
-                <hr>
+                <hr id="hr5">
                 <div>
                     <p class="text-center">Features:<span class="ml-2"><button class="collapseButton" type="button"
                                 data-toggle="collapse" data-target="#features" aria-expanded="true"
@@ -155,27 +155,27 @@
                         <ul id="featuresList" class="listNone"></ul>
                     </div>
                 </div>
-                <hr>
+                <hr id="hr6" hidden>
                 <div>
-                    <p class="text-center">Equipment:<span class="ml-2"><button class="collapseButton" type="button"
+                    <p class="text-center" id="summary" hidden>Equipment:<span class="ml-2"><button class="collapseButton" type="button"
                                 data-toggle="collapse" data-target="#equipment" aria-expanded="true"
                                 aria-controls="equipment">[-]</button></span></p>
                     <div class="collapse show" id="equipment">
                         <ul id="equipmentList" class="listNone"></ul>
                     </div>
                 </div>
-                <hr>
+                <hr id="hr7" hidden>
                 <div>
-                    <p class="text-center">Attacks:<span class="ml-2"><button class="collapseButton" type="button"
+                    <p class="text-center" id="summary" hidden>Attacks:<span class="ml-2"><button class="collapseButton" type="button"
                                 data-toggle="collapse" data-target="#attacks" aria-expanded="true"
                                 aria-controls="attacks">[-]</button></span></p>
                     <div class="collapse show" id="attacks">
                         <ul id="attacksList" class="listNone"></ul>
                     </div>
                 </div>
-                <hr>
+                <hr id="hr8">
                 <div id="spellsDIV">
-                    <p class="text-center">Spells:<span class="ml-2"><button class="collapseButton" type="button"
+                    <p class="text-center m-0" id="summarySpellsHeading" hidden>Spells:<span class="ml-2"><button class="collapseButton" type="button"
                                 data-toggle="collapse" data-target="#spells" aria-expanded="true"
                                 aria-controls="spells">[-]</button></span></p>
                     <div class="collapse show" id="spells">
@@ -231,7 +231,7 @@
         </header>
         <div id="displayContent">
             <h1 class="text-center">5e Charactermancer</h1>
-            <hr>
+            <hr id="hr1" hidden>
             <h1 class="text-center">Introduction</h1 class="text-center">
             <p></p>
             <p>foundry import!!! The green checkmark tells the Charactermancer that you have decided that your choice

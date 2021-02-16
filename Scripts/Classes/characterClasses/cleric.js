@@ -2036,6 +2036,10 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
+    static setClericClassSkills() {
+        possibleSkills.push("History", "Insight", "Medicine", "Persuasion", "Religion");
+    }
+
     static setClericHitdice() {
         hitDice = 8;
     }
@@ -2086,23 +2090,27 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     }
 
     static setClericSubclass(subclass) {
-        const domain = document.getElementById("clericDomain");
-        this.resetSkillNodes();
-        this.resetSkills();
-        Cleric.setClericSkillNodes();
-        this.resetSpellLists();
-        this.resetSpells();
-        Cleric.setClericSpells();
-        this.resetArmorProficienciesList();
-        Cleric.setClericArmorProficiencies();
-        this.updateArmorProficiencies();
-        this.resetWeaponProficienciesList();
-        this.resetWeaponProficiencies();
-        Cleric.setClericWeaponProficiencies();
-        this.updateWeaponProficiencies();
-        this.resetCharacterFeatures();
-        Cleric.setClericFeatures();
+        Character.resetSkillNodes();
+        Character.resetSkills();
+        this.setClericSkillNodes();
+        Character.resetSpellLists();
+        Character.resetSpells();
+        this.setClericSpells();
+        Character.resetArmorProficienciesList();
+        Character.resetArmorProficiencies();
+        this.setClericArmorProficiencies();
+        Character.updateArmorProficiencies();
+        Character.resetWeaponProficienciesList();
+        Character.resetWeaponProficiencies();
+        this.setClericWeaponProficiencies();
+        Character.updateWeaponProficiencies();
+        Character.resetCharacterFeatures();
+        Character.resetLanguageProficiencies();
+        Character.resetToolProficiencies();
+        this.setClericFeatures();
+        Character.resetChosenSkills();
         characterSubClass = null;
+        const domain = document.getElementById("clericDomain");
         switch (subclass) {
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
@@ -2186,10 +2194,13 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
+
         this.fullCharacterUpdate();
+
         const featureDomain = document.getElementById("DivineDomainFeatureSpan");
         featureDomain.textContent = `: ${subclass}`;
         subClassNode.textContent = `(${subclass})`;
+
         if (subclass == "Knowledge") {
             languageProficienciesNode.innerHTML = "Two languages of your choice.";
         }

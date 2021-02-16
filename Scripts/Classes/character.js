@@ -35,6 +35,114 @@ class Character {
     /*###################################################################
     ######################### Methods ##############################
     ######################################################################*/
+
+
+
+    // Weapons-------------------------------------------------------------------------------------------------------------------------------
+    static resetCharacterWeaponProficiencies() {
+        weapons.forEach((weapon) => {
+            weapon[0].proficient = false;
+        });
+    }
+    static resetCharacterWeaponProficienciesList() {
+        weaponProficienciesNode.innerHTML = "";
+    }
+
+    static updateWeaponProficiencies() {
+        let weaponProficiencies = [];
+        weapons.forEach((weapon) => {
+            if (weapon[0].proficient == true) {
+                weaponProficiencies.push(weapon[0].name);
+            }
+        })
+        weaponProficienciesNode.textContent = weaponProficiencies.join(", ");
+    }
+
+
+
+
+
+    // Armors-------------------------------------------------------------------------------------------------------------------------------------
+    static resetCharacterArmorProficiencies() {
+        characterArmorProficiencies.forEach((prof) => {
+            prof[1] = false;
+        });
+    }
+
+    static resetCharacterArmorProficienciesList() {
+        armorProficienciesNode.innerHTML = "";
+    }
+
+    static updateCharacterArmorProficiencies() {
+        let armorProficiencies = [];
+        for (let i = 0; i < characterArmorProficiencies.length; i++) {
+            if (characterArmorProficiencies[i][1] == true) {
+                armorProficiencies.push(characterArmorProficiencies[i][0]);
+            }
+        }
+        armorProficienciesNode.textContent = armorProficiencies.join(", ");
+    }
+
+
+
+
+
+    // Tools-------------------------------------------------------------------------------------------------------------------------------------------------
+    static updateCharacterToolProficiencies() {
+        let toolProficiencies = [];
+        tools.forEach((tool) => {
+            if (tool[0].proficient == true) {
+                toolProficiencies.push(tool[0].name);
+            }
+        })
+        toolProficienciesNode.textContent = toolProficiencies.join(", ");
+    }
+
+    static resetCharacterToolProficiencies() {
+        tools.forEach((tool) => {
+            tool[0].proficient = false;
+        });
+    }
+
+
+
+
+
+    // Skills-------------------------------------------------------------------------------------------------------------------------------------------------
+    static resetCharacterSkills() {
+        skills.forEach((skill) => {
+            skill.proficiency = 0;
+        })
+    }
+
+    static resetSkillNodes() {
+        const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
+        for (const i of classSkills) {
+            i.classList.remove("toBeAdded");
+            i.setAttribute('hidden', 'true');
+        }
+    }
+
+    static updateSkills() {
+        this.getProficiencyBonus();
+        for (let i = 0; i < skills.length; i++) {
+            if (skills[i].proficiency == 0) {
+                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 0);
+            } else if (skills[i].proficiency == 1) {
+                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 0.5);
+            } else if (skills[i].proficiency == 2) {
+                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 1);
+            } else if (skills[i].proficiency == 3) {
+                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 2);
+            } else {
+                alert(
+                    `something went terribly wrong with the calculation at ${skills[i].name} !!!!`
+                );
+            }
+            document.getElementById("skillsID" + i).textContent = App.getNumber(skills[i].mod);
+        }
+    }
+
     static getProficiencyBonus() { //function for proficiency bonus
         if (characterLevel <= 4) {
             proficiencyBonus = 2;
@@ -47,32 +155,6 @@ class Character {
         } else {
             proficiencyBonus = 6;
         }
-    }
-
-    static resetSkills() {
-        skills.forEach((skill) => {
-            skill.proficiency = 0;
-        })
-    }
-    static resetCharacterFeatures() {
-        characterFeatures = null;
-        featuresNode.innerHTML = "";
-        console.log('features have been reset');
-    }
-
-    static renderCharacterfeatures() {
-        characterFeatures.forEach((feature) => {
-            const newLi = document.createElement("li");
-            const newSpan = document.createElement("span");
-            const newContent = document.createTextNode(`${feature}`);
-            const newName = feature.replace(" ", "");
-            newLi.setAttribute('id', `${newName}Feature`);
-            newLi.appendChild(newContent);
-            newSpan.setAttribute('id', `${newName}FeatureSpan`);
-            newLi.appendChild(newSpan);
-            featuresNode.append(newLi);
-            console.log(`${feature} has been set!`);
-        })
     }
 
     static setSkill(skill, number) {
@@ -147,6 +229,10 @@ class Character {
             node.classList.remove('toBeAdded');
             node.setAttribute('hidden', true);
         }
+
+        chosenSkills.push(skill); //push it into the chosen skills for later use.
+        // console.log(chosenSkills);
+
         switch (number) {
             case 0:
                 console.log(`${skill} skill is now set to unproficient`);
@@ -166,102 +252,19 @@ class Character {
         }
     }
 
-    static reset() {
-        characterArmorProficiencies.forEach((prof) => {
-            prof[1] = false;
-        });
-        weapons.forEach((weapon) => {
-            weapon[0].proficient = false;
-        });
-
-        characterLanguageProficiencies.forEach((element) => {
-            element[1] = false;
-        });
-
-        tools.forEach((tool) => {
-            tool[0].proficient = false;
-        });
-        const spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-        spellLevel.forEach(element => {
-            element.hidden = true;
-        });
-
-        characterSubClass = null;
-        subClassNode.textContent = "";
-        this.resetCharacterFeatures();
-
-        this.resetSpells();
-        this.resetSkillNodes();
-        this.resetSkills();
-        this.resetSpellLists();
-        this.resetArmorProficienciesList();
-        console.log('RESET');
+    static resetChosenSkills() {
+        chosenSkills = [];
     }
 
-    //Hitpoints
-    static updateHitPoints() {
-        characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
-        if (isNaN(characterHitpoints)) {
-            hpNode.innerText = "";
-        } else {
-            hpNode.innerText = characterHitpoints;
-        }
-    }
-
-    //update skills loop
-    static updateSkills() {
-        this.getProficiencyBonus();
-        for (let i = 0; i < skills.length; i++) {
-            if (skills[i].proficiency == 0) {
-                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 0);
-            } else if (skills[i].proficiency == 1) {
-                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 0.5);
-            } else if (skills[i].proficiency == 2) {
-                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 1);
-            } else if (skills[i].proficiency == 3) {
-                skills[i].mod = skills[i].calcStat() + (proficiencyBonus * 2);
-            } else {
-                alert(
-                    `something went terribly wrong with the calculation at ${skills[i].name} !!!!`
-                );
-            }
-            document.getElementById("skillsID" + i).textContent = App.getNumber(skills[i].mod);
-        }
-    }
-
-    //update stats loop
-    static updateStats() {
-        let totals = document.getElementsByClassName("statTotal");
-        let mods = document.getElementsByClassName("statMod");
-        for (let i = 0; i < abilityScores.length; i++) {
-            totals[i].textContent = abilityScores[i].value;
-            mods[i].textContent = App.getNumber(abilityScores[i].mod());
-        }
-    }
-
-    static updateArmorProficiencies() {
-        let armorProficiencies = [];
-        for (let i = 0; i < characterArmorProficiencies.length; i++) {
-            if (characterArmorProficiencies[i][1] == true) {
-                armorProficiencies.push(characterArmorProficiencies[i][0]);
-            }
-        }
-        armorProficienciesNode.textContent = armorProficiencies.join(", ");
+    static resetPossibleSkills() {
+        possibleSkills = [];
     }
 
 
-    //update tools prof loop
-    static updateToolProficiencies() {
-        let toolProficiencies = [];
-        tools.forEach((tool) => {
-            if (tool[0].proficient == true) {
-                toolProficiencies.push(tool[0].name);
-            }
-        })
-        toolProficienciesNode.textContent = toolProficiencies.join(", ");
-    }
 
-    //update language prof loop
+
+
+    // Language-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateLanguageProficiencies() {
         let languageProficiencies = [];
         for (let i = 0; i < characterLanguageProficiencies.length; i++) {
@@ -272,43 +275,52 @@ class Character {
         languageProficienciesNode.textContent = languageProficiencies.join(", ");
     }
 
-    static updateInitiative() {
-        let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
-        initiativeNode.textContent = App.getNumber(initiativeMod);
+    static resetCharacterLanguageProficiencies() {
+        characterLanguageProficiencies.forEach((element) => {
+            element[1] = false;
+        });
     }
 
-    static updatePassivePerception() {
-        let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
-        passivePerceptionNode.textContent = passivePerception;
+
+
+
+
+    // Features--------------------------------------------------------------------------------------------------------------------------------------------------
+
+    static resetCharacterFeatures() {
+        characterFeatures = null;
+        featuresNode.innerHTML = "";
     }
 
-    static fullCharacterUpdate() {
-        this.updateHitPoints();
-        this.updateSkills();
-        this.updateStats();
-        this.updateArmorProficiencies();
-        this.updateWeaponProficiencies();
-        this.updateToolProficiencies();
-        this.updateLanguageProficiencies();
-        this.updateInitiative();
-        this.updatePassivePerception();
-        this.renderCharacterfeatures();
-        console.log("UPDATE");
+    static renderCharacterfeatures() {
+        characterFeatures.forEach((feature) => {
+            const newLi = document.createElement("li");
+            const newSpan = document.createElement("span");
+            const newContent = document.createTextNode(`${feature}`);
+            const newName = feature.replace(" ", "");
+            newLi.setAttribute('id', `${newName}Feature`);
+            newLi.appendChild(newContent);
+            newSpan.setAttribute('id', `${newName}FeatureSpan`);
+            newLi.appendChild(newSpan);
+            featuresNode.append(newLi);
+        })
     }
 
-    static resetSkillNodes() {
-        const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
-        for (const i of classSkills) {
-            i.classList.remove("toBeAdded");
-            i.setAttribute('hidden', 'true');
-        }
-    }
+
+
+
+
+    // Spells----------------------------------------------------------------------------------------------------------------------------------------------------
 
     static resetSpellLists() {
         const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
         for (const i of spellLists) {
             i.innerHTML = "";
         }
+        const spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+        spellLevel.forEach(element => {
+            element.hidden = true;
+        });
     }
 
     static resetSpells() {
@@ -316,42 +328,23 @@ class Character {
         firstLevelSpells = [];
     }
 
-    static resetArmorProficienciesList() {
-        armorProficienciesNode.innerHTML = "";
-    }
-
-    static resetArmorProficiencies() {
-        characterArmorProficiencies.forEach((prof) => {
-            prof[1] = false;
-        });
-    }
-
-    static resetWeaponProficienciesList() {
-        weaponProficienciesNode.innerHTML = "";
-    }
-
-    static resetWeaponProficiencies() {
-        weapons.forEach((weapon) => {
-            weapon[0].proficient = false;
-        });
-    }
-
-    //update weapon prof loop
-    static updateWeaponProficiencies() {
-        let weaponProficiencies = [];
-        weapons.forEach((weapon) => {
-            if (weapon[0].proficient == true) {
-                weaponProficiencies.push(weapon[0].name);
-            }
-        })
-        weaponProficienciesNode.textContent = weaponProficiencies.join(", ");
-    }
     static renderSpells() {
         cantripSpells.forEach((spell) => {
-            cantripsListNode.innerHTML += `<li>${spell}</li>`;
+            const newLi = document.createElement("li");
+            const newContent = document.createTextNode(`${spell}`);
+            const newName = spell.replace(/ /g, "");
+            newLi.setAttribute('id', `${newName}Spell`);
+            newLi.appendChild(newContent);
+            cantripsListNode.append(newLi);
         })
+
         firstLevelSpells.forEach((spell) => {
-            firstLevelListNode.innerHTML += `<li>${spell}</li>`;
+            const newLi = document.createElement("li");
+            const newContent = document.createTextNode(`${spell}`);
+            const newName = spell.replace(/ /g, "");
+            newLi.setAttribute('id', `${newName}Spell`);
+            newLi.appendChild(newContent);
+            firstLevelListNode.append(newLi);
         })
     }
 
@@ -359,10 +352,83 @@ class Character {
 
 
 
+    // Stats------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    //update stats loop
+    static updateCharacterStats() {
+        let totals = document.getElementsByClassName("statTotal");
+        let mods = document.getElementsByClassName("statMod");
+        for (let i = 0; i < abilityScores.length; i++) {
+            totals[i].textContent = abilityScores[i].value;
+            mods[i].textContent = App.getNumber(abilityScores[i].mod());
+        }
+    }
+
+
+    //Hitpoints
+    static updateCharacterHitPoints() {
+        characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
+        if (isNaN(characterHitpoints)) {
+            hpNode.innerText = "";
+        } else {
+            hpNode.innerText = characterHitpoints;
+        }
+    }
+
+
+    static updateCharacterInitiative() {
+        let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
+        initiativeNode.textContent = App.getNumber(initiativeMod);
+    }
+
+
+    static updateCharacterPassivePerception() {
+        let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
+        passivePerceptionNode.textContent = passivePerception;
+    }
+
+    static resetCharacterSubClass() {
+        characterSubClass = null;
+        subClassNode.textContent = "";
+    }
 
 
 
 
+
+// Full character actions
+
+static fullCharacterUpdate() {
+        this.updateCharacterHitPoints();
+        this.updateSkills();
+        this.updateCharacterStats();
+        this.updateCharacterArmorProficiencies();
+        this.updateWeaponProficiencies();
+        this.updateCharacterToolProficiencies();
+        this.updateLanguageProficiencies();
+        this.updateCharacterInitiative();
+        this.updateCharacterPassivePerception();
+        this.renderCharacterfeatures();
+        console.log("UPDATE");
+    }
+
+    static fullCharacterReset() {
+        this.resetCharacterWeaponProficiencies();
+        this.resetCharacterWeaponProficienciesList();
+        this.resetCharacterArmorProficiencies();
+        this.resetCharacterArmorProficienciesList();
+        this.resetCharacterLanguageProficiencies();
+        this.resetCharacterToolProficiencies();
+        this.resetCharacterSkills();
+        this.resetSkillNodes();
+        this.resetChosenSkills();
+        this.resetPossibleSkills();
+        this.resetCharacterFeatures();
+        this.resetSpells();
+        this.resetSpellLists();
+        this.resetCharacterSubClass();
+        console.log('RESET');
+    }
 
 
 

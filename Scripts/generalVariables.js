@@ -113,6 +113,11 @@ let skills = [{
     name: "Survival", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }];
 
+
+let possibleSkills=[];
+let chosenSkills=[];
+
+
 //Skills
 let acrobaticsMod = skills[0].mod;
 let animalHandlingMod = skills[1].mod;
@@ -243,6 +248,7 @@ const languageProficienciesNode = document.getElementById("languageProficiencies
 const featuresNode = document.getElementById("featuresList");
 const equipmentNode = document.getElementById("equipmentList");
 const attacksNode = document.getElementById("attacksList");
+const spellsHeadingNode = document.getElementById("summarySpellsHeading");
 const cantripsNode = document.getElementById("cantrips");
 const cantripsListNode = document.getElementById("cantripsList");
 const firstLevelNode = document.getElementById("firstLevel");
@@ -266,7 +272,7 @@ const ninethLevelListNode = document.getElementById("ninethLevel");
 const mainNode = document.getElementById("displayContent");
 const overviewNode = document.getElementById("characterOverview");
 
-document.getElementById("characterOverview").addEventListener("click", function () {
+/* document.getElementById("characterOverview").addEventListener("click", function () {
     abilityScores[0].value = 20;
     abilityScores[1].value = 20;
     abilityScores[2].value = 20;
@@ -274,4 +280,4 @@ document.getElementById("characterOverview").addEventListener("click", function 
     abilityScores[4].value = 20;
     abilityScores[5].value = 20;
     Character.fullCharacterUpdate();
-});
+}); */

@@ -67,7 +67,7 @@ class App {
 
 
     static setCharacterClass(characterClass) {
-        Character.reset();
+        Character.fullCharacterReset();
         const classDetailsNode = document.getElementById("showClassDetails");
         classDetailsNode.innerHTML = ""; //clean the element for other text to be displayed
         Character.resetSpellLists();
@@ -116,6 +116,7 @@ class App {
                 Cleric.setClericFeatures();
                 Cleric.setClericHitdice();
                 Cleric.setClericSkillNodes();
+                Cleric.setClericClassSkills();
                 Cleric.setClericSpells();
                 Cleric.setClericWeaponProficiencies();
                 Cleric.setClericArmorProficiencies();
@@ -272,6 +273,12 @@ class App {
         levelNode.textContent = characterLevel;
 
         Character.fullCharacterUpdate();
+        if (cantripSpells.length>0 || firstLevelSpells.length>0){
+            spellsHeadingNode.toggleAttribute('hidden');
+        } else {
+            spellsHeadingNode.setAttribute('hidden', true);
+            console.log ('should be hidden');
+        }
         Character.renderSpells();
 
         if (characterClass == ARTIFICER) {
