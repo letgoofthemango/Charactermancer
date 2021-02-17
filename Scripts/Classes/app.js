@@ -53,7 +53,6 @@ class App {
 
     static startApp() {
         mainNode.innerHTML = this.siteClassChoice;
-        overviewNode.style.visibility = "visible";
         Character.fullCharacterUpdate();
     }
 
@@ -67,6 +66,7 @@ class App {
 
 
     static setCharacterClass(characterClass) {
+        overviewNode.style.visibility = "visible";
         Character.fullCharacterReset();
         const classDetailsNode = document.getElementById("showClassDetails");
         classDetailsNode.innerHTML = ""; //clean the element for other text to be displayed

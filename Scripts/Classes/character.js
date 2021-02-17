@@ -58,7 +58,11 @@ class Character {
         weaponProficienciesNode.textContent = weaponProficiencies.join(", ");
     }
 
-
+    static setCharacterWeaponProficiencies(...args) {
+        args.forEach((prof)=>{
+            weapons.get(`${prof}`)[0].proficient = true;
+        })
+    }
 
 
 
@@ -81,6 +85,25 @@ class Character {
             }
         }
         armorProficienciesNode.textContent = armorProficiencies.join(", ");
+    }
+
+    static setCharacterArmorProficiency(...args) {
+        const profs = args.join();
+        if (profs.includes("none")) {
+            characterArmorProficiencies[0][1] = true;
+        }
+        if (profs.includes("light")) {
+            characterArmorProficiencies[1][1] = true;
+        }
+        if (profs.includes("medium")) {
+            characterArmorProficiencies[2][1] = true;
+        }
+        if (profs.includes("heavy")) {
+            characterArmorProficiencies[3][1] = true;
+        }
+        if (profs.includes("shields")) {
+            characterArmorProficiencies[4][1] = true;
+        }
     }
 
 
@@ -259,6 +282,18 @@ class Character {
         possibleSkills = [];
     }
 
+    static setCharacterSkillsNumberToChoose(number) {
+        numberOfSkillsToChoose = number;
+    }
+
+    static showNodesForPossibleSkills(...args) {
+        const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
+        skills.forEach((skill) => {
+            skill.classList.add("toBeAdded");
+            skill.removeAttribute('hidden');
+        })
+    }
+
 
 
 
@@ -347,6 +382,10 @@ class Character {
         })
     }
 
+    static setCantripsKnown(number) {
+        cantripsKnown = number;
+    }
+
 
 
 
@@ -400,9 +439,9 @@ class Character {
 
 
 
-// Full character actions----------------------------------------------------------------------------------------------------------------------
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
 
-static fullCharacterUpdate() {
+    static fullCharacterUpdate() {
         this.updateCharacterHitPoints();
         this.updateSkills();
         this.updateCharacterStats();
@@ -424,6 +463,7 @@ static fullCharacterUpdate() {
         this.resetCharacterLanguageProficiencies();
         this.resetCharacterToolProficiencies();
         this.resetCharacterSkills();
+        this.setCharacterSkillsNumberToChoose(null);
         this.resetSkillNodes();
         this.resetCharacterChosenSkills();
         this.resetPossibleSkills();
@@ -433,12 +473,6 @@ static fullCharacterUpdate() {
         this.resetCharacterSubClass();
         console.log('RESET');
     }
-
-
-
-
-
-
 
 
 

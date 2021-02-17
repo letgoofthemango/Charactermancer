@@ -1304,7 +1304,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureFlare">
-        <p>At 1st level, you learn one druid cantrip of your choice. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b> You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival.</p>
+        <p>At 1st level, you learn one druid cantrip of your choice. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b> You also gain proficiency in one of the following skills of your choice: Animal Handling, Nature, or Survival. <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b></p>
     </div>
 
     <h5>Channel Divinity: Charm Animals and Plants<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureCharm" aria-expanded="true" aria-controls="featureCharm">[-]</button></span></h5>
@@ -1385,7 +1385,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureLight">
-        <p>When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice). <b>INSERT SKILLS CHOICE HERE!!!!!!!!</b></p>
+        <p>When you choose this domain at 1st level, you gain proficiency with heavy armor. You also gain proficiency in the Intimidation or Persuasion skill (your choice). <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b></p>
     </div>
 
     <h5>Voice of Authority<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureVoice" aria-expanded="true" aria-controls="featureVoice">[-]</button></span></h5>
@@ -1515,14 +1515,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureImplement">
-        <p>You gain proficiency in the Insight, Performance, or Persuasion skill (your choice).<b>INSERT SKILLS CHOICE HERE!!!!!!!!</b></p>
+        <p>At 1st level you gain proficiency in the Insight, Performance, or Persuasion skill (your choice).<b>INSERT SKILLS CHOICE HERE!!!!!!!!</b></p>
     </div>
 
     <h5>Emboldening Bond<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEmboldening" aria-expanded="true" aria-controls="featureEmboldening">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureEmboldening">
-        <p>You can forge an empowering bond among people who are at peace with one another. As an action, you choose a number of willing creatures within 30 feet of you (this can include yourself) equal to your proficiency bonus. You create a magical
+        <p>Beginning at 1st level You can forge an empowering bond among people who are at peace with one another. As an action, you choose a number of willing creatures within 30 feet of you (this can include yourself) equal to your proficiency bonus. You create a magical
             bond among them for 10 minutes or until you use this feature again. While any bonded creature is within 30 feet of another, the creature can roll a d4 and add the number rolled to an attack roll, an ability check, or a saving throw
             it makes. Each creature can add the d4 no more than once per turn.</p>
         <p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
@@ -1532,7 +1532,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureBalm">
-        <p>You can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action,
+        <p>From 2nd level you can use your Channel Divinity to make your very presence a soothing balm. As an action, you can move up to your speed, without provoking opportunity attacks, and when you move within 5 feet of any other creature during this action,
             you can restore a number of hit points to that creature equal to 2d6 + your Wisdom modifier (minimum of 1 hit point). A creature can receive this healing only once whenever you take this action.</p>
     </div>
 
@@ -1540,7 +1540,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureBond">
-        <p>The bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to
+        <p>From 6th level onwards the bond you forge between people helps them protect each other. When a creature affected by your Emboldening Bond feature is about to take damage, a second bonded creature within 30 feet of the first can use its reaction to teleport to
             an unoccupied space within 5 feet of the first creature. The second creature then takes all the damage instead.</p>
     </div>
 
@@ -1553,7 +1553,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureExpansive">
-        <p>The benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance
+        <p> At 17th level the benefits of your Emboldening Bond and Protective Bond features now work when the creatures are within 60 feet of each other. Moreover, when a creature uses Protective Bond to take someone else's damage, the creature has resistance
             to that damage.</p>
     </div>
 </div>`;
@@ -2034,18 +2034,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     ######################### Methods ##############################
     ######################################################################*/
 
-    // Weapons-------------------------------------------------------------------------------------------------------------------------------
-    static setClericWeaponProficiencies() {
-        weapons.get("SimpleWeapons")[0].proficient = true;
-    }
-
-
-    // Armors-------------------------------------------------------------------------------------------------------------------------------------
-    static setClericArmorProficiencies() {
-        characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = true;
-    }
-
-
     // Skills-------------------------------------------------------------------------------------------------------------------------------------------------
     static setClericClassSkills() {
         possibleSkills.push("History", "Insight", "Medicine", "Persuasion", "Religion");
@@ -2102,9 +2090,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     }
 
-    static setClericCantripsKnown(){
-        cantripsKnown=3;
-    }
+    
 
 
 
@@ -2113,10 +2099,11 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setCharacterHitdice(8);
         this.setClericSkillNodes();
         this.setClericClassSkills();
+        Character.setCharacterSkillsNumberToChoose(2);
         this.setClericFeatures();
-        this.setClericWeaponProficiencies();
-        this.setClericArmorProficiencies();
-        this.setClericCantripsKnown();
+        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterArmorProficiency("light", "medium", "shields");
+        Character.setCantripsKnown(3);
         this.setClericSpells();
     }
 
@@ -2136,12 +2123,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.deathDomain;
                 characterFeatures.push('Reaper');
                 firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
-                weapons.get('MartialWeapons')[0].proficient = true;
+                Character.setCharacterWeaponProficiencies("MartialWeapons");
                 break;
             case "Forge":
                 domain.innerHTML = this.forgeDomain;
                 characterFeatures.push('Blessing of the Forge');
-                characterArmorProficiencies[3][1] = true;
+                Character.setCharacterArmorProficiency("heavy");
                 tools.get("Smith")[0].proficient = true;
                 firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
                 break;
@@ -2155,17 +2142,13 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
                 characterFeatures.push('Blessing of Knowledge');
-                const knowledgeSkills = document.querySelectorAll('#summaryArcana, #summaryNature');
-                for (const i of knowledgeSkills) {
-                    i.classList.add("toBeAdded");
-                    i.removeAttribute('hidden');
-                }
+                Character.showNodesForPossibleSkills("Arcana", "Nature");
                 possibleSkills.push("Arcana", "Nature");
                 firstLevelSpells.push(spells.get("Identify")[0].name);
                 break;
             case "Life":
                 domain.innerHTML = this.lifeDomain;
-                characterArmorProficiencies[3][1] = true;
+                Character.setCharacterArmorProficiency("heavy");
                 characterFeatures.push('Disciple of Life');
                 break;
             case "Light":
@@ -2176,29 +2159,35 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 break;
             case "Nature":
                 domain.innerHTML = this.natureDomain;
-                characterArmorProficiencies[3][1] = true;
-                const natureSkills = document.querySelectorAll('#summaryAnimalHandling,#summaryNature, #summarySurvival');
-                for (const i of natureSkills) {
-                    i.classList.add("toBeAdded");
-                    i.removeAttribute('hidden');
-                }
+                Character.setCharacterArmorProficiency("heavy");
+                Character.showNodesForPossibleSkills("AnimalHandling", "Nature", "Survival");
                 possibleSkills.push("Animal Handling", "Nature", "Survival");
+                characterFeatures.push('Acolyte of Nature');
                 firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
                 break;
             case "Order":
                 domain.innerHTML = this.orderDomain;
+                Character.setCharacterArmorProficiency("heavy");
+                Character.showNodesForPossibleSkills("Intimidation", "Persuasion");
+                characterFeatures.push('Voice of Authority');
                 firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
             case "Peace":
                 domain.innerHTML = this.peaceDomain;
+                Character.showNodesForPossibleSkills("Insight", "Performance", "Persuasion");
                 firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
             case "Protection":
                 domain.innerHTML = this.protectionDomain;
+                Character.setCharacterArmorProficiency("heavy");
+                characterFeatures.push('Shield of the Faithful');
+
                 firstLevelSpells.push(spells.get("CompelledDuel")[0].name);
                 break;
             case "Tempest":
                 domain.innerHTML = this.tempestDomain;
+                Character.setCharacterArmorProficiency("heavy");
+                Character.setCharacterWeaponProficiencies("MartialWeapons");
                 firstLevelSpells.push(spells.get("FogCloud")[0].name, spells.get("Thunderwave")[0].name);
                 break;
             case "Trickery":
@@ -2232,5 +2221,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             languageProficienciesNode.innerHTML = "Two languages of your choice.";
         }
     }
+
+
+
 
 }

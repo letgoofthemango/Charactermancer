@@ -116,6 +116,7 @@ let skills = [{
 
 let possibleSkills=[];
 let chosenCharacterSkills=[];
+let numberOfSkillsToChoose;
 
 
 //Skills
