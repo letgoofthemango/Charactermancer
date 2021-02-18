@@ -31,6 +31,10 @@ let abilityScores = [{
     mod: function () { return Math.floor((this.value - 10) / 2); },
     saveMod: function () { return this.mod() + proficiencyBonus; }
 }];
+
+// Saving throws
+let CharacterSavingThrows = [];
+
 //Class
 let characterClass = "class has not been set yet!";
 let characterSubClass = null;
@@ -116,8 +120,8 @@ let skills = [{
 }];
 
 
-let possibleSkills=[];
-let chosenCharacterSkills=[];
+let possibleSkills = [];
+let chosenCharacterSkills = [];
 let numberOfSkillsToChoose;
 
 
@@ -143,6 +147,10 @@ let survivalMod = skills[17].mod; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
+
+// Language proficiencies
+let languageProficiencies = [];
+
 
 
 //Features:
@@ -291,7 +299,9 @@ const survivalNode = document.getElementById("summarySurvival");
 const skillsTextNode = document.getElementById("summarySkillsText");
 const weaponProficienciesNode = document.getElementById("weaponProficiencies");
 const armorProficienciesNode = document.getElementById("armorProficiencies");
+const toolsNode = document.getElementById("summaryTools");
 const toolProficienciesNode = document.getElementById("toolProficiencies");
+const languageNode = document.getElementById("summaryLanguages");
 const languageProficienciesNode = document.getElementById("languageProficiencies");
 const featuresNode = document.getElementById("featuresList");
 const equipmentNode = document.getElementById("equipmentList");

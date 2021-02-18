@@ -2043,8 +2043,9 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setClericClass() {
-        characterClass = "Cleric";
+        characterClass = CLERIC;
         Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Wisdom", "Charisma");
         Character.setClassSkills("History", "Insight", "Medicine", "Persuasion", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Divine Domain", "Spellcasting");
@@ -2065,12 +2066,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.arcanaDomain;
                 this.setSkill("Arcana", 2);
                 Character.addCharacterFeatures('Arcane Initiate');
-                firstLevelSpells.push(spells.get("MagicMissile")[0].name);
+                Character.addSpellsByLevel(1, "MagicMissile");
                 break;
             case "Death":
                 domain.innerHTML = this.deathDomain;
                 Character.addCharacterFeatures('Reaper');
-                firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
+                Character.addSpellsByLevel(1, "FalseLife", "RayOfSickness");
                 Character.setCharacterWeaponProficiencies("MartialWeapons");
                 break;
             case "Forge":
@@ -2078,20 +2079,20 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 Character.addCharacterFeatures('Blessing of the Forge');
                 Character.setCharacterArmorProficiency("heavy");
                 tools.get("Smith")[0].proficient = true;
-                firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
+                Character.addSpellsByLevel(1, "Identify", "SearingSmite");
                 break;
             case "Grave":
                 domain.innerHTML = this.graveDomain;
                 Character.addCharacterFeatures('Circle of Mortality', 'Eyes of the Grave');
-                cantripSpells.push(spells.get("SpareTheDying")[0].name);
-                firstLevelSpells.push(spells.get("FalseLife")[0].name);
+                Character.addSpellsByLevel(0, "SpareTheDying");
+                Character.addSpellsByLevel(1, "FalseLife");
                 break;
             case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
                 Character.addCharacterFeatures('Blessing of Knowledge');
                 Character.showNodesForPossibleSkills("Arcana", "Nature");
                 possibleSkills.push("Arcana", "Nature");
-                firstLevelSpells.push(spells.get("Identify")[0].name);
+                Character.addSpellsByLevel(1, "Identify");
                 break;
             case "Life":
                 domain.innerHTML = this.lifeDomain;
@@ -2100,8 +2101,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 break;
             case "Light":
                 domain.innerHTML = this.lightDomain;
-                cantripSpellsChosen.push('Light');
-                firstLevelSpells.push(spells.get("BurningHands")[0].name, spells.get("FaerieFire")[0].name);
+                Character.addSpellsByLevel(0, "Light");
+                Character.addSpellsByLevel(1, "BurningHands", "FaerieFire");
                 Character.addCharacterFeatures('Warding Flare');
                 break;
             case "Nature":
@@ -2110,49 +2111,51 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 Character.showNodesForPossibleSkills("AnimalHandling", "Nature", "Survival");
                 possibleSkills.push("Animal Handling", "Nature", "Survival");
                 Character.addCharacterFeatures('Acolyte of Nature');
-                firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
+                Character.addSpellsByLevel(1, "AnimalFriendship", "SpeakWithAnimals");
                 break;
             case "Order":
                 domain.innerHTML = this.orderDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("Intimidation", "Persuasion");
                 Character.addCharacterFeatures('Voice of Authority');
-                firstLevelSpells.push(spells.get("Heroism")[0].name);
+                Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Peace":
                 domain.innerHTML = this.peaceDomain;
                 Character.showNodesForPossibleSkills("Insight", "Performance", "Persuasion");
-                firstLevelSpells.push(spells.get("Heroism")[0].name);
+                Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Protection":
                 domain.innerHTML = this.protectionDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.addCharacterFeatures('Shield of the Faithful');
-                firstLevelSpells.push(spells.get("CompelledDuel")[0].name);
+                Character.addSpellsByLevel(1, "CompelledDuel");
                 break;
             case "Tempest":
                 domain.innerHTML = this.tempestDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.setCharacterWeaponProficiencies("MartialWeapons");
                 Character.addCharacterFeatures('Wrath of the Storm');
-                firstLevelSpells.push(spells.get("FogCloud")[0].name, spells.get("Thunderwave")[0].name);
+                Character.addSpellsByLevel(1, "FogCloud", "Thunderwave");
                 break;
             case "Trickery":
                 domain.innerHTML = this.trickeryDomain;
                 Character.addCharacterFeatures('Blessing of the Trickster');
-                firstLevelSpells.push(spells.get("CharmPerson")[0].name, spells.get("DisguiseSelf")[0].name);
+                Character.addSpellsByLevel(1, "CharmPerson", "DisguiseSelf");
                 break;
             case "Twilight":
                 domain.innerHTML = this.twilightDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.setCharacterWeaponProficiencies("MartialWeapons");
                 Character.addCharacterFeatures('Eyes of Night', 'Vigilant Blessing');
-
-                firstLevelSpells.push(spells.get("FaerieFire")[0].name, spells.get("Sleep")[0].name);
+                Character.addSpellsByLevel(1, "FaerieFire", "Sleep");
                 break;
             case "War":
                 domain.innerHTML = this.warDomain;
-                firstLevelSpells.push(spells.get("DivineFavor")[0].name);
+                Character.setCharacterArmorProficiency("heavy");
+                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.addCharacterFeatures('War Priest');
+                Character.addSpellsByLevel(1, "DivineFavor");
                 break;
         }
 

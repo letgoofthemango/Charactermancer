@@ -877,4 +877,31 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         </div>
     </div>
 </div>`, ` `]
+
+
+static displayBarbarianFeaturesByLevel() {
+    const classDetailsNode = document.getElementById("showClassDetails");
+    for (let i = 0; i < characterLevel; i++) {
+        classDetailsNode.innerHTML += Barbarian.barbarianFeaturesByLevel[i];
+    }
+}
+static setBarbarianClass() {
+    characterClass = BARBARIAN;
+    Character.setCharacterHitdice(12);
+    Character.setCharacterSavingThrows("Strength", "Constitution");
+    Character.setClassSkills("AnimalHandling", "Athletics", "Nature", "Perception", "Survival");
+    Character.setCharacterSkillsNumberToChoose(2);
+    Character.setCharacterFeatures("Rage", "Unarmored Defense");
+    Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+    Character.setCharacterArmorProficiency("light", "medium", "shields");
+}
+
+
+
+
+
+
+
+
+
 }

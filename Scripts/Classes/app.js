@@ -64,6 +64,10 @@ class App {
         }
     }
 
+    static removeDuplicates(data) {
+        return [...new Set(data)]
+    }
+
 
     static setCharacterClass(characterClass) {
         overviewNode.style.visibility = "visible";
@@ -74,42 +78,18 @@ class App {
 
         switch (characterClass) {
             case ARTIFICER:
-                hitDice = 8;
-                Artificer.setArtificerSkillNodes();
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("Firearms")[0].proficient = tools.get("Thieves")[0].proficient = tools.get("Tinker")[0].proficient = true; //set class proficienciess to true
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
-                    featuresNode.innerHTML += Artificer.artificerFeaturesList[i];
-                }
-                Artificer.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Artificer.setArtificerClass();
+                Artificer.displayArtificerFeaturesByLevel();
                 break;
 
             case BARBARIAN:
-                hitDice = 12;
-                const barbarianSkills = document.querySelectorAll('#summaryAnimalHandling, #summaryAthletics, #summaryIntimidation, #summaryNature, #summaryPerception, #summarySurvival');
-                for (const i of barbarianSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = true;
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Barbarian.barbarianFeaturesByLevel[i];
-                    featuresNode.innerHTML += Barbarian.barbarianFeaturesList[i];
-                }
+                Barbarian.setBarbarianClass();
+                Barbarian.displayBarbarianFeaturesByLevel();
                 break;
 
             case BARD:
-                hitDice = 8;
-                const bardSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
-                for (const i of bardSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                weapons.get("SimpleWeapons")[0].proficient = weapons.get("HandCrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = true;
-
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Bard.bardFeaturesByLevel[i];
-                    featuresNode.innerHTML += Bard.bardFeaturesList[i];
-                }
-                Bard.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Bard.setBardClass();
+                Bard.displayBardFeaturesByLevel();
                 break;
 
             case CLERIC:
@@ -118,17 +98,8 @@ class App {
                 break;
 
             case DRUID:
-                hitDice = 8;
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("Club")[0].proficient = weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Javelin")[0].proficient = weapons.get("Mace")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("Scimitar")[0].proficient = weapons.get("Sickle")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Spear")[0].proficient = characterLanguageProficiencies[4][1] = true;
-                const druidSkills = document.querySelectorAll('#summaryAnimalHandling, #summaryArcana, #summaryInsight, #summaryMedicine, #summaryNature, #summaryPerception, #summaryReligion, #summarySurvival');
-                for (const i of druidSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Druid.druidFeaturesByLevel[i];
-                    featuresNode.innerHTML += Druid.druidFeaturesList[i];
-                }
-                Druid.setSpellLevel();
+                Druid.setDruidClass();
+                Druid.displayDruidFeaturesByLevel();
                 break;
 
             case FIGHTER:
@@ -267,20 +238,16 @@ class App {
         levelNode.textContent = characterLevel;
 
         Character.fullCharacterUpdate();
-        if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
-            spellsHeadingNode.setAttribute('hidden', false);
-        } else {
-            spellsHeadingNode.setAttribute('hidden', true);
-            console.log('Spell lists should be hidden!!!');
-        }
         Character.renderSpells();
 
         if (characterClass == ARTIFICER) {
             toolProficienciesNode.textContent += ", and one type of artisan's tools of your choice";
         } else if (characterClass == BARD) {
+            toolsNode.removeAttribute("hidden");
             toolProficienciesNode.textContent = "Three musical instruments of your choice";
         } else if (characterClass == DRUID) {
             armorProficienciesNode.textContent += " (druids will not wear armor or use shields made of metal)"
+            languageNode.removeAttribute("hidden");
         } else if (characterClass == MONK) {
             toolProficienciesNode.textContent = "any one type of artisan's tools or any one musical instrument of your choice"
         }

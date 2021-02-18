@@ -112,19 +112,30 @@ class Character {
 
     // Tools-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateCharacterToolProficiencies() {
-        let toolProficiencies = [];
         tools.forEach((tool) => {
             if (tool[0].proficient == true) {
-                toolProficiencies.push(tool[0].name);
+                characterToolsProficiencies.push(tool[0].name);
             }
         })
-        toolProficienciesNode.textContent = toolProficiencies.join(", ");
+        if (characterToolsProficiencies.length > 0) {
+            toolsNode.hidden = false;
+        } else {
+            toolsNode.hidden = true;
+        }
+        toolProficienciesNode.textContent = characterToolsProficiencies.join(", ");
     }
 
     static resetCharacterToolProficiencies() {
+        characterToolsProficiencies = [];
         tools.forEach((tool) => {
             tool[0].proficient = false;
         });
+    }
+
+    static setCharacterToolProficiencies(...args) {
+        args.forEach((arg) => {
+            tools.get(`${arg}`)[0].proficient = true;
+        })
     }
 
 
@@ -140,10 +151,10 @@ class Character {
 
     static resetSkillNodes() {
         const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
-        for (const i of classSkills) {
-            i.classList.remove("toBeAdded");
-            i.setAttribute('hidden', 'true');
-        }
+        classSkills.forEach((skill) => {
+            skill.classList.remove("toBeAdded");
+            skill.setAttribute('hidden', 'true');
+        })
     }
 
     static updateSkills() {
@@ -309,21 +320,32 @@ class Character {
 
     // Language-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateLanguageProficiencies() {
-        let languageProficiencies = [];
-        for (let i = 0; i < characterLanguageProficiencies.length; i++) {
-            if (characterLanguageProficiencies[i][1] == true) {
-                languageProficiencies.push(characterLanguageProficiencies[i][0]);
+        languages.forEach((language) => {
+            if (language[0].proficient == true) {
+                languageProficiencies.push(language[0].name);
             }
+        })
+        if (languageProficiencies.length >= 0) {
+            languageNode.setAttribute('hidden', false);
+        } else {
+            languageNode.setAttribute('hidden', true);
         }
         languageProficienciesNode.textContent = languageProficiencies.join(", ");
     }
 
     static resetCharacterLanguageProficiencies() {
-        characterLanguageProficiencies.forEach((element) => {
-            element[1] = false;
+        languages.forEach((language) => {
+            language[0].proficient = false;
         });
     }
 
+    static setCharacterLanguageProficiencies(...args) {
+        args.forEach((arg) => {
+            languages.get(`${arg}`)[0].proficient = true;
+            console.log(`Language ${arg} has been set to proficient.`)
+        })
+        console.log(languageProficiencies);
+    }
 
 
 
@@ -374,19 +396,29 @@ class Character {
 
     static resetCharacterSpells() {
         cantripSpells = [];
+        cantripSpellsChosen = [];
         firstLevelSpells = [];
+        firstLevelSpellsChosen = [];
         secondLevelSpells = [];
+        secondLevelSpellsChosen = [];
         thirdLevelSpells = [];
+        thirdLevelSpellsChosen = [];
         fourthLevelSpells = [];
+        fourthLevelSpellsChosen = [];
         fifthLevelSpells = [];
+        fifthLevelSpellsChosen = [];
         sixthLevelSpells = [];
+        sixthLevelSpellsChosen = [];
         seventhLevelSpells = [];
+        seventhLevelSpellsChosen = [];
         eigthLevelSpells = [];
+        eigthLevelSpellsChosen = [];
         ninethLevelSpells = [];
+        ninethLevelSpellsChosen = [];
     }
 
     static renderSpells() {
-        cantripSpells.sort();
+        cantripSpells = App.removeDuplicates(cantripSpells.sort());
         cantripSpells.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
@@ -395,8 +427,36 @@ class Character {
             newLi.appendChild(newContent);
             cantripsListNode.append(newLi);
         })
-        firstLevelSpells.sort();
+
+        firstLevelSpells = App.removeDuplicates(firstLevelSpells.sort());
         firstLevelSpells.forEach((spell) => {
+            const newLi = document.createElement("li");
+            const newContent = document.createTextNode(`${spell}`);
+            const newName = spell.replace(/ /g, "");
+            newLi.setAttribute('id', `${newName}Spell`);
+            newLi.appendChild(newContent);
+            firstLevelListNode.append(newLi);
+        })
+        if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
+            spellsHeadingNode.setAttribute('hidden', false);
+        } else {
+            spellsHeadingNode.setAttribute('hidden', true);
+        }
+    }
+
+    static renderChosenSpells() {
+        cantripSpellsChosen = App.removeDuplicates(cantripSpellsChosen.sort());
+        cantripSpellsChosen.forEach((spell) => {
+            const newLi = document.createElement("li");
+            const newContent = document.createTextNode(`${spell}`);
+            const newName = spell.replace(/ /g, "");
+            newLi.setAttribute('id', `${newName}Spell`);
+            newLi.appendChild(newContent);
+            cantripsListNode.append(newLi);
+        })
+
+        firstLevelSpells = App.removeDuplicates(firstLevelSpells.sort());
+        firstLevelSpellsChosen.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
             const newName = spell.replace(/ /g, "");
@@ -419,7 +479,7 @@ class Character {
         ninethLevelSpellsKnown = j;
     }
 
-    static resetCharacterSpellsKnown(){
+    static resetCharacterSpellsKnown() {
         cantripsKnown = null;
         firstLevelSpellsKnown = null;
         secondLevelSpellsKnown = null;
@@ -432,7 +492,7 @@ class Character {
         ninethLevelSpellsKnown = null;
     }
 
-    static setCharacterSpellSlots(a, b, c, d, e, f, g, h, i){
+    static setCharacterSpellSlots(a, b, c, d, e, f, g, h, i) {
         firstLevelSpellSlots = a;
         secondLevelSpellSlots = b;
         thirdLevelSpellSlots = c;
@@ -445,7 +505,7 @@ class Character {
 
     }
 
-    static resetCharacterSpellSlots(){
+    static resetCharacterSpellSlots() {
         firstLevelSpellSlots = null;
         secondLevelSpellSlots = null;
         thirdLevelSpellSlots = null;
@@ -475,13 +535,119 @@ class Character {
                 }
             })
             const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
-            for (const i of lists) {
-                i.classList.toggle("toBeAdded");
-            }
+            lists.forEach((list) => {
+                list.classList.toggle("toBeAdded");
+            })
         } else {
             console.log(`${characterClass} Spells error`);
         }
     }
+
+    let iVersuchs = [cantripSpells,
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+]
+    let Iversuchs2 = [
+    [cantripSpellsChosen],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+]
+    static addSpellsByLevel(number, ...args) {
+        args.forEach((arg) => {
+        iVersuchs[number].push(spells.get(`${arg}`)[0].name);
+        iVersuchs2[number].push(spells.get(`${arg}`)[0].name);
+        }
+console.log(iVersuchs2[number]);
+
+
+
+
+    switch (number) {
+        case 0:
+            /*        args.forEach((arg) => {
+                                cantripSpells.push(spells.get(`${arg}`)[0].name);
+                                cantripSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                            }) */
+                            
+            console.log(`0 ${cantripSpellsChosen}`);
+            break;
+        case 1:
+            args.forEach((arg) => {
+                firstLevelSpells.push(spells.get(`${arg}`)[0].name);
+                firstLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`1st ${firstLevelSpellsChosen}`);
+            break;
+        case 2:
+            args.forEach((arg) => {
+                secondLevelSpells.push(spells.get(`${arg}`)[0].name);
+                secondLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`2nd ${secondLevelSpellsChosen}`);
+            break;
+        case 3:
+            args.forEach((arg) => {
+                thirdLevelSpells.push(spells.get(`${arg}`)[0].name);
+                thirdLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`3rd ${thirdLevelSpellsChosen}`);
+            break;
+        case 4:
+            args.forEach((arg) => {
+                fourthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                fourthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`4th ${fourthLevelSpellsChosen}`);
+            break;
+        case 5:
+            args.forEach((arg) => {
+                fifthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                fifthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`5th ${fifthLevelSpellsChosen}`);
+            break;
+        case 6:
+            args.forEach((arg) => {
+                sixthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                sixthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`6th ${sixthLevelSpellsChosen}`);
+            break;
+        case 7:
+            args.forEach((arg) => {
+                seventhLevelSpells.push(spells.get(`${arg}`)[0].name);
+                seventhLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`7th ${seventhLevelSpellsChosen}`);
+            break;
+        case 8:
+            args.forEach((arg) => {
+                eigthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                eigthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`8th ${eigthLevelSpellsChosen}`);
+            break;
+        case 9:
+            args.forEach((arg) => {
+                ninethLevelSpells.push(spells.get(`${arg}`)[0].name);
+                ninethLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+            })
+            console.log(`9th ${ninethLevelSpellsChosen}`);
+            break;
+    }
+}
 
 
 
@@ -490,45 +656,57 @@ class Character {
     // Stats------------------------------------------------------------------------------------------------------------------------------------------------------
 
     static updateCharacterStats() {
-        let totals = document.getElementsByClassName("statTotal");
-        let mods = document.getElementsByClassName("statMod");
-        for (let i = 0; i < abilityScores.length; i++) {
-            totals[i].textContent = abilityScores[i].value;
-            mods[i].textContent = App.getNumber(abilityScores[i].mod());
-        }
+    let totals = document.getElementsByClassName("statTotal");
+    let mods = document.getElementsByClassName("statMod");
+    for (let i = 0; i < abilityScores.length; i++) {
+        totals[i].textContent = abilityScores[i].value;
+        mods[i].textContent = App.getNumber(abilityScores[i].mod());
     }
+}
 
 
     static updateCharacterHitPoints() {
-        characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
-        if (isNaN(characterHitpoints)) {
-            hpNode.innerText = "";
-        } else {
-            hpNode.innerText = characterHitpoints;
-        }
+    characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
+    if (isNaN(characterHitpoints)) {
+        hpNode.innerText = "";
+    } else {
+        hpNode.innerText = characterHitpoints;
     }
+}
 
 
     static setCharacterHitdice(number) {
-        hitDice = number;
-    }
+    hitDice = number;
+}
 
 
     static updateCharacterInitiative() {
-        let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
-        initiativeNode.textContent = App.getNumber(initiativeMod);
-    }
+    let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
+    initiativeNode.textContent = App.getNumber(initiativeMod);
+}
 
 
     static updateCharacterPassivePerception() {
-        let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
-        passivePerceptionNode.textContent = passivePerception;
-    }
+    let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
+    passivePerceptionNode.textContent = passivePerception;
+}
 
     static resetCharacterSubClass() {
-        characterSubClass = null;
-        subClassNode.textContent = "";
-    }
+    characterSubClass = null;
+    subClassNode.textContent = "";
+}
+
+    static resetCharacterSavingThrows() {
+    CharacterSavingThrows = [];
+}
+
+    static setCharacterSavingThrows(...args) {
+    args.forEach((arg) => {
+        savingThrows.get(`${arg}`)[0].proficient = true;
+        CharacterSavingThrows.push(`${arg}`);
+        console.log(`Proficiency for ${arg} has been set to proficient.`)
+    })
+}
 
 
 
@@ -537,39 +715,40 @@ class Character {
     // Full character actions----------------------------------------------------------------------------------------------------------------------
 
     static fullCharacterUpdate() {
-        this.updateCharacterHitPoints();
-        this.updateSkills();
-        this.updateCharacterStats();
-        this.updateCharacterArmorProficiencies();
-        this.updateCharacterWeaponProficiencies();
-        this.updateCharacterToolProficiencies();
-        this.updateLanguageProficiencies();
-        this.updateCharacterInitiative();
-        this.updateCharacterPassivePerception();
-        this.renderCharacterfeatures();
-        console.log("UPDATE");
-    }
+    this.updateCharacterHitPoints();
+    this.updateSkills();
+    this.updateCharacterStats();
+    this.updateCharacterArmorProficiencies();
+    this.updateCharacterWeaponProficiencies();
+    this.updateCharacterToolProficiencies();
+    this.updateLanguageProficiencies();
+    this.updateCharacterInitiative();
+    this.updateCharacterPassivePerception();
+    this.renderCharacterfeatures();
+    console.log("UPDATE");
+}
 
     static fullCharacterReset() {
-        this.resetCharacterWeaponProficiencies();
-        this.resetCharacterWeaponProficienciesList();
-        this.resetCharacterArmorProficiencies();
-        this.resetCharacterArmorProficienciesList();
-        this.resetCharacterLanguageProficiencies();
-        this.resetCharacterToolProficiencies();
-        this.resetCharacterSkills();
-        this.setCharacterSkillsNumberToChoose(null);
-        this.resetSkillNodes();
-        this.resetCharacterChosenSkills();
-        this.resetPossibleSkills();
-        this.resetCharacterFeatures();
-        this.resetCharacterSpells();
-        this.resetCharacterSpellSlots();
-        this.resetSpellLists();
-        this.resetCharacterSpellsKnown();
-        this.resetCharacterSubClass();
-        console.log('RESET');
-    }
+    this.resetCharacterWeaponProficiencies();
+    this.resetCharacterWeaponProficienciesList();
+    this.resetCharacterArmorProficiencies();
+    this.resetCharacterArmorProficienciesList();
+    this.resetCharacterLanguageProficiencies();
+    this.resetCharacterToolProficiencies();
+    this.resetCharacterSkills();
+    this.resetCharacterSavingThrows();
+    this.setCharacterSkillsNumberToChoose(null);
+    this.resetSkillNodes();
+    this.resetCharacterChosenSkills();
+    this.resetPossibleSkills();
+    this.resetCharacterFeatures();
+    this.resetCharacterSpells();
+    this.resetCharacterSpellSlots();
+    this.resetSpellLists();
+    this.resetCharacterSpellsKnown();
+    this.resetCharacterSubClass();
+    console.log('RESET');
+}
 
 
 

@@ -503,32 +503,28 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         [20]
     ];
 
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 2) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Druid")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Druid")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Druid Spell level error');
+    static displayDruidFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Druid.druidFeaturesByLevel[i];
         }
     }
+
+
+    static setDruidClass() {
+        characterClass = DRUID;
+        Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Intelligence", "Wisdom");
+        Character.setClassSkills("Arcana", "AnimalHandling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival");
+        Character.setCharacterLanguageProficiencies("Druidic");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Druidic", "Spellcasting");
+        Character.setCharacterWeaponProficiencies("Club","Dagger","Dart","Javelin","Mace","Quarterstaff","Scimitar","Sickle","Sling","Spear");
+        Character.setCharacterArmorProficiency("light", "medium", "shields");
+        Character.setCharacterSpellsKnown(2, 50, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setClassSpells(1);
+        Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
 
 }

@@ -1076,3 +1076,78 @@ let skills = new Map([
     ["SleightOfHand", [{ name: "Sleight of Hand", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, }]]
     ["Stealth", [{ name: "Stealth", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, }]]
     ["Survival", [{ name: "Survival", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0 }]]]);
+
+
+switch (number) {
+    case 0:
+        args.forEach((arg) => {
+            cantripSpells.push(spells.get(`${arg}`)[0].name);
+            cantripSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+
+        console.log(`0 ${cantripSpellsChosen}`);
+        break;
+    case 1:
+        args.forEach((arg) => {
+            firstLevelSpells.push(spells.get(`${arg}`)[0].name);
+            firstLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`1st ${firstLevelSpellsChosen}`);
+        break;
+    case 2:
+        args.forEach((arg) => {
+            secondLevelSpells.push(spells.get(`${arg}`)[0].name);
+            secondLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`2nd ${secondLevelSpellsChosen}`);
+        break;
+    case 3:
+        args.forEach((arg) => {
+            thirdLevelSpells.push(spells.get(`${arg}`)[0].name);
+            thirdLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`3rd ${thirdLevelSpellsChosen}`);
+        break;
+    case 4:
+        args.forEach((arg) => {
+            fourthLevelSpells.push(spells.get(`${arg}`)[0].name);
+            fourthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`4th ${fourthLevelSpellsChosen}`);
+        break;
+    case 5:
+        args.forEach((arg) => {
+            fifthLevelSpells.push(spells.get(`${arg}`)[0].name);
+            fifthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`5th ${fifthLevelSpellsChosen}`);
+        break;
+    case 6:
+        args.forEach((arg) => {
+            sixthLevelSpells.push(spells.get(`${arg}`)[0].name);
+            sixthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`6th ${sixthLevelSpellsChosen}`);
+        break;
+    case 7:
+        args.forEach((arg) => {
+            seventhLevelSpells.push(spells.get(`${arg}`)[0].name);
+            seventhLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`7th ${seventhLevelSpellsChosen}`);
+        break;
+    case 8:
+        args.forEach((arg) => {
+            eigthLevelSpells.push(spells.get(`${arg}`)[0].name);
+            eigthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`8th ${eigthLevelSpellsChosen}`);
+        break;
+    case 9:
+        args.forEach((arg) => {
+            ninethLevelSpells.push(spells.get(`${arg}`)[0].name);
+            ninethLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+        })
+        console.log(`9th ${ninethLevelSpellsChosen}`);
+        break;
+}

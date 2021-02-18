@@ -1,7 +1,7 @@
 // change enumerable for the first three entries?
 let weapons = new Map([
     ["Firearms", [{ name: "firearms", proficient: false }]],   //this will likely be a problem later when it comes to items
-    ["SimpleWeapons", [{ name: "simple weapons", proficient: false }]], 
+    ["SimpleWeapons", [{ name: "simple weapons", proficient: false }]],
     ["MartialWeapons", [{ name: "martial weapons", proficient: false }]],
     ["Club", [{ name: "club", simple: true, martial: false, melee: true, reach: false, ranged: false, range: 0, damage: "1d4", damageType: "bludgeoning", copper: 0, silver: 1, gold: 0, weight: 2, light: true, heavy: false, finesse: false, thrown: false, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: false, proficient: false }]],
     ["Dagger", [{ name: "dagger", simple: true, martial: false, melee: true, reach: false, ranged: true, range: "20/60", damage: "1d4", damageType: "piercing", copper: 0, silver: 0, gold: 2, weight: 1, light: true, heavy: false, finesse: true, thrown: true, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: false, proficient: false }]],
@@ -40,53 +40,6 @@ let weapons = new Map([
     ["HeavyCrossbow", [{ name: "heavy crossbow", simple: false, martial: true, melee: false, reach: false, ranged: true, range: "100/400", damage: "1d10", damageType: "piercing", copper: 0, silver: 0, gold: 50, weight: 18, light: false, heavy: true, finesse: false, thrown: false, twoHanded: true, versatile: false, versatileDMG: false, ammunition: true, loading: true, proficient: false }]],
     ["Longbow", [{ name: "longbow", simple: false, martial: true, melee: false, reach: false, ranged: true, range: "150/600", damage: "1d8", damageType: "piercing", copper: 0, silver: 0, gold: 50, weight: 2, light: false, heavy: true, finesse: false, thrown: false, twoHanded: true, versatile: false, versatileDMG: false, ammunition: true, loading: false, special: false, proficient: false }]],
     ["Net", [{ name: "net", simple: false, martial: true, melee: false, reach: false, ranged: false, range: "5/15", damage: 0, damageType: "bludgeoning", copper: 0, silver: 0, gold: 1, weight: 3, light: false, heavy: false, finesse: false, thrown: true, twoHanded: false, versatile: false, versatileDMG: false, ammunition: false, loading: false, special: "A Large or smaller creature hit by a net is restrained until it is freed. A net has no effect on creatures that are formless, or creatures that are Huge or larger. A creature can use its action to make a DC 10 Strength check, freeing itself or another creature within its reach on a success. Dealing 5 slashing damage to the net (AC 10) also frees the creature without harming it, ending the effect and destroying the net. When you use an action, bonus action, or reaction to attack with a net, you can make only one attack regardless of the number of attacks you can normally make.", proficient: false }]]]);
-
-
-
-//Weapon Proficiencies
-/* let characterWeaponProficiencies = [
-    ["Simple Weapons", false], //0
-    ["Martial Weapons", false],//1
-    ["Club", false],//2
-    ["Dagger", false],//3
-    ["Greatclub", false],//4
-    ["Handaxe", false],//5
-    ["Javelin", false],//6
-    ["Light hammer", false],//7
-    ["Mace", false],//8
-    ["Quarterstaff", false],//9
-    ["Sickle", false],//10
-    ["Spear", false],//11
-    ["Light Crossbow", false],//12
-    ["Dart", false],//13
-    ["Shortbow", false],//14
-    ["Sling", false],//15
-    ["Battleaxe", false],//16
-    ["Flail", false],//17
-    ["Glaive", false],//18
-    ["Greataxe", false],//19
-    ["Greatsword", false],//20
-    ["Halberd", false],//21
-    ["Lance", false],//22
-    ["Longsword", false],//23
-    ["Maul", false],//24
-    ["Morningstar", false],//25
-    ["Pike", false],//26
-    ["Rapier", false],//27
-    ["Scimitar", false],//28
-    ["Shortsword", false],//29
-    ["Trident", false],//30
-    ["War pick", false],//31
-    ["Warhammer", false],//32
-    ["Whip", false],//33
-    ["Blowgun", false],//34
-    ["Hand Crossbow", false],//35
-    ["Heavy Crossbow", false],//36
-    ["Longbow", false],//37
-    ["Net", false],//38
-    ["Firearms", false]//39
-]; */
-
 
 // Armors 
 let armors = new Map([
@@ -152,27 +105,34 @@ let tools = new Map([
     ["Horn", [{ name: "horn", type: "Instruments", silver: 0, gold: 3, weight: 2, proficient: false, description: "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument." }]],
     ["Pan", [{ name: "pan flute", type: "Instruments", silver: 0, gold: 12, weight: 2, proficient: false, description: "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument." }]],
     ["Shawm", [{ name: "shawm", type: "Instruments", silver: 0, gold: 2, weight: 1, proficient: false, description: "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument." }]],
-    ["Viol", [{ name: "viol", type: "Instruments", silver: 0, gold: 30, weight: 1, proficient: false, description: "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument." }]]]);
-  
-  // const abcd = tools.get(0)[0].proficient;
-  
-  //Languages
-  let characterLanguageProficiencies = [
-    ["Abyssal", false],//0
-    ["Celestial", false],//1
-    ["Deep Speech", false],//2
-    ["Draconic", false],//3
-    ["Druidic", false],//4
-    ["Dwarvish", false],//5
-    ["Elvish", false],//6
-    ["Giant", false],//7
-    ["Gnomish", false],//8
-    ["Goblin", false],//9
-    ["Halfling", false],//10
-    ["Infernal", false],//11
-    ["Orc", false],//12
-    ["Primordial", false],//13
-    ["Sylvan", false],//14
-    ["Thieves' Cant", false],//15
-    ["Undercommon", false],//16
-  ];
+    ["Viol", [{ name: "viol", type: "Instruments", silver: 0, gold: 30, weight: 1, proficient: false, description: "Proficiency with a musical instrument indicates you are familiar with the techniques used to play it. You also have knowledge of some songs commonly performed with that instrument." }]]])
+
+//Languages
+
+let languages = new Map([
+    ["Abyssal", [{ name: "Abyssal", proficient: false }]],
+    ["Celestial", [{ name: "Celestial", proficient: false }]],
+    ["DeepSpeech", [{ name: "Deep Speech", proficient: false }]],
+    ["Draconic", [{ name: "Draconic", proficient: false }]],
+    ["Druidic", [{ name: "Druidic", proficient: false }]],
+    ["Dwarvish", [{ name: "Dwarvish", proficient: false }]],
+    ["Elvish", [{ name: "Elvish", proficient: false }]],
+    ["Giant", [{ name: "Giant", proficient: false }]],
+    ["Gnomish", [{ name: "Gnomish", proficient: false }]],
+    ["Goblin", [{ name: "Goblin", proficient: false }]],
+    ["Halfling", [{ name: "Halfling", proficient: false }]],
+    ["Infernal", [{ name: "Infernal", proficient: false }]],
+    ["Orc", [{ name: "Orc", proficient: false }]],
+    ["Primordial", [{ name: "Primordial", proficient: false }]],
+    ["Sylvan", [{ name: "Sylvan", proficient: false }]],
+    ["Thieves", [{ name: "Thieves' Cant", proficient: false }]],
+    ["Undercommon", [{ name: "Undercommon", proficient: false }]]])
+
+//Saving throws
+let savingThrows = new Map([
+    ["Strength", [{ name: "Strength", proficient: false }]],
+    ["Dexterity", [{ name: "Dexterity", proficient: false }]],
+    ["Constitution", [{ name: "Constitution", proficient: false }]],
+    ["Wisdom", [{ name: "Wisdom", proficient: false }]],
+    ["Intelligence", [{ name: "Intelligence", proficient: false }]],
+    ["Charisma", [{ name: "Charisma", proficient: false }]]])

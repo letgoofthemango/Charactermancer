@@ -1392,39 +1392,25 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         }
     };
 
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 4) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Artificer")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Artificer")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Artificer Spell level error');
-        }
+    static setArtificerClass() {
+        characterClass = ARTIFICER;
+        Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Constitution", "Intelligence");
+        Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception" ,"Sleight");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Magical Tinkering ", "Spellcasting");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterArmorProficiency("light", "medium", "shields");
+        Character.setCharacterToolProficiencies("Thieves","Tinker");
+        Character.setClassSpells(1);
+        Character.setCharacterSpellsKnown(2, 50, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
     }
 
-    static setArtificerSkillNodes() {
-        const skillsNodes = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summarySleight');
-        for (const i of skillsNodes) {
-            i.classList.add("toBeAdded");
-            i.removeAttribute('hidden');
+    static displayArtificerFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
         }
     }
 
