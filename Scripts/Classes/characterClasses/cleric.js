@@ -1811,7 +1811,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <p>Clerics who serve these deities-examples of which appear on the Twilight Deities table-bring comfort to those who seek rest and protect them by venturing into the encroaching darkness to ensure that the dark is a comfort, not a terror.</p>
 
     <table class="table-striped table-hover mb-2">
-        <caption>Twilight Deities</caption>
         <thead>
             <tr>
                 <th class="col-6 text-center">Example Deity</th>
@@ -1890,14 +1889,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureProf">
-        <p>You gain proficiency with martial weapons and heavy armor.</p>
+        <p>Upon choosing the Twilight domain on 1st level you gain proficiency with martial weapons and heavy armor.</p>
     </div>
 
     <h5>Eyes of Night<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureEyes" aria-expanded="true" aria-controls="featureEyes">[-]</button></span></h5>
     <hr>
 
     <div class="collapse show" id="featureEyes">
-        <p>You can see through the deepest gloom. You have darkvision out to a range of 300 feet. In that radius, you can see in dim light as if it were bright light and in darkness as if it were dim light.</p>
+        <p>Starting at 1st level you can see through the deepest gloom. You have darkvision out to a range of 300 feet. In that radius, you can see in dim light as if it were bright light and in darkness as if it were dim light.</p>
         <p>As an action, you can magically share the darkvision of this feature with willing creatures you can see within 10 feet of you, up to a number of creatures equal to your Wisdom modifier (minimum of one creature). The shared darkvision lasts
             for 1 hour. Once you share it, you can't do so again until you finish a long rest, unless you expend a spell slot of any level to share it again.</p>
     </div>
@@ -1906,7 +1905,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureVigilant">
-        <p>The night has taught you to be vigilant. As an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this
+        <p>The night has taught you to be vigilant. Starting at 1st level as an action, you give one creature you touch (including possibly yourself) advantage on the next initiative roll the creature makes. This benefit ends immediately after the roll or if you use this
             feature again.</p>
     </div>
 
@@ -1914,7 +1913,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureSanctuary">
-        <p>You can use your Channel Divinity to refresh your allies with soothing twilight.</p>
+        <p>From 2nd level onwards you can use your Channel Divinity to refresh your allies with soothing twilight.</p>
         <p>As an action, you present your holy symbol, and a sphere of twilight emanates from you. The sphere is centered on you, has a 30-foot radius, and is filled with dim light. The sphere moves with you, and it lasts for 1 minute or until you
             are incapacitated or die. Whenever a creature (including you) ends its turn in the sphere, you can grant that creature one of these benefits:</p>
         <ul>
@@ -1926,7 +1925,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <h5>Steps of Night<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#featureSteps" aria-expanded="true" aria-controls="featureSteps">[-]</button></span></h5>
     <hr>
     <div class="collapse show" id="featureSteps">
-        <p>You can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus
+        <p>Beginning at 6th level you can draw on the mystical power of night to rise into the air. As a bonus action when you are in dim light or darkness, you can magically give yourself a flying speed equal to your walking speed for 1 minute. You can use this bonus
             action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
     </div>
 
@@ -1941,7 +1940,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <hr>
 
     <div class="collapse show" id="featureShroud">
-        <p>The twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary.</p>
+        <p>From 17th level onwards the twilight that you summon offers a protective embrace: you and your allies have half cover while in the sphere created by your Twilight Sanctuary.</p>
     </div>
 </div>`;
     static warDomain = `<h4 class="text-center">War Domain<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#domainCollapse" aria-expanded="true" aria-controls="domainCollapse">[-]</button></span></h4>
@@ -2034,27 +2033,6 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     ######################### Methods ##############################
     ######################################################################*/
 
-    // Skills-------------------------------------------------------------------------------------------------------------------------------------------------
-    static setClericClassSkills() {
-        possibleSkills.push("History", "Insight", "Medicine", "Persuasion", "Religion");
-    }
-
-
-    static setClericSkillNodes() {
-        const clericSkills = document.querySelectorAll('#summaryHistory, #summaryInsight, #summaryMedicine, #summaryPersuasion, #summaryReligion');
-        for (const i of clericSkills) {
-            i.classList.add("toBeAdded");
-            i.removeAttribute('hidden');
-        }
-    }
-
-
-    // Features--------------------------------------------------------------------------------------------------------------------------------------------------
-    static setClericFeatures() {
-        characterFeatures = ["Divine Domain", "Spellcasting"];
-    }
-
-
     static displayClericFeaturesByLevel() {
         const classDetailsNode = document.getElementById("showClassDetails");
         for (let i = 0; i < characterLevel; i++) {
@@ -2063,48 +2041,18 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     }
 
 
-    // Spells----------------------------------------------------------------------------------------------------------------------------------------------------
-    static setClericSpells() {
-        let spellLevel;
-        if (characterLevel <= 3) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Cleric")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Cleric")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
-            for (const i of lists) {
-                i.classList.toggle("toBeAdded");
-            }
-        } else {
-            console.log('Cleric Spell level error');
-        }
-    }
-
-    
-
-
-
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setClericClass() {
+        characterClass = "Cleric";
         Character.setCharacterHitdice(8);
-        this.setClericSkillNodes();
-        this.setClericClassSkills();
+        Character.setClassSkills("History", "Insight", "Medicine", "Persuasion", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
-        this.setClericFeatures();
+        Character.setCharacterFeatures("Divine Domain", "Spellcasting");
         Character.setCharacterWeaponProficiencies("SimpleWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
-        Character.setCantripsKnown(3);
-        this.setClericSpells();
+        Character.setCharacterSpellsKnown(3, 50, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setClassSpells(1);
+        Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
     }
 
     static setClericSubclass(subclass) {
@@ -2116,32 +2064,31 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
                 this.setSkill("Arcana", 2);
-                characterFeatures.push('Arcane Initiate');
+                Character.addCharacterFeatures('Arcane Initiate');
                 firstLevelSpells.push(spells.get("MagicMissile")[0].name);
                 break;
             case "Death":
                 domain.innerHTML = this.deathDomain;
-                characterFeatures.push('Reaper');
+                Character.addCharacterFeatures('Reaper');
                 firstLevelSpells.push(spells.get("FalseLife")[0].name, spells.get("RayOfSickness")[0].name);
                 Character.setCharacterWeaponProficiencies("MartialWeapons");
                 break;
             case "Forge":
                 domain.innerHTML = this.forgeDomain;
-                characterFeatures.push('Blessing of the Forge');
+                Character.addCharacterFeatures('Blessing of the Forge');
                 Character.setCharacterArmorProficiency("heavy");
                 tools.get("Smith")[0].proficient = true;
                 firstLevelSpells.push(spells.get("Identify")[0].name, spells.get("SearingSmite")[0].name);
                 break;
             case "Grave":
                 domain.innerHTML = this.graveDomain;
-                characterFeatures.push('Circle of Mortality');
-                characterFeatures.push('Eyes of the Grave');
+                Character.addCharacterFeatures('Circle of Mortality', 'Eyes of the Grave');
                 cantripSpells.push(spells.get("SpareTheDying")[0].name);
                 firstLevelSpells.push(spells.get("FalseLife")[0].name);
                 break;
             case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
-                characterFeatures.push('Blessing of Knowledge');
+                Character.addCharacterFeatures('Blessing of Knowledge');
                 Character.showNodesForPossibleSkills("Arcana", "Nature");
                 possibleSkills.push("Arcana", "Nature");
                 firstLevelSpells.push(spells.get("Identify")[0].name);
@@ -2149,27 +2096,27 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Life":
                 domain.innerHTML = this.lifeDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                characterFeatures.push('Disciple of Life');
+                Character.addCharacterFeatures('Disciple of Life');
                 break;
             case "Light":
                 domain.innerHTML = this.lightDomain;
                 cantripSpellsChosen.push('Light');
                 firstLevelSpells.push(spells.get("BurningHands")[0].name, spells.get("FaerieFire")[0].name);
-                characterFeatures.push('Warding Flare');
+                Character.addCharacterFeatures('Warding Flare');
                 break;
             case "Nature":
                 domain.innerHTML = this.natureDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("AnimalHandling", "Nature", "Survival");
                 possibleSkills.push("Animal Handling", "Nature", "Survival");
-                characterFeatures.push('Acolyte of Nature');
+                Character.addCharacterFeatures('Acolyte of Nature');
                 firstLevelSpells.push(spells.get("AnimalFriendship")[0].name, spells.get("SpeakWithAnimals")[0].name);
                 break;
             case "Order":
                 domain.innerHTML = this.orderDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("Intimidation", "Persuasion");
-                characterFeatures.push('Voice of Authority');
+                Character.addCharacterFeatures('Voice of Authority');
                 firstLevelSpells.push(spells.get("Heroism")[0].name);
                 break;
             case "Peace":
@@ -2180,22 +2127,27 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Protection":
                 domain.innerHTML = this.protectionDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                characterFeatures.push('Shield of the Faithful');
-
+                Character.addCharacterFeatures('Shield of the Faithful');
                 firstLevelSpells.push(spells.get("CompelledDuel")[0].name);
                 break;
             case "Tempest":
                 domain.innerHTML = this.tempestDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.addCharacterFeatures('Wrath of the Storm');
                 firstLevelSpells.push(spells.get("FogCloud")[0].name, spells.get("Thunderwave")[0].name);
                 break;
             case "Trickery":
                 domain.innerHTML = this.trickeryDomain;
+                Character.addCharacterFeatures('Blessing of the Trickster');
                 firstLevelSpells.push(spells.get("CharmPerson")[0].name, spells.get("DisguiseSelf")[0].name);
                 break;
             case "Twilight":
                 domain.innerHTML = this.twilightDomain;
+                Character.setCharacterArmorProficiency("heavy");
+                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.addCharacterFeatures('Eyes of Night', 'Vigilant Blessing');
+
                 firstLevelSpells.push(spells.get("FaerieFire")[0].name, spells.get("Sleep")[0].name);
                 break;
             case "War":

@@ -267,11 +267,11 @@ class App {
         levelNode.textContent = characterLevel;
 
         Character.fullCharacterUpdate();
-        if (cantripSpells.length>0 || firstLevelSpells.length>0){
-            spellsHeadingNode.toggleAttribute('hidden');
+        if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
+            spellsHeadingNode.setAttribute('hidden', false);
         } else {
             spellsHeadingNode.setAttribute('hidden', true);
-            console.log ('should be hidden');
+            console.log('Spell lists should be hidden!!!');
         }
         Character.renderSpells();
 

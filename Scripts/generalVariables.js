@@ -32,8 +32,8 @@ let abilityScores = [{
     saveMod: function () { return this.mod() + proficiencyBonus; }
 }];
 //Class
-let characterClass = " ";
-let characterSubClass = " ";
+let characterClass = "class has not been set yet!";
+let characterSubClass = null;
 const ARTIFICER = 'Artificer';
 const BARBARIAN = 'Barbarian';
 const BARD = 'Bard';
@@ -54,6 +54,7 @@ let characterLevel = 1;
 
 // Name
 let characterName = "Your character doesnt have a name yet";
+let playerName;
 
 //AC
 let characterArmorClass;
@@ -74,9 +75,10 @@ let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
 let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])(); */
 
 let characterFightingStyle;
-// 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
+
+
 let skills = [{
-    name: "Acrobatics", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
+    name: "Acrobatics", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
 }, {
     name: "Animal Handling", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
@@ -120,7 +122,7 @@ let numberOfSkillsToChoose;
 
 
 //Skills
-let acrobaticsMod = skills[0].mod;
+/* let acrobaticsMod = skills[0].mod;
 let animalHandlingMod = skills[1].mod;
 let arcanaMod = skills[2].mod;
 let athleticsMod = skills[3].mod;
@@ -137,7 +139,7 @@ let persuasionMod = skills[13].mod;
 let religionMod = skills[14].mod;
 let sleightOfHandMod = skills[15].mod;
 let stealthMod = skills[16].mod;
-let survivalMod = skills[17].mod;
+let survivalMod = skills[17].mod; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
@@ -167,38 +169,47 @@ let cantripsKnown;
 let firstLevelSpells = [];
 let firstLevelSpellsChosen = [];
 let firstLevelSpellsKnown;
+let firstLevelSpellSlots;
 
 let secondLevelSpells = [];
 let secondLevelSpellsChosen = [];
 let secondLevelSpellsKnown;
+let secondLevelSpellSlots;
 
 let thirdLevelSpells = [];
 let thirdLevelSpellsChosen = [];
 let thirdLevelSpellsKnown;
+let thirdLevelSpellSlots;
 
 let fourthLevelSpells = [];
 let fourthLevelSpellsChosen = [];
 let fourthLevelSpellsKnown;
+let fourthLevelSpellSlots;
 
 let fifthLevelSpells = [];
 let fifthLevelSpellsChosen = [];
 let fifthLevelSpellsKnown;
+let fifthLevelSpellSlots;
 
 let sixthLevelSpells = [];
 let sixthLevelSpellsChosen = [];
 let sixthLevelSpellsKnown;
+let sixthLevelSpellSlots;
 
 let seventhLevelSpells = [];
 let seventhLevelSpellsChosen = [];
 let seventhLevelSpellsKnown;
+let seventhLevelSpellSlots;
 
 let eigthLevelSpells = [];
 let eigthLevelSpellsChosen = [];
 let eigthLevelSpellsKnown;
+let eigthLevelSpellSlots;
 
 let ninethLevelSpells = [];
 let ninethLevelSpellsChosen = [];
 let ninethLevelSpellsKnown = [];
+let ninethLevelSpellSlots = [];
 
 
 
@@ -218,7 +229,7 @@ let characterRace;
 
 
 //Alignment
-let characterAlignment = "";
+let characterAlignment;
 
 
 
@@ -227,25 +238,25 @@ let characterAlignment = "";
 //Money
 
 //Age
-let characterAge = "";
+let characterAge;
 
 //Height
-let characterHeight = "";
+let characterHeight;
 
 //Weight
-let characterWeight = "";
+let characterWeight;
 
 //Eye color
-let characterEyes = "";
+let characterEyesColor;
 
 //Skin
-let characterSkin = "";
+let characterSkinColor;
 
 //Hair color
-let characterHair = "";
+let characterHairColor;
 
 //Backstory
-let characterBackstory = "";
+let characterBackstory;
 
 
 // App nodes

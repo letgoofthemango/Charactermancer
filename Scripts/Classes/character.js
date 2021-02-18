@@ -59,7 +59,7 @@ class Character {
     }
 
     static setCharacterWeaponProficiencies(...args) {
-        args.forEach((prof)=>{
+        args.forEach((prof) => {
             weapons.get(`${prof}`)[0].proficient = true;
         })
     }
@@ -274,6 +274,15 @@ class Character {
         }
     }
 
+    static setClassSkills(...args) {
+        possibleSkills.push(...args);
+        const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
+        skills.forEach((skill) => {
+            skill.classList.add("toBeAdded");
+            skill.removeAttribute('hidden');
+        })
+    }
+
     static resetCharacterChosenSkills() {
         chosenCharacterSkills = [];
     }
@@ -340,7 +349,13 @@ class Character {
         })
     }
 
+    static addCharacterFeatures(...args) {
+        characterFeatures.push(...args);
+    }
 
+    static setCharacterFeatures(...args) {
+        characterFeatures = [...args];
+    }
 
 
 
@@ -360,9 +375,18 @@ class Character {
     static resetCharacterSpells() {
         cantripSpells = [];
         firstLevelSpells = [];
+        secondLevelSpells = [];
+        thirdLevelSpells = [];
+        fourthLevelSpells = [];
+        fifthLevelSpells = [];
+        sixthLevelSpells = [];
+        seventhLevelSpells = [];
+        eigthLevelSpells = [];
+        ninethLevelSpells = [];
     }
 
     static renderSpells() {
+        cantripSpells.sort();
         cantripSpells.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
@@ -371,7 +395,7 @@ class Character {
             newLi.appendChild(newContent);
             cantripsListNode.append(newLi);
         })
-
+        firstLevelSpells.sort();
         firstLevelSpells.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
@@ -382,8 +406,81 @@ class Character {
         })
     }
 
-    static setCantripsKnown(number) {
-        cantripsKnown = number;
+    static setCharacterSpellsKnown(a, b, c, d, e, f, g, h, i, j) {
+        cantripsKnown = a;
+        firstLevelSpellsKnown = b;
+        secondLevelSpellsKnown = c;
+        thirdLevelSpellsKnown = d;
+        fourthLevelSpellsKnown = e;
+        fifthLevelSpellsKnown = f;
+        sixthLevelSpellsKnown = g;
+        seventhLevelSpellsKnown = h;
+        eigthLevelSpellsKnown = i;
+        ninethLevelSpellsKnown = j;
+    }
+
+    static resetCharacterSpellsKnown(){
+        cantripsKnown = null;
+        firstLevelSpellsKnown = null;
+        secondLevelSpellsKnown = null;
+        thirdLevelSpellsKnown = null;
+        fourthLevelSpellsKnown = null;
+        fifthLevelSpellsKnown = null;
+        sixthLevelSpellsKnown = null;
+        seventhLevelSpellsKnown = null;
+        eigthLevelSpellsKnown = null;
+        ninethLevelSpellsKnown = null;
+    }
+
+    static setCharacterSpellSlots(a, b, c, d, e, f, g, h, i){
+        firstLevelSpellSlots = a;
+        secondLevelSpellSlots = b;
+        thirdLevelSpellSlots = c;
+        fourthLevelSpellSlots = d;
+        fifthLevelSpellSlots = e;
+        sixthLevelSpellSlots = f;
+        seventhLevelSpellSlots = g;
+        eigthLevelSpellSlots = h;
+        ninethLevelSpellSlots = i;
+
+    }
+
+    static resetCharacterSpellSlots(){
+        firstLevelSpellSlots = null;
+        secondLevelSpellSlots = null;
+        thirdLevelSpellSlots = null;
+        fourthLevelSpellSlots = null;
+        fifthLevelSpellSlots = null;
+        sixthLevelSpellSlots = null;
+        seventhLevelSpellSlots = null;
+        eigthLevelSpellSlots = null;
+        ninethLevelSpellSlots = null;
+    }
+
+    static setClassSpells(number) {
+        let spellLevel;
+        if (characterLevel <= number) {
+            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
+            spellLevel.forEach((element) => {
+                element.hidden = false;
+            });
+            spells.forEach((spell) => {
+                if (spell[0].level == 0 && spell[0].classes.includes(`${characterClass}`)) {
+                    cantripSpells.push(spell[0].name);
+                }
+            })
+            spells.forEach((spell) => {
+                if (spell[0].level == 1 && spell[0].classes.includes(`${characterClass}`)) {
+                    firstLevelSpells.push(spell[0].name);
+                }
+            })
+            const lists = document.querySelectorAll('#cantripsList,#firstLevelList');
+            for (const i of lists) {
+                i.classList.toggle("toBeAdded");
+            }
+        } else {
+            console.log(`${characterClass} Spells error`);
+        }
     }
 
 
@@ -392,7 +489,6 @@ class Character {
 
     // Stats------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    //update stats loop
     static updateCharacterStats() {
         let totals = document.getElementsByClassName("statTotal");
         let mods = document.getElementsByClassName("statMod");
@@ -403,7 +499,6 @@ class Character {
     }
 
 
-    //Hitpoints
     static updateCharacterHitPoints() {
         characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
         if (isNaN(characterHitpoints)) {
@@ -469,7 +564,9 @@ class Character {
         this.resetPossibleSkills();
         this.resetCharacterFeatures();
         this.resetCharacterSpells();
+        this.resetCharacterSpellSlots();
         this.resetSpellLists();
+        this.resetCharacterSpellsKnown();
         this.resetCharacterSubClass();
         console.log('RESET');
     }
