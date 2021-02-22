@@ -1151,3 +1151,15 @@ switch (number) {
         console.log(`9th ${ninethLevelSpellsChosen}`);
         break;
 }
+
+static possibleSpells = [cantripSpells, firstLevelSpells, secondLevelSpells, thirdLevelSpells, fourthLevelSpells, fifthLevelSpells, sixthLevelSpells, seventhLevelSpells, eigthLevelSpells, ninethLevelSpells]
+static chosenSpells = [cantripSpellsChosen, firstLevelSpellsChosen, secondLevelSpellsChosen, thirdLevelSpellsChosen, fourthLevelSpellsChosen, fifthLevelSpellsChosen, sixthLevelSpellsChosen, seventhLevelSpellsChosen, eigthLevelSpellsChosen, ninethLevelSpellsChosen]
+
+
+static addSpellsByLevel(number, ...args) {
+    args.forEach((arg) => {
+        this.possibleSpells[number].push(spells.get(`${arg}`)[0].name);
+        this.chosenSpells[number].push(spells.get(`${arg}`)[0].name);
+        console.log(this.possibleSpells[number]);
+    })
+}

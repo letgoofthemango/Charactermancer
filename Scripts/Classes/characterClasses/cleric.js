@@ -2043,10 +2043,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setClericClass() {
+        console.log("2");
         characterClass = CLERIC;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Wisdom", "Charisma");
         Character.setClassSkills("History", "Insight", "Medicine", "Persuasion", "Religion");
+        Character.setCharacterLanguageProficiencies("Common");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Divine Domain", "Spellcasting");
         Character.setCharacterWeaponProficiencies("SimpleWeapons");

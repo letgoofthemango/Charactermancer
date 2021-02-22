@@ -320,23 +320,27 @@ class Character {
 
     // Language-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateLanguageProficiencies() {
+        console.log("3");
         languages.forEach((language) => {
             if (language[0].proficient == true) {
                 languageProficiencies.push(language[0].name);
             }
         })
-        if (languageProficiencies.length >= 0) {
+        if (languageProficiencies.length > 0) {
             languageNode.setAttribute('hidden', false);
         } else {
             languageNode.setAttribute('hidden', true);
         }
         languageProficienciesNode.textContent = languageProficiencies.join(", ");
+        console.log(languageProficiencies);
     }
 
     static resetCharacterLanguageProficiencies() {
         languages.forEach((language) => {
             language[0].proficient = false;
         });
+        languages.get("Common")[0].proficient=true;
+        languageProficiencies=[];
     }
 
     static setCharacterLanguageProficiencies(...args) {
@@ -344,7 +348,7 @@ class Character {
             languages.get(`${arg}`)[0].proficient = true;
             console.log(`Language ${arg} has been set to proficient.`)
         })
-        console.log(languageProficiencies);
+        // console.log(languageProficiencies);
     }
 
 
@@ -543,111 +547,80 @@ class Character {
         }
     }
 
-    let iVersuchs = [cantripSpells,
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
-]
-    let Iversuchs2 = [
-    [cantripSpellsChosen],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    [],
-    []
-]
     static addSpellsByLevel(number, ...args) {
-        args.forEach((arg) => {
-        iVersuchs[number].push(spells.get(`${arg}`)[0].name);
-        iVersuchs2[number].push(spells.get(`${arg}`)[0].name);
+        switch (number) {
+            case 0:
+                args.forEach((arg) => {
+                    cantripSpells.push(spells.get(`${arg}`)[0].name);
+                    cantripSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`0 ${cantripSpellsChosen}`);
+                break;
+            case 1:
+                args.forEach((arg) => {
+                    firstLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    firstLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`1st ${firstLevelSpellsChosen}`);
+                break;
+            case 2:
+                args.forEach((arg) => {
+                    secondLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    secondLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`2nd ${secondLevelSpellsChosen}`);
+                break;
+            case 3:
+                args.forEach((arg) => {
+                    thirdLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    thirdLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`3rd ${thirdLevelSpellsChosen}`);
+                break;
+            case 4:
+                args.forEach((arg) => {
+                    fourthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    fourthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`4th ${fourthLevelSpellsChosen}`);
+                break;
+            case 5:
+                args.forEach((arg) => {
+                    fifthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    fifthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`5th ${fifthLevelSpellsChosen}`);
+                break;
+            case 6:
+                args.forEach((arg) => {
+                    sixthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    sixthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`6th ${sixthLevelSpellsChosen}`);
+                break;
+            case 7:
+                args.forEach((arg) => {
+                    seventhLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    seventhLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`7th ${seventhLevelSpellsChosen}`);
+                break;
+            case 8:
+                args.forEach((arg) => {
+                    eigthLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    eigthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`8th ${eigthLevelSpellsChosen}`);
+                break;
+            case 9:
+                args.forEach((arg) => {
+                    ninethLevelSpells.push(spells.get(`${arg}`)[0].name);
+                    ninethLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
+                })
+                console.log(`9th ${ninethLevelSpellsChosen}`);
+                break;
         }
-console.log(iVersuchs2[number]);
-
-
-
-
-    switch (number) {
-        case 0:
-            /*        args.forEach((arg) => {
-                                cantripSpells.push(spells.get(`${arg}`)[0].name);
-                                cantripSpellsChosen.push(spells.get(`${arg}`)[0].name);
-                            }) */
-                            
-            console.log(`0 ${cantripSpellsChosen}`);
-            break;
-        case 1:
-            args.forEach((arg) => {
-                firstLevelSpells.push(spells.get(`${arg}`)[0].name);
-                firstLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`1st ${firstLevelSpellsChosen}`);
-            break;
-        case 2:
-            args.forEach((arg) => {
-                secondLevelSpells.push(spells.get(`${arg}`)[0].name);
-                secondLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`2nd ${secondLevelSpellsChosen}`);
-            break;
-        case 3:
-            args.forEach((arg) => {
-                thirdLevelSpells.push(spells.get(`${arg}`)[0].name);
-                thirdLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`3rd ${thirdLevelSpellsChosen}`);
-            break;
-        case 4:
-            args.forEach((arg) => {
-                fourthLevelSpells.push(spells.get(`${arg}`)[0].name);
-                fourthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`4th ${fourthLevelSpellsChosen}`);
-            break;
-        case 5:
-            args.forEach((arg) => {
-                fifthLevelSpells.push(spells.get(`${arg}`)[0].name);
-                fifthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`5th ${fifthLevelSpellsChosen}`);
-            break;
-        case 6:
-            args.forEach((arg) => {
-                sixthLevelSpells.push(spells.get(`${arg}`)[0].name);
-                sixthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`6th ${sixthLevelSpellsChosen}`);
-            break;
-        case 7:
-            args.forEach((arg) => {
-                seventhLevelSpells.push(spells.get(`${arg}`)[0].name);
-                seventhLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`7th ${seventhLevelSpellsChosen}`);
-            break;
-        case 8:
-            args.forEach((arg) => {
-                eigthLevelSpells.push(spells.get(`${arg}`)[0].name);
-                eigthLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`8th ${eigthLevelSpellsChosen}`);
-            break;
-        case 9:
-            args.forEach((arg) => {
-                ninethLevelSpells.push(spells.get(`${arg}`)[0].name);
-                ninethLevelSpellsChosen.push(spells.get(`${arg}`)[0].name);
-            })
-            console.log(`9th ${ninethLevelSpellsChosen}`);
-            break;
     }
-}
 
 
 
@@ -656,57 +629,57 @@ console.log(iVersuchs2[number]);
     // Stats------------------------------------------------------------------------------------------------------------------------------------------------------
 
     static updateCharacterStats() {
-    let totals = document.getElementsByClassName("statTotal");
-    let mods = document.getElementsByClassName("statMod");
-    for (let i = 0; i < abilityScores.length; i++) {
-        totals[i].textContent = abilityScores[i].value;
-        mods[i].textContent = App.getNumber(abilityScores[i].mod());
+        let totals = document.getElementsByClassName("statTotal");
+        let mods = document.getElementsByClassName("statMod");
+        for (let i = 0; i < abilityScores.length; i++) {
+            totals[i].textContent = abilityScores[i].value;
+            mods[i].textContent = App.getNumber(abilityScores[i].mod());
+        }
     }
-}
 
 
     static updateCharacterHitPoints() {
-    characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
-    if (isNaN(characterHitpoints)) {
-        hpNode.innerText = "";
-    } else {
-        hpNode.innerText = characterHitpoints;
+        characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
+        if (isNaN(characterHitpoints)) {
+            hpNode.innerText = "";
+        } else {
+            hpNode.innerText = characterHitpoints;
+        }
     }
-}
 
 
     static setCharacterHitdice(number) {
-    hitDice = number;
-}
+        hitDice = number;
+    }
 
 
     static updateCharacterInitiative() {
-    let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
-    initiativeNode.textContent = App.getNumber(initiativeMod);
-}
+        let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
+        initiativeNode.textContent = App.getNumber(initiativeMod);
+    }
 
 
     static updateCharacterPassivePerception() {
-    let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
-    passivePerceptionNode.textContent = passivePerception;
-}
+        let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
+        passivePerceptionNode.textContent = passivePerception;
+    }
 
     static resetCharacterSubClass() {
-    characterSubClass = null;
-    subClassNode.textContent = "";
-}
+        characterSubClass = null;
+        subClassNode.textContent = "";
+    }
 
     static resetCharacterSavingThrows() {
-    CharacterSavingThrows = [];
-}
+        CharacterSavingThrows = [];
+    }
 
     static setCharacterSavingThrows(...args) {
-    args.forEach((arg) => {
-        savingThrows.get(`${arg}`)[0].proficient = true;
-        CharacterSavingThrows.push(`${arg}`);
-        console.log(`Proficiency for ${arg} has been set to proficient.`)
-    })
-}
+        args.forEach((arg) => {
+            savingThrows.get(`${arg}`)[0].proficient = true;
+            CharacterSavingThrows.push(`${arg}`);
+            console.log(`Proficiency for ${arg} has been set to proficient.`)
+        })
+    }
 
 
 
@@ -715,40 +688,41 @@ console.log(iVersuchs2[number]);
     // Full character actions----------------------------------------------------------------------------------------------------------------------
 
     static fullCharacterUpdate() {
-    this.updateCharacterHitPoints();
-    this.updateSkills();
-    this.updateCharacterStats();
-    this.updateCharacterArmorProficiencies();
-    this.updateCharacterWeaponProficiencies();
-    this.updateCharacterToolProficiencies();
-    this.updateLanguageProficiencies();
-    this.updateCharacterInitiative();
-    this.updateCharacterPassivePerception();
-    this.renderCharacterfeatures();
-    console.log("UPDATE");
-}
+        this.updateCharacterHitPoints();
+        this.updateSkills();
+        this.updateCharacterStats();
+        this.updateCharacterArmorProficiencies();
+        this.updateCharacterWeaponProficiencies();
+        this.updateCharacterToolProficiencies();
+        this.updateLanguageProficiencies();
+        this.updateCharacterInitiative();
+        this.updateCharacterPassivePerception();
+        this.renderCharacterfeatures();
+        console.log("UPDATE");
+    }
 
     static fullCharacterReset() {
-    this.resetCharacterWeaponProficiencies();
-    this.resetCharacterWeaponProficienciesList();
-    this.resetCharacterArmorProficiencies();
-    this.resetCharacterArmorProficienciesList();
-    this.resetCharacterLanguageProficiencies();
-    this.resetCharacterToolProficiencies();
-    this.resetCharacterSkills();
-    this.resetCharacterSavingThrows();
-    this.setCharacterSkillsNumberToChoose(null);
-    this.resetSkillNodes();
-    this.resetCharacterChosenSkills();
-    this.resetPossibleSkills();
-    this.resetCharacterFeatures();
-    this.resetCharacterSpells();
-    this.resetCharacterSpellSlots();
-    this.resetSpellLists();
-    this.resetCharacterSpellsKnown();
-    this.resetCharacterSubClass();
-    console.log('RESET');
-}
+        this.resetCharacterWeaponProficiencies();
+        this.resetCharacterWeaponProficienciesList();
+        this.resetCharacterArmorProficiencies();
+        this.resetCharacterArmorProficienciesList();
+        this.resetCharacterLanguageProficiencies();
+        this.resetCharacterToolProficiencies();
+        this.resetCharacterSkills();
+        this.resetCharacterSavingThrows();
+        this.setCharacterSkillsNumberToChoose(null);
+        this.resetSkillNodes();
+        this.resetCharacterChosenSkills();
+        this.resetPossibleSkills();
+        this.resetCharacterFeatures();
+        this.resetCharacterSpells();
+        this.resetCharacterSpellSlots();
+        this.resetSpellLists();
+        this.resetCharacterSpellsKnown();
+        this.resetCharacterSubClass();
+        console.log('RESET');
+        console.log('1');
+    }
 
 
 

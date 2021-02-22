@@ -112,6 +112,7 @@ let tools = new Map([
 let languages = new Map([
     ["Abyssal", [{ name: "Abyssal", proficient: false }]],
     ["Celestial", [{ name: "Celestial", proficient: false }]],
+    ["Common", [{ name: "Common", proficient: false }]],
     ["DeepSpeech", [{ name: "Deep Speech", proficient: false }]],
     ["Draconic", [{ name: "Draconic", proficient: false }]],
     ["Druidic", [{ name: "Druidic", proficient: false }]],
