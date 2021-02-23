@@ -326,21 +326,21 @@ class Character {
                 languageProficiencies.push(language[0].name);
             }
         })
-        if (languageProficiencies.length > 0) {
-            languageNode.setAttribute('hidden', false);
-        } else {
-            languageNode.setAttribute('hidden', true);
-        }
+        // if (languageProficiencies.length > 0) {
+        //     languageNode.hidden = false;
+        // } else {
+        //     languageNode.hidden = true;
+        // }
         languageProficienciesNode.textContent = languageProficiencies.join(", ");
-        console.log(languageProficiencies);
+        // console.log(languageProficiencies);
     }
 
     static resetCharacterLanguageProficiencies() {
         languages.forEach((language) => {
             language[0].proficient = false;
         });
-        languages.get("Common")[0].proficient=true;
-        languageProficiencies=[];
+        languages.get("Common")[0].proficient = true;
+        languageProficiencies = [];
     }
 
     static setCharacterLanguageProficiencies(...args) {
@@ -348,7 +348,6 @@ class Character {
             languages.get(`${arg}`)[0].proficient = true;
             console.log(`Language ${arg} has been set to proficient.`)
         })
-        // console.log(languageProficiencies);
     }
 
 
@@ -677,7 +676,6 @@ class Character {
         args.forEach((arg) => {
             savingThrows.get(`${arg}`)[0].proficient = true;
             CharacterSavingThrows.push(`${arg}`);
-            console.log(`Proficiency for ${arg} has been set to proficient.`)
         })
     }
 

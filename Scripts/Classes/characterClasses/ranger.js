@@ -478,31 +478,24 @@ traveling for an hour or more:</p>
         [19],
         [20]
     ];
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel >= 2) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Ranger")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Ranger")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Ranger Spell level works');
+
+    static displayRangerFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Ranger.rangerFeaturesByLevel[i];
         }
+    }
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setRangerClass() {
+        characterClass = RANGER;
+        Character.setCharacterHitdice(10);
+        Character.setCharacterSavingThrows("Strength", "Dexterity");
+        Character.setClassSkills("AnimalHandling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival");
+        Character.setCharacterSkillsNumberToChoose(3);
+        Character.setCharacterFeatures("Favored Enemy", "Natural Explorer");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterArmorProficiency("light", "medium", "shields");
     }
 }

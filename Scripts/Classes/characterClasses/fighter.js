@@ -331,20 +331,20 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     <div class="collapse show" id="featureStyle">
         <p>You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take the same Fighting Style option more than once, even if you get to choose again.</p>
         <div class="d-flex justify-content-around row mb-3">
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="archery">Archery</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="blind">Blind fighting</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="defense">Denfense</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="dueling">Dueling</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="interception">Interception</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="mariner">Mariner</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="protection">Protection</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="superior">Superior Technique</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="twoWeapon">Two Weapon Fighting</button>
-            <button onclick="Fighter.setFightingStyle(this.id)" type="button" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="archery">Archery</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="blind">Blind fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="closeQuarter">Close Quarter Shooter</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="defense">Denfense</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="dueling">Dueling</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="great">Great Weapong Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="interception">Interception</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="mariner">Mariner</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="protection">Protection</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="superior">Superior Technique</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="thrown">Thrown Weapon Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="tunnel">Tunnel Fighter</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="twoWeapon">Two Weapon Fighting</button>
+            <button onclick="Fighter.setFightingStyle(this.id)" class="btn btn-secondary" id="unarmed">Unarmored Fighting</button>
         </div>
         <div id="fightingStyle" class="choiceBG"></div>
         <hr>
@@ -425,9 +425,32 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         [19],
         [20]
     ];
+
+
+
+    static displayFighterFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Fighter.fighterFeaturesByLevel[i];
+        }
+    }
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setFighterClass() {
+        characterClass = FIGHTER;
+        Character.setCharacterHitdice(10);
+        Character.setCharacterSavingThrows("Strength", "Constitution");
+        Character.setClassSkills("Acrobatics", "AnimalHandling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Fighting Style", "Martial Versatility", "Second Wind");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterArmorProficiency("light", "medium", "heavy", "shields");
+    }
+
     static setFightingStyle(style) {
         const fightingStyle = document.getElementById("fightingStyle");
-        const featureFStyle = document.getElementById("fStyle");
+        const featureFStyle = document.getElementById("FightingStyleFeatureSpan");
         featureFStyle.innerHTML = "";
         characterFightingStyle = null;
         switch (style) {
@@ -504,33 +527,5 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             default:
                 break;
         }
-    };
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel >= 3) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Fighter")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Fighter")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Fighter Spell level error');
-        }
     }
-
 }

@@ -362,32 +362,29 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         [19],
         [20]
     ];
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel >= 2) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Paladin")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Paladin")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Paladin Spell level error');
+
+
+    static displayPaladinFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Paladin.paladinFeaturesByLevel[i];
         }
+    }
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setPaladinClass() {
+        characterClass = PALADIN;
+        Character.setCharacterHitdice(10);
+        Character.setCharacterSavingThrows("Wisdom", "Charisma");
+        Character.setClassSkills("Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Divine Sense", "Lay on Hands");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterArmorProficiency("light", "medium", "heavy", "shields");
+        // Character.setCharacterSpellsKnown(50, 50, 0, 0, 0, 0, 0, 0, 0, 0);
+        // Character.setClassSpells(1);
+        // Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
     }
 
 }

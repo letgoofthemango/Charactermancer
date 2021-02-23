@@ -103,29 +103,13 @@ class App {
                 break;
 
             case FIGHTER:
-                hitDice = 10;
-                weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
-                const fighterSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryAthletics, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryPerception, #summarySurvival');
-                for (const i of fighterSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Fighter.fighterFeaturesByLevel[i];
-                    featuresNode.innerHTML += Fighter.fighterFeaturesList[i];
-                }
+                Fighter.setFighterClass();
+                Fighter.displayFighterFeaturesByLevel();
                 break;
 
             case MONK:
-                hitDice = 8;
-                weapons.get("SimpleWeapons")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[0][1] = true;
-                const monkSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAthletics, #summaryHistory, #summaryInsight, #summaryReligion, #summaryStealth');
-                for (const i of monkSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Monk.monkFeaturesByLevel[i];
-                    featuresNode.innerHTML += Monk.monkFeaturesList[i];
-                }
+                Monk.displayMonkFeaturesByLevel();
+                Monk.setMonkClass();
                 break;
 
             case MYSTIC:
@@ -142,31 +126,13 @@ class App {
                 break;
 
             case PALADIN:
-                hitDice = 10;
-                weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[3][1] = characterArmorProficiencies[4][1] = true;
-                const paladinSkills = document.querySelectorAll('#summaryAthletics, #summaryInsight, #summaryIntimidation, #summaryMedicine, #summaryPersuasion, #summaryReligion');
-                for (const i of paladinSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Paladin.paladinFeaturesByLevel[i];
-                    featuresNode.innerHTML += Paladin.paladinFeaturesList[i];
-                }
-                Paladin.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Paladin.displayPaladinFeaturesByLevel();
+                Paladin.setPaladinClass();
                 break;
 
             case RANGER:
-                hitDice = 10;
-                characterArmorProficiencies[1][1] = characterArmorProficiencies[2][1] = characterArmorProficiencies[4][1] = weapons.get("SimpleWeapons")[0].proficient = weapons.get("MartialWeapons")[0].proficient = true;
-                const rangerSkills = document.querySelectorAll('#summaryAnimalHandling, #summaryAthletics, #summaryInsight, #summaryInvestigation, #summaryNature, #summaryPerception, #summaryStealth, #summarySurvival');
-                for (const i of rangerSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Ranger.rangerFeaturesByLevel[i];
-                    featuresNode.innerHTML += Ranger.rangerFeaturesList[i];
-                }
-                Ranger.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Ranger.displayRangerFeaturesByLevel();
+                Ranger.setRangerClass();
                 break;
 
             case ROGUE:

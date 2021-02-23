@@ -332,4 +332,24 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         [20]
     ];
 
+    static displayMonkFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Monk.monkFeaturesByLevel[i];
+        }
+    }
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setMonkClass() {
+        characterClass = MONK;
+        Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Strength", "Dexterity");
+        Character.setClassSkills("Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Unarmored Defense", "Martial Arts", "Monk Weapons");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons", "Shortsword");
+        Character.setCharacterArmorProficiency("none");
+    }
+
 }
