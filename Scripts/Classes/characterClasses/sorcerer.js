@@ -469,16 +469,16 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featureOrigin">
             <p>Choose a sorcerous origin, which describes the source of your innate magical power, from the list of available origins. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.</p>
             <div class="d-flex justify-content-around row">
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="aberrant">Aberrant Mind</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="clockwork">Clockwork soul</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="divine">Divine Soul</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="draconic">Draconic</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="giant">Giant Soul</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="phoenix">Phoenix</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="sea">Sea</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="shadow">Shadow</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="storm">Storm</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.id)" type="button" class="btn btn-secondary" id="wild">Wild magic</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Aberrant Mind">Aberrant Mind</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Clockwork Soul">Clockwork soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Divine Soul">Divine Soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Draconic">Draconic</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Giant Soul">Giant Soul</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Phoenix">Phoenix</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Sea">Sea</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Shadow">Shadow</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Storm">Storm</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Wild magic">Wild magic</button>
             </div>
             <div id="sorcOrigin" class="choiceBG"></div>
         </div>
@@ -574,24 +574,28 @@ you use your Charisma modifier when setting the saving throw DC for a sorcerer s
             </thead>
             <tbody>
                 <tr>
+                    <td class="col-2 text-center">Cantrips</td>
+                    <td class="col-10">Mind Sliver</td>
+                </tr>
+                <tr>
                     <td class="col-2 text-center">1st</td>
-                    <td class="col-10">arms of Hadar, dissonant whispers, mind sliver</td>
+                    <td class="col-10">Arms of Hadar, Dissonant Whispers</td>
                 </tr>
                 <tr>
                     <td class="col-2 text-center">3rd</td>
-                    <td class="col-10">calm emotions, detect thoughts</td>
+                    <td class="col-10">Calm Emotions, Detect Thoughts</td>
                 </tr>
                 <tr>
                     <td class="col-2 text-center">5th</td>
-                    <td class="col-10">hunger of Hadar, sending</td>
+                    <td class="col-10">Hunger of Hadar, Sending</td>
                 </tr>
                 <tr>
                     <td class="col-2 text-center">7th</td>
-                    <td class="col-10">Evard's black tentacles, summon aberration</td>
+                    <td class="col-10">Evard's black tentacles, Summon Aberration</td>
                 </tr>
                 <tr>
                     <td class="col-2 text-center">9th</td>
-                    <td class="col-10">Rary's telepathic bond, telekinesis</td>
+                    <td class="col-10">Rary's telepathic bond, Telekinesis</td>
                 </tr>
             </tbody>
         </table>
@@ -679,23 +683,23 @@ another spell of the same level.<b>The new spell must be an abjuration or a tran
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">alarm, protection from evil and good</td>
+        <td class="col-10">Alarm, Protection from evil and good</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">aid, lesser restoration</td>
+        <td class="col-10">Aid, Lesser restoration</td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10"> dispel magic, protection from energy</td>
+        <td class="col-10"> Dispel magic, Protection from energy</td>
     </tr>
     <tr>
         <td class="col-2 text-center">7th</td>
-        <td class="col-10">freedom of movement, summon construct</td>
+        <td class="col-10">Freedom of movement, Summon construct</td>
     </tr>
     <tr>
         <td class="col-2 text-center">9th</td>
-        <td class="col-10">greater restoration, wall of force</td>
+        <td class="col-10">Greater restoration, Wall of force</td>
     </tr>
 </tbody>
 </table>
@@ -746,7 +750,7 @@ connection to order manifests while you are casting any of your sorcerer spells.
 <hr>
 
 <div class="collapse show" id="featureRestore">
-<p>Your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.</p>
+<p>At 1st level, your connection to the plane of absolute order allows you to equalize chaotic moments. When a creature you can see within 60 feet of you is about to roll a d20 with advantage or disadvantage, you can use your reaction to prevent the roll from being affected by advantage and disadvantage.</p>
 <p>You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
 </div>
 
@@ -829,27 +833,28 @@ replace this spell, you must replace it with a spell from the cleric spell list.
 <tbody>
     <tr>
         <td class="col-5">Good</td>
-        <td class="col-7">cure wounds</td>
+        <td class="col-7">Cure wounds</td>
     </tr>
     <tr>
         <td class="col-5">Evil</td>
-        <td class="col-7">inflict wounds</td>
+        <td class="col-7">Inflict wounds</td>
     </tr>
     <tr>
         <td class="col-5">Law</td>
-        <td class="col-7">bless</td>
+        <td class="col-7">Bless</td>
     </tr>
     <tr>
         <td class="col-5">Chaos</td>
-        <td class="col-7">bane</td>
+        <td class="col-7">Bane</td>
     </tr>
     <tr>
         <td class="col-5">Neutrality</td>
-        <td class="col-7">protection from evil and good</td>
+        <td class="col-7">Protection from evil and good</td>
     </tr>
 </tbody>
 </table>
 </div>
+<b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
 
 <h5>Favored by the Gods<span class="ml-2"><button class="collapseButton" type="button"
     data-toggle="collapse" data-target="#featureFavored" aria-expanded="true"
@@ -959,6 +964,16 @@ dragon is used by features you gain later.</p>
 </tbody>
 </table>
 <p>You can speak, read, and write Draconic. Additionally, whenever you make a Charisma check when interacting with dragons, your proficiency bonus is doubled if it applies to the check.</p>
+</div>
+
+<h5>Draconic Resilience<span class="ml-2"><button class="collapseButton" type="button"
+    data-toggle="collapse" data-target="#featureResilience" aria-expanded="true"
+    aria-controls="featureResilience">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="featureResilience">
+<p>As magic flows through your body, it causes physical traits of your dragon ancestors to emerge. At 1st level, your hit point maximum increases by 1 and increases by 1 again whenever you gain a level in this class.</p>
+<p>Additionally, parts of your skin are covered by a thin sheen of dragon-like scales. When you aren't wearing armor, your AC equals 13 + your Dexterity modifier.</p>
 </div>
 
 <h5>Elemental Affinity<span class="ml-2"><button class="collapseButton" type="button"
@@ -1850,96 +1865,101 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         [18],
         [19],
         [20]
-    ]; 
-    
+    ];
+
+        // Full character actions----------------------------------------------------------------------------------------------------------------------
+        static setSorcererClass() {
+            characterClass = SORCERER;
+            Character.setCharacterHitdice(6);
+            Character.setCharacterSavingThrows("Constitution", "Charisma");
+            Character.setClassSkills("Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion");
+            Character.setCharacterSkillsNumberToChoose(2);
+            Character.setCharacterFeatures("Sorcerous Origin", "Spellcasting");
+            Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
+            Character.setCharacterArmorProficiency("none");
+            Character.setCharacterSpellsKnown(4, 2, 0, 0, 0, 0, 0, 0, 0, 0);
+            Character.setClassSpells(1);
+            Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
+        }
+
     //Sorcerer origins
     static setSorcererSubclass(subclass) {
-        const origin = document.getElementById("sorcOrigin");
-        const featureOrigin = document.getElementById("origin");
-        featureOrigin.innerHTML = "";
+        Character.fullCharacterReset();
+        this.setSorcererClass();
         characterSubClass = null;
+        const origin = document.getElementById("sorcOrigin");
         switch (subclass) {
-            case "aberrant":
-                characterSubClass = "(Aberrant Mind)";
+            case "Aberrant Mind":
                 origin.innerHTML = this.aberrant;
-                featureOrigin.innerHTML = ": Aberrant Mind";
+                Character.addCharacterFeatures('Telepathic Speech');
+                Character.addSpellsByLevel(0, "MindSliver");
+                Character.addSpellsByLevel(1, "ArmsOfHadar", "DissonantWhispers");
                 break;
-            case "clockwork":
-                characterSubClass = "(Clockwork Soul)";
+            case "Clockwork Soul":
                 origin.innerHTML = this.clockwork;
-                featureOrigin.innerHTML = ": Clockwork Soul";
+                Character.addCharacterFeatures('Restore Balance');
+                Character.addSpellsByLevel(1, "Alarm", "ProtectionFromEvil");
                 break;
-            case "divine":
-                characterSubClass = "(Divine Soul)";
+            case "Divine Soul":
                 origin.innerHTML = this.divine;
-                featureOrigin.innerHTML = ": Divine Soul";
+                Character.addCharacterFeatures('Favored by the Gods');
                 break;
-            case "draconic":
-                characterSubClass = "(Draconic)";
+            case "Draconic":
                 origin.innerHTML = this.draconic;
-                featureOrigin.innerHTML = ": Draconic";
+                Character.addCharacterFeatures('Dragon Ancestor',"Draconic Resilience");
+                Character.setCharacterLanguageProficiencies("Draconic");
+                Character.setCharacterHitdice(6+(1*characterLevel));
+                characterArmorClass= 13 + abilityScores[2].mod.bind(abilityScores[2])();
+                console.log(`AC ist ${characterArmorClass} aber da muss generell noch eine AC calculation eingeführt werden.`)
                 break;
-            case "giant":
-                characterSubClass = "(Giant Soul)";
+            case "Giant Soul":
                 origin.innerHTML = this.giant;
-                featureOrigin.innerHTML = ": Giant Soul";
                 break;
-            case "phoenix":
-                characterSubClass = "(Phoenix)";
+            case "Phoenix":
                 origin.innerHTML = this.phoenix;
-                featureOrigin.innerHTML = ": Phoenix";
                 break;
-            case "sea":
-                characterSubClass = "(Sea)";
+            case "Sea":
                 origin.innerHTML = this.sea;
-                featureOrigin.innerHTML = ": Sea";
                 break;
-            case "shadow":
-                characterSubClass = "(Shadow)";
+            case "Shadow":
                 origin.innerHTML = this.shadow;
-                featureOrigin.innerHTML = ": Shadow";
                 break;
-            case "storm":
-                characterSubClass = "(Storm)";
+            case "Storm":
                 origin.innerHTML = this.storm;
-                featureOrigin.innerHTML = ": Storm";
                 break;
-            case "wild":
-                characterSubClass = "(Wild Magic)";
+            case "Wild Magic":
                 origin.innerHTML = this.wild;
-                featureOrigin.innerHTML = ": Wild Magic";
                 break;
             default:
                 break;
         }
-        subClassNode.textContent = characterSubClass;
+
+        Character.renderSpells();
+
+        const lists = document.querySelectorAll('#cantripsList, #firstLevelList');
+        for (const i of lists) {
+            i.classList.toggle("toBeAdded");
+        }
+
+        // firstLevelSpellsChosen = [...firstLevelSpells];
+
+        this.fullCharacterUpdate();
+
+
+        const featureOrigin = document.getElementById("SorcerousOriginFeatureSpan");
+        featureOrigin.innerHTML = `: ${subclass}`;
+        subClassNode.textContent = `(${subclass})`;
     };
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 2) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Sorcerer")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Sorcerer")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Sorcerer Spell level error');
+
+
+    static displaySorcererFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Sorcerer.sorcererFeaturesByLevel[i];
         }
     }
+
+
+
 
 }

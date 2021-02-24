@@ -265,7 +265,7 @@ let spells = new Map([
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, both the temporary hit points and the cold damage increase by 5 for each slot level above 1st."
     }]],
 
-    ["ArmsofHadar", [{
+    ["ArmsOfHadar", [{
         name: "Arms of Hadar",
         source: "PHB",
         level: 1,
@@ -4087,6 +4087,20 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
+    ["MindSliver", [{
+        name: "Mind Sliver",
+        source: "TCE",
+        level: 0,
+        castingTime: "Action",
+        duration: "Concentration, up to 1 hour",
+        school: "Enchantment",
+        range: "60 feet",
+        components: "V",
+        classes: "Sorcerer, Warlock, Wizard",
+        text: "You drive a disorienting spike of psychic energy into the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn.",
+        atHigherLevels: "At Higher Levels. This spell's damage increases by 1d6 when you reach certain levels: 5th level (2d6), 11th level (3d6), and 17th level (4d6)."
+    }]],
+
     ["MindSpike", [{
         name: "Mind Spike",
         source: "XGE",
@@ -4100,6 +4114,8 @@ let spells = new Map([
         text: "You reach into the mind of one creature you can see within range. The target must make a Wisdom saving throw, taking 3d8 psychic damage on a failed save, or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can't become hidden from you, and if it's invisible, it gains no benefit from that condition against you.",
         atHigherLevels: "At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for each slot level above 2nd."
     }]],
+
+
 
     ["MinorIllusion", [{
         name: "Minor Illusion",
@@ -4717,7 +4733,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["ProtectionfromEnergy", [{
+    ["ProtectionFromEnergy", [{
         name: "Protection from Energy",
         source: "PHB",
         level: 3,
@@ -4731,7 +4747,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["ProtectionfromEvil", [{
+    ["ProtectionFromEvil", [{
         name: "Protection from Evil and Good",
         source: "PHB",
         level: 1,
@@ -4745,7 +4761,7 @@ let spells = new Map([
         atHigherLevels: ""
     }]],
 
-    ["ProtectionfromPoison", [{
+    ["ProtectionFromPoison", [{
         name: "Protection from Poison",
         source: "PHB",
         level: 2,

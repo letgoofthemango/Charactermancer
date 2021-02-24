@@ -417,31 +417,24 @@ Attack column of the Rogue table.</p>
         [19],
         [20]
     ];
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel >= 3) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Rogue")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Rogue")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Rogue Spell level error');
+    static displayRogueFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Rogue.rogueFeaturesByLevel[i];
         }
+    }
+
+
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setRogueClass() {
+        characterClass = ROGUE;
+        Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Dexterity", "Intelligence");
+        Character.setClassSkills("Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight", "Stealth");
+        Character.setCharacterSkillsNumberToChoose(4);
+        Character.setCharacterFeatures("Expertise", "Sneak Attack", "Thieves' Cant");
+        Character.setCharacterLanguageProficiencies("Thieves");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons", "HandCrossbow", "Longsword", "Rapier", "Shortsword");
+        Character.setCharacterArmorProficiency("light");
     }
 }

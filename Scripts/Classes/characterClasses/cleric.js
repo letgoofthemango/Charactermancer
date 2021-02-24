@@ -2173,7 +2173,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         subClassNode.textContent = `(${subclass})`;
 
         if (subclass == "Knowledge") {
-            languageProficienciesNode.innerHTML = "Two languages of your choice.";
+            languageProficienciesNode.innerHTML += " and two additional languages of your choice.";
         }
     }
 

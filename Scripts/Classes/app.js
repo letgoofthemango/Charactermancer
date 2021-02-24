@@ -136,31 +136,13 @@ class App {
                 break;
 
             case ROGUE:
-                hitDice = 8;
-                weapons.get("SimpleWeapons")[0].proficient = weapons.get("HandCrossbow")[0].proficient = weapons.get("Longsword")[0].proficient = weapons.get("Rapier")[0].proficient = weapons.get("Shortsword")[0].proficient = characterArmorProficiencies[1][1] = tools.get("Thieves")[0].proficient = characterLanguageProficiencies[15][1] = true;
-                const rogueSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAthletics, #summaryDeception, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summarySleight, #summaryStealth');
-                for (const i of rogueSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Rogue.rogueFeaturesByLevel[i];
-                    featuresNode.innerHTML += Rogue.rogueFeaturesList[i];
-                }
-                Rogue.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Rogue.displayRogueFeaturesByLevel();
+                Rogue.setRogueClass();
                 break;
 
             case SORCERER:
-                hitDice = 6;
-                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("LightCrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
-                const sorcererSkills = document.querySelectorAll('#summaryArcana, #summaryDeception, #summaryInsight, #summaryIntimidation, #summaryPersuasion, #summaryReligion');
-                for (const i of sorcererSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Sorcerer.sorcererFeaturesByLevel[i];
-                    featuresNode.innerHTML += Sorcerer.sorcererFeaturesList[i];
-                }
-                Sorcerer.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Sorcerer.setSorcererClass();
+                Sorcerer.displaySorcererFeaturesByLevel();
                 break;
 
             case WARLOCK:
