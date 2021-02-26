@@ -14,10 +14,131 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+    <script type="text/javascript" src="./Scripts/generalVariables.js"></script>
+    <script src="/Scripts/codeDump.js" defer></script>
 </head>
 
 <body class="parallax">
     <div class="container" id="container">
+        <h1 class="text-center">Skills, features and spells</h1>
+        <p class="text-center">Here you will be able to choose different things depending on the class choice that you
+            made in the previous step.</p>
+
+        <div class="row">
+            <div class="col-2" id="skillsDiv">
+                <h3 class="pl-5">Skills</h3>
+                <p>You may choose <u><span id="skillsCount">2</span></u> class skills</p>
+                <div id="skillsSelectionList">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Acrobatics" id="acrobaticsCheck">
+                        <label class="form-check-label" for="acrobaticsCheck">Acrobatics</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="AnimalHandling" id="animalHandlingCheck">
+                        <label class="form-check-label" for="animalHandlingCheck">Animal handling</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Arcana" id="arcanaCheck">
+                        <label class="form-check-label" for="arcanaCheck">Arcana</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Athletics" id="athleticsCheck">
+                        <label class="form-check-label" for="athleticsCheck">Athletics</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Deception" id="deceptionCheck">
+                        <label class="form-check-label" for="deceptionCheck">Deception</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="History" id="historyCheck">
+                        <label class="form-check-label" for="historyCheck">History</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Insight" id="insightCheck">
+                        <label class="form-check-label" for="insightCheck">Insight</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Intimidation" id="intimidationCheck">
+                        <label class="form-check-label" for="intimidationCheck">Intimidation</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Investigation" id="investigationCheck">
+                        <label class="form-check-label" for="investigationCheck">Investigation</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Medicine" id="medicineCheck">
+                        <label class="form-check-label" for="medicineCheck">Medicine</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Nature" id="natureCheck">
+                        <label class="form-check-label" for="natureCheck">Nature</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Perception" id="perceptionCheck">
+                        <label class="form-check-label" for="perceptionCheck">Perception</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Performance" id="performanceCheck">
+                        <label class="form-check-label" for="performanceCheck">Performance</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Persuasion" id="persuasionCheck">
+                        <label class="form-check-label" for="persuasionCheck">Persuasion</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Religion" id="religionCheck">
+                        <label class="form-check-label" for="religionCheck">Religion</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Sleight" id="sleightCheck">
+                        <label class="form-check-label" for="sleightCheck">Sleight of Hand</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Stealth" id="stealthCheck">
+                        <label class="form-check-label" for="stealthCheck">Stealth</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Survival" id="survivalCheck">
+                        <label class="form-check-label" for="survivalCheck">Survival</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="col-2" id="ToolsDiv" style="display: inline;">
+                <h3 class="pl-5">Tools</h3>
+                <p>You may choose <u><span id="toolsCount">2</span></u> class skills</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tools" id="AlchemistRadio" value="Alchemist">
+                    <label class="form-check-label" for="Alchemist1">Alchemist</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tools" id="BrewerRadio" value="Brewer">
+                    <label class="form-check-label" for="BrewerRadio">Brewer</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tools" id="CalligrapherRadio" value="Calligrapher">
+                    <label class="form-check-label" for="CalligrapherRadio">Calligrapher</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tools" id="CarpenterRadio" value="Carpenter">
+                    <label class="form-check-label" for="CarpenterRadio">Carpenter</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tools" id="CartographerRadio" value="option1">
+                    <label class="form-check-label" for="CartographerRadio">Cartographer</label>
+                </div>
+            </div>
 
 
 
@@ -27,15 +148,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+        </div>
 
 
 
@@ -51,22 +164,6 @@
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-    <script type="text/javascript" src="./Scripts/generalVariables.js"></script>
-    <script type="text/javascript" src="./Scripts/Information storage/classFeatures.js"></script>
-    <script type="text/javascript" src="./Scripts/siteStructure.js"></script>
-    <script type="text/javascript" src="./Scripts/testing.js"></script>
 </body>
 
 </html>
