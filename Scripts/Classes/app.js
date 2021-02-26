@@ -146,17 +146,8 @@ class App {
                 break;
 
             case WARLOCK:
-                hitDice = 8;
-                weapons.get("SimpleWeapons")[0].proficient = characterArmorProficiencies[1][1] = true;
-                const warlockSkills = document.querySelectorAll('#summaryArcana, #summaryDeception, #summaryHistory, #summaryIntimidation, #summaryInvestigation, #summaryNature, #summaryReligion');
-                for (const i of warlockSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Warlock.warlockFeaturesByLevel[i];
-                    featuresNode.innerHTML += Warlock.warlockFeaturesList[i];
-                }
-                Warlock.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Warlock.setWarlockClass();
+                Warlock.displayWarlockFeaturesByLevel();
                 break;
 
             case WIZARD:
@@ -195,7 +186,6 @@ class App {
             toolProficienciesNode.textContent = "Three musical instruments of your choice";
         } else if (characterClass == DRUID) {
             armorProficienciesNode.textContent += " (druids will not wear armor or use shields made of metal)"
-            languageNode.removeAttribute("hidden");
         } else if (characterClass == MONK) {
             toolProficienciesNode.textContent = "any one type of artisan's tools or any one musical instrument of your choice"
         }

@@ -70,13 +70,19 @@ let hasShield = false;
 let characterBackground;
 
 //Speed
-let characterSpeed;
+let characterWalkingSpeed= 30;
+let characterClimbingSpeed= 30;
+let characterSwimingSpeed= 30;
+let characterFlyingSpeed= 30;
 
-/* //Initiative
-let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
+//Vision
+let characterVision;
+
+//Initiative
+let initiativeMod;
 
 //Passive perception
-let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])(); */
+let passivePerception;
 
 let characterFightingStyle;
 
@@ -276,7 +282,12 @@ const hpNode = document.getElementById("summaryHP");
 const backgroundNode = document.getElementById("summaryBackground");
 const acNode = document.getElementById("summaryAC");
 const initiativeNode = document.getElementById("summaryInitiative");
-const speedNode = document.getElementById("summarySpeed");
+const SpeedNode = document.getElementById("summarySpeed");
+const SpeedsNode = document.getElementById("summarySpeeds");
+// const walkingSpeedNode = document.getElementById("summaryWalkingSpeed");
+// const climbingSpeedNode = document.getElementById("summaryClimbingSpeed");
+// const swimmingSpeedNode = document.getElementById("summarySwimmingSpeed");
+// const flyingSpeedNode = document.getElementById("summaryFlyingSpeed");
 const passivePerceptionNode = document.getElementById("summaryPassivePerception");
 const acrobaticsNode = document.getElementById("summaryAcrobatics");
 const animalHandlingNode = document.getElementById("summaryAnimalHandling");

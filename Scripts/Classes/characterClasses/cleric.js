@@ -2165,6 +2165,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             i.classList.toggle("toBeAdded");
         }
         firstLevelSpellsChosen = [...firstLevelSpells];
+        characterSubClass = subclass;
 
         this.fullCharacterUpdate();
 

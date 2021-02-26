@@ -478,7 +478,7 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
                 <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Sea">Sea</button>
                 <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Shadow">Shadow</button>
                 <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Storm">Storm</button>
-                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Wild magic">Wild magic</button>
+                <button onclick="Sorcerer.setSorcererSubclass(this.value)" type="button" class="btn btn-secondary" value="Wild Magic">Wild magic</button>
             </div>
             <div id="sorcOrigin" class="choiceBG"></div>
         </div>
@@ -895,6 +895,9 @@ replace this spell, you must replace it with a spell from the cleric spell list.
 </div>
 </div>
 </div>`;
+    static setDivineAffinity(value) {
+        console.log(`Affinity set to `)
+    }
     static draconic = `<h4 class="text-center">Draconic Bloodline<span class="ml-2"><button class="collapseButton" type="button"
 data-toggle="collapse" data-target="#Origin" aria-expanded="true"
 aria-controls="Origin">[-]</button></span></h4>
@@ -1004,6 +1007,9 @@ dragon is used by features you gain later.</p>
 <p>Beginning at 18th level, you can channel the dread presence of your dragon ancestor, causing those around you to become awestruck or frightened. As an action, you can spend 5 sorcery points to draw on this power and exude an aura of awe or fear (your choice) to a distance of 60 feet. For 1 minute or until you lose your concentration (as if you were casting a concentration spell), each hostile creature that starts its turn in this aura must succeed on a Wisdom saving throw or be charmed (if you chose awe) or frightened (if you chose fear) until the aura ends. A creature that succeeds on this saving throw is immune to your aura for 24 hours.</p>
 </div>
 </div>`;
+    static setDragonAncestor(value) {
+        console.log(`Ancestor set to `)
+    }
     static giant = `<h4 class="text-center">Giant Soul<span class="ml-2"><button class="collapseButton" type="button"
 data-toggle="collapse" data-target="#Origin" aria-expanded="true"
 aria-controls="Origin">[-]</button></span></h4>
@@ -1034,9 +1040,7 @@ sorcerer spells for you, but they don't count against your number of sorcerer sp
 <hr>
 
 <div class="collapse show" id="featureMark">
-<p>Starting at 6th level, when you cast a spell that deals damage of the type associated with your
-draconic ancestry, you can add your Charisma modifier to one damage roll of that spell. At the same
-time, you can spend 1 sorcery point to gain resistance to that damage type for 1 hour.</p>
+<p>At 1st level, you discover innate magical abilities within yourself that are based on your giant heritage. Select one of the giant types from the Mark of the Ordning table. At 1st and 3rd level, you learn the spells associated with your choice, as shown in the table. These spells count as sorcerer spells for you, but they don't count against your number of sorcerer spells known.</p>
 <table class="table-striped table-hover mb-2">
 <thead>
     <tr>
@@ -1048,38 +1052,40 @@ time, you can spend 1 sorcery point to gain resistance to that damage type for 1
 <tbody>
     <tr>
         <td class="col-3">Cloud Giant</td>
-        <td class="col-3">fog cloud, minor illusion</a>
+        <td class="col-3">Fog cloud, Minor illusion</a>
         </td>
-        <td class="col-3">invisibility</td>
+        <td class="col-3">Invisibility</td>
     </tr>
     <tr>
         <td class="col-3">Fire Giant</td>
-        <td class="col-3">burning hands, fire bolt</td>
+        <td class="col-3">Burning hands, Fire bolt</td>
         <td class="col-3">flaming sphere</td>
     </tr>
     <tr>
         <td class="col-3">Frost Giant</td>
-        <td class="col-3">armor of Agathys, ray of frost</td>
-        <td class="col-3">hold person</td>
+        <td class="col-3">Armor of Agathys, Ray of frost</td>
+        <td class="col-3">Hold person</td>
     </tr>
     <tr>
         <td class="col-3">Hill Giant</td>
-        <td class="col-3">heroism, shillelagh</td>
-        <td class="col-3">enlarge/reduce</td>
+        <td class="col-3">Heroism, Shillelagh</td>
+        <td class="col-3">Enlarge/reduce</td>
     </tr>
     <tr>
         <td class="col-3">Stone Giant</td>
-        <td class="col-3">entangle, resistance</td>
-        <td class="col-3">spike growth</td>
+        <td class="col-3">Entangle, Resistance</td>
+        <td class="col-3">Spike growth</td>
     </tr>
     <tr>
         <td class="col-3">Storm Giant</td>
-        <td class="col-3">shocking grasp, thunderwave</td>
-        <td class="col-3">gust of wind</td>
+        <td class="col-3">Shocking grasp, Thunderwave</td>
+        <td class="col-3">Gust of wind</td>
     </tr>
 </tbody>
 </table>
 </div>
+
+<b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
 
 <h5>Soul of Lost Ostoria<span class="ml-2"><button class="collapseButton" type="button"
     data-toggle="collapse" data-target="#featureOstoria" aria-expanded="true"
@@ -1097,7 +1103,7 @@ farther away than a number of feet equal to 10 + your Constitution modifier.</p>
 equals your Constitution modifier (minimum of +1).</p>
 
 <p><b>Frost Giant.</b> Immediately after you cast any of your Mark of the Ordning spells, you gain
-temporary hit points equal to your Constitution modifier (minimum of 1). But if the spell is armor
+temporary hit points equal to your Constitution modifier (minimum of 1). But if the spell is Armor
 of Agathys, you instead increase its temporary hit points by an amount equal to your Constitution
 modifier (minimum of 1).</p>
 
@@ -1148,6 +1154,10 @@ turn. If you use that feature while under its effects, its increases to your siz
 reach, and walking speed are cumulative.</p>
 </div>
 </div>`;
+    static setMarkOfOrdning(value) {
+        console.log(`Mark set to `)
+    }
+
     static phoenix = `<h4 class="text-center">Phoenix Sorcery<span class="ml-2"><button class="collapseButton" type="button"
 data-toggle="collapse" data-target="#Origin" aria-expanded="true"
 aria-controls="Origin">[-]</button></span></h4>
@@ -1302,6 +1312,7 @@ and you are never completely at peace until you are near the sea.</p>
 <p>At 1st level, your tie to the sea grants you the ability to breathe underwater, and you have a swim
 speed equal to your walking speed.</p>
 </div>
+<b><u><em>THIS HAS TO BE IMPLEMENTED STILL!</em></u></b>
 
 <h5>Curse of the Sea<span class="ml-2"><button class="collapseButton" type="button"
     data-toggle="collapse" data-target="#featureCurse" aria-expanded="true"
@@ -1867,20 +1878,20 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         [20]
     ];
 
-        // Full character actions----------------------------------------------------------------------------------------------------------------------
-        static setSorcererClass() {
-            characterClass = SORCERER;
-            Character.setCharacterHitdice(6);
-            Character.setCharacterSavingThrows("Constitution", "Charisma");
-            Character.setClassSkills("Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion");
-            Character.setCharacterSkillsNumberToChoose(2);
-            Character.setCharacterFeatures("Sorcerous Origin", "Spellcasting");
-            Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
-            Character.setCharacterArmorProficiency("none");
-            Character.setCharacterSpellsKnown(4, 2, 0, 0, 0, 0, 0, 0, 0, 0);
-            Character.setClassSpells(1);
-            Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
-        }
+    // Full character actions----------------------------------------------------------------------------------------------------------------------
+    static setSorcererClass() {
+        characterClass = SORCERER;
+        Character.setCharacterHitdice(6);
+        Character.setCharacterSavingThrows("Constitution", "Charisma");
+        Character.setClassSkills("Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Sorcerous Origin", "Spellcasting");
+        Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
+        Character.setCharacterArmorProficiency("none");
+        Character.setCharacterSpellsKnown(4, 2, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setClassSpells(1);
+        Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
 
     //Sorcerer origins
     static setSorcererSubclass(subclass) {
@@ -1906,46 +1917,53 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
                 break;
             case "Draconic":
                 origin.innerHTML = this.draconic;
-                Character.addCharacterFeatures('Dragon Ancestor',"Draconic Resilience");
+                Character.addCharacterFeatures('Dragon Ancestor', "Draconic Resilience");
                 Character.setCharacterLanguageProficiencies("Draconic");
-                Character.setCharacterHitdice(6+(1*characterLevel));
-                characterArmorClass= 13 + abilityScores[2].mod.bind(abilityScores[2])();
-                console.log(`AC ist ${characterArmorClass} aber da muss generell noch eine AC calculation eingeführt werden.`)
+                Character.setCharacterHitdice(6 + (1 * characterLevel));
+                characterArmorClass = 13 + abilityScores[2].mod.bind(abilityScores[2])();
+                console.log(`AC ist ${characterArmorClass} aber es muss generell noch eine AC calculation eingeführt werden.`)
                 break;
             case "Giant Soul":
                 origin.innerHTML = this.giant;
+                Character.addCharacterFeatures("Jotun Resilience");
+                Character.setCharacterHitdice(6 + (1 * characterLevel));
                 break;
             case "Phoenix":
                 origin.innerHTML = this.phoenix;
+                Character.addCharacterFeatures('Ignite', "Mantle of Flame");
                 break;
             case "Sea":
                 origin.innerHTML = this.sea;
+                Character.addCharacterFeatures('Soul of the Sea', "Curse of the Sea");
                 break;
             case "Shadow":
                 origin.innerHTML = this.shadow;
+                Character.setCharacterVision("Darkvision 120 feet");
+                if (characterLevel>=3){
+                    Character.addSpellsByLevel(2, "Darkness");
+                }
+                Character.addCharacterFeatures('Eyes of the Dark', "Strength of the Grave");
                 break;
             case "Storm":
                 origin.innerHTML = this.storm;
+                Character.setCharacterLanguageProficiencies("Primordial");
+                Character.addCharacterFeatures('Wind Speaker', "Tempestuous Magic");
                 break;
             case "Wild Magic":
                 origin.innerHTML = this.wild;
+                Character.addCharacterFeatures('Wild Magic Surge', "Tides of Chaos");
                 break;
             default:
                 break;
         }
 
         Character.renderSpells();
-
         const lists = document.querySelectorAll('#cantripsList, #firstLevelList');
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
-
-        // firstLevelSpellsChosen = [...firstLevelSpells];
-
+        characterSubClass = subclass;
         this.fullCharacterUpdate();
-
-
         const featureOrigin = document.getElementById("SorcerousOriginFeatureSpan");
         featureOrigin.innerHTML = `: ${subclass}`;
         subClassNode.textContent = `(${subclass})`;

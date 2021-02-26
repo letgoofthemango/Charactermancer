@@ -442,6 +442,14 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
 <p>For example, if you're a 4th-level wizard, you can recover up to two levels worth of spell slots.</p>
 <p>You can recover either a 2nd-level spell slot or two 1st-level spell slots.</p>
 </div>
+
+<h5>Cantrip Versatility<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse"
+    data-target="#cantripVersatility" aria-expanded="true" aria-controls="cantripVersatility">[-]</button></span></h5>
+<hr>
+
+<div class="collapse show" id="cantripVersatility">
+<p>Starting at 1st level, whenever you gain a level in this class, you can replace one cantrip you learned from the Spellcasting feature with another cantrip from the wizard spell list.</p>
+</div>
 </div>`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 4`, `<p>wizard 5`, `<p>wizard 6`, `<p>wizard 7`, `<p>wizard 8`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`, `<p>wizard 3`, `<p>wizard 2`];
     static wizardFeaturesList = [
         [`<li>
@@ -469,31 +477,26 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
         [20]
     ];
 
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 3) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Wizard")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Wizard")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Wizard Spell level error');
+    static setWizardClass() {
+        characterClass = WIZARD;
+        Character.setCharacterHitdice(6);
+        Character.setCharacterSavingThrows("Wisdom", "Intelligence");
+        Character.setClassSkills("Arcana", "History", "Insight", "Investigation", "Medicine", "Religion");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Arcane Recovery", "Spellcasting", "Cantrip Versatility");
+        Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
+        Character.setCharacterArmorProficiency("none");
+        Character.setCharacterSpellsKnown(3, 2, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setClassSpells(1);
+        Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
+    static displayWizardFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Wizard.wizardFeaturesByLevel[i];
         }
     }
+
+
 }

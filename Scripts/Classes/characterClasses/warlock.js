@@ -1,4 +1,7 @@
 class Warlock extends Character {
+    invocationsPossible = 0;
+    invocationsKnown = [];
+
     static warlockFeaturesByLevel = [`<h1 class="text-center">Warlock<span class="ml-2"><button class="collapseButton" type="button"
 data-toggle="collapse" data-target="#collapseIntro" aria-expanded="true"
 aria-controls="collapseIntro">[-]</button></span></h1>
@@ -302,17 +305,17 @@ data-target="#level1" aria-expanded="true" aria-controls="level1">[-]</button></
         <div class="collapse show mb-2" id="featurePatron">
             <p>At 1st level, you have struck a bargain with an otherworldly being chosen from the list of available patrons. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.</p>
             <div class="d-flex justify-content-around row">
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="archfey">Archfey</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="celestial">Celestial</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fathomless">Fathomless</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="fiend">Fiend</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="genie">Genie</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="greatOldOne">Great Old One</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="hexBlade">Hexblade</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="ravenQueen">Raven Queen</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="seeker">Seeker</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undead">Undead</button>
-                <button onclick="Warlock.setWarlockSubclass(this.id)" type="button" class="btn btn-secondary" id="undying">Undying</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Archfey">Archfey</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Celestial">Celestial</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Fathomless">Fathomless</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Fiend">Fiend</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Genie">Genie</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Great Old One">Great Old One</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Hexblade">Hexblade</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Raven Queen">Raven Queen</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Seeker">Seeker</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Undead">Undead</button>
+                <button onclick="Warlock.setWarlockSubclass(this.value)" type="button" class="btn btn-secondary" value="Undying">Undying</button>
             </div>
             <div id="warlockPatron" class="choiceBG"></div>
         </div>
@@ -384,24 +387,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">faerie fire, sleep</td>
+        <td class="col-10">Faerie fire, Sleep</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">calm emotions, phantasmal force</td>
+        <td class="col-10">Calm emotions, Phantasmal force</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">blink, plant growth</td>
+        <td class="col-10">blink, Plant growth</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">dominate beast, greater invisibility</a>
+        <td class="col-10">Dominate beast, Greater invisibility</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">dominate person, seeming</td>
+        <td class="col-10">Dominate person, Seeming</td>
     </tr>
 </tbody>
 </table>
@@ -471,24 +474,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">cure wounds, guiding bolt</td>
+        <td class="col-10">Cure wounds, Guiding bolt</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">flaming sphere, lesser restoration</td>
+        <td class="col-10">Flaming sphere, Lesser restoration</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">daylight, revivify</td>
+        <td class="col-10">Daylight, Revivify</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">guardian of faith, wall of fire</a>
+        <td class="col-10">Guardian of faith, Wall of fire</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">flame strike, greater restoration</td>
+        <td class="col-10">Flame strike, Greater restoration</td>
     </tr>
 </tbody>
 </table>
@@ -571,24 +574,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">create or destroy water, thunderwave</td>
+        <td class="col-10">Create or destroy water, Thunderwave</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">gust of wind, silence</td>
+        <td class="col-10">Gust of wind, Silence</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">lightning bolt, sleet storm</td>
+        <td class="col-10">Lightning bolt, Sleet storm</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">control water, summon elemental (water only)</a>
+        <td class="col-10">Control water, Summon elemental (water only)</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">	Bigby's hand (appears as a tentacle), cone of cold</td>
+        <td class="col-10">	Bigby's hand (appears as a tentacle), Cone of cold</td>
     </tr>
 </tbody>
 </table>
@@ -600,7 +603,7 @@ following spells are added to the warlock spell list for you.</p>
 </h5>
 <hr>
 <div class="collapse show" id="featureTentacle">
-<p>You can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.</p>
+<p>Starting at 1st level you can magically summon a spectral tentacle that strikes at your foes. As a bonus action, you create a 10-foot-long tentacle at a point you can see within 60 feet of you. The tentacle lasts for 1 minute or until you use this feature to create another tentacle.</p>
 <p>When you create the tentacle, you can make a melee spell attack against one creature within 10 feet of it. On a hit, the target takes 1d8 cold damage, and its speed is reduced by 10 feet until the start of your next turn. When you reach 10th level in this class, the damage increases to 2d8.</p>
 <p>As a bonus action on your turn, you can move the tentacle up to 30 feet and repeat the attack.</p>
 <p>You can summon the tentacle a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
@@ -612,7 +615,7 @@ following spells are added to the warlock spell list for you.</p>
 </h5>
 <hr>
 <div class="collapse show" id="featureGift">
-<p>You gain a swimming speed of 40 feet, and you can breathe underwater.</p>
+<p>At 1st level you gain a swimming speed of 40 feet, and can breathe underwater.</p>
 </div>
 
 <h5>Oceanic Soul<span class="ml-2"><button class="collapseButton" type="button"
@@ -680,24 +683,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">burning hands, command</td>
+        <td class="col-10">Burning hands, Command</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">blindness/deafness, scorching ray</td>
+        <td class="col-10">Blindness/deafness, Scorching ray</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">fireball, stinking cloud</td>
+        <td class="col-10">Fireball, Stinking cloud</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10"> fire shield, wall of fire</a>
+        <td class="col-10">Fire shield, Wall of fire</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">flame strike, hallow</td>
+        <td class="col-10">Flame strike, Hallow</td>
     </tr>
 </tbody>
 </table>
@@ -821,51 +824,51 @@ with the spells associated in the table with your patron's kind: dao, djinni, ef
 <tbody>
     <tr>
         <td class="col-1 text-center">1st</td>
-        <td class="col-2-2">detect evil and good</td>
-        <td class="col-2-2">sanctuary</td>
-        <td class="col-2-2">thunderwave</td>
-        <td class="col-2-2">burning hands</td>
-        <td class="col-2-2">fog cloud</td>
+        <td class="col-2-2">Detect evil and good</td>
+        <td class="col-2-2">Sanctuary</td>
+        <td class="col-2-2">Thunderwave</td>
+        <td class="col-2-2">Burning hands</td>
+        <td class="col-2-2">Fog cloud</td>
     </tr>
     <tr>
         <td class="col-1 text-center">2nd</td>
-        <td class="col-2-2">phantasmal force</td>
-        <td class="col-2-2">spike growth</td>
-        <td class="col-2-2">gust of wind</td>
-        <td class="col-2-2">scorching ray</td>
-        <td class="col-2-2">blur</td>
+        <td class="col-2-2">Phantasmal force</td>
+        <td class="col-2-2">Spike growth</td>
+        <td class="col-2-2">Gust of wind</td>
+        <td class="col-2-2">Scorching ray</td>
+        <td class="col-2-2">Blur</td>
     </tr>
     <tr>
         <td class="col-1 text-center">3rd</td>
-        <td class="col-2-2">create food and water</td>
-        <td class="col-2-2">meld into stone</td>
-        <td class="col-2-2">wind wall
+        <td class="col-2-2">Create food and water</td>
+        <td class="col-2-2">Meld into stone</td>
+        <td class="col-2-2">Wind wall
         </td>
-        <td class="col-2-2">fireball</td>
-        <td class="col-2-2">sleet storm</td>
+        <td class="col-2-2">Fireball</td>
+        <td class="col-2-2">Sleet storm</td>
     </tr>
     <tr>
         <td class="col-1 text-center">4th</td>
-        <td class="col-2-2">phantasmal killer
+        <td class="col-2-2">Phantasmal killer
         </td>
-        <td class="col-2-2">stone shape
+        <td class="col-2-2">Stone shape
         </td>
-        <td class="col-2-2">greater invisibility
+        <td class="col-2-2">Greater invisibility
         </td>
-        <td class="col-2-2">fire shield</td>
-        <td class="col-2-2">control water</td>
+        <td class="col-2-2">Fire shield</td>
+        <td class="col-2-2">Control water</td>
     </tr>
     <tr>
         <td class="col-1 text-center">5th</td>
-        <td class="col-2-2">creation</td>
-        <td class="col-2-2">wall of stone</td>
-        <td class="col-2-2">seeming</td>
-        <td class="col-2-2">flame strike</td>
-        <td class="col-2-2">cone of cold</td>
+        <td class="col-2-2">Creation</td>
+        <td class="col-2-2">Wall of stone</td>
+        <td class="col-2-2">Seeming</td>
+        <td class="col-2-2">Flame strike</td>
+        <td class="col-2-2">Cone of cold</td>
     </tr>
     <tr>
         <td class="col-1 text-center">9th</td>
-        <td class="col-2-2">wish</td>
+        <td class="col-2-2">Wish</td>
         <td class="col-2-2">—</td>
         <td class="col-2-2">—</td>
         <td class="col-2-2">—</td>
@@ -874,6 +877,7 @@ with the spells associated in the table with your patron's kind: dao, djinni, ef
 </tbody>
 </table>
 </div>
+<b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
 
 <h5>Genie's Vessel<span class="ml-2"><button class="collapseButton" type="button"
     data-toggle="collapse" data-target="#featureVessel" aria-expanded="true"
@@ -885,7 +889,6 @@ with the spells associated in the table with your patron's kind: dao, djinni, ef
 a Tiny object, and you can use it as a spellcasting focus for your warlock spells. You decide what
 the object is, or you can determine what it is randomly by rolling on the Genie's Vessel table.</p>
 <table class="table-striped table-hover mb-2">
-<caption>Genie's Vessel</caption>
 <thead>
     <tr>
         <th class="col-2 text-center"><span>d6</span>
@@ -920,10 +923,12 @@ the object is, or you can determine what it is randomly by rolling on the Genie'
     </tr>
 </tbody>
 </table>
+<b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>
+
 <p>While you are touching the vessel, you can use it in the following ways:</p>
 <p><b>Bottled Respite.</b> As an action, you can magically vanish and enter your vessel, which remains in the space you left. The interior of the vessel is an extradimensional space in the shape of a 20-foot-radius cylinder, 20 feet high, and resembles your vessel. The interior is appointed with cushions and low tables and is a comfortable temperature. While inside, you can hear the area around your vessel as if you were in its space. You can remain inside the vessel up to a number of hours equal to twice your proficiency bonus. You exit the vessel early if you use a bonus action to leave, if you die, or if the vessel is destroyed. When you exit the vessel, you appear in the unoccupied space closest to it. Any objects left in the vessel remain there until carried out, and if the vessel is destroyed, every object stored there harmlessly appears in the unoccupied spaces closest to the vessel's former space. Once you enter the vessel, you can't enter again until you finish a long rest.</p>
-<p>Genie's Wrath. Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage.</p>
-<p>If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die.</p>
+<p><b>Genie's Wrath.</b> Once during each of your turns when you hit with an attack roll, you can deal extra damage to the target equal to your proficiency bonus. The type of this damage is determined by your patron: bludgeoning (dao), thunder (djinni), fire (efreeti), or cold (marid).</p>
+<p>The vessel's AC equals your spell save DC. Its hit points equal your warlock level plus your proficiency bonus, and it is immune to poison and psychic damage. If the vessel is destroyed or you lose it, you can perform a 1-hour ceremony to receive a replacement from your patron. This ceremony can be performed during a short or long rest, and the previous vessel is destroyed if it still exists. The vessel vanishes in a flare of elemental power when you die.</p>
 </div>
 
 <h5>Elemental Gift<span class="ml-2"><button class="collapseButton" type="button"
@@ -989,24 +994,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">dissonant whispers, Tasha's hideous laughter</td>
+        <td class="col-10">Dissonant whispers, Tasha's hideous laughter</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">detect thoughts, phantasmal force</td>
+        <td class="col-10">Detect thoughts, Phantasmal force</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">clairvoyance, sending</td>
+        <td class="col-10">Clairvoyance, Sending</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">dominate beast, Evard's black tentacles</a>
+        <td class="col-10">Dominate beast, Evard's black tentacles</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10"> dominate person, telekinesis</td>
+        <td class="col-10">Dominate person, Telekinesis</td>
     </tr>
 </tbody>
 </table>
@@ -1088,24 +1093,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">shield, wrathful smite</td>
+        <td class="col-10">Shield, Wrathful smite</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">blur, branding smite</td>
+        <td class="col-10">Blur, Branding smite</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">blink, elemental weapon</td>
+        <td class="col-10">Blink, Elemental weapon</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">phantasmal killer, staggering smite</a>
+        <td class="col-10">Phantasmal killer, Staggering smite</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">banishing smite, cone of cold</td>
+        <td class="col-10">Banishing smite, Cone of cold</td>
     </tr>
 </tbody>
 </table>
@@ -1191,24 +1196,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">false life, sanctuary</td>
+        <td class="col-10">False life, Sanctuary</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">silence, spiritual weapon</td>
+        <td class="col-10">Silence, Spiritual weapon</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">feign death, speak with dead</td>
+        <td class="col-10">Feign death, Speak with dead</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">ice storm, locate creature</a>
+        <td class="col-10">Ice storm, Locate creature</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">commune, cone of cold</td>
+        <td class="col-10">Commune, Cone of cold</td>
     </tr>
 </tbody>
 </table>
@@ -1280,24 +1285,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">feather fall, jump</td>
+        <td class="col-10">Feather fall, Jump</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">levitate, locate object</td>
+        <td class="col-10">Levitate, Locate object</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">clairvoyance, sending</td>
+        <td class="col-10">Clairvoyance, Sending</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">arcane eye, locate creature</a>
+        <td class="col-10">Arcane eye, Locate creature</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">legend lore, passwall</td>
+        <td class="col-10">Legend lore, Passwall</td>
     </tr>
 </tbody>
 </table>
@@ -1368,24 +1373,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">bane, false life</td>
+        <td class="col-10">Bane, False life</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">blindness/deafness, phantasmal force</td>
+        <td class="col-10">Blindness/deafness, Phantasmal force</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">speak with dead, phantom steed</td>
+        <td class="col-10">Speak with dead, Phantom steed</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">death ward, greater invisibility</a>
+        <td class="col-10">Death ward, Greater invisibility</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">antilife shell, cloudkill</td>
+        <td class="col-10">Antilife shell, Cloudkill</td>
     </tr>
 </tbody>
 </table>
@@ -1471,24 +1476,24 @@ following spells are added to the warlock spell list for you.</p>
 <tbody>
     <tr>
         <td class="col-2 text-center">1st</td>
-        <td class="col-10">false life, ray of sickness</td>
+        <td class="col-10">False life, Ray of sickness</td>
     </tr>
     <tr>
         <td class="col-2 text-center">2nd</td>
-        <td class="col-10">blindness/deafness, silence</td>
+        <td class="col-10">Blindness/deafness, Silence</td>
     </tr>
     <tr>
         <td class="col-2 text-center">3rd</td>
-        <td class="col-10">feign death, speak with dead</td>
+        <td class="col-10">Feign death, Speak with dead</td>
     </tr>
     <tr>
         <td class="col-2 text-center">4th</td>
-        <td class="col-10">aura of life, death ward</a>
+        <td class="col-10">Aura of life, Death ward</a>
         </td>
     </tr>
     <tr>
         <td class="col-2 text-center">5th</td>
-        <td class="col-10">contagion, legend lore</td>
+        <td class="col-10">Contagion, Legend lore</td>
     </tr>
 </tbody>
 </table>
@@ -1536,69 +1541,83 @@ following spells are added to the warlock spell list for you.</p>
 </div>`;
 
     static setWarlockSubclass(subclass) {
+        Character.fullCharacterReset();
+        this.setWarlockClass();
         const patron = document.getElementById("warlockPatron");
-        const featurepatron = document.getElementById("patron");
         characterSubClass = null;
         switch (subclass) {
-            case "archfey":
-                characterSubClass = "(Archfey)";
+            case "Archfey":
                 patron.innerHTML = this.archfey;
-                featurepatron.innerHTML = ": Archfey";
+                Character.addCharacterFeatures('Fey Presence');
+                Character.addSpellsByLevel(1, "FaerieFire", "Sleep");
                 break;
-            case "celestial":
-                characterSubClass = "(Celestial)";
+            case "Celestial":
                 patron.innerHTML = this.celestial;
-                featurepatron.innerHTML = ": Celestial";
+                Character.addCharacterFeatures('Healing Light');
+                Character.addSpellsByLevel(0, "SacredFlame", "Light");
+                Character.addSpellsByLevel(1, "CureWounds", "GuidingBolt");
                 break;
-            case "fathomless":
-                characterSubClass = "(Fathomless)";
+            case "Fathomless":
                 patron.innerHTML = this.fathomless;
-                featurepatron.innerHTML = ": Fathomless";
+                Character.addCharacterFeatures('Tentacle of the Deeps');
+                Character.addSpellsByLevel(1, "CreateWater", "Thunderwave");
+                Character.setCharacterSwimmingSpeed(40);
                 break;
-            case "fiend":
-                characterSubClass = "(Fiend)";
+            case "Fiend":
                 patron.innerHTML = this.fiend;
-                featurepatron.innerHTML = ": Fiend";
+                Character.addCharacterFeatures('Dark One\'s Blessing');
+                Character.addSpellsByLevel(1, "BurningHands", "Command");
                 break;
-            case "genie":
-                characterSubClass = "(Genie)";
-                patron.innerHTML = this.genie;
-                featurepatron.innerHTML = ": Genie";
+                case "Genie":
+                    patron.innerHTML = this.genie;
+                    Character.addSpellsByLevel(1, "DetectEvil");
+                    Character.addCharacterFeatures('Genie\'s Vessel');
                 break;
-            case "greatOldOne":
-                characterSubClass = "(Great Old One)";
+            case "Great Old One":
                 patron.innerHTML = this.greatOldOne;
-                featurepatron.innerHTML = ": Great Old One";
+                Character.addCharacterFeatures('Awakened Mind');
+                Character.addSpellsByLevel(1, "DissonantWhispers", "TashasHideousLaughter");
                 break;
-            case "hexBlade":
-                characterSubClass = "(Hexblade)";
+            case "Hexblade":
                 patron.innerHTML = this.hexBlade;
-                featurepatron.innerHTML = ": Hexblade";
+                Character.addCharacterFeatures('Hexblade\'s Curse', "Hex Warrior");
+                Character.addSpellsByLevel(1, "Shield", "WrathfulSmite");
+                Character.setCharacterArmorProficiency("medium", "shields");
+                Character.setCharacterWeaponProficiencies("MartialWeapons");
                 break;
-            case "ravenQueen":
-                characterSubClass = "(Raven Queen)";
+            case "Raven Queen":
                 patron.innerHTML = this.ravenQueen;
-                featurepatron.innerHTML = ": Raven Queen";
+                Character.addCharacterFeatures('Sentinel Raven');
+                Character.addSpellsByLevel(1, "", "Sanctuary");
                 break;
-            case "seeker":
-                characterSubClass = "(Seeker)";
+            case "Seeker":
                 patron.innerHTML = this.seeker;
-                featurepatron.innerHTML = ": Seeker";
+                Character.addCharacterFeatures('Shielding Aurora');
+                Character.addSpellsByLevel(1, "FeatherFall", "Jump");
                 break;
-            case "undead":
-                characterSubClass = "(Undead)";
+            case "Undead":
                 patron.innerHTML = this.undead;
-                featurepatron.innerHTML = ": Undead";
+                Character.addCharacterFeatures('Form of Dread');
+                Character.addSpellsByLevel(1, "Bane", "FalseLife");
                 break;
-            case "undying":
-                characterSubClass = "(Undying)";
+            case "Undying":
                 patron.innerHTML = this.undying;
-                featurepatron.innerHTML = ": Undying";
-                break;
-            default:
+                Character.addCharacterFeatures('Among the Dead');
+                Character.addSpellsByLevel(0, "SpareTheDying");
+                Character.addSpellsByLevel(1, "FalseLife", "RayOfSickness");
                 break;
         }
-        subClassNode.textContent = characterSubClass;
+        Character.renderSpells();
+        const lists = document.querySelectorAll('#cantripsList, #firstLevelList');
+        for (const i of lists) {
+            i.classList.toggle("toBeAdded");
+        }
+        characterSubClass = subclass;
+
+        this.fullCharacterUpdate();
+        const featurepatron = document.getElementById("OtherworldlyPatronFeatureSpan");
+        featurepatron.innerHTML = `: ${subclass}`;
+        subClassNode.textContent = `(${subclass})`;
     }
 
     static warlockFeaturesList = [
@@ -1625,31 +1644,25 @@ following spells are added to the warlock spell list for you.</p>
         [20]
     ];
 
-    static setSpellLevel() {
-        let spellLevel;
-        if (characterLevel <= 2) {
-            spellLevel = document.querySelectorAll('#cantrips, #firstLevel');
-            spellLevel.forEach((element) => {
-                element.hidden = false;
-            });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes("Warlock")) {
-                    cantripSpells.push(spell[0].name);
-                }
-            })
-            spells.forEach((spell) => {
-                if (spell[0].level == 1 && spell[0].classes.includes("Warlock")) {
-                    firstLevelSpells.push(spell[0].name);
-                }
-            })
-            cantripSpells.forEach((spell) => {
-                cantripsListNode.innerHTML += `<li>${spell}</li>`;
-            })
-            firstLevelSpells.forEach((spell) => {
-                firstLevelListNode.innerHTML += `<li>${spell}</li>`;
-            })
-        } else {
-            console.log('Warlock Spell level error');
+    static setWarlockClass() {
+        characterClass = WARLOCK;
+        Character.setCharacterHitdice(8);
+        Character.setCharacterSavingThrows("Wisdom", "Charisma");
+        Character.setClassSkills("Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion");
+        Character.setCharacterSkillsNumberToChoose(2);
+        Character.setCharacterFeatures("Otherworldly Patron", "Pact Magic");
+        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterArmorProficiency("light");
+        Character.setCharacterSpellsKnown(2, 2, 0, 0, 0, 0, 0, 0, 0, 0);
+        Character.setClassSpells(1);
+        Character.setCharacterSpellSlots(1, 0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
+    static displayWarlockFeaturesByLevel() {
+        const classDetailsNode = document.getElementById("showClassDetails");
+        for (let i = 0; i < characterLevel; i++) {
+            classDetailsNode.innerHTML += Warlock.warlockFeaturesByLevel[i];
         }
     }
+
 }

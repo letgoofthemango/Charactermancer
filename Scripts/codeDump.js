@@ -1163,3 +1163,6 @@ static addSpellsByLevel(number, ...args) {
         console.log(this.possibleSpells[number]);
     })
 }
+
+
+<b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b>

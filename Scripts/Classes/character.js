@@ -326,13 +326,7 @@ class Character {
                 languageProficiencies.push(language[0].name);
             }
         })
-        // if (languageProficiencies.length > 0) {
-        //     languageNode.hidden = false;
-        // } else {
-        //     languageNode.hidden = true;
-        // }
         languageProficienciesNode.textContent = languageProficiencies.join(", ");
-        // console.log(languageProficiencies);
     }
 
     static resetCharacterLanguageProficiencies() {
@@ -380,6 +374,14 @@ class Character {
 
     static setCharacterFeatures(...args) {
         characterFeatures = [...args];
+    }
+
+    static resetCharacterVision() {
+        characterVision = null;
+    }
+
+    static setCharacterVision(vision) {
+        characterVision = vision;
     }
 
 
@@ -653,13 +655,13 @@ class Character {
 
 
     static updateCharacterInitiative() {
-        let initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
+        initiativeMod = abilityScores[1].mod.bind(abilityScores[1])();
         initiativeNode.textContent = App.getNumber(initiativeMod);
     }
 
 
     static updateCharacterPassivePerception() {
-        let passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
+        passivePerception = 10 + abilityScores[4].mod.bind(abilityScores[4])();
         passivePerceptionNode.textContent = passivePerception;
     }
 
@@ -679,6 +681,47 @@ class Character {
         })
     }
 
+    static setCharacterWalkingSpeed(value) {
+        characterWalkingSpeed = value;
+    }
+    static setCharacterClimbingSpeed(value) {
+        characterClimbingSpeed = value;
+    }
+    static setCharacterSwimmingSpeed(value) {
+        characterSwimingSpeed = value;
+    }
+    static setCharacterFlyingSpeed(value) {
+        characterFlyingSpeed = value;
+    }
+
+    static resetsetCharacterSpeed() {
+        characterWalkingSpeed = 0;
+        characterClimbingSpeed = 0;
+        characterSwimingSpeed = 0;
+        characterFlyingSpeed = 0;
+    }
+
+    static updateCharacterSpeeds() {
+        if (characterWalkingSpeed <= 0 && characterClimbingSpeed <= 0 && characterSwimingSpeed <= 0 && characterFlyingSpeed <= 0) {
+            SpeedNode.hidden = true;
+        } else {
+            SpeedNode.hidden = false;
+        }
+        let speeds=[];
+        if (characterWalkingSpeed >= 1) {
+            speeds.push(`${characterWalkingSpeed} feet`)
+        }
+        if (characterClimbingSpeed >= 1) {
+            speeds.push(`${characterClimbingSpeed} feet climbing`)
+        }
+        if (characterSwimingSpeed >= 1) {
+            speeds.push(`${characterSwimingSpeed} feet swimming`)
+        }
+        if (characterFlyingSpeed >= 1) {
+            speeds.push(`${characterFlyingSpeed} feet flying`)
+        }
+        SpeedsNode.innerText = speeds.join(", ");
+    }
 
 
 
@@ -689,6 +732,7 @@ class Character {
         this.updateCharacterHitPoints();
         this.updateSkills();
         this.updateCharacterStats();
+        this.updateCharacterSpeeds();
         this.updateCharacterArmorProficiencies();
         this.updateCharacterWeaponProficiencies();
         this.updateCharacterToolProficiencies();
@@ -707,6 +751,8 @@ class Character {
         this.resetCharacterLanguageProficiencies();
         this.resetCharacterToolProficiencies();
         this.resetCharacterSkills();
+        this.resetsetCharacterSpeed();
+        this.resetCharacterVision();
         this.resetCharacterSavingThrows();
         this.setCharacterSkillsNumberToChoose(null);
         this.resetSkillNodes();
