@@ -50,6 +50,7 @@ h5,
 h6 {
   font-family: "Modesto", sans-serif;
   color: #58180d;
+  letter-spacing: 1px;
 }
 
 p,
@@ -93,13 +94,14 @@ html {
 } 
 
 #characterOverview {
-  float: right;
+  float: left;
   height: 95vh;
-  width: 19vw;
+  width: 18vw;
   position: fixed;
-  right: 1vw;
+  left: 1vw;
   top: 2.5vh;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-color: #58180d rgba(255, 255, 255, 0);
   border: black 1px solid;
 }
 

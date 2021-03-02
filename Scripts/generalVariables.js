@@ -128,7 +128,7 @@ let skills = [{
 
 let possibleSkills = [];
 let chosenCharacterSkills = [];
-let numberOfSkillsToChoose;
+let numberOfSkillsToChoose=2;
 
 
 //Skills
@@ -153,9 +153,11 @@ let survivalMod = skills[17].mod; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
+let maxToolProficiencies;
 
 // Language proficiencies
 let languageProficiencies = [];
+let maxLanguageProficiencies = [];
 
 
 
@@ -169,6 +171,7 @@ let characterEquipment = [];
 
 //Feats
 let characterFeats = [];
+let maxcharacterFeats = [];
 
 
 //Attacks

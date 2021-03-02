@@ -977,25 +977,27 @@
 
 
 
-let testy = 2;
-function setupCheckboxes(id) {
+let testy = 3;
+
+
+function setupSkillCheckboxes(id, referenceArray) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
-        node.addEventListener("change", checkBoxes(node))
+        node.addEventListener("change", (event) => {
+            skillsCheckBoxesHandler(event, nodes, referenceArray);
+        })
     });
 }
-setupCheckboxes("skillsDiv");
+setupSkillCheckboxes("skillsDiv", chosenCharacterSkills);
 
-
-
-
-function checkBoxes(node) {
+function skillsCheckBoxesHandler(event, nodes, referenceArray) {
+    const node = event.target;
     if (node.checked == true) {
-        chosenCharacterSkills.push(node.value);
-        if (chosenCharacterSkills.length >= testy) {
+        referenceArray.push(node.value);
+        if (referenceArray.length >= testy) {
             nodes.forEach((node) => {
-                if (chosenCharacterSkills.includes(node.value)) {
+                if (referenceArray.includes(node.value)) {
                     node.disabled = false;
                 } else {
                     node.disabled = true;
@@ -1003,13 +1005,16 @@ function checkBoxes(node) {
             });
         }
         console.log("ist jetzt haken");
+
     } else if (node.checked == false) {
-        for (let i = 0; i < chosenCharacterSkills.length; i++) {
-            if (chosenCharacterSkills[i] === node.value) {
-                chosenCharacterSkills.splice(i, 1);
+        // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
+        for (var i = 0; i < referenceArray.length; i++) {
+            if (referenceArray[i] === node.value) {
+                referenceArray.splice(i, 1);
+                break
             }
         }
-        if (chosenCharacterSkills.length < testy) {
+        if (referenceArray.length < testy) {
             nodes.forEach((node) => {
                 node.disabled = false;
             });
@@ -1020,7 +1025,68 @@ function checkBoxes(node) {
 }
 
 
-characterToolsProficiencies= ["Thieves", "Tinker"];
-function radios(){
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+characterToolsProficiencies = ["Thieves", "Tinker"];
+
+function setupRadios(id, referenceArray, referenceVariable) {
+    const inputs = document.getElementById(id).getElementsByTagName("input");
+    const nodes = Array.from(inputs);
+    nodes.forEach((node) => {
+        node.addEventListener("change", (event) => {
+            radiosHandler(event, nodes, referenceArray, referenceVariable);
+        })
+    });
+}
+setupRadios("ToolsDiv",characterToolsProficiencies, 3);
+
+
+function radiosHandler(event, nodes, referenceArray, referenceVariable) {
+    Character.setCharacterToolProficiencies("Thieves", "Tinker");
+    const node = event.target;
+    if (node.checked == true) {
+        if (referenceArray.length >= referenceVariable) {
+            referenceArray.pop();
+        }
+        referenceArray.push(node.value);
+        if (referenceArray.length >= 1) {
+            nodes.forEach((node) => {
+                if (referenceArray.includes(node.value)) {
+                }
+            });
+        }
+        console.log("ist jetzt ausgewählt");
+
+    }
+    console.log(referenceArray);
 }

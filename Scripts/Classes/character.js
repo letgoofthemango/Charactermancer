@@ -258,10 +258,10 @@ class Character {
         let node = document.getElementById(`summary${skill}`);
         if (skills[skillNumber].proficiency == 1 || skills[skillNumber].proficiency == 2 || skills[skillNumber].proficiency == 3) {
             node.classList.add('toBeAdded');
-            node.removeAttribute('hidden');
+            node.hidden=false;
         } else {
             node.classList.remove('toBeAdded');
-            node.setAttribute('hidden', true);
+            node.hidden=true;
         }
 
         chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
@@ -290,7 +290,7 @@ class Character {
         const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
         skills.forEach((skill) => {
             skill.classList.add("toBeAdded");
-            skill.removeAttribute('hidden');
+            skill.hidden=false;
         })
     }
 
@@ -310,7 +310,7 @@ class Character {
         const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
         skills.forEach((skill) => {
             skill.classList.add("toBeAdded");
-            skill.removeAttribute('hidden');
+            skill.hidden=false;
         })
     }
 
@@ -443,9 +443,9 @@ class Character {
             firstLevelListNode.append(newLi);
         })
         if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
-            spellsHeadingNode.setAttribute('hidden', false);
+            spellsHeadingNode.hidden=false;
         } else {
-            spellsHeadingNode.setAttribute('hidden', true);
+            spellsHeadingNode.hidden=true;
         }
     }
 
