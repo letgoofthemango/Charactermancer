@@ -1288,7 +1288,7 @@ let spells = new Map([
     }]],
 
     ["CreateBonfire", [{
-        name: "Create Bonfire",
+        name: "Create bonfire",
         source: "XGE",
         level: 0,
         castingTime: "Action",

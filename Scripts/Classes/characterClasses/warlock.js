@@ -1583,7 +1583,7 @@ following spells are added to the warlock spell list for you.</p>
                 Character.addCharacterFeatures('Hexblade\'s Curse', "Hex Warrior");
                 Character.addSpellsByLevel(1, "Shield", "WrathfulSmite");
                 Character.setCharacterArmorProficiency("medium", "shields");
-                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.setCharacterWeaponProficiencies("martialWeapons");
                 break;
             case "Raven Queen":
                 patron.innerHTML = this.ravenQueen;
@@ -1651,7 +1651,7 @@ following spells are added to the warlock spell list for you.</p>
         Character.setClassSkills("Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Otherworldly Patron", "Pact Magic");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterWeaponProficiencies("simpleWeapons");
         Character.setCharacterArmorProficiency("light");
         Character.setCharacterSpellsKnown(2, 2, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setClassSpells(1);

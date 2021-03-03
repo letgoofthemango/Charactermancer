@@ -1886,7 +1886,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         Character.setClassSkills("Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Sorcerous Origin", "Spellcasting");
-        Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
+        Character.setCharacterWeaponProficiencies("dagger", "dart", "sling", "quarterstaff", "lightCrossbow");
         Character.setCharacterArmorProficiency("none");
         Character.setCharacterSpellsKnown(4, 2, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setClassSpells(1);

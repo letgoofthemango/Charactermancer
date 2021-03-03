@@ -444,7 +444,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setClassSkills("Acrobatics", "AnimalHandling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Fighting Style", "Martial Versatility", "Second Wind");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterWeaponProficiencies("simpleWeapons", "martialWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "heavy", "shields");
     }
 

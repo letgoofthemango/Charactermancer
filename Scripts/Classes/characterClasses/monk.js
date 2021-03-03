@@ -348,7 +348,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setClassSkills("Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Unarmored Defense", "Martial Arts", "Monk Weapons");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons", "Shortsword");
+        Character.setCharacterWeaponProficiencies("simpleWeapons", "shortsword");
         Character.setCharacterArmorProficiency("none");
     }
 

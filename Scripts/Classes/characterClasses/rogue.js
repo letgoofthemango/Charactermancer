@@ -434,7 +434,7 @@ Attack column of the Rogue table.</p>
         Character.setCharacterSkillsNumberToChoose(4);
         Character.setCharacterFeatures("Expertise", "Sneak Attack", "Thieves' Cant");
         Character.setCharacterLanguageProficiencies("Thieves");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons", "HandCrossbow", "Longsword", "Rapier", "Shortsword");
+        Character.setCharacterWeaponProficiencies("simpleWeapons", "handCrossbow", "longsword", "rapier", "shortsword");
         Character.setCharacterArmorProficiency("light");
     }
 }

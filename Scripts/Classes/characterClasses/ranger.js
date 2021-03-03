@@ -495,7 +495,7 @@ traveling for an hour or more:</p>
         Character.setClassSkills("AnimalHandling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival");
         Character.setCharacterSkillsNumberToChoose(3);
         Character.setCharacterFeatures("Favored Enemy", "Natural Explorer");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterWeaponProficiencies("simpleWeapons", "martialWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
     }
 }

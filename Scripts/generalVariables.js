@@ -90,7 +90,7 @@ let characterFightingStyle;
 let skills = [{
     name: "Acrobatics", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0, // 0=unproficient, 1=halfproficient, 2=proficient, 3=Expertise
 }, {
-    name: "Animal Handling", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
+    name: "Animal handling", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }, {
     name: "Arcana", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
@@ -118,7 +118,7 @@ let skills = [{
 }, {
     name: "Religion", proficiency: 0, calcStat: abilityScores[3].mod.bind(abilityScores[3]), mod: 0,
 }, {
-    name: "Sleight of Hand", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
+    name: "Sleight of hand", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
 }, {
     name: "Stealth", proficiency: 0, calcStat: abilityScores[1].mod.bind(abilityScores[1]), mod: 0,
 }, {
@@ -153,6 +153,7 @@ let survivalMod = skills[17].mod; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
+let possibleToolChoices=[];
 let maxToolProficiencies;
 
 // Language proficiencies
@@ -287,10 +288,6 @@ const acNode = document.getElementById("summaryAC");
 const initiativeNode = document.getElementById("summaryInitiative");
 const SpeedNode = document.getElementById("summarySpeed");
 const SpeedsNode = document.getElementById("summarySpeeds");
-// const walkingSpeedNode = document.getElementById("summaryWalkingSpeed");
-// const climbingSpeedNode = document.getElementById("summaryClimbingSpeed");
-// const swimmingSpeedNode = document.getElementById("summarySwimmingSpeed");
-// const flyingSpeedNode = document.getElementById("summaryFlyingSpeed");
 const passivePerceptionNode = document.getElementById("summaryPassivePerception");
 const acrobaticsNode = document.getElementById("summaryAcrobatics");
 const animalHandlingNode = document.getElementById("summaryAnimalHandling");

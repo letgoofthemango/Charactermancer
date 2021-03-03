@@ -151,17 +151,8 @@ class App {
                 break;
 
             case WIZARD:
-                hitDice = 6;
-                weapons.get("Dagger")[0].proficient = weapons.get("Dart")[0].proficient = weapons.get("Sling")[0].proficient = weapons.get("Quarterstaff")[0].proficient = weapons.get("LightCrossbow")[0].proficient = characterArmorProficiencies[0][1] = true;
-                const wizardSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInsight, #summaryInvestigation, #summaryMedicine, #summaryReligion');
-                for (const i of wizardSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Wizard.wizardFeaturesByLevel[i];
-                    featuresNode.innerHTML += Wizard.wizardFeaturesList[i];
-                }
-                Wizard.setSpellLevel(); // CHANGE THIS TO CLERIC EXAMPLE ON SPELLS ETC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                Wizard.setWizardClass();
+                Wizard.displayWizardFeaturesByLevel();
                 break;
         }
 
@@ -183,11 +174,17 @@ class App {
             toolProficienciesNode.textContent += ", and one type of artisan's tools of your choice";
         } else if (characterClass == BARD) {
             toolsNode.removeAttribute("hidden");
-            toolProficienciesNode.textContent = "Three musical instruments of your choice";
+            toolProficienciesNode.textContent = "three musical instruments of your choice";
         } else if (characterClass == DRUID) {
             armorProficienciesNode.textContent += " (druids will not wear armor or use shields made of metal)"
         } else if (characterClass == MONK) {
             toolProficienciesNode.textContent = "any one type of artisan's tools or any one musical instrument of your choice"
         }
     }
+
+    static camelize(str) {
+        return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+          return index === 0 ? word.toLowerCase() : word.toUpperCase();
+        }).replace(/\s+/g, '');
+      }
 }

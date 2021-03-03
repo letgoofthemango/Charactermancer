@@ -484,7 +484,7 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
         Character.setClassSkills("Arcana", "History", "Insight", "Investigation", "Medicine", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Arcane Recovery", "Spellcasting", "Cantrip Versatility");
-        Character.setCharacterWeaponProficiencies("Dagger", "Dart", "Sling", "Quarterstaff", "LightCrossbow");
+        Character.setCharacterWeaponProficiencies("dagger", "dart", "sling", "quarterstaff", "lightCrossbow");
         Character.setCharacterArmorProficiency("none");
         Character.setCharacterSpellsKnown(3, 2, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setClassSpells(1);

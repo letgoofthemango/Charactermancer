@@ -2049,7 +2049,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setClassSkills("History", "Insight", "Medicine", "Persuasion", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Divine Domain", "Spellcasting");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterWeaponProficiencies("simpleWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
         Character.setCharacterSpellsKnown(3, 50, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setClassSpells(1);
@@ -2072,7 +2072,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.deathDomain;
                 Character.addCharacterFeatures('Reaper');
                 Character.addSpellsByLevel(1, "FalseLife", "RayOfSickness");
-                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.setCharacterWeaponProficiencies("martialWeapons");
                 break;
             case "Forge":
                 domain.innerHTML = this.forgeDomain;
@@ -2134,7 +2134,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Tempest":
                 domain.innerHTML = this.tempestDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.setCharacterWeaponProficiencies("martialWeapons");
                 Character.addCharacterFeatures('Wrath of the Storm');
                 Character.addSpellsByLevel(1, "FogCloud", "Thunderwave");
                 break;
@@ -2146,14 +2146,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Twilight":
                 domain.innerHTML = this.twilightDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.setCharacterWeaponProficiencies("martialWeapons");
                 Character.addCharacterFeatures('Eyes of Night', 'Vigilant Blessing');
                 Character.addSpellsByLevel(1, "FaerieFire", "Sleep");
                 break;
             case "War":
                 domain.innerHTML = this.warDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                Character.setCharacterWeaponProficiencies("MartialWeapons");
+                Character.setCharacterWeaponProficiencies("martialWeapons");
                 Character.addCharacterFeatures('War Priest');
                 Character.addSpellsByLevel(1, "DivineFavor");
                 break;

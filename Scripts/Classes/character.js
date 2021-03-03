@@ -138,6 +138,14 @@ class Character {
         })
     }
 
+    static resetCharacterPossibleToolchoices(){
+        possibleToolChoices=[];
+    }
+    
+    static setCharacterPossibleToolChoices(...args){
+        possibleToolChoices= [...args];
+    }
+
 
 
 
@@ -750,6 +758,7 @@ class Character {
         this.resetCharacterArmorProficienciesList();
         this.resetCharacterLanguageProficiencies();
         this.resetCharacterToolProficiencies();
+        this.resetCharacterPossibleToolchoices();
         this.resetCharacterSkills();
         this.resetsetCharacterSpeed();
         this.resetCharacterVision();

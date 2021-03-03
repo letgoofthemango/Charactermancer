@@ -521,7 +521,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterLanguageProficiencies("Druidic");
         Character.setCharacterFeatures("Druidic", "Spellcasting");
-        Character.setCharacterWeaponProficiencies("Club","Dagger","Dart","Javelin","Mace","Quarterstaff","Scimitar","Sickle","Sling","Spear");
+        Character.setCharacterWeaponProficiencies("club","dagger","dart","javelin","mace","quarterstaff","scimitar","sickle","sling","spear");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
         Character.setCharacterSpellsKnown(2, 50, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setClassSpells(1);

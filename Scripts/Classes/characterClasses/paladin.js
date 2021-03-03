@@ -380,7 +380,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setClassSkills("Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Divine Sense", "Lay on Hands");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons", "MartialWeapons");
+        Character.setCharacterWeaponProficiencies("simpleWeapons", "martialWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "heavy", "shields");
         // Character.setCharacterSpellsKnown(50, 50, 0, 0, 0, 0, 0, 0, 0, 0);
         // Character.setClassSpells(1);

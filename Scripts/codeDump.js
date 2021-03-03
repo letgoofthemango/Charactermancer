@@ -977,21 +977,21 @@
 
 
 
-let testy = 3;
 
 
-function setupSkillCheckboxes(id, referenceArray) {
+
+function setupCheckboxesListeners(id, referenceArray) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
         node.addEventListener("change", (event) => {
-            skillsCheckBoxesHandler(event, nodes, referenceArray);
+            CheckBoxesHandler(event, nodes, referenceArray);
         })
     });
 }
-setupSkillCheckboxes("skillsDiv", chosenCharacterSkills);
 
-function skillsCheckBoxesHandler(event, nodes, referenceArray) {
+
+function CheckBoxesHandler(event, nodes, referenceArray) {
     const node = event.target;
     if (node.checked == true) {
         referenceArray.push(node.value);
@@ -1021,34 +1021,8 @@ function skillsCheckBoxesHandler(event, nodes, referenceArray) {
         }
         console.log("ist jetzt kein haken");
     }
-    console.log(chosenCharacterSkills);
+    // console.log(referenceArray);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1068,11 +1042,10 @@ function setupRadios(id, referenceArray, referenceVariable) {
         })
     });
 }
-setupRadios("ToolsDiv",characterToolsProficiencies, 3);
+setupRadios("ToolsDiv", characterToolsProficiencies, 3);
 
 
 function radiosHandler(event, nodes, referenceArray, referenceVariable) {
-    Character.setCharacterToolProficiencies("Thieves", "Tinker");
     const node = event.target;
     if (node.checked == true) {
         if (referenceArray.length >= referenceVariable) {
@@ -1090,3 +1063,187 @@ function radiosHandler(event, nodes, referenceArray, referenceVariable) {
     }
     console.log(referenceArray);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let testy = 2;
+
+function cantripsSpellsCheckboxes() {
+    const inputs = document.getElementById("cantripSelectionList").getElementsByTagName("input");
+    const nodes = Array.from(inputs);
+    nodes.forEach((node) => {
+        node.addEventListener("change", (event) => {
+            cantripsCheckBoxesHandler(event, nodes);
+        })
+    });
+}
+cantripsSpellsCheckboxes();
+
+
+function cantripsCheckBoxesHandler(event, nodes) {
+    const node = event.target;
+    if (node.checked == true) {
+        cantripSpellsChosen.push(node.value);
+        if (cantripSpellsChosen.length >= testy) {
+            nodes.forEach((node) => {
+                if (cantripSpellsChosen.includes(node.value)) {
+                    node.disabled = false;
+                } else {
+                    node.disabled = true;
+                }
+            });
+        }
+        console.log("ist jetzt haken");
+
+    } else if (node.checked == false) {
+        // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
+        for (var i = 0; i < cantripSpellsChosen.length; i++) {
+            if (cantripSpellsChosen[i] === node.value) {
+                cantripSpellsChosen.splice(i, 1);
+                break
+            }
+        }
+        if (cantripSpellsChosen.length < testy) {
+            nodes.forEach((node) => {
+                node.disabled = false;
+            });
+        }
+        console.log("ist jetzt kein haken");
+    }
+    console.log(cantripSpellsChosen);
+}
+
+
+function firstSpellsCheckboxes() {
+    const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
+    const nodes = Array.from(inputs);
+    nodes.forEach((node) => {
+        node.addEventListener("change", (event) => {
+            firstCheckBoxesHandler(event, nodes);
+        })
+    });
+}
+firstSpellsCheckboxes();
+
+
+function firstCheckBoxesHandler(event, nodes) {
+    const node = event.target;
+    if (node.checked == true) {
+        firstLevelSpellsChosen.push(node.value);
+        if (firstLevelSpellsChosen.length >= testy) {
+            nodes.forEach((node) => {
+                if (firstLevelSpellsChosen.includes(node.value)) {
+                    node.disabled = false;
+                } else {
+                    node.disabled = true;
+                }
+            });
+        }
+        console.log("ist jetzt haken");
+
+    } else if (node.checked == false) {
+        for (var i = 0; i < firstLevelSpellsChosen.length; i++) {
+            if (firstLevelSpellsChosen[i] === node.value) {
+                firstLevelSpellsChosen.splice(i, 1);
+                break
+            }
+        }
+        if (firstLevelSpellsChosen.length < testy) {
+            nodes.forEach((node) => {
+                node.disabled = false;
+            });
+        }
+        console.log("ist jetzt kein haken");
+    }
+    console.log(firstLevelSpellsChosen);
+}
+
+
+
+
+
+
+
+
+
+
+Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight");
+
+function populateCheckboxes(id, referenceArray) {
+    referenceArray.forEach((element) => {
+        const newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "form-check");
+        const newSelect = document.createElement("input");
+        newSelect.setAttribute("class", "form-check-input");
+        newSelect.setAttribute("type", "checkbox");
+        newSelect.setAttribute("value", `${element}`);
+        newSelect.setAttribute("id", `${element}Check`);
+        const newLabel = document.createElement("LABEL");
+        newLabel.setAttribute("class", "form-check-label");
+        newLabel.setAttribute("id", `${element}Label`);
+        newLabel.htmlFor = `${element}Check`;
+        newLabel.innerText = `${element}`;
+        const appendedDiv = document.getElementById(id);
+        appendedDiv.appendChild(newDiv);
+        newDiv.appendChild(newSelect);
+        newDiv.appendChild(newLabel);
+    })
+}
+
+populateCheckboxes("skillsSelectionList", possibleSkills);
+setupCheckboxesListeners("skillsDiv", chosenCharacterSkills);
+
+
+
+tools.forEach((tool) => {
+    if (tool[0].type === "Artisan's tools") {
+        if (tool[0].name.includes("tinker")){
+            return;
+        }
+        possibleToolChoices.push(tool[0].name)
+    }
+})
+
+function populateRadios(id, referenceArray, endArray, name) {
+    referenceArray.forEach((element) => {
+        const sanitizedName = element.replace(/'| /g, "");
+        const newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "form-check");
+        const newRadio = document.createElement("input");
+        newRadio.setAttribute("class", "form-check-input");
+        newRadio.setAttribute("type", "radio");
+        newRadio.setAttribute("name", name);
+        newRadio.setAttribute("value", `${element}`);
+        newRadio.setAttribute("id", `${element}Check`);
+        const newLabel = document.createElement("LABEL");
+        newLabel.setAttribute("class", "form-check-label");
+        newLabel.setAttribute("id", `${sanitizedName}Label`);
+        newLabel.htmlFor = `${element}Check`;
+        newLabel.innerText = `${element}`;
+        const appendedDiv = document.getElementById(id);
+        appendedDiv.appendChild(newDiv);
+        newDiv.appendChild(newRadio);
+        newDiv.appendChild(newLabel);
+        if (endArray.includes(element)) {
+            console.log(element);
+        }
+    })
+}
+populateRadios("toolsSelectionList", possibleToolChoices, characterToolsProficiencies,  "tools")
+setupRadios("toolsSelectionList", characterToolsProficiencies, 3);

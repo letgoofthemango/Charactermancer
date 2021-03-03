@@ -1396,12 +1396,13 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         characterClass = ARTIFICER;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Constitution", "Intelligence");
-        Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception" ,"Sleight");
+        Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight");
         Character.setCharacterSkillsNumberToChoose(2);
-        Character.setCharacterFeatures("Magical Tinkering ", "Spellcasting");
-        Character.setCharacterWeaponProficiencies("SimpleWeapons");
+        Character.setCharacterFeatures("Magical Tinkering", "Spellcasting");
+        Character.setCharacterWeaponProficiencies("simpleWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
-        Character.setCharacterToolProficiencies("Thieves","Tinker");
+        Character.setCharacterToolProficiencies("thieves", "tinker");
+        this.setArtificerPossibleToolChoices();
         Character.setClassSpells(1);
         Character.setCharacterSpellsKnown(2, 50, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -1412,6 +1413,17 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         for (let i = 0; i < characterLevel; i++) {
             classDetailsNode.innerHTML += Artificer.artificerFeaturesByLevel[i];
         }
+    }
+
+    static setArtificerPossibleToolChoices() {
+        tools.forEach((tool) => {
+            if (tool[0].type === "Artisan's tools") {
+                if (tool[0].name.includes("tinker")) {
+                    return;
+                }
+                possibleToolChoices.push(tool[0].name)
+            }
+        })
     }
 
     getHitpointsFirstLvl = function () { };
