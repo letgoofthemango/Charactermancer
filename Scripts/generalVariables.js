@@ -126,7 +126,7 @@ let skills = [{
 }];
 
 
-let possibleSkills = [];
+let possibleSkillChoices = [];
 let chosenCharacterSkills = [];
 let numberOfSkillsToChoose=2;
 
@@ -159,6 +159,7 @@ let maxToolProficiencies;
 // Language proficiencies
 let languageProficiencies = [];
 let maxLanguageProficiencies = [];
+let possibleLanguageProficiencies = [];
 
 
 

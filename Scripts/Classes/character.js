@@ -138,12 +138,12 @@ class Character {
         })
     }
 
-    static resetCharacterPossibleToolchoices(){
-        possibleToolChoices=[];
+    static resetCharacterPossibleToolchoices() {
+        possibleToolChoices = [];
     }
-    
-    static setCharacterPossibleToolChoices(...args){
-        possibleToolChoices= [...args];
+
+    static setCharacterPossibleToolChoices(...args) {
+        possibleToolChoices = [...args];
     }
 
 
@@ -158,7 +158,7 @@ class Character {
     }
 
     static resetSkillNodes() {
-        const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimalHandling, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
+        const classSkills = document.querySelectorAll('#summaryAcrobatics, #summaryAnimal, #summaryArcana, #summaryAthletics, #summaryDeception, #summaryHistory, #summaryInsight, #summaryIntimidation, #summaryInvestigation, #summaryMedicine, #summaryNature, #summaryPerception, #summaryPerformance, #summaryPersuasion, #summaryReligion, #summarySleight, #summaryStealth, #summarySurvival');
         classSkills.forEach((skill) => {
             skill.classList.remove("toBeAdded");
             skill.setAttribute('hidden', 'true');
@@ -205,7 +205,7 @@ class Character {
             case "Acrobatics":
                 skillNumber = 0;
                 break;
-            case "AnimalHandling":
+            case "Animal":
                 skillNumber = 1;
                 break;
             case "Arcana":
@@ -247,7 +247,7 @@ class Character {
             case "Religion":
                 skillNumber = 14;
                 break;
-            case "SleightOfHand":
+            case "Sleight":
                 skillNumber = 15;
                 break;
             case "Stealth":
@@ -266,10 +266,10 @@ class Character {
         let node = document.getElementById(`summary${skill}`);
         if (skills[skillNumber].proficiency == 1 || skills[skillNumber].proficiency == 2 || skills[skillNumber].proficiency == 3) {
             node.classList.add('toBeAdded');
-            node.hidden=false;
+            node.hidden = false;
         } else {
             node.classList.remove('toBeAdded');
-            node.hidden=true;
+            node.hidden = true;
         }
 
         chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
@@ -294,11 +294,16 @@ class Character {
     }
 
     static setClassSkills(...args) {
-        possibleSkills.push(...args);
-        const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
+        possibleSkillChoices.push(...args);
+        let changedNames = [];
+        possibleSkillChoices.forEach((skill) => {
+            const convertedName = skill.replace(/ |handling|of|hand/g, "");
+            changedNames.push(convertedName);
+        })
+        const skills = document.querySelectorAll("#summary" + changedNames.join(", #summary"));
         skills.forEach((skill) => {
             skill.classList.add("toBeAdded");
-            skill.hidden=false;
+            skill.hidden = false;
         })
     }
 
@@ -307,7 +312,7 @@ class Character {
     }
 
     static resetPossibleSkills() {
-        possibleSkills = [];
+        possibleSkillChoices = [];
     }
 
     static setCharacterSkillsNumberToChoose(number) {
@@ -318,7 +323,7 @@ class Character {
         const skills = document.querySelectorAll("#summary" + args.join(", #summary"));
         skills.forEach((skill) => {
             skill.classList.add("toBeAdded");
-            skill.hidden=false;
+            skill.hidden = false;
         })
     }
 
@@ -349,6 +354,15 @@ class Character {
         args.forEach((arg) => {
             languages.get(`${arg}`)[0].proficient = true;
             console.log(`Language ${arg} has been set to proficient.`)
+        })
+    }
+
+    static setCharacterPossibleLanguageProficiencies() {
+        languages.forEach((language) => {
+            if (language[0].name === "Druidic" || language[0].name === "Thieves' Cant") {
+                return;
+            }
+            possibleLanguageProficiencies.push(language[0].name);
         })
     }
 
@@ -451,9 +465,9 @@ class Character {
             firstLevelListNode.append(newLi);
         })
         if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
-            spellsHeadingNode.hidden=false;
+            spellsHeadingNode.hidden = false;
         } else {
-            spellsHeadingNode.hidden=true;
+            spellsHeadingNode.hidden = true;
         }
     }
 
@@ -715,7 +729,7 @@ class Character {
         } else {
             SpeedNode.hidden = false;
         }
-        let speeds=[];
+        let speeds = [];
         if (characterWalkingSpeed >= 1) {
             speeds.push(`${characterWalkingSpeed} feet`)
         }

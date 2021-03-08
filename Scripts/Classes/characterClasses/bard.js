@@ -535,7 +535,7 @@ class Bard extends Character {
         characterClass = BARD;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Dexterity", "Charisma");
-        Character.setClassSkills("Acrobatics", "AnimalHandling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight", "Stealth", "Survival");
+        Character.setClassSkills("Acrobatics", "Animal handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of hand", "Stealth", "Survival");
         Character.setCharacterSkillsNumberToChoose(3);
         Character.setCharacterFeatures("Bardic Inspiration", "Spellcasting");
         Character.setCharacterWeaponProficiencies("simpleWeapons", "handCrossbow", "longsword", "rapier", "shortsword");

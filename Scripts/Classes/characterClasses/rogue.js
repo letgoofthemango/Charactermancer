@@ -430,7 +430,7 @@ Attack column of the Rogue table.</p>
         characterClass = ROGUE;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Dexterity", "Intelligence");
-        Character.setClassSkills("Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight", "Stealth");
+        Character.setClassSkills("Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of hand", "Stealth");
         Character.setCharacterSkillsNumberToChoose(4);
         Character.setCharacterFeatures("Expertise", "Sneak Attack", "Thieves' Cant");
         Character.setCharacterLanguageProficiencies("Thieves");

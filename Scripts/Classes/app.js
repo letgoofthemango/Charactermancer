@@ -178,6 +178,7 @@ class App {
         } else if (characterClass == DRUID) {
             armorProficienciesNode.textContent += " (druids will not wear armor or use shields made of metal)"
         } else if (characterClass == MONK) {
+            toolsNode.hidden=false;
             toolProficienciesNode.textContent = "any one type of artisan's tools or any one musical instrument of your choice"
         }
     }

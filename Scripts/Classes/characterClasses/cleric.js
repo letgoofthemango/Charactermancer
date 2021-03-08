@@ -2064,7 +2064,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         switch (subclass) {
             case "Arcana":
                 domain.innerHTML = this.arcanaDomain;
-                this.setSkill("Arcana", 2);
+                Character.setSkill("Arcana", 2);
                 Character.addCharacterFeatures('Arcane Initiate');
                 Character.addSpellsByLevel(1, "MagicMissile");
                 break;
@@ -2091,7 +2091,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.knowledgeDomain;
                 Character.addCharacterFeatures('Blessing of Knowledge');
                 Character.showNodesForPossibleSkills("Arcana", "Nature");
-                possibleSkills.push("Arcana", "Nature");
+                possibleSkillChoices.push("Arcana", "Nature");
                 Character.addSpellsByLevel(1, "Identify");
                 break;
             case "Life":
@@ -2108,8 +2108,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Nature":
                 domain.innerHTML = this.natureDomain;
                 Character.setCharacterArmorProficiency("heavy");
-                Character.showNodesForPossibleSkills("AnimalHandling", "Nature", "Survival");
-                possibleSkills.push("Animal Handling", "Nature", "Survival");
+                Character.showNodesForPossibleSkills("Animal", "Nature", "Survival");
+                possibleSkillChoices.push("Animal Handling", "Nature", "Survival");
                 Character.addCharacterFeatures('Acolyte of Nature');
                 Character.addSpellsByLevel(1, "AnimalFriendship", "SpeakWithAnimals");
                 break;
@@ -2117,12 +2117,14 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.orderDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("Intimidation", "Persuasion");
+                possibleSkillChoices.push("Intimidation", "Persuasion");
                 Character.addCharacterFeatures('Voice of Authority');
                 Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Peace":
                 domain.innerHTML = this.peaceDomain;
                 Character.showNodesForPossibleSkills("Insight", "Performance", "Persuasion");
+                possibleSkillChoices.push("Insight","Performance", "Persuasion");
                 Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Protection":

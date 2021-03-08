@@ -1031,9 +1031,9 @@ function CheckBoxesHandler(event, nodes, referenceArray) {
 
 
 
-characterToolsProficiencies = ["Thieves", "Tinker"];
+characterToolsProficiencies = ["thieves", "tinker"];
 
-function setupRadios(id, referenceArray, referenceVariable) {
+function setupRadiosListeners(id, referenceArray, referenceVariable) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
@@ -1042,7 +1042,7 @@ function setupRadios(id, referenceArray, referenceVariable) {
         })
     });
 }
-setupRadios("ToolsDiv", characterToolsProficiencies, 3);
+setupRadiosListeners("ToolsDiv", characterToolsProficiencies, 3);
 
 
 function radiosHandler(event, nodes, referenceArray, referenceVariable) {
@@ -1084,7 +1084,7 @@ function radiosHandler(event, nodes, referenceArray, referenceVariable) {
 
 let testy = 2;
 
-function cantripsSpellsCheckboxes() {
+function cantripsSpellsCheckboxesListeners() {
     const inputs = document.getElementById("cantripSelectionList").getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
@@ -1093,7 +1093,7 @@ function cantripsSpellsCheckboxes() {
         })
     });
 }
-cantripsSpellsCheckboxes();
+cantripsSpellsCheckboxesListeners();
 
 
 function cantripsCheckBoxesHandler(event, nodes) {
@@ -1130,7 +1130,7 @@ function cantripsCheckBoxesHandler(event, nodes) {
 }
 
 
-function firstSpellsCheckboxes() {
+function firstSpellsCheckboxesListeners() {
     const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
@@ -1139,7 +1139,7 @@ function firstSpellsCheckboxes() {
         })
     });
 }
-firstSpellsCheckboxes();
+firstSpellsCheckboxesListeners();
 
 
 function firstCheckBoxesHandler(event, nodes) {
@@ -1183,7 +1183,7 @@ function firstCheckBoxesHandler(event, nodes) {
 
 
 
-Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight");
+Character.setClassSkills("Acrobatics", "Animal handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of hand", "Stealth", "Survival");
 
 function populateCheckboxes(id, referenceArray) {
     referenceArray.forEach((element) => {
@@ -1206,30 +1206,53 @@ function populateCheckboxes(id, referenceArray) {
     })
 }
 
-populateCheckboxes("skillsSelectionList", possibleSkills);
+populateCheckboxes("skillsSelectionList", possibleSkillChoices);
 setupCheckboxesListeners("skillsDiv", chosenCharacterSkills);
 
 
 
 tools.forEach((tool) => {
     if (tool[0].type === "Artisan's tools") {
-        if (tool[0].name.includes("tinker")){
+        if (tool[0].name.includes("tinker")) {
             return;
         }
         possibleToolChoices.push(tool[0].name)
     }
 })
 
-function populateRadios(id, referenceArray, endArray, name) {
+languages.forEach((language) => {
+    if (language[0].name === "Druidic" || language[0].name === "Thieves' Cant") {
+        return;
+    }
+    possibleLanguageProficiencies.push(language[0].name);
+})
+
+function populateRadios(id, referenceArray, endArray, buttonGroupName) {
+    let sanitizedName;
     referenceArray.forEach((element) => {
-        const sanitizedName = element.replace(/'| /g, "");
+        if (referenceArray.includes(element)) {
+            return;
+        }
+        switch (referenceArray) {
+            case possibleToolChoices:
+                sanitizedName = element.toLowerCase().replace(/'s| | kit|(land or water)|set|-|Ante|tools|utensils|supplies/g, "");
+                break;
+            case possibleSkillChoices:
+                sanitizedName = element.replace(/ |handling|of|hand/g, "");
+                break;
+            case possibleLanguageProficiencies:
+                sanitizedName = element.replace(/ /g, "");
+                break;
+            default:
+                break;
+        }
         const newDiv = document.createElement("div");
         newDiv.setAttribute("class", "form-check");
         const newRadio = document.createElement("input");
         newRadio.setAttribute("class", "form-check-input");
         newRadio.setAttribute("type", "radio");
-        newRadio.setAttribute("name", name);
-        newRadio.setAttribute("value", `${element}`);
+        newRadio.setAttribute("name", buttonGroupName);
+        newRadio.setAttribute("value", `${sanitizedName}`);
         newRadio.setAttribute("id", `${element}Check`);
         const newLabel = document.createElement("LABEL");
         newLabel.setAttribute("class", "form-check-label");
@@ -1240,10 +1263,7 @@ function populateRadios(id, referenceArray, endArray, name) {
         appendedDiv.appendChild(newDiv);
         newDiv.appendChild(newRadio);
         newDiv.appendChild(newLabel);
-        if (endArray.includes(element)) {
-            console.log(element);
-        }
     })
 }
-populateRadios("toolsSelectionList", possibleToolChoices, characterToolsProficiencies,  "tools")
-setupRadios("toolsSelectionList", characterToolsProficiencies, 3);
+populateRadios("toolsSelectionList", possibleLanguageProficiencies, languageProficiencies, "tools")
+setupRadiosListeners("toolsSelectionList", languageProficiencies, 1);

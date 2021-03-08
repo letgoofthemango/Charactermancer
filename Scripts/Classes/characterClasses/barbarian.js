@@ -889,7 +889,7 @@ static setBarbarianClass() {
     characterClass = BARBARIAN;
     Character.setCharacterHitdice(12);
     Character.setCharacterSavingThrows("Strength", "Constitution");
-    Character.setClassSkills("AnimalHandling", "Athletics", "Nature", "Perception", "Survival");
+    Character.setClassSkills("Animal handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival");
     Character.setCharacterSkillsNumberToChoose(2);
     Character.setCharacterFeatures("Rage", "Unarmored Defense");
     Character.setCharacterWeaponProficiencies("simpleWeapons", "martialWeapons");

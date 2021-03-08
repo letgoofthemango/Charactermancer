@@ -1396,7 +1396,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         characterClass = ARTIFICER;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Constitution", "Intelligence");
-        Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight");
+        Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight of hand");
         Character.setCharacterSkillsNumberToChoose(2);
         Character.setCharacterFeatures("Magical Tinkering", "Spellcasting");
         Character.setCharacterWeaponProficiencies("simpleWeapons");
