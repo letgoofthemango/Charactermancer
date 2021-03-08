@@ -153,8 +153,8 @@ let survivalMod = skills[17].mod; */
 
 //Tool Proficiencies
 let characterToolsProficiencies = [];
-let possibleToolChoices=[];
-let maxToolProficiencies;
+let characterPossibleToolChoices=[];
+let characterMaxToolProficiencies;
 
 // Language proficiencies
 let languageProficiencies = [];

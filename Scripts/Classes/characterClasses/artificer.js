@@ -1421,7 +1421,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 if (tool[0].name.includes("tinker")) {
                     return;
                 }
-                possibleToolChoices.push(tool[0].name)
+                characterPossibleToolChoices.push(tool[0].name)
             }
         })
     }

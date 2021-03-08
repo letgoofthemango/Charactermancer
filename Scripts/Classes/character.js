@@ -112,17 +112,22 @@ class Character {
 
     // Tools-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateCharacterToolProficiencies() {
+        let toolsArr=[];
+        // characterToolsProficiencies = [];
         tools.forEach((tool) => {
             if (tool[0].proficient == true) {
-                characterToolsProficiencies.push(tool[0].name);
+                characterToolsProficiencies.push(tool[0].value);
+                toolsArr.push(tool[0].name);
             }
         })
+        characterToolsProficiencies= App.removeDuplicates(characterToolsProficiencies);
         if (characterToolsProficiencies.length > 0) {
             toolsNode.hidden = false;
         } else {
             toolsNode.hidden = true;
         }
-        toolProficienciesNode.textContent = characterToolsProficiencies.join(", ");
+        toolProficienciesNode.textContent = toolsArr.join(", ");
+        console.log(characterToolsProficiencies);
     }
 
     static resetCharacterToolProficiencies() {
@@ -139,11 +144,11 @@ class Character {
     }
 
     static resetCharacterPossibleToolchoices() {
-        possibleToolChoices = [];
+        characterPossibleToolChoices = [];
     }
 
     static setCharacterPossibleToolChoices(...args) {
-        possibleToolChoices = [...args];
+        characterPossibleToolChoices = [...args];
     }
 
 

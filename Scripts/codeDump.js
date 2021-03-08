@@ -980,7 +980,7 @@
 
 
 
-function setupCheckboxesListeners(id, referenceArray) {
+/* function setupCheckboxesListeners(id, referenceArray) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
@@ -1021,7 +1021,6 @@ function CheckBoxesHandler(event, nodes, referenceArray) {
         }
         console.log("ist jetzt kein haken");
     }
-    // console.log(referenceArray);
 }
 
 
@@ -1183,7 +1182,6 @@ function firstCheckBoxesHandler(event, nodes) {
 
 
 
-Character.setClassSkills("Acrobatics", "Animal handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of hand", "Stealth", "Survival");
 
 function populateCheckboxes(id, referenceArray) {
     referenceArray.forEach((element) => {
@@ -1227,10 +1225,10 @@ languages.forEach((language) => {
     possibleLanguageProficiencies.push(language[0].name);
 })
 
-function populateRadios(id, referenceArray, endArray, buttonGroupName) {
+function populateRadios(id, referenceArray, endarray, buttonGroupName) {
     let sanitizedName;
     referenceArray.forEach((element) => {
-        if (referenceArray.includes(element)) {
+        if (endarray.includes(element)) {
             return;
         }
         switch (referenceArray) {
@@ -1265,5 +1263,5 @@ function populateRadios(id, referenceArray, endArray, buttonGroupName) {
         newDiv.appendChild(newLabel);
     })
 }
-populateRadios("toolsSelectionList", possibleLanguageProficiencies, languageProficiencies, "tools")
-setupRadiosListeners("toolsSelectionList", languageProficiencies, 1);
+populateRadios("toolsSelectionList", possibleLanguageProficiencies, languageProficiencies, "languages")
+setupRadiosListeners("toolsSelectionList", languageProficiencies, 1); */
