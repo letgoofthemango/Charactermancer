@@ -112,15 +112,15 @@ class Character {
 
     // Tools-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateCharacterToolProficiencies() {
-        let toolsArr=[];
-        // characterToolsProficiencies = [];
-        tools.forEach((tool) => {
-            if (tool[0].proficient == true) {
-                characterToolsProficiencies.push(tool[0].value);
-                toolsArr.push(tool[0].name);
+        characterToolsProficiencies.length = 0;
+        let toolsArr = [];
+        for (const [key, value] of tools.entries()) { // UNBEDINGT .entries anschaun!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (value[0].proficient == true) {
+                characterToolsProficiencies.push(key);
+                toolsArr.push(value[0].name);
             }
-        })
-        characterToolsProficiencies= App.removeDuplicates(characterToolsProficiencies);
+        }
+        // characterToolsProficiencies= App.removeDuplicates(characterToolsProficiencies);
         if (characterToolsProficiencies.length > 0) {
             toolsNode.hidden = false;
         } else {
