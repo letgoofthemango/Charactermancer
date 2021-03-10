@@ -137,10 +137,21 @@ class Character {
         });
     }
 
-    static setCharacterToolProficiencies(...args) {
-        args.forEach((arg) => {
-            tools.get(`${arg}`)[0].proficient = true;
-        })
+    static setCharacterToolProficiencies(number, ...args) {
+        switch (number) {
+            case 0:
+                args.forEach((arg) => {
+                    tools.get(`${arg}`)[0].proficient = false;
+                })
+                break;
+            case 1:
+                args.forEach((arg) => {
+                    tools.get(`${arg}`)[0].proficient = true;
+                })
+                break;
+            default:
+                break;
+        }
     }
 
     static resetCharacterPossibleToolchoices() {
@@ -269,7 +280,7 @@ class Character {
         skills[skillNumber].proficiency = number;
 
         let node = document.getElementById(`summary${skill}`);
-        if (skills[skillNumber].proficiency >=1) {
+        if (skills[skillNumber].proficiency >= 1) {
             node.classList.add('toBeAdded');
             node.hidden = false;
             chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
@@ -338,13 +349,21 @@ class Character {
 
     // Language-------------------------------------------------------------------------------------------------------------------------------------------------
     static updateLanguageProficiencies() {
-        console.log("3");
-        languages.forEach((language) => {
-            if (language[0].proficient == true) {
-                languageProficiencies.push(language[0].name);
+        languageProficiencies.length = 0;
+        let languagesArr = [];
+        for (const [key, value] of languages.entries()) {
+            if (value[0].proficient == true) {
+                languageProficiencies.push(key);
+                languagesArr.push(value[0].name);
             }
-        })
-        languageProficienciesNode.textContent = languageProficiencies.join(", ");
+        }
+
+        // languages.forEach((language) => {
+        //     if (language[0].proficient == true) {
+        //         languageProficiencies.push(language[0].name);
+        //     }
+        // })
+        languageProficienciesNode.textContent = languagesArr.join(", ");
     }
 
     static resetCharacterLanguageProficiencies() {
@@ -355,11 +374,23 @@ class Character {
         languageProficiencies = [];
     }
 
-    static setCharacterLanguageProficiencies(...args) {
-        args.forEach((arg) => {
-            languages.get(`${arg}`)[0].proficient = true;
-            console.log(`Language ${arg} has been set to proficient.`)
-        })
+    static setCharacterLanguageProficiencies(number, ...args) {
+        switch (number) {
+            case 0:
+                args.forEach((arg) => {
+                    languages.get(`${arg}`)[0].proficient = false;
+                    console.log(`Language ${arg} has been set to unproficient.`)
+                })
+                break;
+            case 1:
+                args.forEach((arg) => {
+                    languages.get(`${arg}`)[0].proficient = true;
+                    console.log(`Language ${arg} has been set to proficient.`)
+                })
+                break;
+            default:
+                break;
+        }
     }
 
     static setCharacterPossibleLanguageProficiencies() {

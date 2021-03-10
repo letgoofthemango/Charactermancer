@@ -1401,8 +1401,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         Character.setCharacterFeatures("Magical Tinkering", "Spellcasting");
         Character.setCharacterWeaponProficiencies("simpleWeapons");
         Character.setCharacterArmorProficiency("light", "medium", "shields");
-        Character.setCharacterToolProficiencies("thieves", "tinker");
+        Character.setCharacterToolProficiencies(1, "thieves", "tinker");
         this.setArtificerPossibleToolChoices();
+        maxLanguageProficiencies = 2;
+        for (const [key, value] of languages.entries()) { // UNBEDINGT .entries anschaun!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            possibleLanguageProficiencies.push(value[0].name)
+        }
         Character.setClassSpells(1);
         Character.setCharacterSpellsKnown(2, 50, 0, 0, 0, 0, 0, 0, 0, 0);
         Character.setCharacterSpellSlots(2, 0, 0, 0, 0, 0, 0, 0, 0);
@@ -1424,7 +1428,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 characterPossibleToolChoices.push(tool[0].name)
             }
         })
-        characterMaxToolProficiencies=3;
+        characterMaxToolProficiencies = 3;
     }
 
     getHitpointsFirstLvl = function () { };

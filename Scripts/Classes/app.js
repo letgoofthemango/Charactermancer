@@ -129,6 +129,8 @@ class App {
         App.setupCheckboxesListeners("skillsSelectionList", chosenCharacterSkills, numberOfSkillsToChoose);
         App.populateCheckboxes("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies);
         App.setupCheckboxesListeners("toolsSelectionList", characterToolsProficiencies, characterMaxToolProficiencies);
+        App.populateCheckboxes("languageSelectionList", possibleLanguageProficiencies, languageProficiencies);
+        App.setupCheckboxesListeners("languageSelectionList", languageProficiencies, maxLanguageProficiencies);
     }
 
     static getNumber(mod) {
@@ -272,7 +274,7 @@ class App {
                     sanitizedName = element.replace(/ |handling|of|hand/g, "");
                     break;
                 case possibleLanguageProficiencies:
-                    sanitizedName = element.replace(/ /g, "");
+                    sanitizedName = element.replace(/ |'|Cant/g, "");
                     break;
                 default:
                     break;
@@ -314,7 +316,12 @@ class App {
                     Character.setSkill(node.value, 2);
                     break;
                 case characterToolsProficiencies:
-                    Character.setCharacterToolProficiencies(node.value);
+                    Character.setCharacterToolProficiencies(1, node.value);
+                    Character.updateCharacterToolProficiencies();
+                    break;
+                case languageProficiencies:
+                    Character.setCharacterLanguageProficiencies(1, node.value);
+                    Character.updateLanguageProficiencies();
                     break;
 
                 default:
@@ -332,42 +339,36 @@ class App {
             console.log(referenceArray);
 
         } else if (node.checked == false) {
-            // console.log(`before switch`);
-            // console.log(referenceArray);
-            // console.log(chosenCharacterSkills);
-            
             switch (referenceArray) {
                 case chosenCharacterSkills:
                     Character.setSkill(node.value, 0);
                     break;
+                case characterToolsProficiencies:
+                    Character.setCharacterToolProficiencies(0, node.value);
+                    Character.updateCharacterToolProficiencies();
+                    break;
+                case languageProficiencies:
+                    Character.setCharacterLanguageProficiencies(0, node.value);
+                    Character.updateLanguageProficiencies();
+                    break;
                 default:
                     break;
             }
-            // console.log(`after switch`);
-            // console.log(referenceArray);
-            // console.log(chosenCharacterSkills);
-
             for (var i = 0; i < referenceArray.length; i++) {
                 if (referenceArray[i] === node.value) {
                     referenceArray.splice(i, 1);
                     break
                 }
             }
-            // console.log(`after for`);
-            // console.log(referenceArray);
-            // console.log(chosenCharacterSkills);
             // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
             if (referenceArray.length < referenceVariable) {
                 nodes.forEach((node) => {
                     node.disabled = false;
                 });
             }
-            // console.log(`after if`);
             console.log(referenceArray);
-            // console.log(chosenCharacterSkills);
         }
         Character.updateSkills();
-        Character.updateCharacterToolProficiencies();
     }
 
 
@@ -475,6 +476,8 @@ class App {
     //         return index === 0 ? word.toLowerCase() : word.toUpperCase();
     //     }).replace(/\s+/g, '');
     // }
+
+
     static removeDuplicates(data) {
         return [...new Set(data)]
     }

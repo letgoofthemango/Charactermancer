@@ -22,16 +22,12 @@
 @font-face {
   font-family: Modesto;
   font-weight: bold;
-  src: url(/fonts/ModestoCondensedBold.ttf);
+  src: url(/fonts/NodestoCapsCondensedBold.otf);
 }
-/* 	  .modesto{
-		  font-family: 'Modesto';
-		  font-size: 12px;
-	  } */
 
 @font-face {
   font-family: Eaves;
-  src: url(/fonts/MRSEAV~5.TTF);
+  src: url(/fonts/MrEavesSmallCaps.otf);
 }
 @font-face {
   font-family: myFirstFont;
