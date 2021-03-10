@@ -1424,6 +1424,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 characterPossibleToolChoices.push(tool[0].name)
             }
         })
+        characterMaxToolProficiencies=3;
     }
 
     getHitpointsFirstLvl = function () { };

@@ -342,6 +342,7 @@ const ninethLevelListNode = document.getElementById("ninethLevel");
 const mainNode = document.getElementById("displayContent");
 const overviewNode = document.getElementById("characterOverview");
 
+
 /* document.getElementById("characterOverview").addEventListener("click", function () {
     abilityScores[0].value = 20;
     abilityScores[1].value = 20;

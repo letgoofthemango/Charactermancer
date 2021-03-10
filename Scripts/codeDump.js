@@ -975,12 +975,13 @@
 
 // {/* <b><u><em>THIS HAS TO BE IMPLEMENTED IN THE NEXT STEP!</em></u></b> */}
 
+Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight of hand");
 
 
 
 
 
-/* function setupCheckboxesListeners(id, referenceArray) {
+function setupCheckboxesListeners(id, referenceArray) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
@@ -1014,6 +1015,7 @@ function CheckBoxesHandler(event, nodes, referenceArray) {
                 break
             }
         }
+        console.log(referenceArray);
         if (referenceArray.length < testy) {
             nodes.forEach((node) => {
                 node.disabled = false;
@@ -1030,38 +1032,54 @@ function CheckBoxesHandler(event, nodes, referenceArray) {
 
 
 
-characterToolsProficiencies = ["thieves", "tinker"];
-
-function setupRadiosListeners(id, referenceArray, referenceVariable) {
+/* static setupRadiosListeners(id, referenceArray, referenceVariable) {
     const inputs = document.getElementById(id).getElementsByTagName("input");
     const nodes = Array.from(inputs);
     nodes.forEach((node) => {
         node.addEventListener("change", (event) => {
-            radiosHandler(event, nodes, referenceArray, referenceVariable);
+            App.radiosHandler(event, nodes, referenceArray, referenceVariable);
         })
     });
 }
-setupRadiosListeners("ToolsDiv", characterToolsProficiencies, 3);
+// setupRadiosListeners("ToolsDiv", characterToolsProficiencies, 3);
 
 
-function radiosHandler(event, nodes, referenceArray, referenceVariable) {
+static radiosHandler(event, nodes, referenceArray, referenceVariable) {
     const node = event.target;
     if (node.checked == true) {
-        if (referenceArray.length >= referenceVariable) {
-            referenceArray.pop();
-        }
-        referenceArray.push(node.value);
-        if (referenceArray.length >= 1) {
-            nodes.forEach((node) => {
-                if (referenceArray.includes(node.value)) {
-                }
-            });
-        }
-        console.log("ist jetzt ausgewählt");
+        // if (referenceArray.length >= referenceVariable) {
+        //     referenceArray.pop();
+        // }
+        switch (referenceArray) {
+            case characterToolsProficiencies:
+                tools.forEach((tool) => {
+                    if (tool[0].baseproficiency = false) { 
+                        tool[0].proficient = false;
+                    }
+                })
+                tools.get(node.value)[0].proficient = true;
+                Character.updateCharacterToolProficiencies();
 
+                break;
+            case characterToolsProficiencies:
+
+                break;
+            case characterToolsProficiencies:
+
+                break;
+
+            default:
+                break;
+        }
+        // referenceArray.push(node.value);
+        // if (referenceArray.length >= 1) {
+        //     nodes.forEach((node) => {
+        //         if (referenceArray.includes(node.value)) {
+        //         }
+        //     });
+        // }
     }
-    console.log(referenceArray);
-}
+} */
 
 
 
@@ -1224,15 +1242,15 @@ languages.forEach((language) => {
     }
     possibleLanguageProficiencies.push(language[0].name);
 })
-
-function populateRadios(id, referenceArray, endarray, buttonGroupName) {
+/* 
+static populateRadios(id, referenceArray, endarray, buttonGroupName) {
     let sanitizedName;
     referenceArray.forEach((element) => {
         if (endarray.includes(element)) {
             return;
         }
         switch (referenceArray) {
-            case possibleToolChoices:
+            case characterPossibleToolChoices:
                 sanitizedName = element.toLowerCase().replace(/'s| | kit|(land or water)|set|-|Ante|tools|utensils|supplies/g, "");
                 break;
             case possibleSkillChoices:
@@ -1262,6 +1280,4 @@ function populateRadios(id, referenceArray, endarray, buttonGroupName) {
         newDiv.appendChild(newRadio);
         newDiv.appendChild(newLabel);
     })
-}
-populateRadios("toolsSelectionList", possibleLanguageProficiencies, languageProficiencies, "languages")
-setupRadiosListeners("toolsSelectionList", languageProficiencies, 1); */
+} */

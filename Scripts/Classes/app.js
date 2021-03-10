@@ -66,10 +66,6 @@ class App {
 
      <div class="col-3" id="ToolsDiv">
          <h3 class="pl-5">tools</h3>
-         <p>You already have the following proficiencies:</p>
-         <li class="listNone">
-             <ul>a</ul>
-         </li>
          <p>You may choose <u><span id="toolsCount">1</span></u> additional class tool(s)</p>
          <div id="toolsSelectionList">
              <!-- to be filled -->
@@ -110,72 +106,29 @@ class App {
 
     static goToSkillsnTools() {
         mainNode.innerHTML = this.siteSkillsNTools;
-        switch (characterClass) {
-            case ARTIFICER:
-                App.populateRadios("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies, "tools")
-                App.setupRadiosListeners("toolsSelectionList", characterToolsProficiencies, 3);
-                break;
-
-            case BARBARIAN:
-                Barbarian.setBarbarianClass();
-                Barbarian.displayBarbarianFeaturesByLevel();
-                break;
-
-            case BARD:
-                Bard.setBardClass();
-                Bard.displayBardFeaturesByLevel();
-                break;
-
-            case CLERIC:
-                Cleric.setClericClass();
-                Cleric.displayClericFeaturesByLevel();
-                break;
-
-            case DRUID:
-                Druid.setDruidClass();
-                Druid.displayDruidFeaturesByLevel();
-                break;
-
-            case FIGHTER:
-                Fighter.setFighterClass();
-                Fighter.displayFighterFeaturesByLevel();
-                break;
-
-            case MONK:
-                Monk.displayMonkFeaturesByLevel();
-                Monk.setMonkClass();
-                break;
-
-            case PALADIN:
-                Paladin.displayPaladinFeaturesByLevel();
-                Paladin.setPaladinClass();
-                break;
-
-            case RANGER:
-                Ranger.displayRangerFeaturesByLevel();
-                Ranger.setRangerClass();
-                break;
-
-            case ROGUE:
-                Rogue.displayRogueFeaturesByLevel();
-                Rogue.setRogueClass();
-                break;
-
-            case SORCERER:
-                Sorcerer.setSorcererClass();
-                Sorcerer.displaySorcererFeaturesByLevel();
-                break;
-
-            case WARLOCK:
-                Warlock.setWarlockClass();
-                Warlock.displayWarlockFeaturesByLevel();
-                break;
-
-            case WIZARD:
-                Wizard.setWizardClass();
-                Wizard.displayWizardFeaturesByLevel();
-                break;
+        const skillsDivNode = document.getElementById("skillsDiv");
+        const toolsDivNode = document.getElementById("ToolsDiv");
+        const languagesDivNode = document.getElementById("languagesDiv");
+        const spellsDivNode = document.getElementById("spellsDiv");
+        if (possibleSkillChoices.length <= 0) {
+            skillsDivNode.hidden = true;
         }
+        if (characterPossibleToolChoices.length <= 0) {
+            toolsDivNode.hidden = true;
+        }
+        if (possibleLanguageProficiencies.length <= 0) {
+            languagesDivNode.hidden = true;
+        }
+        if (characterPossibleToolChoices.length <= 0) {
+            spellsDivNode.hidden = true;
+        }
+        Character.resetSkillNodes();
+        Character.resetSpellLists();
+
+        App.populateCheckboxes("skillsSelectionList", possibleSkillChoices, chosenCharacterSkills);
+        App.setupCheckboxesListeners("skillsSelectionList", chosenCharacterSkills, numberOfSkillsToChoose);
+        App.populateCheckboxes("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies);
+        App.setupCheckboxesListeners("toolsSelectionList", characterToolsProficiencies, characterMaxToolProficiencies);
     }
 
     static getNumber(mod) {
@@ -186,9 +139,7 @@ class App {
         }
     }
 
-    static removeDuplicates(data) {
-        return [...new Set(data)]
-    }
+
 
 
     static renderCharacterClass(characterClass) {
@@ -305,22 +256,71 @@ class App {
         }
     }
 
-    static setupCheckboxesListeners(id, referenceArray) {
+
+
+    static populateCheckboxes(id, referenceArray, endArray) {
+        let sanitizedName;
+        referenceArray.forEach((element) => {
+            if (endArray.includes(element)) {
+                return;
+            }
+            switch (referenceArray) {
+                case characterPossibleToolChoices:
+                    sanitizedName = element.toLowerCase().replace(/'s| | kit|(land or water)|set|-|Ante|tools|utensils|supplies/g, "");
+                    break;
+                case possibleSkillChoices:
+                    sanitizedName = element.replace(/ |handling|of|hand/g, "");
+                    break;
+                case possibleLanguageProficiencies:
+                    sanitizedName = element.replace(/ /g, "");
+                    break;
+                default:
+                    break;
+            }            const newDiv = document.createElement("div");
+            newDiv.setAttribute("class", "form-check");
+            const newSelect = document.createElement("input");
+            newSelect.setAttribute("class", "form-check-input");
+            newSelect.setAttribute("type", "checkbox");
+            newSelect.setAttribute("value", `${sanitizedName}`);
+            newSelect.setAttribute("id", `${sanitizedName}Check`);
+            const newLabel = document.createElement("LABEL");
+            newLabel.setAttribute("class", "form-check-label");
+            newLabel.setAttribute("id", `${sanitizedName}Label`);
+            newLabel.htmlFor = `${sanitizedName}Check`;
+            newLabel.innerText = `${element}`;
+            const appendedDiv = document.getElementById(id);
+            appendedDiv.appendChild(newDiv);
+            newDiv.appendChild(newSelect);
+            newDiv.appendChild(newLabel);
+        })
+    }
+
+    static setupCheckboxesListeners(id, referenceArray, referenceVariable) {
         const inputs = document.getElementById(id).getElementsByTagName("input");
         const nodes = Array.from(inputs);
         nodes.forEach((node) => {
             node.addEventListener("change", (event) => {
-                CheckBoxesHandler(event, nodes, referenceArray);
+                this.checkBoxesHandler(event, nodes, referenceArray, referenceVariable);
             })
         });
     }
 
 
-    static CheckBoxesHandler(event, nodes, referenceArray) {
+    static checkBoxesHandler(event, nodes, referenceArray, referenceVariable) {
         const node = event.target;
         if (node.checked == true) {
-            referenceArray.push(node.value);
-            if (referenceArray.length >= testy) {
+            switch (referenceArray) {
+                case chosenCharacterSkills:
+                    Character.setSkill(node.value, 2);
+                    break;
+                case characterToolsProficiencies:
+                    Character.setCharacterToolProficiencies(node.value);
+                    break;
+
+                default:
+                    break;
+            }
+            if (referenceArray.length >= referenceVariable) {
                 nodes.forEach((node) => {
                     if (referenceArray.includes(node.value)) {
                         node.disabled = false;
@@ -329,23 +329,45 @@ class App {
                     }
                 });
             }
-            console.log("ist jetzt haken");
+            console.log(referenceArray);
 
         } else if (node.checked == false) {
-            // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
+            // console.log(`before switch`);
+            // console.log(referenceArray);
+            // console.log(chosenCharacterSkills);
+            
+            switch (referenceArray) {
+                case chosenCharacterSkills:
+                    Character.setSkill(node.value, 0);
+                    break;
+                default:
+                    break;
+            }
+            // console.log(`after switch`);
+            // console.log(referenceArray);
+            // console.log(chosenCharacterSkills);
+
             for (var i = 0; i < referenceArray.length; i++) {
                 if (referenceArray[i] === node.value) {
                     referenceArray.splice(i, 1);
                     break
                 }
             }
-            if (referenceArray.length < testy) {
+            // console.log(`after for`);
+            // console.log(referenceArray);
+            // console.log(chosenCharacterSkills);
+            // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
+            if (referenceArray.length < referenceVariable) {
                 nodes.forEach((node) => {
                     node.disabled = false;
                 });
             }
-            console.log("ist jetzt kein haken");
+            // console.log(`after if`);
+            console.log(referenceArray);
+            // console.log(chosenCharacterSkills);
         }
+        Character.updateSkills();
+        Character.updateCharacterToolProficiencies();
     }
 
 
@@ -355,51 +377,7 @@ class App {
 
 
 
-    // characterToolsProficiencies = ["thieves", "tinker"];
 
-    static setupRadiosListeners(id, referenceArray, referenceVariable) {
-        const inputs = document.getElementById(id).getElementsByTagName("input");
-        const nodes = Array.from(inputs);
-        nodes.forEach((node) => {
-            node.addEventListener("change", (event) => {
-                App.radiosHandler(event, nodes, referenceArray, referenceVariable);
-            })
-        });
-    }
-    // setupRadiosListeners("ToolsDiv", characterToolsProficiencies, 3);
-
-
-    static radiosHandler(event, nodes, referenceArray, referenceVariable) {
-        const node = event.target;
-        if (node.checked == true) {
-            // if (referenceArray.length >= referenceVariable) {
-            //     referenceArray.pop();
-            // }
-            switch (referenceArray) {
-                case characterToolsProficiencies:
-                    tools.get(node.value)[0].proficient=true;
-                    Character.updateCharacterToolProficiencies();
-
-                    break;
-                case characterToolsProficiencies:
-
-                    break;
-                case characterToolsProficiencies:
-
-                    break;
-
-                default:
-                    break;
-            }
-            // referenceArray.push(node.value);
-            // if (referenceArray.length >= 1) {
-            //     nodes.forEach((node) => {
-            //         if (referenceArray.includes(node.value)) {
-            //         }
-            //     });
-            // }
-        }
-    }
 
 
     static cantripsSpellsCheckboxesListeners() {
@@ -418,7 +396,7 @@ class App {
         const node = event.target;
         if (node.checked == true) {
             cantripSpellsChosen.push(node.value);
-            if (cantripSpellsChosen.length >= testy) {
+            if (cantripSpellsChosen.length >= referenceVariable) {
                 nodes.forEach((node) => {
                     if (cantripSpellsChosen.includes(node.value)) {
                         node.disabled = false;
@@ -437,7 +415,7 @@ class App {
                     break
                 }
             }
-            if (cantripSpellsChosen.length < testy) {
+            if (cantripSpellsChosen.length < referenceVariable) {
                 nodes.forEach((node) => {
                     node.disabled = false;
                 });
@@ -464,7 +442,7 @@ class App {
         const node = event.target;
         if (node.checked == true) {
             firstLevelSpellsChosen.push(node.value);
-            if (firstLevelSpellsChosen.length >= testy) {
+            if (firstLevelSpellsChosen.length >= referenceVariable) {
                 nodes.forEach((node) => {
                     if (firstLevelSpellsChosen.includes(node.value)) {
                         node.disabled = false;
@@ -482,7 +460,7 @@ class App {
                     break
                 }
             }
-            if (firstLevelSpellsChosen.length < testy) {
+            if (firstLevelSpellsChosen.length < referenceVariable) {
                 nodes.forEach((node) => {
                     node.disabled = false;
                 });
@@ -492,83 +470,12 @@ class App {
         console.log(firstLevelSpellsChosen);
     }
 
-
-
-
-
-
-
-
-
-
-
-    static populateCheckboxes(id, referenceArray) {
-        referenceArray.forEach((element) => {
-            const newDiv = document.createElement("div");
-            newDiv.setAttribute("class", "form-check");
-            const newSelect = document.createElement("input");
-            newSelect.setAttribute("class", "form-check-input");
-            newSelect.setAttribute("type", "checkbox");
-            newSelect.setAttribute("value", `${element}`);
-            newSelect.setAttribute("id", `${element}Check`);
-            const newLabel = document.createElement("LABEL");
-            newLabel.setAttribute("class", "form-check-label");
-            newLabel.setAttribute("id", `${element}Label`);
-            newLabel.htmlFor = `${element}Check`;
-            newLabel.innerText = `${element}`;
-            const appendedDiv = document.getElementById(id);
-            appendedDiv.appendChild(newDiv);
-            newDiv.appendChild(newSelect);
-            newDiv.appendChild(newLabel);
-        })
-    }
-
-    // populateCheckboxes("skillsSelectionList", possibleSkillChoices);
-    // setupCheckboxesListeners("skillsDiv", chosenCharacterSkills);
-
-    static populateRadios(id, referenceArray, endarray, buttonGroupName) {
-        let sanitizedName;
-        referenceArray.forEach((element) => {
-            if (endarray.includes(element)) {
-                return;
-            }
-            switch (referenceArray) {
-                case characterPossibleToolChoices:
-                    sanitizedName = element.toLowerCase().replace(/'s| | kit|(land or water)|set|-|Ante|tools|utensils|supplies/g, "");
-                    break;
-                case possibleSkillChoices:
-                    sanitizedName = element.replace(/ |handling|of|hand/g, "");
-                    break;
-                case possibleLanguageProficiencies:
-                    sanitizedName = element.replace(/ /g, "");
-                    break;
-                default:
-                    break;
-            }
-            const newDiv = document.createElement("div");
-            newDiv.setAttribute("class", "form-check");
-            const newRadio = document.createElement("input");
-            newRadio.setAttribute("class", "form-check-input");
-            newRadio.setAttribute("type", "radio");
-            newRadio.setAttribute("name", buttonGroupName);
-            newRadio.setAttribute("value", `${sanitizedName}`);
-            newRadio.setAttribute("id", `${element}Check`);
-            const newLabel = document.createElement("LABEL");
-            newLabel.setAttribute("class", "form-check-label");
-            newLabel.setAttribute("id", `${sanitizedName}Label`);
-            newLabel.htmlFor = `${element}Check`;
-            newLabel.innerText = `${element}`;
-            const appendedDiv = document.getElementById(id);
-            appendedDiv.appendChild(newDiv);
-            newDiv.appendChild(newRadio);
-            newDiv.appendChild(newLabel);
-        })
-    }
-
-
     // static camelize(str) {
     //     return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
     //         return index === 0 ? word.toLowerCase() : word.toUpperCase();
     //     }).replace(/\s+/g, '');
     // }
+    static removeDuplicates(data) {
+        return [...new Set(data)]
+    }
 }

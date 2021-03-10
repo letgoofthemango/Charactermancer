@@ -269,15 +269,15 @@ class Character {
         skills[skillNumber].proficiency = number;
 
         let node = document.getElementById(`summary${skill}`);
-        if (skills[skillNumber].proficiency == 1 || skills[skillNumber].proficiency == 2 || skills[skillNumber].proficiency == 3) {
+        if (skills[skillNumber].proficiency >=1) {
             node.classList.add('toBeAdded');
             node.hidden = false;
+            chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
         } else {
             node.classList.remove('toBeAdded');
             node.hidden = true;
         }
 
-        chosenCharacterSkills.push(skill); //push it into the chosen skills for later use.
 
         switch (number) {
             case 0:
