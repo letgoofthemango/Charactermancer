@@ -181,7 +181,7 @@ let characterAttacks = [];
 
 
 //Spells
-let cantripSpells = [];
+let possibleCantripSpells = [];
 let cantripSpellsChosen = [];
 let cantripsKnown;
 

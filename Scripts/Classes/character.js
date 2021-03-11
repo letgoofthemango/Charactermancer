@@ -458,7 +458,7 @@ class Character {
     }
 
     static resetCharacterSpells() {
-        cantripSpells = [];
+        possibleCantripSpells = [];
         cantripSpellsChosen = [];
         firstLevelSpells = [];
         firstLevelSpellsChosen = [];
@@ -481,8 +481,8 @@ class Character {
     }
 
     static renderSpells() {
-        cantripSpells = App.removeDuplicates(cantripSpells.sort());
-        cantripSpells.forEach((spell) => {
+        possibleCantripSpells = App.removeDuplicates(possibleCantripSpells.sort());
+        possibleCantripSpells.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
             const newName = spell.replace(/ /g, "");
@@ -500,7 +500,7 @@ class Character {
             newLi.appendChild(newContent);
             firstLevelListNode.append(newLi);
         })
-        if (cantripSpells.length > 0 && firstLevelSpells.length > 0) {
+        if (possibleCantripSpells.length > 0 && firstLevelSpells.length > 0) {
             spellsHeadingNode.hidden = false;
         } else {
             spellsHeadingNode.hidden = true;
@@ -587,11 +587,12 @@ class Character {
             spellLevel.forEach((element) => {
                 element.hidden = false;
             });
-            spells.forEach((spell) => {
-                if (spell[0].level == 0 && spell[0].classes.includes(`${characterClass}`)) {
-                    cantripSpells.push(spell[0].name);
+            for (const [key, value] of spells.entries()) { // UNBEDINGT .entries anschaun!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                if (value[0].level == 0 && value[0].classes.includes(`${characterClass}`)) {
+                    characterToolsProficiencies.push(key);
+                    possibleCantripSpells.push(value[0].name);
                 }
-            })
+            }
             spells.forEach((spell) => {
                 if (spell[0].level == 1 && spell[0].classes.includes(`${characterClass}`)) {
                     firstLevelSpells.push(spell[0].name);
@@ -610,7 +611,7 @@ class Character {
         switch (number) {
             case 0:
                 args.forEach((arg) => {
-                    cantripSpells.push(spells.get(`${arg}`)[0].name);
+                    possibleCantripSpells.push(spells.get(`${arg}`)[0].name);
                     cantripSpellsChosen.push(spells.get(`${arg}`)[0].name);
                 })
                 console.log(`0 ${cantripSpellsChosen}`);
