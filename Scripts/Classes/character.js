@@ -126,7 +126,7 @@ class Character {
         } else {
             toolsNode.hidden = true;
         }
-        toolProficienciesNode.textContent = toolsArr.join(", ");
+        toolProficienciesNode.textContent = toolsArr.sort().join(", ");
         console.log(characterToolsProficiencies);
     }
 
@@ -507,26 +507,46 @@ class Character {
         }
     }
 
-    static renderChosenSpells() {
-        cantripSpellsChosen = App.removeDuplicates(cantripSpellsChosen.sort());
-        cantripSpellsChosen.forEach((spell) => {
+    static updateRenderSpellsChosen() {
+        const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
+        for (const i of spellLists) {
+            i.innerHTML = "";
+        }
+        cantripSpellsChosen.length = 0;
+        firstLevelSpellsChosen.length = 0;
+        let cantripsArr = [];
+        for (const [key, value] of spells.entries()) {
+            if (value[0].level == 0 && value[0].known == true) {
+                cantripSpellsChosen.push(key);
+                cantripsArr.push(value[0].name);
+            }
+        }
+        cantripsArr = App.removeDuplicates(cantripsArr.sort());
+        cantripsArr.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
-            const newName = spell.replace(/ /g, "");
+            const newName = spell.replace(/'|\/|-| /g, "");
             newLi.setAttribute('id', `${newName}Spell`);
             newLi.appendChild(newContent);
             cantripsListNode.append(newLi);
         })
-
-        firstLevelSpells = App.removeDuplicates(firstLevelSpells.sort());
-        firstLevelSpellsChosen.forEach((spell) => {
+        let firstLevelArr = [];
+        for (const [key, value] of spells.entries()) {
+            if (value[0].level == 1 && value[0].known == true) {
+                firstLevelSpellsChosen.push(key);
+                firstLevelArr.push(value[0].name);
+            }
+        }
+        firstLevelArr = App.removeDuplicates(firstLevelArr.sort());
+        firstLevelArr.forEach((spell) => {
             const newLi = document.createElement("li");
             const newContent = document.createTextNode(`${spell}`);
-            const newName = spell.replace(/ /g, "");
+            const newName = spell.replace(/'|\/|-| /g, "");
             newLi.setAttribute('id', `${newName}Spell`);
             newLi.appendChild(newContent);
             firstLevelListNode.append(newLi);
         })
+
     }
 
     static setCharacterSpellsKnown(a, b, c, d, e, f, g, h, i, j) {
@@ -606,6 +626,28 @@ class Character {
             console.log(`${characterClass} Spells error`);
         }
     }
+
+    static setSpellsToKnown(number, ...args) {
+        switch (number) {
+            case 0:
+                args.forEach((arg) => {
+                    spells.get(`${arg}`)[0].known = false;
+                    console.log(`Spell ${arg} set to unknown.`)
+                })
+                break;
+            case 1:
+                args.forEach((arg) => {
+                    spells.get(`${arg}`)[0].known = true;
+                    console.log(`Spell ${arg} set to known.`)
+                })
+                break;
+            default:
+                break;
+        }
+
+    }
+
+
 
     static addSpellsByLevel(number, ...args) {
         switch (number) {

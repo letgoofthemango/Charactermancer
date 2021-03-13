@@ -1,4 +1,19 @@
 let spells = new Map([
+    ["AbiDalzimsHorridWilting", [{
+        name: "Abi-Dalzim's Horrid Wilting",
+        source: "XGE",
+        level: 8,
+        castingTime: "Action",
+        duration: "Instantaneous",
+        school: "Necromancy",
+        range: "150 feet",
+        components: "V, S, M (a bit of sponge)",
+        classes: "Sorcerer, Wizard",
+        text: "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical plants in the area that aren't creatures, such as trees and shrubs, wither and die instantly.",
+        atHigherLevels: null,
+        known: false
+    }]],
+
     ["AbsorbElements", [{
         name: "Absorb Elements",
         source: "XGE",
@@ -29,7 +44,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Aganazzar", [{
+    ["AganazzarScorcher", [{
         name: "Aganazzar's Scorcher",
         source: "XGE",
         level: 2,
@@ -194,7 +209,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Antipathy", [{
+    ["AntipathySympathy", [{
         name: "Antipathy/Sympathy",
         source: "PHB",
         level: 8,
@@ -269,7 +284,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["ArmsOfHadar", [{
+    ["ArmsofHadar", [{
         name: "Arms of Hadar",
         source: "PHB",
         level: 1,
@@ -393,7 +408,7 @@ let spells = new Map([
         name: "Banishing Smite",
         source: "PHB",
         level: 5,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Abjuration",
         range: "Self",
@@ -494,7 +509,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Bigby'sHand", [{
+    ["BigbysHand", [{
         name: "Bigby's Hand",
         source: "PHB",
         level: 5,
@@ -573,7 +588,7 @@ let spells = new Map([
         name: "Blinding Smite",
         source: "PHB",
         level: 3,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -584,7 +599,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Blindness", [{
+    ["BlindnessDeafness", [{
         name: "Blindness/Deafness",
         source: "PHB",
         level: 2,
@@ -663,7 +678,7 @@ let spells = new Map([
         name: "Branding Smite",
         source: "PHB",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -1023,7 +1038,7 @@ let spells = new Map([
         name: "Compelled Duel",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Enchantment",
         range: "30 feet",
@@ -1199,7 +1214,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["ConjureWoodland Beings", [{
+    ["ConjureWoodlandBeings", [{
         name: "Conjure Woodland Beings",
         source: "PHB",
         level: 4,
@@ -1365,7 +1380,7 @@ let spells = new Map([
     }]],
 
     ["CreateBonfire", [{
-        name: "Create bonfire",
+        name: "Create Bonfire",
         source: "XGE",
         level: 0,
         castingTime: "Action",
@@ -1379,7 +1394,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["CreateFood", [{
+    ["CreateFoodandWater", [{
         name: "Create Food and Water",
         source: "PHB",
         level: 3,
@@ -1439,7 +1454,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["CreateWater", [{
+    ["CreateorDestroyWater", [{
         name: "Create or Destroy Water",
         source: "PHB",
         level: 1,
@@ -1634,7 +1649,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["DelayedBlast", [{
+    ["DelayedBlastFireball", [{
         name: "Delayed Blast Fireball",
         source: "PHB",
         level: 7,
@@ -1679,7 +1694,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["DetectEvil", [{
+    ["DetectEvilandGood", [{
         name: "Detect Evil and Good",
         source: "PHB",
         level: 1,
@@ -1784,7 +1799,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["DispelEvil", [{
+    ["DispelEvilandGood", [{
         name: "Dispel Evil and Good",
         source: "PHB",
         level: 5,
@@ -1863,7 +1878,7 @@ let spells = new Map([
         name: "Divine Favor",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -1878,7 +1893,7 @@ let spells = new Map([
         name: "Divine Word",
         source: "PHB",
         level: 7,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Instantaneous",
         school: "Evocation",
         range: "30 feet",
@@ -1938,7 +1953,7 @@ let spells = new Map([
         name: "Dragon's Breath",
         source: "XGE",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
         range: "Touch",
@@ -1949,7 +1964,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Drawmij", [{
+    ["DrawmijsInstantSummons", [{
         name: "Drawmij's Instant Summons",
         source: "PHB",
         level: 6,
@@ -2159,7 +2174,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Enlarge", [{
+    ["EnlargeReduce", [{
         name: "Enlarge/Reduce",
         source: "PHB",
         level: 2,
@@ -2178,7 +2193,7 @@ let spells = new Map([
         name: "Ensnaring Strike",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
         range: "Self",
@@ -2249,7 +2264,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Evard", [{
+    ["EvardsBlackTentacles", [{
         name: "Evard's Black Tentacles",
         source: "PHB",
         level: 4,
@@ -2264,11 +2279,11 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Expeditious", [{
+    ["ExpeditiousRetreat", [{
         name: "Expeditious Retreat",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 10 minutes",
         school: "Transmutation",
         range: "Self",
@@ -2343,7 +2358,7 @@ let spells = new Map([
         name: "Far Step",
         source: "XGE",
         level: 5,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
         range: "Self",
@@ -2598,7 +2613,7 @@ let spells = new Map([
         name: "Flame Blade",
         source: "PHB",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 10 minutes",
         school: "Evocation",
         range: "Self",
@@ -2943,7 +2958,7 @@ let spells = new Map([
         name: "Grasping Vine",
         source: "PHB",
         level: 4,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
         range: "30 feet",
@@ -2999,7 +3014,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Green-FlameBlade", [{
+    ["GreenFlameBlade", [{
         name: "Green-Flame Blade",
         source: "TCE",
         level: 0,
@@ -3033,7 +3048,7 @@ let spells = new Map([
         name: "Guardian of Nature",
         source: "XGE",
         level: 4,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
         range: "Self",
@@ -3123,7 +3138,7 @@ let spells = new Map([
         name: "Hail of Thorns",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
         range: "Self",
@@ -3213,7 +3228,7 @@ let spells = new Map([
         name: "Healing Spirit",
         source: "XGE",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Conjuration",
         range: "60 feet",
@@ -3228,7 +3243,7 @@ let spells = new Map([
         name: "Healing Word",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Instantaneous",
         school: "Evocation",
         range: "60 feet",
@@ -3303,7 +3318,7 @@ let spells = new Map([
         name: "Hex",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 hour",
         school: "Enchantment",
         range: "90 feet",
@@ -3363,28 +3378,13 @@ let spells = new Map([
         name: "Holy Weapon",
         source: "XGE",
         level: 5,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 hour",
         school: "Evocation",
         range: "Touch",
         components: "V, S",
         classes: "Cleric, Paladin",
         text: "You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra 2d8 radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of the weapon must make a Constitution saving throw. On a failed save, a creature takes 4d8 radiant damage, and it is blinded for 1 minute. On a successful save, a creature takes half as much damage and isn't blinded. At the end of each of its turns, a blinded creature can make a Constitution saving throw, ending the effect on itself on a success.",
-        atHigherLevels: null,
-        known: false
-    }]],
-
-    ["HorridWilting", [{
-        name: "Abi-Dalzim's Horrid Wilting",
-        source: "XGE",
-        level: 8,
-        castingTime: "Action",
-        duration: "Instantaneous",
-        school: "Necromancy",
-        range: "150 feet",
-        components: "V, S, M (a bit of sponge)",
-        classes: "Sorcerer, Wizard",
-        text: "You draw the moisture from every creature in a 30-foot cube centered on a point you choose within range. Each creature in that area must make a Constitution saving throw. Constructs and undead aren't affected, and plants and water elementals make this saving throw with disadvantage. A creature takes 12d8 necrotic damage on a failed save, or half as much damage on a successful one. Nonmagical plants in the area that aren't creatures, such as trees and shrubs, wither and die instantly.",
         atHigherLevels: null,
         known: false
     }]],
@@ -3408,7 +3408,7 @@ let spells = new Map([
         name: "Hunter's Mark",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 hour",
         school: "Divination",
         range: "90 feet",
@@ -3644,7 +3644,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["InvestitureOfFlame", [{
+    ["InvestitureofFlame", [{
         name: "Investiture of Flame",
         source: "XGE",
         level: 6,
@@ -3659,7 +3659,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["InvestitureOfIce", [{
+    ["InvestitureofIce", [{
         name: "Investiture of Ice",
         source: "XGE",
         level: 6,
@@ -3674,7 +3674,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["InvestitureOfStone", [{
+    ["InvestitureofStone", [{
         name: "Investiture of Stone",
         source: "XGE",
         level: 6,
@@ -3689,7 +3689,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["InvestitureOfWind", [{
+    ["InvestitureofWind", [{
         name: "Investiture of Wind",
         source: "XGE",
         level: 6,
@@ -3873,7 +3873,7 @@ let spells = new Map([
         name: "Lightning Arrow",
         source: "PHB",
         level: 3,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
         range: "Self",
@@ -4098,7 +4098,7 @@ let spells = new Map([
         name: "Magic Stone",
         source: "XGE",
         level: 0,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "1 minute",
         school: "Transmutation",
         range: "Touch",
@@ -4113,7 +4113,7 @@ let spells = new Map([
         name: "Magic Weapon",
         source: "PHB",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 hour",
         school: "Transmutation",
         range: "Touch",
@@ -4173,7 +4173,7 @@ let spells = new Map([
         name: "Mass Healing Word",
         source: "PHB",
         level: 3,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Instantaneous",
         school: "Evocation",
         range: "60 feet",
@@ -4244,7 +4244,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["MeldItoStone", [{
+    ["MeldintoStone", [{
         name: "Meld into Stone",
         source: "PHB",
         level: 3,
@@ -4475,7 +4475,7 @@ let spells = new Map([
         name: "Misty Step",
         source: "PHB",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Instantaneous",
         school: "Conjuration",
         range: "Self",
@@ -5101,7 +5101,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["ProtectionFromPoison", [{
+    ["ProtectionfromPoison", [{
         name: "Protection from Poison",
         source: "PHB",
         level: 2,
@@ -5131,7 +5131,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["PurifyFood", [{
+    ["PurifyFoodandDrink", [{
         name: "Purify Food and Drink",
         source: "PHB",
         level: 1,
@@ -5191,7 +5191,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["RayOfEnfeeblement", [{
+    ["RayofEnfeeblement", [{
         name: "Ray of Enfeeblement",
         source: "PHB",
         level: 2,
@@ -5206,7 +5206,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["RayOfFrost", [{
+    ["RayofFrost", [{
         name: "Ray of Frost",
         source: "PHB",
         level: 0,
@@ -5221,7 +5221,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["RayOfSickness", [{
+    ["RayofSickness", [{
         name: "Ray of Sickness",
         source: "PHB",
         level: 1,
@@ -5375,7 +5375,7 @@ let spells = new Map([
         name: "Sanctuary",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "1 minute",
         school: "Abjuration",
         range: "30 feet",
@@ -5435,7 +5435,7 @@ let spells = new Map([
         name: "Searing Smite",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -5510,7 +5510,7 @@ let spells = new Map([
         name: "Shadow Blade",
         source: "XGE",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Illusion",
         range: "Self",
@@ -5600,7 +5600,7 @@ let spells = new Map([
         name: "Shield of Faith",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 10 minutes",
         school: "Abjuration",
         range: "60 feet",
@@ -5615,7 +5615,7 @@ let spells = new Map([
         name: "Shillelagh",
         source: "PHB",
         level: 0,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "1 minute",
         school: "Transmutation",
         range: "Touch",
@@ -5791,7 +5791,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["Snilloc", [{
+    ["SnillocsSnowballSwarm", [{
         name: "Snilloc's Snowball Swarm",
         source: "XGE",
         level: 2,
@@ -5821,7 +5821,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["SpareTheDying", [{
+    ["SparetheDying", [{
         name: "Spare the Dying",
         source: "PHB",
         level: 0,
@@ -5836,7 +5836,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["SpeakWithAnimals", [{
+    ["SpeakwithAnimals", [{
         name: "Speak with Animals",
         source: "PHB",
         level: 1,
@@ -5851,7 +5851,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["SpeakWithDead", [{
+    ["SpeakwithDead", [{
         name: "Speak with Dead",
         source: "PHB",
         level: 3,
@@ -5866,7 +5866,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["SpeakWithPlants", [{
+    ["SpeakwithPlants", [{
         name: "Speak with Plants",
         source: "PHB",
         level: 3,
@@ -5930,7 +5930,7 @@ let spells = new Map([
         name: "Spiritual Weapon",
         source: "PHB",
         level: 2,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "1 minute",
         school: "Evocation",
         range: "60 feet",
@@ -5945,7 +5945,7 @@ let spells = new Map([
         name: "Staggering Smite",
         source: "PHB",
         level: 4,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -6140,7 +6140,7 @@ let spells = new Map([
         name: "Swift Quiver",
         source: "PHB",
         level: 5,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
         range: "Touch",
@@ -6286,7 +6286,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["TempleOfTheGods", [{
+    ["TempleoftheGods", [{
         name: "Temple of the Gods",
         source: "XGE",
         level: 7,
@@ -6395,7 +6395,7 @@ let spells = new Map([
         name: "Thunderous Smite",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -6466,7 +6466,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["TollTheDead", [{
+    ["TolltheDead", [{
         name: "Toll the Dead",
         source: "XGE",
         level: 0,
@@ -6511,7 +6511,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["TransportViaPlants", [{
+    ["TransportviaPlants", [{
         name: "Transport via Plants",
         source: "PHB",
         level: 6,
@@ -6676,7 +6676,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfFire", [{
+    ["WallofFire", [{
         name: "Wall of Fire",
         source: "PHB",
         level: 4,
@@ -6691,7 +6691,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfForce", [{
+    ["WallofForce", [{
         name: "Wall of Force",
         source: "PHB",
         level: 5,
@@ -6706,7 +6706,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfIce", [{
+    ["WallofIce", [{
         name: "Wall of Ice",
         source: "PHB",
         level: 6,
@@ -6721,7 +6721,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfLight", [{
+    ["WallofLight", [{
         name: "Wall of Light",
         source: "XGE",
         level: 5,
@@ -6736,7 +6736,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfSand", [{
+    ["WallofSand", [{
         name: "Wall of Sand",
         source: "XGE",
         level: 3,
@@ -6751,7 +6751,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfStone", [{
+    ["WallofStone", [{
         name: "Wall of Stone",
         source: "PHB",
         level: 5,
@@ -6766,7 +6766,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfThorns", [{
+    ["WallofThorns", [{
         name: "Wall of Thorns",
         source: "PHB",
         level: 6,
@@ -6781,7 +6781,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WallOfWater", [{
+    ["WallofWater", [{
         name: "Wall of Water",
         source: "XGE",
         level: 3,
@@ -6976,7 +6976,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WordOfRadiance", [{
+    ["WordofRadiance", [{
         name: "Word of Radiance",
         source: "XGE",
         level: 0,
@@ -6991,7 +6991,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WordOfRecall", [{
+    ["WordofRecall", [{
         name: "Word of Recall",
         source: "PHB",
         level: 6,
@@ -7006,7 +7006,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["WrathOfNature", [{
+    ["WrathofNature", [{
         name: "Wrath of Nature",
         source: "XGE",
         level: 5,
@@ -7025,7 +7025,7 @@ let spells = new Map([
         name: "Wrathful Smite",
         source: "PHB",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Evocation",
         range: "Self",
@@ -7040,7 +7040,7 @@ let spells = new Map([
         name: "Zephyr Strike",
         source: "XGE",
         level: 1,
-        castingTime: "Bonus acn.",
+        castingTime: "Bonus action",
         duration: "Concentration, up to 1 minute",
         school: "Transmutation",
         range: "Self",
@@ -7051,7 +7051,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["ZoneOfTruth", [{
+    ["ZoneofTruth", [{
         name: "Zone of Truth",
         source: "PHB",
         level: 2,

@@ -119,18 +119,29 @@ class App {
         if (possibleLanguageProficiencies.length <= 0) {
             languagesDivNode.hidden = true;
         }
-        if (characterPossibleToolChoices.length <= 0) {
+        if (possibleCantripSpells.length <= 0 && firstLevelSpells.length <= 0) {
             spellsDivNode.hidden = true;
         }
         Character.resetSkillNodes();
-        Character.resetSpellLists();
+        const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
+        for (const i of spellLists) {
+            i.innerHTML = "";
+        }
 
         App.populateCheckboxes("skillsSelectionList", possibleSkillChoices, chosenCharacterSkills);
         App.setupCheckboxesListeners("skillsSelectionList", chosenCharacterSkills, numberOfSkillsToChoose);
+
         App.populateCheckboxes("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies);
         App.setupCheckboxesListeners("toolsSelectionList", characterToolsProficiencies, characterMaxToolProficiencies);
+
         App.populateCheckboxes("languageSelectionList", possibleLanguageProficiencies, languageProficiencies);
         App.setupCheckboxesListeners("languageSelectionList", languageProficiencies, maxLanguageProficiencies);
+
+        App.populateCheckboxes("cantripSelectionList", possibleCantripSpells, cantripSpellsChosen);
+        App.setupCheckboxesListeners("cantripSelectionList", cantripSpellsChosen, cantripsKnown);
+
+        App.populateCheckboxes("firstSelectionList", firstLevelSpells, firstLevelSpellsChosen);
+        App.setupCheckboxesListeners("firstSelectionList", firstLevelSpellsChosen, firstLevelSpellsKnown);
     }
 
     static getNumber(mod) {
@@ -276,6 +287,12 @@ class App {
                 case possibleLanguageProficiencies:
                     sanitizedName = element.replace(/ |'|Cant/g, "");
                     break;
+                case possibleCantripSpells:
+                    sanitizedName = element.replace(/'|\/|-| /g, "");
+                    break;
+                case firstLevelSpells:
+                    sanitizedName = element.replace(/'|\/|-| /g, "");
+                    break;
                 default:
                     break;
             }            const newDiv = document.createElement("div");
@@ -323,8 +340,16 @@ class App {
                     Character.setCharacterLanguageProficiencies(1, node.value);
                     Character.updateLanguageProficiencies();
                     break;
-
+                case cantripSpellsChosen:
+                    Character.setSpellsToKnown(1, node.value)
+                    Character.updateRenderSpellsChosen();
+                    break;
+                case firstLevelSpellsChosen:
+                    Character.setSpellsToKnown(1, node.value)
+                    Character.updateRenderSpellsChosen();
+                    break;
                 default:
+                    console.log("Somethign went wrong with the checkboxes handler switch!!")
                     break;
             }
             if (referenceArray.length >= referenceVariable) {
@@ -350,6 +375,14 @@ class App {
                 case languageProficiencies:
                     Character.setCharacterLanguageProficiencies(0, node.value);
                     Character.updateLanguageProficiencies();
+                    break;
+                case cantripSpellsChosen:
+                    Character.setSpellsToKnown(0, node.value)
+                    Character.updateRenderSpellsChosen();
+                    break;
+                case firstLevelSpellsChosen:
+                    Character.setSpellsToKnown(0, node.value)
+                    Character.updateRenderSpellsChosen();
                     break;
                 default:
                     break;
@@ -381,95 +414,95 @@ class App {
 
 
 
-    static cantripsSpellsCheckboxesListeners() {
-        const inputs = document.getElementById("cantripSelectionList").getElementsByTagName("input");
-        const nodes = Array.from(inputs);
-        nodes.forEach((node) => {
-            node.addEventListener("change", (event) => {
-                cantripsCheckBoxesHandler(event, nodes);
-            })
-        });
-    }
-    // cantripsSpellsCheckboxesListeners();
+    // static cantripsSpellsCheckboxesListeners() {
+    //     const inputs = document.getElementById("cantripSelectionList").getElementsByTagName("input");
+    //     const nodes = Array.from(inputs);
+    //     nodes.forEach((node) => {
+    //         node.addEventListener("change", (event) => {
+    //             cantripsCheckBoxesHandler(event, nodes);
+    //         })
+    //     });
+    // }
+    // // cantripsSpellsCheckboxesListeners();
 
 
-    static cantripsCheckBoxesHandler(event, nodes) {
-        const node = event.target;
-        if (node.checked == true) {
-            cantripSpellsChosen.push(node.value);
-            if (cantripSpellsChosen.length >= referenceVariable) {
-                nodes.forEach((node) => {
-                    if (cantripSpellsChosen.includes(node.value)) {
-                        node.disabled = false;
-                    } else {
-                        node.disabled = true;
-                    }
-                });
-            }
-            console.log("ist jetzt haken");
+    // static cantripsCheckBoxesHandler(event, nodes) {
+    //     const node = event.target;
+    //     if (node.checked == true) {
+    //         cantripSpellsChosen.push(node.value);
+    //         if (cantripSpellsChosen.length >= referenceVariable) {
+    //             nodes.forEach((node) => {
+    //                 if (cantripSpellsChosen.includes(node.value)) {
+    //                     node.disabled = false;
+    //                 } else {
+    //                     node.disabled = true;
+    //                 }
+    //             });
+    //         }
+    //         console.log("ist jetzt haken");
 
-        } else if (node.checked == false) {
-            // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
-            for (var i = 0; i < cantripSpellsChosen.length; i++) {
-                if (cantripSpellsChosen[i] === node.value) {
-                    cantripSpellsChosen.splice(i, 1);
-                    break
-                }
-            }
-            if (cantripSpellsChosen.length < referenceVariable) {
-                nodes.forEach((node) => {
-                    node.disabled = false;
-                });
-            }
-            console.log("ist jetzt kein haken");
-        }
-        console.log(cantripSpellsChosen);
-    }
-
-
-    static firstSpellsCheckboxesListeners() {
-        const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
-        const nodes = Array.from(inputs);
-        nodes.forEach((node) => {
-            node.addEventListener("change", (event) => {
-                firstCheckBoxesHandler(event, nodes);
-            })
-        });
-    }
-    // firstSpellsCheckboxesListeners();
+    //     } else if (node.checked == false) {
+    //         // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
+    //         for (var i = 0; i < cantripSpellsChosen.length; i++) {
+    //             if (cantripSpellsChosen[i] === node.value) {
+    //                 cantripSpellsChosen.splice(i, 1);
+    //                 break
+    //             }
+    //         }
+    //         if (cantripSpellsChosen.length < referenceVariable) {
+    //             nodes.forEach((node) => {
+    //                 node.disabled = false;
+    //             });
+    //         }
+    //         console.log("ist jetzt kein haken");
+    //     }
+    //     console.log(cantripSpellsChosen);
+    // }
 
 
-    static firstCheckBoxesHandler(event, nodes) {
-        const node = event.target;
-        if (node.checked == true) {
-            firstLevelSpellsChosen.push(node.value);
-            if (firstLevelSpellsChosen.length >= referenceVariable) {
-                nodes.forEach((node) => {
-                    if (firstLevelSpellsChosen.includes(node.value)) {
-                        node.disabled = false;
-                    } else {
-                        node.disabled = true;
-                    }
-                });
-            }
-            console.log("ist jetzt haken");
+    // static firstSpellsCheckboxesListeners() {
+    //     const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
+    //     const nodes = Array.from(inputs);
+    //     nodes.forEach((node) => {
+    //         node.addEventListener("change", (event) => {
+    //             firstCheckBoxesHandler(event, nodes);
+    //         })
+    //     });
+    // }
+    // // firstSpellsCheckboxesListeners();
 
-        } else if (node.checked == false) {
-            for (var i = 0; i < firstLevelSpellsChosen.length; i++) {
-                if (firstLevelSpellsChosen[i] === node.value) {
-                    firstLevelSpellsChosen.splice(i, 1);
-                    break
-                }
-            }
-            if (firstLevelSpellsChosen.length < referenceVariable) {
-                nodes.forEach((node) => {
-                    node.disabled = false;
-                });
-            }
-            console.log("ist jetzt kein haken");
-        }
-        console.log(firstLevelSpellsChosen);
-    }
+
+    // static firstCheckBoxesHandler(event, nodes) {
+    //     const node = event.target;
+    //     if (node.checked == true) {
+    //         firstLevelSpellsChosen.push(node.value);
+    //         if (firstLevelSpellsChosen.length >= referenceVariable) {
+    //             nodes.forEach((node) => {
+    //                 if (firstLevelSpellsChosen.includes(node.value)) {
+    //                     node.disabled = false;
+    //                 } else {
+    //                     node.disabled = true;
+    //                 }
+    //             });
+    //         }
+    //         console.log("ist jetzt haken");
+
+    //     } else if (node.checked == false) {
+    //         for (var i = 0; i < firstLevelSpellsChosen.length; i++) {
+    //             if (firstLevelSpellsChosen[i] === node.value) {
+    //                 firstLevelSpellsChosen.splice(i, 1);
+    //                 break
+    //             }
+    //         }
+    //         if (firstLevelSpellsChosen.length < referenceVariable) {
+    //             nodes.forEach((node) => {
+    //                 node.disabled = false;
+    //             });
+    //         }
+    //         console.log("ist jetzt kein haken");
+    //     }
+    //     console.log(firstLevelSpellsChosen);
+    // }
 
     // static camelize(str) {
     //     return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
