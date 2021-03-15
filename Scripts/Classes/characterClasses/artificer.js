@@ -1431,11 +1431,11 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         characterMaxToolProficiencies = 3;
     }
 
-    getHitpointsFirstLvl = function () { };
+/*     getHitpointsFirstLvl = function () { };
     getHitpointsLvl = function () { };
     getMaxSpellLvl = function () { };
     getSpellSlots = function () { };
     getSpellSaveDC = function () { };
-    getInfusionsCount = function () { };
+    getInfusionsCount = function () { }; */
 
 }

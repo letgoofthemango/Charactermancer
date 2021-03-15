@@ -58,7 +58,7 @@ class App {
  <div class="row d-flex justify-content-between" id="selectionsDiv">
      <div class="col-3" id="skillsDiv">
          <h3 class="pl-5">skills</h3>
-         <p>You may choose <u><span id="skillsCount">2</span></u> class skills</p>
+         <p>You may choose <u><span id="skillsCount"></span></u> class skills</p>
          <div id="skillsSelectionList">
              <!-- to be filled -->
          </div>
@@ -66,7 +66,7 @@ class App {
 
      <div class="col-3" id="ToolsDiv">
          <h3 class="pl-5">tools</h3>
-         <p>You may choose <u><span id="toolsCount">1</span></u> additional class tool(s)</p>
+         <p>You may choose <u><span id="toolsCount"></span></u> class tool(s)</p>
          <div id="toolsSelectionList">
              <!-- to be filled -->
          </div>
@@ -85,13 +85,18 @@ class App {
          <p>You may choose <u><span id="cantripCount">2</span></u> spells of cantrip level and <u><span
                      id="firstCount">2</span></u> of 1st level</p>
          <div id="spellSelectionList">
-             <h5>cantrips</h5>
-             <div id="cantripSelectionList">
-                 <!-- to be filled -->
+             <div id="cantripSpells">
+                 <h5>cantrips</h5>
+                 <div id="cantripSelectionList">
+                     <!-- to be filled -->
+                 </div>
              </div>
-             <h5>1st level</h5>
-             <div id="firstSelectionList">
-                 <!-- to be filled -->
+
+             <div id="firstLevelSpells">
+                 <h5>1st level</h5>
+                 <div id="firstSelectionList">
+                     <!-- to be filled -->
+                 </div>
              </div>
          </div>
      </div>
@@ -123,16 +128,19 @@ class App {
             spellsDivNode.hidden = true;
         }
         Character.resetSkillNodes();
-        const spellLists = document.querySelectorAll('#cantripsList, #firstLevelList');
-        for (const i of spellLists) {
-            i.innerHTML = "";
-        }
+        App.emptyDivs("cantripsList", "firstLevelList");
 
         App.populateCheckboxes("skillsSelectionList", possibleSkillChoices, chosenCharacterSkills);
         App.setupCheckboxesListeners("skillsSelectionList", chosenCharacterSkills, numberOfSkillsToChoose);
-
+        document.getElementById("skillsCount").innerText =numberOfSkillsToChoose;
+        
         App.populateCheckboxes("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies);
         App.setupCheckboxesListeners("toolsSelectionList", characterToolsProficiencies, characterMaxToolProficiencies);
+        if (characterClass == ARTIFICER) {
+            document.getElementById("toolsCount").innerText =1;            
+        } else {
+            document.getElementById("toolsCount").innerText =characterMaxToolProficiencies; 
+        }
 
         App.populateCheckboxes("languageSelectionList", possibleLanguageProficiencies, languageProficiencies);
         App.setupCheckboxesListeners("languageSelectionList", languageProficiencies, maxLanguageProficiencies);
@@ -142,6 +150,15 @@ class App {
 
         App.populateCheckboxes("firstSelectionList", firstLevelSpells, firstLevelSpellsChosen);
         App.setupCheckboxesListeners("firstSelectionList", firstLevelSpellsChosen, firstLevelSpellsKnown);
+
+        if (characterClass == ARTIFICER) {
+            const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
+            const nodes = Array.from(inputs);
+            nodes.forEach((node) => {
+                node.click();
+            });
+            document.getElementById("firstLevelSpells").remove();
+        }
     }
 
     static getNumber(mod) {
@@ -199,7 +216,7 @@ class App {
                 break;
 
             case MYSTIC:
-                hitDice = 8;
+                Character.hitDice = 8;
                 weapons.get("SimpleWeapons")[0].proficient = characterArmorProficiencies[1][1] = true;
                 const mysticSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInsight, #summaryMedicine, #summaryNature, #summaryPerception, #summaryReligion');
                 for (const i of mysticSkills) {
@@ -394,7 +411,7 @@ class App {
                 }
             }
             // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
-            if (referenceArray.length < referenceVariable) {
+            if (referenceArray.length <= referenceVariable) {
                 nodes.forEach((node) => {
                     node.disabled = false;
                 });
@@ -406,110 +423,18 @@ class App {
 
 
 
-
-
-
-
-
-
-
-
-    // static cantripsSpellsCheckboxesListeners() {
-    //     const inputs = document.getElementById("cantripSelectionList").getElementsByTagName("input");
-    //     const nodes = Array.from(inputs);
-    //     nodes.forEach((node) => {
-    //         node.addEventListener("change", (event) => {
-    //             cantripsCheckBoxesHandler(event, nodes);
-    //         })
-    //     });
-    // }
-    // // cantripsSpellsCheckboxesListeners();
-
-
-    // static cantripsCheckBoxesHandler(event, nodes) {
-    //     const node = event.target;
-    //     if (node.checked == true) {
-    //         cantripSpellsChosen.push(node.value);
-    //         if (cantripSpellsChosen.length >= referenceVariable) {
-    //             nodes.forEach((node) => {
-    //                 if (cantripSpellsChosen.includes(node.value)) {
-    //                     node.disabled = false;
-    //                 } else {
-    //                     node.disabled = true;
-    //                 }
-    //             });
-    //         }
-    //         console.log("ist jetzt haken");
-
-    //     } else if (node.checked == false) {
-    //         // ABCD = ABCD.filter((skill) => skill !== node.value); eventuelle Filterfunktion!!!!!
-    //         for (var i = 0; i < cantripSpellsChosen.length; i++) {
-    //             if (cantripSpellsChosen[i] === node.value) {
-    //                 cantripSpellsChosen.splice(i, 1);
-    //                 break
-    //             }
-    //         }
-    //         if (cantripSpellsChosen.length < referenceVariable) {
-    //             nodes.forEach((node) => {
-    //                 node.disabled = false;
-    //             });
-    //         }
-    //         console.log("ist jetzt kein haken");
-    //     }
-    //     console.log(cantripSpellsChosen);
-    // }
-
-
-    // static firstSpellsCheckboxesListeners() {
-    //     const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
-    //     const nodes = Array.from(inputs);
-    //     nodes.forEach((node) => {
-    //         node.addEventListener("change", (event) => {
-    //             firstCheckBoxesHandler(event, nodes);
-    //         })
-    //     });
-    // }
-    // // firstSpellsCheckboxesListeners();
-
-
-    // static firstCheckBoxesHandler(event, nodes) {
-    //     const node = event.target;
-    //     if (node.checked == true) {
-    //         firstLevelSpellsChosen.push(node.value);
-    //         if (firstLevelSpellsChosen.length >= referenceVariable) {
-    //             nodes.forEach((node) => {
-    //                 if (firstLevelSpellsChosen.includes(node.value)) {
-    //                     node.disabled = false;
-    //                 } else {
-    //                     node.disabled = true;
-    //                 }
-    //             });
-    //         }
-    //         console.log("ist jetzt haken");
-
-    //     } else if (node.checked == false) {
-    //         for (var i = 0; i < firstLevelSpellsChosen.length; i++) {
-    //             if (firstLevelSpellsChosen[i] === node.value) {
-    //                 firstLevelSpellsChosen.splice(i, 1);
-    //                 break
-    //             }
-    //         }
-    //         if (firstLevelSpellsChosen.length < referenceVariable) {
-    //             nodes.forEach((node) => {
-    //                 node.disabled = false;
-    //             });
-    //         }
-    //         console.log("ist jetzt kein haken");
-    //     }
-    //     console.log(firstLevelSpellsChosen);
-    // }
-
     // static camelize(str) {
     //     return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
     //         return index === 0 ? word.toLowerCase() : word.toUpperCase();
     //     }).replace(/\s+/g, '');
     // }
 
+    static emptyDivs(...args) {
+        const list = document.querySelectorAll("#" + args.join(", #"));
+        for (const i of list) {
+            i.innerHTML = "";
+        }
+    }
 
     static removeDuplicates(data) {
         return [...new Set(data)]

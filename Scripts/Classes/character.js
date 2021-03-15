@@ -741,7 +741,7 @@ class Character {
 
 
     static updateCharacterHitPoints() {
-        characterHitpoints = hitDice + abilityScores[2].mod.bind(abilityScores[2])();
+        characterHitpoints = Character.hitDice + abilityScores[2].mod.bind(abilityScores[2])();
         if (isNaN(characterHitpoints)) {
             hpNode.innerText = "";
         } else {
@@ -751,7 +751,7 @@ class Character {
 
 
     static setCharacterHitdice(number) {
-        hitDice = number;
+        Character.hitDice = number;
     }
 
 

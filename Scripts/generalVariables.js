@@ -131,26 +131,6 @@ let chosenCharacterSkills = [];
 let numberOfSkillsToChoose=2;
 
 
-//Skills
-/* let acrobaticsMod = skills[0].mod;
-let animalHandlingMod = skills[1].mod;
-let arcanaMod = skills[2].mod;
-let athleticsMod = skills[3].mod;
-let deceptionMod = skills[4].mod;
-let historyMod = skills[5].mod;
-let insightMod = skills[6].mod;
-let intimidationMod = skills[7].mod;
-let investigationMod = skills[8].mod;
-let medicineMod = skills[9].mod;
-let natureMod = skills[10].mod;
-let perceptionMod = skills[11].mod;
-let performanceMod = skills[12].mod;
-let persuasionMod = skills[13].mod;
-let religionMod = skills[14].mod;
-let sleightOfHandMod = skills[15].mod;
-let stealthMod = skills[16].mod;
-let survivalMod = skills[17].mod; */
-
 //Tool Proficiencies
 let characterToolsProficiencies = [];
 let characterPossibleToolChoices=[];
