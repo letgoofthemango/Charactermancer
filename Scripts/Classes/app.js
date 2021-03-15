@@ -47,15 +47,15 @@ class App {
     
     <div id="showClassDetails"></div>
     <div class="d-flex justify-content-center">
-        <button onclick="App.goToSkillsnTools()" class="btn btn-info" id="goToSkillsnTools">Next</button>
+        <button onclick="App.goToSkillsnTools()" class="btn btn-info" id="goToSkillsnTools" disabled>Next</button>
     </div>`;
     static siteSkillsNTools = `
  <div class="container" id="container">
  <h1 class="text-center">skills, features, languages, and spells</h1>
- <p class="text-center">Here you will be able to choose different things depending on the class choice that you
+ <p class="text-center">Here, you will be able to choose different things depending on the class choice that you
      made in the previous step.</p>
 
- <div class="row d-flex justify-content-between" id="selectionsDiv">
+ <div class="row d-flex justify-content-around" id="selectionsDiv">
      <div class="col-3" id="skillsDiv">
          <h3 class="pl-5">skills</h3>
          <p>You may choose <u><span id="skillsCount"></span></u> class skills</p>
@@ -82,8 +82,8 @@ class App {
 
      <div class="col-3" id="spellsDiv">
          <h3 class="pl-5">spells</h3>
-         <p>You may choose <u><span id="cantripCount">2</span></u> spells of cantrip level and <u><span
-                     id="firstCount">2</span></u> of 1st level</p>
+         <p>You may choose <u><span id="cantripCount"></span></u> cantrips and <u><span
+                     id="firstCount"></span></u> spells of 1st level</p>
          <div id="spellSelectionList">
              <div id="cantripSpells">
                  <h5>cantrips</h5>
@@ -284,6 +284,7 @@ class App {
             toolsNode.hidden = false;
             toolProficienciesNode.textContent = "any one type of artisan's tools or any one musical instrument of your choice"
         }
+        document.getElementById("goToSkillsnTools").disabled=false;
     }
 
 

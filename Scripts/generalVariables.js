@@ -36,7 +36,7 @@ let abilityScores = [{
 let CharacterSavingThrows = [];
 
 //Class
-let characterClass = "class has not been set yet!";
+let characterClass = null;
 let characterSubClass = null;
 const ARTIFICER = 'Artificer';
 const BARBARIAN = 'Barbarian';
