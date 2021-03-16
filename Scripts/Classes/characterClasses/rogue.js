@@ -427,7 +427,7 @@ Attack column of the Rogue table.</p>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setRogueClass() {
-        characterClass = ROGUE;
+        Character.characterClass = ROGUE;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Dexterity", "Intelligence");
         Character.setClassSkills("Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation", "Perception", "Performance", "Persuasion", "Sleight of hand", "Stealth");

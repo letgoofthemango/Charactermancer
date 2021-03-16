@@ -886,7 +886,7 @@ static displayBarbarianFeaturesByLevel() {
     }
 }
 static setBarbarianClass() {
-    characterClass = BARBARIAN;
+    Character.characterClass = BARBARIAN;
     Character.setCharacterHitdice(12);
     Character.setCharacterSavingThrows("Strength", "Constitution");
     Character.setClassSkills("Animal handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival");

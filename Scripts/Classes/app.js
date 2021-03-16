@@ -115,43 +115,43 @@ class App {
         const toolsDivNode = document.getElementById("ToolsDiv");
         const languagesDivNode = document.getElementById("languagesDiv");
         const spellsDivNode = document.getElementById("spellsDiv");
-        if (possibleSkillChoices.length <= 0) {
+        if (Character.possibleSkillChoices.length <= 0) {
             skillsDivNode.hidden = true;
         }
-        if (characterPossibleToolChoices.length <= 0) {
+        if (Character.characterPossibleToolChoices.length <= 0) {
             toolsDivNode.hidden = true;
         }
-        if (possibleLanguageProficiencies.length <= 0) {
+        if (Character.possibleLanguageProficiencies.length <= 0) {
             languagesDivNode.hidden = true;
         }
-        if (possibleCantripSpells.length <= 0 && firstLevelSpells.length <= 0) {
+        if (Character.possibleCantripSpells.length <= 0 && Character.firstLevelSpells.length <= 0) {
             spellsDivNode.hidden = true;
         }
         Character.resetSkillNodes();
         App.emptyDivs("cantripsList", "firstLevelList");
 
-        App.populateCheckboxes("skillsSelectionList", possibleSkillChoices, chosenCharacterSkills);
-        App.setupCheckboxesListeners("skillsSelectionList", chosenCharacterSkills, numberOfSkillsToChoose);
-        document.getElementById("skillsCount").innerText =numberOfSkillsToChoose;
+        App.populateCheckboxes("skillsSelectionList", Character.possibleSkillChoices, Character.chosenCharacterSkills);
+        App.setupCheckboxesListeners("skillsSelectionList", Character.chosenCharacterSkills, Character.numberOfSkillsToChoose);
+        document.getElementById("skillsCount").innerText =Character.numberOfSkillsToChoose;
         
-        App.populateCheckboxes("toolsSelectionList", characterPossibleToolChoices, characterToolsProficiencies);
-        App.setupCheckboxesListeners("toolsSelectionList", characterToolsProficiencies, characterMaxToolProficiencies);
-        if (characterClass == ARTIFICER) {
+        App.populateCheckboxes("toolsSelectionList", Character.characterPossibleToolChoices, Character.characterToolsProficiencies);
+        App.setupCheckboxesListeners("toolsSelectionList", Character.characterToolsProficiencies, Character.characterMaxToolProficiencies);
+        if (Character.characterClass == ARTIFICER) {
             document.getElementById("toolsCount").innerText =1;            
         } else {
-            document.getElementById("toolsCount").innerText =characterMaxToolProficiencies; 
+            document.getElementById("toolsCount").innerText =Character.characterMaxToolProficiencies; 
         }
 
-        App.populateCheckboxes("languageSelectionList", possibleLanguageProficiencies, languageProficiencies);
-        App.setupCheckboxesListeners("languageSelectionList", languageProficiencies, maxLanguageProficiencies);
+        App.populateCheckboxes("languageSelectionList", Character.possibleLanguageProficiencies, Character.languageProficiencies);
+        App.setupCheckboxesListeners("languageSelectionList", Character.languageProficiencies, Character.maxLanguageProficiencies);
 
-        App.populateCheckboxes("cantripSelectionList", possibleCantripSpells, cantripSpellsChosen);
-        App.setupCheckboxesListeners("cantripSelectionList", cantripSpellsChosen, cantripsKnown);
+        App.populateCheckboxes("cantripSelectionList", Character.possibleCantripSpells, Character.cantripSpellsChosen);
+        App.setupCheckboxesListeners("cantripSelectionList", Character.cantripSpellsChosen, Character.cantripsKnown);
 
-        App.populateCheckboxes("firstSelectionList", firstLevelSpells, firstLevelSpellsChosen);
-        App.setupCheckboxesListeners("firstSelectionList", firstLevelSpellsChosen, firstLevelSpellsKnown);
+        App.populateCheckboxes("firstSelectionList", Character.firstLevelSpells, Character.firstLevelSpellsChosen);
+        App.setupCheckboxesListeners("firstSelectionList", Character.firstLevelSpellsChosen, Character.firstLevelSpellsKnown);
 
-        if (characterClass == ARTIFICER) {
+        if (Character.characterClass == ARTIFICER) {
             const inputs = document.getElementById("firstSelectionList").getElementsByTagName("input");
             const nodes = Array.from(inputs);
             nodes.forEach((node) => {
@@ -213,19 +213,6 @@ class App {
             case MONK:
                 Monk.displayMonkFeaturesByLevel();
                 Monk.setMonkClass();
-                break;
-
-            case MYSTIC:
-                Character.hitDice = 8;
-                weapons.get("SimpleWeapons")[0].proficient = characterArmorProficiencies[1][1] = true;
-                const mysticSkills = document.querySelectorAll('#summaryArcana, #summaryHistory, #summaryInsight, #summaryMedicine, #summaryNature, #summaryPerception, #summaryReligion');
-                for (const i of mysticSkills) {
-                    i.classList.add("toBeAdded");
-                }
-                for (let i = 0; i < characterLevel; i++) {
-                    classDetailsNode.innerHTML += Mystic.mysticFeaturesByLevel[i];
-                    featuresNode.innerHTML += Mystic.mysticFeaturesList[i];
-                }
                 break;
 
             case PALADIN:
@@ -296,19 +283,19 @@ class App {
                 return;
             }
             switch (referenceArray) {
-                case characterPossibleToolChoices:
+                case Character.characterPossibleToolChoices:
                     sanitizedName = element.toLowerCase().replace(/'s| | kit|(land or water)|set|-|Ante|tools|utensils|supplies/g, "");
                     break;
-                case possibleSkillChoices:
+                case Character.possibleSkillChoices:
                     sanitizedName = element.replace(/ |handling|of|hand/g, "");
                     break;
-                case possibleLanguageProficiencies:
+                case Character.possibleLanguageProficiencies:
                     sanitizedName = element.replace(/ |'|Cant/g, "");
                     break;
-                case possibleCantripSpells:
+                case Character.possibleCantripSpells:
                     sanitizedName = element.replace(/'|\/|-| /g, "");
                     break;
-                case firstLevelSpells:
+                case Character.firstLevelSpells:
                     sanitizedName = element.replace(/'|\/|-| /g, "");
                     break;
                 default:
@@ -347,22 +334,22 @@ class App {
         const node = event.target;
         if (node.checked == true) {
             switch (referenceArray) {
-                case chosenCharacterSkills:
+                case Character.chosenCharacterSkills:
                     Character.setSkill(node.value, 2);
                     break;
-                case characterToolsProficiencies:
+                case Character.characterToolsProficiencies:
                     Character.setCharacterToolProficiencies(1, node.value);
                     Character.updateCharacterToolProficiencies();
                     break;
-                case languageProficiencies:
+                case Character.languageProficiencies:
                     Character.setCharacterLanguageProficiencies(1, node.value);
                     Character.updateLanguageProficiencies();
                     break;
-                case cantripSpellsChosen:
+                case Character.cantripSpellsChosen:
                     Character.setSpellsToKnown(1, node.value)
                     Character.updateRenderSpellsChosen();
                     break;
-                case firstLevelSpellsChosen:
+                case Character.firstLevelSpellsChosen:
                     Character.setSpellsToKnown(1, node.value)
                     Character.updateRenderSpellsChosen();
                     break;
@@ -383,22 +370,22 @@ class App {
 
         } else if (node.checked == false) {
             switch (referenceArray) {
-                case chosenCharacterSkills:
+                case Character.chosenCharacterSkills:
                     Character.setSkill(node.value, 0);
                     break;
-                case characterToolsProficiencies:
+                case Character.characterToolsProficiencies:
                     Character.setCharacterToolProficiencies(0, node.value);
                     Character.updateCharacterToolProficiencies();
                     break;
-                case languageProficiencies:
+                case Character.languageProficiencies:
                     Character.setCharacterLanguageProficiencies(0, node.value);
                     Character.updateLanguageProficiencies();
                     break;
-                case cantripSpellsChosen:
+                case Character.cantripSpellsChosen:
                     Character.setSpellsToKnown(0, node.value)
                     Character.updateRenderSpellsChosen();
                     break;
-                case firstLevelSpellsChosen:
+                case Character.firstLevelSpellsChosen:
                     Character.setSpellsToKnown(0, node.value)
                     Character.updateRenderSpellsChosen();
                     break;

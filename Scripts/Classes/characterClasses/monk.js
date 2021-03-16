@@ -342,7 +342,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setMonkClass() {
-        characterClass = MONK;
+        Character.characterClass = MONK;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Strength", "Dexterity");
         Character.setClassSkills("Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth");

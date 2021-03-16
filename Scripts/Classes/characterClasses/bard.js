@@ -532,7 +532,7 @@ class Bard extends Character {
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setBardClass() {
-        characterClass = BARD;
+        Character.characterClass = BARD;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Dexterity", "Charisma");
         Character.setClassSkills("Acrobatics", "Animal handling", "Arcana", "Athletics", "Deception", "History", "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception", "Performance", "Persuasion", "Religion", "Sleight of hand", "Stealth", "Survival");

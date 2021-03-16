@@ -1880,7 +1880,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setSorcererClass() {
-        characterClass = SORCERER;
+        Character.characterClass = SORCERER;
         Character.setCharacterHitdice(6);
         Character.setCharacterSavingThrows("Constitution", "Charisma");
         Character.setClassSkills("Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion");
@@ -1897,19 +1897,19 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
     static setSorcererSubclass(subclass) {
         Character.fullCharacterReset();
         this.setSorcererClass();
-        characterSubClass = null;
+        Character.characterSubClass = null;
         const origin = document.getElementById("sorcOrigin");
         switch (subclass) {
             case "Aberrant Mind":
                 origin.innerHTML = this.aberrant;
                 Character.addCharacterFeatures('Telepathic Speech');
                 Character.addSpellsByLevel(0, "MindSliver");
-                Character.addSpellsByLevel(1, "ArmsOfHadar", "DissonantWhispers");
+                Character.addSpellsByLevel(1, "ArmsofHadar", "DissonantWhispers");
                 break;
             case "Clockwork Soul":
                 origin.innerHTML = this.clockwork;
                 Character.addCharacterFeatures('Restore Balance');
-                Character.addSpellsByLevel(1, "Alarm", "ProtectionFromEvil");
+                Character.addSpellsByLevel(1, "Alarm", "ProtectionFromEvilandGood");
                 break;
             case "Divine Soul":
                 origin.innerHTML = this.divine;
@@ -1920,8 +1920,8 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
                 Character.addCharacterFeatures('Dragon Ancestor', "Draconic Resilience");
                 Character.setCharacterLanguageProficiencies("Draconic");
                 Character.setCharacterHitdice(6 + (1 * characterLevel));
-                characterArmorClass = 13 + abilityScores[2].mod.bind(abilityScores[2])();
-                console.log(`AC ist ${characterArmorClass} aber es muss generell noch eine AC calculation eingeführt werden.`)
+                Character.characterArmorClass = 13 + abilityScores[2].mod.bind(abilityScores[2])();
+                console.log(`AC ist ${Character.characterArmorClass} aber es muss generell noch eine AC calculation eingeführt werden.`)
                 break;
             case "Giant Soul":
                 origin.innerHTML = this.giant;
@@ -1962,7 +1962,7 @@ concentration, it doesn't require concentration in this case; the spell lasts fo
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
-        characterSubClass = subclass;
+        Character.characterSubClass = subclass;
         this.fullCharacterUpdate();
         const featureOrigin = document.getElementById("SorcerousOriginFeatureSpan");
         featureOrigin.innerHTML = `: ${subclass}`;

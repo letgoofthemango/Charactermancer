@@ -1,7 +1,7 @@
 class Artificer extends Character {
     name = "Artificer";
     hitDice = 8;
-    healthPoints = hitDice + constitutionMod;
+    healthPoints = Character.hitDice + constitutionMod;
     armorProficiencies = 2;
     weaponProficiencies = [0, 40];
     toolproficiencies = [22, 14]; //plus one one type of artisan's tools of your choice
@@ -9,8 +9,8 @@ class Artificer extends Character {
     classSkillsSelection = [2, 5, 8, 9, 10, 11, 15]; //------------choose 2
     spellcaster = true;
     spellCastingAbility = 0;
-    spellSaveDC = 8 + intelligenceMod + proficiencyBonus;
-    spellAttackBonus = intelligenceMod + proficiencyBonus;
+    spellSaveDC = 8 + intelligenceMod + Character.proficiencyBonus;
+    spellAttackBonus = intelligenceMod + Character.proficiencyBonus;
     source = 2;
     static alchemist = `<h4 class="text-center">Alchemist<span class="ml-2"><button class="collapseButton" type="button" data-toggle="collapse" data-target="#alchemistCollapse" aria-expanded="true" aria-controls="alchemistCollapse">[-]</button></span></h4>
 <div class="collapse show" id="alchemistCollapse">
@@ -1383,17 +1383,17 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     ######################### Methods ##############################
     ######################################################################*/
     getAC = function () {
-        if (hasShield && armorType == "Medium") {
-            characterArmorClass = armorClass + Math.min(Math.max(-4, dexterityMod), 2) + 2;
-        } else if (hasShield && armorType == "Light") {
-            characterArmorClass = armorClass + dexterityMod + 2;
+        if (Character.hasShield && Character.armorType == "Medium") {
+            Character.characterArmorClass = Character.armorClass + Math.min(Math.max(-4, dexterityMod), 2) + 2;
+        } else if (Character.hasShield && Character.armorType == "Light") {
+            Character.characterArmorClass = Character.armorClass + dexterityMod + 2;
         } else {
-            characterArmorClass = 10 + dexterityMod;
+            Character.characterArmorClass = 10 + dexterityMod;
         }
     };
 
     static setArtificerClass() {
-        characterClass = ARTIFICER;
+        Character.characterClass = ARTIFICER;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Constitution", "Intelligence");
         Character.setClassSkills("Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Sleight of hand");
@@ -1425,10 +1425,10 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 if (tool[0].name.includes("tinker")) {
                     return;
                 }
-                characterPossibleToolChoices.push(tool[0].name)
+                Character.characterPossibleToolChoices.push(tool[0].name)
             }
         })
-        characterMaxToolProficiencies = 3;
+        Character.characterMaxToolProficiencies = 3;
     }
 
 /*     getHitpointsFirstLvl = function () { };

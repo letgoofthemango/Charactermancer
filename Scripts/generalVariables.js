@@ -1,90 +1,39 @@
-let proficiencyBonus;
 //------------------------------STATS--------------------------------------
 let abilityScores = [{
     name: "Strength",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }, {
     name: "Dexterity",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }, {
     name: "Constitution",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }, {
     name: "Intelligence",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }, {
     name: "Wisdom",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }, {
     name: "Charisma",
     value: 8,
     mod: function () { return Math.floor((this.value - 10) / 2); },
-    saveMod: function () { return this.mod() + proficiencyBonus; }
+    saveMod: function () { return this.mod() + Character.proficiencyBonus; }
 }];
-
-// Saving throws
-let CharacterSavingThrows = [];
-
-//Class
-let characterClass = null;
-let characterSubClass = null;
-const ARTIFICER = 'Artificer';
-const BARBARIAN = 'Barbarian';
-const BARD = 'Bard';
-const CLERIC = 'Cleric';
-const DRUID = 'Druid';
-const FIGHTER = 'Fighter';
-const MONK = 'Monk';
-const MYSTIC = 'Mystic';
-const PALADIN = 'Paladin';
-const RANGER = 'Ranger';
-const ROGUE = 'Rogue';
-const SORCERER = 'Sorcerer';
-const WARLOCK = 'Warlock';
-const WIZARD = 'Wizard';
 
 //Level
 let characterLevel = 1;
 
-// Name
-let characterName = "Your character doesnt have a name yet";
-let playerName;
-
-//AC
-let characterArmorClass;
-let armorClass;
-let armorType;
-let hasShield = false;
-
-//Background
-let characterBackground;
-
-//Speed
-let characterWalkingSpeed= 30;
-let characterClimbingSpeed= 30;
-let characterSwimingSpeed= 30;
-let characterFlyingSpeed= 30;
-
-//Vision
-let characterVision;
-
-//Initiative
-let initiativeMod;
-
-//Passive perception
-let passivePerception;
-
-let characterFightingStyle;
 
 
 let skills = [{
@@ -125,139 +74,24 @@ let skills = [{
     name: "Survival", proficiency: 0, calcStat: abilityScores[4].mod.bind(abilityScores[4]), mod: 0,
 }];
 
-
-let possibleSkillChoices = [];
-let chosenCharacterSkills = [];
-let numberOfSkillsToChoose=2;
+//Character.
 
 
-//Tool Proficiencies
-let characterToolsProficiencies = [];
-let characterPossibleToolChoices=[];
-let characterMaxToolProficiencies;
-
-// Language proficiencies
-let languageProficiencies = [];
-let maxLanguageProficiencies = [];
-let possibleLanguageProficiencies = [];
-
-
-
-//Features:
-let characterFeatures = [];
-
-
-//Equipment
-let characterEquipment = [];
-
-
-//Feats
-let characterFeats = [];
-let maxcharacterFeats = [];
-
-
-//Attacks
-let characterAttacks = [];
-
-
-//Spells
-let possibleCantripSpells = [];
-let cantripSpellsChosen = [];
-let cantripsKnown;
-
-let firstLevelSpells = [];
-let firstLevelSpellsChosen = [];
-let firstLevelSpellsKnown;
-let firstLevelSpellSlots;
-
-let secondLevelSpells = [];
-let secondLevelSpellsChosen = [];
-let secondLevelSpellsKnown;
-let secondLevelSpellSlots;
-
-let thirdLevelSpells = [];
-let thirdLevelSpellsChosen = [];
-let thirdLevelSpellsKnown;
-let thirdLevelSpellSlots;
-
-let fourthLevelSpells = [];
-let fourthLevelSpellsChosen = [];
-let fourthLevelSpellsKnown;
-let fourthLevelSpellSlots;
-
-let fifthLevelSpells = [];
-let fifthLevelSpellsChosen = [];
-let fifthLevelSpellsKnown;
-let fifthLevelSpellSlots;
-
-let sixthLevelSpells = [];
-let sixthLevelSpellsChosen = [];
-let sixthLevelSpellsKnown;
-let sixthLevelSpellSlots;
-
-let seventhLevelSpells = [];
-let seventhLevelSpellsChosen = [];
-let seventhLevelSpellsKnown;
-let seventhLevelSpellSlots;
-
-let eigthLevelSpells = [];
-let eigthLevelSpellsChosen = [];
-let eigthLevelSpellsKnown;
-let eigthLevelSpellSlots;
-
-let ninethLevelSpells = [];
-let ninethLevelSpellsChosen = [];
-let ninethLevelSpellsKnown = [];
-let ninethLevelSpellSlots = [];
-
-
-
-
-
-
-
-
-
-//Hitpoints
-let characterHitpoints;
-let hitDice;
-
-
-//Race
-let characterRace;
-
-
-//Alignment
-let characterAlignment;
-
-
-
-
-
-//Money
-
-//Age
-let characterAge;
-
-//Height
-let characterHeight;
-
-//Weight
-let characterWeight;
-
-//Eye color
-let characterEyesColor;
-
-//Skin
-let characterSkinColor;
-
-//Hair color
-let characterHairColor;
-
-//Backstory
-let characterBackstory;
-
-
+//Class
+const ARTIFICER = 'Artificer';
+const BARBARIAN = 'Barbarian';
+const BARD = 'Bard';
+const CLERIC = 'Cleric';
+const DRUID = 'Druid';
+const FIGHTER = 'Fighter';
+const MONK = 'Monk';
+const MYSTIC = 'Mystic';
+const PALADIN = 'Paladin';
+const RANGER = 'Ranger';
+const ROGUE = 'Rogue';
+const SORCERER = 'Sorcerer';
+const WARLOCK = 'Warlock';
+const WIZARD = 'Wizard';
 // App nodes
 const nameNode = document.getElementById("summaryName");
 const classNode = document.getElementById("summaryClass");

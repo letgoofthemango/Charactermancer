@@ -489,7 +489,7 @@ traveling for an hour or more:</p>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setRangerClass() {
-        characterClass = RANGER;
+        Character.characterClass = RANGER;
         Character.setCharacterHitdice(10);
         Character.setCharacterSavingThrows("Strength", "Dexterity");
         Character.setClassSkills("AnimalHandling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival");

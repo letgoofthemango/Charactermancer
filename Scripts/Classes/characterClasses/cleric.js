@@ -2043,7 +2043,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setClericClass() {
-        characterClass = CLERIC;
+        Character.characterClass = CLERIC;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Wisdom", "Charisma");
         Character.setClassSkills("History", "Insight", "Medicine", "Persuasion", "Religion");
@@ -2059,7 +2059,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     static setClericSubclass(subclass) {
         Character.fullCharacterReset();
         this.setClericClass();
-        characterSubClass = null;
+        Character.characterSubClass = null;
         const domain = document.getElementById("clericDomain");
         switch (subclass) {
             case "Arcana":
@@ -2071,27 +2071,27 @@ aria-controls="collapseIntro">[-]</button></span></h1>
             case "Death":
                 domain.innerHTML = this.deathDomain;
                 Character.addCharacterFeatures('Reaper');
-                Character.addSpellsByLevel(1, "FalseLife", "RayOfSickness");
+                Character.addSpellsByLevel(1, "FalseLife", "RayofSickness");
                 Character.setCharacterWeaponProficiencies("martialWeapons");
                 break;
             case "Forge":
                 domain.innerHTML = this.forgeDomain;
                 Character.addCharacterFeatures('Blessing of the Forge');
                 Character.setCharacterArmorProficiency("heavy");
-                tools.get("Smith")[0].proficient = true;
+                tools.get("smith")[0].proficient = true;
                 Character.addSpellsByLevel(1, "Identify", "SearingSmite");
                 break;
             case "Grave":
                 domain.innerHTML = this.graveDomain;
                 Character.addCharacterFeatures('Circle of Mortality', 'Eyes of the Grave');
-                Character.addSpellsByLevel(0, "SpareTheDying");
+                Character.addSpellsByLevel(0, "SparetheDying");
                 Character.addSpellsByLevel(1, "FalseLife");
                 break;
             case "Knowledge":
                 domain.innerHTML = this.knowledgeDomain;
                 Character.addCharacterFeatures('Blessing of Knowledge');
                 Character.showNodesForPossibleSkills("Arcana", "Nature");
-                possibleSkillChoices.push("Arcana", "Nature");
+                Character.possibleSkillChoices.push("Arcana", "Nature");
                 Character.addSpellsByLevel(1, "Identify");
                 break;
             case "Life":
@@ -2109,22 +2109,22 @@ aria-controls="collapseIntro">[-]</button></span></h1>
                 domain.innerHTML = this.natureDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("Animal", "Nature", "Survival");
-                possibleSkillChoices.push("Animal Handling", "Nature", "Survival");
+                Character.possibleSkillChoices.push("Animal Handling", "Nature", "Survival");
                 Character.addCharacterFeatures('Acolyte of Nature');
-                Character.addSpellsByLevel(1, "AnimalFriendship", "SpeakWithAnimals");
+                Character.addSpellsByLevel(1, "AnimalFriendship", "SpeakwithAnimals");
                 break;
             case "Order":
                 domain.innerHTML = this.orderDomain;
                 Character.setCharacterArmorProficiency("heavy");
                 Character.showNodesForPossibleSkills("Intimidation", "Persuasion");
-                possibleSkillChoices.push("Intimidation", "Persuasion");
+                Character.possibleSkillChoices.push("Intimidation", "Persuasion");
                 Character.addCharacterFeatures('Voice of Authority');
                 Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Peace":
                 domain.innerHTML = this.peaceDomain;
                 Character.showNodesForPossibleSkills("Insight", "Performance", "Persuasion");
-                possibleSkillChoices.push("Insight","Performance", "Persuasion");
+                Character.possibleSkillChoices.push("Insight","Performance", "Persuasion");
                 Character.addSpellsByLevel(1, "Heroism");
                 break;
             case "Protection":
@@ -2166,8 +2166,8 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
-        firstLevelSpellsChosen = [...firstLevelSpells];
-        characterSubClass = subclass;
+        Character.firstLevelSpellsChosen = [...Character.firstLevelSpells];
+        Character.characterSubClass = subclass;
 
         this.fullCharacterUpdate();
 

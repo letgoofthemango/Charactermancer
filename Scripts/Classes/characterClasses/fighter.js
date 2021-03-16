@@ -438,7 +438,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setFighterClass() {
-        characterClass = FIGHTER;
+        Character.characterClass = FIGHTER;
         Character.setCharacterHitdice(10);
         Character.setCharacterSavingThrows("Strength", "Constitution");
         Character.setClassSkills("Acrobatics", "AnimalHandling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival");
@@ -452,75 +452,75 @@ aria-controls="collapseIntro">[-]</button></span></h1>
         const fightingStyle = document.getElementById("fightingStyle");
         const featureFStyle = document.getElementById("FightingStyleFeatureSpan");
         featureFStyle.innerHTML = "";
-        characterFightingStyle = null;
+        Character.characterFightingStyle = null;
         switch (style) {
             case "archery":
-                characterFightingStyle = "Archery";
+                Character.characterFightingStyle = "Archery";
                 fightingStyle.innerHTML = this.archery;
                 featureFStyle.innerHTML = ": Archery";
                 break;
             case "blind":
-                characterFightingStyle = "Blind Fighting";
+                Character.characterFightingStyle = "Blind Fighting";
                 fightingStyle.innerHTML = this.blindFighting;
                 featureFStyle.innerHTML = ": Blind Fighting";
                 break;
             case "closeQuarter":
-                characterFightingStyle = "Close Quarters Shooter";
+                Character.characterFightingStyle = "Close Quarters Shooter";
                 fightingStyle.innerHTML = this.closeQuartersShooter;
                 featureFStyle.innerHTML = ": Close Quarters Shooter";
                 break;
             case "defense":
-                characterFightingStyle = "Defense";
+                Character.characterFightingStyle = "Defense";
                 fightingStyle.innerHTML = this.defense;
                 featureFStyle.innerHTML = ": Defense";
                 break;
             case "dueling":
-                characterFightingStyle = "Dueling";
+                Character.characterFightingStyle = "Dueling";
                 fightingStyle.innerHTML = this.dueling;
                 featureFStyle.innerHTML = ": Dueling";
                 break;
             case "great":
-                characterFightingStyle = "Great Weapon Fighting";
+                Character.characterFightingStyle = "Great Weapon Fighting";
                 fightingStyle.innerHTML = this.greatWeaponFighting;
                 featureFStyle.innerHTML = ": Great Weapon Fighting";
                 break;
             case "interception":
-                characterFightingStyle = "Interception";
+                Character.characterFightingStyle = "Interception";
                 fightingStyle.innerHTML = this.interception;
                 featureFStyle.innerHTML = ": Interception";
                 break;
             case "mariner":
-                characterFightingStyle = "Mariner";
+                Character.characterFightingStyle = "Mariner";
                 fightingStyle.innerHTML = this.mariner;
                 featureFStyle.innerHTML = ": Mariner";
                 break;
             case "protection":
-                characterFightingStyle = "Protection";
+                Character.characterFightingStyle = "Protection";
                 fightingStyle.innerHTML = this.protection;
                 featureFStyle.innerHTML = ": Protection";
                 break;
             case "superior":
-                characterFightingStyle = "Superior Technique";
+                Character.characterFightingStyle = "Superior Technique";
                 fightingStyle.innerHTML = this.superiorTechnique;
                 featureFStyle.innerHTML = ": Superior Technique";
                 break;
             case "thrown":
-                characterFightingStyle = "Thrown Weapon Fighting";
+                Character.characterFightingStyle = "Thrown Weapon Fighting";
                 fightingStyle.innerHTML = this.thrownWeaponFighting;
                 featureFStyle.innerHTML = ": Thrown Weapon Fighting";
                 break;
             case "tunnel":
-                characterFightingStyle = "Tunnel Fighter";
+                Character.characterFightingStyle = "Tunnel Fighter";
                 fightingStyle.innerHTML = this.tunnelFighter;
                 featureFStyle.innerHTML = ": Tunnel Fighter";
                 break;
             case "twoWeapon":
-                characterFightingStyle = "Two Weapon Fighting";
+                Character.characterFightingStyle = "Two Weapon Fighting";
                 fightingStyle.innerHTML = this.twoWeaponFighting;
                 featureFStyle.innerHTML = ": Two Weapon Fighting";
                 break;
             case "unarmed":
-                characterFightingStyle = "Unarmed Fighting";
+                Character.characterFightingStyle = "Unarmed Fighting";
                 fightingStyle.innerHTML = this.unarmedFighting;
                 featureFStyle.innerHTML = ": Unarmed Fighting";
                 break;

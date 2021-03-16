@@ -5086,7 +5086,7 @@ let spells = new Map([
         known: false
     }]],
 
-    ["ProtectionFromEvil", [{
+    ["ProtectionFromEvilandGood", [{
         name: "Protection from Evil and Good",
         source: "PHB",
         level: 1,

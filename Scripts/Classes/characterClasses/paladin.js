@@ -374,7 +374,7 @@ aria-controls="collapseIntro">[-]</button></span></h1>
 
     // Full character actions----------------------------------------------------------------------------------------------------------------------
     static setPaladinClass() {
-        characterClass = PALADIN;
+        Character.characterClass = PALADIN;
         Character.setCharacterHitdice(10);
         Character.setCharacterSavingThrows("Wisdom", "Charisma");
         Character.setClassSkills("Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion");

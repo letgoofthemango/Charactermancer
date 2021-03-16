@@ -514,12 +514,12 @@ aria-controls="collapseIntro">[-]</button></span></h1>
     static setDruidClass() {
         console.log("2");
 
-        characterClass = DRUID;
+        Character.characterClass = DRUID;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Intelligence", "Wisdom");
         Character.setClassSkills("Arcana", "AnimalHandling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival");
         Character.setCharacterSkillsNumberToChoose(2);
-        Character.setCharacterLanguageProficiencies("Druidic");
+        Character.setCharacterLanguageProficiencies(1, "Druidic");
         Character.setCharacterFeatures("Druidic", "Spellcasting");
         Character.setCharacterWeaponProficiencies("club","dagger","dart","javelin","mace","quarterstaff","scimitar","sickle","sling","spear");
         Character.setCharacterArmorProficiency("light", "medium", "shields");

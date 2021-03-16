@@ -478,7 +478,7 @@ less than half your wizard level (rounded up), and none of the slots can be 6th 
     ];
 
     static setWizardClass() {
-        characterClass = WIZARD;
+        Character.characterClass = WIZARD;
         Character.setCharacterHitdice(6);
         Character.setCharacterSavingThrows("Wisdom", "Intelligence");
         Character.setClassSkills("Arcana", "History", "Insight", "Investigation", "Medicine", "Religion");

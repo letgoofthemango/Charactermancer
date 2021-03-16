@@ -1544,7 +1544,7 @@ following spells are added to the warlock spell list for you.</p>
         Character.fullCharacterReset();
         this.setWarlockClass();
         const patron = document.getElementById("warlockPatron");
-        characterSubClass = null;
+        Character.characterSubClass = null;
         switch (subclass) {
             case "Archfey":
                 patron.innerHTML = this.archfey;
@@ -1560,7 +1560,7 @@ following spells are added to the warlock spell list for you.</p>
             case "Fathomless":
                 patron.innerHTML = this.fathomless;
                 Character.addCharacterFeatures('Tentacle of the Deeps');
-                Character.addSpellsByLevel(1, "CreateWater", "Thunderwave");
+                Character.addSpellsByLevel(1, "CreateorDestroyWater", "Thunderwave");
                 Character.setCharacterSwimmingSpeed(40);
                 break;
             case "Fiend":
@@ -1568,10 +1568,10 @@ following spells are added to the warlock spell list for you.</p>
                 Character.addCharacterFeatures('Dark One\'s Blessing');
                 Character.addSpellsByLevel(1, "BurningHands", "Command");
                 break;
-                case "Genie":
-                    patron.innerHTML = this.genie;
-                    Character.addSpellsByLevel(1, "DetectEvil");
-                    Character.addCharacterFeatures('Genie\'s Vessel');
+            case "Genie":
+                patron.innerHTML = this.genie;
+                Character.addSpellsByLevel(1, "DetectEvilandGood");
+                Character.addCharacterFeatures('Genie\'s Vessel');
                 break;
             case "Great Old One":
                 patron.innerHTML = this.greatOldOne;
@@ -1588,7 +1588,7 @@ following spells are added to the warlock spell list for you.</p>
             case "Raven Queen":
                 patron.innerHTML = this.ravenQueen;
                 Character.addCharacterFeatures('Sentinel Raven');
-                Character.addSpellsByLevel(1, "", "Sanctuary");
+                Character.addSpellsByLevel(1, "FalseLife", "Sanctuary");
                 break;
             case "Seeker":
                 patron.innerHTML = this.seeker;
@@ -1603,8 +1603,8 @@ following spells are added to the warlock spell list for you.</p>
             case "Undying":
                 patron.innerHTML = this.undying;
                 Character.addCharacterFeatures('Among the Dead');
-                Character.addSpellsByLevel(0, "SpareTheDying");
-                Character.addSpellsByLevel(1, "FalseLife", "RayOfSickness");
+                Character.addSpellsByLevel(0, "SparetheDying");
+                Character.addSpellsByLevel(1, "FalseLife", "RayofSickness");
                 break;
         }
         Character.renderSpells();
@@ -1612,7 +1612,7 @@ following spells are added to the warlock spell list for you.</p>
         for (const i of lists) {
             i.classList.toggle("toBeAdded");
         }
-        characterSubClass = subclass;
+        Character.characterSubClass = subclass;
 
         this.fullCharacterUpdate();
         const featurepatron = document.getElementById("OtherworldlyPatronFeatureSpan");
@@ -1645,7 +1645,7 @@ following spells are added to the warlock spell list for you.</p>
     ];
 
     static setWarlockClass() {
-        characterClass = WARLOCK;
+        Character.characterClass = WARLOCK;
         Character.setCharacterHitdice(8);
         Character.setCharacterSavingThrows("Wisdom", "Charisma");
         Character.setClassSkills("Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion");
